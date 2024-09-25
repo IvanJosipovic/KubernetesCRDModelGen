@@ -15,10 +15,14 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient" Version="15.0.1" />
         <PackageReference Include="System.Text.Json" Version="9.0.0-rc.1.24431.7" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 </Project>
