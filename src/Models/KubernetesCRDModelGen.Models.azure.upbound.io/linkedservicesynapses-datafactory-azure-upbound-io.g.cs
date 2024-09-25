@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1LinkedServiceSynapseSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdRef
     public V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdSele
     public V1beta1LinkedServiceSynapseSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordLinkedServ
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordLinkedServiceNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordL
     public V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordLinkedServ
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecForProviderKeyVaultPasswordLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -293,6 +302,7 @@ public partial class V1beta1LinkedServiceSynapseSpecForProvider
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPasswordLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -304,6 +314,7 @@ public enum V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPasswordLinkedSer
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPasswordLinkedServiceNameRefPolicyResolveEnum
 {
@@ -343,6 +354,7 @@ public partial class V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPassword
     public V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPasswordLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPasswordLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -354,6 +366,7 @@ public enum V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPasswordLinkedSer
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecInitProviderKeyVaultPasswordLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -451,6 +464,7 @@ public partial class V1beta1LinkedServiceSynapseSpecInitProvider
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecManagementPoliciesEnum
 {
@@ -474,6 +488,7 @@ public enum V1beta1LinkedServiceSynapseSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -485,6 +500,7 @@ public enum V1beta1LinkedServiceSynapseSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecProviderConfigRefPolicyResolveEnum
 {
@@ -524,6 +540,7 @@ public partial class V1beta1LinkedServiceSynapseSpecProviderConfigRef
     public V1beta1LinkedServiceSynapseSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -535,6 +552,7 @@ public enum V1beta1LinkedServiceSynapseSpecPublishConnectionDetailsToConfigRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceSynapseSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

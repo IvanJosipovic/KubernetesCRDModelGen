@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecDeletionPolicyEnum
 {
@@ -530,6 +531,7 @@ public partial class V1beta1PageSpecForProviderFormParametersFillBehaviorInitial
     public string? Webhook { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowRefPolicyResolutionEnum
 {
@@ -541,6 +543,7 @@ public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHan
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowRefPolicyResolveEnum
 {
@@ -580,6 +583,7 @@ public partial class V1beta1PageSpecForProviderFormParametersFillBehaviorRepromp
     public V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowSelectorPolicyResolutionEnum
 {
@@ -591,6 +595,7 @@ public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHan
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowSelectorPolicyResolveEnum
 {
@@ -634,6 +639,7 @@ public partial class V1beta1PageSpecForProviderFormParametersFillBehaviorRepromp
     public V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageRefPolicyResolutionEnum
 {
@@ -645,6 +651,7 @@ public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHan
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageRefPolicyResolveEnum
 {
@@ -684,6 +691,7 @@ public partial class V1beta1PageSpecForProviderFormParametersFillBehaviorRepromp
     public V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageSelectorPolicyResolutionEnum
 {
@@ -695,6 +703,7 @@ public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHan
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageSelectorPolicyResolveEnum
 {
@@ -855,6 +864,7 @@ public partial class V1beta1PageSpecForProviderFormParametersFillBehaviorRepromp
     public string? Value { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookRefPolicyResolutionEnum
 {
@@ -866,6 +876,7 @@ public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHan
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookRefPolicyResolveEnum
 {
@@ -905,6 +916,7 @@ public partial class V1beta1PageSpecForProviderFormParametersFillBehaviorRepromp
     public V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookSelectorPolicyResolutionEnum
 {
@@ -916,6 +928,7 @@ public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHan
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookSelectorPolicyResolveEnum
 {
@@ -1092,6 +1105,7 @@ public partial class V1beta1PageSpecForProviderForm
     public IList<V1beta1PageSpecForProviderFormParameters>? Parameters { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderParentRefPolicyResolutionEnum
 {
@@ -1103,6 +1117,7 @@ public enum V1beta1PageSpecForProviderParentRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderParentRefPolicyResolveEnum
 {
@@ -1142,6 +1157,7 @@ public partial class V1beta1PageSpecForProviderParentRef
     public V1beta1PageSpecForProviderParentRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderParentSelectorPolicyResolutionEnum
 {
@@ -1153,6 +1169,7 @@ public enum V1beta1PageSpecForProviderParentSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderParentSelectorPolicyResolveEnum
 {
@@ -1196,6 +1213,7 @@ public partial class V1beta1PageSpecForProviderParentSelector
     public V1beta1PageSpecForProviderParentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderTransitionRoutesTargetPageRefPolicyResolutionEnum
 {
@@ -1207,6 +1225,7 @@ public enum V1beta1PageSpecForProviderTransitionRoutesTargetPageRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderTransitionRoutesTargetPageRefPolicyResolveEnum
 {
@@ -1246,6 +1265,7 @@ public partial class V1beta1PageSpecForProviderTransitionRoutesTargetPageRef
     public V1beta1PageSpecForProviderTransitionRoutesTargetPageRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderTransitionRoutesTargetPageSelectorPolicyResolutionEnum
 {
@@ -1257,6 +1277,7 @@ public enum V1beta1PageSpecForProviderTransitionRoutesTargetPageSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecForProviderTransitionRoutesTargetPageSelectorPolicyResolveEnum
 {
@@ -2039,6 +2060,7 @@ public partial class V1beta1PageSpecInitProviderFormParametersFillBehaviorInitia
     public string? Webhook { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowRefPolicyResolutionEnum
 {
@@ -2050,6 +2072,7 @@ public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowRefPolicyResolveEnum
 {
@@ -2089,6 +2112,7 @@ public partial class V1beta1PageSpecInitProviderFormParametersFillBehaviorReprom
     public V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowSelectorPolicyResolutionEnum
 {
@@ -2100,6 +2124,7 @@ public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowSelectorPolicyResolveEnum
 {
@@ -2143,6 +2168,7 @@ public partial class V1beta1PageSpecInitProviderFormParametersFillBehaviorReprom
     public V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetFlowSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageRefPolicyResolutionEnum
 {
@@ -2154,6 +2180,7 @@ public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageRefPolicyResolveEnum
 {
@@ -2193,6 +2220,7 @@ public partial class V1beta1PageSpecInitProviderFormParametersFillBehaviorReprom
     public V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageSelectorPolicyResolutionEnum
 {
@@ -2204,6 +2232,7 @@ public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTargetPageSelectorPolicyResolveEnum
 {
@@ -2364,6 +2393,7 @@ public partial class V1beta1PageSpecInitProviderFormParametersFillBehaviorReprom
     public string? Value { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookRefPolicyResolutionEnum
 {
@@ -2375,6 +2405,7 @@ public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookRefPolicyResolveEnum
 {
@@ -2414,6 +2445,7 @@ public partial class V1beta1PageSpecInitProviderFormParametersFillBehaviorReprom
     public V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookSelectorPolicyResolutionEnum
 {
@@ -2425,6 +2457,7 @@ public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderFormParametersFillBehaviorRepromptEventHandlersTriggerFulfillmentWebhookSelectorPolicyResolveEnum
 {
@@ -2601,6 +2634,7 @@ public partial class V1beta1PageSpecInitProviderForm
     public IList<V1beta1PageSpecInitProviderFormParameters>? Parameters { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderParentRefPolicyResolutionEnum
 {
@@ -2612,6 +2646,7 @@ public enum V1beta1PageSpecInitProviderParentRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderParentRefPolicyResolveEnum
 {
@@ -2651,6 +2686,7 @@ public partial class V1beta1PageSpecInitProviderParentRef
     public V1beta1PageSpecInitProviderParentRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderParentSelectorPolicyResolutionEnum
 {
@@ -2662,6 +2698,7 @@ public enum V1beta1PageSpecInitProviderParentSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderParentSelectorPolicyResolveEnum
 {
@@ -2705,6 +2742,7 @@ public partial class V1beta1PageSpecInitProviderParentSelector
     public V1beta1PageSpecInitProviderParentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderTransitionRoutesTargetPageRefPolicyResolutionEnum
 {
@@ -2716,6 +2754,7 @@ public enum V1beta1PageSpecInitProviderTransitionRoutesTargetPageRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderTransitionRoutesTargetPageRefPolicyResolveEnum
 {
@@ -2755,6 +2794,7 @@ public partial class V1beta1PageSpecInitProviderTransitionRoutesTargetPageRef
     public V1beta1PageSpecInitProviderTransitionRoutesTargetPageRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderTransitionRoutesTargetPageSelectorPolicyResolutionEnum
 {
@@ -2766,6 +2806,7 @@ public enum V1beta1PageSpecInitProviderTransitionRoutesTargetPageSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecInitProviderTransitionRoutesTargetPageSelectorPolicyResolveEnum
 {
@@ -3037,6 +3078,7 @@ public partial class V1beta1PageSpecInitProvider
     public IList<V1beta1PageSpecInitProviderTransitionRoutes>? TransitionRoutes { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecManagementPoliciesEnum
 {
@@ -3060,6 +3102,7 @@ public enum V1beta1PageSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -3071,6 +3114,7 @@ public enum V1beta1PageSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecProviderConfigRefPolicyResolveEnum
 {
@@ -3110,6 +3154,7 @@ public partial class V1beta1PageSpecProviderConfigRef
     public V1beta1PageSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -3121,6 +3166,7 @@ public enum V1beta1PageSpecPublishConnectionDetailsToConfigRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

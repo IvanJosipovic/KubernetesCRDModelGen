@@ -43,6 +43,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Source of the provider credentials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
 {
@@ -120,6 +121,7 @@ public partial class V1beta1ProviderConfigSpecIdentitySecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Source of the provider credentials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecIdentitySourceEnum
 {
@@ -140,6 +142,7 @@ public enum V1beta1ProviderConfigSpecIdentitySourceEnum
     Filesystem
 }
 
+/// <summary>Type of identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecIdentityTypeEnum
 {

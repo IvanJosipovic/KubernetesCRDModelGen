@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1CodeRepositorySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRef
     public V1beta1CodeRepositorySpecForProviderGitConfigSecretArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecForProviderGitConfigSecretArnSelectorPolicyResolveEnum
 {
@@ -165,6 +170,7 @@ public partial class V1beta1CodeRepositorySpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRefPolicyResolutionEnum
 {
@@ -176,6 +182,7 @@ public enum V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRefPolicyResolveEnum
 {
@@ -215,6 +222,7 @@ public partial class V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRef
     public V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSelectorPolicyResolutionEnum
 {
@@ -226,6 +234,7 @@ public enum V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecInitProviderGitConfigSecretArnSelectorPolicyResolveEnum
 {
@@ -307,6 +316,7 @@ public partial class V1beta1CodeRepositorySpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecManagementPoliciesEnum
 {
@@ -330,6 +340,7 @@ public enum V1beta1CodeRepositorySpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecProviderConfigRefPolicyResolutionEnum
 {
@@ -341,6 +352,7 @@ public enum V1beta1CodeRepositorySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecProviderConfigRefPolicyResolveEnum
 {
@@ -380,6 +392,7 @@ public partial class V1beta1CodeRepositorySpecProviderConfigRef
     public V1beta1CodeRepositorySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -391,6 +404,7 @@ public enum V1beta1CodeRepositorySpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CodeRepositorySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1MonitorMetricAlertSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupId
     public V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdSelectorPolicyResolveEnum
 {
@@ -273,6 +278,7 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderDynamicCriteria
     public bool? SkipMetricValidation { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -284,6 +290,7 @@ public enum V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -323,6 +330,7 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRe
     public V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -334,6 +342,7 @@ public enum V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -377,6 +386,7 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSe
     public V1beta1MonitorMetricAlertSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderScopesRefsPolicyResolutionEnum
 {
@@ -388,6 +398,7 @@ public enum V1beta1MonitorMetricAlertSpecForProviderScopesRefsPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderScopesRefsPolicyResolveEnum
 {
@@ -427,6 +438,7 @@ public partial class V1beta1MonitorMetricAlertSpecForProviderScopesRefs
     public V1beta1MonitorMetricAlertSpecForProviderScopesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderScopesSelectorPolicyResolutionEnum
 {
@@ -438,6 +450,7 @@ public enum V1beta1MonitorMetricAlertSpecForProviderScopesSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecForProviderScopesSelectorPolicyResolveEnum
 {
@@ -562,6 +575,7 @@ public partial class V1beta1MonitorMetricAlertSpecForProvider
     public string? WindowSize { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdRefPolicyResolutionEnum
 {
@@ -573,6 +587,7 @@ public enum V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdRefPolicyResolveEnum
 {
@@ -612,6 +627,7 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupI
     public V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdSelectorPolicyResolutionEnum
 {
@@ -623,6 +639,7 @@ public enum V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderActionActionGroupIdSelectorPolicyResolveEnum
 {
@@ -816,6 +833,7 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderDynamicCriteria
     public bool? SkipMetricValidation { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderScopesRefsPolicyResolutionEnum
 {
@@ -827,6 +845,7 @@ public enum V1beta1MonitorMetricAlertSpecInitProviderScopesRefsPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderScopesRefsPolicyResolveEnum
 {
@@ -866,6 +885,7 @@ public partial class V1beta1MonitorMetricAlertSpecInitProviderScopesRefs
     public V1beta1MonitorMetricAlertSpecInitProviderScopesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderScopesSelectorPolicyResolutionEnum
 {
@@ -877,6 +897,7 @@ public enum V1beta1MonitorMetricAlertSpecInitProviderScopesSelectorPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecInitProviderScopesSelectorPolicyResolveEnum
 {
@@ -989,6 +1010,7 @@ public partial class V1beta1MonitorMetricAlertSpecInitProvider
     public string? WindowSize { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecManagementPoliciesEnum
 {
@@ -1012,6 +1034,7 @@ public enum V1beta1MonitorMetricAlertSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1023,6 +1046,7 @@ public enum V1beta1MonitorMetricAlertSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1062,6 +1086,7 @@ public partial class V1beta1MonitorMetricAlertSpecProviderConfigRef
     public V1beta1MonitorMetricAlertSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1073,6 +1098,7 @@ public enum V1beta1MonitorMetricAlertSpecPublishConnectionDetailsToConfigRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MonitorMetricAlertSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

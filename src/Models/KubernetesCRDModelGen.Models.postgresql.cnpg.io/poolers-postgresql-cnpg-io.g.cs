@@ -43,6 +43,7 @@ public partial class V1PoolerSpecDeploymentStrategy
     public string? Type { get; set; }
 }
 
+/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1PoolerSpecMonitoringPodMonitorMetricRelabelingsActionEnum
 {
@@ -148,6 +149,7 @@ public partial class V1PoolerSpecMonitoringPodMonitorMetricRelabelings
     public string? TargetLabel { get; set; }
 }
 
+/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1PoolerSpecMonitoringPodMonitorRelabelingsActionEnum
 {
@@ -279,6 +281,7 @@ public partial class V1PoolerSpecPgbouncerAuthQuerySecret
     public string Name { get; set; }
 }
 
+/// <summary>The pool mode. Default: `session`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1PoolerSpecPgbouncerPoolModeEnum
 {
@@ -5946,6 +5949,7 @@ public partial class V1PoolerSpecTemplate
     public V1PoolerSpecTemplateSpec? Spec { get; set; }
 }
 
+/// <summary>Type of service to forward traffic to. Default: `rw`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1PoolerSpecTypeEnum
 {

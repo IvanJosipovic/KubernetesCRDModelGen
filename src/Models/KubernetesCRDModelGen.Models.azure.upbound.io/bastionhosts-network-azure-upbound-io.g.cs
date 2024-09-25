@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1BastionHostSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     public V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAdd
     public V1beta1BastionHostSpecForProviderIpConfigurationPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRef
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum
 {
@@ -260,6 +269,7 @@ public partial class V1beta1BastionHostSpecForProviderIpConfiguration
     public V1beta1BastionHostSpecForProviderIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -271,6 +281,7 @@ public enum V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -310,6 +321,7 @@ public partial class V1beta1BastionHostSpecForProviderResourceGroupNameRef
     public V1beta1BastionHostSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -321,6 +333,7 @@ public enum V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -421,6 +434,7 @@ public partial class V1beta1BastionHostSpecForProvider
     public bool? TunnelingEnabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicyResolutionEnum
 {
@@ -432,6 +446,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicyResolveEnum
 {
@@ -471,6 +486,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     public V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolutionEnum
 {
@@ -482,6 +498,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicyResolveEnum
 {
@@ -525,6 +542,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAd
     public V1beta1BastionHostSpecInitProviderIpConfigurationPublicIpAddressIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicyResolutionEnum
 {
@@ -536,6 +554,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicyResolveEnum
 {
@@ -575,6 +594,7 @@ public partial class V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRe
     public V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPolicyResolutionEnum
 {
@@ -586,6 +606,7 @@ public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecInitProviderIpConfigurationSubnetIdSelectorPolicyResolveEnum
 {
@@ -707,6 +728,7 @@ public partial class V1beta1BastionHostSpecInitProvider
     public bool? TunnelingEnabled { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecManagementPoliciesEnum
 {
@@ -730,6 +752,7 @@ public enum V1beta1BastionHostSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -741,6 +764,7 @@ public enum V1beta1BastionHostSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecProviderConfigRefPolicyResolveEnum
 {
@@ -780,6 +804,7 @@ public partial class V1beta1BastionHostSpecProviderConfigRef
     public V1beta1BastionHostSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -791,6 +816,7 @@ public enum V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BastionHostSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

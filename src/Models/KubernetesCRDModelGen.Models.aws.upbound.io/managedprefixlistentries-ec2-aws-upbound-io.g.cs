@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1ManagedPrefixListEntrySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrRef
     public V1beta1ManagedPrefixListEntrySpecForProviderCidrRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderCidrSelector
     public V1beta1ManagedPrefixListEntrySpecForProviderCidrSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRef
     public V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecForProviderPrefixListIdSelectorPolicyResolveEnum
 {
@@ -264,6 +273,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecForProvider
     public string Region { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicyResolutionEnum
 {
@@ -275,6 +285,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicyResolveEnum
 {
@@ -314,6 +325,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrRef
     public V1beta1ManagedPrefixListEntrySpecInitProviderCidrRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicyResolutionEnum
 {
@@ -325,6 +337,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicyResolveEnum
 {
@@ -368,6 +381,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelector
     public V1beta1ManagedPrefixListEntrySpecInitProviderCidrSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicyResolutionEnum
 {
@@ -379,6 +393,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicyResolveEnum
 {
@@ -418,6 +433,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRe
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPolicyResolutionEnum
 {
@@ -429,6 +445,7 @@ public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelectorPolicyResolveEnum
 {
@@ -505,6 +522,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecInitProvider
     public V1beta1ManagedPrefixListEntrySpecInitProviderPrefixListIdSelector? PrefixListIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecManagementPoliciesEnum
 {
@@ -528,6 +546,7 @@ public enum V1beta1ManagedPrefixListEntrySpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicyResolutionEnum
 {
@@ -539,6 +558,7 @@ public enum V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicyResolveEnum
 {
@@ -578,6 +598,7 @@ public partial class V1beta1ManagedPrefixListEntrySpecProviderConfigRef
     public V1beta1ManagedPrefixListEntrySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -589,6 +610,7 @@ public enum V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ManagedPrefixListEntrySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

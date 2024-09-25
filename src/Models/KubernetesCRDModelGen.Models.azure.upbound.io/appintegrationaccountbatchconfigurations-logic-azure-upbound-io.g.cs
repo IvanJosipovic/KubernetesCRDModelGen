@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegra
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegra
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderIntegrationAccountNameSelectorPolicyResolveEnum
 {
@@ -207,6 +212,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     public IList<V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderReleaseCriteriaRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -218,6 +224,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourc
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -257,6 +264,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -268,6 +276,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourc
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -356,6 +365,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecForProvid
     public V1beta1AppIntegrationAccountBatchConfigurationSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameRefPolicyResolutionEnum
 {
@@ -367,6 +377,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameRefPolicyResolveEnum
 {
@@ -406,6 +417,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameSelectorPolicyResolutionEnum
 {
@@ -417,6 +429,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderIntegrationAccountNameSelectorPolicyResolveEnum
 {
@@ -544,6 +557,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     public IList<V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderReleaseCriteriaRecurrence>? Recurrence { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -555,6 +569,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResour
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -594,6 +609,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -605,6 +621,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResour
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -693,6 +710,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecInitProvi
     public V1beta1AppIntegrationAccountBatchConfigurationSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecManagementPoliciesEnum
 {
@@ -716,6 +734,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecManagementPolicies
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -727,6 +746,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecProviderConfigRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -766,6 +786,7 @@ public partial class V1beta1AppIntegrationAccountBatchConfigurationSpecProviderC
     public V1beta1AppIntegrationAccountBatchConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -777,6 +798,7 @@ public enum V1beta1AppIntegrationAccountBatchConfigurationSpecPublishConnectionD
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AppIntegrationAccountBatchConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

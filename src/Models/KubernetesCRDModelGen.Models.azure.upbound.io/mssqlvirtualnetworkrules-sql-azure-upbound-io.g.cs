@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRef
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelect
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRef
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelectorPolicyResolveEnum
 {
@@ -260,6 +269,7 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProvider
     public V1beta1MSSQLVirtualNetworkRuleSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRefPolicyResolutionEnum
 {
@@ -271,6 +281,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRefPolicyResolveEnum
 {
@@ -310,6 +321,7 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRef
     public V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelectorPolicyResolutionEnum
 {
@@ -321,6 +333,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelectorPolicyResolveEnum
 {
@@ -385,6 +398,7 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecInitProvider
     public V1beta1MSSQLVirtualNetworkRuleSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecManagementPoliciesEnum
 {
@@ -408,6 +422,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -419,6 +434,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRefPolicyResolveEnum
 {
@@ -458,6 +474,7 @@ public partial class V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRef
     public V1beta1MSSQLVirtualNetworkRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -469,6 +486,7 @@ public enum V1beta1MSSQLVirtualNetworkRuleSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLVirtualNetworkRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.opsworks.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecDeletionPolicyEnum
 {
@@ -81,6 +82,7 @@ public partial class V1beta1StaticWebLayerSpecForProviderCloudwatchConfiguration
     public IList<V1beta1StaticWebLayerSpecForProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -92,6 +94,7 @@ public enum V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdRefsPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -131,6 +134,7 @@ public partial class V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdRe
     public V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -142,6 +146,7 @@ public enum V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -301,6 +306,7 @@ public partial class V1beta1StaticWebLayerSpecForProviderLoadBasedAutoScaling
     public IList<V1beta1StaticWebLayerSpecForProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderStackIdRefPolicyResolutionEnum
 {
@@ -312,6 +318,7 @@ public enum V1beta1StaticWebLayerSpecForProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderStackIdRefPolicyResolveEnum
 {
@@ -351,6 +358,7 @@ public partial class V1beta1StaticWebLayerSpecForProviderStackIdRef
     public V1beta1StaticWebLayerSpecForProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -362,6 +370,7 @@ public enum V1beta1StaticWebLayerSpecForProviderStackIdSelectorPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 {
@@ -580,6 +589,7 @@ public partial class V1beta1StaticWebLayerSpecInitProviderCloudwatchConfiguratio
     public IList<V1beta1StaticWebLayerSpecInitProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -591,6 +601,7 @@ public enum V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -630,6 +641,7 @@ public partial class V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdR
     public V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -641,6 +653,7 @@ public enum V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -800,6 +813,7 @@ public partial class V1beta1StaticWebLayerSpecInitProviderLoadBasedAutoScaling
     public IList<V1beta1StaticWebLayerSpecInitProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderStackIdRefPolicyResolutionEnum
 {
@@ -811,6 +825,7 @@ public enum V1beta1StaticWebLayerSpecInitProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderStackIdRefPolicyResolveEnum
 {
@@ -850,6 +865,7 @@ public partial class V1beta1StaticWebLayerSpecInitProviderStackIdRef
     public V1beta1StaticWebLayerSpecInitProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -861,6 +877,7 @@ public enum V1beta1StaticWebLayerSpecInitProviderStackIdSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
 {
@@ -1017,6 +1034,7 @@ public partial class V1beta1StaticWebLayerSpecInitProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecManagementPoliciesEnum
 {
@@ -1040,6 +1058,7 @@ public enum V1beta1StaticWebLayerSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1051,6 +1070,7 @@ public enum V1beta1StaticWebLayerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1090,6 +1110,7 @@ public partial class V1beta1StaticWebLayerSpecProviderConfigRef
     public V1beta1StaticWebLayerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1101,6 +1122,7 @@ public enum V1beta1StaticWebLayerSpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StaticWebLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

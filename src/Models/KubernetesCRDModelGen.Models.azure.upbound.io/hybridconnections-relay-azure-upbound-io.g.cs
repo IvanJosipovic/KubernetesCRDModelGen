@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.relay.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1HybridConnectionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderRelayNamespaceNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1HybridConnectionSpecForProviderRelayNamespaceNameRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderRelayNamespaceNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1HybridConnectionSpecForProviderRelayNamespaceNameRef
     public V1beta1HybridConnectionSpecForProviderRelayNamespaceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderRelayNamespaceNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1HybridConnectionSpecForProviderRelayNamespaceNameSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderRelayNamespaceNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1HybridConnectionSpecForProviderRelayNamespaceNameSel
     public V1beta1HybridConnectionSpecForProviderRelayNamespaceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1HybridConnectionSpecForProviderResourceGroupNameRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1HybridConnectionSpecForProviderResourceGroupNameRef
     public V1beta1HybridConnectionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1HybridConnectionSpecForProviderResourceGroupNameSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -268,6 +277,7 @@ public partial class V1beta1HybridConnectionSpecForProvider
     public string? UserMetadata { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameRefPolicyResolutionEnum
 {
@@ -279,6 +289,7 @@ public enum V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameRefPolicyResolveEnum
 {
@@ -318,6 +329,7 @@ public partial class V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameRe
     public V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameSelectorPolicyResolutionEnum
 {
@@ -329,6 +341,7 @@ public enum V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameSelectorPolicyResolveEnum
 {
@@ -372,6 +385,7 @@ public partial class V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameSe
     public V1beta1HybridConnectionSpecInitProviderRelayNamespaceNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -383,6 +397,7 @@ public enum V1beta1HybridConnectionSpecInitProviderResourceGroupNameRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -422,6 +437,7 @@ public partial class V1beta1HybridConnectionSpecInitProviderResourceGroupNameRef
     public V1beta1HybridConnectionSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -433,6 +449,7 @@ public enum V1beta1HybridConnectionSpecInitProviderResourceGroupNameSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -517,6 +534,7 @@ public partial class V1beta1HybridConnectionSpecInitProvider
     public string? UserMetadata { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecManagementPoliciesEnum
 {
@@ -540,6 +558,7 @@ public enum V1beta1HybridConnectionSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -551,6 +570,7 @@ public enum V1beta1HybridConnectionSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecProviderConfigRefPolicyResolveEnum
 {
@@ -590,6 +610,7 @@ public partial class V1beta1HybridConnectionSpecProviderConfigRef
     public V1beta1HybridConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -601,6 +622,7 @@ public enum V1beta1HybridConnectionSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

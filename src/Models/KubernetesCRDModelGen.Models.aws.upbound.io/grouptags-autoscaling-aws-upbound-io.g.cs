@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscaling.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1GroupTagSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1GroupTagSpecForProviderAutoscalingGroupNameRef
     public V1beta1GroupTagSpecForProviderAutoscalingGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelectorPolicyResolveEnum
 {
@@ -165,6 +170,7 @@ public partial class V1beta1GroupTagSpecForProvider
     public IList<V1beta1GroupTagSpecForProviderTag>? Tag { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolicyResolutionEnum
 {
@@ -176,6 +182,7 @@ public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolicyResolveEnum
 {
@@ -215,6 +222,7 @@ public partial class V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRef
     public V1beta1GroupTagSpecInitProviderAutoscalingGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelectorPolicyResolutionEnum
 {
@@ -226,6 +234,7 @@ public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecInitProviderAutoscalingGroupNameSelectorPolicyResolveEnum
 {
@@ -307,6 +316,7 @@ public partial class V1beta1GroupTagSpecInitProvider
     public IList<V1beta1GroupTagSpecInitProviderTag>? Tag { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecManagementPoliciesEnum
 {
@@ -330,6 +340,7 @@ public enum V1beta1GroupTagSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -341,6 +352,7 @@ public enum V1beta1GroupTagSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecProviderConfigRefPolicyResolveEnum
 {
@@ -380,6 +392,7 @@ public partial class V1beta1GroupTagSpecProviderConfigRef
     public V1beta1GroupTagSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -391,6 +404,7 @@ public enum V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GroupTagSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

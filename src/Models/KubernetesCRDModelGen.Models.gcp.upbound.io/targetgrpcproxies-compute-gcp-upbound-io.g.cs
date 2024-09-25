@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1TargetGRPCProxySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecForProviderUrlMapRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1TargetGRPCProxySpecForProviderUrlMapRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecForProviderUrlMapRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1TargetGRPCProxySpecForProviderUrlMapRef
     public V1beta1TargetGRPCProxySpecForProviderUrlMapRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecForProviderUrlMapSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1TargetGRPCProxySpecForProviderUrlMapSelectorPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecForProviderUrlMapSelectorPolicyResolveEnum
 {
@@ -152,6 +157,7 @@ public partial class V1beta1TargetGRPCProxySpecForProvider
     public bool? ValidateForProxyless { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecInitProviderUrlMapRefPolicyResolutionEnum
 {
@@ -163,6 +169,7 @@ public enum V1beta1TargetGRPCProxySpecInitProviderUrlMapRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecInitProviderUrlMapRefPolicyResolveEnum
 {
@@ -202,6 +209,7 @@ public partial class V1beta1TargetGRPCProxySpecInitProviderUrlMapRef
     public V1beta1TargetGRPCProxySpecInitProviderUrlMapRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecInitProviderUrlMapSelectorPolicyResolutionEnum
 {
@@ -213,6 +221,7 @@ public enum V1beta1TargetGRPCProxySpecInitProviderUrlMapSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecInitProviderUrlMapSelectorPolicyResolveEnum
 {
@@ -285,6 +294,7 @@ public partial class V1beta1TargetGRPCProxySpecInitProvider
     public bool? ValidateForProxyless { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecManagementPoliciesEnum
 {
@@ -308,6 +318,7 @@ public enum V1beta1TargetGRPCProxySpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecProviderConfigRefPolicyResolutionEnum
 {
@@ -319,6 +330,7 @@ public enum V1beta1TargetGRPCProxySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecProviderConfigRefPolicyResolveEnum
 {
@@ -358,6 +370,7 @@ public partial class V1beta1TargetGRPCProxySpecProviderConfigRef
     public V1beta1TargetGRPCProxySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -369,6 +382,7 @@ public enum V1beta1TargetGRPCProxySpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetGRPCProxySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

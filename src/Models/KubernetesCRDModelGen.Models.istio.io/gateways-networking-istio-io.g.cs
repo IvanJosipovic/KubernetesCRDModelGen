@@ -29,6 +29,7 @@ public partial class V1beta1GatewaySpecServersPort
     public int? TargetPort { get; set; }
 }
 
+/// <summary>Optional: Maximum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewaySpecServersTlsMaxProtocolVersionEnum
 {
@@ -49,6 +50,7 @@ public enum V1beta1GatewaySpecServersTlsMaxProtocolVersionEnum
     TLSV13
 }
 
+/// <summary>Optional: Minimum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewaySpecServersTlsMinProtocolVersionEnum
 {
@@ -69,6 +71,7 @@ public enum V1beta1GatewaySpecServersTlsMinProtocolVersionEnum
     TLSV13
 }
 
+/// <summary>Optional: Indicates whether connections to this port should be secured using TLS.  Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GatewaySpecServersTlsModeEnum
 {

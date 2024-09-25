@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNa
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNa
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPre
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPu
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPre
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdSelectorPolicyResolveEnum
 {
@@ -256,6 +265,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecForProvider
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecForProviderPublicIpPrefixIdSelector? PublicIpPrefixIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdRefPolicyResolutionEnum
 {
@@ -267,6 +277,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGateway
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdRefPolicyResolveEnum
 {
@@ -306,6 +317,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderN
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdSelectorPolicyResolutionEnum
 {
@@ -317,6 +329,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGateway
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdSelectorPolicyResolveEnum
 {
@@ -360,6 +373,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderN
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderNatGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdRefPolicyResolutionEnum
 {
@@ -371,6 +385,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdRefPolicyResolveEnum
 {
@@ -410,6 +425,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderP
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdSelectorPolicyResolutionEnum
 {
@@ -421,6 +437,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdSelectorPolicyResolveEnum
 {
@@ -493,6 +510,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProvider
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecInitProviderPublicIpPrefixIdSelector? PublicIpPrefixIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecManagementPoliciesEnum
 {
@@ -516,6 +534,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -527,6 +546,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfigRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -566,6 +586,7 @@ public partial class V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfi
     public V1beta1NATGatewayPublicIPPrefixAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -577,6 +598,7 @@ public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecPublishConnectionDetai
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NATGatewayPublicIPPrefixAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

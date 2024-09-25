@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+/// <summary>Indicates which ownerReference should be put inside the created backup resources.&lt;br /&gt; - none: no owner reference for created backup objects (same behavior as before the field was introduced)&lt;br /&gt; - self: sets the Scheduled backup object as owner of the backup&lt;br /&gt; - cluster: set the cluster as owner of the backup&lt;br /&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ScheduledBackupSpecBackupOwnerReferenceEnum
 {
@@ -31,6 +32,7 @@ public partial class V1ScheduledBackupSpecCluster
     public string Name { get; set; }
 }
 
+/// <summary>The backup method to be used, possible options are `barmanObjectStore`, `volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ScheduledBackupSpecMethodEnum
 {
@@ -71,6 +73,7 @@ public partial class V1ScheduledBackupSpecPluginConfiguration
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ScheduledBackupSpecTargetEnum
 {

@@ -116,7 +116,7 @@ public class Generator : IGenerator
                         )
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed));
 
         if (isRoot)
@@ -326,7 +326,7 @@ public class Generator : IGenerator
 
                 if (schema.Enum.Any())
                 {
-                    return GenerateEnum(schema.Enum, classes, parentClassName, propertyName);
+                    return GenerateEnum(schema, classes, parentClassName, propertyName);
                 }
 
                 return "string";
@@ -343,7 +343,7 @@ public class Generator : IGenerator
 
                 if (schema.Enum.Any())
                 {
-                    return $"IList<{GenerateEnum(schema.Enum, classes, parentClassName, propertyName)}>";
+                    return $"IList<{GenerateEnum(schema, classes, parentClassName, propertyName)}>";
                     break;
                 }
 
@@ -354,7 +354,7 @@ public class Generator : IGenerator
         throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
     }
 
-    private static string GenerateEnum(IList<IOpenApiAny> options, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
+    private static string GenerateEnum(OpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
         var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
@@ -369,11 +369,15 @@ public class Generator : IGenerator
                             SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
                         }))),
                 ])
-            );
+            )
+            .WithLeadingTrivia(
+                            SyntaxFactory.TriviaList(
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
+                                SyntaxFactory.CarriageReturnLineFeed));
 
-        for (var i = 0; i < options.Count; i++)
+        for (var i = 0; i < schema.Enum.Count; i++)
         {
-            var option = options[i];
+            var option = schema.Enum[i];
 
             if (option is OpenApiString openApiString)
             {
@@ -395,7 +399,7 @@ public class Generator : IGenerator
                     SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(openApiString.Value?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(openApiString.Value!.Replace("\n", " ").Replace("\r", " "))}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed))
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
@@ -486,7 +490,7 @@ public class Generator : IGenerator
 
         propDecleration = propDecleration.WithLeadingTrivia(
             SyntaxFactory.TriviaList(
-                SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " "))}</summary>"),
+                SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
                 SyntaxFactory.CarriageReturnLineFeed));
 
 

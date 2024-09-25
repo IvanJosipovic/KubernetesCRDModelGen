@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroup
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderReso
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroup
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderReso
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirt
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdSelectorPolicyResolveEnum
 {
@@ -268,6 +277,7 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProvider
     public V1beta1VirtualHubSecurityPartnerProviderSpecForProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdRefPolicyResolutionEnum
 {
@@ -279,6 +289,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdRefPolicyResolveEnum
 {
@@ -318,6 +329,7 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVir
     public V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdSelectorPolicyResolutionEnum
 {
@@ -329,6 +341,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdSelectorPolicyResolveEnum
 {
@@ -401,6 +414,7 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecInitProvider
     public V1beta1VirtualHubSecurityPartnerProviderSpecInitProviderVirtualHubIdSelector? VirtualHubIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecManagementPoliciesEnum
 {
@@ -424,6 +438,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -435,6 +450,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigRefPolicyResolveEnum
 {
@@ -474,6 +490,7 @@ public partial class V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigR
     public V1beta1VirtualHubSecurityPartnerProviderSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -485,6 +502,7 @@ public enum V1beta1VirtualHubSecurityPartnerProviderSpecPublishConnectionDetails
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualHubSecurityPartnerProviderSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

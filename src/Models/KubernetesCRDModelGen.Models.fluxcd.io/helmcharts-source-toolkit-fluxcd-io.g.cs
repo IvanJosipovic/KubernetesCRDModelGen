@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+/// <summary>ReconcileStrategy determines what enables the creation of a new artifact. Valid values are ('ChartVersion', 'Revision'). See the documentation of the values for an explanation on their behavior. Defaults to ChartVersion when omitted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartSpecReconcileStrategyEnum
 {
@@ -19,6 +20,7 @@ public enum V1HelmChartSpecReconcileStrategyEnum
     Revision
 }
 
+/// <summary>Kind of the referent, valid values are ('HelmRepository', 'GitRepository', 'Bucket').</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartSpecSourceRefKindEnum
 {
@@ -64,6 +66,7 @@ public partial class V1HelmChartSpecVerifyMatchOIDCIdentity
     public string Subject { get; set; }
 }
 
+/// <summary>Provider specifies the technology used to sign the OCI Artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartSpecVerifyProviderEnum
 {
@@ -177,6 +180,7 @@ public partial class V1HelmChartStatusArtifact
     public string Url { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmChartStatusConditionsStatusEnum
 {

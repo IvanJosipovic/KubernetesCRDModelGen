@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1IOTHubFallbackRouteSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesRefsPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesRefsPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesRefsPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesRefs
     public V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesSelec
     public V1beta1IOTHubFallbackRouteSpecForProviderEndpointNamesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderIothubNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1IOTHubFallbackRouteSpecForProviderIothubNameRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderIothubNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecForProviderIothubNameRef
     public V1beta1IOTHubFallbackRouteSpecForProviderIothubNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderIothubNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1IOTHubFallbackRouteSpecForProviderIothubNameSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderIothubNameSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecForProviderIothubNameSelector
     public V1beta1IOTHubFallbackRouteSpecForProviderIothubNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameR
     public V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -384,6 +397,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecForProvider
     public string? Source { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesRefsPolicyResolutionEnum
 {
@@ -395,6 +409,7 @@ public enum V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesRefsPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesRefsPolicyResolveEnum
 {
@@ -434,6 +449,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesRefs
     public V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesSelectorPolicyResolutionEnum
 {
@@ -445,6 +461,7 @@ public enum V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecInitProviderEndpointNamesSelectorPolicyResolveEnum
 {
@@ -517,6 +534,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecInitProvider
     public string? Source { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecManagementPoliciesEnum
 {
@@ -540,6 +558,7 @@ public enum V1beta1IOTHubFallbackRouteSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -551,6 +570,7 @@ public enum V1beta1IOTHubFallbackRouteSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecProviderConfigRefPolicyResolveEnum
 {
@@ -590,6 +610,7 @@ public partial class V1beta1IOTHubFallbackRouteSpecProviderConfigRef
     public V1beta1IOTHubFallbackRouteSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -601,6 +622,7 @@ public enum V1beta1IOTHubFallbackRouteSpecPublishConnectionDetailsToConfigRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubFallbackRouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

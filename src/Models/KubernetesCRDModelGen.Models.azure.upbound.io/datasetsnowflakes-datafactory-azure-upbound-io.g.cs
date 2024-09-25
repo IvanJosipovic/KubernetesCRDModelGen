@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1DataSetSnowflakeSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdRef
     public V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdSelector
     public V1beta1DataSetSnowflakeSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameRef
     public V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecForProviderLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -309,6 +318,7 @@ public partial class V1beta1DataSetSnowflakeSpecForProvider
     public string? TableName { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -320,6 +330,7 @@ public enum V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameRefPolicyResolveEnum
 {
@@ -359,6 +370,7 @@ public partial class V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameRef
     public V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -370,6 +382,7 @@ public enum V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecInitProviderLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -483,6 +496,7 @@ public partial class V1beta1DataSetSnowflakeSpecInitProvider
     public string? TableName { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecManagementPoliciesEnum
 {
@@ -506,6 +520,7 @@ public enum V1beta1DataSetSnowflakeSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -517,6 +532,7 @@ public enum V1beta1DataSetSnowflakeSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecProviderConfigRefPolicyResolveEnum
 {
@@ -556,6 +572,7 @@ public partial class V1beta1DataSetSnowflakeSpecProviderConfigRef
     public V1beta1DataSetSnowflakeSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -567,6 +584,7 @@ public enum V1beta1DataSetSnowflakeSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetSnowflakeSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

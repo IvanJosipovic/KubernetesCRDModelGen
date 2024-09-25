@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecDeletionPoli
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderB
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderB
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderN
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderN
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdSelectorPolicyResolveEnum
 {
@@ -260,6 +269,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecFor
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecForProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdRefPolicyResolutionEnum
 {
@@ -271,6 +281,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProvider
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdRefPolicyResolveEnum
 {
@@ -310,6 +321,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdSelectorPolicyResolutionEnum
 {
@@ -321,6 +333,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProvider
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdSelectorPolicyResolveEnum
 {
@@ -364,6 +377,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderBackendAddressPoolIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdRefPolicyResolutionEnum
 {
@@ -375,6 +389,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProvider
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdRefPolicyResolveEnum
 {
@@ -414,6 +429,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicyResolutionEnum
 {
@@ -425,6 +441,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProvider
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdSelectorPolicyResolveEnum
 {
@@ -501,6 +518,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecIni
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecInitProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecManagementPoliciesEnum
 {
@@ -524,6 +542,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecManagementPo
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -535,6 +554,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecProviderConf
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -574,6 +594,7 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecPro
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -585,6 +606,7 @@ public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecPublishConne
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NetworkInterfaceBackendAddressPoolAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

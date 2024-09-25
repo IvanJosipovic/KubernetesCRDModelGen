@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeyRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeyRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAc
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeyRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeySelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeySe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeySelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAc
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisAccessKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCa
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCa
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderRedisCacheIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringC
     public V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecForProviderSpringCloudAppIdSelectorPolicyResolveEnum
 {
@@ -376,6 +389,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecForProvider
     public bool? SslEnabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyRefPolicyResolutionEnum
 {
@@ -387,6 +401,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyRefPolicyResolveEnum
 {
@@ -426,6 +441,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisA
     public V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeySelectorPolicyResolutionEnum
 {
@@ -437,6 +453,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeyS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeySelectorPolicyResolveEnum
 {
@@ -480,6 +497,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisA
     public V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisAccessKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdRefPolicyResolutionEnum
 {
@@ -491,6 +509,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdRefPolicyResolveEnum
 {
@@ -530,6 +549,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisC
     public V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdSelectorPolicyResolutionEnum
 {
@@ -541,6 +561,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecInitProviderRedisCacheIdSelectorPolicyResolveEnum
 {
@@ -617,6 +638,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecInitProvider
     public bool? SslEnabled { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecManagementPoliciesEnum
 {
@@ -640,6 +662,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -651,6 +674,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -690,6 +714,7 @@ public partial class V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRef
     public V1beta1SpringCloudAppRedisAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -701,6 +726,7 @@ public enum V1beta1SpringCloudAppRedisAssociationSpecPublishConnectionDetailsToC
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppRedisAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

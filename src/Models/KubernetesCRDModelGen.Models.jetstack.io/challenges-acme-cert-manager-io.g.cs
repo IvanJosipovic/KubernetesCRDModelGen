@@ -124,6 +124,7 @@ public partial class V1ChallengeSpecSolverDns01AzureDNSClientSecretSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>name of the Azure environment (default AzurePublicCloud)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeSpecSolverDns01AzureDNSEnvironmentEnum
 {
@@ -265,6 +266,7 @@ public partial class V1ChallengeSpecSolverDns01Cloudflare
     public string? Email { get; set; }
 }
 
+/// <summary>CNAMEStrategy configures how the DNS01 provider should handle CNAME records when found in DNS zones.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeSpecSolverDns01CnameStrategyEnum
 {
@@ -1272,6 +1274,7 @@ public partial class V1ChallengeSpecSolver
     public V1ChallengeSpecSolverSelector? Selector { get; set; }
 }
 
+/// <summary>The type of ACME challenge this resource represents. One of "HTTP-01" or "DNS-01".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeSpecTypeEnum
 {
@@ -1325,6 +1328,7 @@ public partial class V1ChallengeSpec
     public bool? Wildcard { get; set; }
 }
 
+/// <summary>Contains the current 'state' of the challenge. If not set, the state of the challenge is unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ChallengeStatusStateEnum
 {

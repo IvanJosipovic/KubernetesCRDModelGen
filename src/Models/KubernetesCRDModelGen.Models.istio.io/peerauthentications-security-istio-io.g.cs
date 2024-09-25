@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
+/// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PeerAuthenticationSpecMtlsModeEnum
 {
@@ -35,6 +36,7 @@ public partial class V1beta1PeerAuthenticationSpecMtls
     public V1beta1PeerAuthenticationSpecMtlsModeEnum? Mode { get; set; }
 }
 
+/// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PeerAuthenticationSpecPortLevelMtlsModeEnum
 {

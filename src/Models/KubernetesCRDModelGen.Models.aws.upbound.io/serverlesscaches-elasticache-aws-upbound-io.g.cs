@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elasticache.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecDeletionPolicyEnum
 {
@@ -62,6 +63,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimits
     public IList<V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicyResolutionEnum
 {
@@ -73,6 +75,7 @@ public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicyResolveEnum
 {
@@ -112,6 +115,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdRef
     public V1beta1ServerlessCacheSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicyResolutionEnum
 {
@@ -123,6 +127,7 @@ public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicyResolveEnum
 {
@@ -166,6 +171,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelector
     public V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -177,6 +183,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -216,6 +223,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefs
     public V1beta1ServerlessCacheSpecForProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -227,6 +235,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -270,6 +279,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelecto
     public V1beta1ServerlessCacheSpecForProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicyResolutionEnum
 {
@@ -281,6 +291,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicyResolveEnum
 {
@@ -320,6 +331,7 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdRefs
     public V1beta1ServerlessCacheSpecForProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicyResolutionEnum
 {
@@ -331,6 +343,7 @@ public enum V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecForProviderSubnetIdSelectorPolicyResolveEnum
 {
@@ -498,6 +511,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimits
     public IList<V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicyResolutionEnum
 {
@@ -509,6 +523,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicyResolveEnum
 {
@@ -548,6 +563,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRef
     public V1beta1ServerlessCacheSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicyResolutionEnum
 {
@@ -559,6 +575,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
 {
@@ -602,6 +619,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelector
     public V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -613,6 +631,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -652,6 +671,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefs
     public V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -663,6 +683,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -706,6 +727,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelect
     public V1beta1ServerlessCacheSpecInitProviderSecurityGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicyResolutionEnum
 {
@@ -717,6 +739,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicyResolveEnum
 {
@@ -756,6 +779,7 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdRefs
     public V1beta1ServerlessCacheSpecInitProviderSubnetIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicyResolutionEnum
 {
@@ -767,6 +791,7 @@ public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecInitProviderSubnetIdSelectorPolicyResolveEnum
 {
@@ -887,6 +912,7 @@ public partial class V1beta1ServerlessCacheSpecInitProvider
     public string? UserGroupId { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecManagementPoliciesEnum
 {
@@ -910,6 +936,7 @@ public enum V1beta1ServerlessCacheSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -921,6 +948,7 @@ public enum V1beta1ServerlessCacheSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecProviderConfigRefPolicyResolveEnum
 {
@@ -960,6 +988,7 @@ public partial class V1beta1ServerlessCacheSpecProviderConfigRef
     public V1beta1ServerlessCacheSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -971,6 +1000,7 @@ public enum V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServerlessCacheSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

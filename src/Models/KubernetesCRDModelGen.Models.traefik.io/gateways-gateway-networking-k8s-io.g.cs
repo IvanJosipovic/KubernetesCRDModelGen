@@ -34,6 +34,7 @@ public partial class V1GatewaySpecListenersAllowedRoutesKinds
     public string Kind { get; set; }
 }
 
+/// <summary>From indicates where Routes will be selected for this Gateway. Possible values are:   * All: Routes in all namespaces may be used by this Gateway. * Selector: Routes in namespaces selected by the selector may be used by   this Gateway. * Same: Only Routes in the same namespace may be used by this Gateway.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GatewaySpecListenersAllowedRoutesNamespacesFromEnum
 {
@@ -126,6 +127,7 @@ public partial class V1GatewaySpecListenersTlsCertificateRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary>Mode defines the TLS behavior for the TLS session initiated by the client. There are two possible modes:   - Terminate: The TLS session between the downstream client and the   Gateway is terminated at the Gateway. This mode requires certificates   to be specified in some way, such as populating the certificateRefs   field. - Passthrough: The TLS session is NOT terminated by the Gateway. This   implies that the Gateway can't decipher the TLS stream except for   the ClientHello message of the TLS protocol. The certificateRefs field   is ignored in this mode.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GatewaySpecListenersTlsModeEnum
 {
@@ -214,6 +216,7 @@ public partial class V1GatewayStatusAddresses
     public string Value { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GatewayStatusConditionsStatusEnum
 {
@@ -258,6 +261,7 @@ public partial class V1GatewayStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GatewayStatusListenersConditionsStatusEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecForProviderApplication
     public V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecForProviderApplication
     public V1beta1ApplicationInsightsWebTestSpecForProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecForProviderResourceGroupNameRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecForProviderResourceGro
     public V1beta1ApplicationInsightsWebTestSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecForProviderResourceGroupNameSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -300,6 +309,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecForProvider
     public double? Timeout { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsightsIdRefPolicyResolutionEnum
 {
@@ -311,6 +321,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsights
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsightsIdRefPolicyResolveEnum
 {
@@ -350,6 +361,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecInitProviderApplicatio
     public V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsightsIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsightsIdSelectorPolicyResolutionEnum
 {
@@ -361,6 +373,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsights
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsightsIdSelectorPolicyResolveEnum
 {
@@ -404,6 +417,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecInitProviderApplicatio
     public V1beta1ApplicationInsightsWebTestSpecInitProviderApplicationInsightsIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -415,6 +429,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGroupNameRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -454,6 +469,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGr
     public V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -465,6 +481,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGroupNameSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -581,6 +598,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecInitProvider
     public double? Timeout { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecManagementPoliciesEnum
 {
@@ -604,6 +622,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -615,6 +634,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecProviderConfigRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecProviderConfigRefPolicyResolveEnum
 {
@@ -654,6 +674,7 @@ public partial class V1beta1ApplicationInsightsWebTestSpecProviderConfigRef
     public V1beta1ApplicationInsightsWebTestSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -665,6 +686,7 @@ public enum V1beta1ApplicationInsightsWebTestSpecPublishConnectionDetailsToConfi
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWebTestSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

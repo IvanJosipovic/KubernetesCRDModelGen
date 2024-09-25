@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>Set source-destination-check on AWS EC2 instances. Accepted value must be one of "DoNothing", "Enable" or "Disable". [Default: DoNothing]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecAwsSrcDstCheckEnum
 {
@@ -22,6 +23,7 @@ public enum V1FelixConfigurationSpecAwsSrcDstCheckEnum
     Disable
 }
 
+/// <summary>BPFConnectTimeLoadBalancing when in BPF mode, controls whether Felix installs the connect-time load balancer. The connect-time load balancer is required for the host to be able to reach Kubernetes services and it improves the performance of pod-to-service connections.When set to TCP, connect time load balancing is available only for services with TCP ports. [Default: TCP]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecBpfConnectTimeLoadBalancingEnum
 {
@@ -36,6 +38,7 @@ public enum V1FelixConfigurationSpecBpfConnectTimeLoadBalancingEnum
     Disabled
 }
 
+/// <summary>BPFHostNetworkedNATWithoutCTLB when in BPF mode, controls whether Felix does a NAT without CTLB. This along with BPFConnectTimeLoadBalancing determines the CTLB behavior. [Default: Enabled]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecBpfHostNetworkedNATWithoutCTLBEnum
 {
@@ -81,6 +84,7 @@ public partial class V1FelixConfigurationSpecFailsafeOutboundHostPorts
     public string Protocol { get; set; }
 }
 
+/// <summary>FloatingIPs configures whether or not Felix will program non-OpenStack floating IP addresses.  (OpenStack-derived floating IPs are always programmed, regardless of this setting.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecFloatingIPsEnum
 {
@@ -131,6 +135,7 @@ public partial class V1FelixConfigurationSpecRouteTableRanges
     public int Min { get; set; }
 }
 
+/// <summary>WindowsManageFirewallRules configures whether or not Felix will program Windows Firewall rules. (to allow inbound access to its own metrics ports) [Default: Disabled]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1FelixConfigurationSpecWindowsManageFirewallRulesEnum
 {

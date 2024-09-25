@@ -77,6 +77,7 @@ public partial class V1GitRepositorySpecSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Mode specifies which Git object(s) should be verified.   The variants "head" and "HEAD" both imply the same thing, i.e. verify the commit that the HEAD of the Git repository points to. The variant "head" solely exists to ensure backwards compatibility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GitRepositorySpecVerifyModeEnum
 {
@@ -199,6 +200,7 @@ public partial class V1GitRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GitRepositoryStatusConditionsStatusEnum
 {

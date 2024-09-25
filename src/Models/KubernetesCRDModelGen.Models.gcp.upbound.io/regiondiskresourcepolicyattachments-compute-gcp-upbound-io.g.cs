@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDis
     public V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDis
     public V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderDiskSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNameRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNam
     public V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNameSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecForProviderNameSelectorPolicyResolveEnum
 {
@@ -264,6 +273,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecForProvider
     public string? Region { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskRefPolicyResolutionEnum
 {
@@ -275,6 +285,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskRefPolicyResolveEnum
 {
@@ -314,6 +325,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDi
     public V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskSelectorPolicyResolutionEnum
 {
@@ -325,6 +337,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskSelectorPolicyResolveEnum
 {
@@ -368,6 +381,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDi
     public V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderDiskSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNameRefPolicyResolutionEnum
 {
@@ -379,6 +393,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNameRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNameRefPolicyResolveEnum
 {
@@ -418,6 +433,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNa
     public V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNameSelectorPolicyResolutionEnum
 {
@@ -429,6 +445,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNameSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecInitProviderNameSelectorPolicyResolveEnum
 {
@@ -509,6 +526,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecInitProvider
     public string? Region { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecManagementPoliciesEnum
 {
@@ -532,6 +550,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -543,6 +562,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecProviderConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecProviderConfigRefPolicyResolveEnum
 {
@@ -582,6 +602,7 @@ public partial class V1beta1RegionDiskResourcePolicyAttachmentSpecProviderConfig
     public V1beta1RegionDiskResourcePolicyAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -593,6 +614,7 @@ public enum V1beta1RegionDiskResourcePolicyAttachmentSpecPublishConnectionDetail
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionDiskResourcePolicyAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

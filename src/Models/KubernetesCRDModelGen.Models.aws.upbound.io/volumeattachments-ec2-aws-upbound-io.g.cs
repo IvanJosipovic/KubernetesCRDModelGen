@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1VolumeAttachmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdRef
     public V1beta1VolumeAttachmentSpecForProviderInstanceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderInstanceIdSelector
     public V1beta1VolumeAttachmentSpecForProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1VolumeAttachmentSpecForProviderVolumeIdRef
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecForProviderVolumeIdSelectorPolicyResolveEnum
 {
@@ -276,6 +285,7 @@ public partial class V1beta1VolumeAttachmentSpecForProvider
     public V1beta1VolumeAttachmentSpecForProviderVolumeIdSelector? VolumeIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicyResolutionEnum
 {
@@ -287,6 +297,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicyResolveEnum
 {
@@ -326,6 +337,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdRef
     public V1beta1VolumeAttachmentSpecInitProviderInstanceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicyResolutionEnum
 {
@@ -337,6 +349,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicyResolveEnum
 {
@@ -380,6 +393,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelector
     public V1beta1VolumeAttachmentSpecInitProviderInstanceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicyResolutionEnum
 {
@@ -391,6 +405,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicyResolveEnum
 {
@@ -430,6 +445,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProviderVolumeIdRef
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicyResolutionEnum
 {
@@ -441,6 +457,7 @@ public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelectorPolicyResolveEnum
 {
@@ -529,6 +546,7 @@ public partial class V1beta1VolumeAttachmentSpecInitProvider
     public V1beta1VolumeAttachmentSpecInitProviderVolumeIdSelector? VolumeIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecManagementPoliciesEnum
 {
@@ -552,6 +570,7 @@ public enum V1beta1VolumeAttachmentSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -563,6 +582,7 @@ public enum V1beta1VolumeAttachmentSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecProviderConfigRefPolicyResolveEnum
 {
@@ -602,6 +622,7 @@ public partial class V1beta1VolumeAttachmentSpecProviderConfigRef
     public V1beta1VolumeAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -613,6 +634,7 @@ public enum V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VolumeAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

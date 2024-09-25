@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsmanager.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1SecretRotationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRef
     public V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderRotationLambdaArnSelectorPolicyResolveEnum
 {
@@ -140,6 +145,7 @@ public partial class V1beta1SecretRotationSpecForProviderRotationRules
     public string? ScheduleExpression { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderSecretIdRefPolicyResolutionEnum
 {
@@ -151,6 +157,7 @@ public enum V1beta1SecretRotationSpecForProviderSecretIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderSecretIdRefPolicyResolveEnum
 {
@@ -190,6 +197,7 @@ public partial class V1beta1SecretRotationSpecForProviderSecretIdRef
     public V1beta1SecretRotationSpecForProviderSecretIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicyResolutionEnum
 {
@@ -201,6 +209,7 @@ public enum V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecForProviderSecretIdSelectorPolicyResolveEnum
 {
@@ -285,6 +294,7 @@ public partial class V1beta1SecretRotationSpecForProvider
     public V1beta1SecretRotationSpecForProviderSecretIdSelector? SecretIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicyResolutionEnum
 {
@@ -296,6 +306,7 @@ public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicyResolveEnum
 {
@@ -335,6 +346,7 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationLambdaArnRef
     public V1beta1SecretRotationSpecInitProviderRotationLambdaArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicyResolutionEnum
 {
@@ -346,6 +358,7 @@ public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderRotationLambdaArnSelectorPolicyResolveEnum
 {
@@ -406,6 +419,7 @@ public partial class V1beta1SecretRotationSpecInitProviderRotationRules
     public string? ScheduleExpression { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderSecretIdRefPolicyResolutionEnum
 {
@@ -417,6 +431,7 @@ public enum V1beta1SecretRotationSpecInitProviderSecretIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderSecretIdRefPolicyResolveEnum
 {
@@ -456,6 +471,7 @@ public partial class V1beta1SecretRotationSpecInitProviderSecretIdRef
     public V1beta1SecretRotationSpecInitProviderSecretIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicyResolutionEnum
 {
@@ -467,6 +483,7 @@ public enum V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecInitProviderSecretIdSelectorPolicyResolveEnum
 {
@@ -547,6 +564,7 @@ public partial class V1beta1SecretRotationSpecInitProvider
     public V1beta1SecretRotationSpecInitProviderSecretIdSelector? SecretIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecManagementPoliciesEnum
 {
@@ -570,6 +588,7 @@ public enum V1beta1SecretRotationSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -581,6 +600,7 @@ public enum V1beta1SecretRotationSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -620,6 +640,7 @@ public partial class V1beta1SecretRotationSpecProviderConfigRef
     public V1beta1SecretRotationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -631,6 +652,7 @@ public enum V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SecretRotationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

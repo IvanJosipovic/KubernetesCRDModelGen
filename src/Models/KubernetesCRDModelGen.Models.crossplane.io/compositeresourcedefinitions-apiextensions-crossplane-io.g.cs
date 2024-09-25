@@ -101,6 +101,7 @@ public partial class V1CompositeResourceDefinitionSpecConversion
     public V1CompositeResourceDefinitionSpecConversionWebhook? Webhook { get; set; }
 }
 
+/// <summary>DefaultCompositeDeletePolicy is the policy used when deleting the Composite that is associated with the Claim if no policy has been specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositeResourceDefinitionSpecDefaultCompositeDeletePolicyEnum
 {
@@ -121,6 +122,7 @@ public partial class V1CompositeResourceDefinitionSpecDefaultCompositionRef
     public string Name { get; set; }
 }
 
+/// <summary>DefaultCompositionUpdatePolicy is the policy used when updating composites after a new Composition Revision has been created if no policy has been specified on the composite.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CompositeResourceDefinitionSpecDefaultCompositionUpdatePolicyEnum
 {

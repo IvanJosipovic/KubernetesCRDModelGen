@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcare.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecDeletionPolicyEnum
 {
@@ -36,6 +37,7 @@ public partial class V1beta1DatasetIAMMemberSpecForProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecForProviderDatasetIdRefPolicyResolutionEnum
 {
@@ -47,6 +49,7 @@ public enum V1beta1DatasetIAMMemberSpecForProviderDatasetIdRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecForProviderDatasetIdRefPolicyResolveEnum
 {
@@ -86,6 +89,7 @@ public partial class V1beta1DatasetIAMMemberSpecForProviderDatasetIdRef
     public V1beta1DatasetIAMMemberSpecForProviderDatasetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecForProviderDatasetIdSelectorPolicyResolutionEnum
 {
@@ -97,6 +101,7 @@ public enum V1beta1DatasetIAMMemberSpecForProviderDatasetIdSelectorPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecForProviderDatasetIdSelectorPolicyResolveEnum
 {
@@ -186,6 +191,7 @@ public partial class V1beta1DatasetIAMMemberSpecInitProviderCondition
     public string? Title { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecInitProviderDatasetIdRefPolicyResolutionEnum
 {
@@ -197,6 +203,7 @@ public enum V1beta1DatasetIAMMemberSpecInitProviderDatasetIdRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecInitProviderDatasetIdRefPolicyResolveEnum
 {
@@ -236,6 +243,7 @@ public partial class V1beta1DatasetIAMMemberSpecInitProviderDatasetIdRef
     public V1beta1DatasetIAMMemberSpecInitProviderDatasetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecInitProviderDatasetIdSelectorPolicyResolutionEnum
 {
@@ -247,6 +255,7 @@ public enum V1beta1DatasetIAMMemberSpecInitProviderDatasetIdSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecInitProviderDatasetIdSelectorPolicyResolveEnum
 {
@@ -319,6 +328,7 @@ public partial class V1beta1DatasetIAMMemberSpecInitProvider
     public string? Role { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecManagementPoliciesEnum
 {
@@ -342,6 +352,7 @@ public enum V1beta1DatasetIAMMemberSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -353,6 +364,7 @@ public enum V1beta1DatasetIAMMemberSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecProviderConfigRefPolicyResolveEnum
 {
@@ -392,6 +404,7 @@ public partial class V1beta1DatasetIAMMemberSpecProviderConfigRef
     public V1beta1DatasetIAMMemberSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -403,6 +416,7 @@ public enum V1beta1DatasetIAMMemberSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DatasetIAMMemberSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

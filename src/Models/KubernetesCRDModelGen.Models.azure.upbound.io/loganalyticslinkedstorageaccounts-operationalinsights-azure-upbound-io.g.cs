@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.operationalinsights.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupN
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupN
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResou
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefsPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccount
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefsPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccount
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResou
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResou
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelectorPolicyResolveEnum
 {
@@ -376,6 +389,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProvider
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -387,6 +401,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroup
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -426,6 +441,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -437,6 +453,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroup
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -480,6 +497,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderReso
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefsPolicyResolutionEnum
 {
@@ -491,6 +509,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccoun
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefsPolicyResolveEnum
 {
@@ -530,6 +549,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelectorPolicyResolutionEnum
 {
@@ -541,6 +561,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccoun
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelectorPolicyResolveEnum
 {
@@ -584,6 +605,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRefPolicyResolutionEnum
 {
@@ -595,6 +617,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRefPolicyResolveEnum
 {
@@ -634,6 +657,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelectorPolicyResolutionEnum
 {
@@ -645,6 +669,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelectorPolicyResolveEnum
 {
@@ -733,6 +758,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProvider
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecManagementPoliciesEnum
 {
@@ -756,6 +782,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -767,6 +794,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicyResolveEnum
 {
@@ -806,6 +834,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRe
     public V1beta1LogAnalyticsLinkedStorageAccountSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -817,6 +846,7 @@ public enum V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsT
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LogAnalyticsLinkedStorageAccountSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

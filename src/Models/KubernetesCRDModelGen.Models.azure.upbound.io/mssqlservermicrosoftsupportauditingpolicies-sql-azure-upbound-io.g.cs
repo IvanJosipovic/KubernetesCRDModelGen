@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecDeletionPolicyEn
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderBlobStorageEndpointSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderServerIdSelectorPolicyResolveEnum
 {
@@ -306,6 +315,7 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProv
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecForProviderStorageAccountSubscriptionIdSecretRef? StorageAccountSubscriptionIdSecretRef { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointRefPolicyResolutionEnum
 {
@@ -317,6 +327,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlob
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointRefPolicyResolveEnum
 {
@@ -356,6 +367,7 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointSelectorPolicyResolutionEnum
 {
@@ -367,6 +379,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlob
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderBlobStorageEndpointSelectorPolicyResolveEnum
 {
@@ -477,6 +490,7 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitPro
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecInitProviderStorageAccountSubscriptionIdSecretRef? StorageAccountSubscriptionIdSecretRef { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecManagementPoliciesEnum
 {
@@ -500,6 +514,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecManagementPolici
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProviderConfigRefPolicyResolutionEnum
 {
@@ -511,6 +526,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProviderConfigRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProviderConfigRefPolicyResolveEnum
 {
@@ -550,6 +566,7 @@ public partial class V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProvide
     public V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -561,6 +578,7 @@ public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecPublishConnectio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLServerMicrosoftSupportAuditingPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

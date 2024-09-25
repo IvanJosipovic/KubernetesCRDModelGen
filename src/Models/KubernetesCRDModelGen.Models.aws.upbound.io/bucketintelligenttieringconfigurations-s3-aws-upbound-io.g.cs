@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     public V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecForProviderBucketSelectorPolicyResolveEnum
 {
@@ -186,6 +191,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecForProvider
     public IList<V1beta1BucketIntelligentTieringConfigurationSpecForProviderTiering>? Tiering { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRefPolicyResolutionEnum
 {
@@ -197,6 +203,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRefPolicyResolveEnum
 {
@@ -236,6 +243,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     public V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelectorPolicyResolutionEnum
 {
@@ -247,6 +255,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum
 {
@@ -349,6 +358,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecInitProvide
     public IList<V1beta1BucketIntelligentTieringConfigurationSpecInitProviderTiering>? Tiering { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecManagementPoliciesEnum
 {
@@ -372,6 +382,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecManagementPoliciesEn
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -383,6 +394,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -422,6 +434,7 @@ public partial class V1beta1BucketIntelligentTieringConfigurationSpecProviderCon
     public V1beta1BucketIntelligentTieringConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -433,6 +446,7 @@ public enum V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDet
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketIntelligentTieringConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

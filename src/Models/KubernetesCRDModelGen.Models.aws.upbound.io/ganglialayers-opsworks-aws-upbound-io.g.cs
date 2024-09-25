@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.opsworks.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecDeletionPolicyEnum
 {
@@ -81,6 +82,7 @@ public partial class V1beta1GangliaLayerSpecForProviderCloudwatchConfiguration
     public IList<V1beta1GangliaLayerSpecForProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -92,6 +94,7 @@ public enum V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdRefsPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -131,6 +134,7 @@ public partial class V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdRefs
     public V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -142,6 +146,7 @@ public enum V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -301,6 +306,7 @@ public partial class V1beta1GangliaLayerSpecForProviderLoadBasedAutoScaling
     public IList<V1beta1GangliaLayerSpecForProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderStackIdRefPolicyResolutionEnum
 {
@@ -312,6 +318,7 @@ public enum V1beta1GangliaLayerSpecForProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderStackIdRefPolicyResolveEnum
 {
@@ -351,6 +358,7 @@ public partial class V1beta1GangliaLayerSpecForProviderStackIdRef
     public V1beta1GangliaLayerSpecForProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -362,6 +370,7 @@ public enum V1beta1GangliaLayerSpecForProviderStackIdSelectorPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 {
@@ -592,6 +601,7 @@ public partial class V1beta1GangliaLayerSpecInitProviderCloudwatchConfiguration
     public IList<V1beta1GangliaLayerSpecInitProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -603,6 +613,7 @@ public enum V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -642,6 +653,7 @@ public partial class V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdRef
     public V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -653,6 +665,7 @@ public enum V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -812,6 +825,7 @@ public partial class V1beta1GangliaLayerSpecInitProviderLoadBasedAutoScaling
     public IList<V1beta1GangliaLayerSpecInitProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderStackIdRefPolicyResolutionEnum
 {
@@ -823,6 +837,7 @@ public enum V1beta1GangliaLayerSpecInitProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderStackIdRefPolicyResolveEnum
 {
@@ -862,6 +877,7 @@ public partial class V1beta1GangliaLayerSpecInitProviderStackIdRef
     public V1beta1GangliaLayerSpecInitProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -873,6 +889,7 @@ public enum V1beta1GangliaLayerSpecInitProviderStackIdSelectorPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
 {
@@ -1041,6 +1058,7 @@ public partial class V1beta1GangliaLayerSpecInitProvider
     public string? Username { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecManagementPoliciesEnum
 {
@@ -1064,6 +1082,7 @@ public enum V1beta1GangliaLayerSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1075,6 +1094,7 @@ public enum V1beta1GangliaLayerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1114,6 +1134,7 @@ public partial class V1beta1GangliaLayerSpecProviderConfigRef
     public V1beta1GangliaLayerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1125,6 +1146,7 @@ public enum V1beta1GangliaLayerSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GangliaLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

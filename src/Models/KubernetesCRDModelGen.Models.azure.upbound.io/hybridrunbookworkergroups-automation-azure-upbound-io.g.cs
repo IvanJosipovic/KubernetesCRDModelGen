@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.automation.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     public V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAcc
     public V1beta1HybridRunBookWorkerGroupSpecForProviderAutomationAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroup
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -264,6 +273,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecForProvider
     public V1beta1HybridRunBookWorkerGroupSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRefPolicyResolutionEnum
 {
@@ -275,6 +285,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountName
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRefPolicyResolveEnum
 {
@@ -314,6 +325,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelectorPolicyResolutionEnum
 {
@@ -325,6 +337,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountName
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelectorPolicyResolveEnum
 {
@@ -368,6 +381,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAc
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderAutomationAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -379,6 +393,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -418,6 +433,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGrou
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -429,6 +445,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -509,6 +526,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecInitProvider
     public V1beta1HybridRunBookWorkerGroupSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecManagementPoliciesEnum
 {
@@ -532,6 +550,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -543,6 +562,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicyResolveEnum
 {
@@ -582,6 +602,7 @@ public partial class V1beta1HybridRunBookWorkerGroupSpecProviderConfigRef
     public V1beta1HybridRunBookWorkerGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -593,6 +614,7 @@ public enum V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HybridRunBookWorkerGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

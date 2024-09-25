@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecDeletionPolicyEnum
 {
@@ -91,6 +92,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderOciArtifact
     public string? LoginServer { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -102,6 +104,7 @@ public enum V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -141,6 +144,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNam
     public V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -152,6 +156,7 @@ public enum V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -195,6 +200,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNam
     public V1beta1HealthcareFHIRServiceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRefPolicyResolutionEnum
 {
@@ -206,6 +212,7 @@ public enum V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRefPolicyResolveEnum
 {
@@ -245,6 +252,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRef
     public V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelectorPolicyResolutionEnum
 {
@@ -256,6 +264,7 @@ public enum V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecForProviderWorkspaceIdSelectorPolicyResolveEnum
 {
@@ -440,6 +449,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderOciArtifact
     public string? LoginServer { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -451,6 +461,7 @@ public enum V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -490,6 +501,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNa
     public V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -501,6 +513,7 @@ public enum V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -601,6 +614,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecManagementPoliciesEnum
 {
@@ -624,6 +638,7 @@ public enum V1beta1HealthcareFHIRServiceSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -635,6 +650,7 @@ public enum V1beta1HealthcareFHIRServiceSpecProviderConfigRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecProviderConfigRefPolicyResolveEnum
 {
@@ -674,6 +690,7 @@ public partial class V1beta1HealthcareFHIRServiceSpecProviderConfigRef
     public V1beta1HealthcareFHIRServiceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -685,6 +702,7 @@ public enum V1beta1HealthcareFHIRServiceSpecPublishConnectionDetailsToConfigRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HealthcareFHIRServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -175,6 +175,7 @@ public partial class V1alpha1AnalysisRunSpecMetricsProviderCloudWatch
     public IList<V1alpha1AnalysisRunSpecMetricsProviderCloudWatchMetricDataQueries> MetricDataQueries { get; set; }
 }
 
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1AnalysisRunSpecMetricsProviderDatadogAggregatorEnum
 {
@@ -207,6 +208,7 @@ public enum V1alpha1AnalysisRunSpecMetricsProviderDatadogAggregatorEnum
     Area
 }
 
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1AnalysisRunSpecMetricsProviderDatadogApiVersionEnum
 {

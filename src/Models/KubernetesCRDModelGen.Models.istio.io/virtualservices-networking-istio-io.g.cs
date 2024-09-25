@@ -25,6 +25,7 @@ public partial class V1beta1VirtualServiceSpecHttpCorsPolicyAllowOrigins
     public string? Regex { get; set; }
 }
 
+/// <summary>Indicates whether preflight requests not matching the configured allowed origin shouldn't be forwarded to the upstream.  Valid Options: FORWARD, IGNORE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualServiceSpecHttpCorsPolicyUnmatchedPreflightsEnum
 {
@@ -499,6 +500,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirrors
     public V1beta1VirtualServiceSpecHttpMirrorsPercentage? Percentage { get; set; }
 }
 
+/// <summary>On a redirect, dynamically set the port: * FROM_PROTOCOL_DEFAULT: automatically set to 80 for HTTP and 443 for HTTPS.  Valid Options: FROM_PROTOCOL_DEFAULT, FROM_REQUEST_PORT</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualServiceSpecHttpRedirectDerivePortEnum
 {

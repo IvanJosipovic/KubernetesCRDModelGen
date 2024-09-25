@@ -41,6 +41,7 @@ public partial class V1beta1ServiceEntrySpecEndpoints
     public int? Weight { get; set; }
 }
 
+/// <summary>Specify whether the service should be considered external to the mesh or part of the mesh.  Valid Options: MESH_EXTERNAL, MESH_INTERNAL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServiceEntrySpecLocationEnum
 {
@@ -73,6 +74,7 @@ public partial class V1beta1ServiceEntrySpecPorts
     public int? TargetPort { get; set; }
 }
 
+/// <summary>Service resolution mode for the hosts.  Valid Options: NONE, STATIC, DNS, DNS_ROUND_ROBIN</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServiceEntrySpecResolutionEnum
 {

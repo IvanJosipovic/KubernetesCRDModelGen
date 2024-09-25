@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.maintenance.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenance
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMa
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenance
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMa
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderMaintenanceConfigurationIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMach
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVi
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMach
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdSelectorPolicyResolveEnum
 {
@@ -260,6 +269,7 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecForProvider
     public V1beta1MaintenanceAssignmentVirtualMachineSpecForProviderVirtualMachineIdSelector? VirtualMachineIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdRefPolicyResolutionEnum
 {
@@ -271,6 +281,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanc
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdRefPolicyResolveEnum
 {
@@ -310,6 +321,7 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderM
     public V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdSelectorPolicyResolutionEnum
 {
@@ -321,6 +333,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanc
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdSelectorPolicyResolveEnum
 {
@@ -385,6 +398,7 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecInitProvider
     public V1beta1MaintenanceAssignmentVirtualMachineSpecInitProviderMaintenanceConfigurationIdSelector? MaintenanceConfigurationIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecManagementPoliciesEnum
 {
@@ -408,6 +422,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -419,6 +434,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfigRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfigRefPolicyResolveEnum
 {
@@ -458,6 +474,7 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfi
     public V1beta1MaintenanceAssignmentVirtualMachineSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -469,6 +486,7 @@ public enum V1beta1MaintenanceAssignmentVirtualMachineSpecPublishConnectionDetai
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceAssignmentVirtualMachineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

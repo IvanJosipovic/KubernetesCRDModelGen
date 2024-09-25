@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecDeletionPolicyEnum
 {
@@ -28,6 +29,7 @@ public partial class V1beta1MembershipSpecForProviderAuthority
     public string? Issuer { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPolicyResolutionEnum
 {
@@ -39,6 +41,7 @@ public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPolicyResolveEnum
 {
@@ -78,6 +81,7 @@ public partial class V1beta1MembershipSpecForProviderEndpointGkeClusterResourceL
     public V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelectorPolicyResolutionEnum
 {
@@ -89,6 +93,7 @@ public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecForProviderEndpointGkeClusterResourceLinkSelectorPolicyResolveEnum
 {
@@ -192,6 +197,7 @@ public partial class V1beta1MembershipSpecInitProviderAuthority
     public string? Issuer { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPolicyResolutionEnum
 {
@@ -203,6 +209,7 @@ public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPolicyResolveEnum
 {
@@ -242,6 +249,7 @@ public partial class V1beta1MembershipSpecInitProviderEndpointGkeClusterResource
     public V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelectorPolicyResolutionEnum
 {
@@ -253,6 +261,7 @@ public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecInitProviderEndpointGkeClusterResourceLinkSelectorPolicyResolveEnum
 {
@@ -343,6 +352,7 @@ public partial class V1beta1MembershipSpecInitProvider
     public string? Project { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecManagementPoliciesEnum
 {
@@ -366,6 +376,7 @@ public enum V1beta1MembershipSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -377,6 +388,7 @@ public enum V1beta1MembershipSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecProviderConfigRefPolicyResolveEnum
 {
@@ -416,6 +428,7 @@ public partial class V1beta1MembershipSpecProviderConfigRef
     public V1beta1MembershipSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -427,6 +440,7 @@ public enum V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MembershipSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

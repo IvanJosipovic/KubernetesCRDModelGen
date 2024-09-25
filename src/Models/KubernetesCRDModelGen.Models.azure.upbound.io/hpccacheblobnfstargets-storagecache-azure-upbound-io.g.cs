@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagecache.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRef
     public V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelecto
     public V1beta1HPCCacheBlobNFSTargetSpecForProviderCacheNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNam
     public V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -280,6 +289,7 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecForProvider
     public double? WriteBackTimerInSeconds { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRefPolicyResolutionEnum
 {
@@ -291,6 +301,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRefPolicyResolveEnum
 {
@@ -330,6 +341,7 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRef
     public V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelectorPolicyResolutionEnum
 {
@@ -341,6 +353,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecInitProviderCacheNameSelectorPolicyResolveEnum
 {
@@ -425,6 +438,7 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecInitProvider
     public double? WriteBackTimerInSeconds { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecManagementPoliciesEnum
 {
@@ -448,6 +462,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -459,6 +474,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRefPolicyResolveEnum
 {
@@ -498,6 +514,7 @@ public partial class V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRef
     public V1beta1HPCCacheBlobNFSTargetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -509,6 +526,7 @@ public enum V1beta1HPCCacheBlobNFSTargetSpecPublishConnectionDetailsToConfigRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HPCCacheBlobNFSTargetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

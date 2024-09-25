@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecDeletionPolicyEnum
 {
@@ -36,6 +37,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecForProviderAuthoriz
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdRefPolicyResolutionEnum
 {
@@ -47,6 +49,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdRefPolicyResolveEnum
 {
@@ -86,6 +89,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeer
     public V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdSelectorPolicyResolutionEnum
 {
@@ -97,6 +101,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdSelectorPolicyResolveEnum
 {
@@ -140,6 +145,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeer
     public V1beta1ExpressRouteCircuitConnectionSpecForProviderPeerPeeringIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringIdRefPolicyResolutionEnum
 {
@@ -151,6 +157,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringIdRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringIdRefPolicyResolveEnum
 {
@@ -190,6 +197,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringI
     public V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringIdSelectorPolicyResolutionEnum
 {
@@ -201,6 +209,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringIdSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecForProviderPeeringIdSelectorPolicyResolveEnum
 {
@@ -302,6 +311,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecInitProviderAuthori
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdRefPolicyResolutionEnum
 {
@@ -313,6 +323,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdRefPolicyResolveEnum
 {
@@ -352,6 +363,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPee
     public V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdSelectorPolicyResolutionEnum
 {
@@ -363,6 +375,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdSelectorPolicyResolveEnum
 {
@@ -435,6 +448,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecInitProvider
     public V1beta1ExpressRouteCircuitConnectionSpecInitProviderPeerPeeringIdSelector? PeerPeeringIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecManagementPoliciesEnum
 {
@@ -458,6 +472,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -469,6 +484,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecProviderConfigRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecProviderConfigRefPolicyResolveEnum
 {
@@ -508,6 +524,7 @@ public partial class V1beta1ExpressRouteCircuitConnectionSpecProviderConfigRef
     public V1beta1ExpressRouteCircuitConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -519,6 +536,7 @@ public enum V1beta1ExpressRouteCircuitConnectionSpecPublishConnectionDetailsToCo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ExpressRouteCircuitConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

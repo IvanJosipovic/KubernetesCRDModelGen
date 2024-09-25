@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshiftserverless.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecDeletionPolicyEnum
 {
@@ -53,6 +54,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUsern
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRefPolicyResolutionEnum
 {
@@ -64,6 +66,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRefPolicyResolveEnum
 {
@@ -103,6 +106,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     public V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelectorPolicyResolutionEnum
 {
@@ -114,6 +118,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelectorPolicyResolveEnum
 {
@@ -157,6 +162,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIam
     public V1beta1RedshiftServerlessNamespaceSpecForProviderDefaultIamRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicyResolutionEnum
 {
@@ -168,6 +174,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicyResolveEnum
 {
@@ -207,6 +214,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRef
     public V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPolicyResolutionEnum
 {
@@ -218,6 +226,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPolicyResolveEnum
 {
@@ -261,6 +270,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSel
     public V1beta1RedshiftServerlessNamespaceSpecForProviderIamRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicyResolutionEnum
 {
@@ -272,6 +282,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicyResolveEnum
 {
@@ -311,6 +322,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRe
     public V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPolicyResolutionEnum
 {
@@ -322,6 +334,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecForProviderKmsKeyIdSelectorPolicyResolveEnum
 {
@@ -472,6 +485,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderAdminUser
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRefPolicyResolutionEnum
 {
@@ -483,6 +497,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRefPolicyResolveEnum
 {
@@ -522,6 +537,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelectorPolicyResolutionEnum
 {
@@ -533,6 +549,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelectorPolicyResolveEnum
 {
@@ -576,6 +593,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIa
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderDefaultIamRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicyResolutionEnum
 {
@@ -587,6 +605,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicyResolveEnum
 {
@@ -626,6 +645,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRe
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPolicyResolutionEnum
 {
@@ -637,6 +657,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPolicyResolveEnum
 {
@@ -680,6 +701,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSe
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderIamRoleSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicyResolutionEnum
 {
@@ -691,6 +713,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicyResolveEnum
 {
@@ -730,6 +753,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdR
     public V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPolicyResolutionEnum
 {
@@ -741,6 +765,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
 {
@@ -853,6 +878,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecManagementPoliciesEnum
 {
@@ -876,6 +902,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -887,6 +914,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicyResolveEnum
 {
@@ -926,6 +954,7 @@ public partial class V1beta1RedshiftServerlessNamespaceSpecProviderConfigRef
     public V1beta1RedshiftServerlessNamespaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -937,6 +966,7 @@ public enum V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConf
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RedshiftServerlessNamespaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

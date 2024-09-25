@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1DBSnapshotCopySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRef
     public V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelector
     public V1beta1DBSnapshotCopySpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentif
     public V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecForProviderSourceDbSnapshotIdentifierSelectorPolicyResolveEnum
 {
@@ -288,6 +297,7 @@ public partial class V1beta1DBSnapshotCopySpecForProvider
     public string? TargetDbSnapshotIdentifier { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicyResolutionEnum
 {
@@ -299,6 +309,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicyResolveEnum
 {
@@ -338,6 +349,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRef
     public V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicyResolutionEnum
 {
@@ -349,6 +361,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicyResolveEnum
 {
@@ -392,6 +405,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelector
     public V1beta1DBSnapshotCopySpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRefPolicyResolutionEnum
 {
@@ -403,6 +417,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRefPolicyResolveEnum
 {
@@ -442,6 +457,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdenti
     public V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelectorPolicyResolutionEnum
 {
@@ -453,6 +469,7 @@ public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecInitProviderSourceDbSnapshotIdentifierSelectorPolicyResolveEnum
 {
@@ -553,6 +570,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProvider
     public string? TargetDbSnapshotIdentifier { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecManagementPoliciesEnum
 {
@@ -576,6 +594,7 @@ public enum V1beta1DBSnapshotCopySpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecProviderConfigRefPolicyResolutionEnum
 {
@@ -587,6 +606,7 @@ public enum V1beta1DBSnapshotCopySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecProviderConfigRefPolicyResolveEnum
 {
@@ -626,6 +646,7 @@ public partial class V1beta1DBSnapshotCopySpecProviderConfigRef
     public V1beta1DBSnapshotCopySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -637,6 +658,7 @@ public enum V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DBSnapshotCopySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1ImagePipelineSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderImageRecipeArnRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1ImagePipelineSpecForProviderImageRecipeArnRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderImageRecipeArnRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1ImagePipelineSpecForProviderImageRecipeArnRef
     public V1beta1ImagePipelineSpecForProviderImageRecipeArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderImageRecipeArnSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1ImagePipelineSpecForProviderImageRecipeArnSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderImageRecipeArnSelectorPolicyResolveEnum
 {
@@ -162,6 +167,7 @@ public partial class V1beta1ImagePipelineSpecForProviderImageTestsConfiguration
     public double? TimeoutMinutes { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderInfrastructureConfigurationArnRefPolicyResolutionEnum
 {
@@ -173,6 +179,7 @@ public enum V1beta1ImagePipelineSpecForProviderInfrastructureConfigurationArnRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderInfrastructureConfigurationArnRefPolicyResolveEnum
 {
@@ -212,6 +219,7 @@ public partial class V1beta1ImagePipelineSpecForProviderInfrastructureConfigurat
     public V1beta1ImagePipelineSpecForProviderInfrastructureConfigurationArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderInfrastructureConfigurationArnSelectorPolicyResolutionEnum
 {
@@ -223,6 +231,7 @@ public enum V1beta1ImagePipelineSpecForProviderInfrastructureConfigurationArnSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecForProviderInfrastructureConfigurationArnSelectorPolicyResolveEnum
 {
@@ -356,6 +365,7 @@ public partial class V1beta1ImagePipelineSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderImageRecipeArnRefPolicyResolutionEnum
 {
@@ -367,6 +377,7 @@ public enum V1beta1ImagePipelineSpecInitProviderImageRecipeArnRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderImageRecipeArnRefPolicyResolveEnum
 {
@@ -406,6 +417,7 @@ public partial class V1beta1ImagePipelineSpecInitProviderImageRecipeArnRef
     public V1beta1ImagePipelineSpecInitProviderImageRecipeArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderImageRecipeArnSelectorPolicyResolutionEnum
 {
@@ -417,6 +429,7 @@ public enum V1beta1ImagePipelineSpecInitProviderImageRecipeArnSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderImageRecipeArnSelectorPolicyResolveEnum
 {
@@ -499,6 +512,7 @@ public partial class V1beta1ImagePipelineSpecInitProviderImageTestsConfiguration
     public double? TimeoutMinutes { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderInfrastructureConfigurationArnRefPolicyResolutionEnum
 {
@@ -510,6 +524,7 @@ public enum V1beta1ImagePipelineSpecInitProviderInfrastructureConfigurationArnRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderInfrastructureConfigurationArnRefPolicyResolveEnum
 {
@@ -549,6 +564,7 @@ public partial class V1beta1ImagePipelineSpecInitProviderInfrastructureConfigura
     public V1beta1ImagePipelineSpecInitProviderInfrastructureConfigurationArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderInfrastructureConfigurationArnSelectorPolicyResolutionEnum
 {
@@ -560,6 +576,7 @@ public enum V1beta1ImagePipelineSpecInitProviderInfrastructureConfigurationArnSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecInitProviderInfrastructureConfigurationArnSelectorPolicyResolveEnum
 {
@@ -689,6 +706,7 @@ public partial class V1beta1ImagePipelineSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecManagementPoliciesEnum
 {
@@ -712,6 +730,7 @@ public enum V1beta1ImagePipelineSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -723,6 +742,7 @@ public enum V1beta1ImagePipelineSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecProviderConfigRefPolicyResolveEnum
 {
@@ -762,6 +782,7 @@ public partial class V1beta1ImagePipelineSpecProviderConfigRef
     public V1beta1ImagePipelineSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -773,6 +794,7 @@ public enum V1beta1ImagePipelineSpecPublishConnectionDetailsToConfigRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ImagePipelineSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -25,6 +25,7 @@ public partial class V1CertificateRequestSpecIssuerRef
     public string Name { get; set; }
 }
 
+/// <summary>KeyUsage specifies valid usage contexts for keys. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3 https://tools.ietf.org/html/rfc5280#section-4.2.1.12   Valid KeyUsage values are as follows: "signing", "digital signature", "content commitment", "key encipherment", "key agreement", "data encipherment", "cert sign", "crl sign", "encipher only", "decipher only", "any", "server auth", "client auth", "code signing", "email protection", "s/mime", "ipsec end system", "ipsec tunnel", "ipsec user", "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateRequestSpecUsagesEnum
 {
@@ -140,6 +141,7 @@ public partial class V1CertificateRequestSpec
     public string? Username { get; set; }
 }
 
+/// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateRequestStatusConditionsStatusEnum
 {

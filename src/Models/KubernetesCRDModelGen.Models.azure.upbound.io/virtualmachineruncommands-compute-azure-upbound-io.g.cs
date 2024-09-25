@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecDeletionPolicyEnum
 {
@@ -66,6 +67,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobMana
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyResolutionEnum
 {
@@ -77,6 +79,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicyResolveEnum
 {
@@ -116,6 +119,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriR
     public V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicyResolutionEnum
 {
@@ -127,6 +131,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderErrorBlobUriSelectorPolicyResolveEnum
 {
@@ -217,6 +222,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobMan
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicyResolutionEnum
 {
@@ -228,6 +234,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicyResolveEnum
 {
@@ -267,6 +274,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUri
     public V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicyResolutionEnum
 {
@@ -278,6 +286,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderOutputBlobUriSelectorPolicyResolveEnum
 {
@@ -445,6 +454,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriManagedIdentityObjectIdSecretRef? ObjectIdSecretRef { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicyResolutionEnum
 {
@@ -456,6 +466,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicyResolveEnum
 {
@@ -495,6 +506,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptU
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicyResolutionEnum
 {
@@ -506,6 +518,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelectorPolicyResolveEnum
 {
@@ -578,6 +591,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderSource
     public V1beta1VirtualMachineRunCommandSpecForProviderSourceScriptUriSelector? ScriptUriSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicyResolutionEnum
 {
@@ -589,6 +603,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicyResolveEnum
 {
@@ -628,6 +643,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachin
     public V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicyResolutionEnum
 {
@@ -639,6 +655,7 @@ public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecForProviderVirtualMachineIdSelectorPolicyResolveEnum
 {
@@ -765,6 +782,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobMan
 {
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicyResolutionEnum
 {
@@ -776,6 +794,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicyResolveEnum
 {
@@ -815,6 +834,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUri
     public V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicyResolutionEnum
 {
@@ -826,6 +846,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderErrorBlobUriSelectorPolicyResolveEnum
 {
@@ -875,6 +896,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobMa
 {
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicyResolutionEnum
 {
@@ -886,6 +908,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicyResolveEnum
 {
@@ -925,6 +948,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUr
     public V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicyResolutionEnum
 {
@@ -936,6 +960,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderOutputBlobUriSelectorPolicyResolveEnum
 {
@@ -1004,6 +1029,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
 {
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicyResolutionEnum
 {
@@ -1015,6 +1041,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicyResolveEnum
 {
@@ -1054,6 +1081,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProviderSourceScript
     public V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicyResolutionEnum
 {
@@ -1065,6 +1093,7 @@ public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecInitProviderSourceScriptUriSelectorPolicyResolveEnum
 {
@@ -1198,6 +1227,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecManagementPoliciesEnum
 {
@@ -1221,6 +1251,7 @@ public enum V1beta1VirtualMachineRunCommandSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1232,6 +1263,7 @@ public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1271,6 +1303,7 @@ public partial class V1beta1VirtualMachineRunCommandSpecProviderConfigRef
     public V1beta1VirtualMachineRunCommandSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1282,6 +1315,7 @@ public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VirtualMachineRunCommandSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

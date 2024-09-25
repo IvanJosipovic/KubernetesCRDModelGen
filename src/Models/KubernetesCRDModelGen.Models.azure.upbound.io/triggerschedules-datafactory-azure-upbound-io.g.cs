@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1TriggerScheduleSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRef
     public V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderDataFactoryIdSelectorPolicyResolveEnum
 {
@@ -136,6 +141,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipeline
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicyResolutionEnum
 {
@@ -147,6 +153,7 @@ public enum V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicyResolveEnum
 {
@@ -186,6 +193,7 @@ public partial class V1beta1TriggerScheduleSpecForProviderPipelineNameRef
     public V1beta1TriggerScheduleSpecForProviderPipelineNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicyResolutionEnum
 {
@@ -197,6 +205,7 @@ public enum V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecForProviderPipelineNameSelectorPolicyResolveEnum
 {
@@ -364,6 +373,7 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipeline
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicyResolutionEnum
 {
@@ -375,6 +385,7 @@ public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicyResolveEnum
 {
@@ -414,6 +425,7 @@ public partial class V1beta1TriggerScheduleSpecInitProviderPipelineNameRef
     public V1beta1TriggerScheduleSpecInitProviderPipelineNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicyResolutionEnum
 {
@@ -425,6 +437,7 @@ public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecInitProviderPipelineNameSelectorPolicyResolveEnum
 {
@@ -567,6 +580,7 @@ public partial class V1beta1TriggerScheduleSpecInitProvider
     public string? TimeZone { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecManagementPoliciesEnum
 {
@@ -590,6 +604,7 @@ public enum V1beta1TriggerScheduleSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -601,6 +616,7 @@ public enum V1beta1TriggerScheduleSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecProviderConfigRefPolicyResolveEnum
 {
@@ -640,6 +656,7 @@ public partial class V1beta1TriggerScheduleSpecProviderConfigRef
     public V1beta1TriggerScheduleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -651,6 +668,7 @@ public enum V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TriggerScheduleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

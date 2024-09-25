@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1ServicePerimeterSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefs
     public V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderSpecAccessLevelsSelectorPolicyResolveEnum
 {
@@ -341,6 +346,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpec
     public IList<V1beta1ServicePerimeterSpecForProviderSpecVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicyResolutionEnum
 {
@@ -352,6 +358,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicyResolveEnum
 {
@@ -391,6 +398,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRef
     public V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPolicyResolutionEnum
 {
@@ -402,6 +410,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusAccessLevelsSelectorPolicyResolveEnum
 {
@@ -531,6 +540,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPolicies
     public IList<V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressTo>? EgressTo { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicyResolutionEnum
 {
@@ -542,6 +552,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicyResolveEnum
 {
@@ -581,6 +592,7 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     public V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicyResolutionEnum
 {
@@ -592,6 +604,7 @@ public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicyResolveEnum
 {
@@ -812,6 +825,7 @@ public partial class V1beta1ServicePerimeterSpecForProvider
     public bool? UseExplicitDryRunSpec { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicyResolutionEnum
 {
@@ -823,6 +837,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicyResolveEnum
 {
@@ -862,6 +877,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefs
     public V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolicyResolutionEnum
 {
@@ -873,6 +889,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderSpecAccessLevelsSelectorPolicyResolveEnum
 {
@@ -1134,6 +1151,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpec
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecVpcAccessibleServices>? VpcAccessibleServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicyResolutionEnum
 {
@@ -1145,6 +1163,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicyResolveEnum
 {
@@ -1184,6 +1203,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRe
     public V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPolicyResolutionEnum
 {
@@ -1195,6 +1215,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusAccessLevelsSelectorPolicyResolveEnum
 {
@@ -1324,6 +1345,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressTo>? EgressTo { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicyResolutionEnum
 {
@@ -1335,6 +1357,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressF
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicyResolveEnum
 {
@@ -1374,6 +1397,7 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     public V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicyResolutionEnum
 {
@@ -1385,6 +1409,7 @@ public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressF
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressFromSourcesAccessLevelSelectorPolicyResolveEnum
 {
@@ -1605,6 +1630,7 @@ public partial class V1beta1ServicePerimeterSpecInitProvider
     public bool? UseExplicitDryRunSpec { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecManagementPoliciesEnum
 {
@@ -1628,6 +1654,7 @@ public enum V1beta1ServicePerimeterSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1639,6 +1666,7 @@ public enum V1beta1ServicePerimeterSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1678,6 +1706,7 @@ public partial class V1beta1ServicePerimeterSpecProviderConfigRef
     public V1beta1ServicePerimeterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1689,6 +1718,7 @@ public enum V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ServicePerimeterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

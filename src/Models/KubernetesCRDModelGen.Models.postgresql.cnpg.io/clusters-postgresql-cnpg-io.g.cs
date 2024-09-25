@@ -684,6 +684,7 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentials
     public V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
 
+/// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecBackupBarmanObjectStoreDataCompressionEnum
 {
@@ -698,6 +699,7 @@ public enum V1ClusterSpecBackupBarmanObjectStoreDataCompressionEnum
     Snappy
 }
 
+/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecBackupBarmanObjectStoreDataEncryptionEnum
 {
@@ -852,6 +854,7 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreS3Credentials
     public V1ClusterSpecBackupBarmanObjectStoreS3CredentialsSessionToken? SessionToken { get; set; }
 }
 
+/// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecBackupBarmanObjectStoreWalCompressionEnum
 {
@@ -866,6 +869,7 @@ public enum V1ClusterSpecBackupBarmanObjectStoreWalCompressionEnum
     Snappy
 }
 
+/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecBackupBarmanObjectStoreWalEncryptionEnum
 {
@@ -953,6 +957,7 @@ public partial class V1ClusterSpecBackupBarmanObjectStore
     public V1ClusterSpecBackupBarmanObjectStoreWal? Wal { get; set; }
 }
 
+/// <summary>The policy to decide which instance should perform backups. Available options are empty string, which will default to `prefer-standby` policy, `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecBackupTargetEnum
 {
@@ -977,6 +982,7 @@ public partial class V1ClusterSpecBackupVolumeSnapshotOnlineConfiguration
     public bool? WaitForArchive { get; set; }
 }
 
+/// <summary>SnapshotOwnerReference indicates the type of owner reference the snapshot should have</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecBackupVolumeSnapshotSnapshotOwnerReferenceEnum
 {
@@ -1060,6 +1066,7 @@ public partial class V1ClusterSpecBootstrapInitdbImportSource
     public string ExternalCluster { get; set; }
 }
 
+/// <summary>The import type. Can be `microservice` or `monolith`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecBootstrapInitdbImportTypeEnum
 {
@@ -1926,6 +1933,7 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredenti
     public V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
 
+/// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecExternalClustersBarmanObjectStoreDataCompressionEnum
 {
@@ -1940,6 +1948,7 @@ public enum V1ClusterSpecExternalClustersBarmanObjectStoreDataCompressionEnum
     Snappy
 }
 
+/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecExternalClustersBarmanObjectStoreDataEncryptionEnum
 {
@@ -2094,6 +2103,7 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
     public V1ClusterSpecExternalClustersBarmanObjectStoreS3CredentialsSessionToken? SessionToken { get; set; }
 }
 
+/// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecExternalClustersBarmanObjectStoreWalCompressionEnum
 {
@@ -2108,6 +2118,7 @@ public enum V1ClusterSpecExternalClustersBarmanObjectStoreWalCompressionEnum
     Snappy
 }
 
+/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecExternalClustersBarmanObjectStoreWalEncryptionEnum
 {
@@ -2339,6 +2350,7 @@ public partial class V1ClusterSpecInheritedMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>The instances' log level, one of the following values: error, warning, info (default), debug, trace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecLogLevelEnum
 {
@@ -2359,6 +2371,7 @@ public enum V1ClusterSpecLogLevelEnum
     Trace
 }
 
+/// <summary>Ensure the role is `present` or `absent` - defaults to "present"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecManagedRolesEnsureEnum
 {
@@ -2607,6 +2620,7 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplate
     public V1ClusterSpecManagedServicesAdditionalServiceTemplateSpec? Spec { get; set; }
 }
 
+/// <summary>UpdateStrategy describes how the service differences should be reconciled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecManagedServicesAdditionalUpdateStrategyEnum
 {
@@ -2636,6 +2650,7 @@ public partial class V1ClusterSpecManagedServicesAdditional
     public V1ClusterSpecManagedServicesAdditionalUpdateStrategyEnum? UpdateStrategy { get; set; }
 }
 
+/// <summary>ServiceSelectorType describes a valid value for generating the service selectors. It indicates which type of service the selector applies to, such as read-write, read, or read-only</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecManagedServicesDisabledDefaultServicesEnum
 {
@@ -2702,6 +2717,7 @@ public partial class V1ClusterSpecMonitoringCustomQueriesSecret
     public string Name { get; set; }
 }
 
+/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecMonitoringPodMonitorMetricRelabelingsActionEnum
 {
@@ -2807,6 +2823,7 @@ public partial class V1ClusterSpecMonitoringPodMonitorMetricRelabelings
     public string? TargetLabel { get; set; }
 }
 
+/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecMonitoringPodMonitorRelabelingsActionEnum
 {
@@ -3035,6 +3052,7 @@ public partial class V1ClusterSpecPostgresqlLdapBindSearchAuth
     public string? SearchFilter { get; set; }
 }
 
+/// <summary>LDAP schema to be used, possible options are `ldap` and `ldaps`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecPostgresqlLdapSchemeEnum
 {
@@ -3089,6 +3107,7 @@ public partial class V1ClusterSpecPostgresqlSyncReplicaElectionConstraint
     public IList<string>? NodeLabelsAntiAffinity { get; set; }
 }
 
+/// <summary>Method to select synchronous replication standbys from the listed servers, accepting 'any' (quorum-based synchronous replication) or 'first' (priority-based synchronous replication) as values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecPostgresqlSynchronousMethodEnum
 {
@@ -3167,6 +3186,7 @@ public partial class V1ClusterSpecPostgresql
     public V1ClusterSpecPostgresqlSynchronous? Synchronous { get; set; }
 }
 
+/// <summary>Method to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be with a switchover (`switchover`) or in-place (`restart` - default)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecPrimaryUpdateMethodEnum
 {
@@ -3178,6 +3198,7 @@ public enum V1ClusterSpecPrimaryUpdateMethodEnum
     Restart
 }
 
+/// <summary>Deployment strategy to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be automated (`unsupervised` - default) or manual (`supervised`)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterSpecPrimaryUpdateStrategyEnum
 {
@@ -4345,6 +4366,7 @@ public partial class V1ClusterStatusCertificates
     public string? ServerTLSSecret { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterStatusConditionsStatusEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeyRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAcces
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeyRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeyRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeySelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAcces
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeySelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccessKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccou
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccou
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosm
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderCosmosdbAccountIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAp
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpri
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAp
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdSelectorPolicyResolveEnum
 {
@@ -396,6 +409,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecForProvider
     public V1beta1SpringCloudAppCosmosDBAssociationSpecForProviderSpringCloudAppIdSelector? SpringCloudAppIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeyRefPolicyResolutionEnum
 {
@@ -407,6 +421,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAcce
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeyRefPolicyResolveEnum
 {
@@ -446,6 +461,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     public V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeyRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeySelectorPolicyResolutionEnum
 {
@@ -457,6 +473,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAcce
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeySelectorPolicyResolveEnum
 {
@@ -500,6 +517,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     public V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccessKeySelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdRefPolicyResolutionEnum
 {
@@ -511,6 +529,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAcco
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdRefPolicyResolveEnum
 {
@@ -550,6 +569,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCos
     public V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdSelectorPolicyResolutionEnum
 {
@@ -561,6 +581,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAcco
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecInitProviderCosmosdbAccountIdSelectorPolicyResolveEnum
 {
@@ -657,6 +678,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecInitProvider
     public string? CosmosdbSqlDatabaseName { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecManagementPoliciesEnum
 {
@@ -680,6 +702,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -691,6 +714,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -730,6 +754,7 @@ public partial class V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigR
     public V1beta1SpringCloudAppCosmosDBAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -741,6 +766,7 @@ public enum V1beta1SpringCloudAppCosmosDBAssociationSpecPublishConnectionDetails
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppCosmosDBAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

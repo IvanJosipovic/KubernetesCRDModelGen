@@ -21,6 +21,7 @@ public partial class V2HelmReleaseSpecChartMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>Determines what enables the creation of a new artifact. Valid values are ('ChartVersion', 'Revision'). See the documentation of the values for an explanation on their behavior. Defaults to ChartVersion when omitted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecChartSpecReconcileStrategyEnum
 {
@@ -32,6 +33,7 @@ public enum V2HelmReleaseSpecChartSpecReconcileStrategyEnum
     Revision
 }
 
+/// <summary>Kind of the referent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecChartSpecSourceRefKindEnum
 {
@@ -68,6 +70,7 @@ public partial class V2HelmReleaseSpecChartSpecSourceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Provider specifies the technology used to sign the OCI Helm chart.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecChartSpecVerifyProviderEnum
 {
@@ -153,6 +156,7 @@ public partial class V2HelmReleaseSpecChart
     public V2HelmReleaseSpecChartSpec Spec { get; set; }
 }
 
+/// <summary>Kind of the referent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecChartRefKindEnum
 {
@@ -245,6 +249,7 @@ public partial class V2HelmReleaseSpecDriftDetectionIgnore
     public V2HelmReleaseSpecDriftDetectionIgnoreTarget? Target { get; set; }
 }
 
+/// <summary>Mode defines how differences should be handled between the Helm manifest and the manifest currently applied to the cluster. If not explicitly set, it defaults to DiffModeDisabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecDriftDetectionModeEnum
 {
@@ -273,6 +278,7 @@ public partial class V2HelmReleaseSpecDriftDetection
     public V2HelmReleaseSpecDriftDetectionModeEnum? Mode { get; set; }
 }
 
+/// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Create` and if omitted CRDs are installed but not updated.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are applied (installed) during Helm install action. With this option users can opt in to CRD replace existing CRDs on Helm install actions, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecInstallCrdsEnum
 {
@@ -528,6 +534,7 @@ public partial class V2HelmReleaseSpecTest
     public string? Timeout { get; set; }
 }
 
+/// <summary>DeletionPropagation specifies the deletion propagation policy when a Helm uninstall is performed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecUninstallDeletionPropagationEnum
 {
@@ -568,6 +575,7 @@ public partial class V2HelmReleaseSpecUninstall
     public string? Timeout { get; set; }
 }
 
+/// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Skip` and if omitted CRDs are neither installed nor upgraded.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are not applied during Helm upgrade action. With this option users can opt-in to CRD upgrade, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecUpgradeCrdsEnum
 {
@@ -582,6 +590,7 @@ public enum V2HelmReleaseSpecUpgradeCrdsEnum
     CreateReplace
 }
 
+/// <summary>Strategy to use for failure remediation. Defaults to 'rollback'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecUpgradeRemediationStrategyEnum
 {
@@ -661,6 +670,7 @@ public partial class V2HelmReleaseSpecUpgrade
     public string? Timeout { get; set; }
 }
 
+/// <summary>Kind of the values referent, valid values are ('Secret', 'ConfigMap').</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseSpecValuesFromKindEnum
 {
@@ -791,6 +801,7 @@ public partial class V2HelmReleaseSpec
     public IList<V2HelmReleaseSpecValuesFrom>? ValuesFrom { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseStatusConditionsStatusEnum
 {
@@ -917,6 +928,7 @@ public partial class V2HelmReleaseStatusHistory
     public int Version { get; set; }
 }
 
+/// <summary>LastAttemptedReleaseAction is the last release action performed for this HelmRelease. It is used to determine the active remediation strategy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V2HelmReleaseStatusLastAttemptedReleaseActionEnum
 {

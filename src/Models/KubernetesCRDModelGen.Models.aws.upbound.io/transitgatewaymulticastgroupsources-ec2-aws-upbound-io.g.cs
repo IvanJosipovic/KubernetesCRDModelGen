@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInterfaceIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInter
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInterfaceIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNet
     public V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInterfaceIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInter
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInterfaceIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNet
     public V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatewayMulticastDomainIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatew
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatewayMulticastDomainIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTra
     public V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatewayMulticastDomainIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatewayMulticastDomainIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatew
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatewayMulticastDomainIdSelectorPolicyResolveEnum
 {
@@ -264,6 +273,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecForProvider
     public V1beta1TransitGatewayMulticastGroupSourceSpecForProviderTransitGatewayMulticastDomainIdSelector? TransitGatewayMulticastDomainIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInterfaceIdRefPolicyResolutionEnum
 {
@@ -275,6 +285,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInte
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInterfaceIdRefPolicyResolveEnum
 {
@@ -314,6 +325,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNe
     public V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInterfaceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInterfaceIdSelectorPolicyResolutionEnum
 {
@@ -325,6 +337,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInte
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInterfaceIdSelectorPolicyResolveEnum
 {
@@ -368,6 +381,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNe
     public V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderNetworkInterfaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGatewayMulticastDomainIdRefPolicyResolutionEnum
 {
@@ -379,6 +393,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGate
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGatewayMulticastDomainIdRefPolicyResolveEnum
 {
@@ -418,6 +433,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTr
     public V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGatewayMulticastDomainIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGatewayMulticastDomainIdSelectorPolicyResolutionEnum
 {
@@ -429,6 +445,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGate
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGatewayMulticastDomainIdSelectorPolicyResolveEnum
 {
@@ -505,6 +522,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecInitProvider
     public V1beta1TransitGatewayMulticastGroupSourceSpecInitProviderTransitGatewayMulticastDomainIdSelector? TransitGatewayMulticastDomainIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecManagementPoliciesEnum
 {
@@ -528,6 +546,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -539,6 +558,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecProviderConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecProviderConfigRefPolicyResolveEnum
 {
@@ -578,6 +598,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecProviderConfig
     public V1beta1TransitGatewayMulticastGroupSourceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -589,6 +610,7 @@ public enum V1beta1TransitGatewayMulticastGroupSourceSpecPublishConnectionDetail
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayMulticastGroupSourceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

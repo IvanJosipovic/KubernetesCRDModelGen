@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkfirewall.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecDeletionPolicyEnum
 {
@@ -32,6 +33,7 @@ public partial class V1beta1FirewallSpecForProviderEncryptionConfiguration
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderFirewallPolicyArnRefPolicyResolutionEnum
 {
@@ -43,6 +45,7 @@ public enum V1beta1FirewallSpecForProviderFirewallPolicyArnRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderFirewallPolicyArnRefPolicyResolveEnum
 {
@@ -82,6 +85,7 @@ public partial class V1beta1FirewallSpecForProviderFirewallPolicyArnRef
     public V1beta1FirewallSpecForProviderFirewallPolicyArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderFirewallPolicyArnSelectorPolicyResolutionEnum
 {
@@ -93,6 +97,7 @@ public enum V1beta1FirewallSpecForProviderFirewallPolicyArnSelectorPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderFirewallPolicyArnSelectorPolicyResolveEnum
 {
@@ -136,6 +141,7 @@ public partial class V1beta1FirewallSpecForProviderFirewallPolicyArnSelector
     public V1beta1FirewallSpecForProviderFirewallPolicyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderSubnetMappingSubnetIdRefPolicyResolutionEnum
 {
@@ -147,6 +153,7 @@ public enum V1beta1FirewallSpecForProviderSubnetMappingSubnetIdRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderSubnetMappingSubnetIdRefPolicyResolveEnum
 {
@@ -186,6 +193,7 @@ public partial class V1beta1FirewallSpecForProviderSubnetMappingSubnetIdRef
     public V1beta1FirewallSpecForProviderSubnetMappingSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderSubnetMappingSubnetIdSelectorPolicyResolutionEnum
 {
@@ -197,6 +205,7 @@ public enum V1beta1FirewallSpecForProviderSubnetMappingSubnetIdSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderSubnetMappingSubnetIdSelectorPolicyResolveEnum
 {
@@ -261,6 +270,7 @@ public partial class V1beta1FirewallSpecForProviderSubnetMapping
     public V1beta1FirewallSpecForProviderSubnetMappingSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderVpcIdRefPolicyResolutionEnum
 {
@@ -272,6 +282,7 @@ public enum V1beta1FirewallSpecForProviderVpcIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderVpcIdRefPolicyResolveEnum
 {
@@ -311,6 +322,7 @@ public partial class V1beta1FirewallSpecForProviderVpcIdRef
     public V1beta1FirewallSpecForProviderVpcIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderVpcIdSelectorPolicyResolutionEnum
 {
@@ -322,6 +334,7 @@ public enum V1beta1FirewallSpecForProviderVpcIdSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecForProviderVpcIdSelectorPolicyResolveEnum
 {
@@ -443,6 +456,7 @@ public partial class V1beta1FirewallSpecInitProviderEncryptionConfiguration
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderFirewallPolicyArnRefPolicyResolutionEnum
 {
@@ -454,6 +468,7 @@ public enum V1beta1FirewallSpecInitProviderFirewallPolicyArnRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderFirewallPolicyArnRefPolicyResolveEnum
 {
@@ -493,6 +508,7 @@ public partial class V1beta1FirewallSpecInitProviderFirewallPolicyArnRef
     public V1beta1FirewallSpecInitProviderFirewallPolicyArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderFirewallPolicyArnSelectorPolicyResolutionEnum
 {
@@ -504,6 +520,7 @@ public enum V1beta1FirewallSpecInitProviderFirewallPolicyArnSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderFirewallPolicyArnSelectorPolicyResolveEnum
 {
@@ -547,6 +564,7 @@ public partial class V1beta1FirewallSpecInitProviderFirewallPolicyArnSelector
     public V1beta1FirewallSpecInitProviderFirewallPolicyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdRefPolicyResolutionEnum
 {
@@ -558,6 +576,7 @@ public enum V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdRefPolicyResolveEnum
 {
@@ -597,6 +616,7 @@ public partial class V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdRef
     public V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdSelectorPolicyResolutionEnum
 {
@@ -608,6 +628,7 @@ public enum V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdSelectorPolicyResolveEnum
 {
@@ -672,6 +693,7 @@ public partial class V1beta1FirewallSpecInitProviderSubnetMapping
     public V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdSelector? SubnetIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderVpcIdRefPolicyResolutionEnum
 {
@@ -683,6 +705,7 @@ public enum V1beta1FirewallSpecInitProviderVpcIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderVpcIdRefPolicyResolveEnum
 {
@@ -722,6 +745,7 @@ public partial class V1beta1FirewallSpecInitProviderVpcIdRef
     public V1beta1FirewallSpecInitProviderVpcIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderVpcIdSelectorPolicyResolutionEnum
 {
@@ -733,6 +757,7 @@ public enum V1beta1FirewallSpecInitProviderVpcIdSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecInitProviderVpcIdSelectorPolicyResolveEnum
 {
@@ -837,6 +862,7 @@ public partial class V1beta1FirewallSpecInitProvider
     public V1beta1FirewallSpecInitProviderVpcIdSelector? VpcIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecManagementPoliciesEnum
 {
@@ -860,6 +886,7 @@ public enum V1beta1FirewallSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -871,6 +898,7 @@ public enum V1beta1FirewallSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecProviderConfigRefPolicyResolveEnum
 {
@@ -910,6 +938,7 @@ public partial class V1beta1FirewallSpecProviderConfigRef
     public V1beta1FirewallSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -921,6 +950,7 @@ public enum V1beta1FirewallSpecPublishConnectionDetailsToConfigRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FirewallSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

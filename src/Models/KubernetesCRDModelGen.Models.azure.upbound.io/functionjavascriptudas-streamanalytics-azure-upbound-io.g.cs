@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecDeletionPolicyEnum
 {
@@ -41,6 +42,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderOutput
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPolicyResolutionEnum
 {
@@ -52,6 +54,7 @@ public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPolicyResolveEnum
 {
@@ -91,6 +94,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJ
     public V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelectorPolicyResolutionEnum
 {
@@ -102,6 +106,7 @@ public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecForProviderStreamAnalyticsJobIdSelectorPolicyResolveEnum
 {
@@ -196,6 +201,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderOutput
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefPolicyResolutionEnum
 {
@@ -207,6 +213,7 @@ public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefPolicyResolveEnum
 {
@@ -246,6 +253,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalytics
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelectorPolicyResolutionEnum
 {
@@ -257,6 +265,7 @@ public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelectorPolicyResolveEnum
 {
@@ -329,6 +338,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecInitProvider
     public V1beta1FunctionJavascriptUdaSpecInitProviderStreamAnalyticsJobIdSelector? StreamAnalyticsJobIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecManagementPoliciesEnum
 {
@@ -352,6 +362,7 @@ public enum V1beta1FunctionJavascriptUdaSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -363,6 +374,7 @@ public enum V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicyResolveEnum
 {
@@ -402,6 +414,7 @@ public partial class V1beta1FunctionJavascriptUdaSpecProviderConfigRef
     public V1beta1FunctionJavascriptUdaSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -413,6 +426,7 @@ public enum V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FunctionJavascriptUdaSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

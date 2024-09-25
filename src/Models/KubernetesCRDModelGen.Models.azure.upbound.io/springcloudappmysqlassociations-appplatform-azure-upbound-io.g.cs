@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlSe
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSelectorPolicyResolveEnum
 {
@@ -244,6 +253,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderPasswor
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdRefPolicyResolutionEnum
 {
@@ -255,6 +265,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdRefPolicyResolveEnum
 {
@@ -294,6 +305,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringC
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdSelectorPolicyResolutionEnum
 {
@@ -305,6 +317,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdSelectorPolicyResolveEnum
 {
@@ -348,6 +361,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringC
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderSpringCloudAppIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRefPolicyResolutionEnum
 {
@@ -359,6 +373,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRefPolicyResolveEnum
 {
@@ -398,6 +413,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernam
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelectorPolicyResolutionEnum
 {
@@ -409,6 +425,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelectorPolicyResolveEnum
 {
@@ -509,6 +526,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProvider
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelector? UsernameSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRefPolicyResolutionEnum
 {
@@ -520,6 +538,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRefPolicyResolveEnum
 {
@@ -559,6 +578,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelectorPolicyResolutionEnum
 {
@@ -570,6 +590,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelectorPolicyResolveEnum
 {
@@ -613,6 +634,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRefPolicyResolutionEnum
 {
@@ -624,6 +646,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRefPolicyResolveEnum
 {
@@ -663,6 +686,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlS
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSelectorPolicyResolutionEnum
 {
@@ -674,6 +698,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSelectorPolicyResolveEnum
 {
@@ -734,6 +759,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderPasswo
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRefPolicyResolutionEnum
 {
@@ -745,6 +771,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRefPolicyResolveEnum
 {
@@ -784,6 +811,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUserna
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelectorPolicyResolutionEnum
 {
@@ -795,6 +823,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelectorPolicyResolveEnum
 {
@@ -883,6 +912,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProvider
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelector? UsernameSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecManagementPoliciesEnum
 {
@@ -906,6 +936,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -917,6 +948,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecProviderConfigRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -956,6 +988,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecProviderConfigRef
     public V1beta1SpringCloudAppMySQLAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -967,6 +1000,7 @@ public enum V1beta1SpringCloudAppMySQLAssociationSpecPublishConnectionDetailsToC
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SpringCloudAppMySQLAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

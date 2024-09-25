@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1SQLRoleAssignmentSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameRef
     public V1beta1SQLRoleAssignmentSpecForProviderAccountNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelector
     public V1beta1SQLRoleAssignmentSpecForProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRef
     public V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSel
     public V1beta1SQLRoleAssignmentSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRef
     public V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolicyResolveEnum
 {
@@ -331,6 +344,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSele
     public V1beta1SQLRoleAssignmentSpecForProviderRoleDefinitionIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicyResolutionEnum
 {
@@ -342,6 +356,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicyResolveEnum
 {
@@ -381,6 +396,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProviderScopeRef
     public V1beta1SQLRoleAssignmentSpecForProviderScopeRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicyResolutionEnum
 {
@@ -392,6 +408,7 @@ public enum V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecForProviderScopeSelectorPolicyResolveEnum
 {
@@ -496,6 +513,7 @@ public partial class V1beta1SQLRoleAssignmentSpecForProvider
     public V1beta1SQLRoleAssignmentSpecForProviderScopeSelector? ScopeSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicyResolutionEnum
 {
@@ -507,6 +525,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicyResolveEnum
 {
@@ -546,6 +565,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRef
     public V1beta1SQLRoleAssignmentSpecInitProviderAccountNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicyResolutionEnum
 {
@@ -557,6 +577,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicyResolveEnum
 {
@@ -600,6 +621,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelector
     public V1beta1SQLRoleAssignmentSpecInitProviderAccountNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -611,6 +633,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -650,6 +673,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRe
     public V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -661,6 +685,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -704,6 +729,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSe
     public V1beta1SQLRoleAssignmentSpecInitProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicyResolutionEnum
 {
@@ -715,6 +741,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicyResolveEnum
 {
@@ -754,6 +781,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRef
     public V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPolicyResolutionEnum
 {
@@ -765,6 +793,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPolicyResolveEnum
 {
@@ -808,6 +837,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSel
     public V1beta1SQLRoleAssignmentSpecInitProviderRoleDefinitionIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicyResolutionEnum
 {
@@ -819,6 +849,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicyResolveEnum
 {
@@ -858,6 +889,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProviderScopeRef
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicyResolutionEnum
 {
@@ -869,6 +901,7 @@ public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecInitProviderScopeSelectorPolicyResolveEnum
 {
@@ -973,6 +1006,7 @@ public partial class V1beta1SQLRoleAssignmentSpecInitProvider
     public V1beta1SQLRoleAssignmentSpecInitProviderScopeSelector? ScopeSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecManagementPoliciesEnum
 {
@@ -996,6 +1030,7 @@ public enum V1beta1SQLRoleAssignmentSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1007,6 +1042,7 @@ public enum V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1046,6 +1082,7 @@ public partial class V1beta1SQLRoleAssignmentSpecProviderConfigRef
     public V1beta1SQLRoleAssignmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1057,6 +1094,7 @@ public enum V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLRoleAssignmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

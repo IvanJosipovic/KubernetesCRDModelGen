@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1CrawlerSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRef
     public V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderCatalogTargetDatabaseNameSelectorPolicyResolveEnum
 {
@@ -156,6 +161,7 @@ public partial class V1beta1CrawlerSpecForProviderCatalogTarget
     public IList<string>? Tables { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderDatabaseNameRefPolicyResolutionEnum
 {
@@ -167,6 +173,7 @@ public enum V1beta1CrawlerSpecForProviderDatabaseNameRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderDatabaseNameRefPolicyResolveEnum
 {
@@ -206,6 +213,7 @@ public partial class V1beta1CrawlerSpecForProviderDatabaseNameRef
     public V1beta1CrawlerSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicyResolutionEnum
 {
@@ -217,6 +225,7 @@ public enum V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderDatabaseNameSelectorPolicyResolveEnum
 {
@@ -340,6 +349,7 @@ public partial class V1beta1CrawlerSpecForProviderIcebergTarget
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicyResolutionEnum
 {
@@ -351,6 +361,7 @@ public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicyResolveEnum
 {
@@ -390,6 +401,7 @@ public partial class V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRef
     public V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicyResolutionEnum
 {
@@ -401,6 +413,7 @@ public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderJdbcTargetConnectionNameSelectorPolicyResolveEnum
 {
@@ -495,6 +508,7 @@ public partial class V1beta1CrawlerSpecForProviderLineageConfiguration
     public string? CrawlerLineageSettings { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicyResolutionEnum
 {
@@ -506,6 +520,7 @@ public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicyResolveEnum
 {
@@ -545,6 +560,7 @@ public partial class V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRef
     public V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPolicyResolutionEnum
 {
@@ -556,6 +572,7 @@ public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderMongodbTargetConnectionNameSelectorPolicyResolveEnum
 {
@@ -633,6 +650,7 @@ public partial class V1beta1CrawlerSpecForProviderRecrawlPolicy
     public string? RecrawlBehavior { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderRoleRefPolicyResolutionEnum
 {
@@ -644,6 +662,7 @@ public enum V1beta1CrawlerSpecForProviderRoleRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderRoleRefPolicyResolveEnum
 {
@@ -683,6 +702,7 @@ public partial class V1beta1CrawlerSpecForProviderRoleRef
     public V1beta1CrawlerSpecForProviderRoleRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderRoleSelectorPolicyResolutionEnum
 {
@@ -694,6 +714,7 @@ public enum V1beta1CrawlerSpecForProviderRoleSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecForProviderRoleSelectorPolicyResolveEnum
 {
@@ -888,6 +909,7 @@ public partial class V1beta1CrawlerSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicyResolutionEnum
 {
@@ -899,6 +921,7 @@ public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicyResolveEnum
 {
@@ -938,6 +961,7 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRef
     public V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolicyResolutionEnum
 {
@@ -949,6 +973,7 @@ public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderCatalogTargetDatabaseNameSelectorPolicyResolveEnum
 {
@@ -1025,6 +1050,7 @@ public partial class V1beta1CrawlerSpecInitProviderCatalogTarget
     public IList<string>? Tables { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicyResolutionEnum
 {
@@ -1036,6 +1062,7 @@ public enum V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicyResolveEnum
 {
@@ -1075,6 +1102,7 @@ public partial class V1beta1CrawlerSpecInitProviderDatabaseNameRef
     public V1beta1CrawlerSpecInitProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicyResolutionEnum
 {
@@ -1086,6 +1114,7 @@ public enum V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderDatabaseNameSelectorPolicyResolveEnum
 {
@@ -1209,6 +1238,7 @@ public partial class V1beta1CrawlerSpecInitProviderIcebergTarget
     public IList<string>? Paths { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicyResolutionEnum
 {
@@ -1220,6 +1250,7 @@ public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicyResolveEnum
 {
@@ -1259,6 +1290,7 @@ public partial class V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRef
     public V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicyResolutionEnum
 {
@@ -1270,6 +1302,7 @@ public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderJdbcTargetConnectionNameSelectorPolicyResolveEnum
 {
@@ -1364,6 +1397,7 @@ public partial class V1beta1CrawlerSpecInitProviderLineageConfiguration
     public string? CrawlerLineageSettings { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicyResolutionEnum
 {
@@ -1375,6 +1409,7 @@ public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicyResolveEnum
 {
@@ -1414,6 +1449,7 @@ public partial class V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRe
     public V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPolicyResolutionEnum
 {
@@ -1425,6 +1461,7 @@ public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderMongodbTargetConnectionNameSelectorPolicyResolveEnum
 {
@@ -1502,6 +1539,7 @@ public partial class V1beta1CrawlerSpecInitProviderRecrawlPolicy
     public string? RecrawlBehavior { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderRoleRefPolicyResolutionEnum
 {
@@ -1513,6 +1551,7 @@ public enum V1beta1CrawlerSpecInitProviderRoleRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderRoleRefPolicyResolveEnum
 {
@@ -1552,6 +1591,7 @@ public partial class V1beta1CrawlerSpecInitProviderRoleRef
     public V1beta1CrawlerSpecInitProviderRoleRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderRoleSelectorPolicyResolutionEnum
 {
@@ -1563,6 +1603,7 @@ public enum V1beta1CrawlerSpecInitProviderRoleSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecInitProviderRoleSelectorPolicyResolveEnum
 {
@@ -1753,6 +1794,7 @@ public partial class V1beta1CrawlerSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecManagementPoliciesEnum
 {
@@ -1776,6 +1818,7 @@ public enum V1beta1CrawlerSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1787,6 +1830,7 @@ public enum V1beta1CrawlerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1826,6 +1870,7 @@ public partial class V1beta1CrawlerSpecProviderConfigRef
     public V1beta1CrawlerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1837,6 +1882,7 @@ public enum V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1CrawlerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

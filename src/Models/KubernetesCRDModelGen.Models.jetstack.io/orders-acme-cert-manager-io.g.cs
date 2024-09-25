@@ -71,6 +71,7 @@ public partial class V1OrderStatusAuthorizationsChallenges
     public string Url { get; set; }
 }
 
+/// <summary>InitialState is the initial state of the ACME authorization when first fetched from the ACME server. If an Authorization is already 'valid', the Order controller will not create a Challenge resource for the authorization. This will occur when working with an ACME server that enables 'authz reuse' (such as Let's Encrypt's production endpoint). If not set and 'identifier' is set, the state is assumed to be pending and a Challenge will be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1OrderStatusAuthorizationsInitialStateEnum
 {
@@ -123,6 +124,7 @@ public partial class V1OrderStatusAuthorizations
     public bool? Wildcard { get; set; }
 }
 
+/// <summary>State contains the current state of this Order resource. States 'success' and 'expired' are 'final'</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1OrderStatusStateEnum
 {

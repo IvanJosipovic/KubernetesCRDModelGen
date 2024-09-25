@@ -17,6 +17,7 @@ public partial class V1alpha1TelemetrySpecAccessLoggingFilter
     public string? Expression { get; set; }
 }
 
+/// <summary>This determines whether or not to apply the access logging configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecAccessLoggingMatchModeEnum
 {
@@ -71,6 +72,7 @@ public partial class V1alpha1TelemetrySpecAccessLogging
     public IList<V1alpha1TelemetrySpecAccessLoggingProviders>? Providers { get; set; }
 }
 
+/// <summary>One of the well-known [Istio Standard Metrics](https://istio.io/latest/docs/reference/config/metrics/).  Valid Options: ALL_METRICS, REQUEST_COUNT, REQUEST_DURATION, REQUEST_SIZE, RESPONSE_SIZE, TCP_OPENED_CONNECTIONS, TCP_CLOSED_CONNECTIONS, TCP_SENT_BYTES, TCP_RECEIVED_BYTES, GRPC_REQUEST_MESSAGES, GRPC_RESPONSE_MESSAGES</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecMetricsOverridesMatchMetricEnum
 {
@@ -109,6 +111,7 @@ public enum V1alpha1TelemetrySpecMetricsOverridesMatchMetricEnum
     GRPCRESPONSEMESSAGES
 }
 
+/// <summary>Controls which mode of metrics generation is selected: `CLIENT`, `SERVER`, or `CLIENT_AND_SERVER`.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum
 {
@@ -142,6 +145,7 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
     public V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum? Mode { get; set; }
 }
 
+/// <summary>Operation controls whether or not to update/add a tag, or to remove it.  Valid Options: UPSERT, REMOVE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecMetricsOverridesTagOverridesOperationEnum
 {
@@ -313,6 +317,7 @@ public partial class V1alpha1TelemetrySpecTracingCustomTags
     public V1alpha1TelemetrySpecTracingCustomTagsLiteral? Literal { get; set; }
 }
 
+/// <summary>This determines whether or not to apply the tracing configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TelemetrySpecTracingMatchModeEnum
 {

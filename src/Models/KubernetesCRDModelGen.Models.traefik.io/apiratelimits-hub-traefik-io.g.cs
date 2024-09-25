@@ -47,6 +47,7 @@ public partial class V1alpha1APIRateLimitSpecApis
     public string Name { get; set; }
 }
 
+/// <summary>Strategy defines how the bucket state will be synchronized between the different Traefik Hub instances. It can be, either "local" or "distributed".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1APIRateLimitSpecStrategyEnum
 {

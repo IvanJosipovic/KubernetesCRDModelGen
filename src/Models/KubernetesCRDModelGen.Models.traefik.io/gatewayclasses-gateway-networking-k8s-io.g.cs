@@ -46,6 +46,7 @@ public partial class V1GatewayClassSpec
     public V1GatewayClassSpecParametersRef? ParametersRef { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GatewayClassStatusConditionsStatusEnum
 {

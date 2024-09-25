@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certmanager.io;
+/// <summary>Deprecated: keyAlgorithm field exists for historical compatibility reasons and should not be used. The algorithm is now hardcoded to HS256 in golang/x/crypto/acme.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterIssuerSpecAcmeExternalAccountBindingKeyAlgorithmEnum
 {
@@ -165,6 +166,7 @@ public partial class V1ClusterIssuerSpecAcmeSolversDns01AzureDNSClientSecretSecr
     public string Name { get; set; }
 }
 
+/// <summary>name of the Azure environment (default AzurePublicCloud)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterIssuerSpecAcmeSolversDns01AzureDNSEnvironmentEnum
 {
@@ -306,6 +308,7 @@ public partial class V1ClusterIssuerSpecAcmeSolversDns01Cloudflare
     public string? Email { get; set; }
 }
 
+/// <summary>CNAMEStrategy configures how the DNS01 provider should handle CNAME records when found in DNS zones.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterIssuerSpecAcmeSolversDns01CnameStrategyEnum
 {
@@ -1682,6 +1685,7 @@ public partial class V1ClusterIssuerStatusAcme
     public string? Uri { get; set; }
 }
 
+/// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ClusterIssuerStatusConditionsStatusEnum
 {

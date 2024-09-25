@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appconfig.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1HostedConfigurationVersionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderApplicationIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1HostedConfigurationVersionSpecForProviderApplicationIdRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderApplicationIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderApplication
     public V1beta1HostedConfigurationVersionSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderApplicationIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1HostedConfigurationVersionSpecForProviderApplicationIdSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderApplicationIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderApplication
     public V1beta1HostedConfigurationVersionSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfile
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1HostedConfigurationVersionSpecForProviderConfigurati
     public V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfile
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecForProviderConfigurationProfileIdSelectorPolicyResolveEnum
 {
@@ -289,6 +298,7 @@ public partial class V1beta1HostedConfigurationVersionSpecForProvider
     public string Region { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdRefPolicyResolutionEnum
 {
@@ -300,6 +310,7 @@ public enum V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdRefPolicyResolveEnum
 {
@@ -339,6 +350,7 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicatio
     public V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdSelectorPolicyResolutionEnum
 {
@@ -350,6 +362,7 @@ public enum V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdSelectorPolicyResolveEnum
 {
@@ -393,6 +406,7 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderApplicatio
     public V1beta1HostedConfigurationVersionSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdRefPolicyResolutionEnum
 {
@@ -404,6 +418,7 @@ public enum V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfil
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdRefPolicyResolveEnum
 {
@@ -443,6 +458,7 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProviderConfigurat
     public V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdSelectorPolicyResolutionEnum
 {
@@ -454,6 +470,7 @@ public enum V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfil
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecInitProviderConfigurationProfileIdSelectorPolicyResolveEnum
 {
@@ -555,6 +572,7 @@ public partial class V1beta1HostedConfigurationVersionSpecInitProvider
     public string? Description { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecManagementPoliciesEnum
 {
@@ -578,6 +596,7 @@ public enum V1beta1HostedConfigurationVersionSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -589,6 +608,7 @@ public enum V1beta1HostedConfigurationVersionSpecProviderConfigRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecProviderConfigRefPolicyResolveEnum
 {
@@ -628,6 +648,7 @@ public partial class V1beta1HostedConfigurationVersionSpecProviderConfigRef
     public V1beta1HostedConfigurationVersionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -639,6 +660,7 @@ public enum V1beta1HostedConfigurationVersionSpecPublishConnectionDetailsToConfi
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1HostedConfigurationVersionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1MSSQLFailoverGroupSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefs
     public V1beta1MSSQLFailoverGroupSpecForProviderDatabasesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelector
     public V1beta1MSSQLFailoverGroupSpecForProviderDatabasesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRef
     public V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderPartnerServerIdSelectorPolicyResolveEnum
 {
@@ -257,6 +266,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderReadWriteEndpointFa
     public string? Mode { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicyResolutionEnum
 {
@@ -268,6 +278,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicyResolveEnum
 {
@@ -307,6 +318,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProviderServerIdRef
     public V1beta1MSSQLFailoverGroupSpecForProviderServerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicyResolutionEnum
 {
@@ -318,6 +330,7 @@ public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecForProviderServerIdSelectorPolicyResolveEnum
 {
@@ -406,6 +419,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicyResolutionEnum
 {
@@ -417,6 +431,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicyResolveEnum
 {
@@ -456,6 +471,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefs
     public V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicyResolutionEnum
 {
@@ -467,6 +483,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicyResolveEnum
 {
@@ -510,6 +527,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelector
     public V1beta1MSSQLFailoverGroupSpecInitProviderDatabasesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicyResolutionEnum
 {
@@ -521,6 +539,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicyResolveEnum
 {
@@ -560,6 +579,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRef
     public V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPolicyResolutionEnum
 {
@@ -571,6 +591,7 @@ public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecInitProviderPartnerServerIdSelectorPolicyResolveEnum
 {
@@ -677,6 +698,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecInitProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecManagementPoliciesEnum
 {
@@ -700,6 +722,7 @@ public enum V1beta1MSSQLFailoverGroupSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -711,6 +734,7 @@ public enum V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicyResolveEnum
 {
@@ -750,6 +774,7 @@ public partial class V1beta1MSSQLFailoverGroupSpecProviderConfigRef
     public V1beta1MSSQLFailoverGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -761,6 +786,7 @@ public enum V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MSSQLFailoverGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

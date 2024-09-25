@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecDeletionPolicyEnum
 {
@@ -36,6 +37,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderCertificateConten
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPolicyResolutionEnum
 {
@@ -47,6 +49,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPolicyResolveEnum
 {
@@ -86,6 +89,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRef
     public V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelectorPolicyResolutionEnum
 {
@@ -97,6 +101,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelectorPolicyResolveEnum
 {
@@ -140,6 +145,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelecto
     public V1beta1IOTHubDPSCertificateSpecForProviderIotDpsNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -151,6 +157,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -190,6 +197,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupName
     public V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -201,6 +209,7 @@ public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -298,6 +307,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecInitProviderCertificateConte
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPolicyResolutionEnum
 {
@@ -309,6 +319,7 @@ public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPolicyResolveEnum
 {
@@ -348,6 +359,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRef
     public V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelectorPolicyResolutionEnum
 {
@@ -359,6 +371,7 @@ public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecInitProviderIotDpsNameSelectorPolicyResolveEnum
 {
@@ -427,6 +440,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecInitProvider
     public bool? IsVerified { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecManagementPoliciesEnum
 {
@@ -450,6 +464,7 @@ public enum V1beta1IOTHubDPSCertificateSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -461,6 +476,7 @@ public enum V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicyResolveEnum
 {
@@ -500,6 +516,7 @@ public partial class V1beta1IOTHubDPSCertificateSpecProviderConfigRef
     public V1beta1IOTHubDPSCertificateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -511,6 +528,7 @@ public enum V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IOTHubDPSCertificateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1MaintenanceWindowTaskSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRe
     public V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSelectorPolicyResolveEnum
 {
@@ -136,6 +141,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRefPolicyResolutionEnum
 {
@@ -147,6 +153,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRefPolicyResolveEnum
 {
@@ -186,6 +193,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRef
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelectorPolicyResolutionEnum
 {
@@ -197,6 +205,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelectorPolicyResolveEnum
 {
@@ -313,6 +322,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     public bool? CloudwatchOutputEnabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicyResolutionEnum
 {
@@ -324,6 +334,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicyResolveEnum
 {
@@ -363,6 +374,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicyResolutionEnum
 {
@@ -374,6 +386,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicyResolveEnum
 {
@@ -442,6 +455,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     public string? NotificationType { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicyResolutionEnum
 {
@@ -453,6 +467,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicyResolveEnum
 {
@@ -492,6 +507,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicyResolutionEnum
 {
@@ -503,6 +519,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicyResolveEnum
 {
@@ -559,6 +576,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicyResolutionEnum
 {
@@ -570,6 +588,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicyResolveEnum
 {
@@ -609,6 +628,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicyResolutionEnum
 {
@@ -620,6 +640,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicyResolveEnum
 {
@@ -779,6 +800,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     public IList<V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersStepFunctionsParameters>? StepFunctionsParameters { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRefPolicyResolutionEnum
 {
@@ -790,6 +812,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRefPolicyResolveEnum
 {
@@ -829,6 +852,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRef
     public V1beta1MaintenanceWindowTaskSpecForProviderWindowIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelectorPolicyResolutionEnum
 {
@@ -840,6 +864,7 @@ public enum V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelectorPolicyResolveEnum
 {
@@ -964,6 +989,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProvider
     public V1beta1MaintenanceWindowTaskSpecForProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnRefPolicyResolutionEnum
 {
@@ -975,6 +1001,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnRefPolicyResolveEnum
 {
@@ -1014,6 +1041,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnR
     public V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnSelectorPolicyResolutionEnum
 {
@@ -1025,6 +1053,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnSelectorPolicyResolveEnum
 {
@@ -1081,6 +1110,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargets
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRefPolicyResolutionEnum
 {
@@ -1092,6 +1122,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRefPolicyResolveEnum
 {
@@ -1131,6 +1162,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRef
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelectorPolicyResolutionEnum
 {
@@ -1142,6 +1174,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelectorPolicyResolveEnum
 {
@@ -1258,6 +1291,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     public bool? CloudwatchOutputEnabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicyResolutionEnum
 {
@@ -1269,6 +1303,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParameters
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicyResolveEnum
 {
@@ -1308,6 +1343,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicyResolutionEnum
 {
@@ -1319,6 +1355,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParameters
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersNotificationConfigNotificationArnSelectorPolicyResolveEnum
 {
@@ -1387,6 +1424,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     public string? NotificationType { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicyResolutionEnum
 {
@@ -1398,6 +1436,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParameters
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicyResolveEnum
 {
@@ -1437,6 +1476,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicyResolutionEnum
 {
@@ -1448,6 +1488,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParameters
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersOutputS3BucketSelectorPolicyResolveEnum
 {
@@ -1504,6 +1545,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     public IList<string>? Values { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicyResolutionEnum
 {
@@ -1515,6 +1557,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParameters
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicyResolveEnum
 {
@@ -1554,6 +1597,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicyResolutionEnum
 {
@@ -1565,6 +1609,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParameters
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersRunCommandParametersServiceRoleArnSelectorPolicyResolveEnum
 {
@@ -1724,6 +1769,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     public IList<V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersStepFunctionsParameters>? StepFunctionsParameters { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRefPolicyResolutionEnum
 {
@@ -1735,6 +1781,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRefPolicyResolveEnum
 {
@@ -1774,6 +1821,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRef
     public V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelectorPolicyResolutionEnum
 {
@@ -1785,6 +1833,7 @@ public enum V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelectorPolicyResolveEnum
 {
@@ -1905,6 +1954,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProvider
     public V1beta1MaintenanceWindowTaskSpecInitProviderWindowIdSelector? WindowIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecManagementPoliciesEnum
 {
@@ -1928,6 +1978,7 @@ public enum V1beta1MaintenanceWindowTaskSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1939,6 +1990,7 @@ public enum V1beta1MaintenanceWindowTaskSpecProviderConfigRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1978,6 +2030,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecProviderConfigRef
     public V1beta1MaintenanceWindowTaskSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1989,6 +2042,7 @@ public enum V1beta1MaintenanceWindowTaskSpecPublishConnectionDetailsToConfigRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MaintenanceWindowTaskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

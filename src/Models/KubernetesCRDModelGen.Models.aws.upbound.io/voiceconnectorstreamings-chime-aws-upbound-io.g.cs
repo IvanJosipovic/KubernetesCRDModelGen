@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.chime.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecDeletionPolicyEnum
 {
@@ -32,6 +33,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderMediaInsightsC
     public bool? Disabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPolicyResolutionEnum
 {
@@ -43,6 +45,7 @@ public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPolicyResolveEnum
 {
@@ -82,6 +85,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnector
     public V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelectorPolicyResolutionEnum
 {
@@ -93,6 +97,7 @@ public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecForProviderVoiceConnectorIdSelectorPolicyResolveEnum
 {
@@ -186,6 +191,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderMediaInsights
     public bool? Disabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPolicyResolutionEnum
 {
@@ -197,6 +203,7 @@ public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPolicyResolveEnum
 {
@@ -236,6 +243,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnecto
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelectorPolicyResolutionEnum
 {
@@ -247,6 +255,7 @@ public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelectorPolicyResolveEnum
 {
@@ -323,6 +332,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecInitProvider
     public V1beta1VoiceConnectorStreamingSpecInitProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecManagementPoliciesEnum
 {
@@ -346,6 +356,7 @@ public enum V1beta1VoiceConnectorStreamingSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -357,6 +368,7 @@ public enum V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicyResolveEnum
 {
@@ -396,6 +408,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecProviderConfigRef
     public V1beta1VoiceConnectorStreamingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -407,6 +420,7 @@ public enum V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VoiceConnectorStreamingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1AnalyticsHubListingSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDat
     public V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelectorPolicyResolveEnum
 {
@@ -140,6 +145,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDataset
     public V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetSelector? DatasetSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefPolicyResolutionEnum
 {
@@ -151,6 +157,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefPolicyResolveEnum
 {
@@ -190,6 +197,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRef
     public V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelectorPolicyResolutionEnum
 {
@@ -201,6 +209,7 @@ public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecForProviderDataExchangeIdSelectorPolicyResolveEnum
 {
@@ -352,6 +361,7 @@ public partial class V1beta1AnalyticsHubListingSpecForProvider
     public IList<V1beta1AnalyticsHubListingSpecForProviderRestrictedExportConfig>? RestrictedExportConfig { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRefPolicyResolutionEnum
 {
@@ -363,6 +373,7 @@ public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRefPolicyResolveEnum
 {
@@ -402,6 +413,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDa
     public V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSelectorPolicyResolutionEnum
 {
@@ -413,6 +425,7 @@ public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecInitProviderBigqueryDatasetDatasetSelectorPolicyResolveEnum
 {
@@ -565,6 +578,7 @@ public partial class V1beta1AnalyticsHubListingSpecInitProvider
     public IList<V1beta1AnalyticsHubListingSpecInitProviderRestrictedExportConfig>? RestrictedExportConfig { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecManagementPoliciesEnum
 {
@@ -588,6 +602,7 @@ public enum V1beta1AnalyticsHubListingSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -599,6 +614,7 @@ public enum V1beta1AnalyticsHubListingSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecProviderConfigRefPolicyResolveEnum
 {
@@ -638,6 +654,7 @@ public partial class V1beta1AnalyticsHubListingSpecProviderConfigRef
     public V1beta1AnalyticsHubListingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -649,6 +666,7 @@ public enum V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1AnalyticsHubListingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

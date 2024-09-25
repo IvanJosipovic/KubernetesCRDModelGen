@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecDeletionPolicyEnum
 {
@@ -108,6 +109,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultIn
     public IList<V1beta1RegionURLMapSpecForProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
@@ -119,6 +121,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
@@ -158,6 +161,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequest
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
@@ -169,6 +173,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
@@ -285,6 +290,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionUrlRewr
     public string? PathPrefixRewrite { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
@@ -296,6 +302,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
@@ -335,6 +342,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeighte
     public V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
@@ -346,6 +354,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
@@ -502,6 +511,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultRouteAction
     public IList<V1beta1RegionURLMapSpecForProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolutionEnum
 {
@@ -513,6 +523,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicyResolveEnum
 {
@@ -552,6 +563,7 @@ public partial class V1beta1RegionURLMapSpecForProviderDefaultServiceRef
     public V1beta1RegionURLMapSpecForProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolutionEnum
 {
@@ -563,6 +575,7 @@ public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderDefaultServiceSelectorPolicyResolveEnum
 {
@@ -652,6 +665,7 @@ public partial class V1beta1RegionURLMapSpecForProviderHostRule
     public string? PathMatcher { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicyResolutionEnum
 {
@@ -663,6 +677,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicyResolveEnum
 {
@@ -702,6 +717,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherDefaultService
     public V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicyResolutionEnum
 {
@@ -713,6 +729,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherDefaultServiceSelectorPolicyResolveEnum
 {
@@ -874,6 +891,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
@@ -885,6 +903,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
@@ -924,6 +943,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
@@ -935,6 +955,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequ
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
@@ -1051,6 +1072,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public string? PathPrefixRewrite { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
@@ -1062,6 +1084,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
@@ -1101,6 +1124,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
@@ -1112,6 +1136,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeig
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
@@ -1268,6 +1293,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteA
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicyResolutionEnum
 {
@@ -1279,6 +1305,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicyResolveEnum
 {
@@ -1318,6 +1345,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServic
     public V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicyResolutionEnum
 {
@@ -1329,6 +1357,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherPathRuleServiceSelectorPolicyResolveEnum
 {
@@ -1882,6 +1911,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRout
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicyResolutionEnum
 {
@@ -1893,6 +1923,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicyResolveEnum
 {
@@ -1932,6 +1963,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServ
     public V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicyResolutionEnum
 {
@@ -1943,6 +1975,7 @@ public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderPathMatcherRouteRulesServiceSelectorPolicyResolveEnum
 {
@@ -2089,6 +2122,7 @@ public partial class V1beta1RegionURLMapSpecForProviderPathMatcher
     public IList<V1beta1RegionURLMapSpecForProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolutionEnum
 {
@@ -2100,6 +2134,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceRefPolicyResolveEnum
 {
@@ -2139,6 +2174,7 @@ public partial class V1beta1RegionURLMapSpecForProviderTestServiceRef
     public V1beta1RegionURLMapSpecForProviderTestServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolutionEnum
 {
@@ -2150,6 +2186,7 @@ public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecForProviderTestServiceSelectorPolicyResolveEnum
 {
@@ -2360,6 +2397,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultI
     public IList<V1beta1RegionURLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
@@ -2371,6 +2409,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
@@ -2410,6 +2449,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionReques
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
@@ -2421,6 +2461,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
@@ -2537,6 +2578,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionUrlRew
     public string? PathPrefixRewrite { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
@@ -2548,6 +2590,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
@@ -2587,6 +2630,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeight
     public V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
@@ -2598,6 +2642,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackend
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
@@ -2754,6 +2799,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultRouteAction
     public IList<V1beta1RegionURLMapSpecInitProviderDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolutionEnum
 {
@@ -2765,6 +2811,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicyResolveEnum
 {
@@ -2804,6 +2851,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderDefaultServiceRef
     public V1beta1RegionURLMapSpecInitProviderDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResolutionEnum
 {
@@ -2815,6 +2863,7 @@ public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderDefaultServiceSelectorPolicyResolveEnum
 {
@@ -2904,6 +2953,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderHostRule
     public string? PathMatcher { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicyResolutionEnum
 {
@@ -2915,6 +2965,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicyResolveEnum
 {
@@ -2954,6 +3005,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServic
     public V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicyResolutionEnum
 {
@@ -2965,6 +3017,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherDefaultServiceSelectorPolicyResolveEnum
 {
@@ -3126,6 +3179,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolutionEnum
 {
@@ -3137,6 +3191,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicyResolveEnum
 {
@@ -3176,6 +3231,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolutionEnum
 {
@@ -3187,6 +3243,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionReq
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceSelectorPolicyResolveEnum
 {
@@ -3303,6 +3360,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public string? PathPrefixRewrite { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolutionEnum
 {
@@ -3314,6 +3372,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicyResolveEnum
 {
@@ -3353,6 +3412,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolutionEnum
 {
@@ -3364,6 +3424,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWei
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceSelectorPolicyResolveEnum
 {
@@ -3520,6 +3581,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRoute
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicyResolutionEnum
 {
@@ -3531,6 +3593,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicyResolveEnum
 {
@@ -3570,6 +3633,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServi
     public V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicyResolutionEnum
 {
@@ -3581,6 +3645,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherPathRuleServiceSelectorPolicyResolveEnum
 {
@@ -4134,6 +4199,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRou
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicyResolutionEnum
 {
@@ -4145,6 +4211,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicyResolveEnum
 {
@@ -4184,6 +4251,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesSer
     public V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicyResolutionEnum
 {
@@ -4195,6 +4263,7 @@ public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRulesServiceSelectorPolicyResolveEnum
 {
@@ -4341,6 +4410,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderPathMatcher
     public IList<V1beta1RegionURLMapSpecInitProviderPathMatcherRouteRules>? RouteRules { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolutionEnum
 {
@@ -4352,6 +4422,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicyResolveEnum
 {
@@ -4391,6 +4462,7 @@ public partial class V1beta1RegionURLMapSpecInitProviderTestServiceRef
     public V1beta1RegionURLMapSpecInitProviderTestServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResolutionEnum
 {
@@ -4402,6 +4474,7 @@ public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecInitProviderTestServiceSelectorPolicyResolveEnum
 {
@@ -4519,6 +4592,7 @@ public partial class V1beta1RegionURLMapSpecInitProvider
     public IList<V1beta1RegionURLMapSpecInitProviderTest>? Test { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecManagementPoliciesEnum
 {
@@ -4542,6 +4616,7 @@ public enum V1beta1RegionURLMapSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -4553,6 +4628,7 @@ public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecProviderConfigRefPolicyResolveEnum
 {
@@ -4592,6 +4668,7 @@ public partial class V1beta1RegionURLMapSpecProviderConfigRef
     public V1beta1RegionURLMapSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -4603,6 +4680,7 @@ public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegionURLMapSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

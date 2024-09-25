@@ -26,6 +26,7 @@ public partial class V1beta3ProviderSpecSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Type specifies which Provider implementation to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta3ProviderSpecTypeEnum
 {

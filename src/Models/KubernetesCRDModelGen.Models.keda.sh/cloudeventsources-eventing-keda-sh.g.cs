@@ -52,6 +52,7 @@ public partial class V1alpha1CloudEventSourceSpecDestination
     public V1alpha1CloudEventSourceSpecDestinationHttp? Http { get; set; }
 }
 
+/// <summary>CloudEventType contains the list of cloudevent types</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1CloudEventSourceSpecEventSubscriptionExcludedEventTypesEnum
 {
@@ -63,6 +64,7 @@ public enum V1alpha1CloudEventSourceSpecEventSubscriptionExcludedEventTypesEnum
     KedaScaledobjectFailedV1
 }
 
+/// <summary>CloudEventType contains the list of cloudevent types</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1CloudEventSourceSpecEventSubscriptionIncludedEventTypesEnum
 {

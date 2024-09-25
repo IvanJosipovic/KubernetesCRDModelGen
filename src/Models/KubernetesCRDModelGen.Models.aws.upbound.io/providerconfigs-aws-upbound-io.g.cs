@@ -77,6 +77,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Source of the provider credentials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
 {
@@ -126,6 +127,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
     public string Namespace { get; set; }
 }
 
+/// <summary>Source is the source of the web identity token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSourceEnum
 {
@@ -207,6 +209,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigS
     public string Namespace { get; set; }
 }
 
+/// <summary>Source is the source of the web identity token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSourceEnum
 {
@@ -283,6 +286,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
     public V1beta1ProviderConfigSpecCredentialsWebIdentity? WebIdentity { get; set; }
 }
 
+/// <summary>The source of the Endpoint. By default, this will be ServiceMetadata. When providing a custom endpoint, you should set the source as Custom. If source is not provided when providing a custom endpoint, the SDK may not perform required host mutations correctly. Source should be used along with HostnameImmutable property as per the usage requirement. Note that this is effective only for resources that use AWS SDK v2.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecEndpointSourceEnum
 {
@@ -294,6 +298,7 @@ public enum V1beta1ProviderConfigSpecEndpointSourceEnum
     Custom
 }
 
+/// <summary>Protocol is the HTTP protocol that will be used in the URL. Currently, only http and https are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecEndpointUrlDynamicProtocolEnum
 {
@@ -319,6 +324,7 @@ public partial class V1beta1ProviderConfigSpecEndpointUrlDynamic
     public V1beta1ProviderConfigSpecEndpointUrlDynamicProtocolEnum Protocol { get; set; }
 }
 
+/// <summary>You can provide a static URL that will be used regardless of the service and region by choosing Static type. Alternatively, you can provide configuration for dynamically resolving the URL with the config you provide once you set the type as Dynamic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ProviderConfigSpecEndpointUrlTypeEnum
 {

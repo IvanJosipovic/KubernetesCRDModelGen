@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
+/// <summary>EventSeverity specifies how to filter events based on severity. If set to 'info' no events will be filtered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta3AlertSpecEventSeverityEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta3AlertSpecEventSeverityEnum
     Error
 }
 
+/// <summary>Kind of the referent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta3AlertSpecEventSourcesKindEnum
 {

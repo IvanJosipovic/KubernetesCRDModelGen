@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecDeletionPolicyEnum
 {
@@ -28,6 +29,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderOption
     public string? DynamicRouting { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRefPolicyResolutionEnum
 {
@@ -39,6 +41,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGate
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRefPolicyResolveEnum
 {
@@ -78,6 +81,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelectorPolicyResolutionEnum
 {
@@ -89,6 +93,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGate
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelectorPolicyResolveEnum
 {
@@ -132,6 +137,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTr
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRefPolicyResolutionEnum
 {
@@ -143,6 +149,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRefPolicyResolveEnum
 {
@@ -182,6 +189,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransi
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelectorPolicyResolutionEnum
 {
@@ -193,6 +201,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecForProviderTransitGatewayIdSelectorPolicyResolveEnum
 {
@@ -294,6 +303,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderOptio
     public string? DynamicRouting { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRefPolicyResolutionEnum
 {
@@ -305,6 +315,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGat
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRefPolicyResolveEnum
 {
@@ -344,6 +355,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelectorPolicyResolutionEnum
 {
@@ -355,6 +367,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGat
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelectorPolicyResolveEnum
 {
@@ -398,6 +411,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerT
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderPeerTransitGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRefPolicyResolutionEnum
 {
@@ -409,6 +423,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGateway
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRefPolicyResolveEnum
 {
@@ -448,6 +463,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTrans
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelectorPolicyResolutionEnum
 {
@@ -459,6 +475,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGateway
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelectorPolicyResolveEnum
 {
@@ -547,6 +564,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecInitProvider
     public V1beta1TransitGatewayPeeringAttachmentSpecInitProviderTransitGatewayIdSelector? TransitGatewayIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecManagementPoliciesEnum
 {
@@ -570,6 +588,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -581,6 +600,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicyResolveEnum
 {
@@ -620,6 +640,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRef
     public V1beta1TransitGatewayPeeringAttachmentSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -631,6 +652,7 @@ public enum V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsTo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TransitGatewayPeeringAttachmentSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

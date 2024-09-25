@@ -57,6 +57,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+/// <summary>Kind defines the kind of the Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TraefikServiceSpecMirroringKindEnum
 {
@@ -117,6 +118,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+/// <summary>Kind defines the kind of the Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TraefikServiceSpecMirroringMirrorsKindEnum
 {
@@ -399,6 +401,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+/// <summary>Kind defines the kind of the Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1TraefikServiceSpecWeightedServicesKindEnum
 {

@@ -35,6 +35,7 @@ public partial class V1HelmRepositorySpecCertSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. This field is optional, and only taken into account if the .spec.type field is set to 'oci'. When not specified, defaults to 'generic'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmRepositorySpecProviderEnum
 {
@@ -61,6 +62,7 @@ public partial class V1HelmRepositorySpecSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Type of the HelmRepository. When this field is set to  "oci", the URL field value must be prefixed with "oci://".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmRepositorySpecTypeEnum
 {
@@ -156,6 +158,7 @@ public partial class V1HelmRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HelmRepositoryStatusConditionsStatusEnum
 {

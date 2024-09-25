@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecDeletionPolicyEnum
 {
@@ -36,6 +37,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryFabricNameRefPolicyResolutionEnum
 {
@@ -47,6 +49,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryFabricNameRefPolicyResolveEnum
 {
@@ -86,6 +89,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryFabricNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryFabricNameSelectorPolicyResolutionEnum
 {
@@ -97,6 +101,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryFabricNameSelectorPolicyResolveEnum
 {
@@ -140,6 +145,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryFabricNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryReplicationPolicyIdRefPolicyResolutionEnum
 {
@@ -151,6 +157,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryReplicationPolicyIdRefPolicyResolveEnum
 {
@@ -190,6 +197,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryReplicationPolicyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryReplicationPolicyIdSelectorPolicyResolutionEnum
 {
@@ -201,6 +209,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryReplicationPolicyIdSelectorPolicyResolveEnum
 {
@@ -244,6 +253,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryReplicationPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoverySourceProtectionContainerNameRefPolicyResolutionEnum
 {
@@ -255,6 +265,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoverySourceProtectionContainerNameRefPolicyResolveEnum
 {
@@ -294,6 +305,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoverySourceProtectionContainerNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoverySourceProtectionContainerNameSelectorPolicyResolutionEnum
 {
@@ -305,6 +317,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoverySourceProtectionContainerNameSelectorPolicyResolveEnum
 {
@@ -348,6 +361,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoverySourceProtectionContainerNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryTargetProtectionContainerIdRefPolicyResolutionEnum
 {
@@ -359,6 +373,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryTargetProtectionContainerIdRefPolicyResolveEnum
 {
@@ -398,6 +413,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryTargetProtectionContainerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryTargetProtectionContainerIdSelectorPolicyResolutionEnum
 {
@@ -409,6 +425,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryTargetProtectionContainerIdSelectorPolicyResolveEnum
 {
@@ -452,6 +469,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryTargetProtectionContainerIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryVaultNameRefPolicyResolutionEnum
 {
@@ -463,6 +481,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryVaultNameRefPolicyResolveEnum
 {
@@ -502,6 +521,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryVaultNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryVaultNameSelectorPolicyResolutionEnum
 {
@@ -513,6 +533,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecovery
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryVaultNameSelectorPolicyResolveEnum
 {
@@ -556,6 +577,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderRecoveryVaultNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -567,6 +589,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderResource
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -606,6 +629,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecForProvide
     public V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -617,6 +641,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderResource
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -758,6 +783,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecInitProvid
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryReplicationPolicyIdRefPolicyResolutionEnum
 {
@@ -769,6 +795,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecover
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryReplicationPolicyIdRefPolicyResolveEnum
 {
@@ -808,6 +835,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecInitProvid
     public V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryReplicationPolicyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryReplicationPolicyIdSelectorPolicyResolutionEnum
 {
@@ -819,6 +847,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecover
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryReplicationPolicyIdSelectorPolicyResolveEnum
 {
@@ -862,6 +891,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecInitProvid
     public V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryReplicationPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryTargetProtectionContainerIdRefPolicyResolutionEnum
 {
@@ -873,6 +903,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecover
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryTargetProtectionContainerIdRefPolicyResolveEnum
 {
@@ -912,6 +943,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecInitProvid
     public V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryTargetProtectionContainerIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryTargetProtectionContainerIdSelectorPolicyResolutionEnum
 {
@@ -923,6 +955,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecover
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryTargetProtectionContainerIdSelectorPolicyResolveEnum
 {
@@ -999,6 +1032,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecInitProvid
     public V1beta1SiteRecoveryProtectionContainerMappingSpecInitProviderRecoveryTargetProtectionContainerIdSelector? RecoveryTargetProtectionContainerIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecManagementPoliciesEnum
 {
@@ -1022,6 +1056,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecManagementPoliciesE
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1033,6 +1068,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecProviderConfigRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1072,6 +1108,7 @@ public partial class V1beta1SiteRecoveryProtectionContainerMappingSpecProviderCo
     public V1beta1SiteRecoveryProtectionContainerMappingSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1083,6 +1120,7 @@ public enum V1beta1SiteRecoveryProtectionContainerMappingSpecPublishConnectionDe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SiteRecoveryProtectionContainerMappingSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

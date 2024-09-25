@@ -26,6 +26,7 @@ public partial class V1beta2BucketSpecAccessFrom
     public IList<V1beta2BucketSpecAccessFromNamespaceSelectors> NamespaceSelectors { get; set; }
 }
 
+/// <summary>Provider of the object storage bucket. Defaults to 'generic', which expects an S3 (API) compatible object storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2BucketSpecProviderEnum
 {
@@ -139,6 +140,7 @@ public partial class V1beta2BucketStatusArtifact
     public string Url { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2BucketStatusConditionsStatusEnum
 {

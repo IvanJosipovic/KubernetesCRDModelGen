@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1PacketMirroringSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRef
     public V1beta1PacketMirroringSpecForProviderCollectorIlbUrlRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderCollectorIlbUrlSelectorPolicyResolveEnum
 {
@@ -157,6 +162,7 @@ public partial class V1beta1PacketMirroringSpecForProviderFilter
     public IList<string>? IpProtocols { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRefPolicyResolutionEnum
 {
@@ -168,6 +174,7 @@ public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRefPolicyResolveEnum
 {
@@ -207,6 +214,7 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResourcesInsta
     public V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelectorPolicyResolutionEnum
 {
@@ -218,6 +226,7 @@ public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderMirroredResourcesInstancesUrlSelectorPolicyResolveEnum
 {
@@ -304,6 +313,7 @@ public partial class V1beta1PacketMirroringSpecForProviderMirroredResources
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicyResolutionEnum
 {
@@ -315,6 +325,7 @@ public enum V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicyResolveEnum
 {
@@ -354,6 +365,7 @@ public partial class V1beta1PacketMirroringSpecForProviderNetworkUrlRef
     public V1beta1PacketMirroringSpecForProviderNetworkUrlRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicyResolutionEnum
 {
@@ -365,6 +377,7 @@ public enum V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecForProviderNetworkUrlSelectorPolicyResolveEnum
 {
@@ -462,6 +475,7 @@ public partial class V1beta1PacketMirroringSpecForProvider
     public string Region { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicyResolutionEnum
 {
@@ -473,6 +487,7 @@ public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicyResolveEnum
 {
@@ -512,6 +527,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRef
     public V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicyResolutionEnum
 {
@@ -523,6 +539,7 @@ public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderCollectorIlbUrlSelectorPolicyResolveEnum
 {
@@ -600,6 +617,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderFilter
     public IList<string>? IpProtocols { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRefPolicyResolutionEnum
 {
@@ -611,6 +629,7 @@ public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRefPolicyResolveEnum
 {
@@ -650,6 +669,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResourcesInst
     public V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelectorPolicyResolutionEnum
 {
@@ -661,6 +681,7 @@ public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderMirroredResourcesInstancesUrlSelectorPolicyResolveEnum
 {
@@ -747,6 +768,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderMirroredResources
     public IList<string>? Tags { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicyResolutionEnum
 {
@@ -758,6 +780,7 @@ public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicyResolveEnum
 {
@@ -797,6 +820,7 @@ public partial class V1beta1PacketMirroringSpecInitProviderNetworkUrlRef
     public V1beta1PacketMirroringSpecInitProviderNetworkUrlRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicyResolutionEnum
 {
@@ -808,6 +832,7 @@ public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecInitProviderNetworkUrlSelectorPolicyResolveEnum
 {
@@ -901,6 +926,7 @@ public partial class V1beta1PacketMirroringSpecInitProvider
     public string? Project { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecManagementPoliciesEnum
 {
@@ -924,6 +950,7 @@ public enum V1beta1PacketMirroringSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -935,6 +962,7 @@ public enum V1beta1PacketMirroringSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecProviderConfigRefPolicyResolveEnum
 {
@@ -974,6 +1002,7 @@ public partial class V1beta1PacketMirroringSpecProviderConfigRef
     public V1beta1PacketMirroringSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -985,6 +1014,7 @@ public enum V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PacketMirroringSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

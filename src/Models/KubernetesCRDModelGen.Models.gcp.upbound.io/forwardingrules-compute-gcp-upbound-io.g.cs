@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1ForwardingRuleSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderBackendServiceRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1ForwardingRuleSpecForProviderBackendServiceRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderBackendServiceRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderBackendServiceRef
     public V1beta1ForwardingRuleSpecForProviderBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderBackendServiceSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1ForwardingRuleSpecForProviderBackendServiceSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderBackendServiceSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderBackendServiceSelector
     public V1beta1ForwardingRuleSpecForProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderIpAddressRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1ForwardingRuleSpecForProviderIpAddressRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderIpAddressRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderIpAddressRef
     public V1beta1ForwardingRuleSpecForProviderIpAddressRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderIpAddressSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1ForwardingRuleSpecForProviderIpAddressSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderIpAddressSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderIpAddressSelector
     public V1beta1ForwardingRuleSpecForProviderIpAddressSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderNetworkRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1ForwardingRuleSpecForProviderNetworkRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderNetworkRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderNetworkRef
     public V1beta1ForwardingRuleSpecForProviderNetworkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderNetworkSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1ForwardingRuleSpecForProviderNetworkSelectorPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderNetworkSelectorPolicyResolveEnum
 {
@@ -344,6 +357,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderServiceDirectoryRegistr
     public string? Service { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderSubnetworkRefPolicyResolutionEnum
 {
@@ -355,6 +369,7 @@ public enum V1beta1ForwardingRuleSpecForProviderSubnetworkRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderSubnetworkRefPolicyResolveEnum
 {
@@ -394,6 +409,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderSubnetworkRef
     public V1beta1ForwardingRuleSpecForProviderSubnetworkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderSubnetworkSelectorPolicyResolutionEnum
 {
@@ -405,6 +421,7 @@ public enum V1beta1ForwardingRuleSpecForProviderSubnetworkSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderSubnetworkSelectorPolicyResolveEnum
 {
@@ -448,6 +465,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderSubnetworkSelector
     public V1beta1ForwardingRuleSpecForProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderTargetRefPolicyResolutionEnum
 {
@@ -459,6 +477,7 @@ public enum V1beta1ForwardingRuleSpecForProviderTargetRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderTargetRefPolicyResolveEnum
 {
@@ -498,6 +517,7 @@ public partial class V1beta1ForwardingRuleSpecForProviderTargetRef
     public V1beta1ForwardingRuleSpecForProviderTargetRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderTargetSelectorPolicyResolutionEnum
 {
@@ -509,6 +529,7 @@ public enum V1beta1ForwardingRuleSpecForProviderTargetSelectorPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecForProviderTargetSelectorPolicyResolveEnum
 {
@@ -693,6 +714,7 @@ public partial class V1beta1ForwardingRuleSpecForProvider
     public V1beta1ForwardingRuleSpecForProviderTargetSelector? TargetSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderBackendServiceRefPolicyResolutionEnum
 {
@@ -704,6 +726,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderBackendServiceRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderBackendServiceRefPolicyResolveEnum
 {
@@ -743,6 +766,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderBackendServiceRef
     public V1beta1ForwardingRuleSpecInitProviderBackendServiceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderBackendServiceSelectorPolicyResolutionEnum
 {
@@ -754,6 +778,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderBackendServiceSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderBackendServiceSelectorPolicyResolveEnum
 {
@@ -797,6 +822,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderBackendServiceSelector
     public V1beta1ForwardingRuleSpecInitProviderBackendServiceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderIpAddressRefPolicyResolutionEnum
 {
@@ -808,6 +834,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderIpAddressRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderIpAddressRefPolicyResolveEnum
 {
@@ -847,6 +874,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderIpAddressRef
     public V1beta1ForwardingRuleSpecInitProviderIpAddressRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderIpAddressSelectorPolicyResolutionEnum
 {
@@ -858,6 +886,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderIpAddressSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderIpAddressSelectorPolicyResolveEnum
 {
@@ -901,6 +930,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderIpAddressSelector
     public V1beta1ForwardingRuleSpecInitProviderIpAddressSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderNetworkRefPolicyResolutionEnum
 {
@@ -912,6 +942,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderNetworkRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderNetworkRefPolicyResolveEnum
 {
@@ -951,6 +982,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderNetworkRef
     public V1beta1ForwardingRuleSpecInitProviderNetworkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderNetworkSelectorPolicyResolutionEnum
 {
@@ -962,6 +994,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderNetworkSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderNetworkSelectorPolicyResolveEnum
 {
@@ -1018,6 +1051,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderServiceDirectoryRegist
     public string? Service { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderSubnetworkRefPolicyResolutionEnum
 {
@@ -1029,6 +1063,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderSubnetworkRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderSubnetworkRefPolicyResolveEnum
 {
@@ -1068,6 +1103,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderSubnetworkRef
     public V1beta1ForwardingRuleSpecInitProviderSubnetworkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderSubnetworkSelectorPolicyResolutionEnum
 {
@@ -1079,6 +1115,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderSubnetworkSelectorPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderSubnetworkSelectorPolicyResolveEnum
 {
@@ -1122,6 +1159,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderSubnetworkSelector
     public V1beta1ForwardingRuleSpecInitProviderSubnetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderTargetRefPolicyResolutionEnum
 {
@@ -1133,6 +1171,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderTargetRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderTargetRefPolicyResolveEnum
 {
@@ -1172,6 +1211,7 @@ public partial class V1beta1ForwardingRuleSpecInitProviderTargetRef
     public V1beta1ForwardingRuleSpecInitProviderTargetRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderTargetSelectorPolicyResolutionEnum
 {
@@ -1183,6 +1223,7 @@ public enum V1beta1ForwardingRuleSpecInitProviderTargetSelectorPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecInitProviderTargetSelectorPolicyResolveEnum
 {
@@ -1363,6 +1404,7 @@ public partial class V1beta1ForwardingRuleSpecInitProvider
     public V1beta1ForwardingRuleSpecInitProviderTargetSelector? TargetSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecManagementPoliciesEnum
 {
@@ -1386,6 +1428,7 @@ public enum V1beta1ForwardingRuleSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1397,6 +1440,7 @@ public enum V1beta1ForwardingRuleSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1436,6 +1480,7 @@ public partial class V1beta1ForwardingRuleSpecProviderConfigRef
     public V1beta1ForwardingRuleSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1447,6 +1492,7 @@ public enum V1beta1ForwardingRuleSpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ForwardingRuleSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

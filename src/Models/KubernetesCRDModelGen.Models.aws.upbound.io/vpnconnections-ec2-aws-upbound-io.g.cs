@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1VPNConnectionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRef
     public V1beta1VPNConnectionSpecForProviderCustomerGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelecto
     public V1beta1VPNConnectionSpecForProviderCustomerGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTransitGatewayIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1VPNConnectionSpecForProviderTransitGatewayIdRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTransitGatewayIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1VPNConnectionSpecForProviderTransitGatewayIdRef
     public V1beta1VPNConnectionSpecForProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTransitGatewayIdSelectorPolicyResolveEnum
 {
@@ -313,6 +322,7 @@ public partial class V1beta1VPNConnectionSpecForProviderTunnel2PresharedKeySecre
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTypeRefPolicyResolutionEnum
 {
@@ -324,6 +334,7 @@ public enum V1beta1VPNConnectionSpecForProviderTypeRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTypeRefPolicyResolveEnum
 {
@@ -363,6 +374,7 @@ public partial class V1beta1VPNConnectionSpecForProviderTypeRef
     public V1beta1VPNConnectionSpecForProviderTypeRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTypeSelectorPolicyResolutionEnum
 {
@@ -374,6 +386,7 @@ public enum V1beta1VPNConnectionSpecForProviderTypeSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderTypeSelectorPolicyResolveEnum
 {
@@ -417,6 +430,7 @@ public partial class V1beta1VPNConnectionSpecForProviderTypeSelector
     public V1beta1VPNConnectionSpecForProviderTypeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderVpnGatewayIdRefPolicyResolutionEnum
 {
@@ -428,6 +442,7 @@ public enum V1beta1VPNConnectionSpecForProviderVpnGatewayIdRefPolicyResolutionEn
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderVpnGatewayIdRefPolicyResolveEnum
 {
@@ -467,6 +482,7 @@ public partial class V1beta1VPNConnectionSpecForProviderVpnGatewayIdRef
     public V1beta1VPNConnectionSpecForProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelectorPolicyResolutionEnum
 {
@@ -478,6 +494,7 @@ public enum V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelectorPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelectorPolicyResolveEnum
 {
@@ -778,6 +795,7 @@ public partial class V1beta1VPNConnectionSpecForProvider
     public V1beta1VPNConnectionSpecForProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRefPolicyResolutionEnum
 {
@@ -789,6 +807,7 @@ public enum V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRefPolicyResolveEnum
 {
@@ -828,6 +847,7 @@ public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRef
     public V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelectorPolicyResolutionEnum
 {
@@ -839,6 +859,7 @@ public enum V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelectorPolicyResolveEnum
 {
@@ -882,6 +903,7 @@ public partial class V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelect
     public V1beta1VPNConnectionSpecInitProviderCustomerGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRefPolicyResolutionEnum
 {
@@ -893,6 +915,7 @@ public enum V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRefPolicyResolveEnum
 {
@@ -932,6 +955,7 @@ public partial class V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRef
     public V1beta1VPNConnectionSpecInitProviderTransitGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelectorPolicyResolutionEnum
 {
@@ -943,6 +967,7 @@ public enum V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTransitGatewayIdSelectorPolicyResolveEnum
 {
@@ -1072,6 +1097,7 @@ public partial class V1beta1VPNConnectionSpecInitProviderTunnel2PresharedKeySecr
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTypeRefPolicyResolutionEnum
 {
@@ -1083,6 +1109,7 @@ public enum V1beta1VPNConnectionSpecInitProviderTypeRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTypeRefPolicyResolveEnum
 {
@@ -1122,6 +1149,7 @@ public partial class V1beta1VPNConnectionSpecInitProviderTypeRef
     public V1beta1VPNConnectionSpecInitProviderTypeRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTypeSelectorPolicyResolutionEnum
 {
@@ -1133,6 +1161,7 @@ public enum V1beta1VPNConnectionSpecInitProviderTypeSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderTypeSelectorPolicyResolveEnum
 {
@@ -1176,6 +1205,7 @@ public partial class V1beta1VPNConnectionSpecInitProviderTypeSelector
     public V1beta1VPNConnectionSpecInitProviderTypeSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRefPolicyResolutionEnum
 {
@@ -1187,6 +1217,7 @@ public enum V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRefPolicyResolveEnum
 {
@@ -1226,6 +1257,7 @@ public partial class V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRef
     public V1beta1VPNConnectionSpecInitProviderVpnGatewayIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelectorPolicyResolutionEnum
 {
@@ -1237,6 +1269,7 @@ public enum V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelectorPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelectorPolicyResolveEnum
 {
@@ -1533,6 +1566,7 @@ public partial class V1beta1VPNConnectionSpecInitProvider
     public V1beta1VPNConnectionSpecInitProviderVpnGatewayIdSelector? VpnGatewayIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecManagementPoliciesEnum
 {
@@ -1556,6 +1590,7 @@ public enum V1beta1VPNConnectionSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1567,6 +1602,7 @@ public enum V1beta1VPNConnectionSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1606,6 +1642,7 @@ public partial class V1beta1VPNConnectionSpecProviderConfigRef
     public V1beta1VPNConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1617,6 +1654,7 @@ public enum V1beta1VPNConnectionSpecPublishConnectionDetailsToConfigRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1VPNConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

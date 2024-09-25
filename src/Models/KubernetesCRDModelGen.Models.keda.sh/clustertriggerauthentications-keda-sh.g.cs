@@ -118,6 +118,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerCredentialsAccessToken? AccessToken { get; set; }
 }
 
+/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityIdentityOwnerEnum
 {
@@ -129,6 +130,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityI
     Workload
 }
 
+/// <summary>PodIdentityProvider contains the list of providers</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAwsSecretManagerPodIdentityProviderEnum
 {
@@ -287,6 +289,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultCreden
     public string TenantId { get; set; }
 }
 
+/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityIdentityOwnerEnum
 {
@@ -298,6 +301,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityIden
     Workload
 }
 
+/// <summary>PodIdentityProvider contains the list of providers</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecAzureKeyVaultPodIdentityProviderEnum
 {
@@ -465,6 +469,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCre
     public V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecret ClientSecret { get; set; }
 }
 
+/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityIdentityOwnerEnum
 {
@@ -476,6 +481,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityI
     Workload
 }
 
+/// <summary>PodIdentityProvider contains the list of providers</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecGcpSecretManagerPodIdentityProviderEnum
 {
@@ -665,6 +671,7 @@ public partial class V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVault
     public IList<V1alpha1ClusterTriggerAuthenticationSpecHashiCorpVaultSecrets> Secrets { get; set; }
 }
 
+/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityIdentityOwnerEnum
 {
@@ -676,6 +683,7 @@ public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityIdentityOwnerEnum
     Workload
 }
 
+/// <summary>PodIdentityProvider contains the list of providers</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ClusterTriggerAuthenticationSpecPodIdentityProviderEnum
 {

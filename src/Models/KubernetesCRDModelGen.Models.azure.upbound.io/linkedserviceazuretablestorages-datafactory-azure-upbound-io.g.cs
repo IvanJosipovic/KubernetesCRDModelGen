@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecDeletionPolicyEnum
 {
@@ -36,6 +37,7 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderConnect
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdRefPolicyResolutionEnum
 {
@@ -47,6 +49,7 @@ public enum V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdRefPolicyResolveEnum
 {
@@ -86,6 +89,7 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFac
     public V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdSelectorPolicyResolutionEnum
 {
@@ -97,6 +101,7 @@ public enum V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecForProviderDataFactoryIdSelectorPolicyResolveEnum
 {
@@ -227,6 +232,7 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecInitProvider
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecManagementPoliciesEnum
 {
@@ -250,6 +256,7 @@ public enum V1beta1LinkedServiceAzureTableStorageSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -261,6 +268,7 @@ public enum V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRefPolicyResolveEnum
 {
@@ -300,6 +308,7 @@ public partial class V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRef
     public V1beta1LinkedServiceAzureTableStorageSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -311,6 +320,7 @@ public enum V1beta1LinkedServiceAzureTableStorageSpecPublishConnectionDetailsToC
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureTableStorageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

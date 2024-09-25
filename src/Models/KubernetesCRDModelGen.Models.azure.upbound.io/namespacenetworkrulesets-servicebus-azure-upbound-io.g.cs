@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRef
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSel
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNamespaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSu
     public V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecForProviderNetworkRulesSubnetIdSelectorPolicyResolveEnum
 {
@@ -285,6 +294,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecForProvider
     public bool? TrustedServicesAllowed { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyResolutionEnum
 {
@@ -296,6 +306,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicyResolveEnum
 {
@@ -335,6 +346,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRe
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicyResolutionEnum
 {
@@ -346,6 +358,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicyResolveEnum
 {
@@ -389,6 +402,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSe
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNamespaceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicyResolutionEnum
 {
@@ -400,6 +414,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicyResolveEnum
 {
@@ -439,6 +454,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesS
     public V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicyResolutionEnum
 {
@@ -450,6 +466,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecInitProviderNetworkRulesSubnetIdSelectorPolicyResolveEnum
 {
@@ -551,6 +568,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecInitProvider
     public bool? TrustedServicesAllowed { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecManagementPoliciesEnum
 {
@@ -574,6 +592,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -585,6 +604,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicyResolveEnum
 {
@@ -624,6 +644,7 @@ public partial class V1beta1NamespaceNetworkRuleSetSpecProviderConfigRef
     public V1beta1NamespaceNetworkRuleSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -635,6 +656,7 @@ public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NamespaceNetworkRuleSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

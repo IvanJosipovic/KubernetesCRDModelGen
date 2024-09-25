@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.opsworks.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecDeletionPolicyEnum
 {
@@ -81,6 +82,7 @@ public partial class V1beta1MySQLLayerSpecForProviderCloudwatchConfiguration
     public IList<V1beta1MySQLLayerSpecForProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -92,6 +94,7 @@ public enum V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -131,6 +134,7 @@ public partial class V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdRefs
     public V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -142,6 +146,7 @@ public enum V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -301,6 +306,7 @@ public partial class V1beta1MySQLLayerSpecForProviderLoadBasedAutoScaling
     public IList<V1beta1MySQLLayerSpecForProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderStackIdRefPolicyResolutionEnum
 {
@@ -312,6 +318,7 @@ public enum V1beta1MySQLLayerSpecForProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderStackIdRefPolicyResolveEnum
 {
@@ -351,6 +358,7 @@ public partial class V1beta1MySQLLayerSpecForProviderStackIdRef
     public V1beta1MySQLLayerSpecForProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -362,6 +370,7 @@ public enum V1beta1MySQLLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 {
@@ -588,6 +597,7 @@ public partial class V1beta1MySQLLayerSpecInitProviderCloudwatchConfiguration
     public IList<V1beta1MySQLLayerSpecInitProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -599,6 +609,7 @@ public enum V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -638,6 +649,7 @@ public partial class V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdRefs
     public V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -649,6 +661,7 @@ public enum V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -808,6 +821,7 @@ public partial class V1beta1MySQLLayerSpecInitProviderLoadBasedAutoScaling
     public IList<V1beta1MySQLLayerSpecInitProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderStackIdRefPolicyResolutionEnum
 {
@@ -819,6 +833,7 @@ public enum V1beta1MySQLLayerSpecInitProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderStackIdRefPolicyResolveEnum
 {
@@ -858,6 +873,7 @@ public partial class V1beta1MySQLLayerSpecInitProviderStackIdRef
     public V1beta1MySQLLayerSpecInitProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -869,6 +885,7 @@ public enum V1beta1MySQLLayerSpecInitProviderStackIdSelectorPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
 {
@@ -1033,6 +1050,7 @@ public partial class V1beta1MySQLLayerSpecInitProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecManagementPoliciesEnum
 {
@@ -1056,6 +1074,7 @@ public enum V1beta1MySQLLayerSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1067,6 +1086,7 @@ public enum V1beta1MySQLLayerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1106,6 +1126,7 @@ public partial class V1beta1MySQLLayerSpecProviderConfigRef
     public V1beta1MySQLLayerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1117,6 +1138,7 @@ public enum V1beta1MySQLLayerSpecPublishConnectionDetailsToConfigRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MySQLLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

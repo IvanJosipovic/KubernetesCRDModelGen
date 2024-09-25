@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecDeletionPolicyEnum
 {
@@ -52,6 +53,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     public bool? VolumeSnapshotEnabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRefPolicyResolutionEnum
 {
@@ -63,6 +65,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRefPolicyResolveEnum
 {
@@ -102,6 +105,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelectorPolicyResolutionEnum
 {
@@ -113,6 +117,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelectorPolicyResolveEnum
 {
@@ -156,6 +161,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackup
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRefPolicyResolutionEnum
 {
@@ -167,6 +173,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClust
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRefPolicyResolveEnum
 {
@@ -206,6 +213,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelectorPolicyResolutionEnum
 {
@@ -217,6 +225,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClust
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelectorPolicyResolveEnum
 {
@@ -260,6 +269,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderKubern
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderKubernetesClusterIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRefPolicyResolutionEnum
 {
@@ -271,6 +281,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourc
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRefPolicyResolveEnum
 {
@@ -310,6 +321,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -321,6 +333,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourc
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -364,6 +377,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapsh
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderSnapshotResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolicyResolutionEnum
 {
@@ -375,6 +389,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolicyResolveEnum
 {
@@ -414,6 +429,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultI
     public V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelectorPolicyResolutionEnum
 {
@@ -425,6 +441,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecForProviderVaultIdSelectorPolicyResolveEnum
 {
@@ -562,6 +579,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     public bool? VolumeSnapshotEnabled { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRefPolicyResolutionEnum
 {
@@ -573,6 +591,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRefPolicyResolveEnum
 {
@@ -612,6 +631,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelectorPolicyResolutionEnum
 {
@@ -623,6 +643,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelectorPolicyResolveEnum
 {
@@ -666,6 +687,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderBacku
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRefPolicyResolutionEnum
 {
@@ -677,6 +699,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClus
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRefPolicyResolveEnum
 {
@@ -716,6 +739,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelectorPolicyResolutionEnum
 {
@@ -727,6 +751,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClus
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelectorPolicyResolveEnum
 {
@@ -770,6 +795,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderKuber
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderKubernetesClusterIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRefPolicyResolutionEnum
 {
@@ -781,6 +807,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResour
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRefPolicyResolveEnum
 {
@@ -820,6 +847,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnaps
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -831,6 +859,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResour
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -923,6 +952,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecInitProvider
     public V1beta1BackupInstanceKubernetesClusterSpecInitProviderSnapshotResourceGroupNameSelector? SnapshotResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecManagementPoliciesEnum
 {
@@ -946,6 +976,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -957,6 +988,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRefPolicyResolveEnum
 {
@@ -996,6 +1028,7 @@ public partial class V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRef
     public V1beta1BackupInstanceKubernetesClusterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1007,6 +1040,7 @@ public enum V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsTo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstanceKubernetesClusterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

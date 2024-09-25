@@ -174,6 +174,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     public IList<V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
+/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum
 {
@@ -387,6 +388,7 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifier
     public IList<V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
+/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GRPCRouteSpecRulesFiltersTypeEnum
 {
@@ -430,6 +432,7 @@ public partial class V1GRPCRouteSpecRulesFilters
     public V1GRPCRouteSpecRulesFiltersTypeEnum Type { get; set; }
 }
 
+/// <summary>Type specifies how to match against the value of the header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GRPCRouteSpecRulesMatchesHeadersTypeEnum
 {
@@ -459,6 +462,7 @@ public partial class V1GRPCRouteSpecRulesMatchesHeaders
     public string Value { get; set; }
 }
 
+/// <summary>Type specifies how to match against the service and/or method. Support: Core (Exact with service and method specified)   Support: Implementation-specific (Exact with method specified but no service specified)   Support: Implementation-specific (RegularExpression)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GRPCRouteSpecRulesMatchesMethodTypeEnum
 {
@@ -535,6 +539,7 @@ public partial class V1GRPCRouteSpec
     public IList<V1GRPCRouteSpecRules>? Rules { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1GRPCRouteStatusParentsConditionsStatusEnum
 {

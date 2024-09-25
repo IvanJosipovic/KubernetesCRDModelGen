@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1MetastoreServiceSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKe
     public V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeyRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderEncryptionConfigKmsKeySelectorPolicyResolveEnum
 {
@@ -239,6 +244,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderMetadataIntegration
     public IList<V1beta1MetastoreServiceSpecForProviderMetadataIntegrationDataCatalogConfig>? DataCatalogConfig { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRefPolicyResolutionEnum
 {
@@ -250,6 +256,7 @@ public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetwo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRefPolicyResolveEnum
 {
@@ -289,6 +296,7 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumer
     public V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelectorPolicyResolutionEnum
 {
@@ -300,6 +308,7 @@ public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetwo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecForProviderNetworkConfigConsumersSubnetworkSelectorPolicyResolveEnum
 {
@@ -481,6 +490,7 @@ public partial class V1beta1MetastoreServiceSpecForProvider
     public string? Tier { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPolicyResolutionEnum
 {
@@ -492,6 +502,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPolicyResolveEnum
 {
@@ -531,6 +542,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsK
     public V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeyRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelectorPolicyResolutionEnum
 {
@@ -542,6 +554,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderEncryptionConfigKmsKeySelectorPolicyResolveEnum
 {
@@ -701,6 +714,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderMetadataIntegration
     public IList<V1beta1MetastoreServiceSpecInitProviderMetadataIntegrationDataCatalogConfig>? DataCatalogConfig { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRefPolicyResolutionEnum
 {
@@ -712,6 +726,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetw
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRefPolicyResolveEnum
 {
@@ -751,6 +766,7 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsume
     public V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelectorPolicyResolutionEnum
 {
@@ -762,6 +778,7 @@ public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetw
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecInitProviderNetworkConfigConsumersSubnetworkSelectorPolicyResolveEnum
 {
@@ -939,6 +956,7 @@ public partial class V1beta1MetastoreServiceSpecInitProvider
     public string? Tier { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecManagementPoliciesEnum
 {
@@ -962,6 +980,7 @@ public enum V1beta1MetastoreServiceSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -973,6 +992,7 @@ public enum V1beta1MetastoreServiceSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1012,6 +1032,7 @@ public partial class V1beta1MetastoreServiceSpecProviderConfigRef
     public V1beta1MetastoreServiceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1023,6 +1044,7 @@ public enum V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MetastoreServiceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

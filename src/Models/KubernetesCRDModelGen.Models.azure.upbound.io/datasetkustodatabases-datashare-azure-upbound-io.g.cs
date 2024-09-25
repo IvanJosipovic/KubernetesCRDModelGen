@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datashare.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1DataSetKustoDatabaseSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRe
     public V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSe
     public V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderShareIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1DataSetKustoDatabaseSpecForProviderShareIdRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderShareIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProviderShareIdRef
     public V1beta1DataSetKustoDatabaseSpecForProviderShareIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelectorPolicyResolveEnum
 {
@@ -256,6 +265,7 @@ public partial class V1beta1DataSetKustoDatabaseSpecForProvider
     public V1beta1DataSetKustoDatabaseSpecForProviderShareIdSelector? ShareIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdRefPolicyResolutionEnum
 {
@@ -267,6 +277,7 @@ public enum V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdRefPolicyResolveEnum
 {
@@ -306,6 +317,7 @@ public partial class V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdR
     public V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelectorPolicyResolutionEnum
 {
@@ -317,6 +329,7 @@ public enum V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelectorPolicyResolveEnum
 {
@@ -377,6 +390,7 @@ public partial class V1beta1DataSetKustoDatabaseSpecInitProvider
     public V1beta1DataSetKustoDatabaseSpecInitProviderKustoDatabaseIdSelector? KustoDatabaseIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecManagementPoliciesEnum
 {
@@ -400,6 +414,7 @@ public enum V1beta1DataSetKustoDatabaseSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -411,6 +426,7 @@ public enum V1beta1DataSetKustoDatabaseSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecProviderConfigRefPolicyResolveEnum
 {
@@ -450,6 +466,7 @@ public partial class V1beta1DataSetKustoDatabaseSpecProviderConfigRef
     public V1beta1DataSetKustoDatabaseSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -461,6 +478,7 @@ public enum V1beta1DataSetKustoDatabaseSpecPublishConnectionDetailsToConfigRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DataSetKustoDatabaseSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

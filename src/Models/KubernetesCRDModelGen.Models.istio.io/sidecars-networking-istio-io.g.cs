@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary>When the bind address is an IP, the captureMode option dictates how traffic to the listener is expected to be captured (or not).  Valid Options: DEFAULT, IPTABLES, NONE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecEgressCaptureModeEnum
 {
@@ -65,6 +66,7 @@ public partial class V1beta1SidecarSpecEgress
     public V1beta1SidecarSpecEgressPort? Port { get; set; }
 }
 
+/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecInboundConnectionPoolHttpH2UpgradePolicyEnum
 {
@@ -172,6 +174,7 @@ public partial class V1beta1SidecarSpecInboundConnectionPool
     public V1beta1SidecarSpecInboundConnectionPoolTcp? Tcp { get; set; }
 }
 
+/// <summary>The captureMode option dictates how traffic to the listener is expected to be captured (or not).  Valid Options: DEFAULT, IPTABLES, NONE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressCaptureModeEnum
 {
@@ -186,6 +189,7 @@ public enum V1beta1SidecarSpecIngressCaptureModeEnum
     NONE
 }
 
+/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressConnectionPoolHttpH2UpgradePolicyEnum
 {
@@ -314,6 +318,7 @@ public partial class V1beta1SidecarSpecIngressPort
     public int? TargetPort { get; set; }
 }
 
+/// <summary>Optional: Maximum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressTlsMaxProtocolVersionEnum
 {
@@ -334,6 +339,7 @@ public enum V1beta1SidecarSpecIngressTlsMaxProtocolVersionEnum
     TLSV13
 }
 
+/// <summary>Optional: Minimum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressTlsMinProtocolVersionEnum
 {
@@ -354,6 +360,7 @@ public enum V1beta1SidecarSpecIngressTlsMinProtocolVersionEnum
     TLSV13
 }
 
+/// <summary>Optional: Indicates whether connections to this port should be secured using TLS.  Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecIngressTlsModeEnum
 {
@@ -493,6 +500,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxy
     public string? Subset { get; set; }
 }
 
+/// <summary>  Valid Options: REGISTRY_ONLY, ALLOW_ANY</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SidecarSpecOutboundTrafficPolicyModeEnum
 {

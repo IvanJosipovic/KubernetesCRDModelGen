@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecDeletionPolicyEnum
 {
@@ -79,6 +80,7 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderSpConfig
     public string? SpEntityId { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecForProviderTenantRefPolicyResolutionEnum
 {
@@ -90,6 +92,7 @@ public enum V1beta1TenantInboundSAMLConfigSpecForProviderTenantRefPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecForProviderTenantRefPolicyResolveEnum
 {
@@ -129,6 +132,7 @@ public partial class V1beta1TenantInboundSAMLConfigSpecForProviderTenantRef
     public V1beta1TenantInboundSAMLConfigSpecForProviderTenantRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelectorPolicyResolutionEnum
 {
@@ -140,6 +144,7 @@ public enum V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelectorPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecForProviderTenantSelectorPolicyResolveEnum
 {
@@ -284,6 +289,7 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderSpConfig
     public string? SpEntityId { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRefPolicyResolutionEnum
 {
@@ -295,6 +301,7 @@ public enum V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRefPolicyResolveEnum
 {
@@ -334,6 +341,7 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRef
     public V1beta1TenantInboundSAMLConfigSpecInitProviderTenantRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelectorPolicyResolutionEnum
 {
@@ -345,6 +353,7 @@ public enum V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelectorPolicyResolveEnum
 {
@@ -429,6 +438,7 @@ public partial class V1beta1TenantInboundSAMLConfigSpecInitProvider
     public V1beta1TenantInboundSAMLConfigSpecInitProviderTenantSelector? TenantSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecManagementPoliciesEnum
 {
@@ -452,6 +462,7 @@ public enum V1beta1TenantInboundSAMLConfigSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -463,6 +474,7 @@ public enum V1beta1TenantInboundSAMLConfigSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecProviderConfigRefPolicyResolveEnum
 {
@@ -502,6 +514,7 @@ public partial class V1beta1TenantInboundSAMLConfigSpecProviderConfigRef
     public V1beta1TenantInboundSAMLConfigSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -513,6 +526,7 @@ public enum V1beta1TenantInboundSAMLConfigSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TenantInboundSAMLConfigSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

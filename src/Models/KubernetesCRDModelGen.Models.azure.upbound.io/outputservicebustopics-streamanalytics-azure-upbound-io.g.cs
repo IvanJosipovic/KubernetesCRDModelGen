@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1OutputServiceBusTopicSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNam
     public V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -144,6 +149,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderServicebusNamespaceRefPolicyResolutionEnum
 {
@@ -155,6 +161,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderServicebusNamespaceRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderServicebusNamespaceRefPolicyResolveEnum
 {
@@ -194,6 +201,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProviderServicebusNamesp
     public V1beta1OutputServiceBusTopicSpecForProviderServicebusNamespaceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderServicebusNamespaceSelectorPolicyResolutionEnum
 {
@@ -205,6 +213,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderServicebusNamespaceSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderServicebusNamespaceSelectorPolicyResolveEnum
 {
@@ -265,6 +274,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProviderSharedAccessPoli
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameRefPolicyResolutionEnum
 {
@@ -276,6 +286,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameRefPolicyResolveEnum
 {
@@ -315,6 +326,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJ
     public V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolutionEnum
 {
@@ -326,6 +338,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum
 {
@@ -369,6 +382,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJ
     public V1beta1OutputServiceBusTopicSpecForProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderTopicNameRefPolicyResolutionEnum
 {
@@ -380,6 +394,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderTopicNameRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderTopicNameRefPolicyResolveEnum
 {
@@ -419,6 +434,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProviderTopicNameRef
     public V1beta1OutputServiceBusTopicSpecForProviderTopicNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderTopicNameSelectorPolicyResolutionEnum
 {
@@ -430,6 +446,7 @@ public enum V1beta1OutputServiceBusTopicSpecForProviderTopicNameSelectorPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecForProviderTopicNameSelectorPolicyResolveEnum
 {
@@ -554,6 +571,7 @@ public partial class V1beta1OutputServiceBusTopicSpecForProvider
     public V1beta1OutputServiceBusTopicSpecForProviderTopicNameSelector? TopicNameSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -565,6 +583,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNameRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -604,6 +623,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNa
     public V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -615,6 +635,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNameSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -679,6 +700,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProviderSerialization
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceRefPolicyResolutionEnum
 {
@@ -690,6 +712,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceRefPolicyResolveEnum
 {
@@ -729,6 +752,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProviderServicebusNames
     public V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceSelectorPolicyResolutionEnum
 {
@@ -740,6 +764,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceSelectorPolicyResolveEnum
 {
@@ -783,6 +808,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProviderServicebusNames
     public V1beta1OutputServiceBusTopicSpecInitProviderServicebusNamespaceSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameRefPolicyResolutionEnum
 {
@@ -794,6 +820,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameRefPolicyResolveEnum
 {
@@ -833,6 +860,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalytics
     public V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameSelectorPolicyResolutionEnum
 {
@@ -844,6 +872,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameSelectorPolicyResolveEnum
 {
@@ -887,6 +916,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalytics
     public V1beta1OutputServiceBusTopicSpecInitProviderStreamAnalyticsJobNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderTopicNameRefPolicyResolutionEnum
 {
@@ -898,6 +928,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderTopicNameRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderTopicNameRefPolicyResolveEnum
 {
@@ -937,6 +968,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProviderTopicNameRef
     public V1beta1OutputServiceBusTopicSpecInitProviderTopicNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderTopicNameSelectorPolicyResolutionEnum
 {
@@ -948,6 +980,7 @@ public enum V1beta1OutputServiceBusTopicSpecInitProviderTopicNameSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecInitProviderTopicNameSelectorPolicyResolveEnum
 {
@@ -1068,6 +1101,7 @@ public partial class V1beta1OutputServiceBusTopicSpecInitProvider
     public V1beta1OutputServiceBusTopicSpecInitProviderTopicNameSelector? TopicNameSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecManagementPoliciesEnum
 {
@@ -1091,6 +1125,7 @@ public enum V1beta1OutputServiceBusTopicSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1102,6 +1137,7 @@ public enum V1beta1OutputServiceBusTopicSpecProviderConfigRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1141,6 +1177,7 @@ public partial class V1beta1OutputServiceBusTopicSpecProviderConfigRef
     public V1beta1OutputServiceBusTopicSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1152,6 +1189,7 @@ public enum V1beta1OutputServiceBusTopicSpecPublishConnectionDetailsToConfigRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1OutputServiceBusTopicSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

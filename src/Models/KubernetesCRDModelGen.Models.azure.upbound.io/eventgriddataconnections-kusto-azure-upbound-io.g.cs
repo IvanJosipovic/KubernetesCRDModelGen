@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1EventGridDataConnectionSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderClusterNameRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderClusterNameRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderClusterNameRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameRef
     public V1beta1EventGridDataConnectionSpecForProviderClusterNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderClusterNameSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderClusterNameSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderClusterNameSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderClusterNameSel
     public V1beta1EventGridDataConnectionSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRe
     public V1beta1EventGridDataConnectionSpecForProviderDatabaseNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSe
     public V1beta1EventGridDataConnectionSpecForProviderDatabaseNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsum
     public V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNa
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameSelectorPolicyResolveEnum
 {
@@ -331,6 +344,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubConsum
     public V1beta1EventGridDataConnectionSpecForProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubIdRefPolicyResolutionEnum
 {
@@ -342,6 +356,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderEventhubIdRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubIdRefPolicyResolveEnum
 {
@@ -381,6 +396,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdRef
     public V1beta1EventGridDataConnectionSpecForProviderEventhubIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubIdSelectorPolicyResolutionEnum
 {
@@ -392,6 +408,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderEventhubIdSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderEventhubIdSelectorPolicyResolveEnum
 {
@@ -435,6 +452,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderEventhubIdSele
     public V1beta1EventGridDataConnectionSpecForProviderEventhubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -446,6 +464,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -485,6 +504,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupN
     public V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -496,6 +516,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -539,6 +560,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderResourceGroupN
     public V1beta1EventGridDataConnectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdRefPolicyResolutionEnum
 {
@@ -550,6 +572,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdRefPolicyResolveEnum
 {
@@ -589,6 +612,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProviderStorageAccount
     public V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdSelectorPolicyResolutionEnum
 {
@@ -600,6 +624,7 @@ public enum V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecForProviderStorageAccountIdSelectorPolicyResolveEnum
 {
@@ -756,6 +781,7 @@ public partial class V1beta1EventGridDataConnectionSpecForProvider
     public string? TableName { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameRefPolicyResolutionEnum
 {
@@ -767,6 +793,7 @@ public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupN
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameRefPolicyResolveEnum
 {
@@ -806,6 +833,7 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsu
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameSelectorPolicyResolutionEnum
 {
@@ -817,6 +845,7 @@ public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupN
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameSelectorPolicyResolveEnum
 {
@@ -860,6 +889,7 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubConsu
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubConsumerGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRefPolicyResolutionEnum
 {
@@ -871,6 +901,7 @@ public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRefPolicyResolveEnum
 {
@@ -910,6 +941,7 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRef
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSelectorPolicyResolutionEnum
 {
@@ -921,6 +953,7 @@ public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSelectorPolicyResolveEnum
 {
@@ -964,6 +997,7 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSel
     public V1beta1EventGridDataConnectionSpecInitProviderEventhubIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdRefPolicyResolutionEnum
 {
@@ -975,6 +1009,7 @@ public enum V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdRefPolicyResolveEnum
 {
@@ -1014,6 +1049,7 @@ public partial class V1beta1EventGridDataConnectionSpecInitProviderStorageAccoun
     public V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdSelectorPolicyResolutionEnum
 {
@@ -1025,6 +1061,7 @@ public enum V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecInitProviderStorageAccountIdSelectorPolicyResolveEnum
 {
@@ -1145,6 +1182,7 @@ public partial class V1beta1EventGridDataConnectionSpecInitProvider
     public string? TableName { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecManagementPoliciesEnum
 {
@@ -1168,6 +1206,7 @@ public enum V1beta1EventGridDataConnectionSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1179,6 +1218,7 @@ public enum V1beta1EventGridDataConnectionSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1218,6 +1258,7 @@ public partial class V1beta1EventGridDataConnectionSpecProviderConfigRef
     public V1beta1EventGridDataConnectionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1229,6 +1270,7 @@ public enum V1beta1EventGridDataConnectionSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1EventGridDataConnectionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

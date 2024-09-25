@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dms.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1ReplicationTaskSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     public V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderReplicationInstanceArn
     public V1beta1ReplicationTaskSpecForProviderReplicationInstanceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRef
     public V1beta1ReplicationTaskSpecForProviderSourceEndpointArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelec
     public V1beta1ReplicationTaskSpecForProviderSourceEndpointArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRef
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelectorPolicyResolveEnum
 {
@@ -408,6 +421,7 @@ public partial class V1beta1ReplicationTaskSpecForProvider
     public V1beta1ReplicationTaskSpecForProviderTargetEndpointArnSelector? TargetEndpointArnSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolicyResolutionEnum
 {
@@ -419,6 +433,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolicyResolveEnum
 {
@@ -458,6 +473,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     public V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelectorPolicyResolutionEnum
 {
@@ -469,6 +485,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelectorPolicyResolveEnum
 {
@@ -512,6 +529,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderReplicationInstanceAr
     public V1beta1ReplicationTaskSpecInitProviderReplicationInstanceArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicyResolutionEnum
 {
@@ -523,6 +541,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicyResolveEnum
 {
@@ -562,6 +581,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRef
     public V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolicyResolutionEnum
 {
@@ -573,6 +593,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolicyResolveEnum
 {
@@ -616,6 +637,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSele
     public V1beta1ReplicationTaskSpecInitProviderSourceEndpointArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicyResolutionEnum
 {
@@ -627,6 +649,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicyResolveEnum
 {
@@ -666,6 +689,7 @@ public partial class V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRef
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolicyResolutionEnum
 {
@@ -677,6 +701,7 @@ public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelectorPolicyResolveEnum
 {
@@ -793,6 +818,7 @@ public partial class V1beta1ReplicationTaskSpecInitProvider
     public V1beta1ReplicationTaskSpecInitProviderTargetEndpointArnSelector? TargetEndpointArnSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecManagementPoliciesEnum
 {
@@ -816,6 +842,7 @@ public enum V1beta1ReplicationTaskSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -827,6 +854,7 @@ public enum V1beta1ReplicationTaskSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecProviderConfigRefPolicyResolveEnum
 {
@@ -866,6 +894,7 @@ public partial class V1beta1ReplicationTaskSpecProviderConfigRef
     public V1beta1ReplicationTaskSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -877,6 +906,7 @@ public enum V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ReplicationTaskSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

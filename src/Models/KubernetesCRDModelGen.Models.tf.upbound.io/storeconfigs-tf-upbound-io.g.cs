@@ -43,6 +43,7 @@ public partial class V1beta1StoreConfigSpecKubernetesAuthSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Source of the credentials.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StoreConfigSpecKubernetesAuthSourceEnum
 {
@@ -121,6 +122,7 @@ public partial class V1beta1StoreConfigSpecPlugin
     public string? Endpoint { get; set; }
 }
 
+/// <summary>Type configures which secret store to be used. Only the configuration block for this store will be used and others will be ignored if provided. Default is Kubernetes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1StoreConfigSpecTypeEnum
 {

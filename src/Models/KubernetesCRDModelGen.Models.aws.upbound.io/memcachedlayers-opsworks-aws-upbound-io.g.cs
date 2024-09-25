@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.opsworks.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecDeletionPolicyEnum
 {
@@ -81,6 +82,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderCloudwatchConfiguration
     public IList<V1beta1MemcachedLayerSpecForProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -92,6 +94,7 @@ public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefsPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -131,6 +134,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRe
     public V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -142,6 +146,7 @@ public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -301,6 +306,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderLoadBasedAutoScaling
     public IList<V1beta1MemcachedLayerSpecForProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderStackIdRefPolicyResolutionEnum
 {
@@ -312,6 +318,7 @@ public enum V1beta1MemcachedLayerSpecForProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderStackIdRefPolicyResolveEnum
 {
@@ -351,6 +358,7 @@ public partial class V1beta1MemcachedLayerSpecForProviderStackIdRef
     public V1beta1MemcachedLayerSpecForProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -362,6 +370,7 @@ public enum V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecForProviderStackIdSelectorPolicyResolveEnum
 {
@@ -584,6 +593,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderCloudwatchConfiguratio
     public IList<V1beta1MemcachedLayerSpecInitProviderCloudwatchConfigurationLogStreams>? LogStreams { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolutionEnum
 {
@@ -595,6 +605,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefsPolicyResolveEnum
 {
@@ -634,6 +645,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdR
     public V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolutionEnum
 {
@@ -645,6 +657,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderCustomSecurityGroupIdSelectorPolicyResolveEnum
 {
@@ -804,6 +817,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderLoadBasedAutoScaling
     public IList<V1beta1MemcachedLayerSpecInitProviderLoadBasedAutoScalingUpscaling>? Upscaling { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicyResolutionEnum
 {
@@ -815,6 +829,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicyResolveEnum
 {
@@ -854,6 +869,7 @@ public partial class V1beta1MemcachedLayerSpecInitProviderStackIdRef
     public V1beta1MemcachedLayerSpecInitProviderStackIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicyResolutionEnum
 {
@@ -865,6 +881,7 @@ public enum V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecInitProviderStackIdSelectorPolicyResolveEnum
 {
@@ -1025,6 +1042,7 @@ public partial class V1beta1MemcachedLayerSpecInitProvider
     public bool? UseEbsOptimizedInstances { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecManagementPoliciesEnum
 {
@@ -1048,6 +1066,7 @@ public enum V1beta1MemcachedLayerSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1059,6 +1078,7 @@ public enum V1beta1MemcachedLayerSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1098,6 +1118,7 @@ public partial class V1beta1MemcachedLayerSpecProviderConfigRef
     public V1beta1MemcachedLayerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1109,6 +1130,7 @@ public enum V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1MemcachedLayerSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

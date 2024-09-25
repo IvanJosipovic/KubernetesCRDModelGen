@@ -21,6 +21,7 @@ public partial class V1KustomizationSpecCommonMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
+/// <summary>Provider is the name of the decryption engine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1KustomizationSpecDecryptionProviderEnum
 {
@@ -175,6 +176,7 @@ public partial class V1KustomizationSpecPatches
     public V1KustomizationSpecPatchesTarget? Target { get; set; }
 }
 
+/// <summary>Kind of the values referent, valid values are ('Secret', 'ConfigMap').</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1KustomizationSpecPostBuildSubstituteFromKindEnum
 {
@@ -217,6 +219,7 @@ public partial class V1KustomizationSpecPostBuild
     public IList<V1KustomizationSpecPostBuildSubstituteFrom>? SubstituteFrom { get; set; }
 }
 
+/// <summary>Kind of the referent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1KustomizationSpecSourceRefKindEnum
 {
@@ -346,6 +349,7 @@ public partial class V1KustomizationSpec
     public bool? Wait { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1KustomizationStatusConditionsStatusEnum
 {

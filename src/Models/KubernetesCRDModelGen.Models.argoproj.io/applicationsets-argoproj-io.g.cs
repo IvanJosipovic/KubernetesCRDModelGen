@@ -25024,6 +25024,7 @@ public partial class V1alpha1ApplicationSetSpecStrategy
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1ApplicationSetSpecSyncPolicyApplicationsSyncEnum
 {

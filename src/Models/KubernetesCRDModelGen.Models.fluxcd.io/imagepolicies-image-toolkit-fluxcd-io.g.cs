@@ -34,6 +34,7 @@ public partial class V1beta2ImagePolicySpecImageRepositoryRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Order specifies the sorting order of the tags. Given the letters of the alphabet as tags, ascending order would select Z, and descending order would select A.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImagePolicySpecPolicyAlphabeticalOrderEnum
 {
@@ -55,6 +56,7 @@ public partial class V1beta2ImagePolicySpecPolicyAlphabetical
     public V1beta2ImagePolicySpecPolicyAlphabeticalOrderEnum? Order { get; set; }
 }
 
+/// <summary>Order specifies the sorting order of the tags. Given the integer values from 0 to 9 as tags, ascending order would select 9, and descending order would select 0.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImagePolicySpecPolicyNumericalOrderEnum
 {
@@ -119,6 +121,7 @@ public partial class V1beta2ImagePolicySpec
     public V1beta2ImagePolicySpecPolicy Policy { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImagePolicyStatusConditionsStatusEnum
 {

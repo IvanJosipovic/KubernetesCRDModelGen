@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary>Specifies where in the Envoy configuration, the patch should be applied.  Valid Options: LISTENER, FILTER_CHAIN, NETWORK_FILTER, HTTP_FILTER, ROUTE_CONFIGURATION, VIRTUAL_HOST, HTTP_ROUTE, CLUSTER, EXTENSION_CONFIG, BOOTSTRAP, LISTENER_FILTER</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha3EnvoyFilterSpecConfigPatchesApplyToEnum
 {
@@ -70,6 +71,7 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchCluster
     public string? Subset { get; set; }
 }
 
+/// <summary>The specific config generation context to match on.  Valid Options: ANY, SIDECAR_INBOUND, SIDECAR_OUTBOUND, GATEWAY</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha3EnvoyFilterSpecConfigPatchesMatchContextEnum
 {
@@ -176,6 +178,7 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchProxy
     public string? ProxyVersion { get; set; }
 }
 
+/// <summary>Match a route with specific action type.  Valid Options: ANY, ROUTE, REDIRECT, DIRECT_RESPONSE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhostRouteActionEnum
 {
@@ -271,6 +274,7 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatch
     public V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfiguration? RouteConfiguration { get; set; }
 }
 
+/// <summary>Determines the filter insertion order.  Valid Options: AUTHN, AUTHZ, STATS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha3EnvoyFilterSpecConfigPatchesPatchFilterClassEnum
 {
@@ -288,6 +292,7 @@ public enum V1alpha3EnvoyFilterSpecConfigPatchesPatchFilterClassEnum
     STATS
 }
 
+/// <summary>Determines how the patch should be applied.  Valid Options: MERGE, ADD, REMOVE, INSERT_BEFORE, INSERT_AFTER, INSERT_FIRST, REPLACE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha3EnvoyFilterSpecConfigPatchesPatchOperationEnum
 {

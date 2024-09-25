@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecDeletionPolicyEnum
 {
@@ -36,6 +37,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiKeySecretRe
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicyResolutionEnum
 {
@@ -47,6 +49,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicyResolveEnum
 {
@@ -86,6 +89,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiManagementN
     public V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicyResolutionEnum
 {
@@ -97,6 +101,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderApiManagementNameSelectorPolicyResolveEnum
 {
@@ -157,6 +162,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderApiSecretKeySe
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -168,6 +174,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -207,6 +214,7 @@ public partial class V1beta1IdentityProviderTwitterSpecForProviderResourceGroupN
     public V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -218,6 +226,7 @@ public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -315,6 +324,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiKeySecretR
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicyResolutionEnum
 {
@@ -326,6 +336,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicyResolveEnum
 {
@@ -365,6 +376,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiManagement
     public V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicyResolutionEnum
 {
@@ -376,6 +388,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderApiManagementNameSelectorPolicyResolveEnum
 {
@@ -436,6 +449,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderApiSecretKeyS
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -447,6 +461,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -486,6 +501,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProviderResourceGroup
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -497,6 +513,7 @@ public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -577,6 +594,7 @@ public partial class V1beta1IdentityProviderTwitterSpecInitProvider
     public V1beta1IdentityProviderTwitterSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecManagementPoliciesEnum
 {
@@ -600,6 +618,7 @@ public enum V1beta1IdentityProviderTwitterSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -611,6 +630,7 @@ public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicyResolveEnum
 {
@@ -650,6 +670,7 @@ public partial class V1beta1IdentityProviderTwitterSpecProviderConfigRef
     public V1beta1IdentityProviderTwitterSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -661,6 +682,7 @@ public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1IdentityProviderTwitterSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -17,6 +17,7 @@ public partial class V1BackupSpecCluster
     public string Name { get; set; }
 }
 
+/// <summary>The backup method to be used, possible options are `barmanObjectStore`, `volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1BackupSpecMethodEnum
 {
@@ -57,6 +58,7 @@ public partial class V1BackupSpecPluginConfiguration
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1BackupSpecTargetEnum
 {

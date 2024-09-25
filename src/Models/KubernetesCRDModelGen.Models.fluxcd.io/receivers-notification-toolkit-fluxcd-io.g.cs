@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
+/// <summary>Kind of the referent</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ReceiverSpecResourcesKindEnum
 {
@@ -78,6 +79,7 @@ public partial class V1ReceiverSpecSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Type of webhook sender, used to determine the validation procedure and payload deserialization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ReceiverSpecTypeEnum
 {
@@ -149,6 +151,7 @@ public partial class V1ReceiverSpec
     public V1ReceiverSpecTypeEnum Type { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1ReceiverStatusConditionsStatusEnum
 {

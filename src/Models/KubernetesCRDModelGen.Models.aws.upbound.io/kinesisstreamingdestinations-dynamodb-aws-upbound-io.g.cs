@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dynamodb.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1KinesisStreamingDestinationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderStreamArnRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1KinesisStreamingDestinationSpecForProviderStreamArnRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderStreamArnRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnR
     public V1beta1KinesisStreamingDestinationSpecForProviderStreamArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderStreamArnSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1KinesisStreamingDestinationSpecForProviderStreamArnSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderStreamArnSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderStreamArnS
     public V1beta1KinesisStreamingDestinationSpecForProviderStreamArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderTableNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1KinesisStreamingDestinationSpecForProviderTableNameRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderTableNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameR
     public V1beta1KinesisStreamingDestinationSpecForProviderTableNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelectorPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelectorPolicyResolveEnum
 {
@@ -260,6 +269,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProvider
     public V1beta1KinesisStreamingDestinationSpecForProviderTableNameSelector? TableNameSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnRefPolicyResolutionEnum
 {
@@ -271,6 +281,7 @@ public enum V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnRefPolicyResolveEnum
 {
@@ -310,6 +321,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArn
     public V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnSelectorPolicyResolutionEnum
 {
@@ -321,6 +333,7 @@ public enum V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnSelectorPolicyResolveEnum
 {
@@ -364,6 +377,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderStreamArn
     public V1beta1KinesisStreamingDestinationSpecInitProviderStreamArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderTableNameRefPolicyResolutionEnum
 {
@@ -375,6 +389,7 @@ public enum V1beta1KinesisStreamingDestinationSpecInitProviderTableNameRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderTableNameRefPolicyResolveEnum
 {
@@ -414,6 +429,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableName
     public V1beta1KinesisStreamingDestinationSpecInitProviderTableNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelectorPolicyResolutionEnum
 {
@@ -425,6 +441,7 @@ public enum V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelectorP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelectorPolicyResolveEnum
 {
@@ -497,6 +514,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProvider
     public V1beta1KinesisStreamingDestinationSpecInitProviderTableNameSelector? TableNameSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecManagementPoliciesEnum
 {
@@ -520,6 +538,7 @@ public enum V1beta1KinesisStreamingDestinationSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -531,6 +550,7 @@ public enum V1beta1KinesisStreamingDestinationSpecProviderConfigRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -570,6 +590,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecProviderConfigRef
     public V1beta1KinesisStreamingDestinationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -581,6 +602,7 @@ public enum V1beta1KinesisStreamingDestinationSpecPublishConnectionDetailsToConf
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1KinesisStreamingDestinationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

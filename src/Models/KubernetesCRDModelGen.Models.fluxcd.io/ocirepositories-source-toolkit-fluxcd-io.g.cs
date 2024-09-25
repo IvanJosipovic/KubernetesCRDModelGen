@@ -17,6 +17,7 @@ public partial class V1beta2OCIRepositorySpecCertSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Operation specifies how the selected layer should be processed. By default, the layer compressed content is extracted to storage. When the operation is set to 'copy', the layer compressed content is persisted to storage as it is.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2OCIRepositorySpecLayerSelectorOperationEnum
 {
@@ -42,6 +43,7 @@ public partial class V1beta2OCIRepositorySpecLayerSelector
     public V1beta2OCIRepositorySpecLayerSelectorOperationEnum? Operation { get; set; }
 }
 
+/// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2OCIRepositorySpecProviderEnum
 {
@@ -102,6 +104,7 @@ public partial class V1beta2OCIRepositorySpecVerifyMatchOIDCIdentity
     public string Subject { get; set; }
 }
 
+/// <summary>Provider specifies the technology used to sign the OCI Artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2OCIRepositorySpecVerifyProviderEnum
 {
@@ -231,6 +234,7 @@ public partial class V1beta2OCIRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2OCIRepositoryStatusConditionsStatusEnum
 {
@@ -275,6 +279,7 @@ public partial class V1beta2OCIRepositoryStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>Operation specifies how the selected layer should be processed. By default, the layer compressed content is extracted to storage. When the operation is set to 'copy', the layer compressed content is persisted to storage as it is.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2OCIRepositoryStatusObservedLayerSelectorOperationEnum
 {

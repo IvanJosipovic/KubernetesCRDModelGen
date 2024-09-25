@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecDeletionPolicyEnum
 {
@@ -44,6 +45,7 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderGa
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -55,6 +57,7 @@ public enum V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGro
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -94,6 +97,7 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderRe
     public V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -105,6 +109,7 @@ public enum V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGro
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -222,6 +227,7 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderG
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameRefPolicyResolutionEnum
 {
@@ -233,6 +239,7 @@ public enum V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameRefPolicyResolveEnum
 {
@@ -272,6 +279,7 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderR
     public V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameSelectorPolicyResolutionEnum
 {
@@ -283,6 +291,7 @@ public enum V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGr
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecInitProviderResourceGroupNameSelectorPolicyResolveEnum
 {
@@ -375,6 +384,7 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecInitProvider
     public string? TemplateData { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecManagementPoliciesEnum
 {
@@ -398,6 +408,7 @@ public enum V1beta1ApplicationInsightsWorkbookTemplateSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -409,6 +420,7 @@ public enum V1beta1ApplicationInsightsWorkbookTemplateSpecProviderConfigRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecProviderConfigRefPolicyResolveEnum
 {
@@ -448,6 +460,7 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecProviderConfi
     public V1beta1ApplicationInsightsWorkbookTemplateSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -459,6 +472,7 @@ public enum V1beta1ApplicationInsightsWorkbookTemplateSpecPublishConnectionDetai
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ApplicationInsightsWorkbookTemplateSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

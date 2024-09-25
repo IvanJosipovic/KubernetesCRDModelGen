@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafregional.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecDeletionPolicyEnum
 {
@@ -32,6 +33,7 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleFieldToMa
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdRefPolicyResolutionEnum
 {
@@ -43,6 +45,7 @@ public enum V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdRefPolicyResolveEnum
 {
@@ -82,6 +85,7 @@ public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatt
     public V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdSelectorPolicyResolutionEnum
 {
@@ -93,6 +97,7 @@ public enum V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecForProviderRegexMatchTupleRegexPatternSetIdSelectorPolicyResolveEnum
 {
@@ -191,6 +196,7 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleFieldToM
     public string? Type { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdRefPolicyResolutionEnum
 {
@@ -202,6 +208,7 @@ public enum V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdRefPolicyResolveEnum
 {
@@ -241,6 +248,7 @@ public partial class V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPat
     public V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdSelectorPolicyResolutionEnum
 {
@@ -252,6 +260,7 @@ public enum V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecInitProviderRegexMatchTupleRegexPatternSetIdSelectorPolicyResolveEnum
 {
@@ -333,6 +342,7 @@ public partial class V1beta1RegexMatchSetSpecInitProvider
     public IList<V1beta1RegexMatchSetSpecInitProviderRegexMatchTuple>? RegexMatchTuple { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecManagementPoliciesEnum
 {
@@ -356,6 +366,7 @@ public enum V1beta1RegexMatchSetSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -367,6 +378,7 @@ public enum V1beta1RegexMatchSetSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecProviderConfigRefPolicyResolveEnum
 {
@@ -406,6 +418,7 @@ public partial class V1beta1RegexMatchSetSpecProviderConfigRef
     public V1beta1RegexMatchSetSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -417,6 +430,7 @@ public enum V1beta1RegexMatchSetSpecPublishConnectionDetailsToConfigRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1RegexMatchSetSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

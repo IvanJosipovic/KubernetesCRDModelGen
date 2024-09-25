@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecDeletionPolicyEnum
 {
@@ -45,6 +46,7 @@ public partial class V1beta1NodeGroupSpecForProviderMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolutionEnum
 {
@@ -56,6 +58,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicyResolveEnum
 {
@@ -95,6 +98,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateRef
     public V1beta1NodeGroupSpecForProviderNodeTemplateRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolutionEnum
 {
@@ -106,6 +110,7 @@ public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicyResolveEnum
 {
@@ -149,6 +154,7 @@ public partial class V1beta1NodeGroupSpecForProviderNodeTemplateSelector
     public V1beta1NodeGroupSpecForProviderNodeTemplateSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyResolutionEnum
 {
@@ -160,6 +166,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicyResolveEnum
 {
@@ -199,6 +206,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRef
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicyResolutionEnum
 {
@@ -210,6 +218,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicyResolveEnum
 {
@@ -253,6 +262,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSel
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicyResolutionEnum
 {
@@ -264,6 +274,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicyResolveEnum
 {
@@ -303,6 +314,7 @@ public partial class V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProje
     public V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicyResolutionEnum
 {
@@ -314,6 +326,7 @@ public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecForProviderShareSettingsProjectMapProjectIdSelectorPolicyResolveEnum
 {
@@ -474,6 +487,7 @@ public partial class V1beta1NodeGroupSpecInitProviderMaintenanceWindow
     public string? StartTime { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolutionEnum
 {
@@ -485,6 +499,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicyResolveEnum
 {
@@ -524,6 +539,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateRef
     public V1beta1NodeGroupSpecInitProviderNodeTemplateRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolutionEnum
 {
@@ -535,6 +551,7 @@ public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicyResolveEnum
 {
@@ -578,6 +595,7 @@ public partial class V1beta1NodeGroupSpecInitProviderNodeTemplateSelector
     public V1beta1NodeGroupSpecInitProviderNodeTemplateSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyResolutionEnum
 {
@@ -589,6 +607,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicyResolveEnum
 {
@@ -628,6 +647,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRe
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicyResolutionEnum
 {
@@ -639,6 +659,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicyResolveEnum
 {
@@ -682,6 +703,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSe
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicyResolutionEnum
 {
@@ -693,6 +715,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicyResolveEnum
 {
@@ -732,6 +755,7 @@ public partial class V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProj
     public V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicyResolutionEnum
 {
@@ -743,6 +767,7 @@ public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecInitProviderShareSettingsProjectMapProjectIdSelectorPolicyResolveEnum
 {
@@ -873,6 +898,7 @@ public partial class V1beta1NodeGroupSpecInitProvider
     public IList<V1beta1NodeGroupSpecInitProviderShareSettings>? ShareSettings { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecManagementPoliciesEnum
 {
@@ -896,6 +922,7 @@ public enum V1beta1NodeGroupSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -907,6 +934,7 @@ public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecProviderConfigRefPolicyResolveEnum
 {
@@ -946,6 +974,7 @@ public partial class V1beta1NodeGroupSpecProviderConfigRef
     public V1beta1NodeGroupSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -957,6 +986,7 @@ public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolut
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1NodeGroupSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

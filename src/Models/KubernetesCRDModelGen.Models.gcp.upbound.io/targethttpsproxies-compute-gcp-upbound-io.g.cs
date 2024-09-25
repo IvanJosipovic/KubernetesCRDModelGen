@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1TargetHTTPSProxySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderSslCertificatesRefsPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1TargetHTTPSProxySpecForProviderSslCertificatesRefsPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderSslCertificatesRefsPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1TargetHTTPSProxySpecForProviderSslCertificatesRefs
     public V1beta1TargetHTTPSProxySpecForProviderSslCertificatesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1TargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1TargetHTTPSProxySpecForProviderSslCertificatesSelect
     public V1beta1TargetHTTPSProxySpecForProviderSslCertificatesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderUrlMapRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1TargetHTTPSProxySpecForProviderUrlMapRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderUrlMapRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1TargetHTTPSProxySpecForProviderUrlMapRef
     public V1beta1TargetHTTPSProxySpecForProviderUrlMapRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderUrlMapSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1TargetHTTPSProxySpecForProviderUrlMapSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecForProviderUrlMapSelectorPolicyResolveEnum
 {
@@ -296,6 +305,7 @@ public partial class V1beta1TargetHTTPSProxySpecForProvider
     public V1beta1TargetHTTPSProxySpecForProviderUrlMapSelector? UrlMapSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicyResolutionEnum
 {
@@ -307,6 +317,7 @@ public enum V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicyResolveEnum
 {
@@ -346,6 +357,7 @@ public partial class V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesRefs
     public V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesRefsPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicyResolutionEnum
 {
@@ -357,6 +369,7 @@ public enum V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicyResolveEnum
 {
@@ -400,6 +413,7 @@ public partial class V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesSelec
     public V1beta1TargetHTTPSProxySpecInitProviderSslCertificatesSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderUrlMapRefPolicyResolutionEnum
 {
@@ -411,6 +425,7 @@ public enum V1beta1TargetHTTPSProxySpecInitProviderUrlMapRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderUrlMapRefPolicyResolveEnum
 {
@@ -450,6 +465,7 @@ public partial class V1beta1TargetHTTPSProxySpecInitProviderUrlMapRef
     public V1beta1TargetHTTPSProxySpecInitProviderUrlMapRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderUrlMapSelectorPolicyResolutionEnum
 {
@@ -461,6 +477,7 @@ public enum V1beta1TargetHTTPSProxySpecInitProviderUrlMapSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecInitProviderUrlMapSelectorPolicyResolveEnum
 {
@@ -573,6 +590,7 @@ public partial class V1beta1TargetHTTPSProxySpecInitProvider
     public V1beta1TargetHTTPSProxySpecInitProviderUrlMapSelector? UrlMapSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecManagementPoliciesEnum
 {
@@ -596,6 +614,7 @@ public enum V1beta1TargetHTTPSProxySpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecProviderConfigRefPolicyResolutionEnum
 {
@@ -607,6 +626,7 @@ public enum V1beta1TargetHTTPSProxySpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecProviderConfigRefPolicyResolveEnum
 {
@@ -646,6 +666,7 @@ public partial class V1beta1TargetHTTPSProxySpecProviderConfigRef
     public V1beta1TargetHTTPSProxySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -657,6 +678,7 @@ public enum V1beta1TargetHTTPSProxySpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1TargetHTTPSProxySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

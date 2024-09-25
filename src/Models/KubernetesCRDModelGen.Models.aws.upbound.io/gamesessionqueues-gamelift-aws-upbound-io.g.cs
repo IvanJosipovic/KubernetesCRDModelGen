@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gamelift.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1GameSessionQueueSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecForProviderNotificationTargetRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1GameSessionQueueSpecForProviderNotificationTargetRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecForProviderNotificationTargetRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1GameSessionQueueSpecForProviderNotificationTargetRef
     public V1beta1GameSessionQueueSpecForProviderNotificationTargetRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecForProviderNotificationTargetSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1GameSessionQueueSpecForProviderNotificationTargetSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecForProviderNotificationTargetSelectorPolicyResolveEnum
 {
@@ -177,6 +182,7 @@ public partial class V1beta1GameSessionQueueSpecForProvider
     public double? TimeoutInSeconds { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecInitProviderNotificationTargetRefPolicyResolutionEnum
 {
@@ -188,6 +194,7 @@ public enum V1beta1GameSessionQueueSpecInitProviderNotificationTargetRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecInitProviderNotificationTargetRefPolicyResolveEnum
 {
@@ -227,6 +234,7 @@ public partial class V1beta1GameSessionQueueSpecInitProviderNotificationTargetRe
     public V1beta1GameSessionQueueSpecInitProviderNotificationTargetRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecInitProviderNotificationTargetSelectorPolicyResolutionEnum
 {
@@ -238,6 +246,7 @@ public enum V1beta1GameSessionQueueSpecInitProviderNotificationTargetSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecInitProviderNotificationTargetSelectorPolicyResolveEnum
 {
@@ -331,6 +340,7 @@ public partial class V1beta1GameSessionQueueSpecInitProvider
     public double? TimeoutInSeconds { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecManagementPoliciesEnum
 {
@@ -354,6 +364,7 @@ public enum V1beta1GameSessionQueueSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -365,6 +376,7 @@ public enum V1beta1GameSessionQueueSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecProviderConfigRefPolicyResolveEnum
 {
@@ -404,6 +416,7 @@ public partial class V1beta1GameSessionQueueSpecProviderConfigRef
     public V1beta1GameSessionQueueSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -415,6 +428,7 @@ public enum V1beta1GameSessionQueueSpecPublishConnectionDetailsToConfigRefPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1GameSessionQueueSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -35,6 +35,7 @@ public partial class V1beta2ImageRepositorySpecCertSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImageRepositorySpecProviderEnum
 {
@@ -111,6 +112,7 @@ public partial class V1beta2ImageRepositorySpec
     public string? Timeout { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImageRepositoryStatusConditionsStatusEnum
 {

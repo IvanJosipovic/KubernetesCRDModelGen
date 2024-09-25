@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolI
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderSqlPoolIdSelectorPolicyResolveEnum
 {
@@ -140,6 +145,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageA
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRefPolicyResolutionEnum
 {
@@ -151,6 +157,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRefPolicyResolveEnum
 {
@@ -190,6 +197,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageE
     public V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelectorPolicyResolutionEnum
 {
@@ -201,6 +209,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecForProviderStorageEndpointSelectorPolicyResolveEnum
 {
@@ -306,6 +315,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRefPolicyResolutionEnum
 {
@@ -317,6 +327,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRefPolicyResolveEnum
 {
@@ -356,6 +367,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorage
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelectorPolicyResolutionEnum
 {
@@ -367,6 +379,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelectorPolicyResolveEnum
 {
@@ -443,6 +456,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecInitProvider
     public V1beta1SQLPoolExtendedAuditingPolicySpecInitProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecManagementPoliciesEnum
 {
@@ -466,6 +480,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPolicyResolutionEnum
 {
@@ -477,6 +492,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPolicyResolveEnum
 {
@@ -516,6 +532,7 @@ public partial class V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRef
     public V1beta1SQLPoolExtendedAuditingPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -527,6 +544,7 @@ public enum V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToCo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SQLPoolExtendedAuditingPolicySpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

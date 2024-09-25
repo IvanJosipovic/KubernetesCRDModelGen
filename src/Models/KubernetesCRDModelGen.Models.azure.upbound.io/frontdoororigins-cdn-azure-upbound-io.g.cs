@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1FrontdoorOriginSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     public V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGrou
     public V1beta1FrontdoorOriginSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameRef
     public V1beta1FrontdoorOriginSpecForProviderHostNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderHostNameSelector
     public V1beta1FrontdoorOriginSpecForProviderHostNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRef
     public V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicyResolveEnum
 {
@@ -331,6 +344,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelect
     public V1beta1FrontdoorOriginSpecForProviderOriginHostHeaderSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicyResolutionEnum
 {
@@ -342,6 +356,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicyResolveEnum
 {
@@ -381,6 +396,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRef
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPolicyResolutionEnum
 {
@@ -392,6 +408,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPolicyResolveEnum
 {
@@ -435,6 +452,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSel
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkLocationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRefPolicyResolutionEnum
 {
@@ -446,6 +464,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRefPolicyResolveEnum
 {
@@ -485,6 +504,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLink
     public V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelectorPolicyResolutionEnum
 {
@@ -496,6 +516,7 @@ public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecForProviderPrivateLinkPrivateLinkTargetIdSelectorPolicyResolveEnum
 {
@@ -649,6 +670,7 @@ public partial class V1beta1FrontdoorOriginSpecForProvider
     public double? Weight { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicyResolutionEnum
 {
@@ -660,6 +682,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicyResolutionEnu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicyResolveEnum
 {
@@ -699,6 +722,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameRef
     public V1beta1FrontdoorOriginSpecInitProviderHostNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicyResolutionEnum
 {
@@ -710,6 +734,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicyResoluti
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicyResolveEnum
 {
@@ -753,6 +778,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderHostNameSelector
     public V1beta1FrontdoorOriginSpecInitProviderHostNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicyResolutionEnum
 {
@@ -764,6 +790,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicyResolveEnum
 {
@@ -803,6 +830,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRef
     public V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicyResolutionEnum
 {
@@ -814,6 +842,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicy
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicyResolveEnum
 {
@@ -857,6 +886,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelec
     public V1beta1FrontdoorOriginSpecInitProviderOriginHostHeaderSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicyResolutionEnum
 {
@@ -868,6 +898,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicyResolveEnum
 {
@@ -907,6 +938,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRe
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPolicyResolutionEnum
 {
@@ -918,6 +950,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPolicyResolveEnum
 {
@@ -961,6 +994,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSe
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkLocationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRefPolicyResolutionEnum
 {
@@ -972,6 +1006,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRefPolicyResolveEnum
 {
@@ -1011,6 +1046,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLin
     public V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelectorPolicyResolutionEnum
 {
@@ -1022,6 +1058,7 @@ public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetId
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecInitProviderPrivateLinkPrivateLinkTargetIdSelectorPolicyResolveEnum
 {
@@ -1163,6 +1200,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProvider
     public double? Weight { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecManagementPoliciesEnum
 {
@@ -1186,6 +1224,7 @@ public enum V1beta1FrontdoorOriginSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -1197,6 +1236,7 @@ public enum V1beta1FrontdoorOriginSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecProviderConfigRefPolicyResolveEnum
 {
@@ -1236,6 +1276,7 @@ public partial class V1beta1FrontdoorOriginSpecProviderConfigRef
     public V1beta1FrontdoorOriginSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -1247,6 +1288,7 @@ public enum V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1FrontdoorOriginSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

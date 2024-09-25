@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.gcp.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecDeletionPolicyEnum
 {
@@ -253,6 +254,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderOracleProfile
     public string? Username { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseRefPolicyResolutionEnum
 {
@@ -264,6 +266,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseRefPolicyResolveEnum
 {
@@ -303,6 +306,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDat
     public V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseSelectorPolicyResolutionEnum
 {
@@ -314,6 +318,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseSelectorPolicyResolveEnum
 {
@@ -357,6 +362,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDat
     public V1beta1ConnectionProfileSpecForProviderPostgresqlProfileDatabaseSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHostnameRefPolicyResolutionEnum
 {
@@ -368,6 +374,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHostnameRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHostnameRefPolicyResolveEnum
 {
@@ -407,6 +414,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHos
     public V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHostnameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHostnameSelectorPolicyResolutionEnum
 {
@@ -418,6 +426,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHostnameSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileHostnameSelectorPolicyResolveEnum
 {
@@ -478,6 +487,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPostgresqlProfilePas
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameRefPolicyResolutionEnum
 {
@@ -489,6 +499,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameRefPolicyResolveEnum
 {
@@ -528,6 +539,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUse
     public V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameSelectorPolicyResolutionEnum
 {
@@ -539,6 +551,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameSelectorPolicyResolveEnum
 {
@@ -631,6 +644,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPostgresqlProfile
     public V1beta1ConnectionProfileSpecForProviderPostgresqlProfileUsernameSelector? UsernameSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateConnectionRefPolicyResolutionEnum
 {
@@ -642,6 +656,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateCon
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateConnectionRefPolicyResolveEnum
 {
@@ -681,6 +696,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPrivateConnectivityP
     public V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateConnectionRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateConnectionSelectorPolicyResolutionEnum
 {
@@ -692,6 +708,7 @@ public enum V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateCon
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateConnectionSelectorPolicyResolveEnum
 {
@@ -752,6 +769,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderPrivateConnectivity
     public V1beta1ConnectionProfileSpecForProviderPrivateConnectivityPrivateConnectionSelector? PrivateConnectionSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseRefPolicyResolutionEnum
 {
@@ -763,6 +781,7 @@ public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseRefPolicyResolveEnum
 {
@@ -802,6 +821,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderSqlServerProfileData
     public V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseSelectorPolicyResolutionEnum
 {
@@ -813,6 +833,7 @@ public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseSelectorPolicyResolveEnum
 {
@@ -856,6 +877,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderSqlServerProfileData
     public V1beta1ConnectionProfileSpecForProviderSqlServerProfileDatabaseSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileHostnameRefPolicyResolutionEnum
 {
@@ -867,6 +889,7 @@ public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileHostnameRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileHostnameRefPolicyResolveEnum
 {
@@ -906,6 +929,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderSqlServerProfileHost
     public V1beta1ConnectionProfileSpecForProviderSqlServerProfileHostnameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileHostnameSelectorPolicyResolutionEnum
 {
@@ -917,6 +941,7 @@ public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileHostnameSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileHostnameSelectorPolicyResolveEnum
 {
@@ -977,6 +1002,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderSqlServerProfilePass
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileUsernameRefPolicyResolutionEnum
 {
@@ -988,6 +1014,7 @@ public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileUsernameRefPo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileUsernameRefPolicyResolveEnum
 {
@@ -1027,6 +1054,7 @@ public partial class V1beta1ConnectionProfileSpecForProviderSqlServerProfileUser
     public V1beta1ConnectionProfileSpecForProviderSqlServerProfileUsernameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileUsernameSelectorPolicyResolutionEnum
 {
@@ -1038,6 +1066,7 @@ public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileUsernameSelec
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecForProviderSqlServerProfileUsernameSelectorPolicyResolveEnum
 {
@@ -1379,6 +1408,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderOracleProfile
     public string? Username { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseRefPolicyResolutionEnum
 {
@@ -1390,6 +1420,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseRefPolicyResolveEnum
 {
@@ -1429,6 +1460,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDa
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseSelectorPolicyResolutionEnum
 {
@@ -1440,6 +1472,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseSelectorPolicyResolveEnum
 {
@@ -1483,6 +1516,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDa
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileDatabaseSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameRefPolicyResolutionEnum
 {
@@ -1494,6 +1528,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameRefPolicyResolveEnum
 {
@@ -1533,6 +1568,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHo
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameSelectorPolicyResolutionEnum
 {
@@ -1544,6 +1580,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameSelectorPolicyResolveEnum
 {
@@ -1587,6 +1624,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHo
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameRefPolicyResolutionEnum
 {
@@ -1598,6 +1636,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameRef
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameRefPolicyResolveEnum
 {
@@ -1637,6 +1676,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUs
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameSelectorPolicyResolutionEnum
 {
@@ -1648,6 +1688,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameSel
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameSelectorPolicyResolveEnum
 {
@@ -1736,6 +1777,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfile
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameSelector? UsernameSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateConnectionRefPolicyResolutionEnum
 {
@@ -1747,6 +1789,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateCo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateConnectionRefPolicyResolveEnum
 {
@@ -1786,6 +1829,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPrivateConnectivity
     public V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateConnectionRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateConnectionSelectorPolicyResolutionEnum
 {
@@ -1797,6 +1841,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateCo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateConnectionSelectorPolicyResolveEnum
 {
@@ -1857,6 +1902,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPrivateConnectivity
     public V1beta1ConnectionProfileSpecInitProviderPrivateConnectivityPrivateConnectionSelector? PrivateConnectionSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseRefPolicyResolutionEnum
 {
@@ -1868,6 +1914,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseRefPolicyResolveEnum
 {
@@ -1907,6 +1954,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDat
     public V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseSelectorPolicyResolutionEnum
 {
@@ -1918,6 +1966,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseSelectorPolicyResolveEnum
 {
@@ -1961,6 +2010,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDat
     public V1beta1ConnectionProfileSpecInitProviderSqlServerProfileDatabaseSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHostnameRefPolicyResolutionEnum
 {
@@ -1972,6 +2022,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHostnameRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHostnameRefPolicyResolveEnum
 {
@@ -2011,6 +2062,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHos
     public V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHostnameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHostnameSelectorPolicyResolutionEnum
 {
@@ -2022,6 +2074,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHostnameSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileHostnameSelectorPolicyResolveEnum
 {
@@ -2082,6 +2135,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderSqlServerProfilePas
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUsernameRefPolicyResolutionEnum
 {
@@ -2093,6 +2147,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUsernameRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUsernameRefPolicyResolveEnum
 {
@@ -2132,6 +2187,7 @@ public partial class V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUse
     public V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUsernameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUsernameSelectorPolicyResolutionEnum
 {
@@ -2143,6 +2199,7 @@ public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUsernameSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecInitProviderSqlServerProfileUsernameSelectorPolicyResolveEnum
 {
@@ -2288,6 +2345,7 @@ public partial class V1beta1ConnectionProfileSpecInitProvider
     public IList<V1beta1ConnectionProfileSpecInitProviderSqlServerProfile>? SqlServerProfile { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecManagementPoliciesEnum
 {
@@ -2311,6 +2369,7 @@ public enum V1beta1ConnectionProfileSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -2322,6 +2381,7 @@ public enum V1beta1ConnectionProfileSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecProviderConfigRefPolicyResolveEnum
 {
@@ -2361,6 +2421,7 @@ public partial class V1beta1ConnectionProfileSpecProviderConfigRef
     public V1beta1ConnectionProfileSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -2372,6 +2433,7 @@ public enum V1beta1ConnectionProfileSpecPublishConnectionDetailsToConfigRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1ConnectionProfileSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

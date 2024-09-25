@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signer.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecDeletionPolicyEnum
 {
@@ -41,6 +42,7 @@ public partial class V1beta1SigningJobSpecForProviderDestination
     public IList<V1beta1SigningJobSpecForProviderDestinationS3>? S3 { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecForProviderProfileNameRefPolicyResolutionEnum
 {
@@ -52,6 +54,7 @@ public enum V1beta1SigningJobSpecForProviderProfileNameRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecForProviderProfileNameRefPolicyResolveEnum
 {
@@ -91,6 +94,7 @@ public partial class V1beta1SigningJobSpecForProviderProfileNameRef
     public V1beta1SigningJobSpecForProviderProfileNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecForProviderProfileNameSelectorPolicyResolutionEnum
 {
@@ -102,6 +106,7 @@ public enum V1beta1SigningJobSpecForProviderProfileNameSelectorPolicyResolutionE
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecForProviderProfileNameSelectorPolicyResolveEnum
 {
@@ -226,6 +231,7 @@ public partial class V1beta1SigningJobSpecInitProviderDestination
     public IList<V1beta1SigningJobSpecInitProviderDestinationS3>? S3 { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecInitProviderProfileNameRefPolicyResolutionEnum
 {
@@ -237,6 +243,7 @@ public enum V1beta1SigningJobSpecInitProviderProfileNameRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecInitProviderProfileNameRefPolicyResolveEnum
 {
@@ -276,6 +283,7 @@ public partial class V1beta1SigningJobSpecInitProviderProfileNameRef
     public V1beta1SigningJobSpecInitProviderProfileNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecInitProviderProfileNameSelectorPolicyResolutionEnum
 {
@@ -287,6 +295,7 @@ public enum V1beta1SigningJobSpecInitProviderProfileNameSelectorPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecInitProviderProfileNameSelectorPolicyResolveEnum
 {
@@ -385,6 +394,7 @@ public partial class V1beta1SigningJobSpecInitProvider
     public IList<V1beta1SigningJobSpecInitProviderSource>? Source { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecManagementPoliciesEnum
 {
@@ -408,6 +418,7 @@ public enum V1beta1SigningJobSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -419,6 +430,7 @@ public enum V1beta1SigningJobSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecProviderConfigRefPolicyResolveEnum
 {
@@ -458,6 +470,7 @@ public partial class V1beta1SigningJobSpecProviderConfigRef
     public V1beta1SigningJobSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -469,6 +482,7 @@ public enum V1beta1SigningJobSpecPublishConnectionDetailsToConfigRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1SigningJobSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

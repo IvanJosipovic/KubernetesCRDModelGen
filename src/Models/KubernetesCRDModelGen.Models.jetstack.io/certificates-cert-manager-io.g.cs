@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certmanager.io;
+/// <summary>Type is the name of the format type that should be written to the Certificate's target Secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecAdditionalOutputFormatsTypeEnum
 {
@@ -89,6 +90,7 @@ public partial class V1CertificateSpecKeystoresPkcs12PasswordSecretRef
     public string Name { get; set; }
 }
 
+/// <summary>Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.   If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecKeystoresPkcs12ProfileEnum
 {
@@ -206,6 +208,7 @@ public partial class V1CertificateSpecOtherNames
     public string? Utf8Value { get; set; }
 }
 
+/// <summary>Algorithm is the private key algorithm of the corresponding private key for this certificate.   If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecPrivateKeyAlgorithmEnum
 {
@@ -220,6 +223,7 @@ public enum V1CertificateSpecPrivateKeyAlgorithmEnum
     Ed25519
 }
 
+/// <summary>The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.   If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecPrivateKeyEncodingEnum
 {
@@ -231,6 +235,7 @@ public enum V1CertificateSpecPrivateKeyEncodingEnum
     PKCS8
 }
 
+/// <summary>RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.   If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecPrivateKeyRotationPolicyEnum
 {
@@ -316,6 +321,7 @@ public partial class V1CertificateSpecSubject
     public IList<string>? StreetAddresses { get; set; }
 }
 
+/// <summary>KeyUsage specifies valid usage contexts for keys. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3 https://tools.ietf.org/html/rfc5280#section-4.2.1.12   Valid KeyUsage values are as follows: "signing", "digital signature", "content commitment", "key encipherment", "key agreement", "data encipherment", "cert sign", "crl sign", "encipher only", "decipher only", "any", "server auth", "client auth", "code signing", "email protection", "s/mime", "ipsec end system", "ipsec tunnel", "ipsec user", "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateSpecUsagesEnum
 {
@@ -479,6 +485,7 @@ public partial class V1CertificateSpec
     public IList<V1CertificateSpecUsagesEnum>? Usages { get; set; }
 }
 
+/// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1CertificateStatusConditionsStatusEnum
 {

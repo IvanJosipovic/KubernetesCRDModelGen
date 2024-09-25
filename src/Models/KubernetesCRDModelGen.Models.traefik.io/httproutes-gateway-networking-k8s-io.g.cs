@@ -131,6 +131,7 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirror
     public V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef BackendRef { get; set; }
 }
 
+/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPathTypeEnum
 {
@@ -160,6 +161,7 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPath
     public V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPathTypeEnum Type { get; set; }
 }
 
+/// <summary>Scheme is the scheme to be used in the value of the `Location` header in the response. When empty, the scheme of the request is used.   Scheme redirects can affect the port of the redirect, for more information, refer to the documentation for the port field of this filter.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectSchemeEnum
 {
@@ -240,6 +242,7 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     public IList<V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
+/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations must support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by   specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` should be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesBackendRefsFiltersTypeEnum
 {
@@ -263,6 +266,7 @@ public enum V1HTTPRouteSpecRulesBackendRefsFiltersTypeEnum
     ExtensionRef
 }
 
+/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePathTypeEnum
 {
@@ -466,6 +470,7 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestMirror
     public V1HTTPRouteSpecRulesFiltersRequestMirrorBackendRef BackendRef { get; set; }
 }
 
+/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesFiltersRequestRedirectPathTypeEnum
 {
@@ -495,6 +500,7 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestRedirectPath
     public V1HTTPRouteSpecRulesFiltersRequestRedirectPathTypeEnum Type { get; set; }
 }
 
+/// <summary>Scheme is the scheme to be used in the value of the `Location` header in the response. When empty, the scheme of the request is used.   Scheme redirects can affect the port of the redirect, for more information, refer to the documentation for the port field of this filter.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesFiltersRequestRedirectSchemeEnum
 {
@@ -575,6 +581,7 @@ public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifier
     public IList<V1HTTPRouteSpecRulesFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
+/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations must support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by   specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` should be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesFiltersTypeEnum
 {
@@ -598,6 +605,7 @@ public enum V1HTTPRouteSpecRulesFiltersTypeEnum
     ExtensionRef
 }
 
+/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesFiltersUrlRewritePathTypeEnum
 {
@@ -674,6 +682,7 @@ public partial class V1HTTPRouteSpecRulesFilters
     public V1HTTPRouteSpecRulesFiltersUrlRewrite? UrlRewrite { get; set; }
 }
 
+/// <summary>Type specifies how to match against the value of the header.   Support: Core (Exact)   Support: Implementation-specific (RegularExpression)   Since RegularExpression HeaderMatchType has implementation-specific conformance, implementations can support POSIX, PCRE or any other dialects of regular expressions. Please read the implementation's documentation to determine the supported dialect.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesMatchesHeadersTypeEnum
 {
@@ -703,6 +712,7 @@ public partial class V1HTTPRouteSpecRulesMatchesHeaders
     public string Value { get; set; }
 }
 
+/// <summary>Method specifies HTTP method matcher. When specified, this route will be matched only if the request has the specified method.   Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesMatchesMethodEnum
 {
@@ -735,6 +745,7 @@ public enum V1HTTPRouteSpecRulesMatchesMethodEnum
     PATCH
 }
 
+/// <summary>Type specifies how to match against the path Value.   Support: Core (Exact, PathPrefix)   Support: Implementation-specific (RegularExpression)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesMatchesPathTypeEnum
 {
@@ -763,6 +774,7 @@ public partial class V1HTTPRouteSpecRulesMatchesPath
     public string? Value { get; set; }
 }
 
+/// <summary>Type specifies how to match against the value of the query parameter.   Support: Extended (Exact)   Support: Implementation-specific (RegularExpression)   Since RegularExpression QueryParamMatchType has Implementation-specific conformance, implementations can support POSIX, PCRE or any other dialects of regular expressions. Please read the implementation's documentation to determine the supported dialect.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteSpecRulesMatchesQueryParamsTypeEnum
 {
@@ -848,6 +860,7 @@ public partial class V1HTTPRouteSpec
     public IList<V1HTTPRouteSpecRules>? Rules { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1HTTPRouteStatusParentsConditionsStatusEnum
 {

@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.extensions.istio.io;
+/// <summary>Specifies the failure behavior for the plugin due to fatal errors.  Valid Options: FAIL_CLOSE, FAIL_OPEN</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecFailStrategyEnum
 {
@@ -19,6 +20,7 @@ public enum V1alpha1WasmPluginSpecFailStrategyEnum
     FAILOPEN
 }
 
+/// <summary>The pull behaviour to be applied when fetching Wasm module by either OCI image or `http/https`.  Valid Options: IfNotPresent, Always</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecImagePullPolicyEnum
 {
@@ -33,6 +35,7 @@ public enum V1alpha1WasmPluginSpecImagePullPolicyEnum
     Always
 }
 
+/// <summary>Criteria for selecting traffic by their direction.  Valid Options: CLIENT, SERVER, CLIENT_AND_SERVER</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecMatchModeEnum
 {
@@ -73,6 +76,7 @@ public partial class V1alpha1WasmPluginSpecMatch
     public IList<V1alpha1WasmPluginSpecMatchPorts>? Ports { get; set; }
 }
 
+/// <summary>Determines where in the filter chain this `WasmPlugin` is to be injected.  Valid Options: AUTHN, AUTHZ, STATS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecPhaseEnum
 {
@@ -141,6 +145,7 @@ public partial class V1alpha1WasmPluginSpecTargetRefs
     public string? Namespace { get; set; }
 }
 
+/// <summary>Specifies the type of Wasm Extension to be used.  Valid Options: HTTP, NETWORK</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecTypeEnum
 {
@@ -155,6 +160,7 @@ public enum V1alpha1WasmPluginSpecTypeEnum
     NETWORK
 }
 
+/// <summary>Source for the environment variable's value.  Valid Options: INLINE, HOST</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum
 {

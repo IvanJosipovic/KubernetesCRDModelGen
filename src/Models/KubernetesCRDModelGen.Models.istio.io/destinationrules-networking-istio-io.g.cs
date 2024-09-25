@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum
 {
@@ -230,6 +231,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerSimpleEnum
 {
@@ -316,6 +318,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetect
     public bool? SplitExternalLocalOriginErrors { get; set; }
 }
 
+/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum
 {
@@ -538,6 +541,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum
 {
@@ -633,6 +637,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public int? Number { get; set; }
 }
 
+/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTlsModeEnum
 {
@@ -717,6 +722,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
 }
 
+/// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocolVersionEnum
 {
@@ -738,6 +744,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocol
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocolVersionEnum? Version { get; set; }
 }
 
+/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyTlsModeEnum
 {
@@ -864,6 +871,7 @@ public partial class V1beta1DestinationRuleSpecSubsets
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicy? TrafficPolicy { get; set; }
 }
 
+/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum
 {
@@ -1086,6 +1094,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerSimpleEnum
 {
@@ -1172,6 +1181,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyOutlierDetection
     public bool? SplitExternalLocalOriginErrors { get; set; }
 }
 
+/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum
 {
@@ -1394,6 +1404,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum
 {
@@ -1489,6 +1500,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsPor
     public int? Number { get; set; }
 }
 
+/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTlsModeEnum
 {
@@ -1573,6 +1585,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettings
     public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
 }
 
+/// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecTrafficPolicyProxyProtocolVersionEnum
 {
@@ -1594,6 +1607,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyProxyProtocol
     public V1beta1DestinationRuleSpecTrafficPolicyProxyProtocolVersionEnum? Version { get; set; }
 }
 
+/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1DestinationRuleSpecTrafficPolicyTlsModeEnum
 {

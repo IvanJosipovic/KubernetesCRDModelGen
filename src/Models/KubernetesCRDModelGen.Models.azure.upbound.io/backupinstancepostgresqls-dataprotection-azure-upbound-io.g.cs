@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolic
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     public V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelector
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyI
     public V1beta1BackupInstancePostgreSQLSpecForProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyV
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyV
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCrede
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicyRes
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRef
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPolicyResolveEnum
 {
@@ -331,6 +344,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSel
     public V1beta1BackupInstancePostgreSQLSpecForProviderDatabaseIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicyResolutionEnum
 {
@@ -342,6 +356,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicyResolu
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicyResolveEnum
 {
@@ -381,6 +396,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRef
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicyResolutionEnum
 {
@@ -392,6 +408,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelectorPolicyResolveEnum
 {
@@ -492,6 +509,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecForProvider
     public V1beta1BackupInstancePostgreSQLSpecForProviderVaultIdSelector? VaultIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPolicyResolutionEnum
 {
@@ -503,6 +521,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPolicyResolveEnum
 {
@@ -542,6 +561,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     public V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelectorPolicyResolutionEnum
 {
@@ -553,6 +573,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelectorPolicyResolveEnum
 {
@@ -596,6 +617,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicy
     public V1beta1BackupInstancePostgreSQLSpecInitProviderBackupPolicyIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRefPolicyResolutionEnum
 {
@@ -607,6 +629,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKey
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRefPolicyResolveEnum
 {
@@ -646,6 +669,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicyResolutionEnum
 {
@@ -657,6 +681,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKey
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicyResolveEnum
 {
@@ -700,6 +725,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCred
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseCredentialKeyVaultSecretIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicyResolutionEnum
 {
@@ -711,6 +737,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicyRe
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicyResolveEnum
 {
@@ -750,6 +777,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRe
     public V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPolicyResolutionEnum
 {
@@ -761,6 +789,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecInitProviderDatabaseIdSelectorPolicyResolveEnum
 {
@@ -849,6 +878,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecInitProvider
     public string? Location { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecManagementPoliciesEnum
 {
@@ -872,6 +902,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -883,6 +914,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicyResolveEnum
 {
@@ -922,6 +954,7 @@ public partial class V1beta1BackupInstancePostgreSQLSpecProviderConfigRef
     public V1beta1BackupInstancePostgreSQLSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -933,6 +966,7 @@ public enum V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BackupInstancePostgreSQLSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

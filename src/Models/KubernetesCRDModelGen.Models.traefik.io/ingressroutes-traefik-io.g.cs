@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>Kind defines the kind of the route. Rule is the only supported kind.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1IngressRouteSpecRoutesKindEnum
 {
@@ -78,6 +79,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
+/// <summary>Kind defines the kind of the Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1alpha1IngressRouteSpecRoutesServicesKindEnum
 {

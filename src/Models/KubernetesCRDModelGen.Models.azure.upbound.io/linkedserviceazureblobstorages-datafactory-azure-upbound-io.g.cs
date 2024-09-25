@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecDeletionPolicyEnum
 {
@@ -36,6 +37,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderConnecti
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRefPolicyResolutionEnum
 {
@@ -47,6 +49,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRefPolicyResolveEnum
 {
@@ -86,6 +89,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFact
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSelectorPolicyResolutionEnum
 {
@@ -97,6 +101,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSele
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSelectorPolicyResolveEnum
 {
@@ -140,6 +145,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFact
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -151,6 +157,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenL
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameRefPolicyResolveEnum
 {
@@ -190,6 +197,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVault
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -201,6 +209,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenL
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -299,6 +308,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServiceE
     public string Namespace { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -310,6 +320,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalL
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicyResolveEnum
 {
@@ -349,6 +360,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProviderServiceP
     public V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -360,6 +372,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalL
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecForProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -505,6 +518,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecForProvider
     public bool? UseManagedIdentity { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -516,6 +530,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasToken
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameRefPolicyResolveEnum
 {
@@ -555,6 +570,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaul
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -566,6 +582,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasToken
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaultSasTokenLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -630,6 +647,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderKeyVaul
     public string? SecretName { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicyResolutionEnum
 {
@@ -641,6 +659,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipal
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicyResolveEnum
 {
@@ -680,6 +699,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProviderService
     public V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicyResolutionEnum
 {
@@ -691,6 +711,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipal
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecInitProviderServicePrincipalLinkedKeyVaultKeyLinkedServiceNameSelectorPolicyResolveEnum
 {
@@ -812,6 +833,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecInitProvider
     public bool? UseManagedIdentity { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecManagementPoliciesEnum
 {
@@ -835,6 +857,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -846,6 +869,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPolicyResolveEnum
 {
@@ -885,6 +909,7 @@ public partial class V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRef
     public V1beta1LinkedServiceAzureBlobStorageSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -896,6 +921,7 @@ public enum V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToCo
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1LinkedServiceAzureBlobStorageSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

@@ -154,6 +154,7 @@ public partial class V1beta2ImageUpdateAutomationSpecPolicySelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>Kind of the referent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImageUpdateAutomationSpecSourceRefKindEnum
 {
@@ -184,6 +185,7 @@ public partial class V1beta2ImageUpdateAutomationSpecSourceRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Strategy names the strategy to be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImageUpdateAutomationSpecUpdateStrategyEnum
 {
@@ -235,6 +237,7 @@ public partial class V1beta2ImageUpdateAutomationSpec
     public V1beta2ImageUpdateAutomationSpecUpdate? Update { get; set; }
 }
 
+/// <summary>status of the condition, one of True, False, Unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta2ImageUpdateAutomationStatusConditionsStatusEnum
 {

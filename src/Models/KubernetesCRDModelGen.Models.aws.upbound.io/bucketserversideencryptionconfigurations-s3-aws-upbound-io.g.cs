@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketS
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApp
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApp
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicyResolveEnum
 {
@@ -290,6 +299,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     public IList<V1beta1BucketServerSideEncryptionConfigurationSpecForProviderRule>? Rule { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRefPolicyResolutionEnum
 {
@@ -301,6 +311,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucket
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRefPolicyResolveEnum
 {
@@ -340,6 +351,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelectorPolicyResolutionEnum
 {
@@ -351,6 +363,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucket
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelectorPolicyResolveEnum
 {
@@ -394,6 +407,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderBucketSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicyResolutionEnum
 {
@@ -405,6 +419,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleAp
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicyResolveEnum
 {
@@ -444,6 +459,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicyResolutionEnum
 {
@@ -455,6 +471,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleAp
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRuleApplyServerSideEncryptionByDefaultKmsMasterKeyIdSelectorPolicyResolveEnum
 {
@@ -557,6 +574,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecInitProvi
     public IList<V1beta1BucketServerSideEncryptionConfigurationSpecInitProviderRule>? Rule { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecManagementPoliciesEnum
 {
@@ -580,6 +598,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecManagementPolicies
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -591,6 +610,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefP
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefPolicyResolveEnum
 {
@@ -630,6 +650,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecProviderC
     public V1beta1BucketServerSideEncryptionConfigurationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -641,6 +662,7 @@ public enum V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionD
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1BucketServerSideEncryptionConfigurationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {

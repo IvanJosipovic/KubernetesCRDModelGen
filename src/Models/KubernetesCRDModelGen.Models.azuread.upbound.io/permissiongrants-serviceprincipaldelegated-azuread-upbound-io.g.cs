@@ -8,6 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serviceprincipaldelegated.azuread.upbound.io;
+/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecDeletionPolicyEnum
 {
@@ -19,6 +20,7 @@ public enum V1beta1PermissionGrantSpecDeletionPolicyEnum
     Delete
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectIdRefPolicyResolutionEnum
 {
@@ -30,6 +32,7 @@ public enum V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectIdRefPolicyResolveEnum
 {
@@ -69,6 +72,7 @@ public partial class V1beta1PermissionGrantSpecForProviderResourceServicePrincip
     public V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectIdSelectorPolicyResolutionEnum
 {
@@ -80,6 +84,7 @@ public enum V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectI
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectIdSelectorPolicyResolveEnum
 {
@@ -123,6 +128,7 @@ public partial class V1beta1PermissionGrantSpecForProviderResourceServicePrincip
     public V1beta1PermissionGrantSpecForProviderResourceServicePrincipalObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdRefPolicyResolutionEnum
 {
@@ -134,6 +140,7 @@ public enum V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdRefPoli
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdRefPolicyResolveEnum
 {
@@ -173,6 +180,7 @@ public partial class V1beta1PermissionGrantSpecForProviderServicePrincipalObject
     public V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdSelectorPolicyResolutionEnum
 {
@@ -184,6 +192,7 @@ public enum V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdSelecto
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdSelectorPolicyResolveEnum
 {
@@ -227,6 +236,7 @@ public partial class V1beta1PermissionGrantSpecForProviderServicePrincipalObject
     public V1beta1PermissionGrantSpecForProviderServicePrincipalObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderUserObjectIdRefPolicyResolutionEnum
 {
@@ -238,6 +248,7 @@ public enum V1beta1PermissionGrantSpecForProviderUserObjectIdRefPolicyResolution
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderUserObjectIdRefPolicyResolveEnum
 {
@@ -277,6 +288,7 @@ public partial class V1beta1PermissionGrantSpecForProviderUserObjectIdRef
     public V1beta1PermissionGrantSpecForProviderUserObjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderUserObjectIdSelectorPolicyResolutionEnum
 {
@@ -288,6 +300,7 @@ public enum V1beta1PermissionGrantSpecForProviderUserObjectIdSelectorPolicyResol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecForProviderUserObjectIdSelectorPolicyResolveEnum
 {
@@ -376,6 +389,7 @@ public partial class V1beta1PermissionGrantSpecForProvider
     public V1beta1PermissionGrantSpecForProviderUserObjectIdSelector? UserObjectIdSelector { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObjectIdRefPolicyResolutionEnum
 {
@@ -387,6 +401,7 @@ public enum V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObject
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObjectIdRefPolicyResolveEnum
 {
@@ -426,6 +441,7 @@ public partial class V1beta1PermissionGrantSpecInitProviderResourceServicePrinci
     public V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObjectIdSelectorPolicyResolutionEnum
 {
@@ -437,6 +453,7 @@ public enum V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObject
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObjectIdSelectorPolicyResolveEnum
 {
@@ -480,6 +497,7 @@ public partial class V1beta1PermissionGrantSpecInitProviderResourceServicePrinci
     public V1beta1PermissionGrantSpecInitProviderResourceServicePrincipalObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdRefPolicyResolutionEnum
 {
@@ -491,6 +509,7 @@ public enum V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdRefPol
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdRefPolicyResolveEnum
 {
@@ -530,6 +549,7 @@ public partial class V1beta1PermissionGrantSpecInitProviderServicePrincipalObjec
     public V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdSelectorPolicyResolutionEnum
 {
@@ -541,6 +561,7 @@ public enum V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdSelect
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdSelectorPolicyResolveEnum
 {
@@ -584,6 +605,7 @@ public partial class V1beta1PermissionGrantSpecInitProviderServicePrincipalObjec
     public V1beta1PermissionGrantSpecInitProviderServicePrincipalObjectIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderUserObjectIdRefPolicyResolutionEnum
 {
@@ -595,6 +617,7 @@ public enum V1beta1PermissionGrantSpecInitProviderUserObjectIdRefPolicyResolutio
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderUserObjectIdRefPolicyResolveEnum
 {
@@ -634,6 +657,7 @@ public partial class V1beta1PermissionGrantSpecInitProviderUserObjectIdRef
     public V1beta1PermissionGrantSpecInitProviderUserObjectIdRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderUserObjectIdSelectorPolicyResolutionEnum
 {
@@ -645,6 +669,7 @@ public enum V1beta1PermissionGrantSpecInitProviderUserObjectIdSelectorPolicyReso
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecInitProviderUserObjectIdSelectorPolicyResolveEnum
 {
@@ -733,6 +758,7 @@ public partial class V1beta1PermissionGrantSpecInitProvider
     public V1beta1PermissionGrantSpecInitProviderUserObjectIdSelector? UserObjectIdSelector { get; set; }
 }
 
+/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecManagementPoliciesEnum
 {
@@ -756,6 +782,7 @@ public enum V1beta1PermissionGrantSpecManagementPoliciesEnum
     Option5
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecProviderConfigRefPolicyResolutionEnum
 {
@@ -767,6 +794,7 @@ public enum V1beta1PermissionGrantSpecProviderConfigRefPolicyResolutionEnum
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecProviderConfigRefPolicyResolveEnum
 {
@@ -806,6 +834,7 @@ public partial class V1beta1PermissionGrantSpecProviderConfigRef
     public V1beta1PermissionGrantSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
+/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
 {
@@ -817,6 +846,7 @@ public enum V1beta1PermissionGrantSpecPublishConnectionDetailsToConfigRefPolicyR
     Optional
 }
 
+/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
 public enum V1beta1PermissionGrantSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
 {
