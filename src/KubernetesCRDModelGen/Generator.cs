@@ -618,9 +618,6 @@ public class Generator : IGenerator
             references.Add(ass);
         }
 
-        references.Add(Basic.Reference.Assemblies.Net80.References.SystemRuntime);
-        references.Add(Basic.Reference.Assemblies.Net80.References.SystemRuntimeSerializationPrimitives);
-
         return [.. references];
     }
 
