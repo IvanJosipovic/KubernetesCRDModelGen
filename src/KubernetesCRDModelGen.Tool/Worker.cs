@@ -36,6 +36,8 @@ namespace Worker
                 return;
             }
 
+            string @namespace = configuration.GetValue<string>("Namespace", Generator.ModelNamespace);
+
             logger.LogInformation("Tool started at: {time}", DateTimeOffset.Now);
 
             logger.LogInformation("Model Directory: {dir}", folderPath);
@@ -69,11 +71,11 @@ namespace Worker
                             try
                             {
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
-                                var code = generator.GenerateCode(crd);
+                                var code = generator.GenerateCode(crd, @namespace);
 
                                 var filename = $"{crd.Metadata.Name.Replace(".", "-")}.g.cs";
 
-                                logger.LogInformation("Genearting: {file}", filename);
+                                logger.LogInformation("Generating: {file}", filename);
 
                                 await File.WriteAllTextAsync(Path.Combine(folderPath, filename), code);
                             }
