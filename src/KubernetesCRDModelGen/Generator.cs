@@ -344,11 +344,9 @@ public class Generator : IGenerator
                 if (schema.Enum.Any())
                 {
                     return $"IList<{GenerateEnum(schema, classes, parentClassName, propertyName)}>";
-                    break;
                 }
 
                 return $"IList<{GetOrGenerateType(schema.Items, classes, parentClassName, propertyName)}>";
-                break;
         }
 
         throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
@@ -561,6 +559,7 @@ public class Generator : IGenerator
         return result;
     }
 
+    /// <inheritdoc/>
     public (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
         try
@@ -625,6 +624,7 @@ public class Generator : IGenerator
         return [.. references];
     }
 
+    /// <inheritdoc/>
     public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
         var code = GenerateCompilationUnit(crd, @namespace);

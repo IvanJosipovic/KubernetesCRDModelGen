@@ -9,13 +9,13 @@ This project contains components which allow generation of C# Classes/Assemblies
 - KubernetesCRDModelGen
   - Custom Resource Definition to C# Class/Assembly Generator
 - KubernetesCRDModelGen.Tool
-  - Yaml to C# Model Generator
+  - Yaml to C# Class Generator
 - KubernetesCRDModelGen.Sync
   - Synchronizes Custom Resource Definitions from numerous sources
 
 ## How to use
 
-- Programatically
+- Programmatically
   ```
   var crd = KubernetesYaml.LoadAllFromString(yaml);
   var fac = LoggerFactory.Create((x) => { });
