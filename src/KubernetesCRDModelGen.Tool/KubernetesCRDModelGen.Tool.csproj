@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <InvariantGlobalization>true</InvariantGlobalization>
         <UserSecretsId>dotnet-Worker-EE8C9BAD-2932-452F-AFB9-DCCB944C8931</UserSecretsId>
+        <IsPackable>true</IsPackable>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>KubernetesCRDModelGen</ToolCommandName>
         <PackageId>KubernetesCRDModelGen.Tool</PackageId>
