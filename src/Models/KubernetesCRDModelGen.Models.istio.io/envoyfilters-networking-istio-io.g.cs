@@ -8,48 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
-/// <summary>Specifies where in the Envoy configuration, the patch should be applied.  Valid Options: LISTENER, FILTER_CHAIN, NETWORK_FILTER, HTTP_FILTER, ROUTE_CONFIGURATION, VIRTUAL_HOST, HTTP_ROUTE, CLUSTER, EXTENSION_CONFIG, BOOTSTRAP, LISTENER_FILTER</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha3EnvoyFilterSpecConfigPatchesApplyToEnum
-{
-    [EnumMember(Value = "INVALID"), JsonStringEnumMemberName("INVALID")]
-    /// <summary>INVALID</summary>
-    INVALID,
-    [EnumMember(Value = "LISTENER"), JsonStringEnumMemberName("LISTENER")]
-    /// <summary>LISTENER</summary>
-    LISTENER,
-    [EnumMember(Value = "FILTER_CHAIN"), JsonStringEnumMemberName("FILTER_CHAIN")]
-    /// <summary>FILTER_CHAIN</summary>
-    FILTERCHAIN,
-    [EnumMember(Value = "NETWORK_FILTER"), JsonStringEnumMemberName("NETWORK_FILTER")]
-    /// <summary>NETWORK_FILTER</summary>
-    NETWORKFILTER,
-    [EnumMember(Value = "HTTP_FILTER"), JsonStringEnumMemberName("HTTP_FILTER")]
-    /// <summary>HTTP_FILTER</summary>
-    HTTPFILTER,
-    [EnumMember(Value = "ROUTE_CONFIGURATION"), JsonStringEnumMemberName("ROUTE_CONFIGURATION")]
-    /// <summary>ROUTE_CONFIGURATION</summary>
-    ROUTECONFIGURATION,
-    [EnumMember(Value = "VIRTUAL_HOST"), JsonStringEnumMemberName("VIRTUAL_HOST")]
-    /// <summary>VIRTUAL_HOST</summary>
-    VIRTUALHOST,
-    [EnumMember(Value = "HTTP_ROUTE"), JsonStringEnumMemberName("HTTP_ROUTE")]
-    /// <summary>HTTP_ROUTE</summary>
-    HTTPROUTE,
-    [EnumMember(Value = "CLUSTER"), JsonStringEnumMemberName("CLUSTER")]
-    /// <summary>CLUSTER</summary>
-    CLUSTER,
-    [EnumMember(Value = "EXTENSION_CONFIG"), JsonStringEnumMemberName("EXTENSION_CONFIG")]
-    /// <summary>EXTENSION_CONFIG</summary>
-    EXTENSIONCONFIG,
-    [EnumMember(Value = "BOOTSTRAP"), JsonStringEnumMemberName("BOOTSTRAP")]
-    /// <summary>BOOTSTRAP</summary>
-    BOOTSTRAP,
-    [EnumMember(Value = "LISTENER_FILTER"), JsonStringEnumMemberName("LISTENER_FILTER")]
-    /// <summary>LISTENER_FILTER</summary>
-    LISTENERFILTER
-}
-
 /// <summary>Match on envoy cluster attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchCluster
@@ -69,24 +27,6 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchCluster
     /// <summary>The subset associated with the service.</summary>
     [JsonPropertyName("subset")]
     public string? Subset { get; set; }
-}
-
-/// <summary>The specific config generation context to match on.  Valid Options: ANY, SIDECAR_INBOUND, SIDECAR_OUTBOUND, GATEWAY</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha3EnvoyFilterSpecConfigPatchesMatchContextEnum
-{
-    [EnumMember(Value = "ANY"), JsonStringEnumMemberName("ANY")]
-    /// <summary>ANY</summary>
-    ANY,
-    [EnumMember(Value = "SIDECAR_INBOUND"), JsonStringEnumMemberName("SIDECAR_INBOUND")]
-    /// <summary>SIDECAR_INBOUND</summary>
-    SIDECARINBOUND,
-    [EnumMember(Value = "SIDECAR_OUTBOUND"), JsonStringEnumMemberName("SIDECAR_OUTBOUND")]
-    /// <summary>SIDECAR_OUTBOUND</summary>
-    SIDECAROUTBOUND,
-    [EnumMember(Value = "GATEWAY"), JsonStringEnumMemberName("GATEWAY")]
-    /// <summary>GATEWAY</summary>
-    GATEWAY
 }
 
 /// <summary>The next level filter within this filter to match upon.</summary>
@@ -178,32 +118,13 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchProxy
     public string? ProxyVersion { get; set; }
 }
 
-/// <summary>Match a route with specific action type.  Valid Options: ANY, ROUTE, REDIRECT, DIRECT_RESPONSE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhostRouteActionEnum
-{
-    [EnumMember(Value = "ANY"), JsonStringEnumMemberName("ANY")]
-    /// <summary>ANY</summary>
-    ANY,
-    [EnumMember(Value = "ROUTE"), JsonStringEnumMemberName("ROUTE")]
-    /// <summary>ROUTE</summary>
-    ROUTE,
-    [EnumMember(Value = "REDIRECT"), JsonStringEnumMemberName("REDIRECT")]
-    /// <summary>REDIRECT</summary>
-    REDIRECT,
-    [EnumMember(Value = "DIRECT_RESPONSE"), JsonStringEnumMemberName("DIRECT_RESPONSE")]
-    /// <summary>DIRECT_RESPONSE</summary>
-    DIRECTRESPONSE
-}
-
 /// <summary>Match a specific route within the virtual host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhostRoute
 {
     /// <summary>Match a route with specific action type.  Valid Options: ANY, ROUTE, REDIRECT, DIRECT_RESPONSE</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhostRouteActionEnum>))]
-    public V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfigurationVhostRouteActionEnum? Action { get; set; }
+    public string? Action { get; set; }
 
     /// <summary>The Route objects generated by default are named as default.</summary>
     [JsonPropertyName("name")]
@@ -258,8 +179,7 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatch
 
     /// <summary>The specific config generation context to match on.  Valid Options: ANY, SIDECAR_INBOUND, SIDECAR_OUTBOUND, GATEWAY</summary>
     [JsonPropertyName("context")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha3EnvoyFilterSpecConfigPatchesMatchContextEnum>))]
-    public V1alpha3EnvoyFilterSpecConfigPatchesMatchContextEnum? Context { get; set; }
+    public string? Context { get; set; }
 
     /// <summary>Match on envoy listener attributes.</summary>
     [JsonPropertyName("listener")]
@@ -274,67 +194,17 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatch
     public V1alpha3EnvoyFilterSpecConfigPatchesMatchRouteConfiguration? RouteConfiguration { get; set; }
 }
 
-/// <summary>Determines the filter insertion order.  Valid Options: AUTHN, AUTHZ, STATS</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha3EnvoyFilterSpecConfigPatchesPatchFilterClassEnum
-{
-    [EnumMember(Value = "UNSPECIFIED"), JsonStringEnumMemberName("UNSPECIFIED")]
-    /// <summary>UNSPECIFIED</summary>
-    UNSPECIFIED,
-    [EnumMember(Value = "AUTHN"), JsonStringEnumMemberName("AUTHN")]
-    /// <summary>AUTHN</summary>
-    AUTHN,
-    [EnumMember(Value = "AUTHZ"), JsonStringEnumMemberName("AUTHZ")]
-    /// <summary>AUTHZ</summary>
-    AUTHZ,
-    [EnumMember(Value = "STATS"), JsonStringEnumMemberName("STATS")]
-    /// <summary>STATS</summary>
-    STATS
-}
-
-/// <summary>Determines how the patch should be applied.  Valid Options: MERGE, ADD, REMOVE, INSERT_BEFORE, INSERT_AFTER, INSERT_FIRST, REPLACE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha3EnvoyFilterSpecConfigPatchesPatchOperationEnum
-{
-    [EnumMember(Value = "INVALID"), JsonStringEnumMemberName("INVALID")]
-    /// <summary>INVALID</summary>
-    INVALID,
-    [EnumMember(Value = "MERGE"), JsonStringEnumMemberName("MERGE")]
-    /// <summary>MERGE</summary>
-    MERGE,
-    [EnumMember(Value = "ADD"), JsonStringEnumMemberName("ADD")]
-    /// <summary>ADD</summary>
-    ADD,
-    [EnumMember(Value = "REMOVE"), JsonStringEnumMemberName("REMOVE")]
-    /// <summary>REMOVE</summary>
-    REMOVE,
-    [EnumMember(Value = "INSERT_BEFORE"), JsonStringEnumMemberName("INSERT_BEFORE")]
-    /// <summary>INSERT_BEFORE</summary>
-    INSERTBEFORE,
-    [EnumMember(Value = "INSERT_AFTER"), JsonStringEnumMemberName("INSERT_AFTER")]
-    /// <summary>INSERT_AFTER</summary>
-    INSERTAFTER,
-    [EnumMember(Value = "INSERT_FIRST"), JsonStringEnumMemberName("INSERT_FIRST")]
-    /// <summary>INSERT_FIRST</summary>
-    INSERTFIRST,
-    [EnumMember(Value = "REPLACE"), JsonStringEnumMemberName("REPLACE")]
-    /// <summary>REPLACE</summary>
-    REPLACE
-}
-
 /// <summary>The patch to apply along with the operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesPatch
 {
     /// <summary>Determines the filter insertion order.  Valid Options: AUTHN, AUTHZ, STATS</summary>
     [JsonPropertyName("filterClass")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha3EnvoyFilterSpecConfigPatchesPatchFilterClassEnum>))]
-    public V1alpha3EnvoyFilterSpecConfigPatchesPatchFilterClassEnum? FilterClass { get; set; }
+    public string? FilterClass { get; set; }
 
     /// <summary>Determines how the patch should be applied.  Valid Options: MERGE, ADD, REMOVE, INSERT_BEFORE, INSERT_AFTER, INSERT_FIRST, REPLACE</summary>
     [JsonPropertyName("operation")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha3EnvoyFilterSpecConfigPatchesPatchOperationEnum>))]
-    public V1alpha3EnvoyFilterSpecConfigPatchesPatchOperationEnum? Operation { get; set; }
+    public string? Operation { get; set; }
 
     /// <summary>The JSON config of the object being patched.</summary>
     [JsonPropertyName("value")]
@@ -347,8 +217,7 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatches
 {
     /// <summary>Specifies where in the Envoy configuration, the patch should be applied.  Valid Options: LISTENER, FILTER_CHAIN, NETWORK_FILTER, HTTP_FILTER, ROUTE_CONFIGURATION, VIRTUAL_HOST, HTTP_ROUTE, CLUSTER, EXTENSION_CONFIG, BOOTSTRAP, LISTENER_FILTER</summary>
     [JsonPropertyName("applyTo")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha3EnvoyFilterSpecConfigPatchesApplyToEnum>))]
-    public V1alpha3EnvoyFilterSpecConfigPatchesApplyToEnum? ApplyTo { get; set; }
+    public string? ApplyTo { get; set; }
 
     /// <summary>Match on listener/route configuration/cluster.</summary>
     [JsonPropertyName("match")]

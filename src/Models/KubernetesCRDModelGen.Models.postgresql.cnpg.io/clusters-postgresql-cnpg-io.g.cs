@@ -684,33 +684,6 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreAzureCredentials
     public V1ClusterSpecBackupBarmanObjectStoreAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
 
-/// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecBackupBarmanObjectStoreDataCompressionEnum
-{
-    [EnumMember(Value = "gzip"), JsonStringEnumMemberName("gzip")]
-    /// <summary>gzip</summary>
-    Gzip,
-    [EnumMember(Value = "bzip2"), JsonStringEnumMemberName("bzip2")]
-    /// <summary>bzip2</summary>
-    Bzip2,
-    [EnumMember(Value = "snappy"), JsonStringEnumMemberName("snappy")]
-    /// <summary>snappy</summary>
-    Snappy
-}
-
-/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecBackupBarmanObjectStoreDataEncryptionEnum
-{
-    [EnumMember(Value = "AES256"), JsonStringEnumMemberName("AES256")]
-    /// <summary>AES256</summary>
-    AES256,
-    [EnumMember(Value = "aws:kms"), JsonStringEnumMemberName("aws:kms")]
-    /// <summary>aws:kms</summary>
-    AwsKms
-}
-
 /// <summary>The configuration to be used to backup the data files When not defined, base backups files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreData
@@ -721,13 +694,11 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreData
 
     /// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
     [JsonPropertyName("compression")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecBackupBarmanObjectStoreDataCompressionEnum>))]
-    public V1ClusterSpecBackupBarmanObjectStoreDataCompressionEnum? Compression { get; set; }
+    public string? Compression { get; set; }
 
     /// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
     [JsonPropertyName("encryption")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecBackupBarmanObjectStoreDataEncryptionEnum>))]
-    public V1ClusterSpecBackupBarmanObjectStoreDataEncryptionEnum? Encryption { get; set; }
+    public string? Encryption { get; set; }
 
     /// <summary>Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default.</summary>
     [JsonPropertyName("immediateCheckpoint")]
@@ -854,33 +825,6 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreS3Credentials
     public V1ClusterSpecBackupBarmanObjectStoreS3CredentialsSessionToken? SessionToken { get; set; }
 }
 
-/// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecBackupBarmanObjectStoreWalCompressionEnum
-{
-    [EnumMember(Value = "gzip"), JsonStringEnumMemberName("gzip")]
-    /// <summary>gzip</summary>
-    Gzip,
-    [EnumMember(Value = "bzip2"), JsonStringEnumMemberName("bzip2")]
-    /// <summary>bzip2</summary>
-    Bzip2,
-    [EnumMember(Value = "snappy"), JsonStringEnumMemberName("snappy")]
-    /// <summary>snappy</summary>
-    Snappy
-}
-
-/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecBackupBarmanObjectStoreWalEncryptionEnum
-{
-    [EnumMember(Value = "AES256"), JsonStringEnumMemberName("AES256")]
-    /// <summary>AES256</summary>
-    AES256,
-    [EnumMember(Value = "aws:kms"), JsonStringEnumMemberName("aws:kms")]
-    /// <summary>aws:kms</summary>
-    AwsKms
-}
-
 /// <summary>The configuration for the backup of the WAL stream. When not defined, WAL files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupBarmanObjectStoreWal
@@ -891,13 +835,11 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreWal
 
     /// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
     [JsonPropertyName("compression")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecBackupBarmanObjectStoreWalCompressionEnum>))]
-    public V1ClusterSpecBackupBarmanObjectStoreWalCompressionEnum? Compression { get; set; }
+    public string? Compression { get; set; }
 
     /// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
     [JsonPropertyName("encryption")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecBackupBarmanObjectStoreWalEncryptionEnum>))]
-    public V1ClusterSpecBackupBarmanObjectStoreWalEncryptionEnum? Encryption { get; set; }
+    public string? Encryption { get; set; }
 
     /// <summary>Number of WAL files to be either archived in parallel (when the PostgreSQL instance is archiving to a backup object store) or restored in parallel (when a PostgreSQL standby is fetching WAL files from a recovery object store). If not specified, WAL files will be processed one at a time. It accepts a positive integer as a value - with 1 being the minimum accepted value.</summary>
     [JsonPropertyName("maxParallel")]
@@ -957,18 +899,6 @@ public partial class V1ClusterSpecBackupBarmanObjectStore
     public V1ClusterSpecBackupBarmanObjectStoreWal? Wal { get; set; }
 }
 
-/// <summary>The policy to decide which instance should perform backups. Available options are empty string, which will default to `prefer-standby` policy, `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecBackupTargetEnum
-{
-    [EnumMember(Value = "primary"), JsonStringEnumMemberName("primary")]
-    /// <summary>primary</summary>
-    Primary,
-    [EnumMember(Value = "prefer-standby"), JsonStringEnumMemberName("prefer-standby")]
-    /// <summary>prefer-standby</summary>
-    PreferStandby
-}
-
 /// <summary>Configuration parameters to control the online/hot backup with volume snapshots</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBackupVolumeSnapshotOnlineConfiguration
@@ -980,21 +910,6 @@ public partial class V1ClusterSpecBackupVolumeSnapshotOnlineConfiguration
     /// <summary>If false, the function will return immediately after the backup is completed, without waiting for WAL to be archived. This behavior is only useful with backup software that independently monitors WAL archiving. Otherwise, WAL required to make the backup consistent might be missing and make the backup useless. By default, or when this parameter is true, pg_backup_stop will wait for WAL to be archived when archiving is enabled. On a standby, this means that it will wait only when archive_mode = always. If write activity on the primary is low, it may be useful to run pg_switch_wal on the primary in order to trigger an immediate segment switch.</summary>
     [JsonPropertyName("waitForArchive")]
     public bool? WaitForArchive { get; set; }
-}
-
-/// <summary>SnapshotOwnerReference indicates the type of owner reference the snapshot should have</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecBackupVolumeSnapshotSnapshotOwnerReferenceEnum
-{
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None,
-    [EnumMember(Value = "cluster"), JsonStringEnumMemberName("cluster")]
-    /// <summary>cluster</summary>
-    Cluster,
-    [EnumMember(Value = "backup"), JsonStringEnumMemberName("backup")]
-    /// <summary>backup</summary>
-    Backup
 }
 
 /// <summary>VolumeSnapshot provides the configuration for the execution of volume snapshot backups.</summary>
@@ -1023,8 +938,7 @@ public partial class V1ClusterSpecBackupVolumeSnapshot
 
     /// <summary>SnapshotOwnerReference indicates the type of owner reference the snapshot should have</summary>
     [JsonPropertyName("snapshotOwnerReference")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecBackupVolumeSnapshotSnapshotOwnerReferenceEnum>))]
-    public V1ClusterSpecBackupVolumeSnapshotSnapshotOwnerReferenceEnum? SnapshotOwnerReference { get; set; }
+    public string? SnapshotOwnerReference { get; set; }
 
     /// <summary>TablespaceClassName specifies the Snapshot Class to be used for the tablespaces. defaults to the PGDATA Snapshot Class, if set</summary>
     [JsonPropertyName("tablespaceClassName")]
@@ -1049,8 +963,7 @@ public partial class V1ClusterSpecBackup
 
     /// <summary>The policy to decide which instance should perform backups. Available options are empty string, which will default to `prefer-standby` policy, `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
     [JsonPropertyName("target")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecBackupTargetEnum>))]
-    public V1ClusterSpecBackupTargetEnum? Target { get; set; }
+    public string? Target { get; set; }
 
     /// <summary>VolumeSnapshot provides the configuration for the execution of volume snapshot backups.</summary>
     [JsonPropertyName("volumeSnapshot")]
@@ -1064,18 +977,6 @@ public partial class V1ClusterSpecBootstrapInitdbImportSource
     /// <summary>The name of the externalCluster used for import</summary>
     [JsonPropertyName("externalCluster")]
     public string ExternalCluster { get; set; }
-}
-
-/// <summary>The import type. Can be `microservice` or `monolith`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecBootstrapInitdbImportTypeEnum
-{
-    [EnumMember(Value = "microservice"), JsonStringEnumMemberName("microservice")]
-    /// <summary>microservice</summary>
-    Microservice,
-    [EnumMember(Value = "monolith"), JsonStringEnumMemberName("monolith")]
-    /// <summary>monolith</summary>
-    Monolith
 }
 
 /// <summary>Bootstraps the new cluster by importing data from an existing PostgreSQL instance using logical backup (`pg_dump` and `pg_restore`)</summary>
@@ -1104,8 +1005,7 @@ public partial class V1ClusterSpecBootstrapInitdbImport
 
     /// <summary>The import type. Can be `microservice` or `monolith`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecBootstrapInitdbImportTypeEnum>))]
-    public V1ClusterSpecBootstrapInitdbImportTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>ConfigMapKeySelector contains enough information to let you locate the key of a ConfigMap</summary>
@@ -1933,33 +1833,6 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredenti
     public V1ClusterSpecExternalClustersBarmanObjectStoreAzureCredentialsStorageSasToken? StorageSasToken { get; set; }
 }
 
-/// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecExternalClustersBarmanObjectStoreDataCompressionEnum
-{
-    [EnumMember(Value = "gzip"), JsonStringEnumMemberName("gzip")]
-    /// <summary>gzip</summary>
-    Gzip,
-    [EnumMember(Value = "bzip2"), JsonStringEnumMemberName("bzip2")]
-    /// <summary>bzip2</summary>
-    Bzip2,
-    [EnumMember(Value = "snappy"), JsonStringEnumMemberName("snappy")]
-    /// <summary>snappy</summary>
-    Snappy
-}
-
-/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecExternalClustersBarmanObjectStoreDataEncryptionEnum
-{
-    [EnumMember(Value = "AES256"), JsonStringEnumMemberName("AES256")]
-    /// <summary>AES256</summary>
-    AES256,
-    [EnumMember(Value = "aws:kms"), JsonStringEnumMemberName("aws:kms")]
-    /// <summary>aws:kms</summary>
-    AwsKms
-}
-
 /// <summary>The configuration to be used to backup the data files When not defined, base backups files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreData
@@ -1970,13 +1843,11 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreData
 
     /// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
     [JsonPropertyName("compression")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecExternalClustersBarmanObjectStoreDataCompressionEnum>))]
-    public V1ClusterSpecExternalClustersBarmanObjectStoreDataCompressionEnum? Compression { get; set; }
+    public string? Compression { get; set; }
 
     /// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
     [JsonPropertyName("encryption")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecExternalClustersBarmanObjectStoreDataEncryptionEnum>))]
-    public V1ClusterSpecExternalClustersBarmanObjectStoreDataEncryptionEnum? Encryption { get; set; }
+    public string? Encryption { get; set; }
 
     /// <summary>Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default.</summary>
     [JsonPropertyName("immediateCheckpoint")]
@@ -2103,33 +1974,6 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreS3Credentials
     public V1ClusterSpecExternalClustersBarmanObjectStoreS3CredentialsSessionToken? SessionToken { get; set; }
 }
 
-/// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecExternalClustersBarmanObjectStoreWalCompressionEnum
-{
-    [EnumMember(Value = "gzip"), JsonStringEnumMemberName("gzip")]
-    /// <summary>gzip</summary>
-    Gzip,
-    [EnumMember(Value = "bzip2"), JsonStringEnumMemberName("bzip2")]
-    /// <summary>bzip2</summary>
-    Bzip2,
-    [EnumMember(Value = "snappy"), JsonStringEnumMemberName("snappy")]
-    /// <summary>snappy</summary>
-    Snappy
-}
-
-/// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecExternalClustersBarmanObjectStoreWalEncryptionEnum
-{
-    [EnumMember(Value = "AES256"), JsonStringEnumMemberName("AES256")]
-    /// <summary>AES256</summary>
-    AES256,
-    [EnumMember(Value = "aws:kms"), JsonStringEnumMemberName("aws:kms")]
-    /// <summary>aws:kms</summary>
-    AwsKms
-}
-
 /// <summary>The configuration for the backup of the WAL stream. When not defined, WAL files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersBarmanObjectStoreWal
@@ -2140,13 +1984,11 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreWal
 
     /// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
     [JsonPropertyName("compression")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecExternalClustersBarmanObjectStoreWalCompressionEnum>))]
-    public V1ClusterSpecExternalClustersBarmanObjectStoreWalCompressionEnum? Compression { get; set; }
+    public string? Compression { get; set; }
 
     /// <summary>Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`</summary>
     [JsonPropertyName("encryption")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecExternalClustersBarmanObjectStoreWalEncryptionEnum>))]
-    public V1ClusterSpecExternalClustersBarmanObjectStoreWalEncryptionEnum? Encryption { get; set; }
+    public string? Encryption { get; set; }
 
     /// <summary>Number of WAL files to be either archived in parallel (when the PostgreSQL instance is archiving to a backup object store) or restored in parallel (when a PostgreSQL standby is fetching WAL files from a recovery object store). If not specified, WAL files will be processed one at a time. It accepts a positive integer as a value - with 1 being the minimum accepted value.</summary>
     [JsonPropertyName("maxParallel")]
@@ -2350,39 +2192,6 @@ public partial class V1ClusterSpecInheritedMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
-/// <summary>The instances' log level, one of the following values: error, warning, info (default), debug, trace</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecLogLevelEnum
-{
-    [EnumMember(Value = "error"), JsonStringEnumMemberName("error")]
-    /// <summary>error</summary>
-    Error,
-    [EnumMember(Value = "warning"), JsonStringEnumMemberName("warning")]
-    /// <summary>warning</summary>
-    Warning,
-    [EnumMember(Value = "info"), JsonStringEnumMemberName("info")]
-    /// <summary>info</summary>
-    Info,
-    [EnumMember(Value = "debug"), JsonStringEnumMemberName("debug")]
-    /// <summary>debug</summary>
-    Debug,
-    [EnumMember(Value = "trace"), JsonStringEnumMemberName("trace")]
-    /// <summary>trace</summary>
-    Trace
-}
-
-/// <summary>Ensure the role is `present` or `absent` - defaults to "present"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecManagedRolesEnsureEnum
-{
-    [EnumMember(Value = "present"), JsonStringEnumMemberName("present")]
-    /// <summary>present</summary>
-    Present,
-    [EnumMember(Value = "absent"), JsonStringEnumMemberName("absent")]
-    /// <summary>absent</summary>
-    Absent
-}
-
 /// <summary>Secret containing the password of the role (if present) If null, the password will be ignored unless DisablePassword is set</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedRolesPasswordSecret
@@ -2422,8 +2231,7 @@ public partial class V1ClusterSpecManagedRoles
 
     /// <summary>Ensure the role is `present` or `absent` - defaults to "present"</summary>
     [JsonPropertyName("ensure")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecManagedRolesEnsureEnum>))]
-    public V1ClusterSpecManagedRolesEnsureEnum? Ensure { get; set; }
+    public string? Ensure { get; set; }
 
     /// <summary>List of one or more existing roles to which this role will be immediately added as a new member. Default empty.</summary>
     [JsonPropertyName("inRoles")]
@@ -2620,18 +2428,6 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplate
     public V1ClusterSpecManagedServicesAdditionalServiceTemplateSpec? Spec { get; set; }
 }
 
-/// <summary>UpdateStrategy describes how the service differences should be reconciled</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecManagedServicesAdditionalUpdateStrategyEnum
-{
-    [EnumMember(Value = "patch"), JsonStringEnumMemberName("patch")]
-    /// <summary>patch</summary>
-    Patch,
-    [EnumMember(Value = "replace"), JsonStringEnumMemberName("replace")]
-    /// <summary>replace</summary>
-    Replace
-}
-
 /// <summary>ManagedService represents a specific service managed by the cluster. It includes the type of service and its associated template specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecManagedServicesAdditional
@@ -2646,23 +2442,7 @@ public partial class V1ClusterSpecManagedServicesAdditional
 
     /// <summary>UpdateStrategy describes how the service differences should be reconciled</summary>
     [JsonPropertyName("updateStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecManagedServicesAdditionalUpdateStrategyEnum>))]
-    public V1ClusterSpecManagedServicesAdditionalUpdateStrategyEnum? UpdateStrategy { get; set; }
-}
-
-/// <summary>ServiceSelectorType describes a valid value for generating the service selectors. It indicates which type of service the selector applies to, such as read-write, read, or read-only</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecManagedServicesDisabledDefaultServicesEnum
-{
-    [EnumMember(Value = "rw"), JsonStringEnumMemberName("rw")]
-    /// <summary>rw</summary>
-    Rw,
-    [EnumMember(Value = "r"), JsonStringEnumMemberName("r")]
-    /// <summary>r</summary>
-    R,
-    [EnumMember(Value = "ro"), JsonStringEnumMemberName("ro")]
-    /// <summary>ro</summary>
-    Ro
+    public string? UpdateStrategy { get; set; }
 }
 
 /// <summary>Services roles managed by the `Cluster`</summary>
@@ -2675,7 +2455,7 @@ public partial class V1ClusterSpecManagedServices
 
     /// <summary>DisabledDefaultServices is a list of service types that are disabled by default. Valid values are "r", and "ro", representing read, and read-only services.</summary>
     [JsonPropertyName("disabledDefaultServices")]
-    public IList<V1ClusterSpecManagedServicesDisabledDefaultServicesEnum>? DisabledDefaultServices { get; set; }
+    public IList<string>? DisabledDefaultServices { get; set; }
 }
 
 /// <summary>The configuration that is used by the portions of PostgreSQL that are managed by the instance manager</summary>
@@ -2717,86 +2497,13 @@ public partial class V1ClusterSpecMonitoringCustomQueriesSecret
     public string Name { get; set; }
 }
 
-/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecMonitoringPodMonitorMetricRelabelingsActionEnum
-{
-    [EnumMember(Value = "replace"), JsonStringEnumMemberName("replace")]
-    /// <summary>replace</summary>
-    Replace,
-    [EnumMember(Value = "Replace"), JsonStringEnumMemberName("Replace")]
-    /// <summary>Replace</summary>
-    Replace1,
-    [EnumMember(Value = "keep"), JsonStringEnumMemberName("keep")]
-    /// <summary>keep</summary>
-    Keep,
-    [EnumMember(Value = "Keep"), JsonStringEnumMemberName("Keep")]
-    /// <summary>Keep</summary>
-    Keep1,
-    [EnumMember(Value = "drop"), JsonStringEnumMemberName("drop")]
-    /// <summary>drop</summary>
-    Drop,
-    [EnumMember(Value = "Drop"), JsonStringEnumMemberName("Drop")]
-    /// <summary>Drop</summary>
-    Drop1,
-    [EnumMember(Value = "hashmod"), JsonStringEnumMemberName("hashmod")]
-    /// <summary>hashmod</summary>
-    Hashmod,
-    [EnumMember(Value = "HashMod"), JsonStringEnumMemberName("HashMod")]
-    /// <summary>HashMod</summary>
-    HashMod,
-    [EnumMember(Value = "labelmap"), JsonStringEnumMemberName("labelmap")]
-    /// <summary>labelmap</summary>
-    Labelmap,
-    [EnumMember(Value = "LabelMap"), JsonStringEnumMemberName("LabelMap")]
-    /// <summary>LabelMap</summary>
-    LabelMap,
-    [EnumMember(Value = "labeldrop"), JsonStringEnumMemberName("labeldrop")]
-    /// <summary>labeldrop</summary>
-    Labeldrop,
-    [EnumMember(Value = "LabelDrop"), JsonStringEnumMemberName("LabelDrop")]
-    /// <summary>LabelDrop</summary>
-    LabelDrop,
-    [EnumMember(Value = "labelkeep"), JsonStringEnumMemberName("labelkeep")]
-    /// <summary>labelkeep</summary>
-    Labelkeep,
-    [EnumMember(Value = "LabelKeep"), JsonStringEnumMemberName("LabelKeep")]
-    /// <summary>LabelKeep</summary>
-    LabelKeep,
-    [EnumMember(Value = "lowercase"), JsonStringEnumMemberName("lowercase")]
-    /// <summary>lowercase</summary>
-    Lowercase,
-    [EnumMember(Value = "Lowercase"), JsonStringEnumMemberName("Lowercase")]
-    /// <summary>Lowercase</summary>
-    Lowercase1,
-    [EnumMember(Value = "uppercase"), JsonStringEnumMemberName("uppercase")]
-    /// <summary>uppercase</summary>
-    Uppercase,
-    [EnumMember(Value = "Uppercase"), JsonStringEnumMemberName("Uppercase")]
-    /// <summary>Uppercase</summary>
-    Uppercase1,
-    [EnumMember(Value = "keepequal"), JsonStringEnumMemberName("keepequal")]
-    /// <summary>keepequal</summary>
-    Keepequal,
-    [EnumMember(Value = "KeepEqual"), JsonStringEnumMemberName("KeepEqual")]
-    /// <summary>KeepEqual</summary>
-    KeepEqual,
-    [EnumMember(Value = "dropequal"), JsonStringEnumMemberName("dropequal")]
-    /// <summary>dropequal</summary>
-    Dropequal,
-    [EnumMember(Value = "DropEqual"), JsonStringEnumMemberName("DropEqual")]
-    /// <summary>DropEqual</summary>
-    DropEqual
-}
-
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.   More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoringPodMonitorMetricRelabelings
 {
     /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecMonitoringPodMonitorMetricRelabelingsActionEnum>))]
-    public V1ClusterSpecMonitoringPodMonitorMetricRelabelingsActionEnum? Action { get; set; }
+    public string? Action { get; set; }
 
     /// <summary>Modulus to take of the hash of the source label values.   Only applicable when the action is `HashMod`.</summary>
     [JsonPropertyName("modulus")]
@@ -2823,86 +2530,13 @@ public partial class V1ClusterSpecMonitoringPodMonitorMetricRelabelings
     public string? TargetLabel { get; set; }
 }
 
-/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecMonitoringPodMonitorRelabelingsActionEnum
-{
-    [EnumMember(Value = "replace"), JsonStringEnumMemberName("replace")]
-    /// <summary>replace</summary>
-    Replace,
-    [EnumMember(Value = "Replace"), JsonStringEnumMemberName("Replace")]
-    /// <summary>Replace</summary>
-    Replace1,
-    [EnumMember(Value = "keep"), JsonStringEnumMemberName("keep")]
-    /// <summary>keep</summary>
-    Keep,
-    [EnumMember(Value = "Keep"), JsonStringEnumMemberName("Keep")]
-    /// <summary>Keep</summary>
-    Keep1,
-    [EnumMember(Value = "drop"), JsonStringEnumMemberName("drop")]
-    /// <summary>drop</summary>
-    Drop,
-    [EnumMember(Value = "Drop"), JsonStringEnumMemberName("Drop")]
-    /// <summary>Drop</summary>
-    Drop1,
-    [EnumMember(Value = "hashmod"), JsonStringEnumMemberName("hashmod")]
-    /// <summary>hashmod</summary>
-    Hashmod,
-    [EnumMember(Value = "HashMod"), JsonStringEnumMemberName("HashMod")]
-    /// <summary>HashMod</summary>
-    HashMod,
-    [EnumMember(Value = "labelmap"), JsonStringEnumMemberName("labelmap")]
-    /// <summary>labelmap</summary>
-    Labelmap,
-    [EnumMember(Value = "LabelMap"), JsonStringEnumMemberName("LabelMap")]
-    /// <summary>LabelMap</summary>
-    LabelMap,
-    [EnumMember(Value = "labeldrop"), JsonStringEnumMemberName("labeldrop")]
-    /// <summary>labeldrop</summary>
-    Labeldrop,
-    [EnumMember(Value = "LabelDrop"), JsonStringEnumMemberName("LabelDrop")]
-    /// <summary>LabelDrop</summary>
-    LabelDrop,
-    [EnumMember(Value = "labelkeep"), JsonStringEnumMemberName("labelkeep")]
-    /// <summary>labelkeep</summary>
-    Labelkeep,
-    [EnumMember(Value = "LabelKeep"), JsonStringEnumMemberName("LabelKeep")]
-    /// <summary>LabelKeep</summary>
-    LabelKeep,
-    [EnumMember(Value = "lowercase"), JsonStringEnumMemberName("lowercase")]
-    /// <summary>lowercase</summary>
-    Lowercase,
-    [EnumMember(Value = "Lowercase"), JsonStringEnumMemberName("Lowercase")]
-    /// <summary>Lowercase</summary>
-    Lowercase1,
-    [EnumMember(Value = "uppercase"), JsonStringEnumMemberName("uppercase")]
-    /// <summary>uppercase</summary>
-    Uppercase,
-    [EnumMember(Value = "Uppercase"), JsonStringEnumMemberName("Uppercase")]
-    /// <summary>Uppercase</summary>
-    Uppercase1,
-    [EnumMember(Value = "keepequal"), JsonStringEnumMemberName("keepequal")]
-    /// <summary>keepequal</summary>
-    Keepequal,
-    [EnumMember(Value = "KeepEqual"), JsonStringEnumMemberName("KeepEqual")]
-    /// <summary>KeepEqual</summary>
-    KeepEqual,
-    [EnumMember(Value = "dropequal"), JsonStringEnumMemberName("dropequal")]
-    /// <summary>dropequal</summary>
-    Dropequal,
-    [EnumMember(Value = "DropEqual"), JsonStringEnumMemberName("DropEqual")]
-    /// <summary>DropEqual</summary>
-    DropEqual
-}
-
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.   More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecMonitoringPodMonitorRelabelings
 {
     /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecMonitoringPodMonitorRelabelingsActionEnum>))]
-    public V1ClusterSpecMonitoringPodMonitorRelabelingsActionEnum? Action { get; set; }
+    public string? Action { get; set; }
 
     /// <summary>Modulus to take of the hash of the source label values.   Only applicable when the action is `HashMod`.</summary>
     [JsonPropertyName("modulus")]
@@ -3052,18 +2686,6 @@ public partial class V1ClusterSpecPostgresqlLdapBindSearchAuth
     public string? SearchFilter { get; set; }
 }
 
-/// <summary>LDAP schema to be used, possible options are `ldap` and `ldaps`</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecPostgresqlLdapSchemeEnum
-{
-    [EnumMember(Value = "ldap"), JsonStringEnumMemberName("ldap")]
-    /// <summary>ldap</summary>
-    Ldap,
-    [EnumMember(Value = "ldaps"), JsonStringEnumMemberName("ldaps")]
-    /// <summary>ldaps</summary>
-    Ldaps
-}
-
 /// <summary>Options to specify LDAP configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlLdap
@@ -3082,8 +2704,7 @@ public partial class V1ClusterSpecPostgresqlLdap
 
     /// <summary>LDAP schema to be used, possible options are `ldap` and `ldaps`</summary>
     [JsonPropertyName("scheme")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecPostgresqlLdapSchemeEnum>))]
-    public V1ClusterSpecPostgresqlLdapSchemeEnum? Scheme { get; set; }
+    public string? Scheme { get; set; }
 
     /// <summary>LDAP hostname or IP address</summary>
     [JsonPropertyName("server")]
@@ -3107,18 +2728,6 @@ public partial class V1ClusterSpecPostgresqlSyncReplicaElectionConstraint
     public IList<string>? NodeLabelsAntiAffinity { get; set; }
 }
 
-/// <summary>Method to select synchronous replication standbys from the listed servers, accepting 'any' (quorum-based synchronous replication) or 'first' (priority-based synchronous replication) as values.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecPostgresqlSynchronousMethodEnum
-{
-    [EnumMember(Value = "any"), JsonStringEnumMemberName("any")]
-    /// <summary>any</summary>
-    Any,
-    [EnumMember(Value = "first"), JsonStringEnumMemberName("first")]
-    /// <summary>first</summary>
-    First
-}
-
 /// <summary>Configuration of the PostgreSQL synchronous replication feature</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlSynchronous
@@ -3129,8 +2738,7 @@ public partial class V1ClusterSpecPostgresqlSynchronous
 
     /// <summary>Method to select synchronous replication standbys from the listed servers, accepting 'any' (quorum-based synchronous replication) or 'first' (priority-based synchronous replication) as values.</summary>
     [JsonPropertyName("method")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecPostgresqlSynchronousMethodEnum>))]
-    public V1ClusterSpecPostgresqlSynchronousMethodEnum Method { get; set; }
+    public string Method { get; set; }
 
     /// <summary>Specifies the number of synchronous standby servers that transactions must wait for responses from.</summary>
     [JsonPropertyName("number")]
@@ -3184,30 +2792,6 @@ public partial class V1ClusterSpecPostgresql
     /// <summary>Configuration of the PostgreSQL synchronous replication feature</summary>
     [JsonPropertyName("synchronous")]
     public V1ClusterSpecPostgresqlSynchronous? Synchronous { get; set; }
-}
-
-/// <summary>Method to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be with a switchover (`switchover`) or in-place (`restart` - default)</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecPrimaryUpdateMethodEnum
-{
-    [EnumMember(Value = "switchover"), JsonStringEnumMemberName("switchover")]
-    /// <summary>switchover</summary>
-    Switchover,
-    [EnumMember(Value = "restart"), JsonStringEnumMemberName("restart")]
-    /// <summary>restart</summary>
-    Restart
-}
-
-/// <summary>Deployment strategy to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be automated (`unsupervised` - default) or manual (`supervised`)</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterSpecPrimaryUpdateStrategyEnum
-{
-    [EnumMember(Value = "unsupervised"), JsonStringEnumMemberName("unsupervised")]
-    /// <summary>unsupervised</summary>
-    Unsupervised,
-    [EnumMember(Value = "supervised"), JsonStringEnumMemberName("supervised")]
-    /// <summary>supervised</summary>
-    Supervised
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
@@ -4206,8 +3790,7 @@ public partial class V1ClusterSpec
 
     /// <summary>The instances' log level, one of the following values: error, warning, info (default), debug, trace</summary>
     [JsonPropertyName("logLevel")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecLogLevelEnum>))]
-    public V1ClusterSpecLogLevelEnum? LogLevel { get; set; }
+    public string? LogLevel { get; set; }
 
     /// <summary>The configuration that is used by the portions of PostgreSQL that are managed by the instance manager</summary>
     [JsonPropertyName("managed")]
@@ -4247,13 +3830,11 @@ public partial class V1ClusterSpec
 
     /// <summary>Method to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be with a switchover (`switchover`) or in-place (`restart` - default)</summary>
     [JsonPropertyName("primaryUpdateMethod")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecPrimaryUpdateMethodEnum>))]
-    public V1ClusterSpecPrimaryUpdateMethodEnum? PrimaryUpdateMethod { get; set; }
+    public string? PrimaryUpdateMethod { get; set; }
 
     /// <summary>Deployment strategy to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be automated (`unsupervised` - default) or manual (`supervised`)</summary>
     [JsonPropertyName("primaryUpdateStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterSpecPrimaryUpdateStrategyEnum>))]
-    public V1ClusterSpecPrimaryUpdateStrategyEnum? PrimaryUpdateStrategy { get; set; }
+    public string? PrimaryUpdateStrategy { get; set; }
 
     /// <summary>Name of the priority class which will be used in every generated Pod, if the PriorityClass specified does not exist, the pod will not be able to schedule.  Please refer to https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass for more information</summary>
     [JsonPropertyName("priorityClassName")]
@@ -4366,21 +3947,6 @@ public partial class V1ClusterStatusCertificates
     public string? ServerTLSSecret { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ClusterStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusConditions
@@ -4403,8 +3969,7 @@ public partial class V1ClusterStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ClusterStatusConditionsStatusEnum>))]
-    public V1ClusterStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

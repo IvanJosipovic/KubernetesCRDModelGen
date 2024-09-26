@@ -8,21 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
-/// <summary>When the bind address is an IP, the captureMode option dictates how traffic to the listener is expected to be captured (or not).  Valid Options: DEFAULT, IPTABLES, NONE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecEgressCaptureModeEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "IPTABLES"), JsonStringEnumMemberName("IPTABLES")]
-    /// <summary>IPTABLES</summary>
-    IPTABLES,
-    [EnumMember(Value = "NONE"), JsonStringEnumMemberName("NONE")]
-    /// <summary>NONE</summary>
-    NONE
-}
-
 /// <summary>The port associated with the listener.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecEgressPort
@@ -54,8 +39,7 @@ public partial class V1beta1SidecarSpecEgress
 
     /// <summary>When the bind address is an IP, the captureMode option dictates how traffic to the listener is expected to be captured (or not).  Valid Options: DEFAULT, IPTABLES, NONE</summary>
     [JsonPropertyName("captureMode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecEgressCaptureModeEnum>))]
-    public V1beta1SidecarSpecEgressCaptureModeEnum? CaptureMode { get; set; }
+    public string? CaptureMode { get; set; }
 
     /// <summary>One or more service hosts exposed by the listener in `namespace/dnsName` format.</summary>
     [JsonPropertyName("hosts")]
@@ -66,29 +50,13 @@ public partial class V1beta1SidecarSpecEgress
     public V1beta1SidecarSpecEgressPort? Port { get; set; }
 }
 
-/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecInboundConnectionPoolHttpH2UpgradePolicyEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "DO_NOT_UPGRADE"), JsonStringEnumMemberName("DO_NOT_UPGRADE")]
-    /// <summary>DO_NOT_UPGRADE</summary>
-    DONOTUPGRADE,
-    [EnumMember(Value = "UPGRADE"), JsonStringEnumMemberName("UPGRADE")]
-    /// <summary>UPGRADE</summary>
-    UPGRADE
-}
-
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecInboundConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecInboundConnectionPoolHttpH2UpgradePolicyEnum>))]
-    public V1beta1SidecarSpecInboundConnectionPoolHttpH2UpgradePolicyEnum? H2UpgradePolicy { get; set; }
+    public string? H2UpgradePolicy { get; set; }
 
     /// <summary>Maximum number of requests that will be queued while waiting for a ready connection pool connection.</summary>
     [JsonPropertyName("http1MaxPendingRequests")]
@@ -174,44 +142,13 @@ public partial class V1beta1SidecarSpecInboundConnectionPool
     public V1beta1SidecarSpecInboundConnectionPoolTcp? Tcp { get; set; }
 }
 
-/// <summary>The captureMode option dictates how traffic to the listener is expected to be captured (or not).  Valid Options: DEFAULT, IPTABLES, NONE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecIngressCaptureModeEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "IPTABLES"), JsonStringEnumMemberName("IPTABLES")]
-    /// <summary>IPTABLES</summary>
-    IPTABLES,
-    [EnumMember(Value = "NONE"), JsonStringEnumMemberName("NONE")]
-    /// <summary>NONE</summary>
-    NONE
-}
-
-/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecIngressConnectionPoolHttpH2UpgradePolicyEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "DO_NOT_UPGRADE"), JsonStringEnumMemberName("DO_NOT_UPGRADE")]
-    /// <summary>DO_NOT_UPGRADE</summary>
-    DONOTUPGRADE,
-    [EnumMember(Value = "UPGRADE"), JsonStringEnumMemberName("UPGRADE")]
-    /// <summary>UPGRADE</summary>
-    UPGRADE
-}
-
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecIngressConnectionPoolHttpH2UpgradePolicyEnum>))]
-    public V1beta1SidecarSpecIngressConnectionPoolHttpH2UpgradePolicyEnum? H2UpgradePolicy { get; set; }
+    public string? H2UpgradePolicy { get; set; }
 
     /// <summary>Maximum number of requests that will be queued while waiting for a ready connection pool connection.</summary>
     [JsonPropertyName("http1MaxPendingRequests")]
@@ -318,72 +255,6 @@ public partial class V1beta1SidecarSpecIngressPort
     public int? TargetPort { get; set; }
 }
 
-/// <summary>Optional: Maximum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecIngressTlsMaxProtocolVersionEnum
-{
-    [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
-    /// <summary>TLS_AUTO</summary>
-    TLSAUTO,
-    [EnumMember(Value = "TLSV1_0"), JsonStringEnumMemberName("TLSV1_0")]
-    /// <summary>TLSV1_0</summary>
-    TLSV10,
-    [EnumMember(Value = "TLSV1_1"), JsonStringEnumMemberName("TLSV1_1")]
-    /// <summary>TLSV1_1</summary>
-    TLSV11,
-    [EnumMember(Value = "TLSV1_2"), JsonStringEnumMemberName("TLSV1_2")]
-    /// <summary>TLSV1_2</summary>
-    TLSV12,
-    [EnumMember(Value = "TLSV1_3"), JsonStringEnumMemberName("TLSV1_3")]
-    /// <summary>TLSV1_3</summary>
-    TLSV13
-}
-
-/// <summary>Optional: Minimum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecIngressTlsMinProtocolVersionEnum
-{
-    [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
-    /// <summary>TLS_AUTO</summary>
-    TLSAUTO,
-    [EnumMember(Value = "TLSV1_0"), JsonStringEnumMemberName("TLSV1_0")]
-    /// <summary>TLSV1_0</summary>
-    TLSV10,
-    [EnumMember(Value = "TLSV1_1"), JsonStringEnumMemberName("TLSV1_1")]
-    /// <summary>TLSV1_1</summary>
-    TLSV11,
-    [EnumMember(Value = "TLSV1_2"), JsonStringEnumMemberName("TLSV1_2")]
-    /// <summary>TLSV1_2</summary>
-    TLSV12,
-    [EnumMember(Value = "TLSV1_3"), JsonStringEnumMemberName("TLSV1_3")]
-    /// <summary>TLSV1_3</summary>
-    TLSV13
-}
-
-/// <summary>Optional: Indicates whether connections to this port should be secured using TLS.  Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecIngressTlsModeEnum
-{
-    [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
-    /// <summary>PASSTHROUGH</summary>
-    PASSTHROUGH,
-    [EnumMember(Value = "SIMPLE"), JsonStringEnumMemberName("SIMPLE")]
-    /// <summary>SIMPLE</summary>
-    SIMPLE,
-    [EnumMember(Value = "MUTUAL"), JsonStringEnumMemberName("MUTUAL")]
-    /// <summary>MUTUAL</summary>
-    MUTUAL,
-    [EnumMember(Value = "AUTO_PASSTHROUGH"), JsonStringEnumMemberName("AUTO_PASSTHROUGH")]
-    /// <summary>AUTO_PASSTHROUGH</summary>
-    AUTOPASSTHROUGH,
-    [EnumMember(Value = "ISTIO_MUTUAL"), JsonStringEnumMemberName("ISTIO_MUTUAL")]
-    /// <summary>ISTIO_MUTUAL</summary>
-    ISTIOMUTUAL,
-    [EnumMember(Value = "OPTIONAL_MUTUAL"), JsonStringEnumMemberName("OPTIONAL_MUTUAL")]
-    /// <summary>OPTIONAL_MUTUAL</summary>
-    OPTIONALMUTUAL
-}
-
 /// <summary>Set of TLS related options that will enable TLS termination on the sidecar for requests originating from outside the mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressTls
@@ -410,18 +281,15 @@ public partial class V1beta1SidecarSpecIngressTls
 
     /// <summary>Optional: Maximum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
     [JsonPropertyName("maxProtocolVersion")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecIngressTlsMaxProtocolVersionEnum>))]
-    public V1beta1SidecarSpecIngressTlsMaxProtocolVersionEnum? MaxProtocolVersion { get; set; }
+    public string? MaxProtocolVersion { get; set; }
 
     /// <summary>Optional: Minimum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
     [JsonPropertyName("minProtocolVersion")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecIngressTlsMinProtocolVersionEnum>))]
-    public V1beta1SidecarSpecIngressTlsMinProtocolVersionEnum? MinProtocolVersion { get; set; }
+    public string? MinProtocolVersion { get; set; }
 
     /// <summary>Optional: Indicates whether connections to this port should be secured using TLS.  Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecIngressTlsModeEnum>))]
-    public V1beta1SidecarSpecIngressTlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>REQUIRED if mode is `SIMPLE` or `MUTUAL`.</summary>
     [JsonPropertyName("privateKey")]
@@ -454,8 +322,7 @@ public partial class V1beta1SidecarSpecIngress
 
     /// <summary>The captureMode option dictates how traffic to the listener is expected to be captured (or not).  Valid Options: DEFAULT, IPTABLES, NONE</summary>
     [JsonPropertyName("captureMode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecIngressCaptureModeEnum>))]
-    public V1beta1SidecarSpecIngressCaptureModeEnum? CaptureMode { get; set; }
+    public string? CaptureMode { get; set; }
 
     /// <summary>Settings controlling the volume of connections Envoy will accept from the network.</summary>
     [JsonPropertyName("connectionPool")]
@@ -500,18 +367,6 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxy
     public string? Subset { get; set; }
 }
 
-/// <summary>  Valid Options: REGISTRY_ONLY, ALLOW_ANY</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SidecarSpecOutboundTrafficPolicyModeEnum
-{
-    [EnumMember(Value = "REGISTRY_ONLY"), JsonStringEnumMemberName("REGISTRY_ONLY")]
-    /// <summary>REGISTRY_ONLY</summary>
-    REGISTRYONLY,
-    [EnumMember(Value = "ALLOW_ANY"), JsonStringEnumMemberName("ALLOW_ANY")]
-    /// <summary>ALLOW_ANY</summary>
-    ALLOWANY
-}
-
 /// <summary>Configuration for the outbound traffic policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecOutboundTrafficPolicy
@@ -522,8 +377,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicy
 
     /// <summary>  Valid Options: REGISTRY_ONLY, ALLOW_ANY</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SidecarSpecOutboundTrafficPolicyModeEnum>))]
-    public V1beta1SidecarSpecOutboundTrafficPolicyModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 }
 
 /// <summary>Criteria used to select the specific set of pods/VMs on which this `Sidecar` configuration should be applied.</summary>

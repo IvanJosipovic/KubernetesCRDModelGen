@@ -210,18 +210,6 @@ public partial class V1alpha1MiddlewareSpecErrorsServiceHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
-/// <summary>Kind defines the kind of the Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1MiddlewareSpecErrorsServiceKindEnum
-{
-    [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
-    /// <summary>Service</summary>
-    Service,
-    [EnumMember(Value = "TraefikService"), JsonStringEnumMemberName("TraefikService")]
-    /// <summary>TraefikService</summary>
-    TraefikService
-}
-
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareSpecErrorsServiceResponseForwarding
@@ -275,8 +263,7 @@ public partial class V1alpha1MiddlewareSpecErrorsService
 
     /// <summary>Kind defines the kind of the Service.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1MiddlewareSpecErrorsServiceKindEnum>))]
-    public V1alpha1MiddlewareSpecErrorsServiceKindEnum? Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary>Name defines the name of the referenced Kubernetes Service or TraefikService. The differentiation between the two is specified in the Kind field.</summary>
     [JsonPropertyName("name")]

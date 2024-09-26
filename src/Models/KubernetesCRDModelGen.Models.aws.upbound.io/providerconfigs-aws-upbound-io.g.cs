@@ -77,30 +77,6 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of the provider credentials.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "IRSA"), JsonStringEnumMemberName("IRSA")]
-    /// <summary>IRSA</summary>
-    IRSA,
-    [EnumMember(Value = "WebIdentity"), JsonStringEnumMemberName("WebIdentity")]
-    /// <summary>WebIdentity</summary>
-    WebIdentity,
-    [EnumMember(Value = "PodIdentity"), JsonStringEnumMemberName("PodIdentity")]
-    /// <summary>PodIdentity</summary>
-    PodIdentity,
-    [EnumMember(Value = "Upbound"), JsonStringEnumMemberName("Upbound")]
-    /// <summary>Upbound</summary>
-    Upbound
-}
-
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to obtain the web identity token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigFs
@@ -127,18 +103,6 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
     public string Namespace { get; set; }
 }
 
-/// <summary>Source is the source of the web identity token.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSourceEnum
-{
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "Filesystem"), JsonStringEnumMemberName("Filesystem")]
-    /// <summary>Filesystem</summary>
-    Filesystem
-}
-
 /// <summary>TokenConfig is the Web Identity Token config to assume the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfig
@@ -153,8 +117,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityToken
 
     /// <summary>Source is the source of the web identity token.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSourceEnum>))]
-    public V1beta1ProviderConfigSpecCredentialsUpboundWebIdentityTokenConfigSourceEnum Source { get; set; }
+    public string Source { get; set; }
 }
 
 /// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
@@ -209,18 +172,6 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigS
     public string Namespace { get; set; }
 }
 
-/// <summary>Source is the source of the web identity token.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSourceEnum
-{
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "Filesystem"), JsonStringEnumMemberName("Filesystem")]
-    /// <summary>Filesystem</summary>
-    Filesystem
-}
-
 /// <summary>TokenConfig is the Web Identity Token config to assume the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig
@@ -235,8 +186,7 @@ public partial class V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfig
 
     /// <summary>Source is the source of the web identity token.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSourceEnum>))]
-    public V1beta1ProviderConfigSpecCredentialsWebIdentityTokenConfigSourceEnum Source { get; set; }
+    public string Source { get; set; }
 }
 
 /// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
@@ -274,8 +224,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
 
     /// <summary>Source of the provider credentials.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecCredentialsSourceEnum>))]
-    public V1beta1ProviderConfigSpecCredentialsSourceEnum Source { get; set; }
+    public string Source { get; set; }
 
     /// <summary>Upbound defines the options for authenticating using Upbound as an identity provider.</summary>
     [JsonPropertyName("upbound")]
@@ -284,30 +233,6 @@ public partial class V1beta1ProviderConfigSpecCredentials
     /// <summary>WebIdentity defines the options for assuming an IAM role with a Web Identity.</summary>
     [JsonPropertyName("webIdentity")]
     public V1beta1ProviderConfigSpecCredentialsWebIdentity? WebIdentity { get; set; }
-}
-
-/// <summary>The source of the Endpoint. By default, this will be ServiceMetadata. When providing a custom endpoint, you should set the source as Custom. If source is not provided when providing a custom endpoint, the SDK may not perform required host mutations correctly. Source should be used along with HostnameImmutable property as per the usage requirement. Note that this is effective only for resources that use AWS SDK v2.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecEndpointSourceEnum
-{
-    [EnumMember(Value = "ServiceMetadata"), JsonStringEnumMemberName("ServiceMetadata")]
-    /// <summary>ServiceMetadata</summary>
-    ServiceMetadata,
-    [EnumMember(Value = "Custom"), JsonStringEnumMemberName("Custom")]
-    /// <summary>Custom</summary>
-    Custom
-}
-
-/// <summary>Protocol is the HTTP protocol that will be used in the URL. Currently, only http and https are supported.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecEndpointUrlDynamicProtocolEnum
-{
-    [EnumMember(Value = "http"), JsonStringEnumMemberName("http")]
-    /// <summary>http</summary>
-    Http,
-    [EnumMember(Value = "https"), JsonStringEnumMemberName("https")]
-    /// <summary>https</summary>
-    Https
 }
 
 /// <summary>Dynamic lets you configure the behavior of endpoint URL resolver.</summary>
@@ -320,20 +245,7 @@ public partial class V1beta1ProviderConfigSpecEndpointUrlDynamic
 
     /// <summary>Protocol is the HTTP protocol that will be used in the URL. Currently, only http and https are supported.</summary>
     [JsonPropertyName("protocol")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecEndpointUrlDynamicProtocolEnum>))]
-    public V1beta1ProviderConfigSpecEndpointUrlDynamicProtocolEnum Protocol { get; set; }
-}
-
-/// <summary>You can provide a static URL that will be used regardless of the service and region by choosing Static type. Alternatively, you can provide configuration for dynamically resolving the URL with the config you provide once you set the type as Dynamic.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecEndpointUrlTypeEnum
-{
-    [EnumMember(Value = "Static"), JsonStringEnumMemberName("Static")]
-    /// <summary>Static</summary>
-    Static,
-    [EnumMember(Value = "Dynamic"), JsonStringEnumMemberName("Dynamic")]
-    /// <summary>Dynamic</summary>
-    Dynamic
+    public string Protocol { get; set; }
 }
 
 /// <summary>URL lets you configure the endpoint URL to be used in SDK calls.</summary>
@@ -350,8 +262,7 @@ public partial class V1beta1ProviderConfigSpecEndpointUrl
 
     /// <summary>You can provide a static URL that will be used regardless of the service and region by choosing Static type. Alternatively, you can provide configuration for dynamically resolving the URL with the config you provide once you set the type as Dynamic.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecEndpointUrlTypeEnum>))]
-    public V1beta1ProviderConfigSpecEndpointUrlTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>Endpoint is where you can override the default endpoint configuration of AWS calls made by the provider.</summary>
@@ -384,8 +295,7 @@ public partial class V1beta1ProviderConfigSpecEndpoint
 
     /// <summary>The source of the Endpoint. By default, this will be ServiceMetadata. When providing a custom endpoint, you should set the source as Custom. If source is not provided when providing a custom endpoint, the SDK may not perform required host mutations correctly. Source should be used along with HostnameImmutable property as per the usage requirement. Note that this is effective only for resources that use AWS SDK v2.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecEndpointSourceEnum>))]
-    public V1beta1ProviderConfigSpecEndpointSourceEnum? Source { get; set; }
+    public string? Source { get; set; }
 
     /// <summary>URL lets you configure the endpoint URL to be used in SDK calls.</summary>
     [JsonPropertyName("url")]

@@ -174,24 +174,6 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     public IList<V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
-/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum
-{
-    [EnumMember(Value = "ResponseHeaderModifier"), JsonStringEnumMemberName("ResponseHeaderModifier")]
-    /// <summary>ResponseHeaderModifier</summary>
-    ResponseHeaderModifier,
-    [EnumMember(Value = "RequestHeaderModifier"), JsonStringEnumMemberName("RequestHeaderModifier")]
-    /// <summary>RequestHeaderModifier</summary>
-    RequestHeaderModifier,
-    [EnumMember(Value = "RequestMirror"), JsonStringEnumMemberName("RequestMirror")]
-    /// <summary>RequestMirror</summary>
-    RequestMirror,
-    [EnumMember(Value = "ExtensionRef"), JsonStringEnumMemberName("ExtensionRef")]
-    /// <summary>ExtensionRef</summary>
-    ExtensionRef
-}
-
 /// <summary>GRPCRouteFilter defines processing steps that must be completed during the request or response lifecycle. GRPCRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFilters
@@ -214,8 +196,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFilters
 
     /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   </summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum>))]
-    public V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>GRPCBackendRef defines how a GRPCRoute forwards a gRPC request.   Note that when a namespace different than the local namespace is specified, a ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.   &lt;gateway:experimental:description&gt;   When the BackendRef points to a Kubernetes Service, implementations SHOULD honor the appProtocol field if it is set for the target Service Port.   Implementations supporting appProtocol SHOULD recognize the Kubernetes Standard Application Protocols defined in KEP-3726.   If a Service appProtocol isn't specified, an implementation MAY infer the backend protocol through its own means. Implementations MAY infer the protocol from the Route type referring to the backend Service.   If a Route is not able to send traffic to the backend using the specified protocol then the backend is considered invalid. Implementations MUST set the "ResolvedRefs" condition to "False" with the "UnsupportedProtocol" reason.   &lt;/gateway:experimental:description&gt;</summary>
@@ -388,24 +369,6 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifier
     public IList<V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
-/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GRPCRouteSpecRulesFiltersTypeEnum
-{
-    [EnumMember(Value = "ResponseHeaderModifier"), JsonStringEnumMemberName("ResponseHeaderModifier")]
-    /// <summary>ResponseHeaderModifier</summary>
-    ResponseHeaderModifier,
-    [EnumMember(Value = "RequestHeaderModifier"), JsonStringEnumMemberName("RequestHeaderModifier")]
-    /// <summary>RequestHeaderModifier</summary>
-    RequestHeaderModifier,
-    [EnumMember(Value = "RequestMirror"), JsonStringEnumMemberName("RequestMirror")]
-    /// <summary>RequestMirror</summary>
-    RequestMirror,
-    [EnumMember(Value = "ExtensionRef"), JsonStringEnumMemberName("ExtensionRef")]
-    /// <summary>ExtensionRef</summary>
-    ExtensionRef
-}
-
 /// <summary>GRPCRouteFilter defines processing steps that must be completed during the request or response lifecycle. GRPCRouteFilters are meant as an extension point to express processing that may be done in Gateway implementations. Some examples include request or response modification, implementing authentication strategies, rate-limiting, and traffic shaping. API guarantee/conformance is defined based on the type of the filter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFilters
@@ -428,20 +391,7 @@ public partial class V1GRPCRouteSpecRulesFilters
 
     /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   </summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesFiltersTypeEnum>))]
-    public V1GRPCRouteSpecRulesFiltersTypeEnum Type { get; set; }
-}
-
-/// <summary>Type specifies how to match against the value of the header.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GRPCRouteSpecRulesMatchesHeadersTypeEnum
-{
-    [EnumMember(Value = "Exact"), JsonStringEnumMemberName("Exact")]
-    /// <summary>Exact</summary>
-    Exact,
-    [EnumMember(Value = "RegularExpression"), JsonStringEnumMemberName("RegularExpression")]
-    /// <summary>RegularExpression</summary>
-    RegularExpression
+    public string Type { get; set; }
 }
 
 /// <summary>GRPCHeaderMatch describes how to select a gRPC route by matching gRPC request headers.</summary>
@@ -454,24 +404,11 @@ public partial class V1GRPCRouteSpecRulesMatchesHeaders
 
     /// <summary>Type specifies how to match against the value of the header.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesMatchesHeadersTypeEnum>))]
-    public V1GRPCRouteSpecRulesMatchesHeadersTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>Value is the value of the gRPC Header to be matched.</summary>
     [JsonPropertyName("value")]
     public string Value { get; set; }
-}
-
-/// <summary>Type specifies how to match against the service and/or method. Support: Core (Exact with service and method specified)   Support: Implementation-specific (Exact with method specified but no service specified)   Support: Implementation-specific (RegularExpression)</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GRPCRouteSpecRulesMatchesMethodTypeEnum
-{
-    [EnumMember(Value = "Exact"), JsonStringEnumMemberName("Exact")]
-    /// <summary>Exact</summary>
-    Exact,
-    [EnumMember(Value = "RegularExpression"), JsonStringEnumMemberName("RegularExpression")]
-    /// <summary>RegularExpression</summary>
-    RegularExpression
 }
 
 /// <summary>Method specifies a gRPC request service/method matcher. If this field is not specified, all services and methods will match.</summary>
@@ -488,8 +425,7 @@ public partial class V1GRPCRouteSpecRulesMatchesMethod
 
     /// <summary>Type specifies how to match against the service and/or method. Support: Core (Exact with service and method specified)   Support: Implementation-specific (Exact with method specified but no service specified)   Support: Implementation-specific (RegularExpression)</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesMatchesMethodTypeEnum>))]
-    public V1GRPCRouteSpecRulesMatchesMethodTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 }
 
 /// <summary>GRPCRouteMatch defines the predicate used to match requests to a given action. Multiple match types are ANDed together, i.e. the match will evaluate to true only if all conditions are satisfied.   For example, the match below will match a gRPC request only if its service is `foo` AND it contains the `version: v1` header:   ``` matches:   - method:     type: Exact     service: "foo"     headers:   - name: "version"     value "v1"   ```</summary>
@@ -539,21 +475,6 @@ public partial class V1GRPCRouteSpec
     public IList<V1GRPCRouteSpecRules>? Rules { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GRPCRouteStatusParentsConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParentsConditions
@@ -576,8 +497,7 @@ public partial class V1GRPCRouteStatusParentsConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteStatusParentsConditionsStatusEnum>))]
-    public V1GRPCRouteStatusParentsConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

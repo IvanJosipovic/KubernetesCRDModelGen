@@ -21,33 +21,6 @@ public partial class V2HelmReleaseSpecChartMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
-/// <summary>Determines what enables the creation of a new artifact. Valid values are ('ChartVersion', 'Revision'). See the documentation of the values for an explanation on their behavior. Defaults to ChartVersion when omitted.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecChartSpecReconcileStrategyEnum
-{
-    [EnumMember(Value = "ChartVersion"), JsonStringEnumMemberName("ChartVersion")]
-    /// <summary>ChartVersion</summary>
-    ChartVersion,
-    [EnumMember(Value = "Revision"), JsonStringEnumMemberName("Revision")]
-    /// <summary>Revision</summary>
-    Revision
-}
-
-/// <summary>Kind of the referent.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecChartSpecSourceRefKindEnum
-{
-    [EnumMember(Value = "HelmRepository"), JsonStringEnumMemberName("HelmRepository")]
-    /// <summary>HelmRepository</summary>
-    HelmRepository,
-    [EnumMember(Value = "GitRepository"), JsonStringEnumMemberName("GitRepository")]
-    /// <summary>GitRepository</summary>
-    GitRepository,
-    [EnumMember(Value = "Bucket"), JsonStringEnumMemberName("Bucket")]
-    /// <summary>Bucket</summary>
-    Bucket
-}
-
 /// <summary>The name and namespace of the v1.Source the chart is available at.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartSpecSourceRef
@@ -58,8 +31,7 @@ public partial class V2HelmReleaseSpecChartSpecSourceRef
 
     /// <summary>Kind of the referent.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecChartSpecSourceRefKindEnum>))]
-    public V2HelmReleaseSpecChartSpecSourceRefKindEnum? Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -68,18 +40,6 @@ public partial class V2HelmReleaseSpecChartSpecSourceRef
     /// <summary>Namespace of the referent.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
-}
-
-/// <summary>Provider specifies the technology used to sign the OCI Helm chart.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecChartSpecVerifyProviderEnum
-{
-    [EnumMember(Value = "cosign"), JsonStringEnumMemberName("cosign")]
-    /// <summary>cosign</summary>
-    Cosign,
-    [EnumMember(Value = "notation"), JsonStringEnumMemberName("notation")]
-    /// <summary>notation</summary>
-    Notation
 }
 
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
@@ -97,8 +57,7 @@ public partial class V2HelmReleaseSpecChartSpecVerify
 {
     /// <summary>Provider specifies the technology used to sign the OCI Helm chart.</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecChartSpecVerifyProviderEnum>))]
-    public V2HelmReleaseSpecChartSpecVerifyProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
     [JsonPropertyName("secretRef")]
@@ -123,8 +82,7 @@ public partial class V2HelmReleaseSpecChartSpec
 
     /// <summary>Determines what enables the creation of a new artifact. Valid values are ('ChartVersion', 'Revision'). See the documentation of the values for an explanation on their behavior. Defaults to ChartVersion when omitted.</summary>
     [JsonPropertyName("reconcileStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecChartSpecReconcileStrategyEnum>))]
-    public V2HelmReleaseSpecChartSpecReconcileStrategyEnum? ReconcileStrategy { get; set; }
+    public string? ReconcileStrategy { get; set; }
 
     /// <summary>The name and namespace of the v1.Source the chart is available at.</summary>
     [JsonPropertyName("sourceRef")]
@@ -156,18 +114,6 @@ public partial class V2HelmReleaseSpecChart
     public V2HelmReleaseSpecChartSpec Spec { get; set; }
 }
 
-/// <summary>Kind of the referent.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecChartRefKindEnum
-{
-    [EnumMember(Value = "OCIRepository"), JsonStringEnumMemberName("OCIRepository")]
-    /// <summary>OCIRepository</summary>
-    OCIRepository,
-    [EnumMember(Value = "HelmChart"), JsonStringEnumMemberName("HelmChart")]
-    /// <summary>HelmChart</summary>
-    HelmChart
-}
-
 /// <summary>ChartRef holds a reference to a source controller resource containing the Helm chart artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecChartRef
@@ -178,8 +124,7 @@ public partial class V2HelmReleaseSpecChartRef
 
     /// <summary>Kind of the referent.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecChartRefKindEnum>))]
-    public V2HelmReleaseSpecChartRefKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -249,21 +194,6 @@ public partial class V2HelmReleaseSpecDriftDetectionIgnore
     public V2HelmReleaseSpecDriftDetectionIgnoreTarget? Target { get; set; }
 }
 
-/// <summary>Mode defines how differences should be handled between the Helm manifest and the manifest currently applied to the cluster. If not explicitly set, it defaults to DiffModeDisabled.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecDriftDetectionModeEnum
-{
-    [EnumMember(Value = "enabled"), JsonStringEnumMemberName("enabled")]
-    /// <summary>enabled</summary>
-    Enabled,
-    [EnumMember(Value = "warn"), JsonStringEnumMemberName("warn")]
-    /// <summary>warn</summary>
-    Warn,
-    [EnumMember(Value = "disabled"), JsonStringEnumMemberName("disabled")]
-    /// <summary>disabled</summary>
-    Disabled
-}
-
 /// <summary>DriftDetection holds the configuration for detecting and handling differences between the manifest in the Helm storage and the resources currently existing in the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecDriftDetection
@@ -274,23 +204,7 @@ public partial class V2HelmReleaseSpecDriftDetection
 
     /// <summary>Mode defines how differences should be handled between the Helm manifest and the manifest currently applied to the cluster. If not explicitly set, it defaults to DiffModeDisabled.</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecDriftDetectionModeEnum>))]
-    public V2HelmReleaseSpecDriftDetectionModeEnum? Mode { get; set; }
-}
-
-/// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Create` and if omitted CRDs are installed but not updated.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are applied (installed) during Helm install action. With this option users can opt in to CRD replace existing CRDs on Helm install actions, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecInstallCrdsEnum
-{
-    [EnumMember(Value = "Skip"), JsonStringEnumMemberName("Skip")]
-    /// <summary>Skip</summary>
-    Skip,
-    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
-    /// <summary>Create</summary>
-    Create,
-    [EnumMember(Value = "CreateReplace"), JsonStringEnumMemberName("CreateReplace")]
-    /// <summary>CreateReplace</summary>
-    CreateReplace
+    public string? Mode { get; set; }
 }
 
 /// <summary>Remediation holds the remediation configuration for when the Helm install action for the HelmRelease fails. The default is to not perform any action.</summary>
@@ -316,8 +230,7 @@ public partial class V2HelmReleaseSpecInstall
 {
     /// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Create` and if omitted CRDs are installed but not updated.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are applied (installed) during Helm install action. With this option users can opt in to CRD replace existing CRDs on Helm install actions, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
     [JsonPropertyName("crds")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecInstallCrdsEnum>))]
-    public V2HelmReleaseSpecInstallCrdsEnum? Crds { get; set; }
+    public string? Crds { get; set; }
 
     /// <summary>CreateNamespace tells the Helm install action to create the HelmReleaseSpec.TargetNamespace if it does not exist yet. On uninstall, the namespace will not be garbage collected.</summary>
     [JsonPropertyName("createNamespace")]
@@ -534,29 +447,13 @@ public partial class V2HelmReleaseSpecTest
     public string? Timeout { get; set; }
 }
 
-/// <summary>DeletionPropagation specifies the deletion propagation policy when a Helm uninstall is performed.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecUninstallDeletionPropagationEnum
-{
-    [EnumMember(Value = "background"), JsonStringEnumMemberName("background")]
-    /// <summary>background</summary>
-    Background,
-    [EnumMember(Value = "foreground"), JsonStringEnumMemberName("foreground")]
-    /// <summary>foreground</summary>
-    Foreground,
-    [EnumMember(Value = "orphan"), JsonStringEnumMemberName("orphan")]
-    /// <summary>orphan</summary>
-    Orphan
-}
-
 /// <summary>Uninstall holds the configuration for Helm uninstall actions for this HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecUninstall
 {
     /// <summary>DeletionPropagation specifies the deletion propagation policy when a Helm uninstall is performed.</summary>
     [JsonPropertyName("deletionPropagation")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecUninstallDeletionPropagationEnum>))]
-    public V2HelmReleaseSpecUninstallDeletionPropagationEnum? DeletionPropagation { get; set; }
+    public string? DeletionPropagation { get; set; }
 
     /// <summary>DisableHooks prevents hooks from running during the Helm rollback action.</summary>
     [JsonPropertyName("disableHooks")]
@@ -573,33 +470,6 @@ public partial class V2HelmReleaseSpecUninstall
     /// <summary>Timeout is the time to wait for any individual Kubernetes operation (like Jobs for hooks) during the performance of a Helm uninstall action. Defaults to 'HelmReleaseSpec.Timeout'.</summary>
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
-}
-
-/// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Skip` and if omitted CRDs are neither installed nor upgraded.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are not applied during Helm upgrade action. With this option users can opt-in to CRD upgrade, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecUpgradeCrdsEnum
-{
-    [EnumMember(Value = "Skip"), JsonStringEnumMemberName("Skip")]
-    /// <summary>Skip</summary>
-    Skip,
-    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
-    /// <summary>Create</summary>
-    Create,
-    [EnumMember(Value = "CreateReplace"), JsonStringEnumMemberName("CreateReplace")]
-    /// <summary>CreateReplace</summary>
-    CreateReplace
-}
-
-/// <summary>Strategy to use for failure remediation. Defaults to 'rollback'.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecUpgradeRemediationStrategyEnum
-{
-    [EnumMember(Value = "rollback"), JsonStringEnumMemberName("rollback")]
-    /// <summary>rollback</summary>
-    Rollback,
-    [EnumMember(Value = "uninstall"), JsonStringEnumMemberName("uninstall")]
-    /// <summary>uninstall</summary>
-    Uninstall
 }
 
 /// <summary>Remediation holds the remediation configuration for when the Helm upgrade action for the HelmRelease fails. The default is to not perform any action.</summary>
@@ -620,8 +490,7 @@ public partial class V2HelmReleaseSpecUpgradeRemediation
 
     /// <summary>Strategy to use for failure remediation. Defaults to 'rollback'.</summary>
     [JsonPropertyName("strategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecUpgradeRemediationStrategyEnum>))]
-    public V2HelmReleaseSpecUpgradeRemediationStrategyEnum? Strategy { get; set; }
+    public string? Strategy { get; set; }
 }
 
 /// <summary>Upgrade holds the configuration for Helm upgrade actions for this HelmRelease.</summary>
@@ -634,8 +503,7 @@ public partial class V2HelmReleaseSpecUpgrade
 
     /// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Skip` and if omitted CRDs are neither installed nor upgraded.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are not applied during Helm upgrade action. With this option users can opt-in to CRD upgrade, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
     [JsonPropertyName("crds")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecUpgradeCrdsEnum>))]
-    public V2HelmReleaseSpecUpgradeCrdsEnum? Crds { get; set; }
+    public string? Crds { get; set; }
 
     /// <summary>DisableHooks prevents hooks from running during the Helm upgrade action.</summary>
     [JsonPropertyName("disableHooks")]
@@ -670,26 +538,13 @@ public partial class V2HelmReleaseSpecUpgrade
     public string? Timeout { get; set; }
 }
 
-/// <summary>Kind of the values referent, valid values are ('Secret', 'ConfigMap').</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseSpecValuesFromKindEnum
-{
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "ConfigMap"), JsonStringEnumMemberName("ConfigMap")]
-    /// <summary>ConfigMap</summary>
-    ConfigMap
-}
-
 /// <summary>ValuesReference contains a reference to a resource containing Helm values, and optionally the key they can be found at.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecValuesFrom
 {
     /// <summary>Kind of the values referent, valid values are ('Secret', 'ConfigMap').</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseSpecValuesFromKindEnum>))]
-    public V2HelmReleaseSpecValuesFromKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Name of the values referent. Should reside in the same namespace as the referring resource.</summary>
     [JsonPropertyName("name")]
@@ -801,21 +656,6 @@ public partial class V2HelmReleaseSpec
     public IList<V2HelmReleaseSpecValuesFrom>? ValuesFrom { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseStatusConditions
@@ -838,8 +678,7 @@ public partial class V2HelmReleaseStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseStatusConditionsStatusEnum>))]
-    public V2HelmReleaseStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]
@@ -928,18 +767,6 @@ public partial class V2HelmReleaseStatusHistory
     public int Version { get; set; }
 }
 
-/// <summary>LastAttemptedReleaseAction is the last release action performed for this HelmRelease. It is used to determine the active remediation strategy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V2HelmReleaseStatusLastAttemptedReleaseActionEnum
-{
-    [EnumMember(Value = "install"), JsonStringEnumMemberName("install")]
-    /// <summary>install</summary>
-    Install,
-    [EnumMember(Value = "upgrade"), JsonStringEnumMemberName("upgrade")]
-    /// <summary>upgrade</summary>
-    Upgrade
-}
-
 /// <summary>HelmReleaseStatus defines the observed state of a HelmRelease.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseStatus
@@ -974,8 +801,7 @@ public partial class V2HelmReleaseStatus
 
     /// <summary>LastAttemptedReleaseAction is the last release action performed for this HelmRelease. It is used to determine the active remediation strategy.</summary>
     [JsonPropertyName("lastAttemptedReleaseAction")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V2HelmReleaseStatusLastAttemptedReleaseActionEnum>))]
-    public V2HelmReleaseStatusLastAttemptedReleaseActionEnum? LastAttemptedReleaseAction { get; set; }
+    public string? LastAttemptedReleaseAction { get; set; }
 
     /// <summary>LastAttemptedRevision is the Source revision of the last reconciliation attempt. For OCIRepository  sources, the 12 first characters of the digest are appended to the chart version e.g. "1.2.3+1234567890ab".</summary>
     [JsonPropertyName("lastAttemptedRevision")]

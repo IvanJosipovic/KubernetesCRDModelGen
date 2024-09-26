@@ -8,21 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.policy.networking.k8s.io;
-/// <summary>Action specifies the effect this rule will have on matching traffic. Currently the following actions are supported: Allow: allows the selected traffic (even if it would otherwise have been denied by NetworkPolicy) Deny: denies the selected traffic Pass: instructs the selected traffic to skip any remaining ANP rules, and then pass execution to any NetworkPolicies that select the pod. If the pod is not selected by any NetworkPolicies then execution is passed to any BaselineAdminNetworkPolicies that select the pod.   Support: Core</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1AdminNetworkPolicySpecEgressActionEnum
-{
-    [EnumMember(Value = "Allow"), JsonStringEnumMemberName("Allow")]
-    /// <summary>Allow</summary>
-    Allow,
-    [EnumMember(Value = "Deny"), JsonStringEnumMemberName("Deny")]
-    /// <summary>Deny</summary>
-    Deny,
-    [EnumMember(Value = "Pass"), JsonStringEnumMemberName("Pass")]
-    /// <summary>Pass</summary>
-    Pass
-}
-
 /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AdminNetworkPolicySpecEgressPortsPortNumber
@@ -188,8 +173,7 @@ public partial class V1alpha1AdminNetworkPolicySpecEgress
 {
     /// <summary>Action specifies the effect this rule will have on matching traffic. Currently the following actions are supported: Allow: allows the selected traffic (even if it would otherwise have been denied by NetworkPolicy) Deny: denies the selected traffic Pass: instructs the selected traffic to skip any remaining ANP rules, and then pass execution to any NetworkPolicies that select the pod. If the pod is not selected by any NetworkPolicies then execution is passed to any BaselineAdminNetworkPolicies that select the pod.   Support: Core</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1AdminNetworkPolicySpecEgressActionEnum>))]
-    public V1alpha1AdminNetworkPolicySpecEgressActionEnum Action { get; set; }
+    public string Action { get; set; }
 
     /// <summary>Name is an identifier for this rule, that may be no more than 100 characters in length. This field should be used by the implementation to help improve observability, readability and error-reporting for any applied AdminNetworkPolicies.   Support: Core</summary>
     [JsonPropertyName("name")]
@@ -202,21 +186,6 @@ public partial class V1alpha1AdminNetworkPolicySpecEgress
     /// <summary>To is the List of destinations whose traffic this rule applies to. If any AdminNetworkPolicyEgressPeer matches the destination of outgoing traffic then the specified action is applied. This field must be defined and contain at least one item.   Support: Core</summary>
     [JsonPropertyName("to")]
     public IList<V1alpha1AdminNetworkPolicySpecEgressTo> To { get; set; }
-}
-
-/// <summary>Action specifies the effect this rule will have on matching traffic. Currently the following actions are supported: Allow: allows the selected traffic (even if it would otherwise have been denied by NetworkPolicy) Deny: denies the selected traffic Pass: instructs the selected traffic to skip any remaining ANP rules, and then pass execution to any NetworkPolicies that select the pod. If the pod is not selected by any NetworkPolicies then execution is passed to any BaselineAdminNetworkPolicies that select the pod.   Support: Core</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1AdminNetworkPolicySpecIngressActionEnum
-{
-    [EnumMember(Value = "Allow"), JsonStringEnumMemberName("Allow")]
-    /// <summary>Allow</summary>
-    Allow,
-    [EnumMember(Value = "Deny"), JsonStringEnumMemberName("Deny")]
-    /// <summary>Deny</summary>
-    Deny,
-    [EnumMember(Value = "Pass"), JsonStringEnumMemberName("Pass")]
-    /// <summary>Pass</summary>
-    Pass
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
@@ -384,8 +353,7 @@ public partial class V1alpha1AdminNetworkPolicySpecIngress
 {
     /// <summary>Action specifies the effect this rule will have on matching traffic. Currently the following actions are supported: Allow: allows the selected traffic (even if it would otherwise have been denied by NetworkPolicy) Deny: denies the selected traffic Pass: instructs the selected traffic to skip any remaining ANP rules, and then pass execution to any NetworkPolicies that select the pod. If the pod is not selected by any NetworkPolicies then execution is passed to any BaselineAdminNetworkPolicies that select the pod.   Support: Core</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1AdminNetworkPolicySpecIngressActionEnum>))]
-    public V1alpha1AdminNetworkPolicySpecIngressActionEnum Action { get; set; }
+    public string Action { get; set; }
 
     /// <summary>From is the list of sources whose traffic this rule applies to. If any AdminNetworkPolicyIngressPeer matches the source of incoming traffic then the specified action is applied. This field must be defined and contain at least one item.   Support: Core</summary>
     [JsonPropertyName("from")]
@@ -537,21 +505,6 @@ public partial class V1alpha1AdminNetworkPolicySpec
     public V1alpha1AdminNetworkPolicySpecSubject Subject { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1AdminNetworkPolicyStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AdminNetworkPolicyStatusConditions
@@ -574,8 +527,7 @@ public partial class V1alpha1AdminNetworkPolicyStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1AdminNetworkPolicyStatusConditionsStatusEnum>))]
-    public V1alpha1AdminNetworkPolicyStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

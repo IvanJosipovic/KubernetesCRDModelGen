@@ -8,21 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certmanager.io;
-/// <summary>Deprecated: keyAlgorithm field exists for historical compatibility reasons and should not be used. The algorithm is now hardcoded to HS256 in golang/x/crypto/acme.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1IssuerSpecAcmeExternalAccountBindingKeyAlgorithmEnum
-{
-    [EnumMember(Value = "HS256"), JsonStringEnumMemberName("HS256")]
-    /// <summary>HS256</summary>
-    HS256,
-    [EnumMember(Value = "HS384"), JsonStringEnumMemberName("HS384")]
-    /// <summary>HS384</summary>
-    HS384,
-    [EnumMember(Value = "HS512"), JsonStringEnumMemberName("HS512")]
-    /// <summary>HS512</summary>
-    HS512
-}
-
 /// <summary>keySecretRef is a Secret Key Selector referencing a data item in a Kubernetes Secret which holds the symmetric MAC key of the External Account Binding. The `key` is the index string that is paired with the key data in the Secret and should not be confused with the key data itself, or indeed with the External Account Binding keyID above. The secret key stored in the Secret **must** be un-padded, base64 URL encoded data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IssuerSpecAcmeExternalAccountBindingKeySecretRef
@@ -42,8 +27,7 @@ public partial class V1IssuerSpecAcmeExternalAccountBinding
 {
     /// <summary>Deprecated: keyAlgorithm field exists for historical compatibility reasons and should not be used. The algorithm is now hardcoded to HS256 in golang/x/crypto/acme.</summary>
     [JsonPropertyName("keyAlgorithm")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1IssuerSpecAcmeExternalAccountBindingKeyAlgorithmEnum>))]
-    public V1IssuerSpecAcmeExternalAccountBindingKeyAlgorithmEnum? KeyAlgorithm { get; set; }
+    public string? KeyAlgorithm { get; set; }
 
     /// <summary>keyID is the ID of the CA key that the External Account is bound to.</summary>
     [JsonPropertyName("keyID")]
@@ -166,24 +150,6 @@ public partial class V1IssuerSpecAcmeSolversDns01AzureDNSClientSecretSecretRef
     public string Name { get; set; }
 }
 
-/// <summary>name of the Azure environment (default AzurePublicCloud)</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1IssuerSpecAcmeSolversDns01AzureDNSEnvironmentEnum
-{
-    [EnumMember(Value = "AzurePublicCloud"), JsonStringEnumMemberName("AzurePublicCloud")]
-    /// <summary>AzurePublicCloud</summary>
-    AzurePublicCloud,
-    [EnumMember(Value = "AzureChinaCloud"), JsonStringEnumMemberName("AzureChinaCloud")]
-    /// <summary>AzureChinaCloud</summary>
-    AzureChinaCloud,
-    [EnumMember(Value = "AzureGermanCloud"), JsonStringEnumMemberName("AzureGermanCloud")]
-    /// <summary>AzureGermanCloud</summary>
-    AzureGermanCloud,
-    [EnumMember(Value = "AzureUSGovernmentCloud"), JsonStringEnumMemberName("AzureUSGovernmentCloud")]
-    /// <summary>AzureUSGovernmentCloud</summary>
-    AzureUSGovernmentCloud
-}
-
 /// <summary>Auth: Azure Workload Identity or Azure Managed Service Identity: Settings to enable Azure Workload Identity or Azure Managed Service Identity If set, ClientID, ClientSecret and TenantID must not be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IssuerSpecAcmeSolversDns01AzureDNSManagedIdentity
@@ -211,8 +177,7 @@ public partial class V1IssuerSpecAcmeSolversDns01AzureDNS
 
     /// <summary>name of the Azure environment (default AzurePublicCloud)</summary>
     [JsonPropertyName("environment")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1IssuerSpecAcmeSolversDns01AzureDNSEnvironmentEnum>))]
-    public V1IssuerSpecAcmeSolversDns01AzureDNSEnvironmentEnum? Environment { get; set; }
+    public string? Environment { get; set; }
 
     /// <summary>name of the DNS zone that should be used</summary>
     [JsonPropertyName("hostedZoneName")]
@@ -306,18 +271,6 @@ public partial class V1IssuerSpecAcmeSolversDns01Cloudflare
     /// <summary>Email of the account, only required when using API key based authentication.</summary>
     [JsonPropertyName("email")]
     public string? Email { get; set; }
-}
-
-/// <summary>CNAMEStrategy configures how the DNS01 provider should handle CNAME records when found in DNS zones.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1IssuerSpecAcmeSolversDns01CnameStrategyEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Follow"), JsonStringEnumMemberName("Follow")]
-    /// <summary>Follow</summary>
-    Follow
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
@@ -509,8 +462,7 @@ public partial class V1IssuerSpecAcmeSolversDns01
 
     /// <summary>CNAMEStrategy configures how the DNS01 provider should handle CNAME records when found in DNS zones.</summary>
     [JsonPropertyName("cnameStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1IssuerSpecAcmeSolversDns01CnameStrategyEnum>))]
-    public V1IssuerSpecAcmeSolversDns01CnameStrategyEnum? CnameStrategy { get; set; }
+    public string? CnameStrategy { get; set; }
 
     /// <summary>Use the DigitalOcean DNS API to manage DNS01 challenge records.</summary>
     [JsonPropertyName("digitalocean")]
@@ -1685,21 +1637,6 @@ public partial class V1IssuerStatusAcme
     public string? Uri { get; set; }
 }
 
-/// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1IssuerStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>IssuerCondition contains condition information for an Issuer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IssuerStatusConditions
@@ -1722,8 +1659,7 @@ public partial class V1IssuerStatusConditions
 
     /// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1IssuerStatusConditionsStatusEnum>))]
-    public V1IssuerStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>Type of the condition, known values are (`Ready`).</summary>
     [JsonPropertyName("type")]

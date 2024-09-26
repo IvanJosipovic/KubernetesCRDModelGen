@@ -8,54 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
-/// <summary>EventSeverity specifies how to filter events based on severity. If set to 'info' no events will be filtered.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta3AlertSpecEventSeverityEnum
-{
-    [EnumMember(Value = "info"), JsonStringEnumMemberName("info")]
-    /// <summary>info</summary>
-    Info,
-    [EnumMember(Value = "error"), JsonStringEnumMemberName("error")]
-    /// <summary>error</summary>
-    Error
-}
-
-/// <summary>Kind of the referent</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta3AlertSpecEventSourcesKindEnum
-{
-    [EnumMember(Value = "Bucket"), JsonStringEnumMemberName("Bucket")]
-    /// <summary>Bucket</summary>
-    Bucket,
-    [EnumMember(Value = "GitRepository"), JsonStringEnumMemberName("GitRepository")]
-    /// <summary>GitRepository</summary>
-    GitRepository,
-    [EnumMember(Value = "Kustomization"), JsonStringEnumMemberName("Kustomization")]
-    /// <summary>Kustomization</summary>
-    Kustomization,
-    [EnumMember(Value = "HelmRelease"), JsonStringEnumMemberName("HelmRelease")]
-    /// <summary>HelmRelease</summary>
-    HelmRelease,
-    [EnumMember(Value = "HelmChart"), JsonStringEnumMemberName("HelmChart")]
-    /// <summary>HelmChart</summary>
-    HelmChart,
-    [EnumMember(Value = "HelmRepository"), JsonStringEnumMemberName("HelmRepository")]
-    /// <summary>HelmRepository</summary>
-    HelmRepository,
-    [EnumMember(Value = "ImageRepository"), JsonStringEnumMemberName("ImageRepository")]
-    /// <summary>ImageRepository</summary>
-    ImageRepository,
-    [EnumMember(Value = "ImagePolicy"), JsonStringEnumMemberName("ImagePolicy")]
-    /// <summary>ImagePolicy</summary>
-    ImagePolicy,
-    [EnumMember(Value = "ImageUpdateAutomation"), JsonStringEnumMemberName("ImageUpdateAutomation")]
-    /// <summary>ImageUpdateAutomation</summary>
-    ImageUpdateAutomation,
-    [EnumMember(Value = "OCIRepository"), JsonStringEnumMemberName("OCIRepository")]
-    /// <summary>OCIRepository</summary>
-    OCIRepository
-}
-
 /// <summary>CrossNamespaceObjectReference contains enough information to let you locate the typed referenced object at cluster level</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3AlertSpecEventSources
@@ -66,8 +18,7 @@ public partial class V1beta3AlertSpecEventSources
 
     /// <summary>Kind of the referent</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta3AlertSpecEventSourcesKindEnum>))]
-    public V1beta3AlertSpecEventSourcesKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed. MatchLabels requires the name to be set to `*`.</summary>
     [JsonPropertyName("matchLabels")]
@@ -101,8 +52,7 @@ public partial class V1beta3AlertSpec
 
     /// <summary>EventSeverity specifies how to filter events based on severity. If set to 'info' no events will be filtered.</summary>
     [JsonPropertyName("eventSeverity")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta3AlertSpecEventSeverityEnum>))]
-    public V1beta3AlertSpecEventSeverityEnum? EventSeverity { get; set; }
+    public string? EventSeverity { get; set; }
 
     /// <summary>EventSources specifies how to filter events based on the involved object kind, name and namespace.</summary>
     [JsonPropertyName("eventSources")]

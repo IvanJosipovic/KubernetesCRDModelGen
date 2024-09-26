@@ -131,18 +131,6 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirror
     public V1HTTPRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef BackendRef { get; set; }
 }
 
-/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPathTypeEnum
-{
-    [EnumMember(Value = "ReplaceFullPath"), JsonStringEnumMemberName("ReplaceFullPath")]
-    /// <summary>ReplaceFullPath</summary>
-    ReplaceFullPath,
-    [EnumMember(Value = "ReplacePrefixMatch"), JsonStringEnumMemberName("ReplacePrefixMatch")]
-    /// <summary>ReplacePrefixMatch</summary>
-    ReplacePrefixMatch
-}
-
 /// <summary>Path defines parameters used to modify the path of the incoming request. The modified path is then used to construct the `Location` header. When empty, the request path is used as-is.   Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPath
@@ -157,20 +145,7 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPath
 
     /// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPathTypeEnum>))]
-    public V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectPathTypeEnum Type { get; set; }
-}
-
-/// <summary>Scheme is the scheme to be used in the value of the `Location` header in the response. When empty, the scheme of the request is used.   Scheme redirects can affect the port of the redirect, for more information, refer to the documentation for the port field of this filter.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Extended</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectSchemeEnum
-{
-    [EnumMember(Value = "http"), JsonStringEnumMemberName("http")]
-    /// <summary>http</summary>
-    Http,
-    [EnumMember(Value = "https"), JsonStringEnumMemberName("https")]
-    /// <summary>https</summary>
-    Https
+    public string Type { get; set; }
 }
 
 /// <summary>RequestRedirect defines a schema for a filter that responds to the request with an HTTP redirection.   Support: Core</summary>
@@ -191,8 +166,7 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirect
 
     /// <summary>Scheme is the scheme to be used in the value of the `Location` header in the response. When empty, the scheme of the request is used.   Scheme redirects can affect the port of the redirect, for more information, refer to the documentation for the port field of this filter.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Extended</summary>
     [JsonPropertyName("scheme")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectSchemeEnum>))]
-    public V1HTTPRouteSpecRulesBackendRefsFiltersRequestRedirectSchemeEnum? Scheme { get; set; }
+    public string? Scheme { get; set; }
 
     /// <summary>StatusCode is the HTTP status code to be used in response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Core</summary>
     [JsonPropertyName("statusCode")]
@@ -242,42 +216,6 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
     public IList<V1HTTPRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
-/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations must support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by   specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` should be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesBackendRefsFiltersTypeEnum
-{
-    [EnumMember(Value = "RequestHeaderModifier"), JsonStringEnumMemberName("RequestHeaderModifier")]
-    /// <summary>RequestHeaderModifier</summary>
-    RequestHeaderModifier,
-    [EnumMember(Value = "ResponseHeaderModifier"), JsonStringEnumMemberName("ResponseHeaderModifier")]
-    /// <summary>ResponseHeaderModifier</summary>
-    ResponseHeaderModifier,
-    [EnumMember(Value = "RequestMirror"), JsonStringEnumMemberName("RequestMirror")]
-    /// <summary>RequestMirror</summary>
-    RequestMirror,
-    [EnumMember(Value = "RequestRedirect"), JsonStringEnumMemberName("RequestRedirect")]
-    /// <summary>RequestRedirect</summary>
-    RequestRedirect,
-    [EnumMember(Value = "URLRewrite"), JsonStringEnumMemberName("URLRewrite")]
-    /// <summary>URLRewrite</summary>
-    URLRewrite,
-    [EnumMember(Value = "ExtensionRef"), JsonStringEnumMemberName("ExtensionRef")]
-    /// <summary>ExtensionRef</summary>
-    ExtensionRef
-}
-
-/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePathTypeEnum
-{
-    [EnumMember(Value = "ReplaceFullPath"), JsonStringEnumMemberName("ReplaceFullPath")]
-    /// <summary>ReplaceFullPath</summary>
-    ReplaceFullPath,
-    [EnumMember(Value = "ReplacePrefixMatch"), JsonStringEnumMemberName("ReplacePrefixMatch")]
-    /// <summary>ReplacePrefixMatch</summary>
-    ReplacePrefixMatch
-}
-
 /// <summary>Path defines a path rewrite.   Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePath
@@ -292,8 +230,7 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePath
 
     /// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePathTypeEnum>))]
-    public V1HTTPRouteSpecRulesBackendRefsFiltersUrlRewritePathTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>URLRewrite defines a schema for a filter that modifies a request during forwarding.   Support: Extended</summary>
@@ -335,8 +272,7 @@ public partial class V1HTTPRouteSpecRulesBackendRefsFilters
 
     /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations must support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by   specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` should be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesBackendRefsFiltersTypeEnum>))]
-    public V1HTTPRouteSpecRulesBackendRefsFiltersTypeEnum Type { get; set; }
+    public string Type { get; set; }
 
     /// <summary>URLRewrite defines a schema for a filter that modifies a request during forwarding.   Support: Extended</summary>
     [JsonPropertyName("urlRewrite")]
@@ -470,18 +406,6 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestMirror
     public V1HTTPRouteSpecRulesFiltersRequestMirrorBackendRef BackendRef { get; set; }
 }
 
-/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesFiltersRequestRedirectPathTypeEnum
-{
-    [EnumMember(Value = "ReplaceFullPath"), JsonStringEnumMemberName("ReplaceFullPath")]
-    /// <summary>ReplaceFullPath</summary>
-    ReplaceFullPath,
-    [EnumMember(Value = "ReplacePrefixMatch"), JsonStringEnumMemberName("ReplacePrefixMatch")]
-    /// <summary>ReplacePrefixMatch</summary>
-    ReplacePrefixMatch
-}
-
 /// <summary>Path defines parameters used to modify the path of the incoming request. The modified path is then used to construct the `Location` header. When empty, the request path is used as-is.   Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersRequestRedirectPath
@@ -496,20 +420,7 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestRedirectPath
 
     /// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesFiltersRequestRedirectPathTypeEnum>))]
-    public V1HTTPRouteSpecRulesFiltersRequestRedirectPathTypeEnum Type { get; set; }
-}
-
-/// <summary>Scheme is the scheme to be used in the value of the `Location` header in the response. When empty, the scheme of the request is used.   Scheme redirects can affect the port of the redirect, for more information, refer to the documentation for the port field of this filter.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Extended</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesFiltersRequestRedirectSchemeEnum
-{
-    [EnumMember(Value = "http"), JsonStringEnumMemberName("http")]
-    /// <summary>http</summary>
-    Http,
-    [EnumMember(Value = "https"), JsonStringEnumMemberName("https")]
-    /// <summary>https</summary>
-    Https
+    public string Type { get; set; }
 }
 
 /// <summary>RequestRedirect defines a schema for a filter that responds to the request with an HTTP redirection.   Support: Core</summary>
@@ -530,8 +441,7 @@ public partial class V1HTTPRouteSpecRulesFiltersRequestRedirect
 
     /// <summary>Scheme is the scheme to be used in the value of the `Location` header in the response. When empty, the scheme of the request is used.   Scheme redirects can affect the port of the redirect, for more information, refer to the documentation for the port field of this filter.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Extended</summary>
     [JsonPropertyName("scheme")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesFiltersRequestRedirectSchemeEnum>))]
-    public V1HTTPRouteSpecRulesFiltersRequestRedirectSchemeEnum? Scheme { get; set; }
+    public string? Scheme { get; set; }
 
     /// <summary>StatusCode is the HTTP status code to be used in response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.   Support: Core</summary>
     [JsonPropertyName("statusCode")]
@@ -581,42 +491,6 @@ public partial class V1HTTPRouteSpecRulesFiltersResponseHeaderModifier
     public IList<V1HTTPRouteSpecRulesFiltersResponseHeaderModifierSet>? Set { get; set; }
 }
 
-/// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations must support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by   specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` should be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesFiltersTypeEnum
-{
-    [EnumMember(Value = "RequestHeaderModifier"), JsonStringEnumMemberName("RequestHeaderModifier")]
-    /// <summary>RequestHeaderModifier</summary>
-    RequestHeaderModifier,
-    [EnumMember(Value = "ResponseHeaderModifier"), JsonStringEnumMemberName("ResponseHeaderModifier")]
-    /// <summary>ResponseHeaderModifier</summary>
-    ResponseHeaderModifier,
-    [EnumMember(Value = "RequestMirror"), JsonStringEnumMemberName("RequestMirror")]
-    /// <summary>RequestMirror</summary>
-    RequestMirror,
-    [EnumMember(Value = "RequestRedirect"), JsonStringEnumMemberName("RequestRedirect")]
-    /// <summary>RequestRedirect</summary>
-    RequestRedirect,
-    [EnumMember(Value = "URLRewrite"), JsonStringEnumMemberName("URLRewrite")]
-    /// <summary>URLRewrite</summary>
-    URLRewrite,
-    [EnumMember(Value = "ExtensionRef"), JsonStringEnumMemberName("ExtensionRef")]
-    /// <summary>ExtensionRef</summary>
-    ExtensionRef
-}
-
-/// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesFiltersUrlRewritePathTypeEnum
-{
-    [EnumMember(Value = "ReplaceFullPath"), JsonStringEnumMemberName("ReplaceFullPath")]
-    /// <summary>ReplaceFullPath</summary>
-    ReplaceFullPath,
-    [EnumMember(Value = "ReplacePrefixMatch"), JsonStringEnumMemberName("ReplacePrefixMatch")]
-    /// <summary>ReplacePrefixMatch</summary>
-    ReplacePrefixMatch
-}
-
 /// <summary>Path defines a path rewrite.   Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecRulesFiltersUrlRewritePath
@@ -631,8 +505,7 @@ public partial class V1HTTPRouteSpecRulesFiltersUrlRewritePath
 
     /// <summary>Type defines the type of path modifier. Additional types may be added in a future release of the API.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesFiltersUrlRewritePathTypeEnum>))]
-    public V1HTTPRouteSpecRulesFiltersUrlRewritePathTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>URLRewrite defines a schema for a filter that modifies a request during forwarding.   Support: Extended</summary>
@@ -674,24 +547,11 @@ public partial class V1HTTPRouteSpecRulesFilters
 
     /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:   - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations must support core filters.   - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.   - Implementation-specific: Filters that are defined and supported by   specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` should be set to   "ExtensionRef" for custom filters.   Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.   If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.   Note that values may be added to this enum, implementations must ensure that unknown values will not cause a crash.   Unknown values here must result in the implementation setting the Accepted Condition for the Route to `status: False`, with a Reason of `UnsupportedValue`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesFiltersTypeEnum>))]
-    public V1HTTPRouteSpecRulesFiltersTypeEnum Type { get; set; }
+    public string Type { get; set; }
 
     /// <summary>URLRewrite defines a schema for a filter that modifies a request during forwarding.   Support: Extended</summary>
     [JsonPropertyName("urlRewrite")]
     public V1HTTPRouteSpecRulesFiltersUrlRewrite? UrlRewrite { get; set; }
-}
-
-/// <summary>Type specifies how to match against the value of the header.   Support: Core (Exact)   Support: Implementation-specific (RegularExpression)   Since RegularExpression HeaderMatchType has implementation-specific conformance, implementations can support POSIX, PCRE or any other dialects of regular expressions. Please read the implementation's documentation to determine the supported dialect.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesMatchesHeadersTypeEnum
-{
-    [EnumMember(Value = "Exact"), JsonStringEnumMemberName("Exact")]
-    /// <summary>Exact</summary>
-    Exact,
-    [EnumMember(Value = "RegularExpression"), JsonStringEnumMemberName("RegularExpression")]
-    /// <summary>RegularExpression</summary>
-    RegularExpression
 }
 
 /// <summary>HTTPHeaderMatch describes how to select a HTTP route by matching HTTP request headers.</summary>
@@ -704,60 +564,11 @@ public partial class V1HTTPRouteSpecRulesMatchesHeaders
 
     /// <summary>Type specifies how to match against the value of the header.   Support: Core (Exact)   Support: Implementation-specific (RegularExpression)   Since RegularExpression HeaderMatchType has implementation-specific conformance, implementations can support POSIX, PCRE or any other dialects of regular expressions. Please read the implementation's documentation to determine the supported dialect.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesMatchesHeadersTypeEnum>))]
-    public V1HTTPRouteSpecRulesMatchesHeadersTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>Value is the value of HTTP Header to be matched.</summary>
     [JsonPropertyName("value")]
     public string Value { get; set; }
-}
-
-/// <summary>Method specifies HTTP method matcher. When specified, this route will be matched only if the request has the specified method.   Support: Extended</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesMatchesMethodEnum
-{
-    [EnumMember(Value = "GET"), JsonStringEnumMemberName("GET")]
-    /// <summary>GET</summary>
-    GET,
-    [EnumMember(Value = "HEAD"), JsonStringEnumMemberName("HEAD")]
-    /// <summary>HEAD</summary>
-    HEAD,
-    [EnumMember(Value = "POST"), JsonStringEnumMemberName("POST")]
-    /// <summary>POST</summary>
-    POST,
-    [EnumMember(Value = "PUT"), JsonStringEnumMemberName("PUT")]
-    /// <summary>PUT</summary>
-    PUT,
-    [EnumMember(Value = "DELETE"), JsonStringEnumMemberName("DELETE")]
-    /// <summary>DELETE</summary>
-    DELETE,
-    [EnumMember(Value = "CONNECT"), JsonStringEnumMemberName("CONNECT")]
-    /// <summary>CONNECT</summary>
-    CONNECT,
-    [EnumMember(Value = "OPTIONS"), JsonStringEnumMemberName("OPTIONS")]
-    /// <summary>OPTIONS</summary>
-    OPTIONS,
-    [EnumMember(Value = "TRACE"), JsonStringEnumMemberName("TRACE")]
-    /// <summary>TRACE</summary>
-    TRACE,
-    [EnumMember(Value = "PATCH"), JsonStringEnumMemberName("PATCH")]
-    /// <summary>PATCH</summary>
-    PATCH
-}
-
-/// <summary>Type specifies how to match against the path Value.   Support: Core (Exact, PathPrefix)   Support: Implementation-specific (RegularExpression)</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesMatchesPathTypeEnum
-{
-    [EnumMember(Value = "Exact"), JsonStringEnumMemberName("Exact")]
-    /// <summary>Exact</summary>
-    Exact,
-    [EnumMember(Value = "PathPrefix"), JsonStringEnumMemberName("PathPrefix")]
-    /// <summary>PathPrefix</summary>
-    PathPrefix,
-    [EnumMember(Value = "RegularExpression"), JsonStringEnumMemberName("RegularExpression")]
-    /// <summary>RegularExpression</summary>
-    RegularExpression
 }
 
 /// <summary>Path specifies a HTTP request path matcher. If this field is not specified, a default prefix match on the "/" path is provided.</summary>
@@ -766,24 +577,11 @@ public partial class V1HTTPRouteSpecRulesMatchesPath
 {
     /// <summary>Type specifies how to match against the path Value.   Support: Core (Exact, PathPrefix)   Support: Implementation-specific (RegularExpression)</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesMatchesPathTypeEnum>))]
-    public V1HTTPRouteSpecRulesMatchesPathTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>Value of the HTTP path to match against.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
-}
-
-/// <summary>Type specifies how to match against the value of the query parameter.   Support: Extended (Exact)   Support: Implementation-specific (RegularExpression)   Since RegularExpression QueryParamMatchType has Implementation-specific conformance, implementations can support POSIX, PCRE or any other dialects of regular expressions. Please read the implementation's documentation to determine the supported dialect.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteSpecRulesMatchesQueryParamsTypeEnum
-{
-    [EnumMember(Value = "Exact"), JsonStringEnumMemberName("Exact")]
-    /// <summary>Exact</summary>
-    Exact,
-    [EnumMember(Value = "RegularExpression"), JsonStringEnumMemberName("RegularExpression")]
-    /// <summary>RegularExpression</summary>
-    RegularExpression
 }
 
 /// <summary>HTTPQueryParamMatch describes how to select a HTTP route by matching HTTP query parameters.</summary>
@@ -796,8 +594,7 @@ public partial class V1HTTPRouteSpecRulesMatchesQueryParams
 
     /// <summary>Type specifies how to match against the value of the query parameter.   Support: Extended (Exact)   Support: Implementation-specific (RegularExpression)   Since RegularExpression QueryParamMatchType has Implementation-specific conformance, implementations can support POSIX, PCRE or any other dialects of regular expressions. Please read the implementation's documentation to determine the supported dialect.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesMatchesQueryParamsTypeEnum>))]
-    public V1HTTPRouteSpecRulesMatchesQueryParamsTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>Value is the value of HTTP query param to be matched.</summary>
     [JsonPropertyName("value")]
@@ -814,8 +611,7 @@ public partial class V1HTTPRouteSpecRulesMatches
 
     /// <summary>Method specifies HTTP method matcher. When specified, this route will be matched only if the request has the specified method.   Support: Extended</summary>
     [JsonPropertyName("method")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteSpecRulesMatchesMethodEnum>))]
-    public V1HTTPRouteSpecRulesMatchesMethodEnum? Method { get; set; }
+    public string? Method { get; set; }
 
     /// <summary>Path specifies a HTTP request path matcher. If this field is not specified, a default prefix match on the "/" path is provided.</summary>
     [JsonPropertyName("path")]
@@ -860,21 +656,6 @@ public partial class V1HTTPRouteSpec
     public IList<V1HTTPRouteSpecRules>? Rules { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HTTPRouteStatusParentsConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteStatusParentsConditions
@@ -897,8 +678,7 @@ public partial class V1HTTPRouteStatusParentsConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HTTPRouteStatusParentsConditionsStatusEnum>))]
-    public V1HTTPRouteStatusParentsConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

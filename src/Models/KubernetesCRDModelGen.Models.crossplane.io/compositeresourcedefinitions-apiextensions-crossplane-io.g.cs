@@ -101,18 +101,6 @@ public partial class V1CompositeResourceDefinitionSpecConversion
     public V1CompositeResourceDefinitionSpecConversionWebhook? Webhook { get; set; }
 }
 
-/// <summary>DefaultCompositeDeletePolicy is the policy used when deleting the Composite that is associated with the Claim if no policy has been specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositeResourceDefinitionSpecDefaultCompositeDeletePolicyEnum
-{
-    [EnumMember(Value = "Background"), JsonStringEnumMemberName("Background")]
-    /// <summary>Background</summary>
-    Background,
-    [EnumMember(Value = "Foreground"), JsonStringEnumMemberName("Foreground")]
-    /// <summary>Foreground</summary>
-    Foreground
-}
-
 /// <summary>DefaultCompositionRef refers to the Composition resource that will be used in case no composition selector is given.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecDefaultCompositionRef
@@ -120,18 +108,6 @@ public partial class V1CompositeResourceDefinitionSpecDefaultCompositionRef
     /// <summary>Name of the Composition.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
-}
-
-/// <summary>DefaultCompositionUpdatePolicy is the policy used when updating composites after a new Composition Revision has been created if no policy has been specified on the composite.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositeResourceDefinitionSpecDefaultCompositionUpdatePolicyEnum
-{
-    [EnumMember(Value = "Automatic"), JsonStringEnumMemberName("Automatic")]
-    /// <summary>Automatic</summary>
-    Automatic,
-    [EnumMember(Value = "Manual"), JsonStringEnumMemberName("Manual")]
-    /// <summary>Manual</summary>
-    Manual
 }
 
 /// <summary>EnforcedCompositionRef refers to the Composition resource that will be used by all composite instances whose schema is defined by this definition.</summary>
@@ -274,8 +250,7 @@ public partial class V1CompositeResourceDefinitionSpec
 
     /// <summary>DefaultCompositeDeletePolicy is the policy used when deleting the Composite that is associated with the Claim if no policy has been specified.</summary>
     [JsonPropertyName("defaultCompositeDeletePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositeResourceDefinitionSpecDefaultCompositeDeletePolicyEnum>))]
-    public V1CompositeResourceDefinitionSpecDefaultCompositeDeletePolicyEnum? DefaultCompositeDeletePolicy { get; set; }
+    public string? DefaultCompositeDeletePolicy { get; set; }
 
     /// <summary>DefaultCompositionRef refers to the Composition resource that will be used in case no composition selector is given.</summary>
     [JsonPropertyName("defaultCompositionRef")]
@@ -283,8 +258,7 @@ public partial class V1CompositeResourceDefinitionSpec
 
     /// <summary>DefaultCompositionUpdatePolicy is the policy used when updating composites after a new Composition Revision has been created if no policy has been specified on the composite.</summary>
     [JsonPropertyName("defaultCompositionUpdatePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositeResourceDefinitionSpecDefaultCompositionUpdatePolicyEnum>))]
-    public V1CompositeResourceDefinitionSpecDefaultCompositionUpdatePolicyEnum? DefaultCompositionUpdatePolicy { get; set; }
+    public string? DefaultCompositionUpdatePolicy { get; set; }
 
     /// <summary>EnforcedCompositionRef refers to the Composition resource that will be used by all composite instances whose schema is defined by this definition.</summary>
     [JsonPropertyName("enforcedCompositionRef")]

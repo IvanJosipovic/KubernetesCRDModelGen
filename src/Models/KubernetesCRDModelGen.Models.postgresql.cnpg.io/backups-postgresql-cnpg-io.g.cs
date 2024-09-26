@@ -17,21 +17,6 @@ public partial class V1BackupSpecCluster
     public string Name { get; set; }
 }
 
-/// <summary>The backup method to be used, possible options are `barmanObjectStore`, `volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1BackupSpecMethodEnum
-{
-    [EnumMember(Value = "barmanObjectStore"), JsonStringEnumMemberName("barmanObjectStore")]
-    /// <summary>barmanObjectStore</summary>
-    BarmanObjectStore,
-    [EnumMember(Value = "volumeSnapshot"), JsonStringEnumMemberName("volumeSnapshot")]
-    /// <summary>volumeSnapshot</summary>
-    VolumeSnapshot,
-    [EnumMember(Value = "plugin"), JsonStringEnumMemberName("plugin")]
-    /// <summary>plugin</summary>
-    Plugin
-}
-
 /// <summary>Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupSpecOnlineConfiguration
@@ -58,18 +43,6 @@ public partial class V1BackupSpecPluginConfiguration
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
-/// <summary>The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1BackupSpecTargetEnum
-{
-    [EnumMember(Value = "primary"), JsonStringEnumMemberName("primary")]
-    /// <summary>primary</summary>
-    Primary,
-    [EnumMember(Value = "prefer-standby"), JsonStringEnumMemberName("prefer-standby")]
-    /// <summary>prefer-standby</summary>
-    PreferStandby
-}
-
 /// <summary>Specification of the desired behavior of the backup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BackupSpec
@@ -80,8 +53,7 @@ public partial class V1BackupSpec
 
     /// <summary>The backup method to be used, possible options are `barmanObjectStore`, `volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`.</summary>
     [JsonPropertyName("method")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1BackupSpecMethodEnum>))]
-    public V1BackupSpecMethodEnum? Method { get; set; }
+    public string? Method { get; set; }
 
     /// <summary>Whether the default type of backup with volume snapshots is online/hot (`true`, default) or offline/cold (`false`) Overrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'</summary>
     [JsonPropertyName("online")]
@@ -97,8 +69,7 @@ public partial class V1BackupSpec
 
     /// <summary>The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
     [JsonPropertyName("target")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1BackupSpecTargetEnum>))]
-    public V1BackupSpecTargetEnum? Target { get; set; }
+    public string? Target { get; set; }
 }
 
 /// <summary>The connection string to be used</summary>

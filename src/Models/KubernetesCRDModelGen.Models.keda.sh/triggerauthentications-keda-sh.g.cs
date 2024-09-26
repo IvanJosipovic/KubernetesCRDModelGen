@@ -118,39 +118,6 @@ public partial class V1alpha1TriggerAuthenticationSpecAwsSecretManagerCredential
     public V1alpha1TriggerAuthenticationSpecAwsSecretManagerCredentialsAccessToken? AccessToken { get; set; }
 }
 
-/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentityIdentityOwnerEnum
-{
-    [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
-    /// <summary>keda</summary>
-    Keda,
-    [EnumMember(Value = "workload"), JsonStringEnumMemberName("workload")]
-    /// <summary>workload</summary>
-    Workload
-}
-
-/// <summary>PodIdentityProvider contains the list of providers</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentityProviderEnum
-{
-    [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
-    /// <summary>azure-workload</summary>
-    AzureWorkload,
-    [EnumMember(Value = "gcp"), JsonStringEnumMemberName("gcp")]
-    /// <summary>gcp</summary>
-    Gcp,
-    [EnumMember(Value = "aws"), JsonStringEnumMemberName("aws")]
-    /// <summary>aws</summary>
-    Aws,
-    [EnumMember(Value = "aws-eks"), JsonStringEnumMemberName("aws-eks")]
-    /// <summary>aws-eks</summary>
-    AwsEks,
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None
-}
-
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentity
@@ -165,8 +132,7 @@ public partial class V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentit
 
     /// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
     [JsonPropertyName("identityOwner")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentityIdentityOwnerEnum>))]
-    public V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentityIdentityOwnerEnum? IdentityOwner { get; set; }
+    public string? IdentityOwner { get; set; }
 
     /// <summary>Set identityTenantId to override the default Azure tenant id. If this is set, then the IdentityID must also be set</summary>
     [JsonPropertyName("identityTenantId")]
@@ -174,8 +140,7 @@ public partial class V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentit
 
     /// <summary>PodIdentityProvider contains the list of providers</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentityProviderEnum>))]
-    public V1alpha1TriggerAuthenticationSpecAwsSecretManagerPodIdentityProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>RoleArn sets the AWS RoleArn to be used. Mutually exclusive with IdentityOwner</summary>
     [JsonPropertyName("roleArn")]
@@ -289,39 +254,6 @@ public partial class V1alpha1TriggerAuthenticationSpecAzureKeyVaultCredentials
     public string TenantId { get; set; }
 }
 
-/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentityIdentityOwnerEnum
-{
-    [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
-    /// <summary>keda</summary>
-    Keda,
-    [EnumMember(Value = "workload"), JsonStringEnumMemberName("workload")]
-    /// <summary>workload</summary>
-    Workload
-}
-
-/// <summary>PodIdentityProvider contains the list of providers</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentityProviderEnum
-{
-    [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
-    /// <summary>azure-workload</summary>
-    AzureWorkload,
-    [EnumMember(Value = "gcp"), JsonStringEnumMemberName("gcp")]
-    /// <summary>gcp</summary>
-    Gcp,
-    [EnumMember(Value = "aws"), JsonStringEnumMemberName("aws")]
-    /// <summary>aws</summary>
-    Aws,
-    [EnumMember(Value = "aws-eks"), JsonStringEnumMemberName("aws-eks")]
-    /// <summary>aws-eks</summary>
-    AwsEks,
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None
-}
-
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentity
@@ -336,8 +268,7 @@ public partial class V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentity
 
     /// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
     [JsonPropertyName("identityOwner")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentityIdentityOwnerEnum>))]
-    public V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentityIdentityOwnerEnum? IdentityOwner { get; set; }
+    public string? IdentityOwner { get; set; }
 
     /// <summary>Set identityTenantId to override the default Azure tenant id. If this is set, then the IdentityID must also be set</summary>
     [JsonPropertyName("identityTenantId")]
@@ -345,8 +276,7 @@ public partial class V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentity
 
     /// <summary>PodIdentityProvider contains the list of providers</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentityProviderEnum>))]
-    public V1alpha1TriggerAuthenticationSpecAzureKeyVaultPodIdentityProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>RoleArn sets the AWS RoleArn to be used. Mutually exclusive with IdentityOwner</summary>
     [JsonPropertyName("roleArn")]
@@ -469,39 +399,6 @@ public partial class V1alpha1TriggerAuthenticationSpecGcpSecretManagerCredential
     public V1alpha1TriggerAuthenticationSpecGcpSecretManagerCredentialsClientSecret ClientSecret { get; set; }
 }
 
-/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentityIdentityOwnerEnum
-{
-    [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
-    /// <summary>keda</summary>
-    Keda,
-    [EnumMember(Value = "workload"), JsonStringEnumMemberName("workload")]
-    /// <summary>workload</summary>
-    Workload
-}
-
-/// <summary>PodIdentityProvider contains the list of providers</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentityProviderEnum
-{
-    [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
-    /// <summary>azure-workload</summary>
-    AzureWorkload,
-    [EnumMember(Value = "gcp"), JsonStringEnumMemberName("gcp")]
-    /// <summary>gcp</summary>
-    Gcp,
-    [EnumMember(Value = "aws"), JsonStringEnumMemberName("aws")]
-    /// <summary>aws</summary>
-    Aws,
-    [EnumMember(Value = "aws-eks"), JsonStringEnumMemberName("aws-eks")]
-    /// <summary>aws-eks</summary>
-    AwsEks,
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None
-}
-
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentity
@@ -516,8 +413,7 @@ public partial class V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentit
 
     /// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
     [JsonPropertyName("identityOwner")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentityIdentityOwnerEnum>))]
-    public V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentityIdentityOwnerEnum? IdentityOwner { get; set; }
+    public string? IdentityOwner { get; set; }
 
     /// <summary>Set identityTenantId to override the default Azure tenant id. If this is set, then the IdentityID must also be set</summary>
     [JsonPropertyName("identityTenantId")]
@@ -525,8 +421,7 @@ public partial class V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentit
 
     /// <summary>PodIdentityProvider contains the list of providers</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentityProviderEnum>))]
-    public V1alpha1TriggerAuthenticationSpecGcpSecretManagerPodIdentityProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>RoleArn sets the AWS RoleArn to be used. Mutually exclusive with IdentityOwner</summary>
     [JsonPropertyName("roleArn")]
@@ -671,39 +566,6 @@ public partial class V1alpha1TriggerAuthenticationSpecHashiCorpVault
     public IList<V1alpha1TriggerAuthenticationSpecHashiCorpVaultSecrets> Secrets { get; set; }
 }
 
-/// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecPodIdentityIdentityOwnerEnum
-{
-    [EnumMember(Value = "keda"), JsonStringEnumMemberName("keda")]
-    /// <summary>keda</summary>
-    Keda,
-    [EnumMember(Value = "workload"), JsonStringEnumMemberName("workload")]
-    /// <summary>workload</summary>
-    Workload
-}
-
-/// <summary>PodIdentityProvider contains the list of providers</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TriggerAuthenticationSpecPodIdentityProviderEnum
-{
-    [EnumMember(Value = "azure-workload"), JsonStringEnumMemberName("azure-workload")]
-    /// <summary>azure-workload</summary>
-    AzureWorkload,
-    [EnumMember(Value = "gcp"), JsonStringEnumMemberName("gcp")]
-    /// <summary>gcp</summary>
-    Gcp,
-    [EnumMember(Value = "aws"), JsonStringEnumMemberName("aws")]
-    /// <summary>aws</summary>
-    Aws,
-    [EnumMember(Value = "aws-eks"), JsonStringEnumMemberName("aws-eks")]
-    /// <summary>aws-eks</summary>
-    AwsEks,
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None
-}
-
 /// <summary>AuthPodIdentity allows users to select the platform native identity mechanism</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TriggerAuthenticationSpecPodIdentity
@@ -718,8 +580,7 @@ public partial class V1alpha1TriggerAuthenticationSpecPodIdentity
 
     /// <summary>IdentityOwner configures which identity has to be used during auto discovery, keda or the scaled workload. Mutually exclusive with roleArn</summary>
     [JsonPropertyName("identityOwner")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecPodIdentityIdentityOwnerEnum>))]
-    public V1alpha1TriggerAuthenticationSpecPodIdentityIdentityOwnerEnum? IdentityOwner { get; set; }
+    public string? IdentityOwner { get; set; }
 
     /// <summary>Set identityTenantId to override the default Azure tenant id. If this is set, then the IdentityID must also be set</summary>
     [JsonPropertyName("identityTenantId")]
@@ -727,8 +588,7 @@ public partial class V1alpha1TriggerAuthenticationSpecPodIdentity
 
     /// <summary>PodIdentityProvider contains the list of providers</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TriggerAuthenticationSpecPodIdentityProviderEnum>))]
-    public V1alpha1TriggerAuthenticationSpecPodIdentityProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>RoleArn sets the AWS RoleArn to be used. Mutually exclusive with IdentityOwner</summary>
     [JsonPropertyName("roleArn")]

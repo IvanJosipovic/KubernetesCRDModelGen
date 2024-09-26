@@ -176,63 +176,16 @@ public partial class V1alpha1AnalysisTemplateSpecMetricsProviderCloudWatch
 }
 
 /// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1AnalysisTemplateSpecMetricsProviderDatadogAggregatorEnum
-{
-    [EnumMember(Value = "avg"), JsonStringEnumMemberName("avg")]
-    /// <summary>avg</summary>
-    Avg,
-    [EnumMember(Value = "min"), JsonStringEnumMemberName("min")]
-    /// <summary>min</summary>
-    Min,
-    [EnumMember(Value = "max"), JsonStringEnumMemberName("max")]
-    /// <summary>max</summary>
-    Max,
-    [EnumMember(Value = "sum"), JsonStringEnumMemberName("sum")]
-    /// <summary>sum</summary>
-    Sum,
-    [EnumMember(Value = "last"), JsonStringEnumMemberName("last")]
-    /// <summary>last</summary>
-    Last,
-    [EnumMember(Value = "percentile"), JsonStringEnumMemberName("percentile")]
-    /// <summary>percentile</summary>
-    Percentile,
-    [EnumMember(Value = "mean"), JsonStringEnumMemberName("mean")]
-    /// <summary>mean</summary>
-    Mean,
-    [EnumMember(Value = "l2norm"), JsonStringEnumMemberName("l2norm")]
-    /// <summary>l2norm</summary>
-    L2norm,
-    [EnumMember(Value = "area"), JsonStringEnumMemberName("area")]
-    /// <summary>area</summary>
-    Area
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1AnalysisTemplateSpecMetricsProviderDatadogApiVersionEnum
-{
-    [EnumMember(Value = "v1"), JsonStringEnumMemberName("v1")]
-    /// <summary>v1</summary>
-    V1,
-    [EnumMember(Value = "v2"), JsonStringEnumMemberName("v2")]
-    /// <summary>v2</summary>
-    V2
-}
-
-/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AnalysisTemplateSpecMetricsProviderDatadog
 {
     /// <summary></summary>
     [JsonPropertyName("aggregator")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1AnalysisTemplateSpecMetricsProviderDatadogAggregatorEnum>))]
-    public V1alpha1AnalysisTemplateSpecMetricsProviderDatadogAggregatorEnum? Aggregator { get; set; }
+    public string? Aggregator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1AnalysisTemplateSpecMetricsProviderDatadogApiVersionEnum>))]
-    public V1alpha1AnalysisTemplateSpecMetricsProviderDatadogApiVersionEnum? ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("formula")]

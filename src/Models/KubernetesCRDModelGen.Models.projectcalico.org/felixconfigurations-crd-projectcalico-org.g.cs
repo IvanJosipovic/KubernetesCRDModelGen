@@ -8,48 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
-/// <summary>Set source-destination-check on AWS EC2 instances. Accepted value must be one of "DoNothing", "Enable" or "Disable". [Default: DoNothing]</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1FelixConfigurationSpecAwsSrcDstCheckEnum
-{
-    [EnumMember(Value = "DoNothing"), JsonStringEnumMemberName("DoNothing")]
-    /// <summary>DoNothing</summary>
-    DoNothing,
-    [EnumMember(Value = "Enable"), JsonStringEnumMemberName("Enable")]
-    /// <summary>Enable</summary>
-    Enable,
-    [EnumMember(Value = "Disable"), JsonStringEnumMemberName("Disable")]
-    /// <summary>Disable</summary>
-    Disable
-}
-
-/// <summary>BPFConnectTimeLoadBalancing when in BPF mode, controls whether Felix installs the connect-time load balancer. The connect-time load balancer is required for the host to be able to reach Kubernetes services and it improves the performance of pod-to-service connections.When set to TCP, connect time load balancing is available only for services with TCP ports. [Default: TCP]</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1FelixConfigurationSpecBpfConnectTimeLoadBalancingEnum
-{
-    [EnumMember(Value = "TCP"), JsonStringEnumMemberName("TCP")]
-    /// <summary>TCP</summary>
-    TCP,
-    [EnumMember(Value = "Enabled"), JsonStringEnumMemberName("Enabled")]
-    /// <summary>Enabled</summary>
-    Enabled,
-    [EnumMember(Value = "Disabled"), JsonStringEnumMemberName("Disabled")]
-    /// <summary>Disabled</summary>
-    Disabled
-}
-
-/// <summary>BPFHostNetworkedNATWithoutCTLB when in BPF mode, controls whether Felix does a NAT without CTLB. This along with BPFConnectTimeLoadBalancing determines the CTLB behavior. [Default: Enabled]</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1FelixConfigurationSpecBpfHostNetworkedNATWithoutCTLBEnum
-{
-    [EnumMember(Value = "Enabled"), JsonStringEnumMemberName("Enabled")]
-    /// <summary>Enabled</summary>
-    Enabled,
-    [EnumMember(Value = "Disabled"), JsonStringEnumMemberName("Disabled")]
-    /// <summary>Disabled</summary>
-    Disabled
-}
-
 /// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
@@ -82,18 +40,6 @@ public partial class V1FelixConfigurationSpecFailsafeOutboundHostPorts
     /// <summary></summary>
     [JsonPropertyName("protocol")]
     public string Protocol { get; set; }
-}
-
-/// <summary>FloatingIPs configures whether or not Felix will program non-OpenStack floating IP addresses.  (OpenStack-derived floating IPs are always programmed, regardless of this setting.)</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1FelixConfigurationSpecFloatingIPsEnum
-{
-    [EnumMember(Value = "Enabled"), JsonStringEnumMemberName("Enabled")]
-    /// <summary>Enabled</summary>
-    Enabled,
-    [EnumMember(Value = "Disabled"), JsonStringEnumMemberName("Disabled")]
-    /// <summary>Disabled</summary>
-    Disabled
 }
 
 /// <summary></summary>
@@ -135,18 +81,6 @@ public partial class V1FelixConfigurationSpecRouteTableRanges
     public int Min { get; set; }
 }
 
-/// <summary>WindowsManageFirewallRules configures whether or not Felix will program Windows Firewall rules. (to allow inbound access to its own metrics ports) [Default: Disabled]</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1FelixConfigurationSpecWindowsManageFirewallRulesEnum
-{
-    [EnumMember(Value = "Enabled"), JsonStringEnumMemberName("Enabled")]
-    /// <summary>Enabled</summary>
-    Enabled,
-    [EnumMember(Value = "Disabled"), JsonStringEnumMemberName("Disabled")]
-    /// <summary>Disabled</summary>
-    Disabled
-}
-
 /// <summary>FelixConfigurationSpec contains the values of the Felix configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpec
@@ -161,8 +95,7 @@ public partial class V1FelixConfigurationSpec
 
     /// <summary>Set source-destination-check on AWS EC2 instances. Accepted value must be one of "DoNothing", "Enable" or "Disable". [Default: DoNothing]</summary>
     [JsonPropertyName("awsSrcDstCheck")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1FelixConfigurationSpecAwsSrcDstCheckEnum>))]
-    public V1FelixConfigurationSpecAwsSrcDstCheckEnum? AwsSrcDstCheck { get; set; }
+    public string? AwsSrcDstCheck { get; set; }
 
     /// <summary>BPFCTLBLogFilter specifies, what is logged by connect time load balancer when BPFLogLevel is debug. Currently has to be specified as 'all' when BPFLogFilters is set to see CTLB logs. [Default: unset - means logs are emitted when BPFLogLevel id debug and BPFLogFilters not set.]</summary>
     [JsonPropertyName("bpfCTLBLogFilter")]
@@ -170,8 +103,7 @@ public partial class V1FelixConfigurationSpec
 
     /// <summary>BPFConnectTimeLoadBalancing when in BPF mode, controls whether Felix installs the connect-time load balancer. The connect-time load balancer is required for the host to be able to reach Kubernetes services and it improves the performance of pod-to-service connections.When set to TCP, connect time load balancing is available only for services with TCP ports. [Default: TCP]</summary>
     [JsonPropertyName("bpfConnectTimeLoadBalancing")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1FelixConfigurationSpecBpfConnectTimeLoadBalancingEnum>))]
-    public V1FelixConfigurationSpecBpfConnectTimeLoadBalancingEnum? BpfConnectTimeLoadBalancing { get; set; }
+    public string? BpfConnectTimeLoadBalancing { get; set; }
 
     /// <summary>BPFConnectTimeLoadBalancingEnabled when in BPF mode, controls whether Felix installs the connection-time load balancer.  The connect-time load balancer is required for the host to be able to reach Kubernetes services and it improves the performance of pod-to-service connections.  The only reason to disable it is for debugging purposes. This will be deprecated. Use BPFConnectTimeLoadBalancing [Default: true]</summary>
     [JsonPropertyName("bpfConnectTimeLoadBalancingEnabled")]
@@ -223,8 +155,7 @@ public partial class V1FelixConfigurationSpec
 
     /// <summary>BPFHostNetworkedNATWithoutCTLB when in BPF mode, controls whether Felix does a NAT without CTLB. This along with BPFConnectTimeLoadBalancing determines the CTLB behavior. [Default: Enabled]</summary>
     [JsonPropertyName("bpfHostNetworkedNATWithoutCTLB")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1FelixConfigurationSpecBpfHostNetworkedNATWithoutCTLBEnum>))]
-    public V1FelixConfigurationSpecBpfHostNetworkedNATWithoutCTLBEnum? BpfHostNetworkedNATWithoutCTLB { get; set; }
+    public string? BpfHostNetworkedNATWithoutCTLB { get; set; }
 
     /// <summary>BPFKubeProxyEndpointSlicesEnabled is deprecated and has no effect. BPF kube-proxy always accepts endpoint slices. This option will be removed in the next release.</summary>
     [JsonPropertyName("bpfKubeProxyEndpointSlicesEnabled")]
@@ -384,8 +315,7 @@ public partial class V1FelixConfigurationSpec
 
     /// <summary>FloatingIPs configures whether or not Felix will program non-OpenStack floating IP addresses.  (OpenStack-derived floating IPs are always programmed, regardless of this setting.)</summary>
     [JsonPropertyName("floatingIPs")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1FelixConfigurationSpecFloatingIPsEnum>))]
-    public V1FelixConfigurationSpecFloatingIPsEnum? FloatingIPs { get; set; }
+    public string? FloatingIPs { get; set; }
 
     /// <summary>GenericXDPEnabled enables Generic XDP so network cards that don't support XDP offload or driver modes can use XDP. This is not recommended since it doesn't provide better performance than iptables. [Default: false]</summary>
     [JsonPropertyName("genericXDPEnabled")]
@@ -681,8 +611,7 @@ public partial class V1FelixConfigurationSpec
 
     /// <summary>WindowsManageFirewallRules configures whether or not Felix will program Windows Firewall rules. (to allow inbound access to its own metrics ports) [Default: Disabled]</summary>
     [JsonPropertyName("windowsManageFirewallRules")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1FelixConfigurationSpecWindowsManageFirewallRulesEnum>))]
-    public V1FelixConfigurationSpecWindowsManageFirewallRulesEnum? WindowsManageFirewallRules { get; set; }
+    public string? WindowsManageFirewallRules { get; set; }
 
     /// <summary>WireguardEnabled controls whether Wireguard is enabled for IPv4 (encapsulating IPv4 traffic over an IPv4 underlay network). [Default: false]</summary>
     [JsonPropertyName("wireguardEnabled")]

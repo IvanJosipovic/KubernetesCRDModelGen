@@ -17,18 +17,6 @@ public partial class V1beta2OCIRepositorySpecCertSecretRef
     public string Name { get; set; }
 }
 
-/// <summary>Operation specifies how the selected layer should be processed. By default, the layer compressed content is extracted to storage. When the operation is set to 'copy', the layer compressed content is persisted to storage as it is.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2OCIRepositorySpecLayerSelectorOperationEnum
-{
-    [EnumMember(Value = "extract"), JsonStringEnumMemberName("extract")]
-    /// <summary>extract</summary>
-    Extract,
-    [EnumMember(Value = "copy"), JsonStringEnumMemberName("copy")]
-    /// <summary>copy</summary>
-    Copy
-}
-
 /// <summary>LayerSelector specifies which layer should be extracted from the OCI artifact. When not specified, the first layer found in the artifact is selected.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2OCIRepositorySpecLayerSelector
@@ -39,26 +27,7 @@ public partial class V1beta2OCIRepositorySpecLayerSelector
 
     /// <summary>Operation specifies how the selected layer should be processed. By default, the layer compressed content is extracted to storage. When the operation is set to 'copy', the layer compressed content is persisted to storage as it is.</summary>
     [JsonPropertyName("operation")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2OCIRepositorySpecLayerSelectorOperationEnum>))]
-    public V1beta2OCIRepositorySpecLayerSelectorOperationEnum? Operation { get; set; }
-}
-
-/// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2OCIRepositorySpecProviderEnum
-{
-    [EnumMember(Value = "generic"), JsonStringEnumMemberName("generic")]
-    /// <summary>generic</summary>
-    Generic,
-    [EnumMember(Value = "aws"), JsonStringEnumMemberName("aws")]
-    /// <summary>aws</summary>
-    Aws,
-    [EnumMember(Value = "azure"), JsonStringEnumMemberName("azure")]
-    /// <summary>azure</summary>
-    Azure,
-    [EnumMember(Value = "gcp"), JsonStringEnumMemberName("gcp")]
-    /// <summary>gcp</summary>
-    Gcp
+    public string? Operation { get; set; }
 }
 
 /// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
@@ -104,18 +73,6 @@ public partial class V1beta2OCIRepositorySpecVerifyMatchOIDCIdentity
     public string Subject { get; set; }
 }
 
-/// <summary>Provider specifies the technology used to sign the OCI Artifact.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2OCIRepositorySpecVerifyProviderEnum
-{
-    [EnumMember(Value = "cosign"), JsonStringEnumMemberName("cosign")]
-    /// <summary>cosign</summary>
-    Cosign,
-    [EnumMember(Value = "notation"), JsonStringEnumMemberName("notation")]
-    /// <summary>notation</summary>
-    Notation
-}
-
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2OCIRepositorySpecVerifySecretRef
@@ -135,8 +92,7 @@ public partial class V1beta2OCIRepositorySpecVerify
 
     /// <summary>Provider specifies the technology used to sign the OCI Artifact.</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2OCIRepositorySpecVerifyProviderEnum>))]
-    public V1beta2OCIRepositorySpecVerifyProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
     [JsonPropertyName("secretRef")]
@@ -169,8 +125,7 @@ public partial class V1beta2OCIRepositorySpec
 
     /// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2OCIRepositorySpecProviderEnum>))]
-    public V1beta2OCIRepositorySpecProviderEnum? Provider { get; set; }
+    public string? Provider { get; set; }
 
     /// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
     [JsonPropertyName("ref")]
@@ -234,21 +189,6 @@ public partial class V1beta2OCIRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2OCIRepositoryStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2OCIRepositoryStatusConditions
@@ -271,24 +211,11 @@ public partial class V1beta2OCIRepositoryStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2OCIRepositoryStatusConditionsStatusEnum>))]
-    public V1beta2OCIRepositoryStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
-}
-
-/// <summary>Operation specifies how the selected layer should be processed. By default, the layer compressed content is extracted to storage. When the operation is set to 'copy', the layer compressed content is persisted to storage as it is.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2OCIRepositoryStatusObservedLayerSelectorOperationEnum
-{
-    [EnumMember(Value = "extract"), JsonStringEnumMemberName("extract")]
-    /// <summary>extract</summary>
-    Extract,
-    [EnumMember(Value = "copy"), JsonStringEnumMemberName("copy")]
-    /// <summary>copy</summary>
-    Copy
 }
 
 /// <summary>ObservedLayerSelector is the observed layer selector used for constructing the source artifact.</summary>
@@ -301,8 +228,7 @@ public partial class V1beta2OCIRepositoryStatusObservedLayerSelector
 
     /// <summary>Operation specifies how the selected layer should be processed. By default, the layer compressed content is extracted to storage. When the operation is set to 'copy', the layer compressed content is persisted to storage as it is.</summary>
     [JsonPropertyName("operation")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2OCIRepositoryStatusObservedLayerSelectorOperationEnum>))]
-    public V1beta2OCIRepositoryStatusObservedLayerSelectorOperationEnum? Operation { get; set; }
+    public string? Operation { get; set; }
 }
 
 /// <summary>OCIRepositoryStatus defines the observed state of OCIRepository</summary>

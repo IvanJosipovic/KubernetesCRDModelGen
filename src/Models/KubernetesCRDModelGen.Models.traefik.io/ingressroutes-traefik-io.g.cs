@@ -8,15 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
-/// <summary>Kind defines the kind of the route. Rule is the only supported kind.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1IngressRouteSpecRoutesKindEnum
-{
-    [EnumMember(Value = "Rule"), JsonStringEnumMemberName("Rule")]
-    /// <summary>Rule</summary>
-    Rule
-}
-
 /// <summary>MiddlewareRef is a reference to a Middleware resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
@@ -79,18 +70,6 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
-/// <summary>Kind defines the kind of the Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1IngressRouteSpecRoutesServicesKindEnum
-{
-    [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
-    /// <summary>Service</summary>
-    Service,
-    [EnumMember(Value = "TraefikService"), JsonStringEnumMemberName("TraefikService")]
-    /// <summary>TraefikService</summary>
-    TraefikService
-}
-
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesResponseForwarding
@@ -144,8 +123,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServices
 
     /// <summary>Kind defines the kind of the Service.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1IngressRouteSpecRoutesServicesKindEnum>))]
-    public V1alpha1IngressRouteSpecRoutesServicesKindEnum? Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary>Name defines the name of the referenced Kubernetes Service or TraefikService. The differentiation between the two is specified in the Kind field.</summary>
     [JsonPropertyName("name")]
@@ -202,8 +180,7 @@ public partial class V1alpha1IngressRouteSpecRoutes
 {
     /// <summary>Kind defines the kind of the route. Rule is the only supported kind.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1IngressRouteSpecRoutesKindEnum>))]
-    public V1alpha1IngressRouteSpecRoutesKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Match defines the router's rule. More info: https://doc.traefik.io/traefik/v3.1/routing/routers/#rule</summary>
     [JsonPropertyName("match")]

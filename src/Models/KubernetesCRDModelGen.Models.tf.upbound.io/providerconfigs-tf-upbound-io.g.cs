@@ -43,24 +43,6 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of the provider credentials.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "Environment"), JsonStringEnumMemberName("Environment")]
-    /// <summary>Environment</summary>
-    Environment,
-    [EnumMember(Value = "Filesystem"), JsonStringEnumMemberName("Filesystem")]
-    /// <summary>Filesystem</summary>
-    Filesystem
-}
-
 /// <summary>ProviderCredentials required to authenticate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentials
@@ -83,8 +65,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
 
     /// <summary>Source of the provider credentials.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecCredentialsSourceEnum>))]
-    public V1beta1ProviderConfigSpecCredentialsSourceEnum Source { get; set; }
+    public string Source { get; set; }
 }
 
 /// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>

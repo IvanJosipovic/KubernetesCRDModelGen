@@ -8,33 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
-/// <summary>ReconcileStrategy determines what enables the creation of a new artifact. Valid values are ('ChartVersion', 'Revision'). See the documentation of the values for an explanation on their behavior. Defaults to ChartVersion when omitted.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HelmChartSpecReconcileStrategyEnum
-{
-    [EnumMember(Value = "ChartVersion"), JsonStringEnumMemberName("ChartVersion")]
-    /// <summary>ChartVersion</summary>
-    ChartVersion,
-    [EnumMember(Value = "Revision"), JsonStringEnumMemberName("Revision")]
-    /// <summary>Revision</summary>
-    Revision
-}
-
-/// <summary>Kind of the referent, valid values are ('HelmRepository', 'GitRepository', 'Bucket').</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HelmChartSpecSourceRefKindEnum
-{
-    [EnumMember(Value = "HelmRepository"), JsonStringEnumMemberName("HelmRepository")]
-    /// <summary>HelmRepository</summary>
-    HelmRepository,
-    [EnumMember(Value = "GitRepository"), JsonStringEnumMemberName("GitRepository")]
-    /// <summary>GitRepository</summary>
-    GitRepository,
-    [EnumMember(Value = "Bucket"), JsonStringEnumMemberName("Bucket")]
-    /// <summary>Bucket</summary>
-    Bucket
-}
-
 /// <summary>SourceRef is the reference to the Source the chart is available at.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartSpecSourceRef
@@ -45,8 +18,7 @@ public partial class V1HelmChartSpecSourceRef
 
     /// <summary>Kind of the referent, valid values are ('HelmRepository', 'GitRepository', 'Bucket').</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HelmChartSpecSourceRefKindEnum>))]
-    public V1HelmChartSpecSourceRefKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -64,18 +36,6 @@ public partial class V1HelmChartSpecVerifyMatchOIDCIdentity
     /// <summary>Subject specifies the regex pattern to match against to verify the identity subject in the Fulcio certificate. The pattern must be a valid Go regular expression.</summary>
     [JsonPropertyName("subject")]
     public string Subject { get; set; }
-}
-
-/// <summary>Provider specifies the technology used to sign the OCI Artifact.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HelmChartSpecVerifyProviderEnum
-{
-    [EnumMember(Value = "cosign"), JsonStringEnumMemberName("cosign")]
-    /// <summary>cosign</summary>
-    Cosign,
-    [EnumMember(Value = "notation"), JsonStringEnumMemberName("notation")]
-    /// <summary>notation</summary>
-    Notation
 }
 
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
@@ -97,8 +57,7 @@ public partial class V1HelmChartSpecVerify
 
     /// <summary>Provider specifies the technology used to sign the OCI Artifact.</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HelmChartSpecVerifyProviderEnum>))]
-    public V1HelmChartSpecVerifyProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
     [JsonPropertyName("secretRef")]
@@ -123,8 +82,7 @@ public partial class V1HelmChartSpec
 
     /// <summary>ReconcileStrategy determines what enables the creation of a new artifact. Valid values are ('ChartVersion', 'Revision'). See the documentation of the values for an explanation on their behavior. Defaults to ChartVersion when omitted.</summary>
     [JsonPropertyName("reconcileStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HelmChartSpecReconcileStrategyEnum>))]
-    public V1HelmChartSpecReconcileStrategyEnum? ReconcileStrategy { get; set; }
+    public string? ReconcileStrategy { get; set; }
 
     /// <summary>SourceRef is the reference to the Source the chart is available at.</summary>
     [JsonPropertyName("sourceRef")]
@@ -180,21 +138,6 @@ public partial class V1HelmChartStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1HelmChartStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmChartStatusConditions
@@ -217,8 +160,7 @@ public partial class V1HelmChartStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1HelmChartStatusConditionsStatusEnum>))]
-    public V1HelmChartStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

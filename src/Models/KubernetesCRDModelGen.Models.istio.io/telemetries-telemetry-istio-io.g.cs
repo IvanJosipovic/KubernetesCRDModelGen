@@ -17,29 +17,13 @@ public partial class V1alpha1TelemetrySpecAccessLoggingFilter
     public string? Expression { get; set; }
 }
 
-/// <summary>This determines whether or not to apply the access logging configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TelemetrySpecAccessLoggingMatchModeEnum
-{
-    [EnumMember(Value = "CLIENT_AND_SERVER"), JsonStringEnumMemberName("CLIENT_AND_SERVER")]
-    /// <summary>CLIENT_AND_SERVER</summary>
-    CLIENTANDSERVER,
-    [EnumMember(Value = "CLIENT"), JsonStringEnumMemberName("CLIENT")]
-    /// <summary>CLIENT</summary>
-    CLIENT,
-    [EnumMember(Value = "SERVER"), JsonStringEnumMemberName("SERVER")]
-    /// <summary>SERVER</summary>
-    SERVER
-}
-
 /// <summary>Allows tailoring of logging behavior to specific conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecAccessLoggingMatch
 {
     /// <summary>This determines whether or not to apply the access logging configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TelemetrySpecAccessLoggingMatchModeEnum>))]
-    public V1alpha1TelemetrySpecAccessLoggingMatchModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -72,60 +56,6 @@ public partial class V1alpha1TelemetrySpecAccessLogging
     public IList<V1alpha1TelemetrySpecAccessLoggingProviders>? Providers { get; set; }
 }
 
-/// <summary>One of the well-known [Istio Standard Metrics](https://istio.io/latest/docs/reference/config/metrics/).  Valid Options: ALL_METRICS, REQUEST_COUNT, REQUEST_DURATION, REQUEST_SIZE, RESPONSE_SIZE, TCP_OPENED_CONNECTIONS, TCP_CLOSED_CONNECTIONS, TCP_SENT_BYTES, TCP_RECEIVED_BYTES, GRPC_REQUEST_MESSAGES, GRPC_RESPONSE_MESSAGES</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TelemetrySpecMetricsOverridesMatchMetricEnum
-{
-    [EnumMember(Value = "ALL_METRICS"), JsonStringEnumMemberName("ALL_METRICS")]
-    /// <summary>ALL_METRICS</summary>
-    ALLMETRICS,
-    [EnumMember(Value = "REQUEST_COUNT"), JsonStringEnumMemberName("REQUEST_COUNT")]
-    /// <summary>REQUEST_COUNT</summary>
-    REQUESTCOUNT,
-    [EnumMember(Value = "REQUEST_DURATION"), JsonStringEnumMemberName("REQUEST_DURATION")]
-    /// <summary>REQUEST_DURATION</summary>
-    REQUESTDURATION,
-    [EnumMember(Value = "REQUEST_SIZE"), JsonStringEnumMemberName("REQUEST_SIZE")]
-    /// <summary>REQUEST_SIZE</summary>
-    REQUESTSIZE,
-    [EnumMember(Value = "RESPONSE_SIZE"), JsonStringEnumMemberName("RESPONSE_SIZE")]
-    /// <summary>RESPONSE_SIZE</summary>
-    RESPONSESIZE,
-    [EnumMember(Value = "TCP_OPENED_CONNECTIONS"), JsonStringEnumMemberName("TCP_OPENED_CONNECTIONS")]
-    /// <summary>TCP_OPENED_CONNECTIONS</summary>
-    TCPOPENEDCONNECTIONS,
-    [EnumMember(Value = "TCP_CLOSED_CONNECTIONS"), JsonStringEnumMemberName("TCP_CLOSED_CONNECTIONS")]
-    /// <summary>TCP_CLOSED_CONNECTIONS</summary>
-    TCPCLOSEDCONNECTIONS,
-    [EnumMember(Value = "TCP_SENT_BYTES"), JsonStringEnumMemberName("TCP_SENT_BYTES")]
-    /// <summary>TCP_SENT_BYTES</summary>
-    TCPSENTBYTES,
-    [EnumMember(Value = "TCP_RECEIVED_BYTES"), JsonStringEnumMemberName("TCP_RECEIVED_BYTES")]
-    /// <summary>TCP_RECEIVED_BYTES</summary>
-    TCPRECEIVEDBYTES,
-    [EnumMember(Value = "GRPC_REQUEST_MESSAGES"), JsonStringEnumMemberName("GRPC_REQUEST_MESSAGES")]
-    /// <summary>GRPC_REQUEST_MESSAGES</summary>
-    GRPCREQUESTMESSAGES,
-    [EnumMember(Value = "GRPC_RESPONSE_MESSAGES"), JsonStringEnumMemberName("GRPC_RESPONSE_MESSAGES")]
-    /// <summary>GRPC_RESPONSE_MESSAGES</summary>
-    GRPCRESPONSEMESSAGES
-}
-
-/// <summary>Controls which mode of metrics generation is selected: `CLIENT`, `SERVER`, or `CLIENT_AND_SERVER`.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum
-{
-    [EnumMember(Value = "CLIENT_AND_SERVER"), JsonStringEnumMemberName("CLIENT_AND_SERVER")]
-    /// <summary>CLIENT_AND_SERVER</summary>
-    CLIENTANDSERVER,
-    [EnumMember(Value = "CLIENT"), JsonStringEnumMemberName("CLIENT")]
-    /// <summary>CLIENT</summary>
-    CLIENT,
-    [EnumMember(Value = "SERVER"), JsonStringEnumMemberName("SERVER")]
-    /// <summary>SERVER</summary>
-    SERVER
-}
-
 /// <summary>Match allows providing the scope of the override.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
@@ -136,25 +66,11 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesMatch
 
     /// <summary>One of the well-known [Istio Standard Metrics](https://istio.io/latest/docs/reference/config/metrics/).  Valid Options: ALL_METRICS, REQUEST_COUNT, REQUEST_DURATION, REQUEST_SIZE, RESPONSE_SIZE, TCP_OPENED_CONNECTIONS, TCP_CLOSED_CONNECTIONS, TCP_SENT_BYTES, TCP_RECEIVED_BYTES, GRPC_REQUEST_MESSAGES, GRPC_RESPONSE_MESSAGES</summary>
     [JsonPropertyName("metric")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TelemetrySpecMetricsOverridesMatchMetricEnum>))]
-    public V1alpha1TelemetrySpecMetricsOverridesMatchMetricEnum? Metric { get; set; }
+    public string? Metric { get; set; }
 
     /// <summary>Controls which mode of metrics generation is selected: `CLIENT`, `SERVER`, or `CLIENT_AND_SERVER`.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum>))]
-    public V1alpha1TelemetrySpecMetricsOverridesMatchModeEnum? Mode { get; set; }
-}
-
-/// <summary>Operation controls whether or not to update/add a tag, or to remove it.  Valid Options: UPSERT, REMOVE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TelemetrySpecMetricsOverridesTagOverridesOperationEnum
-{
-    [EnumMember(Value = "UPSERT"), JsonStringEnumMemberName("UPSERT")]
-    /// <summary>UPSERT</summary>
-    UPSERT,
-    [EnumMember(Value = "REMOVE"), JsonStringEnumMemberName("REMOVE")]
-    /// <summary>REMOVE</summary>
-    REMOVE
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -163,8 +79,7 @@ public partial class V1alpha1TelemetrySpecMetricsOverridesTagOverrides
 {
     /// <summary>Operation controls whether or not to update/add a tag, or to remove it.  Valid Options: UPSERT, REMOVE</summary>
     [JsonPropertyName("operation")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TelemetrySpecMetricsOverridesTagOverridesOperationEnum>))]
-    public V1alpha1TelemetrySpecMetricsOverridesTagOverridesOperationEnum? Operation { get; set; }
+    public string? Operation { get; set; }
 
     /// <summary>Value is only considered if the operation is `UPSERT`.</summary>
     [JsonPropertyName("value")]
@@ -317,29 +232,13 @@ public partial class V1alpha1TelemetrySpecTracingCustomTags
     public V1alpha1TelemetrySpecTracingCustomTagsLiteral? Literal { get; set; }
 }
 
-/// <summary>This determines whether or not to apply the tracing configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TelemetrySpecTracingMatchModeEnum
-{
-    [EnumMember(Value = "CLIENT_AND_SERVER"), JsonStringEnumMemberName("CLIENT_AND_SERVER")]
-    /// <summary>CLIENT_AND_SERVER</summary>
-    CLIENTANDSERVER,
-    [EnumMember(Value = "CLIENT"), JsonStringEnumMemberName("CLIENT")]
-    /// <summary>CLIENT</summary>
-    CLIENT,
-    [EnumMember(Value = "SERVER"), JsonStringEnumMemberName("SERVER")]
-    /// <summary>SERVER</summary>
-    SERVER
-}
-
 /// <summary>Allows tailoring of behavior to specific conditions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TelemetrySpecTracingMatch
 {
     /// <summary>This determines whether or not to apply the tracing configuration based on the direction of traffic relative to the proxied workload.  Valid Options: CLIENT_AND_SERVER, CLIENT, SERVER</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TelemetrySpecTracingMatchModeEnum>))]
-    public V1alpha1TelemetrySpecTracingMatchModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>

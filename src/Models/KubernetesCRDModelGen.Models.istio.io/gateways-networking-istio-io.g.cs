@@ -29,72 +29,6 @@ public partial class V1beta1GatewaySpecServersPort
     public int? TargetPort { get; set; }
 }
 
-/// <summary>Optional: Maximum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1GatewaySpecServersTlsMaxProtocolVersionEnum
-{
-    [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
-    /// <summary>TLS_AUTO</summary>
-    TLSAUTO,
-    [EnumMember(Value = "TLSV1_0"), JsonStringEnumMemberName("TLSV1_0")]
-    /// <summary>TLSV1_0</summary>
-    TLSV10,
-    [EnumMember(Value = "TLSV1_1"), JsonStringEnumMemberName("TLSV1_1")]
-    /// <summary>TLSV1_1</summary>
-    TLSV11,
-    [EnumMember(Value = "TLSV1_2"), JsonStringEnumMemberName("TLSV1_2")]
-    /// <summary>TLSV1_2</summary>
-    TLSV12,
-    [EnumMember(Value = "TLSV1_3"), JsonStringEnumMemberName("TLSV1_3")]
-    /// <summary>TLSV1_3</summary>
-    TLSV13
-}
-
-/// <summary>Optional: Minimum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1GatewaySpecServersTlsMinProtocolVersionEnum
-{
-    [EnumMember(Value = "TLS_AUTO"), JsonStringEnumMemberName("TLS_AUTO")]
-    /// <summary>TLS_AUTO</summary>
-    TLSAUTO,
-    [EnumMember(Value = "TLSV1_0"), JsonStringEnumMemberName("TLSV1_0")]
-    /// <summary>TLSV1_0</summary>
-    TLSV10,
-    [EnumMember(Value = "TLSV1_1"), JsonStringEnumMemberName("TLSV1_1")]
-    /// <summary>TLSV1_1</summary>
-    TLSV11,
-    [EnumMember(Value = "TLSV1_2"), JsonStringEnumMemberName("TLSV1_2")]
-    /// <summary>TLSV1_2</summary>
-    TLSV12,
-    [EnumMember(Value = "TLSV1_3"), JsonStringEnumMemberName("TLSV1_3")]
-    /// <summary>TLSV1_3</summary>
-    TLSV13
-}
-
-/// <summary>Optional: Indicates whether connections to this port should be secured using TLS.  Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1GatewaySpecServersTlsModeEnum
-{
-    [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
-    /// <summary>PASSTHROUGH</summary>
-    PASSTHROUGH,
-    [EnumMember(Value = "SIMPLE"), JsonStringEnumMemberName("SIMPLE")]
-    /// <summary>SIMPLE</summary>
-    SIMPLE,
-    [EnumMember(Value = "MUTUAL"), JsonStringEnumMemberName("MUTUAL")]
-    /// <summary>MUTUAL</summary>
-    MUTUAL,
-    [EnumMember(Value = "AUTO_PASSTHROUGH"), JsonStringEnumMemberName("AUTO_PASSTHROUGH")]
-    /// <summary>AUTO_PASSTHROUGH</summary>
-    AUTOPASSTHROUGH,
-    [EnumMember(Value = "ISTIO_MUTUAL"), JsonStringEnumMemberName("ISTIO_MUTUAL")]
-    /// <summary>ISTIO_MUTUAL</summary>
-    ISTIOMUTUAL,
-    [EnumMember(Value = "OPTIONAL_MUTUAL"), JsonStringEnumMemberName("OPTIONAL_MUTUAL")]
-    /// <summary>OPTIONAL_MUTUAL</summary>
-    OPTIONALMUTUAL
-}
-
 /// <summary>Set of TLS related options that govern the server's behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpecServersTls
@@ -121,18 +55,15 @@ public partial class V1beta1GatewaySpecServersTls
 
     /// <summary>Optional: Maximum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
     [JsonPropertyName("maxProtocolVersion")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1GatewaySpecServersTlsMaxProtocolVersionEnum>))]
-    public V1beta1GatewaySpecServersTlsMaxProtocolVersionEnum? MaxProtocolVersion { get; set; }
+    public string? MaxProtocolVersion { get; set; }
 
     /// <summary>Optional: Minimum TLS protocol version.  Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3</summary>
     [JsonPropertyName("minProtocolVersion")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1GatewaySpecServersTlsMinProtocolVersionEnum>))]
-    public V1beta1GatewaySpecServersTlsMinProtocolVersionEnum? MinProtocolVersion { get; set; }
+    public string? MinProtocolVersion { get; set; }
 
     /// <summary>Optional: Indicates whether connections to this port should be secured using TLS.  Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1GatewaySpecServersTlsModeEnum>))]
-    public V1beta1GatewaySpecServersTlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>REQUIRED if mode is `SIMPLE` or `MUTUAL`.</summary>
     [JsonPropertyName("privateKey")]

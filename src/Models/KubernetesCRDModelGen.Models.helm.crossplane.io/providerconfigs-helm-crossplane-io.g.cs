@@ -43,27 +43,6 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of the provider credentials.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "InjectedIdentity"), JsonStringEnumMemberName("InjectedIdentity")]
-    /// <summary>InjectedIdentity</summary>
-    InjectedIdentity,
-    [EnumMember(Value = "Environment"), JsonStringEnumMemberName("Environment")]
-    /// <summary>Environment</summary>
-    Environment,
-    [EnumMember(Value = "Filesystem"), JsonStringEnumMemberName("Filesystem")]
-    /// <summary>Filesystem</summary>
-    Filesystem
-}
-
 /// <summary>Credentials used to connect to the Kubernetes API. Typically a kubeconfig file. Use InjectedIdentity for in-cluster config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentials
@@ -82,8 +61,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
 
     /// <summary>Source of the provider credentials.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecCredentialsSourceEnum>))]
-    public V1beta1ProviderConfigSpecCredentialsSourceEnum Source { get; set; }
+    public string Source { get; set; }
 }
 
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
@@ -121,45 +99,6 @@ public partial class V1beta1ProviderConfigSpecIdentitySecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of the provider credentials.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecIdentitySourceEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "InjectedIdentity"), JsonStringEnumMemberName("InjectedIdentity")]
-    /// <summary>InjectedIdentity</summary>
-    InjectedIdentity,
-    [EnumMember(Value = "Environment"), JsonStringEnumMemberName("Environment")]
-    /// <summary>Environment</summary>
-    Environment,
-    [EnumMember(Value = "Filesystem"), JsonStringEnumMemberName("Filesystem")]
-    /// <summary>Filesystem</summary>
-    Filesystem
-}
-
-/// <summary>Type of identity.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecIdentityTypeEnum
-{
-    [EnumMember(Value = "GoogleApplicationCredentials"), JsonStringEnumMemberName("GoogleApplicationCredentials")]
-    /// <summary>GoogleApplicationCredentials</summary>
-    GoogleApplicationCredentials,
-    [EnumMember(Value = "AzureServicePrincipalCredentials"), JsonStringEnumMemberName("AzureServicePrincipalCredentials")]
-    /// <summary>AzureServicePrincipalCredentials</summary>
-    AzureServicePrincipalCredentials,
-    [EnumMember(Value = "AzureWorkloadIdentityCredentials"), JsonStringEnumMemberName("AzureWorkloadIdentityCredentials")]
-    /// <summary>AzureWorkloadIdentityCredentials</summary>
-    AzureWorkloadIdentityCredentials,
-    [EnumMember(Value = "UpboundTokens"), JsonStringEnumMemberName("UpboundTokens")]
-    /// <summary>UpboundTokens</summary>
-    UpboundTokens
-}
-
 /// <summary>Identity used to authenticate to the Kubernetes API. The identity credentials can be used to supplement kubeconfig 'credentials', for example by configuring a bearer token source such as OAuth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecIdentity
@@ -178,13 +117,11 @@ public partial class V1beta1ProviderConfigSpecIdentity
 
     /// <summary>Source of the provider credentials.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecIdentitySourceEnum>))]
-    public V1beta1ProviderConfigSpecIdentitySourceEnum Source { get; set; }
+    public string Source { get; set; }
 
     /// <summary>Type of identity.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecIdentityTypeEnum>))]
-    public V1beta1ProviderConfigSpecIdentityTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>

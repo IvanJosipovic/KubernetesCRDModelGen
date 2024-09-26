@@ -124,24 +124,6 @@ public partial class V1ChallengeSpecSolverDns01AzureDNSClientSecretSecretRef
     public string Name { get; set; }
 }
 
-/// <summary>name of the Azure environment (default AzurePublicCloud)</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ChallengeSpecSolverDns01AzureDNSEnvironmentEnum
-{
-    [EnumMember(Value = "AzurePublicCloud"), JsonStringEnumMemberName("AzurePublicCloud")]
-    /// <summary>AzurePublicCloud</summary>
-    AzurePublicCloud,
-    [EnumMember(Value = "AzureChinaCloud"), JsonStringEnumMemberName("AzureChinaCloud")]
-    /// <summary>AzureChinaCloud</summary>
-    AzureChinaCloud,
-    [EnumMember(Value = "AzureGermanCloud"), JsonStringEnumMemberName("AzureGermanCloud")]
-    /// <summary>AzureGermanCloud</summary>
-    AzureGermanCloud,
-    [EnumMember(Value = "AzureUSGovernmentCloud"), JsonStringEnumMemberName("AzureUSGovernmentCloud")]
-    /// <summary>AzureUSGovernmentCloud</summary>
-    AzureUSGovernmentCloud
-}
-
 /// <summary>Auth: Azure Workload Identity or Azure Managed Service Identity: Settings to enable Azure Workload Identity or Azure Managed Service Identity If set, ClientID, ClientSecret and TenantID must not be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AzureDNSManagedIdentity
@@ -169,8 +151,7 @@ public partial class V1ChallengeSpecSolverDns01AzureDNS
 
     /// <summary>name of the Azure environment (default AzurePublicCloud)</summary>
     [JsonPropertyName("environment")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ChallengeSpecSolverDns01AzureDNSEnvironmentEnum>))]
-    public V1ChallengeSpecSolverDns01AzureDNSEnvironmentEnum? Environment { get; set; }
+    public string? Environment { get; set; }
 
     /// <summary>name of the DNS zone that should be used</summary>
     [JsonPropertyName("hostedZoneName")]
@@ -264,18 +245,6 @@ public partial class V1ChallengeSpecSolverDns01Cloudflare
     /// <summary>Email of the account, only required when using API key based authentication.</summary>
     [JsonPropertyName("email")]
     public string? Email { get; set; }
-}
-
-/// <summary>CNAMEStrategy configures how the DNS01 provider should handle CNAME records when found in DNS zones.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ChallengeSpecSolverDns01CnameStrategyEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Follow"), JsonStringEnumMemberName("Follow")]
-    /// <summary>Follow</summary>
-    Follow
 }
 
 /// <summary>A reference to a specific 'key' within a Secret resource. In some instances, `key` is a required field.</summary>
@@ -467,8 +436,7 @@ public partial class V1ChallengeSpecSolverDns01
 
     /// <summary>CNAMEStrategy configures how the DNS01 provider should handle CNAME records when found in DNS zones.</summary>
     [JsonPropertyName("cnameStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ChallengeSpecSolverDns01CnameStrategyEnum>))]
-    public V1ChallengeSpecSolverDns01CnameStrategyEnum? CnameStrategy { get; set; }
+    public string? CnameStrategy { get; set; }
 
     /// <summary>Use the DigitalOcean DNS API to manage DNS01 challenge records.</summary>
     [JsonPropertyName("digitalocean")]
@@ -1274,18 +1242,6 @@ public partial class V1ChallengeSpecSolver
     public V1ChallengeSpecSolverSelector? Selector { get; set; }
 }
 
-/// <summary>The type of ACME challenge this resource represents. One of "HTTP-01" or "DNS-01".</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ChallengeSpecTypeEnum
-{
-    [EnumMember(Value = "HTTP-01"), JsonStringEnumMemberName("HTTP-01")]
-    /// <summary>HTTP-01</summary>
-    HTTP01,
-    [EnumMember(Value = "DNS-01"), JsonStringEnumMemberName("DNS-01")]
-    /// <summary>DNS-01</summary>
-    DNS01
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpec
@@ -1316,8 +1272,7 @@ public partial class V1ChallengeSpec
 
     /// <summary>The type of ACME challenge this resource represents. One of "HTTP-01" or "DNS-01".</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ChallengeSpecTypeEnum>))]
-    public V1ChallengeSpecTypeEnum Type { get; set; }
+    public string Type { get; set; }
 
     /// <summary>The URL of the ACME Challenge resource for this challenge. This can be used to lookup details about the status of this challenge.</summary>
     [JsonPropertyName("url")]
@@ -1326,33 +1281,6 @@ public partial class V1ChallengeSpec
     /// <summary>wildcard will be true if this challenge is for a wildcard identifier, for example '*.example.com'.</summary>
     [JsonPropertyName("wildcard")]
     public bool? Wildcard { get; set; }
-}
-
-/// <summary>Contains the current 'state' of the challenge. If not set, the state of the challenge is unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ChallengeStatusStateEnum
-{
-    [EnumMember(Value = "valid"), JsonStringEnumMemberName("valid")]
-    /// <summary>valid</summary>
-    Valid,
-    [EnumMember(Value = "ready"), JsonStringEnumMemberName("ready")]
-    /// <summary>ready</summary>
-    Ready,
-    [EnumMember(Value = "pending"), JsonStringEnumMemberName("pending")]
-    /// <summary>pending</summary>
-    Pending,
-    [EnumMember(Value = "processing"), JsonStringEnumMemberName("processing")]
-    /// <summary>processing</summary>
-    Processing,
-    [EnumMember(Value = "invalid"), JsonStringEnumMemberName("invalid")]
-    /// <summary>invalid</summary>
-    Invalid,
-    [EnumMember(Value = "expired"), JsonStringEnumMemberName("expired")]
-    /// <summary>expired</summary>
-    Expired,
-    [EnumMember(Value = "errored"), JsonStringEnumMemberName("errored")]
-    /// <summary>errored</summary>
-    Errored
 }
 
 /// <summary></summary>
@@ -1373,8 +1301,7 @@ public partial class V1ChallengeStatus
 
     /// <summary>Contains the current 'state' of the challenge. If not set, the state of the challenge is unknown.</summary>
     [JsonPropertyName("state")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ChallengeStatusStateEnum>))]
-    public V1ChallengeStatusStateEnum? State { get; set; }
+    public string? State { get; set; }
 }
 
 /// <summary>Challenge is a type to represent a Challenge request with an ACME server</summary>
