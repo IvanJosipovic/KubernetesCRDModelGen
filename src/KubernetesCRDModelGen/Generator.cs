@@ -32,6 +32,8 @@ public class Generator : IGenerator
 
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
 
+    private const bool EnumSupport = false;
+
     private readonly CSharpCompilationOptions _options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
         .WithConcurrentBuild(true)
         .WithDeterministic(true)
@@ -324,7 +326,7 @@ public class Generator : IGenerator
                 }
             case "string":
 
-                if (schema.Enum.Any())
+                if (EnumSupport && schema.Enum.Any())
                 {
                     return GenerateEnum(schema, classes, parentClassName, propertyName);
                 }
@@ -341,7 +343,7 @@ public class Generator : IGenerator
                     return "int";
             case "array":
 
-                if (schema.Enum.Any())
+                if (EnumSupport && schema.Enum.Any())
                 {
                     return $"IList<{GenerateEnum(schema, classes, parentClassName, propertyName)}>";
                 }

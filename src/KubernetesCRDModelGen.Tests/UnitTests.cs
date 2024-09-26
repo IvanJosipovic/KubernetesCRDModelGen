@@ -1186,7 +1186,7 @@ spec:
         itemType.Should().Be<IntstrIntOrString>();
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumDuplicate()
     {
         var yaml = @"
@@ -1247,7 +1247,7 @@ spec:
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("Always-");
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumString()
     {
         var yaml = @"
@@ -1308,7 +1308,7 @@ spec:
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumArray()
     {
         var yaml = @"
@@ -1373,7 +1373,154 @@ spec:
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("test_test");
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
+    public void TestEnumStringEmptyJson()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1beta1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                apiVersion:
+                  type: string
+                kind:
+                  type: string
+                metadata:
+                  type: object
+                spec:
+                  type: object
+                  properties:
+                    testEnum:
+                      enum:
+                      - always
+                      - ''
+                      - never
+                      type: string
+    ";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var enumType = specType.GetProperty("TestEnum").PropertyType;
+
+        Nullable.GetUnderlyingType(enumType).IsEnum.Should().BeTrue();
+
+        var members = GetMembers(enumType);
+
+        members.Should().HaveCount(3);
+
+        members[0].Name.Should().Be("Always");
+        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("always");
+        members[1].Name.Should().Be("Option1");
+        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("");
+        members[2].Name.Should().Be("Never");
+        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
+
+        var testJson = "{\"spec\": {\"testEnum\\: \"\" } }";
+
+        var @object = DeserializeKubeJson(testJson, type);
+
+        var spec = @object.GetType().GetProperty("Spec").GetValue(@object);
+
+        spec.GetType().GetProperty("TestEnum").GetValue(spec).Should().Be(Enum.Parse(enumType, "Option1"));
+
+        var testJson2 = KubernetesJson.Serialize(@object);
+
+        testJson2.Should().Be(testJson);
+    }
+
+    [Fact(Skip = "Enum Support")]
+    public void TestEnumStringEmptyYaml()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1beta1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                apiVersion:
+                  type: string
+                kind:
+                  type: string
+                metadata:
+                  type: object
+                spec:
+                  type: object
+                  properties:
+                    testEnum:
+                      enum:
+                      - always
+                      - ''
+                      - never
+                      type: string
+    ";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var enumType = specType.GetProperty("TestEnum").PropertyType;
+
+        enumType = Nullable.GetUnderlyingType(enumType);
+
+        enumType.IsEnum.Should().BeTrue();
+
+        var members = GetMembers(enumType);
+
+        members.Should().HaveCount(3);
+
+        members[0].Name.Should().Be("Always");
+        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("always");
+        members[1].Name.Should().Be("Option1");
+        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("");
+        members[2].Name.Should().Be("Never");
+        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
+
+        var testYaml = "spec:\r\n  testEnum: ''";
+
+        var @object = DeserializeKubeYaml(testYaml, type);
+
+        var spec = @object.GetType().GetProperty("Spec").GetValue(@object);
+
+        spec.GetType().GetProperty("TestEnum").GetValue(spec).Should().Be(Enum.Parse(enumType, "Option1"));
+
+        var testYaml2 = KubernetesYaml.Serialize(@object);
+        testYaml2.Should().Be(testYaml);
+    }
+
+    [Fact(Skip = "Enum Support")]
     public void TestEnumDeSerializeJson()
     {
         var yaml = @"
@@ -1440,7 +1587,7 @@ spec:
         spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumArrayDeSerializeJson()
     {
         var yaml = @"
@@ -1514,7 +1661,7 @@ spec:
         ((IList)prop)[0].Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumSerializeJson()
     {
         var yaml = @"
@@ -1577,7 +1724,7 @@ spec:
         objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"test_test"}}""");
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumArraySerializeJson()
     {
         var yaml = @"
@@ -1646,7 +1793,7 @@ spec:
         objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":["test_test"]}}""");
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumDeSerializeYaml()
     {
         var yaml = @"
@@ -1710,7 +1857,7 @@ spec:
         spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumArrayDeSerializeYaml()
     {
         var yaml = @"
@@ -1779,7 +1926,7 @@ spec:
         list[0].Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumSerializeYaml()
     {
         var yaml = @"
@@ -1847,7 +1994,7 @@ spec:
 """);
     }
 
-    [Fact]
+    [Fact(Skip = "Enum Support")]
     public void TestEnumArraySerializeYaml()
     {
         var yaml = @"
@@ -2176,5 +2323,23 @@ spec:
         specType.GetProperty("MirrorPercent").PropertyType.Should().Be<string?>();
         specType.GetProperty("MirrorPercent1").PropertyType.Should().Be<string?>();
         specType.GetProperty("MirrorPercent2").PropertyType.Should().Be<string?>();
+    }
+
+    private static readonly MethodInfo _deserializeJson = typeof(KubernetesJson).GetMethod(nameof(KubernetesJson.Deserialize), BindingFlags.Static | BindingFlags.Public, [typeof(string), typeof(JsonSerializerOptions)]);
+
+    public static object DeserializeKubeJson(string json, Type type)
+    {
+        var fooRef = _deserializeJson.MakeGenericMethod(type);
+
+        return fooRef.Invoke(null, [json, null]);
+    }
+
+    private static readonly MethodInfo _deserializeYaml = typeof(KubernetesYaml).GetMethod(nameof(KubernetesYaml.Deserialize), BindingFlags.Static | BindingFlags.Public, [typeof(string), typeof(bool)]);
+
+    public static object DeserializeKubeYaml(string yaml, Type type)
+    {
+        var fooRef = _deserializeYaml.MakeGenericMethod(type);
+
+        return fooRef.Invoke(null, [yaml, false]);
     }
 }
