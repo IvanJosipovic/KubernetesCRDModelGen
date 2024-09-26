@@ -8,18 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
-/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecDeletionPolicyEnum
-{
-    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
-    /// <summary>Orphan</summary>
-    Orphan,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCache
@@ -41,43 +29,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCache
     public IList<string>? QueryStrings { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>A Reference to a named object.</summary>
@@ -93,43 +55,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomai
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsRefsPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a list of FrontdoorCustomDomain in cdn to populate cdnFrontdoorCustomDomainIds.</summary>
@@ -149,43 +85,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomai
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorCustomDomainIdsSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a FrontdoorEndpoint in cdn to populate cdnFrontdoorEndpointId.</summary>
@@ -201,43 +111,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdR
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a FrontdoorEndpoint in cdn to populate cdnFrontdoorEndpointId.</summary>
@@ -257,43 +141,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdS
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorEndpointIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
@@ -309,43 +167,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroup
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
@@ -365,43 +197,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroup
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginGroupIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>A Reference to a named object.</summary>
@@ -417,43 +223,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRe
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsRefsPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a list of FrontdoorOrigin in cdn to populate cdnFrontdoorOriginIds.</summary>
@@ -473,43 +253,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSe
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorOriginIdsSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>A Reference to a named object.</summary>
@@ -525,43 +279,17 @@ public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsR
     public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsRefsPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecForProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a list of FrontdoorRuleSet in cdn to populate cdnFrontdoorRuleSetIds.</summary>
@@ -699,43 +427,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCache
     public IList<string>? QueryStrings { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>A Reference to a named object.</summary>
@@ -751,43 +453,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDoma
     public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsRefsPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a list of FrontdoorCustomDomain in cdn to populate cdnFrontdoorCustomDomainIds.</summary>
@@ -807,43 +483,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDoma
     public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorCustomDomainIdsSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
@@ -859,43 +509,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGrou
     public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a FrontdoorOriginGroup in cdn to populate cdnFrontdoorOriginGroupId.</summary>
@@ -915,43 +539,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGrou
     public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginGroupIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>A Reference to a named object.</summary>
@@ -967,43 +565,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsR
     public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsRefsPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a list of FrontdoorOrigin in cdn to populate cdnFrontdoorOriginIds.</summary>
@@ -1023,43 +595,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsS
     public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorOriginIdsSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>A Reference to a named object.</summary>
@@ -1075,43 +621,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIds
     public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsRefsPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecInitProviderCdnFrontdoorRuleSetIdsSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a list of FrontdoorRuleSet in cdn to populate cdnFrontdoorRuleSetIds.</summary>
@@ -1216,67 +736,17 @@ public partial class V1beta1FrontdoorRouteSpecInitProvider
     public IList<string>? SupportedProtocols { get; set; }
 }
 
-/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecManagementPoliciesEnum
-{
-    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
-    /// <summary>Observe</summary>
-    Observe,
-    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
-    /// <summary>Create</summary>
-    Create,
-    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
-    /// <summary>Update</summary>
-    Update,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete,
-    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
-    /// <summary>LateInitialize</summary>
-    LateInitialize,
-    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
-    /// <summary>*</summary>
-    Option5
-}
-
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecProviderConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecProviderConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecProviderConfigRefPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecProviderConfigRefPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
@@ -1292,43 +762,17 @@ public partial class V1beta1FrontdoorRouteSpecProviderConfigRef
     public V1beta1FrontdoorRouteSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FrontdoorRouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRouteSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
-    public V1beta1FrontdoorRouteSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
-    public V1beta1FrontdoorRouteSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1397,8 +841,7 @@ public partial class V1beta1FrontdoorRouteSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
     [JsonPropertyName("deletionPolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FrontdoorRouteSpecDeletionPolicyEnum>))]
-    public V1beta1FrontdoorRouteSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+    public string? DeletionPolicy { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("forProvider")]
@@ -1410,7 +853,7 @@ public partial class V1beta1FrontdoorRouteSpec
 
     /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
     [JsonPropertyName("managementPolicies")]
-    public IList<V1beta1FrontdoorRouteSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+    public IList<string>? ManagementPolicies { get; set; }
 
     /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
     [JsonPropertyName("providerConfigRef")]

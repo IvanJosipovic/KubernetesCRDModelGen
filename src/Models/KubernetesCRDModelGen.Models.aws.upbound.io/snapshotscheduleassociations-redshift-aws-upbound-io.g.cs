@@ -8,55 +8,17 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.upbound.io;
-/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecDeletionPolicyEnum
-{
-    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
-    /// <summary>Orphan</summary>
-    Orphan,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete
-}
-
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
@@ -72,43 +34,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIde
     public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
@@ -128,43 +64,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIde
     public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
@@ -180,43 +90,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleId
     public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
@@ -269,43 +153,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProvider
     public V1beta1SnapshotScheduleAssociationSpecForProviderScheduleIdentifierSelector? ScheduleIdentifierSelector { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a Cluster in redshift to populate clusterIdentifier.</summary>
@@ -321,43 +179,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterId
     public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a Cluster in redshift to populate clusterIdentifier.</summary>
@@ -377,43 +209,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderClusterId
     public V1beta1SnapshotScheduleAssociationSpecInitProviderClusterIdentifierSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
@@ -429,43 +235,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleI
     public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a SnapshotSchedule in redshift to populate scheduleIdentifier.</summary>
@@ -514,67 +294,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecInitProvider
     public V1beta1SnapshotScheduleAssociationSpecInitProviderScheduleIdentifierSelector? ScheduleIdentifierSelector { get; set; }
 }
 
-/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecManagementPoliciesEnum
-{
-    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
-    /// <summary>Observe</summary>
-    Observe,
-    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
-    /// <summary>Create</summary>
-    Create,
-    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
-    /// <summary>Update</summary>
-    Update,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete,
-    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
-    /// <summary>LateInitialize</summary>
-    LateInitialize,
-    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
-    /// <summary>*</summary>
-    Option5
-}
-
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
@@ -590,43 +320,17 @@ public partial class V1beta1SnapshotScheduleAssociationSpecProviderConfigRef
     public V1beta1SnapshotScheduleAssociationSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1SnapshotScheduleAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -695,8 +399,7 @@ public partial class V1beta1SnapshotScheduleAssociationSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
     [JsonPropertyName("deletionPolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1SnapshotScheduleAssociationSpecDeletionPolicyEnum>))]
-    public V1beta1SnapshotScheduleAssociationSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+    public string? DeletionPolicy { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("forProvider")]
@@ -708,7 +411,7 @@ public partial class V1beta1SnapshotScheduleAssociationSpec
 
     /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
     [JsonPropertyName("managementPolicies")]
-    public IList<V1beta1SnapshotScheduleAssociationSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+    public IList<string>? ManagementPolicies { get; set; }
 
     /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
     [JsonPropertyName("providerConfigRef")]

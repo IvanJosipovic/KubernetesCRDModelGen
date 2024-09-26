@@ -8,18 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfunctions.gcp.upbound.io;
-/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecDeletionPolicyEnum
-{
-    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
-    /// <summary>Orphan</summary>
-    Orphan,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderEventTriggerFailurePolicy
@@ -101,43 +89,17 @@ public partial class V1beta1FunctionSpecForProviderSecretVolumes
     public IList<V1beta1FunctionSpecForProviderSecretVolumesVersions>? Versions { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicyResolveEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a Bucket in storage to populate sourceArchiveBucket.</summary>
@@ -153,43 +115,17 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketRef
     public V1beta1FunctionSpecForProviderSourceArchiveBucketRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicyResolveEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a Bucket in storage to populate sourceArchiveBucket.</summary>
@@ -209,43 +145,17 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveBucketSelector
     public V1beta1FunctionSpecForProviderSourceArchiveBucketSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicyResolveEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a BucketObject in storage to populate sourceArchiveObject.</summary>
@@ -261,43 +171,17 @@ public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectRef
     public V1beta1FunctionSpecForProviderSourceArchiveObjectRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicyResolveEnum>))]
-    public V1beta1FunctionSpecForProviderSourceArchiveObjectSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a BucketObject in storage to populate sourceArchiveObject.</summary>
@@ -548,43 +432,17 @@ public partial class V1beta1FunctionSpecInitProviderSecretVolumes
     public IList<V1beta1FunctionSpecInitProviderSecretVolumesVersions>? Versions { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicyResolveEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a Bucket in storage to populate sourceArchiveBucket.</summary>
@@ -600,43 +458,17 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketRef
     public V1beta1FunctionSpecInitProviderSourceArchiveBucketRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicyResolveEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a Bucket in storage to populate sourceArchiveBucket.</summary>
@@ -656,43 +488,17 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveBucketSelector
     public V1beta1FunctionSpecInitProviderSourceArchiveBucketSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicyResolveEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Reference to a BucketObject in storage to populate sourceArchiveObject.</summary>
@@ -708,43 +514,17 @@ public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectRef
     public V1beta1FunctionSpecInitProviderSourceArchiveObjectRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicyResolveEnum>))]
-    public V1beta1FunctionSpecInitProviderSourceArchiveObjectSelectorPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Selector for a BucketObject in storage to populate sourceArchiveObject.</summary>
@@ -910,67 +690,17 @@ public partial class V1beta1FunctionSpecInitProvider
     public string? VpcConnectorEgressSettings { get; set; }
 }
 
-/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecManagementPoliciesEnum
-{
-    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
-    /// <summary>Observe</summary>
-    Observe,
-    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
-    /// <summary>Create</summary>
-    Create,
-    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
-    /// <summary>Update</summary>
-    Update,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete,
-    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
-    /// <summary>LateInitialize</summary>
-    LateInitialize,
-    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
-    /// <summary>*</summary>
-    Option5
-}
-
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecProviderConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecProviderConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecProviderConfigRefPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecProviderConfigRefPolicyResolveEnum>))]
-    public V1beta1FunctionSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
@@ -986,43 +716,17 @@ public partial class V1beta1FunctionSpecProviderConfigRef
     public V1beta1FunctionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
-    public V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
-    public V1beta1FunctionSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -1091,8 +795,7 @@ public partial class V1beta1FunctionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
     [JsonPropertyName("deletionPolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1FunctionSpecDeletionPolicyEnum>))]
-    public V1beta1FunctionSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+    public string? DeletionPolicy { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("forProvider")]
@@ -1104,7 +807,7 @@ public partial class V1beta1FunctionSpec
 
     /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
     [JsonPropertyName("managementPolicies")]
-    public IList<V1beta1FunctionSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+    public IList<string>? ManagementPolicies { get; set; }
 
     /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
     [JsonPropertyName("providerConfigRef")]

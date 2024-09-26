@@ -71,33 +71,6 @@ public partial class V1OrderStatusAuthorizationsChallenges
     public string Url { get; set; }
 }
 
-/// <summary>InitialState is the initial state of the ACME authorization when first fetched from the ACME server. If an Authorization is already 'valid', the Order controller will not create a Challenge resource for the authorization. This will occur when working with an ACME server that enables 'authz reuse' (such as Let's Encrypt's production endpoint). If not set and 'identifier' is set, the state is assumed to be pending and a Challenge will be created.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1OrderStatusAuthorizationsInitialStateEnum
-{
-    [EnumMember(Value = "valid"), JsonStringEnumMemberName("valid")]
-    /// <summary>valid</summary>
-    Valid,
-    [EnumMember(Value = "ready"), JsonStringEnumMemberName("ready")]
-    /// <summary>ready</summary>
-    Ready,
-    [EnumMember(Value = "pending"), JsonStringEnumMemberName("pending")]
-    /// <summary>pending</summary>
-    Pending,
-    [EnumMember(Value = "processing"), JsonStringEnumMemberName("processing")]
-    /// <summary>processing</summary>
-    Processing,
-    [EnumMember(Value = "invalid"), JsonStringEnumMemberName("invalid")]
-    /// <summary>invalid</summary>
-    Invalid,
-    [EnumMember(Value = "expired"), JsonStringEnumMemberName("expired")]
-    /// <summary>expired</summary>
-    Expired,
-    [EnumMember(Value = "errored"), JsonStringEnumMemberName("errored")]
-    /// <summary>errored</summary>
-    Errored
-}
-
 /// <summary>ACMEAuthorization contains data returned from the ACME server on an authorization that must be completed in order validate a DNS name on an ACME Order resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderStatusAuthorizations
@@ -112,8 +85,7 @@ public partial class V1OrderStatusAuthorizations
 
     /// <summary>InitialState is the initial state of the ACME authorization when first fetched from the ACME server. If an Authorization is already 'valid', the Order controller will not create a Challenge resource for the authorization. This will occur when working with an ACME server that enables 'authz reuse' (such as Let's Encrypt's production endpoint). If not set and 'identifier' is set, the state is assumed to be pending and a Challenge will be created.</summary>
     [JsonPropertyName("initialState")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1OrderStatusAuthorizationsInitialStateEnum>))]
-    public V1OrderStatusAuthorizationsInitialStateEnum? InitialState { get; set; }
+    public string? InitialState { get; set; }
 
     /// <summary>URL is the URL of the Authorization that must be completed</summary>
     [JsonPropertyName("url")]
@@ -122,33 +94,6 @@ public partial class V1OrderStatusAuthorizations
     /// <summary>Wildcard will be true if this authorization is for a wildcard DNS name. If this is true, the identifier will be the *non-wildcard* version of the DNS name. For example, if '*.example.com' is the DNS name being validated, this field will be 'true' and the 'identifier' field will be 'example.com'.</summary>
     [JsonPropertyName("wildcard")]
     public bool? Wildcard { get; set; }
-}
-
-/// <summary>State contains the current state of this Order resource. States 'success' and 'expired' are 'final'</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1OrderStatusStateEnum
-{
-    [EnumMember(Value = "valid"), JsonStringEnumMemberName("valid")]
-    /// <summary>valid</summary>
-    Valid,
-    [EnumMember(Value = "ready"), JsonStringEnumMemberName("ready")]
-    /// <summary>ready</summary>
-    Ready,
-    [EnumMember(Value = "pending"), JsonStringEnumMemberName("pending")]
-    /// <summary>pending</summary>
-    Pending,
-    [EnumMember(Value = "processing"), JsonStringEnumMemberName("processing")]
-    /// <summary>processing</summary>
-    Processing,
-    [EnumMember(Value = "invalid"), JsonStringEnumMemberName("invalid")]
-    /// <summary>invalid</summary>
-    Invalid,
-    [EnumMember(Value = "expired"), JsonStringEnumMemberName("expired")]
-    /// <summary>expired</summary>
-    Expired,
-    [EnumMember(Value = "errored"), JsonStringEnumMemberName("errored")]
-    /// <summary>errored</summary>
-    Errored
 }
 
 /// <summary></summary>
@@ -177,8 +122,7 @@ public partial class V1OrderStatus
 
     /// <summary>State contains the current state of this Order resource. States 'success' and 'expired' are 'final'</summary>
     [JsonPropertyName("state")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1OrderStatusStateEnum>))]
-    public V1OrderStatusStateEnum? State { get; set; }
+    public string? State { get; set; }
 
     /// <summary>URL of the Order. This will initially be empty when the resource is first created. The Order controller will populate this field when the Order is first processed. This field will be immutable after it is initially set.</summary>
     [JsonPropertyName("url")]

@@ -52,36 +52,6 @@ public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of the provider credentials.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ProviderConfigSpecCredentialsSourceEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "AccessToken"), JsonStringEnumMemberName("AccessToken")]
-    /// <summary>AccessToken</summary>
-    AccessToken,
-    [EnumMember(Value = "ImpersonateServiceAccount"), JsonStringEnumMemberName("ImpersonateServiceAccount")]
-    /// <summary>ImpersonateServiceAccount</summary>
-    ImpersonateServiceAccount,
-    [EnumMember(Value = "InjectedIdentity"), JsonStringEnumMemberName("InjectedIdentity")]
-    /// <summary>InjectedIdentity</summary>
-    InjectedIdentity,
-    [EnumMember(Value = "Environment"), JsonStringEnumMemberName("Environment")]
-    /// <summary>Environment</summary>
-    Environment,
-    [EnumMember(Value = "Filesystem"), JsonStringEnumMemberName("Filesystem")]
-    /// <summary>Filesystem</summary>
-    Filesystem,
-    [EnumMember(Value = "Upbound"), JsonStringEnumMemberName("Upbound")]
-    /// <summary>Upbound</summary>
-    Upbound
-}
-
 /// <summary>Federation is the configuration for federated identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsUpboundFederation
@@ -126,8 +96,7 @@ public partial class V1beta1ProviderConfigSpecCredentials
 
     /// <summary>Source of the provider credentials.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ProviderConfigSpecCredentialsSourceEnum>))]
-    public V1beta1ProviderConfigSpecCredentialsSourceEnum Source { get; set; }
+    public string Source { get; set; }
 
     /// <summary>Upbound defines the options for authenticating using Upbound as an identity provider.</summary>
     [JsonPropertyName("upbound")]

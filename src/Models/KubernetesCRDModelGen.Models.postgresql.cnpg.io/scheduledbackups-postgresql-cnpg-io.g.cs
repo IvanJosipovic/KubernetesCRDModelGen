@@ -8,21 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
-/// <summary>Indicates which ownerReference should be put inside the created backup resources.&lt;br /&gt; - none: no owner reference for created backup objects (same behavior as before the field was introduced)&lt;br /&gt; - self: sets the Scheduled backup object as owner of the backup&lt;br /&gt; - cluster: set the cluster as owner of the backup&lt;br /&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ScheduledBackupSpecBackupOwnerReferenceEnum
-{
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None,
-    [EnumMember(Value = "self"), JsonStringEnumMemberName("self")]
-    /// <summary>self</summary>
-    Self,
-    [EnumMember(Value = "cluster"), JsonStringEnumMemberName("cluster")]
-    /// <summary>cluster</summary>
-    Cluster
-}
-
 /// <summary>The cluster to backup</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ScheduledBackupSpecCluster
@@ -30,21 +15,6 @@ public partial class V1ScheduledBackupSpecCluster
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
-}
-
-/// <summary>The backup method to be used, possible options are `barmanObjectStore`, `volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ScheduledBackupSpecMethodEnum
-{
-    [EnumMember(Value = "barmanObjectStore"), JsonStringEnumMemberName("barmanObjectStore")]
-    /// <summary>barmanObjectStore</summary>
-    BarmanObjectStore,
-    [EnumMember(Value = "volumeSnapshot"), JsonStringEnumMemberName("volumeSnapshot")]
-    /// <summary>volumeSnapshot</summary>
-    VolumeSnapshot,
-    [EnumMember(Value = "plugin"), JsonStringEnumMemberName("plugin")]
-    /// <summary>plugin</summary>
-    Plugin
 }
 
 /// <summary>Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza</summary>
@@ -73,26 +43,13 @@ public partial class V1ScheduledBackupSpecPluginConfiguration
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
-/// <summary>The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ScheduledBackupSpecTargetEnum
-{
-    [EnumMember(Value = "primary"), JsonStringEnumMemberName("primary")]
-    /// <summary>primary</summary>
-    Primary,
-    [EnumMember(Value = "prefer-standby"), JsonStringEnumMemberName("prefer-standby")]
-    /// <summary>prefer-standby</summary>
-    PreferStandby
-}
-
 /// <summary>Specification of the desired behavior of the ScheduledBackup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ScheduledBackupSpec
 {
     /// <summary>Indicates which ownerReference should be put inside the created backup resources.&lt;br /&gt; - none: no owner reference for created backup objects (same behavior as before the field was introduced)&lt;br /&gt; - self: sets the Scheduled backup object as owner of the backup&lt;br /&gt; - cluster: set the cluster as owner of the backup&lt;br /&gt;</summary>
     [JsonPropertyName("backupOwnerReference")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ScheduledBackupSpecBackupOwnerReferenceEnum>))]
-    public V1ScheduledBackupSpecBackupOwnerReferenceEnum? BackupOwnerReference { get; set; }
+    public string? BackupOwnerReference { get; set; }
 
     /// <summary>The cluster to backup</summary>
     [JsonPropertyName("cluster")]
@@ -104,8 +61,7 @@ public partial class V1ScheduledBackupSpec
 
     /// <summary>The backup method to be used, possible options are `barmanObjectStore`, `volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`.</summary>
     [JsonPropertyName("method")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ScheduledBackupSpecMethodEnum>))]
-    public V1ScheduledBackupSpecMethodEnum? Method { get; set; }
+    public string? Method { get; set; }
 
     /// <summary>Whether the default type of backup with volume snapshots is online/hot (`true`, default) or offline/cold (`false`) Overrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'</summary>
     [JsonPropertyName("online")]
@@ -129,8 +85,7 @@ public partial class V1ScheduledBackupSpec
 
     /// <summary>The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available.</summary>
     [JsonPropertyName("target")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ScheduledBackupSpecTargetEnum>))]
-    public V1ScheduledBackupSpecTargetEnum? Target { get; set; }
+    public string? Target { get; set; }
 }
 
 /// <summary>Most recently observed status of the ScheduledBackup. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>

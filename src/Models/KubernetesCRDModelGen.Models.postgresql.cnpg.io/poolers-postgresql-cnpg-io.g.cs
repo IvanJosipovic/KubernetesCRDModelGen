@@ -43,86 +43,13 @@ public partial class V1PoolerSpecDeploymentStrategy
     public string? Type { get; set; }
 }
 
-/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1PoolerSpecMonitoringPodMonitorMetricRelabelingsActionEnum
-{
-    [EnumMember(Value = "replace"), JsonStringEnumMemberName("replace")]
-    /// <summary>replace</summary>
-    Replace,
-    [EnumMember(Value = "Replace"), JsonStringEnumMemberName("Replace")]
-    /// <summary>Replace</summary>
-    Replace1,
-    [EnumMember(Value = "keep"), JsonStringEnumMemberName("keep")]
-    /// <summary>keep</summary>
-    Keep,
-    [EnumMember(Value = "Keep"), JsonStringEnumMemberName("Keep")]
-    /// <summary>Keep</summary>
-    Keep1,
-    [EnumMember(Value = "drop"), JsonStringEnumMemberName("drop")]
-    /// <summary>drop</summary>
-    Drop,
-    [EnumMember(Value = "Drop"), JsonStringEnumMemberName("Drop")]
-    /// <summary>Drop</summary>
-    Drop1,
-    [EnumMember(Value = "hashmod"), JsonStringEnumMemberName("hashmod")]
-    /// <summary>hashmod</summary>
-    Hashmod,
-    [EnumMember(Value = "HashMod"), JsonStringEnumMemberName("HashMod")]
-    /// <summary>HashMod</summary>
-    HashMod,
-    [EnumMember(Value = "labelmap"), JsonStringEnumMemberName("labelmap")]
-    /// <summary>labelmap</summary>
-    Labelmap,
-    [EnumMember(Value = "LabelMap"), JsonStringEnumMemberName("LabelMap")]
-    /// <summary>LabelMap</summary>
-    LabelMap,
-    [EnumMember(Value = "labeldrop"), JsonStringEnumMemberName("labeldrop")]
-    /// <summary>labeldrop</summary>
-    Labeldrop,
-    [EnumMember(Value = "LabelDrop"), JsonStringEnumMemberName("LabelDrop")]
-    /// <summary>LabelDrop</summary>
-    LabelDrop,
-    [EnumMember(Value = "labelkeep"), JsonStringEnumMemberName("labelkeep")]
-    /// <summary>labelkeep</summary>
-    Labelkeep,
-    [EnumMember(Value = "LabelKeep"), JsonStringEnumMemberName("LabelKeep")]
-    /// <summary>LabelKeep</summary>
-    LabelKeep,
-    [EnumMember(Value = "lowercase"), JsonStringEnumMemberName("lowercase")]
-    /// <summary>lowercase</summary>
-    Lowercase,
-    [EnumMember(Value = "Lowercase"), JsonStringEnumMemberName("Lowercase")]
-    /// <summary>Lowercase</summary>
-    Lowercase1,
-    [EnumMember(Value = "uppercase"), JsonStringEnumMemberName("uppercase")]
-    /// <summary>uppercase</summary>
-    Uppercase,
-    [EnumMember(Value = "Uppercase"), JsonStringEnumMemberName("Uppercase")]
-    /// <summary>Uppercase</summary>
-    Uppercase1,
-    [EnumMember(Value = "keepequal"), JsonStringEnumMemberName("keepequal")]
-    /// <summary>keepequal</summary>
-    Keepequal,
-    [EnumMember(Value = "KeepEqual"), JsonStringEnumMemberName("KeepEqual")]
-    /// <summary>KeepEqual</summary>
-    KeepEqual,
-    [EnumMember(Value = "dropequal"), JsonStringEnumMemberName("dropequal")]
-    /// <summary>dropequal</summary>
-    Dropequal,
-    [EnumMember(Value = "DropEqual"), JsonStringEnumMemberName("DropEqual")]
-    /// <summary>DropEqual</summary>
-    DropEqual
-}
-
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.   More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecMonitoringPodMonitorMetricRelabelings
 {
     /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1PoolerSpecMonitoringPodMonitorMetricRelabelingsActionEnum>))]
-    public V1PoolerSpecMonitoringPodMonitorMetricRelabelingsActionEnum? Action { get; set; }
+    public string? Action { get; set; }
 
     /// <summary>Modulus to take of the hash of the source label values.   Only applicable when the action is `HashMod`.</summary>
     [JsonPropertyName("modulus")]
@@ -149,86 +76,13 @@ public partial class V1PoolerSpecMonitoringPodMonitorMetricRelabelings
     public string? TargetLabel { get; set; }
 }
 
-/// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1PoolerSpecMonitoringPodMonitorRelabelingsActionEnum
-{
-    [EnumMember(Value = "replace"), JsonStringEnumMemberName("replace")]
-    /// <summary>replace</summary>
-    Replace,
-    [EnumMember(Value = "Replace"), JsonStringEnumMemberName("Replace")]
-    /// <summary>Replace</summary>
-    Replace1,
-    [EnumMember(Value = "keep"), JsonStringEnumMemberName("keep")]
-    /// <summary>keep</summary>
-    Keep,
-    [EnumMember(Value = "Keep"), JsonStringEnumMemberName("Keep")]
-    /// <summary>Keep</summary>
-    Keep1,
-    [EnumMember(Value = "drop"), JsonStringEnumMemberName("drop")]
-    /// <summary>drop</summary>
-    Drop,
-    [EnumMember(Value = "Drop"), JsonStringEnumMemberName("Drop")]
-    /// <summary>Drop</summary>
-    Drop1,
-    [EnumMember(Value = "hashmod"), JsonStringEnumMemberName("hashmod")]
-    /// <summary>hashmod</summary>
-    Hashmod,
-    [EnumMember(Value = "HashMod"), JsonStringEnumMemberName("HashMod")]
-    /// <summary>HashMod</summary>
-    HashMod,
-    [EnumMember(Value = "labelmap"), JsonStringEnumMemberName("labelmap")]
-    /// <summary>labelmap</summary>
-    Labelmap,
-    [EnumMember(Value = "LabelMap"), JsonStringEnumMemberName("LabelMap")]
-    /// <summary>LabelMap</summary>
-    LabelMap,
-    [EnumMember(Value = "labeldrop"), JsonStringEnumMemberName("labeldrop")]
-    /// <summary>labeldrop</summary>
-    Labeldrop,
-    [EnumMember(Value = "LabelDrop"), JsonStringEnumMemberName("LabelDrop")]
-    /// <summary>LabelDrop</summary>
-    LabelDrop,
-    [EnumMember(Value = "labelkeep"), JsonStringEnumMemberName("labelkeep")]
-    /// <summary>labelkeep</summary>
-    Labelkeep,
-    [EnumMember(Value = "LabelKeep"), JsonStringEnumMemberName("LabelKeep")]
-    /// <summary>LabelKeep</summary>
-    LabelKeep,
-    [EnumMember(Value = "lowercase"), JsonStringEnumMemberName("lowercase")]
-    /// <summary>lowercase</summary>
-    Lowercase,
-    [EnumMember(Value = "Lowercase"), JsonStringEnumMemberName("Lowercase")]
-    /// <summary>Lowercase</summary>
-    Lowercase1,
-    [EnumMember(Value = "uppercase"), JsonStringEnumMemberName("uppercase")]
-    /// <summary>uppercase</summary>
-    Uppercase,
-    [EnumMember(Value = "Uppercase"), JsonStringEnumMemberName("Uppercase")]
-    /// <summary>Uppercase</summary>
-    Uppercase1,
-    [EnumMember(Value = "keepequal"), JsonStringEnumMemberName("keepequal")]
-    /// <summary>keepequal</summary>
-    Keepequal,
-    [EnumMember(Value = "KeepEqual"), JsonStringEnumMemberName("KeepEqual")]
-    /// <summary>KeepEqual</summary>
-    KeepEqual,
-    [EnumMember(Value = "dropequal"), JsonStringEnumMemberName("dropequal")]
-    /// <summary>dropequal</summary>
-    Dropequal,
-    [EnumMember(Value = "DropEqual"), JsonStringEnumMemberName("DropEqual")]
-    /// <summary>DropEqual</summary>
-    DropEqual
-}
-
 /// <summary>RelabelConfig allows dynamic rewriting of the label set for targets, alerts, scraped samples and remote write samples.   More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecMonitoringPodMonitorRelabelings
 {
     /// <summary>Action to perform based on the regex matching.   `Uppercase` and `Lowercase` actions require Prometheus &gt;= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus &gt;= v2.41.0.   Default: "Replace"</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1PoolerSpecMonitoringPodMonitorRelabelingsActionEnum>))]
-    public V1PoolerSpecMonitoringPodMonitorRelabelingsActionEnum? Action { get; set; }
+    public string? Action { get; set; }
 
     /// <summary>Modulus to take of the hash of the source label values.   Only applicable when the action is `HashMod`.</summary>
     [JsonPropertyName("modulus")]
@@ -281,18 +135,6 @@ public partial class V1PoolerSpecPgbouncerAuthQuerySecret
     public string Name { get; set; }
 }
 
-/// <summary>The pool mode. Default: `session`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1PoolerSpecPgbouncerPoolModeEnum
-{
-    [EnumMember(Value = "session"), JsonStringEnumMemberName("session")]
-    /// <summary>session</summary>
-    Session,
-    [EnumMember(Value = "transaction"), JsonStringEnumMemberName("transaction")]
-    /// <summary>transaction</summary>
-    Transaction
-}
-
 /// <summary>The PgBouncer configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpecPgbouncer
@@ -319,8 +161,7 @@ public partial class V1PoolerSpecPgbouncer
 
     /// <summary>The pool mode. Default: `session`.</summary>
     [JsonPropertyName("poolMode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1PoolerSpecPgbouncerPoolModeEnum>))]
-    public V1PoolerSpecPgbouncerPoolModeEnum? PoolMode { get; set; }
+    public string? PoolMode { get; set; }
 }
 
 /// <summary>Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</summary>
@@ -5949,18 +5790,6 @@ public partial class V1PoolerSpecTemplate
     public V1PoolerSpecTemplateSpec? Spec { get; set; }
 }
 
-/// <summary>Type of service to forward traffic to. Default: `rw`.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1PoolerSpecTypeEnum
-{
-    [EnumMember(Value = "rw"), JsonStringEnumMemberName("rw")]
-    /// <summary>rw</summary>
-    Rw,
-    [EnumMember(Value = "ro"), JsonStringEnumMemberName("ro")]
-    /// <summary>ro</summary>
-    Ro
-}
-
 /// <summary>Specification of the desired behavior of the Pooler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PoolerSpec
@@ -5995,8 +5824,7 @@ public partial class V1PoolerSpec
 
     /// <summary>Type of service to forward traffic to. Default: `rw`.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1PoolerSpecTypeEnum>))]
-    public V1PoolerSpecTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 }
 
 /// <summary>The client CA secret version</summary>

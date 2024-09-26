@@ -47,18 +47,6 @@ public partial class V1alpha1APIRateLimitSpecApis
     public string Name { get; set; }
 }
 
-/// <summary>Strategy defines how the bucket state will be synchronized between the different Traefik Hub instances. It can be, either "local" or "distributed".</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1APIRateLimitSpecStrategyEnum
-{
-    [EnumMember(Value = "local"), JsonStringEnumMemberName("local")]
-    /// <summary>local</summary>
-    Local,
-    [EnumMember(Value = "distributed"), JsonStringEnumMemberName("distributed")]
-    /// <summary>distributed</summary>
-    Distributed
-}
-
 /// <summary>The desired behavior of this APIRateLimit.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpec
@@ -89,8 +77,7 @@ public partial class V1alpha1APIRateLimitSpec
 
     /// <summary>Strategy defines how the bucket state will be synchronized between the different Traefik Hub instances. It can be, either "local" or "distributed".</summary>
     [JsonPropertyName("strategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1APIRateLimitSpecStrategyEnum>))]
-    public V1alpha1APIRateLimitSpecStrategyEnum? Strategy { get; set; }
+    public string? Strategy { get; set; }
 }
 
 /// <summary>The current status of this APIRateLimit.</summary>

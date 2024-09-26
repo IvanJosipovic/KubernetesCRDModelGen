@@ -30,38 +30,13 @@ public partial class V1CompositionRevisionSpecEnvironmentEnvironmentConfigsRef
     public string Name { get; set; }
 }
 
-/// <summary>FromFieldPathPolicy specifies the policy for the valueFromFieldPath. The default is Required, meaning that an error will be returned if the field is not found in the composite resource. Optional means that if the field is not found in the composite resource, that label pair will just be skipped. N.B. other specified label matchers will still be used to retrieve the desired environment config, if any.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsFromFieldPathPolicyEnum
-{
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional,
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required
-}
-
-/// <summary>Type specifies where the value for a label comes from.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsTypeEnum
-{
-    [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
-    /// <summary>FromCompositeFieldPath</summary>
-    FromCompositeFieldPath,
-    [EnumMember(Value = "Value"), JsonStringEnumMemberName("Value")]
-    /// <summary>Value</summary>
-    Value
-}
-
 /// <summary>An EnvironmentSourceSelectorLabelMatcher acts like a k8s label selector but can draw the label value from a different path.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorMatchLabels
 {
     /// <summary>FromFieldPathPolicy specifies the policy for the valueFromFieldPath. The default is Required, meaning that an error will be returned if the field is not found in the composite resource. Optional means that if the field is not found in the composite resource, that label pair will just be skipped. N.B. other specified label matchers will still be used to retrieve the desired environment config, if any.</summary>
     [JsonPropertyName("fromFieldPathPolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsFromFieldPathPolicyEnum>))]
-    public V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsFromFieldPathPolicyEnum? FromFieldPathPolicy { get; set; }
+    public string? FromFieldPathPolicy { get; set; }
 
     /// <summary>Key of the label to match.</summary>
     [JsonPropertyName("key")]
@@ -69,8 +44,7 @@ public partial class V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelec
 
     /// <summary>Type specifies where the value for a label comes from.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorMatchLabelsTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>Value specifies a literal label value.</summary>
     [JsonPropertyName("value")]
@@ -79,18 +53,6 @@ public partial class V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelec
     /// <summary>ValueFromFieldPath specifies the field path to look for the label value.</summary>
     [JsonPropertyName("valueFromFieldPath")]
     public string? ValueFromFieldPath { get; set; }
-}
-
-/// <summary>Mode specifies retrieval strategy: "Single" or "Multiple".</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorModeEnum
-{
-    [EnumMember(Value = "Single"), JsonStringEnumMemberName("Single")]
-    /// <summary>Single</summary>
-    Single,
-    [EnumMember(Value = "Multiple"), JsonStringEnumMemberName("Multiple")]
-    /// <summary>Multiple</summary>
-    Multiple
 }
 
 /// <summary>Selector selects EnvironmentConfig(s) via labels.</summary>
@@ -111,24 +73,11 @@ public partial class V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelec
 
     /// <summary>Mode specifies retrieval strategy: "Single" or "Multiple".</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorModeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentEnvironmentConfigsSelectorModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>SortByFieldPath is the path to the field based on which list of EnvironmentConfigs is alphabetically sorted.</summary>
     [JsonPropertyName("sortByFieldPath")]
     public string? SortByFieldPath { get; set; }
-}
-
-/// <summary>Type specifies the way the EnvironmentConfig is selected. Default is `Reference`</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentEnvironmentConfigsTypeEnum
-{
-    [EnumMember(Value = "Reference"), JsonStringEnumMemberName("Reference")]
-    /// <summary>Reference</summary>
-    Reference,
-    [EnumMember(Value = "Selector"), JsonStringEnumMemberName("Selector")]
-    /// <summary>Selector</summary>
-    Selector
 }
 
 /// <summary>EnvironmentSource selects a EnvironmentConfig resource.</summary>
@@ -145,17 +94,7 @@ public partial class V1CompositionRevisionSpecEnvironmentEnvironmentConfigs
 
     /// <summary>Type specifies the way the EnvironmentConfig is selected. Default is `Reference`</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentEnvironmentConfigsTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentEnvironmentConfigsTypeEnum? Type { get; set; }
-}
-
-/// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesCombineStrategyEnum
-{
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String
+    public string? Type { get; set; }
 }
 
 /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
@@ -182,8 +121,7 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
     [JsonPropertyName("strategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesCombineStrategyEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesCombineStrategyEnum Strategy { get; set; }
+    public string Strategy { get; set; }
 
     /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
     [JsonPropertyName("string")]
@@ -192,18 +130,6 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesCombine
     /// <summary>Variables are the list of variables whose values will be retrieved and combined.</summary>
     [JsonPropertyName("variables")]
     public IList<V1CompositionRevisionSpecEnvironmentPatchesCombineVariables> Variables { get; set; }
-}
-
-/// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesPolicyFromFieldPathEnum
-{
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional,
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required
 }
 
 /// <summary>MergeOptions Specifies merge options on a field path.</summary>
@@ -225,54 +151,11 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
     [JsonPropertyName("fromFieldPath")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesPolicyFromFieldPathEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesPolicyFromFieldPathEnum? FromFieldPath { get; set; }
+    public string? FromFieldPath { get; set; }
 
     /// <summary>MergeOptions Specifies merge options on a field path.</summary>
     [JsonPropertyName("mergeOptions")]
     public V1CompositionRevisionSpecEnvironmentPatchesPolicyMergeOptions? MergeOptions { get; set; }
-}
-
-/// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsConvertFormatEnum
-{
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None,
-    [EnumMember(Value = "quantity"), JsonStringEnumMemberName("quantity")]
-    /// <summary>quantity</summary>
-    Quantity,
-    [EnumMember(Value = "json"), JsonStringEnumMemberName("json")]
-    /// <summary>json</summary>
-    Json
-}
-
-/// <summary>ToType is the type of the output of this transform.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsConvertToTypeEnum
-{
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String,
-    [EnumMember(Value = "int"), JsonStringEnumMemberName("int")]
-    /// <summary>int</summary>
-    Int,
-    [EnumMember(Value = "int64"), JsonStringEnumMemberName("int64")]
-    /// <summary>int64</summary>
-    Int64,
-    [EnumMember(Value = "bool"), JsonStringEnumMemberName("bool")]
-    /// <summary>bool</summary>
-    Bool,
-    [EnumMember(Value = "float64"), JsonStringEnumMemberName("float64")]
-    /// <summary>float64</summary>
-    Float64,
-    [EnumMember(Value = "object"), JsonStringEnumMemberName("object")]
-    /// <summary>object</summary>
-    Object,
-    [EnumMember(Value = "array"), JsonStringEnumMemberName("array")]
-    /// <summary>array</summary>
-    Array
 }
 
 /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -281,37 +164,11 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsConver
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsConvertFormatEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsConvertFormatEnum? Format { get; set; }
+    public string? Format { get; set; }
 
     /// <summary>ToType is the type of the output of this transform.</summary>
     [JsonPropertyName("toType")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsConvertToTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsConvertToTypeEnum ToType { get; set; }
-}
-
-/// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchFallbackToEnum
-{
-    [EnumMember(Value = "Value"), JsonStringEnumMemberName("Value")]
-    /// <summary>Value</summary>
-    Value,
-    [EnumMember(Value = "Input"), JsonStringEnumMemberName("Input")]
-    /// <summary>Input</summary>
-    Input
-}
-
-/// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchPatternsTypeEnum
-{
-    [EnumMember(Value = "literal"), JsonStringEnumMemberName("literal")]
-    /// <summary>literal</summary>
-    Literal,
-    [EnumMember(Value = "regexp"), JsonStringEnumMemberName("regexp")]
-    /// <summary>regexp</summary>
-    Regexp
+    public string ToType { get; set; }
 }
 
 /// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
@@ -332,8 +189,7 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchP
 
     /// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchPatternsTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchPatternsTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
@@ -342,8 +198,7 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
     [JsonPropertyName("fallbackTo")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchFallbackToEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchFallbackToEnum? FallbackTo { get; set; }
+    public string? FallbackTo { get; set; }
 
     /// <summary>The fallback value that should be returned by the transform if now pattern matches.</summary>
     [JsonPropertyName("fallbackValue")]
@@ -352,21 +207,6 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsMatch
     /// <summary>The patterns that should be tested against the input string. Patterns are tested in order. The value of the first match is used as result of this transform.</summary>
     [JsonPropertyName("patterns")]
     public IList<V1CompositionRevisionSpecEnvironmentPatchesTransformsMatchPatterns>? Patterns { get; set; }
-}
-
-/// <summary>Type of the math transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsMathTypeEnum
-{
-    [EnumMember(Value = "Multiply"), JsonStringEnumMemberName("Multiply")]
-    /// <summary>Multiply</summary>
-    Multiply,
-    [EnumMember(Value = "ClampMin"), JsonStringEnumMemberName("ClampMin")]
-    /// <summary>ClampMin</summary>
-    ClampMin,
-    [EnumMember(Value = "ClampMax"), JsonStringEnumMemberName("ClampMax")]
-    /// <summary>ClampMax</summary>
-    ClampMax
 }
 
 /// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
@@ -387,41 +227,7 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsMath
 
     /// <summary>Type of the math transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsMathTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsMathTypeEnum? Type { get; set; }
-}
-
-/// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsStringConvertEnum
-{
-    [EnumMember(Value = "ToUpper"), JsonStringEnumMemberName("ToUpper")]
-    /// <summary>ToUpper</summary>
-    ToUpper,
-    [EnumMember(Value = "ToLower"), JsonStringEnumMemberName("ToLower")]
-    /// <summary>ToLower</summary>
-    ToLower,
-    [EnumMember(Value = "ToBase64"), JsonStringEnumMemberName("ToBase64")]
-    /// <summary>ToBase64</summary>
-    ToBase64,
-    [EnumMember(Value = "FromBase64"), JsonStringEnumMemberName("FromBase64")]
-    /// <summary>FromBase64</summary>
-    FromBase64,
-    [EnumMember(Value = "ToJson"), JsonStringEnumMemberName("ToJson")]
-    /// <summary>ToJson</summary>
-    ToJson,
-    [EnumMember(Value = "ToSha1"), JsonStringEnumMemberName("ToSha1")]
-    /// <summary>ToSha1</summary>
-    ToSha1,
-    [EnumMember(Value = "ToSha256"), JsonStringEnumMemberName("ToSha256")]
-    /// <summary>ToSha256</summary>
-    ToSha256,
-    [EnumMember(Value = "ToSha512"), JsonStringEnumMemberName("ToSha512")]
-    /// <summary>ToSha512</summary>
-    ToSha512,
-    [EnumMember(Value = "ToAdler32"), JsonStringEnumMemberName("ToAdler32")]
-    /// <summary>ToAdler32</summary>
-    ToAdler32
+    public string? Type { get; set; }
 }
 
 /// <summary>Join defines parameters to join a slice of values to a string.</summary>
@@ -446,38 +252,13 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsString
     public string Match { get; set; }
 }
 
-/// <summary>Type of the string transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsStringTypeEnum
-{
-    [EnumMember(Value = "Format"), JsonStringEnumMemberName("Format")]
-    /// <summary>Format</summary>
-    Format,
-    [EnumMember(Value = "Convert"), JsonStringEnumMemberName("Convert")]
-    /// <summary>Convert</summary>
-    Convert,
-    [EnumMember(Value = "TrimPrefix"), JsonStringEnumMemberName("TrimPrefix")]
-    /// <summary>TrimPrefix</summary>
-    TrimPrefix,
-    [EnumMember(Value = "TrimSuffix"), JsonStringEnumMemberName("TrimSuffix")]
-    /// <summary>TrimSuffix</summary>
-    TrimSuffix,
-    [EnumMember(Value = "Regexp"), JsonStringEnumMemberName("Regexp")]
-    /// <summary>Regexp</summary>
-    Regexp,
-    [EnumMember(Value = "Join"), JsonStringEnumMemberName("Join")]
-    /// <summary>Join</summary>
-    Join
-}
-
 /// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
     [JsonPropertyName("convert")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsStringConvertEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsStringConvertEnum? Convert { get; set; }
+    public string? Convert { get; set; }
 
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
     [JsonPropertyName("fmt")]
@@ -497,29 +278,7 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransformsString
 
     /// <summary>Type of the string transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsStringTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsStringTypeEnum? Type { get; set; }
-}
-
-/// <summary>Type of the transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTransformsTypeEnum
-{
-    [EnumMember(Value = "map"), JsonStringEnumMemberName("map")]
-    /// <summary>map</summary>
-    Map,
-    [EnumMember(Value = "match"), JsonStringEnumMemberName("match")]
-    /// <summary>match</summary>
-    Match,
-    [EnumMember(Value = "math"), JsonStringEnumMemberName("math")]
-    /// <summary>math</summary>
-    Math,
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String,
-    [EnumMember(Value = "convert"), JsonStringEnumMemberName("convert")]
-    /// <summary>convert</summary>
-    Convert
+    public string? Type { get; set; }
 }
 
 /// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
@@ -548,26 +307,7 @@ public partial class V1CompositionRevisionSpecEnvironmentPatchesTransforms
 
     /// <summary>Type of the transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTransformsTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTransformsTypeEnum Type { get; set; }
-}
-
-/// <summary>Type sets the patching behaviour to be used. Each patch type may require its own fields to be set on the Patch object.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPatchesTypeEnum
-{
-    [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
-    /// <summary>FromCompositeFieldPath</summary>
-    FromCompositeFieldPath,
-    [EnumMember(Value = "ToCompositeFieldPath"), JsonStringEnumMemberName("ToCompositeFieldPath")]
-    /// <summary>ToCompositeFieldPath</summary>
-    ToCompositeFieldPath,
-    [EnumMember(Value = "CombineFromComposite"), JsonStringEnumMemberName("CombineFromComposite")]
-    /// <summary>CombineFromComposite</summary>
-    CombineFromComposite,
-    [EnumMember(Value = "CombineToComposite"), JsonStringEnumMemberName("CombineToComposite")]
-    /// <summary>CombineToComposite</summary>
-    CombineToComposite
+    public string Type { get; set; }
 }
 
 /// <summary>EnvironmentPatch is a patch for a Composition environment.</summary>
@@ -596,32 +336,7 @@ public partial class V1CompositionRevisionSpecEnvironmentPatches
 
     /// <summary>Type sets the patching behaviour to be used. Each patch type may require its own fields to be set on the Patch object.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPatchesTypeEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPatchesTypeEnum? Type { get; set; }
-}
-
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecEnvironmentPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
+    public string? Type { get; set; }
 }
 
 /// <summary>Policy represents the Resolve and Resolution policies which apply to all EnvironmentSourceReferences in EnvironmentConfigs list.</summary>
@@ -630,13 +345,11 @@ public partial class V1CompositionRevisionSpecEnvironmentPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPolicyResolutionEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecEnvironmentPolicyResolveEnum>))]
-    public V1CompositionRevisionSpecEnvironmentPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>Environment configures the environment in which resources are rendered.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
@@ -658,27 +371,6 @@ public partial class V1CompositionRevisionSpecEnvironment
     /// <summary>Policy represents the Resolve and Resolution policies which apply to all EnvironmentSourceReferences in EnvironmentConfigs list.</summary>
     [JsonPropertyName("policy")]
     public V1CompositionRevisionSpecEnvironmentPolicy? Policy { get; set; }
-}
-
-/// <summary>Mode controls what type or "mode" of Composition will be used.   "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.   "Resources" indicates that a Composition uses what is commonly referred to as "Patch &amp; Transform" or P&amp;T composition. This mode of Composition uses an array of resources, each a template for a composed resource.   All Compositions should use Pipeline mode. Resources mode is deprecated. Resources mode won't be removed in Crossplane 1.x, and will remain the default to avoid breaking legacy Compositions. However, it's no longer accepting new features, and only accepting security related bug fixes.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecModeEnum
-{
-    [EnumMember(Value = "Resources"), JsonStringEnumMemberName("Resources")]
-    /// <summary>Resources</summary>
-    Resources,
-    [EnumMember(Value = "Pipeline"), JsonStringEnumMemberName("Pipeline")]
-    /// <summary>Pipeline</summary>
-    Pipeline
-}
-
-/// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesCombineStrategyEnum
-{
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String
 }
 
 /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
@@ -705,8 +397,7 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
     [JsonPropertyName("strategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesCombineStrategyEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesCombineStrategyEnum Strategy { get; set; }
+    public string Strategy { get; set; }
 
     /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
     [JsonPropertyName("string")]
@@ -715,18 +406,6 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesCombine
     /// <summary>Variables are the list of variables whose values will be retrieved and combined.</summary>
     [JsonPropertyName("variables")]
     public IList<V1CompositionRevisionSpecPatchSetsPatchesCombineVariables> Variables { get; set; }
-}
-
-/// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesPolicyFromFieldPathEnum
-{
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional,
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required
 }
 
 /// <summary>MergeOptions Specifies merge options on a field path.</summary>
@@ -748,54 +427,11 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
     [JsonPropertyName("fromFieldPath")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesPolicyFromFieldPathEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesPolicyFromFieldPathEnum? FromFieldPath { get; set; }
+    public string? FromFieldPath { get; set; }
 
     /// <summary>MergeOptions Specifies merge options on a field path.</summary>
     [JsonPropertyName("mergeOptions")]
     public V1CompositionRevisionSpecPatchSetsPatchesPolicyMergeOptions? MergeOptions { get; set; }
-}
-
-/// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsConvertFormatEnum
-{
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None,
-    [EnumMember(Value = "quantity"), JsonStringEnumMemberName("quantity")]
-    /// <summary>quantity</summary>
-    Quantity,
-    [EnumMember(Value = "json"), JsonStringEnumMemberName("json")]
-    /// <summary>json</summary>
-    Json
-}
-
-/// <summary>ToType is the type of the output of this transform.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsConvertToTypeEnum
-{
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String,
-    [EnumMember(Value = "int"), JsonStringEnumMemberName("int")]
-    /// <summary>int</summary>
-    Int,
-    [EnumMember(Value = "int64"), JsonStringEnumMemberName("int64")]
-    /// <summary>int64</summary>
-    Int64,
-    [EnumMember(Value = "bool"), JsonStringEnumMemberName("bool")]
-    /// <summary>bool</summary>
-    Bool,
-    [EnumMember(Value = "float64"), JsonStringEnumMemberName("float64")]
-    /// <summary>float64</summary>
-    Float64,
-    [EnumMember(Value = "object"), JsonStringEnumMemberName("object")]
-    /// <summary>object</summary>
-    Object,
-    [EnumMember(Value = "array"), JsonStringEnumMemberName("array")]
-    /// <summary>array</summary>
-    Array
 }
 
 /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -804,37 +440,11 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsConvertFormatEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsConvertFormatEnum? Format { get; set; }
+    public string? Format { get; set; }
 
     /// <summary>ToType is the type of the output of this transform.</summary>
     [JsonPropertyName("toType")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsConvertToTypeEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsConvertToTypeEnum ToType { get; set; }
-}
-
-/// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchFallbackToEnum
-{
-    [EnumMember(Value = "Value"), JsonStringEnumMemberName("Value")]
-    /// <summary>Value</summary>
-    Value,
-    [EnumMember(Value = "Input"), JsonStringEnumMemberName("Input")]
-    /// <summary>Input</summary>
-    Input
-}
-
-/// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchPatternsTypeEnum
-{
-    [EnumMember(Value = "literal"), JsonStringEnumMemberName("literal")]
-    /// <summary>literal</summary>
-    Literal,
-    [EnumMember(Value = "regexp"), JsonStringEnumMemberName("regexp")]
-    /// <summary>regexp</summary>
-    Regexp
+    public string ToType { get; set; }
 }
 
 /// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
@@ -855,8 +465,7 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchPat
 
     /// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchPatternsTypeEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchPatternsTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
@@ -865,8 +474,7 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
     [JsonPropertyName("fallbackTo")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchFallbackToEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchFallbackToEnum? FallbackTo { get; set; }
+    public string? FallbackTo { get; set; }
 
     /// <summary>The fallback value that should be returned by the transform if now pattern matches.</summary>
     [JsonPropertyName("fallbackValue")]
@@ -875,21 +483,6 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsMatch
     /// <summary>The patterns that should be tested against the input string. Patterns are tested in order. The value of the first match is used as result of this transform.</summary>
     [JsonPropertyName("patterns")]
     public IList<V1CompositionRevisionSpecPatchSetsPatchesTransformsMatchPatterns>? Patterns { get; set; }
-}
-
-/// <summary>Type of the math transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsMathTypeEnum
-{
-    [EnumMember(Value = "Multiply"), JsonStringEnumMemberName("Multiply")]
-    /// <summary>Multiply</summary>
-    Multiply,
-    [EnumMember(Value = "ClampMin"), JsonStringEnumMemberName("ClampMin")]
-    /// <summary>ClampMin</summary>
-    ClampMin,
-    [EnumMember(Value = "ClampMax"), JsonStringEnumMemberName("ClampMax")]
-    /// <summary>ClampMax</summary>
-    ClampMax
 }
 
 /// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
@@ -910,41 +503,7 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsMath
 
     /// <summary>Type of the math transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsMathTypeEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsMathTypeEnum? Type { get; set; }
-}
-
-/// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsStringConvertEnum
-{
-    [EnumMember(Value = "ToUpper"), JsonStringEnumMemberName("ToUpper")]
-    /// <summary>ToUpper</summary>
-    ToUpper,
-    [EnumMember(Value = "ToLower"), JsonStringEnumMemberName("ToLower")]
-    /// <summary>ToLower</summary>
-    ToLower,
-    [EnumMember(Value = "ToBase64"), JsonStringEnumMemberName("ToBase64")]
-    /// <summary>ToBase64</summary>
-    ToBase64,
-    [EnumMember(Value = "FromBase64"), JsonStringEnumMemberName("FromBase64")]
-    /// <summary>FromBase64</summary>
-    FromBase64,
-    [EnumMember(Value = "ToJson"), JsonStringEnumMemberName("ToJson")]
-    /// <summary>ToJson</summary>
-    ToJson,
-    [EnumMember(Value = "ToSha1"), JsonStringEnumMemberName("ToSha1")]
-    /// <summary>ToSha1</summary>
-    ToSha1,
-    [EnumMember(Value = "ToSha256"), JsonStringEnumMemberName("ToSha256")]
-    /// <summary>ToSha256</summary>
-    ToSha256,
-    [EnumMember(Value = "ToSha512"), JsonStringEnumMemberName("ToSha512")]
-    /// <summary>ToSha512</summary>
-    ToSha512,
-    [EnumMember(Value = "ToAdler32"), JsonStringEnumMemberName("ToAdler32")]
-    /// <summary>ToAdler32</summary>
-    ToAdler32
+    public string? Type { get; set; }
 }
 
 /// <summary>Join defines parameters to join a slice of values to a string.</summary>
@@ -969,38 +528,13 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsStringRe
     public string Match { get; set; }
 }
 
-/// <summary>Type of the string transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsStringTypeEnum
-{
-    [EnumMember(Value = "Format"), JsonStringEnumMemberName("Format")]
-    /// <summary>Format</summary>
-    Format,
-    [EnumMember(Value = "Convert"), JsonStringEnumMemberName("Convert")]
-    /// <summary>Convert</summary>
-    Convert,
-    [EnumMember(Value = "TrimPrefix"), JsonStringEnumMemberName("TrimPrefix")]
-    /// <summary>TrimPrefix</summary>
-    TrimPrefix,
-    [EnumMember(Value = "TrimSuffix"), JsonStringEnumMemberName("TrimSuffix")]
-    /// <summary>TrimSuffix</summary>
-    TrimSuffix,
-    [EnumMember(Value = "Regexp"), JsonStringEnumMemberName("Regexp")]
-    /// <summary>Regexp</summary>
-    Regexp,
-    [EnumMember(Value = "Join"), JsonStringEnumMemberName("Join")]
-    /// <summary>Join</summary>
-    Join
-}
-
 /// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
     [JsonPropertyName("convert")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsStringConvertEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsStringConvertEnum? Convert { get; set; }
+    public string? Convert { get; set; }
 
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
     [JsonPropertyName("fmt")]
@@ -1020,29 +554,7 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransformsString
 
     /// <summary>Type of the string transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsStringTypeEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsStringTypeEnum? Type { get; set; }
-}
-
-/// <summary>Type of the transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTransformsTypeEnum
-{
-    [EnumMember(Value = "map"), JsonStringEnumMemberName("map")]
-    /// <summary>map</summary>
-    Map,
-    [EnumMember(Value = "match"), JsonStringEnumMemberName("match")]
-    /// <summary>match</summary>
-    Match,
-    [EnumMember(Value = "math"), JsonStringEnumMemberName("math")]
-    /// <summary>math</summary>
-    Math,
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String,
-    [EnumMember(Value = "convert"), JsonStringEnumMemberName("convert")]
-    /// <summary>convert</summary>
-    Convert
+    public string? Type { get; set; }
 }
 
 /// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
@@ -1071,41 +583,7 @@ public partial class V1CompositionRevisionSpecPatchSetsPatchesTransforms
 
     /// <summary>Type of the transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTransformsTypeEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTransformsTypeEnum Type { get; set; }
-}
-
-/// <summary>Type sets the patching behaviour to be used. Each patch type may require its own fields to be set on the Patch object.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPatchSetsPatchesTypeEnum
-{
-    [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
-    /// <summary>FromCompositeFieldPath</summary>
-    FromCompositeFieldPath,
-    [EnumMember(Value = "FromEnvironmentFieldPath"), JsonStringEnumMemberName("FromEnvironmentFieldPath")]
-    /// <summary>FromEnvironmentFieldPath</summary>
-    FromEnvironmentFieldPath,
-    [EnumMember(Value = "PatchSet"), JsonStringEnumMemberName("PatchSet")]
-    /// <summary>PatchSet</summary>
-    PatchSet,
-    [EnumMember(Value = "ToCompositeFieldPath"), JsonStringEnumMemberName("ToCompositeFieldPath")]
-    /// <summary>ToCompositeFieldPath</summary>
-    ToCompositeFieldPath,
-    [EnumMember(Value = "ToEnvironmentFieldPath"), JsonStringEnumMemberName("ToEnvironmentFieldPath")]
-    /// <summary>ToEnvironmentFieldPath</summary>
-    ToEnvironmentFieldPath,
-    [EnumMember(Value = "CombineFromEnvironment"), JsonStringEnumMemberName("CombineFromEnvironment")]
-    /// <summary>CombineFromEnvironment</summary>
-    CombineFromEnvironment,
-    [EnumMember(Value = "CombineFromComposite"), JsonStringEnumMemberName("CombineFromComposite")]
-    /// <summary>CombineFromComposite</summary>
-    CombineFromComposite,
-    [EnumMember(Value = "CombineToComposite"), JsonStringEnumMemberName("CombineToComposite")]
-    /// <summary>CombineToComposite</summary>
-    CombineToComposite,
-    [EnumMember(Value = "CombineToEnvironment"), JsonStringEnumMemberName("CombineToEnvironment")]
-    /// <summary>CombineToEnvironment</summary>
-    CombineToEnvironment
+    public string Type { get; set; }
 }
 
 /// <summary>Patch objects are applied between composite and composed resources. Their behaviour depends on the Type selected. The default Type, FromCompositeFieldPath, copies a value from the composite resource to the composed resource, applying any defined transformers.</summary>
@@ -1138,8 +616,7 @@ public partial class V1CompositionRevisionSpecPatchSetsPatches
 
     /// <summary>Type sets the patching behaviour to be used. Each patch type may require its own fields to be set on the Patch object.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPatchSetsPatchesTypeEnum>))]
-    public V1CompositionRevisionSpecPatchSetsPatchesTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 }
 
 /// <summary>A PatchSet is a set of patches that can be reused from all resources within a Composition.</summary>
@@ -1168,18 +645,6 @@ public partial class V1CompositionRevisionSpecPipelineCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of the function credentials.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecPipelineCredentialsSourceEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret
-}
-
 /// <summary>FunctionCredentials are optional credentials that a Composition Function needs to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecPipelineCredentials
@@ -1194,8 +659,7 @@ public partial class V1CompositionRevisionSpecPipelineCredentials
 
     /// <summary>Source of the function credentials.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecPipelineCredentialsSourceEnum>))]
-    public V1CompositionRevisionSpecPipelineCredentialsSourceEnum Source { get; set; }
+    public string Source { get; set; }
 }
 
 /// <summary>FunctionRef is a reference to the Composition Function this step should execute.</summary>
@@ -1237,21 +701,6 @@ public partial class V1CompositionRevisionSpecPublishConnectionDetailsWithStoreC
     public string Name { get; set; }
 }
 
-/// <summary>Type sets the connection detail fetching behaviour to be used. Each connection detail type may require its own fields to be set on the ConnectionDetail object. If the type is omitted Crossplane will attempt to infer it based on which other fields were specified. If multiple fields are specified the order of precedence is: 1. FromValue 2. FromConnectionSecretKey 3. FromFieldPath</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesConnectionDetailsTypeEnum
-{
-    [EnumMember(Value = "FromConnectionSecretKey"), JsonStringEnumMemberName("FromConnectionSecretKey")]
-    /// <summary>FromConnectionSecretKey</summary>
-    FromConnectionSecretKey,
-    [EnumMember(Value = "FromFieldPath"), JsonStringEnumMemberName("FromFieldPath")]
-    /// <summary>FromFieldPath</summary>
-    FromFieldPath,
-    [EnumMember(Value = "FromValue"), JsonStringEnumMemberName("FromValue")]
-    /// <summary>FromValue</summary>
-    FromValue
-}
-
 /// <summary>ConnectionDetail includes the information about the propagation of the connection information from one secret to another.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecResourcesConnectionDetails
@@ -1270,21 +719,11 @@ public partial class V1CompositionRevisionSpecResourcesConnectionDetails
 
     /// <summary>Type sets the connection detail fetching behaviour to be used. Each connection detail type may require its own fields to be set on the ConnectionDetail object. If the type is omitted Crossplane will attempt to infer it based on which other fields were specified. If multiple fields are specified the order of precedence is: 1. FromValue 2. FromConnectionSecretKey 3. FromFieldPath</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesConnectionDetailsTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesConnectionDetailsTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>Value that will be propagated to the connection secret of the composite resource. May be set to inject a fixed, non-sensitive connection secret value, for example a well-known port.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
-}
-
-/// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesCombineStrategyEnum
-{
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String
 }
 
 /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
@@ -1311,8 +750,7 @@ public partial class V1CompositionRevisionSpecResourcesPatchesCombine
 {
     /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
     [JsonPropertyName("strategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesCombineStrategyEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesCombineStrategyEnum Strategy { get; set; }
+    public string Strategy { get; set; }
 
     /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
     [JsonPropertyName("string")]
@@ -1321,18 +759,6 @@ public partial class V1CompositionRevisionSpecResourcesPatchesCombine
     /// <summary>Variables are the list of variables whose values will be retrieved and combined.</summary>
     [JsonPropertyName("variables")]
     public IList<V1CompositionRevisionSpecResourcesPatchesCombineVariables> Variables { get; set; }
-}
-
-/// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesPolicyFromFieldPathEnum
-{
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional,
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required
 }
 
 /// <summary>MergeOptions Specifies merge options on a field path.</summary>
@@ -1354,54 +780,11 @@ public partial class V1CompositionRevisionSpecResourcesPatchesPolicy
 {
     /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
     [JsonPropertyName("fromFieldPath")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesPolicyFromFieldPathEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesPolicyFromFieldPathEnum? FromFieldPath { get; set; }
+    public string? FromFieldPath { get; set; }
 
     /// <summary>MergeOptions Specifies merge options on a field path.</summary>
     [JsonPropertyName("mergeOptions")]
     public V1CompositionRevisionSpecResourcesPatchesPolicyMergeOptions? MergeOptions { get; set; }
-}
-
-/// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsConvertFormatEnum
-{
-    [EnumMember(Value = "none"), JsonStringEnumMemberName("none")]
-    /// <summary>none</summary>
-    None,
-    [EnumMember(Value = "quantity"), JsonStringEnumMemberName("quantity")]
-    /// <summary>quantity</summary>
-    Quantity,
-    [EnumMember(Value = "json"), JsonStringEnumMemberName("json")]
-    /// <summary>json</summary>
-    Json
-}
-
-/// <summary>ToType is the type of the output of this transform.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsConvertToTypeEnum
-{
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String,
-    [EnumMember(Value = "int"), JsonStringEnumMemberName("int")]
-    /// <summary>int</summary>
-    Int,
-    [EnumMember(Value = "int64"), JsonStringEnumMemberName("int64")]
-    /// <summary>int64</summary>
-    Int64,
-    [EnumMember(Value = "bool"), JsonStringEnumMemberName("bool")]
-    /// <summary>bool</summary>
-    Bool,
-    [EnumMember(Value = "float64"), JsonStringEnumMemberName("float64")]
-    /// <summary>float64</summary>
-    Float64,
-    [EnumMember(Value = "object"), JsonStringEnumMemberName("object")]
-    /// <summary>object</summary>
-    Object,
-    [EnumMember(Value = "array"), JsonStringEnumMemberName("array")]
-    /// <summary>array</summary>
-    Array
 }
 
 /// <summary>Convert is used to cast the input into the given output type.</summary>
@@ -1410,37 +793,11 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransformsConvert
 {
     /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsConvertFormatEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsConvertFormatEnum? Format { get; set; }
+    public string? Format { get; set; }
 
     /// <summary>ToType is the type of the output of this transform.</summary>
     [JsonPropertyName("toType")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsConvertToTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsConvertToTypeEnum ToType { get; set; }
-}
-
-/// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsMatchFallbackToEnum
-{
-    [EnumMember(Value = "Value"), JsonStringEnumMemberName("Value")]
-    /// <summary>Value</summary>
-    Value,
-    [EnumMember(Value = "Input"), JsonStringEnumMemberName("Input")]
-    /// <summary>Input</summary>
-    Input
-}
-
-/// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsMatchPatternsTypeEnum
-{
-    [EnumMember(Value = "literal"), JsonStringEnumMemberName("literal")]
-    /// <summary>literal</summary>
-    Literal,
-    [EnumMember(Value = "regexp"), JsonStringEnumMemberName("regexp")]
-    /// <summary>regexp</summary>
-    Regexp
+    public string ToType { get; set; }
 }
 
 /// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
@@ -1461,8 +818,7 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransformsMatchPat
 
     /// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsMatchPatternsTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsMatchPatternsTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
@@ -1471,8 +827,7 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransformsMatch
 {
     /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
     [JsonPropertyName("fallbackTo")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsMatchFallbackToEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsMatchFallbackToEnum? FallbackTo { get; set; }
+    public string? FallbackTo { get; set; }
 
     /// <summary>The fallback value that should be returned by the transform if now pattern matches.</summary>
     [JsonPropertyName("fallbackValue")]
@@ -1481,21 +836,6 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransformsMatch
     /// <summary>The patterns that should be tested against the input string. Patterns are tested in order. The value of the first match is used as result of this transform.</summary>
     [JsonPropertyName("patterns")]
     public IList<V1CompositionRevisionSpecResourcesPatchesTransformsMatchPatterns>? Patterns { get; set; }
-}
-
-/// <summary>Type of the math transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsMathTypeEnum
-{
-    [EnumMember(Value = "Multiply"), JsonStringEnumMemberName("Multiply")]
-    /// <summary>Multiply</summary>
-    Multiply,
-    [EnumMember(Value = "ClampMin"), JsonStringEnumMemberName("ClampMin")]
-    /// <summary>ClampMin</summary>
-    ClampMin,
-    [EnumMember(Value = "ClampMax"), JsonStringEnumMemberName("ClampMax")]
-    /// <summary>ClampMax</summary>
-    ClampMax
 }
 
 /// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
@@ -1516,41 +856,7 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransformsMath
 
     /// <summary>Type of the math transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsMathTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsMathTypeEnum? Type { get; set; }
-}
-
-/// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsStringConvertEnum
-{
-    [EnumMember(Value = "ToUpper"), JsonStringEnumMemberName("ToUpper")]
-    /// <summary>ToUpper</summary>
-    ToUpper,
-    [EnumMember(Value = "ToLower"), JsonStringEnumMemberName("ToLower")]
-    /// <summary>ToLower</summary>
-    ToLower,
-    [EnumMember(Value = "ToBase64"), JsonStringEnumMemberName("ToBase64")]
-    /// <summary>ToBase64</summary>
-    ToBase64,
-    [EnumMember(Value = "FromBase64"), JsonStringEnumMemberName("FromBase64")]
-    /// <summary>FromBase64</summary>
-    FromBase64,
-    [EnumMember(Value = "ToJson"), JsonStringEnumMemberName("ToJson")]
-    /// <summary>ToJson</summary>
-    ToJson,
-    [EnumMember(Value = "ToSha1"), JsonStringEnumMemberName("ToSha1")]
-    /// <summary>ToSha1</summary>
-    ToSha1,
-    [EnumMember(Value = "ToSha256"), JsonStringEnumMemberName("ToSha256")]
-    /// <summary>ToSha256</summary>
-    ToSha256,
-    [EnumMember(Value = "ToSha512"), JsonStringEnumMemberName("ToSha512")]
-    /// <summary>ToSha512</summary>
-    ToSha512,
-    [EnumMember(Value = "ToAdler32"), JsonStringEnumMemberName("ToAdler32")]
-    /// <summary>ToAdler32</summary>
-    ToAdler32
+    public string? Type { get; set; }
 }
 
 /// <summary>Join defines parameters to join a slice of values to a string.</summary>
@@ -1575,38 +881,13 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransformsStringRe
     public string Match { get; set; }
 }
 
-/// <summary>Type of the string transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsStringTypeEnum
-{
-    [EnumMember(Value = "Format"), JsonStringEnumMemberName("Format")]
-    /// <summary>Format</summary>
-    Format,
-    [EnumMember(Value = "Convert"), JsonStringEnumMemberName("Convert")]
-    /// <summary>Convert</summary>
-    Convert,
-    [EnumMember(Value = "TrimPrefix"), JsonStringEnumMemberName("TrimPrefix")]
-    /// <summary>TrimPrefix</summary>
-    TrimPrefix,
-    [EnumMember(Value = "TrimSuffix"), JsonStringEnumMemberName("TrimSuffix")]
-    /// <summary>TrimSuffix</summary>
-    TrimSuffix,
-    [EnumMember(Value = "Regexp"), JsonStringEnumMemberName("Regexp")]
-    /// <summary>Regexp</summary>
-    Regexp,
-    [EnumMember(Value = "Join"), JsonStringEnumMemberName("Join")]
-    /// <summary>Join</summary>
-    Join
-}
-
 /// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecResourcesPatchesTransformsString
 {
     /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
     [JsonPropertyName("convert")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsStringConvertEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsStringConvertEnum? Convert { get; set; }
+    public string? Convert { get; set; }
 
     /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
     [JsonPropertyName("fmt")]
@@ -1626,29 +907,7 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransformsString
 
     /// <summary>Type of the string transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsStringTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsStringTypeEnum? Type { get; set; }
-}
-
-/// <summary>Type of the transform to be run.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTransformsTypeEnum
-{
-    [EnumMember(Value = "map"), JsonStringEnumMemberName("map")]
-    /// <summary>map</summary>
-    Map,
-    [EnumMember(Value = "match"), JsonStringEnumMemberName("match")]
-    /// <summary>match</summary>
-    Match,
-    [EnumMember(Value = "math"), JsonStringEnumMemberName("math")]
-    /// <summary>math</summary>
-    Math,
-    [EnumMember(Value = "string"), JsonStringEnumMemberName("string")]
-    /// <summary>string</summary>
-    String,
-    [EnumMember(Value = "convert"), JsonStringEnumMemberName("convert")]
-    /// <summary>convert</summary>
-    Convert
+    public string? Type { get; set; }
 }
 
 /// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
@@ -1677,41 +936,7 @@ public partial class V1CompositionRevisionSpecResourcesPatchesTransforms
 
     /// <summary>Type of the transform to be run.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTransformsTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTransformsTypeEnum Type { get; set; }
-}
-
-/// <summary>Type sets the patching behaviour to be used. Each patch type may require its own fields to be set on the Patch object.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesPatchesTypeEnum
-{
-    [EnumMember(Value = "FromCompositeFieldPath"), JsonStringEnumMemberName("FromCompositeFieldPath")]
-    /// <summary>FromCompositeFieldPath</summary>
-    FromCompositeFieldPath,
-    [EnumMember(Value = "FromEnvironmentFieldPath"), JsonStringEnumMemberName("FromEnvironmentFieldPath")]
-    /// <summary>FromEnvironmentFieldPath</summary>
-    FromEnvironmentFieldPath,
-    [EnumMember(Value = "PatchSet"), JsonStringEnumMemberName("PatchSet")]
-    /// <summary>PatchSet</summary>
-    PatchSet,
-    [EnumMember(Value = "ToCompositeFieldPath"), JsonStringEnumMemberName("ToCompositeFieldPath")]
-    /// <summary>ToCompositeFieldPath</summary>
-    ToCompositeFieldPath,
-    [EnumMember(Value = "ToEnvironmentFieldPath"), JsonStringEnumMemberName("ToEnvironmentFieldPath")]
-    /// <summary>ToEnvironmentFieldPath</summary>
-    ToEnvironmentFieldPath,
-    [EnumMember(Value = "CombineFromEnvironment"), JsonStringEnumMemberName("CombineFromEnvironment")]
-    /// <summary>CombineFromEnvironment</summary>
-    CombineFromEnvironment,
-    [EnumMember(Value = "CombineFromComposite"), JsonStringEnumMemberName("CombineFromComposite")]
-    /// <summary>CombineFromComposite</summary>
-    CombineFromComposite,
-    [EnumMember(Value = "CombineToComposite"), JsonStringEnumMemberName("CombineToComposite")]
-    /// <summary>CombineToComposite</summary>
-    CombineToComposite,
-    [EnumMember(Value = "CombineToEnvironment"), JsonStringEnumMemberName("CombineToEnvironment")]
-    /// <summary>CombineToEnvironment</summary>
-    CombineToEnvironment
+    public string Type { get; set; }
 }
 
 /// <summary>Patch objects are applied between composite and composed resources. Their behaviour depends on the Type selected. The default Type, FromCompositeFieldPath, copies a value from the composite resource to the composed resource, applying any defined transformers.</summary>
@@ -1744,8 +969,7 @@ public partial class V1CompositionRevisionSpecResourcesPatches
 
     /// <summary>Type sets the patching behaviour to be used. Each patch type may require its own fields to be set on the Patch object.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesPatchesTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesPatchesTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 }
 
 /// <summary>MatchCondition specifies the condition you'd like to match if you're using "MatchCondition" type.</summary>
@@ -1759,33 +983,6 @@ public partial class V1CompositionRevisionSpecResourcesReadinessChecksMatchCondi
     /// <summary>Type indicates the type of condition you'd like to use.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
-}
-
-/// <summary>Type indicates the type of probe you'd like to use.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CompositionRevisionSpecResourcesReadinessChecksTypeEnum
-{
-    [EnumMember(Value = "MatchString"), JsonStringEnumMemberName("MatchString")]
-    /// <summary>MatchString</summary>
-    MatchString,
-    [EnumMember(Value = "MatchInteger"), JsonStringEnumMemberName("MatchInteger")]
-    /// <summary>MatchInteger</summary>
-    MatchInteger,
-    [EnumMember(Value = "NonEmpty"), JsonStringEnumMemberName("NonEmpty")]
-    /// <summary>NonEmpty</summary>
-    NonEmpty,
-    [EnumMember(Value = "MatchCondition"), JsonStringEnumMemberName("MatchCondition")]
-    /// <summary>MatchCondition</summary>
-    MatchCondition,
-    [EnumMember(Value = "MatchTrue"), JsonStringEnumMemberName("MatchTrue")]
-    /// <summary>MatchTrue</summary>
-    MatchTrue,
-    [EnumMember(Value = "MatchFalse"), JsonStringEnumMemberName("MatchFalse")]
-    /// <summary>MatchFalse</summary>
-    MatchFalse,
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None
 }
 
 /// <summary>ReadinessCheck is used to indicate how to tell whether a resource is ready for consumption.</summary>
@@ -1810,8 +1007,7 @@ public partial class V1CompositionRevisionSpecResourcesReadinessChecks
 
     /// <summary>Type indicates the type of probe you'd like to use.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecResourcesReadinessChecksTypeEnum>))]
-    public V1CompositionRevisionSpecResourcesReadinessChecksTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>ComposedTemplate is used to provide information about how the composed resource should be processed.</summary>
@@ -1853,8 +1049,7 @@ public partial class V1CompositionRevisionSpec
 
     /// <summary>Mode controls what type or "mode" of Composition will be used.   "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.   "Resources" indicates that a Composition uses what is commonly referred to as "Patch &amp; Transform" or P&amp;T composition. This mode of Composition uses an array of resources, each a template for a composed resource.   All Compositions should use Pipeline mode. Resources mode is deprecated. Resources mode won't be removed in Crossplane 1.x, and will remain the default to avoid breaking legacy Compositions. However, it's no longer accepting new features, and only accepting security related bug fixes.</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CompositionRevisionSpecModeEnum>))]
-    public V1CompositionRevisionSpecModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>PatchSets define a named set of patches that may be included by any resource in this Composition. PatchSets cannot themselves refer to other PatchSets.   PatchSets are only used by the "Resources" mode of Composition. They are ignored by other modes.   Deprecated: Use Composition Functions instead.</summary>
     [JsonPropertyName("patchSets")]

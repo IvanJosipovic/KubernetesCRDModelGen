@@ -8,24 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
-/// <summary>Optional.  Valid Options: ALLOW, DENY, AUDIT, CUSTOM</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1AuthorizationPolicySpecActionEnum
-{
-    [EnumMember(Value = "ALLOW"), JsonStringEnumMemberName("ALLOW")]
-    /// <summary>ALLOW</summary>
-    ALLOW,
-    [EnumMember(Value = "DENY"), JsonStringEnumMemberName("DENY")]
-    /// <summary>DENY</summary>
-    DENY,
-    [EnumMember(Value = "AUDIT"), JsonStringEnumMemberName("AUDIT")]
-    /// <summary>AUDIT</summary>
-    AUDIT,
-    [EnumMember(Value = "CUSTOM"), JsonStringEnumMemberName("CUSTOM")]
-    /// <summary>CUSTOM</summary>
-    CUSTOM
-}
-
 /// <summary>Specifies detailed configuration of the CUSTOM action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecProvider
@@ -226,8 +208,7 @@ public partial class V1beta1AuthorizationPolicySpec
 {
     /// <summary>Optional.  Valid Options: ALLOW, DENY, AUDIT, CUSTOM</summary>
     [JsonPropertyName("action")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1AuthorizationPolicySpecActionEnum>))]
-    public V1beta1AuthorizationPolicySpecActionEnum? Action { get; set; }
+    public string? Action { get; set; }
 
     /// <summary>Specifies detailed configuration of the CUSTOM action.</summary>
     [JsonPropertyName("provider")]

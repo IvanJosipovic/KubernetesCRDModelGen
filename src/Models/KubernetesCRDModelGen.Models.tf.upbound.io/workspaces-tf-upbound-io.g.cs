@@ -8,18 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tf.upbound.io;
-/// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecDeletionPolicyEnum
-{
-    [EnumMember(Value = "Orphan"), JsonStringEnumMemberName("Orphan")]
-    /// <summary>Orphan</summary>
-    Orphan,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete
-}
-
 /// <summary>A ConfigMap key containing the desired env var value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderEnvConfigMapKeyRef
@@ -75,30 +63,6 @@ public partial class V1beta1WorkspaceSpecForProviderEnv
     public string? Value { get; set; }
 }
 
-/// <summary>Specifies the format of the inline Terraform content if Source is 'Inline'</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecForProviderInlineFormatEnum
-{
-    [EnumMember(Value = "HCL"), JsonStringEnumMemberName("HCL")]
-    /// <summary>HCL</summary>
-    HCL,
-    [EnumMember(Value = "JSON"), JsonStringEnumMemberName("JSON")]
-    /// <summary>JSON</summary>
-    JSON
-}
-
-/// <summary>Source of the root module of this workspace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecForProviderSourceEnum
-{
-    [EnumMember(Value = "Remote"), JsonStringEnumMemberName("Remote")]
-    /// <summary>Remote</summary>
-    Remote,
-    [EnumMember(Value = "Inline"), JsonStringEnumMemberName("Inline")]
-    /// <summary>Inline</summary>
-    Inline
-}
-
 /// <summary>A ConfigMap key containing the vars file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderVarFilesConfigMapKeyRef
@@ -114,18 +78,6 @@ public partial class V1beta1WorkspaceSpecForProviderVarFilesConfigMapKeyRef
     /// <summary>Namespace of the referenced resource.</summary>
     [JsonPropertyName("namespace")]
     public string Namespace { get; set; }
-}
-
-/// <summary>Format of this vars file.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecForProviderVarFilesFormatEnum
-{
-    [EnumMember(Value = "HCL"), JsonStringEnumMemberName("HCL")]
-    /// <summary>HCL</summary>
-    HCL,
-    [EnumMember(Value = "JSON"), JsonStringEnumMemberName("JSON")]
-    /// <summary>JSON</summary>
-    JSON
 }
 
 /// <summary>A Secret key containing the vars file.</summary>
@@ -145,18 +97,6 @@ public partial class V1beta1WorkspaceSpecForProviderVarFilesSecretKeyRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of this vars file.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecForProviderVarFilesSourceEnum
-{
-    [EnumMember(Value = "ConfigMapKey"), JsonStringEnumMemberName("ConfigMapKey")]
-    /// <summary>ConfigMapKey</summary>
-    ConfigMapKey,
-    [EnumMember(Value = "SecretKey"), JsonStringEnumMemberName("SecretKey")]
-    /// <summary>SecretKey</summary>
-    SecretKey
-}
-
 /// <summary>A VarFile is a file containing many Terraform variables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderVarFiles
@@ -167,8 +107,7 @@ public partial class V1beta1WorkspaceSpecForProviderVarFiles
 
     /// <summary>Format of this vars file.</summary>
     [JsonPropertyName("format")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderVarFilesFormatEnum>))]
-    public V1beta1WorkspaceSpecForProviderVarFilesFormatEnum? Format { get; set; }
+    public string? Format { get; set; }
 
     /// <summary>A Secret key containing the vars file.</summary>
     [JsonPropertyName("secretKeyRef")]
@@ -176,8 +115,7 @@ public partial class V1beta1WorkspaceSpecForProviderVarFiles
 
     /// <summary>Source of this vars file.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderVarFilesSourceEnum>))]
-    public V1beta1WorkspaceSpecForProviderVarFilesSourceEnum Source { get; set; }
+    public string Source { get; set; }
 }
 
 /// <summary>A Var represents a Terraform configuration variable.</summary>
@@ -223,8 +161,7 @@ public partial class V1beta1WorkspaceSpecForProvider
 
     /// <summary>Specifies the format of the inline Terraform content if Source is 'Inline'</summary>
     [JsonPropertyName("inlineFormat")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderInlineFormatEnum>))]
-    public V1beta1WorkspaceSpecForProviderInlineFormatEnum? InlineFormat { get; set; }
+    public string? InlineFormat { get; set; }
 
     /// <summary>The root module of this workspace; i.e. the module containing its main.tf file. When the workspace's source is 'Remote' (the default) this can be any address supported by terraform init -from-module, for example a git repository or an S3 bucket. When the workspace's source is 'Inline' the content of a simple main.tf or main.tf.json file may be written inline.</summary>
     [JsonPropertyName("module")]
@@ -236,8 +173,7 @@ public partial class V1beta1WorkspaceSpecForProvider
 
     /// <summary>Source of the root module of this workspace.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecForProviderSourceEnum>))]
-    public V1beta1WorkspaceSpecForProviderSourceEnum Source { get; set; }
+    public string Source { get; set; }
 
     /// <summary>Files of configuration variables. Explicitly declared vars take precedence.</summary>
     [JsonPropertyName("varFiles")]
@@ -252,67 +188,17 @@ public partial class V1beta1WorkspaceSpecForProvider
     public IList<V1beta1WorkspaceSpecForProviderVars>? Vars { get; set; }
 }
 
-/// <summary>A ManagementAction represents an action that the Crossplane controllers can take on an external resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecManagementPoliciesEnum
-{
-    [EnumMember(Value = "Observe"), JsonStringEnumMemberName("Observe")]
-    /// <summary>Observe</summary>
-    Observe,
-    [EnumMember(Value = "Create"), JsonStringEnumMemberName("Create")]
-    /// <summary>Create</summary>
-    Create,
-    [EnumMember(Value = "Update"), JsonStringEnumMemberName("Update")]
-    /// <summary>Update</summary>
-    Update,
-    [EnumMember(Value = "Delete"), JsonStringEnumMemberName("Delete")]
-    /// <summary>Delete</summary>
-    Delete,
-    [EnumMember(Value = "LateInitialize"), JsonStringEnumMemberName("LateInitialize")]
-    /// <summary>LateInitialize</summary>
-    LateInitialize,
-    [EnumMember(Value = "*"), JsonStringEnumMemberName("*")]
-    /// <summary>*</summary>
-    Option5
-}
-
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecProviderConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecProviderConfigRefPolicyResolutionEnum>))]
-    public V1beta1WorkspaceSpecProviderConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum>))]
-    public V1beta1WorkspaceSpecProviderConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
@@ -328,43 +214,17 @@ public partial class V1beta1WorkspaceSpecProviderConfigRef
     public V1beta1WorkspaceSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum
-{
-    [EnumMember(Value = "Required"), JsonStringEnumMemberName("Required")]
-    /// <summary>Required</summary>
-    Required,
-    [EnumMember(Value = "Optional"), JsonStringEnumMemberName("Optional")]
-    /// <summary>Optional</summary>
-    Optional
-}
-
-/// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum
-{
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum>))]
-    public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
     [JsonPropertyName("resolve")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum>))]
-    public V1beta1WorkspaceSpecPublishConnectionDetailsToConfigRefPolicyResolveEnum? Resolve { get; set; }
+    public string? Resolve { get; set; }
 }
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
@@ -433,8 +293,7 @@ public partial class V1beta1WorkspaceSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
     [JsonPropertyName("deletionPolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1WorkspaceSpecDeletionPolicyEnum>))]
-    public V1beta1WorkspaceSpecDeletionPolicyEnum? DeletionPolicy { get; set; }
+    public string? DeletionPolicy { get; set; }
 
     /// <summary>WorkspaceParameters are the configurable fields of a Workspace.</summary>
     [JsonPropertyName("forProvider")]
@@ -442,7 +301,7 @@ public partial class V1beta1WorkspaceSpec
 
     /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
     [JsonPropertyName("managementPolicies")]
-    public IList<V1beta1WorkspaceSpecManagementPoliciesEnum>? ManagementPolicies { get; set; }
+    public IList<string>? ManagementPolicies { get; set; }
 
     /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
     [JsonPropertyName("providerConfigRef")]

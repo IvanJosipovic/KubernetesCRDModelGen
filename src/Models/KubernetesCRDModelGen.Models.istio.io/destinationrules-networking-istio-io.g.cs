@@ -8,29 +8,13 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
-/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "DO_NOT_UPGRADE"), JsonStringEnumMemberName("DO_NOT_UPGRADE")]
-    /// <summary>DO_NOT_UPGRADE</summary>
-    DONOTUPGRADE,
-    [EnumMember(Value = "UPGRADE"), JsonStringEnumMemberName("UPGRADE")]
-    /// <summary>UPGRADE</summary>
-    UPGRADE
-}
-
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum>))]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum? H2UpgradePolicy { get; set; }
+    public string? H2UpgradePolicy { get; set; }
 
     /// <summary>Maximum number of requests that will be queued while waiting for a ready connection pool connection.</summary>
     [JsonPropertyName("http1MaxPendingRequests")]
@@ -231,30 +215,6 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
     public IList<string>? FailoverPriority { get; set; }
 }
 
-/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerSimpleEnum
-{
-    [EnumMember(Value = "UNSPECIFIED"), JsonStringEnumMemberName("UNSPECIFIED")]
-    /// <summary>UNSPECIFIED</summary>
-    UNSPECIFIED,
-    [EnumMember(Value = "LEAST_CONN"), JsonStringEnumMemberName("LEAST_CONN")]
-    /// <summary>LEAST_CONN</summary>
-    LEASTCONN,
-    [EnumMember(Value = "RANDOM"), JsonStringEnumMemberName("RANDOM")]
-    /// <summary>RANDOM</summary>
-    RANDOM,
-    [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
-    /// <summary>PASSTHROUGH</summary>
-    PASSTHROUGH,
-    [EnumMember(Value = "ROUND_ROBIN"), JsonStringEnumMemberName("ROUND_ROBIN")]
-    /// <summary>ROUND_ROBIN</summary>
-    ROUNDROBIN,
-    [EnumMember(Value = "LEAST_REQUEST"), JsonStringEnumMemberName("LEAST_REQUEST")]
-    /// <summary>LEAST_REQUEST</summary>
-    LEASTREQUEST
-}
-
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
@@ -269,8 +229,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerSimpleEnum>))]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerSimpleEnum? Simple { get; set; }
+    public string? Simple { get; set; }
 
     /// <summary>Represents the warmup duration of Service.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -318,29 +277,13 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetect
     public bool? SplitExternalLocalOriginErrors { get; set; }
 }
 
-/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "DO_NOT_UPGRADE"), JsonStringEnumMemberName("DO_NOT_UPGRADE")]
-    /// <summary>DO_NOT_UPGRADE</summary>
-    DONOTUPGRADE,
-    [EnumMember(Value = "UPGRADE"), JsonStringEnumMemberName("UPGRADE")]
-    /// <summary>UPGRADE</summary>
-    UPGRADE
-}
-
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum>))]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum? H2UpgradePolicy { get; set; }
+    public string? H2UpgradePolicy { get; set; }
 
     /// <summary>Maximum number of requests that will be queued while waiting for a ready connection pool connection.</summary>
     [JsonPropertyName("http1MaxPendingRequests")]
@@ -541,30 +484,6 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public IList<string>? FailoverPriority { get; set; }
 }
 
-/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum
-{
-    [EnumMember(Value = "UNSPECIFIED"), JsonStringEnumMemberName("UNSPECIFIED")]
-    /// <summary>UNSPECIFIED</summary>
-    UNSPECIFIED,
-    [EnumMember(Value = "LEAST_CONN"), JsonStringEnumMemberName("LEAST_CONN")]
-    /// <summary>LEAST_CONN</summary>
-    LEASTCONN,
-    [EnumMember(Value = "RANDOM"), JsonStringEnumMemberName("RANDOM")]
-    /// <summary>RANDOM</summary>
-    RANDOM,
-    [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
-    /// <summary>PASSTHROUGH</summary>
-    PASSTHROUGH,
-    [EnumMember(Value = "ROUND_ROBIN"), JsonStringEnumMemberName("ROUND_ROBIN")]
-    /// <summary>ROUND_ROBIN</summary>
-    ROUNDROBIN,
-    [EnumMember(Value = "LEAST_REQUEST"), JsonStringEnumMemberName("LEAST_REQUEST")]
-    /// <summary>LEAST_REQUEST</summary>
-    LEASTREQUEST
-}
-
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancer
@@ -579,8 +498,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum>))]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum? Simple { get; set; }
+    public string? Simple { get; set; }
 
     /// <summary>Represents the warmup duration of Service.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -637,24 +555,6 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public int? Number { get; set; }
 }
 
-/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTlsModeEnum
-{
-    [EnumMember(Value = "DISABLE"), JsonStringEnumMemberName("DISABLE")]
-    /// <summary>DISABLE</summary>
-    DISABLE,
-    [EnumMember(Value = "SIMPLE"), JsonStringEnumMemberName("SIMPLE")]
-    /// <summary>SIMPLE</summary>
-    SIMPLE,
-    [EnumMember(Value = "MUTUAL"), JsonStringEnumMemberName("MUTUAL")]
-    /// <summary>MUTUAL</summary>
-    MUTUAL,
-    [EnumMember(Value = "ISTIO_MUTUAL"), JsonStringEnumMemberName("ISTIO_MUTUAL")]
-    /// <summary>ISTIO_MUTUAL</summary>
-    ISTIOMUTUAL
-}
-
 /// <summary>TLS related settings for connections to the upstream service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls
@@ -681,8 +581,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
     /// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTlsModeEnum>))]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>REQUIRED if mode is `MUTUAL`.</summary>
     [JsonPropertyName("privateKey")]
@@ -722,44 +621,13 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
 }
 
-/// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocolVersionEnum
-{
-    [EnumMember(Value = "V1"), JsonStringEnumMemberName("V1")]
-    /// <summary>V1</summary>
-    V1,
-    [EnumMember(Value = "V2"), JsonStringEnumMemberName("V2")]
-    /// <summary>V2</summary>
-    V2
-}
-
 /// <summary>The upstream PROXY protocol settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocol
 {
     /// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
     [JsonPropertyName("version")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocolVersionEnum>))]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocolVersionEnum? Version { get; set; }
-}
-
-/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecSubsetsTrafficPolicyTlsModeEnum
-{
-    [EnumMember(Value = "DISABLE"), JsonStringEnumMemberName("DISABLE")]
-    /// <summary>DISABLE</summary>
-    DISABLE,
-    [EnumMember(Value = "SIMPLE"), JsonStringEnumMemberName("SIMPLE")]
-    /// <summary>SIMPLE</summary>
-    SIMPLE,
-    [EnumMember(Value = "MUTUAL"), JsonStringEnumMemberName("MUTUAL")]
-    /// <summary>MUTUAL</summary>
-    MUTUAL,
-    [EnumMember(Value = "ISTIO_MUTUAL"), JsonStringEnumMemberName("ISTIO_MUTUAL")]
-    /// <summary>ISTIO_MUTUAL</summary>
-    ISTIOMUTUAL
+    public string? Version { get; set; }
 }
 
 /// <summary>TLS related settings for connections to the upstream service.</summary>
@@ -788,8 +656,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTls
 
     /// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecSubsetsTrafficPolicyTlsModeEnum>))]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyTlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>REQUIRED if mode is `MUTUAL`.</summary>
     [JsonPropertyName("privateKey")]
@@ -871,29 +738,13 @@ public partial class V1beta1DestinationRuleSpecSubsets
     public V1beta1DestinationRuleSpecSubsetsTrafficPolicy? TrafficPolicy { get; set; }
 }
 
-/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "DO_NOT_UPGRADE"), JsonStringEnumMemberName("DO_NOT_UPGRADE")]
-    /// <summary>DO_NOT_UPGRADE</summary>
-    DONOTUPGRADE,
-    [EnumMember(Value = "UPGRADE"), JsonStringEnumMemberName("UPGRADE")]
-    /// <summary>UPGRADE</summary>
-    UPGRADE
-}
-
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum>))]
-    public V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttpH2UpgradePolicyEnum? H2UpgradePolicy { get; set; }
+    public string? H2UpgradePolicy { get; set; }
 
     /// <summary>Maximum number of requests that will be queued while waiting for a ready connection pool connection.</summary>
     [JsonPropertyName("http1MaxPendingRequests")]
@@ -1094,30 +945,6 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
     public IList<string>? FailoverPriority { get; set; }
 }
 
-/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerSimpleEnum
-{
-    [EnumMember(Value = "UNSPECIFIED"), JsonStringEnumMemberName("UNSPECIFIED")]
-    /// <summary>UNSPECIFIED</summary>
-    UNSPECIFIED,
-    [EnumMember(Value = "LEAST_CONN"), JsonStringEnumMemberName("LEAST_CONN")]
-    /// <summary>LEAST_CONN</summary>
-    LEASTCONN,
-    [EnumMember(Value = "RANDOM"), JsonStringEnumMemberName("RANDOM")]
-    /// <summary>RANDOM</summary>
-    RANDOM,
-    [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
-    /// <summary>PASSTHROUGH</summary>
-    PASSTHROUGH,
-    [EnumMember(Value = "ROUND_ROBIN"), JsonStringEnumMemberName("ROUND_ROBIN")]
-    /// <summary>ROUND_ROBIN</summary>
-    ROUNDROBIN,
-    [EnumMember(Value = "LEAST_REQUEST"), JsonStringEnumMemberName("LEAST_REQUEST")]
-    /// <summary>LEAST_REQUEST</summary>
-    LEASTREQUEST
-}
-
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
@@ -1132,8 +959,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerSimpleEnum>))]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerSimpleEnum? Simple { get; set; }
+    public string? Simple { get; set; }
 
     /// <summary>Represents the warmup duration of Service.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -1181,29 +1007,13 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyOutlierDetection
     public bool? SplitExternalLocalOriginErrors { get; set; }
 }
 
-/// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum
-{
-    [EnumMember(Value = "DEFAULT"), JsonStringEnumMemberName("DEFAULT")]
-    /// <summary>DEFAULT</summary>
-    DEFAULT,
-    [EnumMember(Value = "DO_NOT_UPGRADE"), JsonStringEnumMemberName("DO_NOT_UPGRADE")]
-    /// <summary>DO_NOT_UPGRADE</summary>
-    DONOTUPGRADE,
-    [EnumMember(Value = "UPGRADE"), JsonStringEnumMemberName("UPGRADE")]
-    /// <summary>UPGRADE</summary>
-    UPGRADE
-}
-
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum>))]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttpH2UpgradePolicyEnum? H2UpgradePolicy { get; set; }
+    public string? H2UpgradePolicy { get; set; }
 
     /// <summary>Maximum number of requests that will be queued while waiting for a ready connection pool connection.</summary>
     [JsonPropertyName("http1MaxPendingRequests")]
@@ -1404,30 +1214,6 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public IList<string>? FailoverPriority { get; set; }
 }
 
-/// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum
-{
-    [EnumMember(Value = "UNSPECIFIED"), JsonStringEnumMemberName("UNSPECIFIED")]
-    /// <summary>UNSPECIFIED</summary>
-    UNSPECIFIED,
-    [EnumMember(Value = "LEAST_CONN"), JsonStringEnumMemberName("LEAST_CONN")]
-    /// <summary>LEAST_CONN</summary>
-    LEASTCONN,
-    [EnumMember(Value = "RANDOM"), JsonStringEnumMemberName("RANDOM")]
-    /// <summary>RANDOM</summary>
-    RANDOM,
-    [EnumMember(Value = "PASSTHROUGH"), JsonStringEnumMemberName("PASSTHROUGH")]
-    /// <summary>PASSTHROUGH</summary>
-    PASSTHROUGH,
-    [EnumMember(Value = "ROUND_ROBIN"), JsonStringEnumMemberName("ROUND_ROBIN")]
-    /// <summary>ROUND_ROBIN</summary>
-    ROUNDROBIN,
-    [EnumMember(Value = "LEAST_REQUEST"), JsonStringEnumMemberName("LEAST_REQUEST")]
-    /// <summary>LEAST_REQUEST</summary>
-    LEASTREQUEST
-}
-
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer
@@ -1442,8 +1228,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum>))]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerSimpleEnum? Simple { get; set; }
+    public string? Simple { get; set; }
 
     /// <summary>Represents the warmup duration of Service.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -1500,24 +1285,6 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsPor
     public int? Number { get; set; }
 }
 
-/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTlsModeEnum
-{
-    [EnumMember(Value = "DISABLE"), JsonStringEnumMemberName("DISABLE")]
-    /// <summary>DISABLE</summary>
-    DISABLE,
-    [EnumMember(Value = "SIMPLE"), JsonStringEnumMemberName("SIMPLE")]
-    /// <summary>SIMPLE</summary>
-    SIMPLE,
-    [EnumMember(Value = "MUTUAL"), JsonStringEnumMemberName("MUTUAL")]
-    /// <summary>MUTUAL</summary>
-    MUTUAL,
-    [EnumMember(Value = "ISTIO_MUTUAL"), JsonStringEnumMemberName("ISTIO_MUTUAL")]
-    /// <summary>ISTIO_MUTUAL</summary>
-    ISTIOMUTUAL
-}
-
 /// <summary>TLS related settings for connections to the upstream service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls
@@ -1544,8 +1311,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls
 
     /// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTlsModeEnum>))]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>REQUIRED if mode is `MUTUAL`.</summary>
     [JsonPropertyName("privateKey")]
@@ -1585,44 +1351,13 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettings
     public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
 }
 
-/// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecTrafficPolicyProxyProtocolVersionEnum
-{
-    [EnumMember(Value = "V1"), JsonStringEnumMemberName("V1")]
-    /// <summary>V1</summary>
-    V1,
-    [EnumMember(Value = "V2"), JsonStringEnumMemberName("V2")]
-    /// <summary>V2</summary>
-    V2
-}
-
 /// <summary>The upstream PROXY protocol settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyProxyProtocol
 {
     /// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
     [JsonPropertyName("version")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecTrafficPolicyProxyProtocolVersionEnum>))]
-    public V1beta1DestinationRuleSpecTrafficPolicyProxyProtocolVersionEnum? Version { get; set; }
-}
-
-/// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1DestinationRuleSpecTrafficPolicyTlsModeEnum
-{
-    [EnumMember(Value = "DISABLE"), JsonStringEnumMemberName("DISABLE")]
-    /// <summary>DISABLE</summary>
-    DISABLE,
-    [EnumMember(Value = "SIMPLE"), JsonStringEnumMemberName("SIMPLE")]
-    /// <summary>SIMPLE</summary>
-    SIMPLE,
-    [EnumMember(Value = "MUTUAL"), JsonStringEnumMemberName("MUTUAL")]
-    /// <summary>MUTUAL</summary>
-    MUTUAL,
-    [EnumMember(Value = "ISTIO_MUTUAL"), JsonStringEnumMemberName("ISTIO_MUTUAL")]
-    /// <summary>ISTIO_MUTUAL</summary>
-    ISTIOMUTUAL
+    public string? Version { get; set; }
 }
 
 /// <summary>TLS related settings for connections to the upstream service.</summary>
@@ -1651,8 +1386,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyTls
 
     /// <summary>Indicates whether connections to this port should be secured using TLS.  Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1DestinationRuleSpecTrafficPolicyTlsModeEnum>))]
-    public V1beta1DestinationRuleSpecTrafficPolicyTlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>REQUIRED if mode is `MUTUAL`.</summary>
     [JsonPropertyName("privateKey")]

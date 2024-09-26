@@ -60,24 +60,6 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGCPodMeta
 }
 
 /// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGCStrategyEnum
-{
-    [EnumMember(Value = ""), JsonStringEnumMemberName("")]
-    /// <summary></summary>
-    Option0,
-    [EnumMember(Value = "OnWorkflowCompletion"), JsonStringEnumMemberName("OnWorkflowCompletion")]
-    /// <summary>OnWorkflowCompletion</summary>
-    OnWorkflowCompletion,
-    [EnumMember(Value = "OnWorkflowDeletion"), JsonStringEnumMemberName("OnWorkflowDeletion")]
-    /// <summary>OnWorkflowDeletion</summary>
-    OnWorkflowDeletion,
-    [EnumMember(Value = "Never"), JsonStringEnumMemberName("Never")]
-    /// <summary>Never</summary>
-    Never
-}
-
-/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGC
 {
@@ -91,8 +73,7 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGC
 
     /// <summary></summary>
     [JsonPropertyName("strategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGCStrategyEnum>))]
-    public V1alpha1WorkflowTaskResultOutputsArtifactsArtifactGCStrategyEnum? Strategy { get; set; }
+    public string? Strategy { get; set; }
 }
 
 /// <summary></summary>

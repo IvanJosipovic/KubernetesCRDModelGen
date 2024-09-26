@@ -77,24 +77,6 @@ public partial class V1GitRepositorySpecSecretRef
     public string Name { get; set; }
 }
 
-/// <summary>Mode specifies which Git object(s) should be verified.   The variants "head" and "HEAD" both imply the same thing, i.e. verify the commit that the HEAD of the Git repository points to. The variant "head" solely exists to ensure backwards compatibility.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GitRepositorySpecVerifyModeEnum
-{
-    [EnumMember(Value = "head"), JsonStringEnumMemberName("head")]
-    /// <summary>head</summary>
-    Head,
-    [EnumMember(Value = "HEAD"), JsonStringEnumMemberName("HEAD")]
-    /// <summary>HEAD</summary>
-    HEAD,
-    [EnumMember(Value = "Tag"), JsonStringEnumMemberName("Tag")]
-    /// <summary>Tag</summary>
-    Tag,
-    [EnumMember(Value = "TagAndHEAD"), JsonStringEnumMemberName("TagAndHEAD")]
-    /// <summary>TagAndHEAD</summary>
-    TagAndHEAD
-}
-
 /// <summary>SecretRef specifies the Secret containing the public keys of trusted Git authors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecVerifySecretRef
@@ -110,8 +92,7 @@ public partial class V1GitRepositorySpecVerify
 {
     /// <summary>Mode specifies which Git object(s) should be verified.   The variants "head" and "HEAD" both imply the same thing, i.e. verify the commit that the HEAD of the Git repository points to. The variant "head" solely exists to ensure backwards compatibility.</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GitRepositorySpecVerifyModeEnum>))]
-    public V1GitRepositorySpecVerifyModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>SecretRef specifies the Secret containing the public keys of trusted Git authors.</summary>
     [JsonPropertyName("secretRef")]
@@ -200,21 +181,6 @@ public partial class V1GitRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GitRepositoryStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusConditions
@@ -237,8 +203,7 @@ public partial class V1GitRepositoryStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GitRepositoryStatusConditionsStatusEnum>))]
-    public V1GitRepositoryStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

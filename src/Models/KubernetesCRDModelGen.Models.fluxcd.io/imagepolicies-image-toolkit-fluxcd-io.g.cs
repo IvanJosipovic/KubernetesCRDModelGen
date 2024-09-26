@@ -34,38 +34,13 @@ public partial class V1beta2ImagePolicySpecImageRepositoryRef
     public string? Namespace { get; set; }
 }
 
-/// <summary>Order specifies the sorting order of the tags. Given the letters of the alphabet as tags, ascending order would select Z, and descending order would select A.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImagePolicySpecPolicyAlphabeticalOrderEnum
-{
-    [EnumMember(Value = "asc"), JsonStringEnumMemberName("asc")]
-    /// <summary>asc</summary>
-    Asc,
-    [EnumMember(Value = "desc"), JsonStringEnumMemberName("desc")]
-    /// <summary>desc</summary>
-    Desc
-}
-
 /// <summary>Alphabetical set of rules to use for alphabetical ordering of the tags.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecPolicyAlphabetical
 {
     /// <summary>Order specifies the sorting order of the tags. Given the letters of the alphabet as tags, ascending order would select Z, and descending order would select A.</summary>
     [JsonPropertyName("order")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImagePolicySpecPolicyAlphabeticalOrderEnum>))]
-    public V1beta2ImagePolicySpecPolicyAlphabeticalOrderEnum? Order { get; set; }
-}
-
-/// <summary>Order specifies the sorting order of the tags. Given the integer values from 0 to 9 as tags, ascending order would select 9, and descending order would select 0.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImagePolicySpecPolicyNumericalOrderEnum
-{
-    [EnumMember(Value = "asc"), JsonStringEnumMemberName("asc")]
-    /// <summary>asc</summary>
-    Asc,
-    [EnumMember(Value = "desc"), JsonStringEnumMemberName("desc")]
-    /// <summary>desc</summary>
-    Desc
+    public string? Order { get; set; }
 }
 
 /// <summary>Numerical set of rules to use for numerical ordering of the tags.</summary>
@@ -74,8 +49,7 @@ public partial class V1beta2ImagePolicySpecPolicyNumerical
 {
     /// <summary>Order specifies the sorting order of the tags. Given the integer values from 0 to 9 as tags, ascending order would select 9, and descending order would select 0.</summary>
     [JsonPropertyName("order")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImagePolicySpecPolicyNumericalOrderEnum>))]
-    public V1beta2ImagePolicySpecPolicyNumericalOrderEnum? Order { get; set; }
+    public string? Order { get; set; }
 }
 
 /// <summary>SemVer gives a semantic version range to check against the tags available.</summary>
@@ -121,21 +95,6 @@ public partial class V1beta2ImagePolicySpec
     public V1beta2ImagePolicySpecPolicy Policy { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImagePolicyStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicyStatusConditions
@@ -158,8 +117,7 @@ public partial class V1beta2ImagePolicyStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImagePolicyStatusConditionsStatusEnum>))]
-    public V1beta2ImagePolicyStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

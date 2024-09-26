@@ -154,15 +154,6 @@ public partial class V1beta2ImageUpdateAutomationSpecPolicySelector
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
-/// <summary>Kind of the referent.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImageUpdateAutomationSpecSourceRefKindEnum
-{
-    [EnumMember(Value = "GitRepository"), JsonStringEnumMemberName("GitRepository")]
-    /// <summary>GitRepository</summary>
-    GitRepository
-}
-
 /// <summary>SourceRef refers to the resource giving access details to a git repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationSpecSourceRef
@@ -173,8 +164,7 @@ public partial class V1beta2ImageUpdateAutomationSpecSourceRef
 
     /// <summary>Kind of the referent.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImageUpdateAutomationSpecSourceRefKindEnum>))]
-    public V1beta2ImageUpdateAutomationSpecSourceRefKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -183,15 +173,6 @@ public partial class V1beta2ImageUpdateAutomationSpecSourceRef
     /// <summary>Namespace of the referent, defaults to the namespace of the Kubernetes resource object that contains the reference.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
-}
-
-/// <summary>Strategy names the strategy to be used.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImageUpdateAutomationSpecUpdateStrategyEnum
-{
-    [EnumMember(Value = "Setters"), JsonStringEnumMemberName("Setters")]
-    /// <summary>Setters</summary>
-    Setters
 }
 
 /// <summary>Update gives the specification for how to update the files in the repository. This can be left empty, to use the default value.</summary>
@@ -204,8 +185,7 @@ public partial class V1beta2ImageUpdateAutomationSpecUpdate
 
     /// <summary>Strategy names the strategy to be used.</summary>
     [JsonPropertyName("strategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImageUpdateAutomationSpecUpdateStrategyEnum>))]
-    public V1beta2ImageUpdateAutomationSpecUpdateStrategyEnum Strategy { get; set; }
+    public string Strategy { get; set; }
 }
 
 /// <summary>ImageUpdateAutomationSpec defines the desired state of ImageUpdateAutomation</summary>
@@ -237,21 +217,6 @@ public partial class V1beta2ImageUpdateAutomationSpec
     public V1beta2ImageUpdateAutomationSpecUpdate? Update { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImageUpdateAutomationStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationStatusConditions
@@ -274,8 +239,7 @@ public partial class V1beta2ImageUpdateAutomationStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImageUpdateAutomationStatusConditionsStatusEnum>))]
-    public V1beta2ImageUpdateAutomationStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

@@ -8,26 +8,13 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certmanager.io;
-/// <summary>Type is the name of the format type that should be written to the Certificate's target Secret.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateSpecAdditionalOutputFormatsTypeEnum
-{
-    [EnumMember(Value = "DER"), JsonStringEnumMemberName("DER")]
-    /// <summary>DER</summary>
-    DER,
-    [EnumMember(Value = "CombinedPEM"), JsonStringEnumMemberName("CombinedPEM")]
-    /// <summary>CombinedPEM</summary>
-    CombinedPEM
-}
-
 /// <summary>CertificateAdditionalOutputFormat defines an additional output format of a Certificate resource. These contain supplementary data formats of the signed certificate chain and paired private key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecAdditionalOutputFormats
 {
     /// <summary>Type is the name of the format type that should be written to the Certificate's target Secret.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CertificateSpecAdditionalOutputFormatsTypeEnum>))]
-    public V1CertificateSpecAdditionalOutputFormatsTypeEnum Type { get; set; }
+    public string Type { get; set; }
 }
 
 /// <summary>Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.   The `name` field of the reference must always be specified.</summary>
@@ -90,21 +77,6 @@ public partial class V1CertificateSpecKeystoresPkcs12PasswordSecretRef
     public string Name { get; set; }
 }
 
-/// <summary>Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.   If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateSpecKeystoresPkcs12ProfileEnum
-{
-    [EnumMember(Value = "LegacyRC2"), JsonStringEnumMemberName("LegacyRC2")]
-    /// <summary>LegacyRC2</summary>
-    LegacyRC2,
-    [EnumMember(Value = "LegacyDES"), JsonStringEnumMemberName("LegacyDES")]
-    /// <summary>LegacyDES</summary>
-    LegacyDES,
-    [EnumMember(Value = "Modern2023"), JsonStringEnumMemberName("Modern2023")]
-    /// <summary>Modern2023</summary>
-    Modern2023
-}
-
 /// <summary>PKCS12 configures options for storing a PKCS12 keystore in the `spec.secretName` Secret resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecKeystoresPkcs12
@@ -119,8 +91,7 @@ public partial class V1CertificateSpecKeystoresPkcs12
 
     /// <summary>Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.   If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.</summary>
     [JsonPropertyName("profile")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CertificateSpecKeystoresPkcs12ProfileEnum>))]
-    public V1CertificateSpecKeystoresPkcs12ProfileEnum? Profile { get; set; }
+    public string? Profile { get; set; }
 }
 
 /// <summary>Additional keystore output formats to be stored in the Certificate's Secret.</summary>
@@ -208,63 +179,21 @@ public partial class V1CertificateSpecOtherNames
     public string? Utf8Value { get; set; }
 }
 
-/// <summary>Algorithm is the private key algorithm of the corresponding private key for this certificate.   If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateSpecPrivateKeyAlgorithmEnum
-{
-    [EnumMember(Value = "RSA"), JsonStringEnumMemberName("RSA")]
-    /// <summary>RSA</summary>
-    RSA,
-    [EnumMember(Value = "ECDSA"), JsonStringEnumMemberName("ECDSA")]
-    /// <summary>ECDSA</summary>
-    ECDSA,
-    [EnumMember(Value = "Ed25519"), JsonStringEnumMemberName("Ed25519")]
-    /// <summary>Ed25519</summary>
-    Ed25519
-}
-
-/// <summary>The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.   If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateSpecPrivateKeyEncodingEnum
-{
-    [EnumMember(Value = "PKCS1"), JsonStringEnumMemberName("PKCS1")]
-    /// <summary>PKCS1</summary>
-    PKCS1,
-    [EnumMember(Value = "PKCS8"), JsonStringEnumMemberName("PKCS8")]
-    /// <summary>PKCS8</summary>
-    PKCS8
-}
-
-/// <summary>RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.   If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateSpecPrivateKeyRotationPolicyEnum
-{
-    [EnumMember(Value = "Never"), JsonStringEnumMemberName("Never")]
-    /// <summary>Never</summary>
-    Never,
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always
-}
-
 /// <summary>Private key options. These include the key algorithm and size, the used encoding and the rotation policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecPrivateKey
 {
     /// <summary>Algorithm is the private key algorithm of the corresponding private key for this certificate.   If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.</summary>
     [JsonPropertyName("algorithm")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CertificateSpecPrivateKeyAlgorithmEnum>))]
-    public V1CertificateSpecPrivateKeyAlgorithmEnum? Algorithm { get; set; }
+    public string? Algorithm { get; set; }
 
     /// <summary>The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.   If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.</summary>
     [JsonPropertyName("encoding")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CertificateSpecPrivateKeyEncodingEnum>))]
-    public V1CertificateSpecPrivateKeyEncodingEnum? Encoding { get; set; }
+    public string? Encoding { get; set; }
 
     /// <summary>RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.   If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.</summary>
     [JsonPropertyName("rotationPolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CertificateSpecPrivateKeyRotationPolicyEnum>))]
-    public V1CertificateSpecPrivateKeyRotationPolicyEnum? RotationPolicy { get; set; }
+    public string? RotationPolicy { get; set; }
 
     /// <summary>Size is the key bit size of the corresponding private key for this certificate.   If `algorithm` is set to `RSA`, valid values are `2048`, `4096` or `8192`, and will default to `2048` if not specified. If `algorithm` is set to `ECDSA`, valid values are `256`, `384` or `521`, and will default to `256` if not specified. If `algorithm` is set to `Ed25519`, Size is ignored. No other values are allowed.</summary>
     [JsonPropertyName("size")]
@@ -319,81 +248,6 @@ public partial class V1CertificateSpecSubject
     /// <summary>Street addresses to be used on the Certificate.</summary>
     [JsonPropertyName("streetAddresses")]
     public IList<string>? StreetAddresses { get; set; }
-}
-
-/// <summary>KeyUsage specifies valid usage contexts for keys. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3 https://tools.ietf.org/html/rfc5280#section-4.2.1.12   Valid KeyUsage values are as follows: "signing", "digital signature", "content commitment", "key encipherment", "key agreement", "data encipherment", "cert sign", "crl sign", "encipher only", "decipher only", "any", "server auth", "client auth", "code signing", "email protection", "s/mime", "ipsec end system", "ipsec tunnel", "ipsec user", "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateSpecUsagesEnum
-{
-    [EnumMember(Value = "signing"), JsonStringEnumMemberName("signing")]
-    /// <summary>signing</summary>
-    Signing,
-    [EnumMember(Value = "digital signature"), JsonStringEnumMemberName("digital signature")]
-    /// <summary>digital signature</summary>
-    DigitalSignature,
-    [EnumMember(Value = "content commitment"), JsonStringEnumMemberName("content commitment")]
-    /// <summary>content commitment</summary>
-    ContentCommitment,
-    [EnumMember(Value = "key encipherment"), JsonStringEnumMemberName("key encipherment")]
-    /// <summary>key encipherment</summary>
-    KeyEncipherment,
-    [EnumMember(Value = "key agreement"), JsonStringEnumMemberName("key agreement")]
-    /// <summary>key agreement</summary>
-    KeyAgreement,
-    [EnumMember(Value = "data encipherment"), JsonStringEnumMemberName("data encipherment")]
-    /// <summary>data encipherment</summary>
-    DataEncipherment,
-    [EnumMember(Value = "cert sign"), JsonStringEnumMemberName("cert sign")]
-    /// <summary>cert sign</summary>
-    CertSign,
-    [EnumMember(Value = "crl sign"), JsonStringEnumMemberName("crl sign")]
-    /// <summary>crl sign</summary>
-    CrlSign,
-    [EnumMember(Value = "encipher only"), JsonStringEnumMemberName("encipher only")]
-    /// <summary>encipher only</summary>
-    EncipherOnly,
-    [EnumMember(Value = "decipher only"), JsonStringEnumMemberName("decipher only")]
-    /// <summary>decipher only</summary>
-    DecipherOnly,
-    [EnumMember(Value = "any"), JsonStringEnumMemberName("any")]
-    /// <summary>any</summary>
-    Any,
-    [EnumMember(Value = "server auth"), JsonStringEnumMemberName("server auth")]
-    /// <summary>server auth</summary>
-    ServerAuth,
-    [EnumMember(Value = "client auth"), JsonStringEnumMemberName("client auth")]
-    /// <summary>client auth</summary>
-    ClientAuth,
-    [EnumMember(Value = "code signing"), JsonStringEnumMemberName("code signing")]
-    /// <summary>code signing</summary>
-    CodeSigning,
-    [EnumMember(Value = "email protection"), JsonStringEnumMemberName("email protection")]
-    /// <summary>email protection</summary>
-    EmailProtection,
-    [EnumMember(Value = "s/mime"), JsonStringEnumMemberName("s/mime")]
-    /// <summary>s/mime</summary>
-    SMime,
-    [EnumMember(Value = "ipsec end system"), JsonStringEnumMemberName("ipsec end system")]
-    /// <summary>ipsec end system</summary>
-    IpsecEndSystem,
-    [EnumMember(Value = "ipsec tunnel"), JsonStringEnumMemberName("ipsec tunnel")]
-    /// <summary>ipsec tunnel</summary>
-    IpsecTunnel,
-    [EnumMember(Value = "ipsec user"), JsonStringEnumMemberName("ipsec user")]
-    /// <summary>ipsec user</summary>
-    IpsecUser,
-    [EnumMember(Value = "timestamping"), JsonStringEnumMemberName("timestamping")]
-    /// <summary>timestamping</summary>
-    Timestamping,
-    [EnumMember(Value = "ocsp signing"), JsonStringEnumMemberName("ocsp signing")]
-    /// <summary>ocsp signing</summary>
-    OcspSigning,
-    [EnumMember(Value = "microsoft sgc"), JsonStringEnumMemberName("microsoft sgc")]
-    /// <summary>microsoft sgc</summary>
-    MicrosoftSgc,
-    [EnumMember(Value = "netscape sgc"), JsonStringEnumMemberName("netscape sgc")]
-    /// <summary>netscape sgc</summary>
-    NetscapeSgc
 }
 
 /// <summary>Specification of the desired state of the Certificate resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
@@ -482,22 +336,7 @@ public partial class V1CertificateSpec
 
     /// <summary>Requested key usages and extended key usages. These usages are used to set the `usages` field on the created CertificateRequest resources. If `encodeUsagesInRequest` is unset or set to `true`, the usages will additionally be encoded in the `request` field which contains the CSR blob.   If unset, defaults to `digital signature` and `key encipherment`.</summary>
     [JsonPropertyName("usages")]
-    public IList<V1CertificateSpecUsagesEnum>? Usages { get; set; }
-}
-
-/// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
+    public IList<string>? Usages { get; set; }
 }
 
 /// <summary>CertificateCondition contains condition information for an Certificate.</summary>
@@ -522,8 +361,7 @@ public partial class V1CertificateStatusConditions
 
     /// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CertificateStatusConditionsStatusEnum>))]
-    public V1CertificateStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>Type of the condition, known values are (`Ready`, `Issuing`).</summary>
     [JsonPropertyName("type")]

@@ -35,24 +35,6 @@ public partial class V1beta2ImageRepositorySpecCertSecretRef
     public string Name { get; set; }
 }
 
-/// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImageRepositorySpecProviderEnum
-{
-    [EnumMember(Value = "generic"), JsonStringEnumMemberName("generic")]
-    /// <summary>generic</summary>
-    Generic,
-    [EnumMember(Value = "aws"), JsonStringEnumMemberName("aws")]
-    /// <summary>aws</summary>
-    Aws,
-    [EnumMember(Value = "azure"), JsonStringEnumMemberName("azure")]
-    /// <summary>azure</summary>
-    Azure,
-    [EnumMember(Value = "gcp"), JsonStringEnumMemberName("gcp")]
-    /// <summary>gcp</summary>
-    Gcp
-}
-
 /// <summary>SecretRef can be given the name of a secret containing credentials to use for the image registry. The secret should be created with `kubectl create secret docker-registry`, or the equivalent.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpecSecretRef
@@ -92,8 +74,7 @@ public partial class V1beta2ImageRepositorySpec
 
     /// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImageRepositorySpecProviderEnum>))]
-    public V1beta2ImageRepositorySpecProviderEnum? Provider { get; set; }
+    public string? Provider { get; set; }
 
     /// <summary>SecretRef can be given the name of a secret containing credentials to use for the image registry. The secret should be created with `kubectl create secret docker-registry`, or the equivalent.</summary>
     [JsonPropertyName("secretRef")]
@@ -110,21 +91,6 @@ public partial class V1beta2ImageRepositorySpec
     /// <summary>Timeout for image scanning. Defaults to 'Interval' duration.</summary>
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
-}
-
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2ImageRepositoryStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
@@ -149,8 +115,7 @@ public partial class V1beta2ImageRepositoryStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2ImageRepositoryStatusConditionsStatusEnum>))]
-    public V1beta2ImageRepositoryStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

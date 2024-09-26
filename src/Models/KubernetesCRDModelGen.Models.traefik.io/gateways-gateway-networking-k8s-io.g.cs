@@ -34,21 +34,6 @@ public partial class V1GatewaySpecListenersAllowedRoutesKinds
     public string Kind { get; set; }
 }
 
-/// <summary>From indicates where Routes will be selected for this Gateway. Possible values are:   * All: Routes in all namespaces may be used by this Gateway. * Selector: Routes in namespaces selected by the selector may be used by   this Gateway. * Same: Only Routes in the same namespace may be used by this Gateway.   Support: Core</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GatewaySpecListenersAllowedRoutesNamespacesFromEnum
-{
-    [EnumMember(Value = "All"), JsonStringEnumMemberName("All")]
-    /// <summary>All</summary>
-    All,
-    [EnumMember(Value = "Selector"), JsonStringEnumMemberName("Selector")]
-    /// <summary>Selector</summary>
-    Selector,
-    [EnumMember(Value = "Same"), JsonStringEnumMemberName("Same")]
-    /// <summary>Same</summary>
-    Same
-}
-
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersAllowedRoutesNamespacesSelectorMatchExpressions
@@ -85,8 +70,7 @@ public partial class V1GatewaySpecListenersAllowedRoutesNamespaces
 {
     /// <summary>From indicates where Routes will be selected for this Gateway. Possible values are:   * All: Routes in all namespaces may be used by this Gateway. * Selector: Routes in namespaces selected by the selector may be used by   this Gateway. * Same: Only Routes in the same namespace may be used by this Gateway.   Support: Core</summary>
     [JsonPropertyName("from")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GatewaySpecListenersAllowedRoutesNamespacesFromEnum>))]
-    public V1GatewaySpecListenersAllowedRoutesNamespacesFromEnum? From { get; set; }
+    public string? From { get; set; }
 
     /// <summary>Selector must be specified when From is set to "Selector". In that case, only Routes in Namespaces matching this Selector will be selected by this Gateway. This field is ignored for other values of "From".   Support: Core</summary>
     [JsonPropertyName("selector")]
@@ -127,18 +111,6 @@ public partial class V1GatewaySpecListenersTlsCertificateRefs
     public string? Namespace { get; set; }
 }
 
-/// <summary>Mode defines the TLS behavior for the TLS session initiated by the client. There are two possible modes:   - Terminate: The TLS session between the downstream client and the   Gateway is terminated at the Gateway. This mode requires certificates   to be specified in some way, such as populating the certificateRefs   field. - Passthrough: The TLS session is NOT terminated by the Gateway. This   implies that the Gateway can't decipher the TLS stream except for   the ClientHello message of the TLS protocol. The certificateRefs field   is ignored in this mode.   Support: Core</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GatewaySpecListenersTlsModeEnum
-{
-    [EnumMember(Value = "Terminate"), JsonStringEnumMemberName("Terminate")]
-    /// <summary>Terminate</summary>
-    Terminate,
-    [EnumMember(Value = "Passthrough"), JsonStringEnumMemberName("Passthrough")]
-    /// <summary>Passthrough</summary>
-    Passthrough
-}
-
 /// <summary>TLS is the TLS configuration for the Listener. This field is required if the Protocol field is "HTTPS" or "TLS". It is invalid to set this field if the Protocol field is "HTTP", "TCP", or "UDP".   The association of SNIs to Certificate defined in GatewayTLSConfig is defined based on the Hostname field for this listener.   The GatewayClass MUST use the longest matching SNI out of all available certificates for any TLS handshake.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewaySpecListenersTls
@@ -149,8 +121,7 @@ public partial class V1GatewaySpecListenersTls
 
     /// <summary>Mode defines the TLS behavior for the TLS session initiated by the client. There are two possible modes:   - Terminate: The TLS session between the downstream client and the   Gateway is terminated at the Gateway. This mode requires certificates   to be specified in some way, such as populating the certificateRefs   field. - Passthrough: The TLS session is NOT terminated by the Gateway. This   implies that the Gateway can't decipher the TLS stream except for   the ClientHello message of the TLS protocol. The certificateRefs field   is ignored in this mode.   Support: Core</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GatewaySpecListenersTlsModeEnum>))]
-    public V1GatewaySpecListenersTlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>Options are a list of key/value pairs to enable extended TLS configuration for each implementation. For example, configuring the minimum TLS version or supported cipher suites.   A set of common keys MAY be defined by the API in the future. To avoid any ambiguity, implementation-specific definitions MUST use domain-prefixed names, such as `example.com/my-custom-option`. Un-prefixed names are reserved for key names defined by Gateway API.   Support: Implementation-specific</summary>
     [JsonPropertyName("options")]
@@ -216,21 +187,6 @@ public partial class V1GatewayStatusAddresses
     public string Value { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GatewayStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayStatusConditions
@@ -253,27 +209,11 @@ public partial class V1GatewayStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GatewayStatusConditionsStatusEnum>))]
-    public V1GatewayStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
-}
-
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1GatewayStatusListenersConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
@@ -298,8 +238,7 @@ public partial class V1GatewayStatusListenersConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1GatewayStatusListenersConditionsStatusEnum>))]
-    public V1GatewayStatusListenersConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

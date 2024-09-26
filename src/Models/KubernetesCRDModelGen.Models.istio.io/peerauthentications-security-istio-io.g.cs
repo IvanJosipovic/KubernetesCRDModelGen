@@ -8,50 +8,13 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
-/// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1PeerAuthenticationSpecMtlsModeEnum
-{
-    [EnumMember(Value = "UNSET"), JsonStringEnumMemberName("UNSET")]
-    /// <summary>UNSET</summary>
-    UNSET,
-    [EnumMember(Value = "DISABLE"), JsonStringEnumMemberName("DISABLE")]
-    /// <summary>DISABLE</summary>
-    DISABLE,
-    [EnumMember(Value = "PERMISSIVE"), JsonStringEnumMemberName("PERMISSIVE")]
-    /// <summary>PERMISSIVE</summary>
-    PERMISSIVE,
-    [EnumMember(Value = "STRICT"), JsonStringEnumMemberName("STRICT")]
-    /// <summary>STRICT</summary>
-    STRICT
-}
-
 /// <summary>Mutual TLS settings for workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PeerAuthenticationSpecMtls
 {
     /// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1PeerAuthenticationSpecMtlsModeEnum>))]
-    public V1beta1PeerAuthenticationSpecMtlsModeEnum? Mode { get; set; }
-}
-
-/// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1PeerAuthenticationSpecPortLevelMtlsModeEnum
-{
-    [EnumMember(Value = "UNSET"), JsonStringEnumMemberName("UNSET")]
-    /// <summary>UNSET</summary>
-    UNSET,
-    [EnumMember(Value = "DISABLE"), JsonStringEnumMemberName("DISABLE")]
-    /// <summary>DISABLE</summary>
-    DISABLE,
-    [EnumMember(Value = "PERMISSIVE"), JsonStringEnumMemberName("PERMISSIVE")]
-    /// <summary>PERMISSIVE</summary>
-    PERMISSIVE,
-    [EnumMember(Value = "STRICT"), JsonStringEnumMemberName("STRICT")]
-    /// <summary>STRICT</summary>
-    STRICT
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -60,8 +23,7 @@ public partial class V1beta1PeerAuthenticationSpecPortLevelMtls
 {
     /// <summary>Defines the mTLS mode used for peer authentication.  Valid Options: DISABLE, PERMISSIVE, STRICT</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1PeerAuthenticationSpecPortLevelMtlsModeEnum>))]
-    public V1beta1PeerAuthenticationSpecPortLevelMtlsModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 }
 
 /// <summary>The selector determines the workloads to apply the PeerAuthentication on.</summary>

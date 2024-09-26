@@ -21,15 +21,6 @@ public partial class V1KustomizationSpecCommonMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
-/// <summary>Provider is the name of the decryption engine.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1KustomizationSpecDecryptionProviderEnum
-{
-    [EnumMember(Value = "sops"), JsonStringEnumMemberName("sops")]
-    /// <summary>sops</summary>
-    Sops
-}
-
 /// <summary>The secret name containing the private OpenPGP keys used for decryption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecDecryptionSecretRef
@@ -45,8 +36,7 @@ public partial class V1KustomizationSpecDecryption
 {
     /// <summary>Provider is the name of the decryption engine.</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1KustomizationSpecDecryptionProviderEnum>))]
-    public V1KustomizationSpecDecryptionProviderEnum Provider { get; set; }
+    public string Provider { get; set; }
 
     /// <summary>The secret name containing the private OpenPGP keys used for decryption.</summary>
     [JsonPropertyName("secretRef")]
@@ -176,26 +166,13 @@ public partial class V1KustomizationSpecPatches
     public V1KustomizationSpecPatchesTarget? Target { get; set; }
 }
 
-/// <summary>Kind of the values referent, valid values are ('Secret', 'ConfigMap').</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1KustomizationSpecPostBuildSubstituteFromKindEnum
-{
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "ConfigMap"), JsonStringEnumMemberName("ConfigMap")]
-    /// <summary>ConfigMap</summary>
-    ConfigMap
-}
-
 /// <summary>SubstituteReference contains a reference to a resource containing the variables name and value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecPostBuildSubstituteFrom
 {
     /// <summary>Kind of the values referent, valid values are ('Secret', 'ConfigMap').</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1KustomizationSpecPostBuildSubstituteFromKindEnum>))]
-    public V1KustomizationSpecPostBuildSubstituteFromKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Name of the values referent. Should reside in the same namespace as the referring resource.</summary>
     [JsonPropertyName("name")]
@@ -219,21 +196,6 @@ public partial class V1KustomizationSpecPostBuild
     public IList<V1KustomizationSpecPostBuildSubstituteFrom>? SubstituteFrom { get; set; }
 }
 
-/// <summary>Kind of the referent.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1KustomizationSpecSourceRefKindEnum
-{
-    [EnumMember(Value = "OCIRepository"), JsonStringEnumMemberName("OCIRepository")]
-    /// <summary>OCIRepository</summary>
-    OCIRepository,
-    [EnumMember(Value = "GitRepository"), JsonStringEnumMemberName("GitRepository")]
-    /// <summary>GitRepository</summary>
-    GitRepository,
-    [EnumMember(Value = "Bucket"), JsonStringEnumMemberName("Bucket")]
-    /// <summary>Bucket</summary>
-    Bucket
-}
-
 /// <summary>Reference of the source where the kustomization file is.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecSourceRef
@@ -244,8 +206,7 @@ public partial class V1KustomizationSpecSourceRef
 
     /// <summary>Kind of the referent.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1KustomizationSpecSourceRefKindEnum>))]
-    public V1KustomizationSpecSourceRefKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -349,21 +310,6 @@ public partial class V1KustomizationSpec
     public bool? Wait { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1KustomizationStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationStatusConditions
@@ -386,8 +332,7 @@ public partial class V1KustomizationStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1KustomizationStatusConditionsStatusEnum>))]
-    public V1KustomizationStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

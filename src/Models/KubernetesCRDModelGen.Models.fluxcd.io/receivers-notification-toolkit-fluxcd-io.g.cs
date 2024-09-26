@@ -8,42 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
-/// <summary>Kind of the referent</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ReceiverSpecResourcesKindEnum
-{
-    [EnumMember(Value = "Bucket"), JsonStringEnumMemberName("Bucket")]
-    /// <summary>Bucket</summary>
-    Bucket,
-    [EnumMember(Value = "GitRepository"), JsonStringEnumMemberName("GitRepository")]
-    /// <summary>GitRepository</summary>
-    GitRepository,
-    [EnumMember(Value = "Kustomization"), JsonStringEnumMemberName("Kustomization")]
-    /// <summary>Kustomization</summary>
-    Kustomization,
-    [EnumMember(Value = "HelmRelease"), JsonStringEnumMemberName("HelmRelease")]
-    /// <summary>HelmRelease</summary>
-    HelmRelease,
-    [EnumMember(Value = "HelmChart"), JsonStringEnumMemberName("HelmChart")]
-    /// <summary>HelmChart</summary>
-    HelmChart,
-    [EnumMember(Value = "HelmRepository"), JsonStringEnumMemberName("HelmRepository")]
-    /// <summary>HelmRepository</summary>
-    HelmRepository,
-    [EnumMember(Value = "ImageRepository"), JsonStringEnumMemberName("ImageRepository")]
-    /// <summary>ImageRepository</summary>
-    ImageRepository,
-    [EnumMember(Value = "ImagePolicy"), JsonStringEnumMemberName("ImagePolicy")]
-    /// <summary>ImagePolicy</summary>
-    ImagePolicy,
-    [EnumMember(Value = "ImageUpdateAutomation"), JsonStringEnumMemberName("ImageUpdateAutomation")]
-    /// <summary>ImageUpdateAutomation</summary>
-    ImageUpdateAutomation,
-    [EnumMember(Value = "OCIRepository"), JsonStringEnumMemberName("OCIRepository")]
-    /// <summary>OCIRepository</summary>
-    OCIRepository
-}
-
 /// <summary>CrossNamespaceObjectReference contains enough information to let you locate the typed referenced object at cluster level</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ReceiverSpecResources
@@ -54,8 +18,7 @@ public partial class V1ReceiverSpecResources
 
     /// <summary>Kind of the referent</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ReceiverSpecResourcesKindEnum>))]
-    public V1ReceiverSpecResourcesKindEnum Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed. MatchLabels requires the name to be set to `*`.</summary>
     [JsonPropertyName("matchLabels")]
@@ -77,48 +40,6 @@ public partial class V1ReceiverSpecSecretRef
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
-}
-
-/// <summary>Type of webhook sender, used to determine the validation procedure and payload deserialization.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ReceiverSpecTypeEnum
-{
-    [EnumMember(Value = "generic"), JsonStringEnumMemberName("generic")]
-    /// <summary>generic</summary>
-    Generic,
-    [EnumMember(Value = "generic-hmac"), JsonStringEnumMemberName("generic-hmac")]
-    /// <summary>generic-hmac</summary>
-    GenericHmac,
-    [EnumMember(Value = "github"), JsonStringEnumMemberName("github")]
-    /// <summary>github</summary>
-    Github,
-    [EnumMember(Value = "gitlab"), JsonStringEnumMemberName("gitlab")]
-    /// <summary>gitlab</summary>
-    Gitlab,
-    [EnumMember(Value = "bitbucket"), JsonStringEnumMemberName("bitbucket")]
-    /// <summary>bitbucket</summary>
-    Bitbucket,
-    [EnumMember(Value = "harbor"), JsonStringEnumMemberName("harbor")]
-    /// <summary>harbor</summary>
-    Harbor,
-    [EnumMember(Value = "dockerhub"), JsonStringEnumMemberName("dockerhub")]
-    /// <summary>dockerhub</summary>
-    Dockerhub,
-    [EnumMember(Value = "quay"), JsonStringEnumMemberName("quay")]
-    /// <summary>quay</summary>
-    Quay,
-    [EnumMember(Value = "gcr"), JsonStringEnumMemberName("gcr")]
-    /// <summary>gcr</summary>
-    Gcr,
-    [EnumMember(Value = "nexus"), JsonStringEnumMemberName("nexus")]
-    /// <summary>nexus</summary>
-    Nexus,
-    [EnumMember(Value = "acr"), JsonStringEnumMemberName("acr")]
-    /// <summary>acr</summary>
-    Acr,
-    [EnumMember(Value = "cdevents"), JsonStringEnumMemberName("cdevents")]
-    /// <summary>cdevents</summary>
-    Cdevents
 }
 
 /// <summary>ReceiverSpec defines the desired state of the Receiver.</summary>
@@ -147,23 +68,7 @@ public partial class V1ReceiverSpec
 
     /// <summary>Type of webhook sender, used to determine the validation procedure and payload deserialization.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ReceiverSpecTypeEnum>))]
-    public V1ReceiverSpecTypeEnum Type { get; set; }
-}
-
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1ReceiverStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
+    public string Type { get; set; }
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
@@ -188,8 +93,7 @@ public partial class V1ReceiverStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1ReceiverStatusConditionsStatusEnum>))]
-    public V1ReceiverStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

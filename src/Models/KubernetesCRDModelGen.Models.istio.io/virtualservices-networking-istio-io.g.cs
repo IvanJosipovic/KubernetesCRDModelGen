@@ -25,21 +25,6 @@ public partial class V1beta1VirtualServiceSpecHttpCorsPolicyAllowOrigins
     public string? Regex { get; set; }
 }
 
-/// <summary>Indicates whether preflight requests not matching the configured allowed origin shouldn't be forwarded to the upstream.  Valid Options: FORWARD, IGNORE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1VirtualServiceSpecHttpCorsPolicyUnmatchedPreflightsEnum
-{
-    [EnumMember(Value = "UNSPECIFIED"), JsonStringEnumMemberName("UNSPECIFIED")]
-    /// <summary>UNSPECIFIED</summary>
-    UNSPECIFIED,
-    [EnumMember(Value = "FORWARD"), JsonStringEnumMemberName("FORWARD")]
-    /// <summary>FORWARD</summary>
-    FORWARD,
-    [EnumMember(Value = "IGNORE"), JsonStringEnumMemberName("IGNORE")]
-    /// <summary>IGNORE</summary>
-    IGNORE
-}
-
 /// <summary>Cross-Origin Resource Sharing policy (CORS).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecHttpCorsPolicy
@@ -74,8 +59,7 @@ public partial class V1beta1VirtualServiceSpecHttpCorsPolicy
 
     /// <summary>Indicates whether preflight requests not matching the configured allowed origin shouldn't be forwarded to the upstream.  Valid Options: FORWARD, IGNORE</summary>
     [JsonPropertyName("unmatchedPreflights")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1VirtualServiceSpecHttpCorsPolicyUnmatchedPreflightsEnum>))]
-    public V1beta1VirtualServiceSpecHttpCorsPolicyUnmatchedPreflightsEnum? UnmatchedPreflights { get; set; }
+    public string? UnmatchedPreflights { get; set; }
 }
 
 /// <summary>Delegate is used to specify the particular VirtualService which can be used to define delegate HTTPRoute.</summary>
@@ -500,18 +484,6 @@ public partial class V1beta1VirtualServiceSpecHttpMirrors
     public V1beta1VirtualServiceSpecHttpMirrorsPercentage? Percentage { get; set; }
 }
 
-/// <summary>On a redirect, dynamically set the port: * FROM_PROTOCOL_DEFAULT: automatically set to 80 for HTTP and 443 for HTTPS.  Valid Options: FROM_PROTOCOL_DEFAULT, FROM_REQUEST_PORT</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1VirtualServiceSpecHttpRedirectDerivePortEnum
-{
-    [EnumMember(Value = "FROM_PROTOCOL_DEFAULT"), JsonStringEnumMemberName("FROM_PROTOCOL_DEFAULT")]
-    /// <summary>FROM_PROTOCOL_DEFAULT</summary>
-    FROMPROTOCOLDEFAULT,
-    [EnumMember(Value = "FROM_REQUEST_PORT"), JsonStringEnumMemberName("FROM_REQUEST_PORT")]
-    /// <summary>FROM_REQUEST_PORT</summary>
-    FROMREQUESTPORT
-}
-
 /// <summary>A HTTP rule can either return a direct_response, redirect or forward (default) traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecHttpRedirect
@@ -522,8 +494,7 @@ public partial class V1beta1VirtualServiceSpecHttpRedirect
 
     /// <summary>On a redirect, dynamically set the port: * FROM_PROTOCOL_DEFAULT: automatically set to 80 for HTTP and 443 for HTTPS.  Valid Options: FROM_PROTOCOL_DEFAULT, FROM_REQUEST_PORT</summary>
     [JsonPropertyName("derivePort")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1VirtualServiceSpecHttpRedirectDerivePortEnum>))]
-    public V1beta1VirtualServiceSpecHttpRedirectDerivePortEnum? DerivePort { get; set; }
+    public string? DerivePort { get; set; }
 
     /// <summary>On a redirect, overwrite the port portion of the URL with this value.</summary>
     [JsonPropertyName("port")]

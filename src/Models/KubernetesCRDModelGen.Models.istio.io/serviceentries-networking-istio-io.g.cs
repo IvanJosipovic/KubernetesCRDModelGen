@@ -41,18 +41,6 @@ public partial class V1beta1ServiceEntrySpecEndpoints
     public int? Weight { get; set; }
 }
 
-/// <summary>Specify whether the service should be considered external to the mesh or part of the mesh.  Valid Options: MESH_EXTERNAL, MESH_INTERNAL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ServiceEntrySpecLocationEnum
-{
-    [EnumMember(Value = "MESH_EXTERNAL"), JsonStringEnumMemberName("MESH_EXTERNAL")]
-    /// <summary>MESH_EXTERNAL</summary>
-    MESHEXTERNAL,
-    [EnumMember(Value = "MESH_INTERNAL"), JsonStringEnumMemberName("MESH_INTERNAL")]
-    /// <summary>MESH_INTERNAL</summary>
-    MESHINTERNAL
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceEntrySpecPorts
@@ -72,24 +60,6 @@ public partial class V1beta1ServiceEntrySpecPorts
     /// <summary>The port number on the endpoint where the traffic will be received.</summary>
     [JsonPropertyName("targetPort")]
     public int? TargetPort { get; set; }
-}
-
-/// <summary>Service resolution mode for the hosts.  Valid Options: NONE, STATIC, DNS, DNS_ROUND_ROBIN</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1ServiceEntrySpecResolutionEnum
-{
-    [EnumMember(Value = "NONE"), JsonStringEnumMemberName("NONE")]
-    /// <summary>NONE</summary>
-    NONE,
-    [EnumMember(Value = "STATIC"), JsonStringEnumMemberName("STATIC")]
-    /// <summary>STATIC</summary>
-    STATIC,
-    [EnumMember(Value = "DNS"), JsonStringEnumMemberName("DNS")]
-    /// <summary>DNS</summary>
-    DNS,
-    [EnumMember(Value = "DNS_ROUND_ROBIN"), JsonStringEnumMemberName("DNS_ROUND_ROBIN")]
-    /// <summary>DNS_ROUND_ROBIN</summary>
-    DNSROUNDROBIN
 }
 
 /// <summary>Applicable only for MESH_INTERNAL services.</summary>
@@ -123,8 +93,7 @@ public partial class V1beta1ServiceEntrySpec
 
     /// <summary>Specify whether the service should be considered external to the mesh or part of the mesh.  Valid Options: MESH_EXTERNAL, MESH_INTERNAL</summary>
     [JsonPropertyName("location")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ServiceEntrySpecLocationEnum>))]
-    public V1beta1ServiceEntrySpecLocationEnum? Location { get; set; }
+    public string? Location { get; set; }
 
     /// <summary>The ports associated with the external service.</summary>
     [JsonPropertyName("ports")]
@@ -132,8 +101,7 @@ public partial class V1beta1ServiceEntrySpec
 
     /// <summary>Service resolution mode for the hosts.  Valid Options: NONE, STATIC, DNS, DNS_ROUND_ROBIN</summary>
     [JsonPropertyName("resolution")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1ServiceEntrySpecResolutionEnum>))]
-    public V1beta1ServiceEntrySpecResolutionEnum? Resolution { get; set; }
+    public string? Resolution { get; set; }
 
     /// <summary>If specified, the proxy will verify that the server certificate's subject alternate name matches one of the specified values.</summary>
     [JsonPropertyName("subjectAltNames")]

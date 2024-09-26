@@ -8,35 +8,13 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
-/// <summary>ClientAuthType defines the client authentication type to apply.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum
-{
-    [EnumMember(Value = "NoClientCert"), JsonStringEnumMemberName("NoClientCert")]
-    /// <summary>NoClientCert</summary>
-    NoClientCert,
-    [EnumMember(Value = "RequestClientCert"), JsonStringEnumMemberName("RequestClientCert")]
-    /// <summary>RequestClientCert</summary>
-    RequestClientCert,
-    [EnumMember(Value = "RequireAnyClientCert"), JsonStringEnumMemberName("RequireAnyClientCert")]
-    /// <summary>RequireAnyClientCert</summary>
-    RequireAnyClientCert,
-    [EnumMember(Value = "VerifyClientCertIfGiven"), JsonStringEnumMemberName("VerifyClientCertIfGiven")]
-    /// <summary>VerifyClientCertIfGiven</summary>
-    VerifyClientCertIfGiven,
-    [EnumMember(Value = "RequireAndVerifyClientCert"), JsonStringEnumMemberName("RequireAndVerifyClientCert")]
-    /// <summary>RequireAndVerifyClientCert</summary>
-    RequireAndVerifyClientCert
-}
-
 /// <summary>ClientAuth defines the server's policy for TLS Client Authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpecClientAuth
 {
     /// <summary>ClientAuthType defines the client authentication type to apply.</summary>
     [JsonPropertyName("clientAuthType")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum>))]
-    public V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum? ClientAuthType { get; set; }
+    public string? ClientAuthType { get; set; }
 
     /// <summary>SecretNames defines the names of the referenced Kubernetes Secret storing certificate details.</summary>
     [JsonPropertyName("secretNames")]

@@ -26,24 +26,6 @@ public partial class V1beta2BucketSpecAccessFrom
     public IList<V1beta2BucketSpecAccessFromNamespaceSelectors> NamespaceSelectors { get; set; }
 }
 
-/// <summary>Provider of the object storage bucket. Defaults to 'generic', which expects an S3 (API) compatible object storage.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2BucketSpecProviderEnum
-{
-    [EnumMember(Value = "generic"), JsonStringEnumMemberName("generic")]
-    /// <summary>generic</summary>
-    Generic,
-    [EnumMember(Value = "aws"), JsonStringEnumMemberName("aws")]
-    /// <summary>aws</summary>
-    Aws,
-    [EnumMember(Value = "gcp"), JsonStringEnumMemberName("gcp")]
-    /// <summary>gcp</summary>
-    Gcp,
-    [EnumMember(Value = "azure"), JsonStringEnumMemberName("azure")]
-    /// <summary>azure</summary>
-    Azure
-}
-
 /// <summary>SecretRef specifies the Secret containing authentication credentials for the Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2BucketSpecSecretRef
@@ -87,8 +69,7 @@ public partial class V1beta2BucketSpec
 
     /// <summary>Provider of the object storage bucket. Defaults to 'generic', which expects an S3 (API) compatible object storage.</summary>
     [JsonPropertyName("provider")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2BucketSpecProviderEnum>))]
-    public V1beta2BucketSpecProviderEnum? Provider { get; set; }
+    public string? Provider { get; set; }
 
     /// <summary>Region of the Endpoint where the BucketName is located in.</summary>
     [JsonPropertyName("region")]
@@ -140,21 +121,6 @@ public partial class V1beta2BucketStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta2BucketStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
-}
-
 /// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2BucketStatusConditions
@@ -177,8 +143,7 @@ public partial class V1beta2BucketStatusConditions
 
     /// <summary>status of the condition, one of True, False, Unknown.</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta2BucketStatusConditionsStatusEnum>))]
-    public V1beta2BucketStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
     [JsonPropertyName("type")]

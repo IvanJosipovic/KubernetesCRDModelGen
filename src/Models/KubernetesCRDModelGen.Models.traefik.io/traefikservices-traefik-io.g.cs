@@ -57,18 +57,6 @@ public partial class V1alpha1TraefikServiceSpecMirroringHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
-/// <summary>Kind defines the kind of the Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TraefikServiceSpecMirroringKindEnum
-{
-    [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
-    /// <summary>Service</summary>
-    Service,
-    [EnumMember(Value = "TraefikService"), JsonStringEnumMemberName("TraefikService")]
-    /// <summary>TraefikService</summary>
-    TraefikService
-}
-
 /// <summary>Healthcheck defines health checks for ExternalName services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
@@ -116,18 +104,6 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsHealthCheck
     /// <summary>Timeout defines the maximum duration Traefik will wait for a health check request before considering the server unhealthy. Default: 5s</summary>
     [JsonPropertyName("timeout")]
     public IntstrIntOrString? Timeout { get; set; }
-}
-
-/// <summary>Kind defines the kind of the Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TraefikServiceSpecMirroringMirrorsKindEnum
-{
-    [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
-    /// <summary>Service</summary>
-    Service,
-    [EnumMember(Value = "TraefikService"), JsonStringEnumMemberName("TraefikService")]
-    /// <summary>TraefikService</summary>
-    TraefikService
 }
 
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
@@ -183,8 +159,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrors
 
     /// <summary>Kind defines the kind of the Service.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TraefikServiceSpecMirroringMirrorsKindEnum>))]
-    public V1alpha1TraefikServiceSpecMirroringMirrorsKindEnum? Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary>Name defines the name of the referenced Kubernetes Service or TraefikService. The differentiation between the two is specified in the Kind field.</summary>
     [JsonPropertyName("name")]
@@ -292,8 +267,7 @@ public partial class V1alpha1TraefikServiceSpecMirroring
 
     /// <summary>Kind defines the kind of the Service.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TraefikServiceSpecMirroringKindEnum>))]
-    public V1alpha1TraefikServiceSpecMirroringKindEnum? Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary>MaxBodySize defines the maximum size allowed for the body of the request. If the body is larger, the request is not mirrored. Default value is -1, which means unlimited size.</summary>
     [JsonPropertyName("maxBodySize")]
@@ -401,18 +375,6 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesHealthCheck
     public IntstrIntOrString? Timeout { get; set; }
 }
 
-/// <summary>Kind defines the kind of the Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1TraefikServiceSpecWeightedServicesKindEnum
-{
-    [EnumMember(Value = "Service"), JsonStringEnumMemberName("Service")]
-    /// <summary>Service</summary>
-    Service,
-    [EnumMember(Value = "TraefikService"), JsonStringEnumMemberName("TraefikService")]
-    /// <summary>TraefikService</summary>
-    TraefikService
-}
-
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwarding
@@ -466,8 +428,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServices
 
     /// <summary>Kind defines the kind of the Service.</summary>
     [JsonPropertyName("kind")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TraefikServiceSpecWeightedServicesKindEnum>))]
-    public V1alpha1TraefikServiceSpecWeightedServicesKindEnum? Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary>Name defines the name of the referenced Kubernetes Service or TraefikService. The differentiation between the two is specified in the Kind field.</summary>
     [JsonPropertyName("name")]

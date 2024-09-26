@@ -25025,31 +25025,12 @@ public partial class V1alpha1ApplicationSetSpecStrategy
 }
 
 /// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1ApplicationSetSpecSyncPolicyApplicationsSyncEnum
-{
-    [EnumMember(Value = "create-only"), JsonStringEnumMemberName("create-only")]
-    /// <summary>create-only</summary>
-    CreateOnly,
-    [EnumMember(Value = "create-update"), JsonStringEnumMemberName("create-update")]
-    /// <summary>create-update</summary>
-    CreateUpdate,
-    [EnumMember(Value = "create-delete"), JsonStringEnumMemberName("create-delete")]
-    /// <summary>create-delete</summary>
-    CreateDelete,
-    [EnumMember(Value = "sync"), JsonStringEnumMemberName("sync")]
-    /// <summary>sync</summary>
-    Sync
-}
-
-/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecSyncPolicy
 {
     /// <summary></summary>
     [JsonPropertyName("applicationsSync")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1ApplicationSetSpecSyncPolicyApplicationsSyncEnum>))]
-    public V1alpha1ApplicationSetSpecSyncPolicyApplicationsSyncEnum? ApplicationsSync { get; set; }
+    public string? ApplicationsSync { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("preserveResourcesOnDeletion")]

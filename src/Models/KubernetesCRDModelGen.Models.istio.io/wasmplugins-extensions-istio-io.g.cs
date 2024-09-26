@@ -8,51 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.extensions.istio.io;
-/// <summary>Specifies the failure behavior for the plugin due to fatal errors.  Valid Options: FAIL_CLOSE, FAIL_OPEN</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1WasmPluginSpecFailStrategyEnum
-{
-    [EnumMember(Value = "FAIL_CLOSE"), JsonStringEnumMemberName("FAIL_CLOSE")]
-    /// <summary>FAIL_CLOSE</summary>
-    FAILCLOSE,
-    [EnumMember(Value = "FAIL_OPEN"), JsonStringEnumMemberName("FAIL_OPEN")]
-    /// <summary>FAIL_OPEN</summary>
-    FAILOPEN
-}
-
-/// <summary>The pull behaviour to be applied when fetching Wasm module by either OCI image or `http/https`.  Valid Options: IfNotPresent, Always</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1WasmPluginSpecImagePullPolicyEnum
-{
-    [EnumMember(Value = "UNSPECIFIED_POLICY"), JsonStringEnumMemberName("UNSPECIFIED_POLICY")]
-    /// <summary>UNSPECIFIED_POLICY</summary>
-    UNSPECIFIEDPOLICY,
-    [EnumMember(Value = "IfNotPresent"), JsonStringEnumMemberName("IfNotPresent")]
-    /// <summary>IfNotPresent</summary>
-    IfNotPresent,
-    [EnumMember(Value = "Always"), JsonStringEnumMemberName("Always")]
-    /// <summary>Always</summary>
-    Always
-}
-
-/// <summary>Criteria for selecting traffic by their direction.  Valid Options: CLIENT, SERVER, CLIENT_AND_SERVER</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1WasmPluginSpecMatchModeEnum
-{
-    [EnumMember(Value = "UNDEFINED"), JsonStringEnumMemberName("UNDEFINED")]
-    /// <summary>UNDEFINED</summary>
-    UNDEFINED,
-    [EnumMember(Value = "CLIENT"), JsonStringEnumMemberName("CLIENT")]
-    /// <summary>CLIENT</summary>
-    CLIENT,
-    [EnumMember(Value = "SERVER"), JsonStringEnumMemberName("SERVER")]
-    /// <summary>SERVER</summary>
-    SERVER,
-    [EnumMember(Value = "CLIENT_AND_SERVER"), JsonStringEnumMemberName("CLIENT_AND_SERVER")]
-    /// <summary>CLIENT_AND_SERVER</summary>
-    CLIENTANDSERVER
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecMatchPorts
@@ -68,30 +23,11 @@ public partial class V1alpha1WasmPluginSpecMatch
 {
     /// <summary>Criteria for selecting traffic by their direction.  Valid Options: CLIENT, SERVER, CLIENT_AND_SERVER</summary>
     [JsonPropertyName("mode")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1WasmPluginSpecMatchModeEnum>))]
-    public V1alpha1WasmPluginSpecMatchModeEnum? Mode { get; set; }
+    public string? Mode { get; set; }
 
     /// <summary>Criteria for selecting traffic by their destination port.</summary>
     [JsonPropertyName("ports")]
     public IList<V1alpha1WasmPluginSpecMatchPorts>? Ports { get; set; }
-}
-
-/// <summary>Determines where in the filter chain this `WasmPlugin` is to be injected.  Valid Options: AUTHN, AUTHZ, STATS</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1WasmPluginSpecPhaseEnum
-{
-    [EnumMember(Value = "UNSPECIFIED_PHASE"), JsonStringEnumMemberName("UNSPECIFIED_PHASE")]
-    /// <summary>UNSPECIFIED_PHASE</summary>
-    UNSPECIFIEDPHASE,
-    [EnumMember(Value = "AUTHN"), JsonStringEnumMemberName("AUTHN")]
-    /// <summary>AUTHN</summary>
-    AUTHN,
-    [EnumMember(Value = "AUTHZ"), JsonStringEnumMemberName("AUTHZ")]
-    /// <summary>AUTHZ</summary>
-    AUTHZ,
-    [EnumMember(Value = "STATS"), JsonStringEnumMemberName("STATS")]
-    /// <summary>STATS</summary>
-    STATS
 }
 
 /// <summary>Criteria used to select the specific set of pods/VMs on which this plugin configuration should be applied.</summary>
@@ -145,33 +81,6 @@ public partial class V1alpha1WasmPluginSpecTargetRefs
     public string? Namespace { get; set; }
 }
 
-/// <summary>Specifies the type of Wasm Extension to be used.  Valid Options: HTTP, NETWORK</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1WasmPluginSpecTypeEnum
-{
-    [EnumMember(Value = "UNSPECIFIED_PLUGIN_TYPE"), JsonStringEnumMemberName("UNSPECIFIED_PLUGIN_TYPE")]
-    /// <summary>UNSPECIFIED_PLUGIN_TYPE</summary>
-    UNSPECIFIEDPLUGINTYPE,
-    [EnumMember(Value = "HTTP"), JsonStringEnumMemberName("HTTP")]
-    /// <summary>HTTP</summary>
-    HTTP,
-    [EnumMember(Value = "NETWORK"), JsonStringEnumMemberName("NETWORK")]
-    /// <summary>NETWORK</summary>
-    NETWORK
-}
-
-/// <summary>Source for the environment variable's value.  Valid Options: INLINE, HOST</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum
-{
-    [EnumMember(Value = "INLINE"), JsonStringEnumMemberName("INLINE")]
-    /// <summary>INLINE</summary>
-    INLINE,
-    [EnumMember(Value = "HOST"), JsonStringEnumMemberName("HOST")]
-    /// <summary>HOST</summary>
-    HOST
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecVmConfigEnv
@@ -186,8 +95,7 @@ public partial class V1alpha1WasmPluginSpecVmConfigEnv
 
     /// <summary>Source for the environment variable's value.  Valid Options: INLINE, HOST</summary>
     [JsonPropertyName("valueFrom")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum>))]
-    public V1alpha1WasmPluginSpecVmConfigEnvValueFromEnum? ValueFrom { get; set; }
+    public string? ValueFrom { get; set; }
 }
 
 /// <summary>Configuration for a Wasm VM.</summary>
@@ -205,13 +113,11 @@ public partial class V1alpha1WasmPluginSpec
 {
     /// <summary>Specifies the failure behavior for the plugin due to fatal errors.  Valid Options: FAIL_CLOSE, FAIL_OPEN</summary>
     [JsonPropertyName("failStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1WasmPluginSpecFailStrategyEnum>))]
-    public V1alpha1WasmPluginSpecFailStrategyEnum? FailStrategy { get; set; }
+    public string? FailStrategy { get; set; }
 
     /// <summary>The pull behaviour to be applied when fetching Wasm module by either OCI image or `http/https`.  Valid Options: IfNotPresent, Always</summary>
     [JsonPropertyName("imagePullPolicy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1WasmPluginSpecImagePullPolicyEnum>))]
-    public V1alpha1WasmPluginSpecImagePullPolicyEnum? ImagePullPolicy { get; set; }
+    public string? ImagePullPolicy { get; set; }
 
     /// <summary>Credentials to use for OCI image pulling.</summary>
     [JsonPropertyName("imagePullSecret")]
@@ -223,8 +129,7 @@ public partial class V1alpha1WasmPluginSpec
 
     /// <summary>Determines where in the filter chain this `WasmPlugin` is to be injected.  Valid Options: AUTHN, AUTHZ, STATS</summary>
     [JsonPropertyName("phase")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1WasmPluginSpecPhaseEnum>))]
-    public V1alpha1WasmPluginSpecPhaseEnum? Phase { get; set; }
+    public string? Phase { get; set; }
 
     /// <summary>The configuration that will be passed on to the plugin.</summary>
     [JsonPropertyName("pluginConfig")]
@@ -256,8 +161,7 @@ public partial class V1alpha1WasmPluginSpec
 
     /// <summary>Specifies the type of Wasm Extension to be used.  Valid Options: HTTP, NETWORK</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1WasmPluginSpecTypeEnum>))]
-    public V1alpha1WasmPluginSpecTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>URL of a Wasm module or OCI container.</summary>
     [JsonPropertyName("url")]

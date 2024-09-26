@@ -25,81 +25,6 @@ public partial class V1CertificateRequestSpecIssuerRef
     public string Name { get; set; }
 }
 
-/// <summary>KeyUsage specifies valid usage contexts for keys. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3 https://tools.ietf.org/html/rfc5280#section-4.2.1.12   Valid KeyUsage values are as follows: "signing", "digital signature", "content commitment", "key encipherment", "key agreement", "data encipherment", "cert sign", "crl sign", "encipher only", "decipher only", "any", "server auth", "client auth", "code signing", "email protection", "s/mime", "ipsec end system", "ipsec tunnel", "ipsec user", "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateRequestSpecUsagesEnum
-{
-    [EnumMember(Value = "signing"), JsonStringEnumMemberName("signing")]
-    /// <summary>signing</summary>
-    Signing,
-    [EnumMember(Value = "digital signature"), JsonStringEnumMemberName("digital signature")]
-    /// <summary>digital signature</summary>
-    DigitalSignature,
-    [EnumMember(Value = "content commitment"), JsonStringEnumMemberName("content commitment")]
-    /// <summary>content commitment</summary>
-    ContentCommitment,
-    [EnumMember(Value = "key encipherment"), JsonStringEnumMemberName("key encipherment")]
-    /// <summary>key encipherment</summary>
-    KeyEncipherment,
-    [EnumMember(Value = "key agreement"), JsonStringEnumMemberName("key agreement")]
-    /// <summary>key agreement</summary>
-    KeyAgreement,
-    [EnumMember(Value = "data encipherment"), JsonStringEnumMemberName("data encipherment")]
-    /// <summary>data encipherment</summary>
-    DataEncipherment,
-    [EnumMember(Value = "cert sign"), JsonStringEnumMemberName("cert sign")]
-    /// <summary>cert sign</summary>
-    CertSign,
-    [EnumMember(Value = "crl sign"), JsonStringEnumMemberName("crl sign")]
-    /// <summary>crl sign</summary>
-    CrlSign,
-    [EnumMember(Value = "encipher only"), JsonStringEnumMemberName("encipher only")]
-    /// <summary>encipher only</summary>
-    EncipherOnly,
-    [EnumMember(Value = "decipher only"), JsonStringEnumMemberName("decipher only")]
-    /// <summary>decipher only</summary>
-    DecipherOnly,
-    [EnumMember(Value = "any"), JsonStringEnumMemberName("any")]
-    /// <summary>any</summary>
-    Any,
-    [EnumMember(Value = "server auth"), JsonStringEnumMemberName("server auth")]
-    /// <summary>server auth</summary>
-    ServerAuth,
-    [EnumMember(Value = "client auth"), JsonStringEnumMemberName("client auth")]
-    /// <summary>client auth</summary>
-    ClientAuth,
-    [EnumMember(Value = "code signing"), JsonStringEnumMemberName("code signing")]
-    /// <summary>code signing</summary>
-    CodeSigning,
-    [EnumMember(Value = "email protection"), JsonStringEnumMemberName("email protection")]
-    /// <summary>email protection</summary>
-    EmailProtection,
-    [EnumMember(Value = "s/mime"), JsonStringEnumMemberName("s/mime")]
-    /// <summary>s/mime</summary>
-    SMime,
-    [EnumMember(Value = "ipsec end system"), JsonStringEnumMemberName("ipsec end system")]
-    /// <summary>ipsec end system</summary>
-    IpsecEndSystem,
-    [EnumMember(Value = "ipsec tunnel"), JsonStringEnumMemberName("ipsec tunnel")]
-    /// <summary>ipsec tunnel</summary>
-    IpsecTunnel,
-    [EnumMember(Value = "ipsec user"), JsonStringEnumMemberName("ipsec user")]
-    /// <summary>ipsec user</summary>
-    IpsecUser,
-    [EnumMember(Value = "timestamping"), JsonStringEnumMemberName("timestamping")]
-    /// <summary>timestamping</summary>
-    Timestamping,
-    [EnumMember(Value = "ocsp signing"), JsonStringEnumMemberName("ocsp signing")]
-    /// <summary>ocsp signing</summary>
-    OcspSigning,
-    [EnumMember(Value = "microsoft sgc"), JsonStringEnumMemberName("microsoft sgc")]
-    /// <summary>microsoft sgc</summary>
-    MicrosoftSgc,
-    [EnumMember(Value = "netscape sgc"), JsonStringEnumMemberName("netscape sgc")]
-    /// <summary>netscape sgc</summary>
-    NetscapeSgc
-}
-
 /// <summary>Specification of the desired state of the CertificateRequest resource. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateRequestSpec
@@ -134,26 +59,11 @@ public partial class V1CertificateRequestSpec
 
     /// <summary>Requested key usages and extended key usages.   NOTE: If the CSR in the `Request` field has uses the KeyUsage or ExtKeyUsage extension, these extensions must have the same values as specified here without any additional values.   If unset, defaults to `digital signature` and `key encipherment`.</summary>
     [JsonPropertyName("usages")]
-    public IList<V1CertificateRequestSpecUsagesEnum>? Usages { get; set; }
+    public IList<string>? Usages { get; set; }
 
     /// <summary>Username contains the name of the user that created the CertificateRequest. Populated by the cert-manager webhook on creation and immutable.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
-}
-
-/// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1CertificateRequestStatusConditionsStatusEnum
-{
-    [EnumMember(Value = "true"), JsonStringEnumMemberName("true")]
-    /// <summary>true</summary>
-    True,
-    [EnumMember(Value = "false"), JsonStringEnumMemberName("false")]
-    /// <summary>false</summary>
-    False,
-    [EnumMember(Value = "Unknown"), JsonStringEnumMemberName("Unknown")]
-    /// <summary>Unknown</summary>
-    Unknown
 }
 
 /// <summary>CertificateRequestCondition contains condition information for a CertificateRequest.</summary>
@@ -174,8 +84,7 @@ public partial class V1CertificateRequestStatusConditions
 
     /// <summary>Status of the condition, one of (`True`, `False`, `Unknown`).</summary>
     [JsonPropertyName("status")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1CertificateRequestStatusConditionsStatusEnum>))]
-    public V1CertificateRequestStatusConditionsStatusEnum Status { get; set; }
+    public string Status { get; set; }
 
     /// <summary>Type of the condition, known values are (`Ready`, `InvalidRequest`, `Approved`, `Denied`).</summary>
     [JsonPropertyName("type")]

@@ -52,41 +52,17 @@ public partial class V1alpha1CloudEventSourceSpecDestination
     public V1alpha1CloudEventSourceSpecDestinationHttp? Http { get; set; }
 }
 
-/// <summary>CloudEventType contains the list of cloudevent types</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1CloudEventSourceSpecEventSubscriptionExcludedEventTypesEnum
-{
-    [EnumMember(Value = "keda.scaledobject.ready.v1"), JsonStringEnumMemberName("keda.scaledobject.ready.v1")]
-    /// <summary>keda.scaledobject.ready.v1</summary>
-    KedaScaledobjectReadyV1,
-    [EnumMember(Value = "keda.scaledobject.failed.v1"), JsonStringEnumMemberName("keda.scaledobject.failed.v1")]
-    /// <summary>keda.scaledobject.failed.v1</summary>
-    KedaScaledobjectFailedV1
-}
-
-/// <summary>CloudEventType contains the list of cloudevent types</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1alpha1CloudEventSourceSpecEventSubscriptionIncludedEventTypesEnum
-{
-    [EnumMember(Value = "keda.scaledobject.ready.v1"), JsonStringEnumMemberName("keda.scaledobject.ready.v1")]
-    /// <summary>keda.scaledobject.ready.v1</summary>
-    KedaScaledobjectReadyV1,
-    [EnumMember(Value = "keda.scaledobject.failed.v1"), JsonStringEnumMemberName("keda.scaledobject.failed.v1")]
-    /// <summary>keda.scaledobject.failed.v1</summary>
-    KedaScaledobjectFailedV1
-}
-
 /// <summary>EventSubscription defines filters for events</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CloudEventSourceSpecEventSubscription
 {
     /// <summary></summary>
     [JsonPropertyName("excludedEventTypes")]
-    public IList<V1alpha1CloudEventSourceSpecEventSubscriptionExcludedEventTypesEnum>? ExcludedEventTypes { get; set; }
+    public IList<string>? ExcludedEventTypes { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("includedEventTypes")]
-    public IList<V1alpha1CloudEventSourceSpecEventSubscriptionIncludedEventTypesEnum>? IncludedEventTypes { get; set; }
+    public IList<string>? IncludedEventTypes { get; set; }
 }
 
 /// <summary>CloudEventSourceSpec defines the spec of CloudEventSource</summary>

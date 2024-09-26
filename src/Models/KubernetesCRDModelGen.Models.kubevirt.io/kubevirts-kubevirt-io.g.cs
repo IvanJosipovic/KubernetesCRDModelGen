@@ -777,24 +777,6 @@ public partial class V1KubeVirtSpecConfigurationSupportContainerResources
     public string Type { get; set; }
 }
 
-/// <summary>MinTLSVersion is a way to specify the minimum protocol version that is acceptable for TLS connections. Protocol versions are based on the following most common TLS configurations:     https://ssl-config.mozilla.org/   Note that SSLv3.0 is not a supported protocol version due to well known vulnerabilities such as POODLE: https://en.wikipedia.org/wiki/POODLE</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1KubeVirtSpecConfigurationTlsConfigurationMinTLSVersionEnum
-{
-    [EnumMember(Value = "VersionTLS10"), JsonStringEnumMemberName("VersionTLS10")]
-    /// <summary>VersionTLS10</summary>
-    VersionTLS10,
-    [EnumMember(Value = "VersionTLS11"), JsonStringEnumMemberName("VersionTLS11")]
-    /// <summary>VersionTLS11</summary>
-    VersionTLS11,
-    [EnumMember(Value = "VersionTLS12"), JsonStringEnumMemberName("VersionTLS12")]
-    /// <summary>VersionTLS12</summary>
-    VersionTLS12,
-    [EnumMember(Value = "VersionTLS13"), JsonStringEnumMemberName("VersionTLS13")]
-    /// <summary>VersionTLS13</summary>
-    VersionTLS13
-}
-
 /// <summary>TLSConfiguration holds TLS options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationTlsConfiguration
@@ -805,8 +787,7 @@ public partial class V1KubeVirtSpecConfigurationTlsConfiguration
 
     /// <summary>MinTLSVersion is a way to specify the minimum protocol version that is acceptable for TLS connections. Protocol versions are based on the following most common TLS configurations:     https://ssl-config.mozilla.org/   Note that SSLv3.0 is not a supported protocol version due to well known vulnerabilities such as POODLE: https://en.wikipedia.org/wiki/POODLE</summary>
     [JsonPropertyName("minTLSVersion")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1KubeVirtSpecConfigurationTlsConfigurationMinTLSVersionEnum>))]
-    public V1KubeVirtSpecConfigurationTlsConfigurationMinTLSVersionEnum? MinTLSVersion { get; set; }
+    public string? MinTLSVersion { get; set; }
 }
 
 /// <summary>DisableFreePageReporting disable the free page reporting of memory balloon device https://libvirt.org/formatdomain.html#memory-balloon-device. This will have effect only if AutoattachMemBalloon is not false and the vmi is not requesting any high performance feature (dedicatedCPU/realtime/hugePages), in which free page reporting is always disabled.</summary>
@@ -832,18 +813,6 @@ public partial class V1KubeVirtSpecConfigurationVirtualMachineOptions
     /// <summary>DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named 'guest-console-log'. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.</summary>
     [JsonPropertyName("disableSerialConsoleLog")]
     public V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableSerialConsoleLog? DisableSerialConsoleLog { get; set; }
-}
-
-/// <summary>VMRolloutStrategy defines how changes to a VM object propagate to its VMI</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1KubeVirtSpecConfigurationVmRolloutStrategyEnum
-{
-    [EnumMember(Value = "Stage"), JsonStringEnumMemberName("Stage")]
-    /// <summary>Stage</summary>
-    Stage,
-    [EnumMember(Value = "LiveUpdate"), JsonStringEnumMemberName("LiveUpdate")]
-    /// <summary>LiveUpdate</summary>
-    LiveUpdate
 }
 
 /// <summary></summary>
@@ -1020,8 +989,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>VMRolloutStrategy defines how changes to a VM object propagate to its VMI</summary>
     [JsonPropertyName("vmRolloutStrategy")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1KubeVirtSpecConfigurationVmRolloutStrategyEnum>))]
-    public V1KubeVirtSpecConfigurationVmRolloutStrategyEnum? VmRolloutStrategy { get; set; }
+    public string? VmRolloutStrategy { get; set; }
 
     /// <summary>VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode.</summary>
     [JsonPropertyName("vmStateStorageClass")]

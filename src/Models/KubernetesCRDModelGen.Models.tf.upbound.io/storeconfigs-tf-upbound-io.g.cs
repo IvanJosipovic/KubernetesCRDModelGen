@@ -43,24 +43,6 @@ public partial class V1beta1StoreConfigSpecKubernetesAuthSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Source of the credentials.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1StoreConfigSpecKubernetesAuthSourceEnum
-{
-    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
-    /// <summary>None</summary>
-    None,
-    [EnumMember(Value = "Secret"), JsonStringEnumMemberName("Secret")]
-    /// <summary>Secret</summary>
-    Secret,
-    [EnumMember(Value = "Environment"), JsonStringEnumMemberName("Environment")]
-    /// <summary>Environment</summary>
-    Environment,
-    [EnumMember(Value = "Filesystem"), JsonStringEnumMemberName("Filesystem")]
-    /// <summary>Filesystem</summary>
-    Filesystem
-}
-
 /// <summary>Credentials used to connect to the Kubernetes API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecKubernetesAuth
@@ -79,8 +61,7 @@ public partial class V1beta1StoreConfigSpecKubernetesAuth
 
     /// <summary>Source of the credentials.</summary>
     [JsonPropertyName("source")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1StoreConfigSpecKubernetesAuthSourceEnum>))]
-    public V1beta1StoreConfigSpecKubernetesAuthSourceEnum Source { get; set; }
+    public string Source { get; set; }
 }
 
 /// <summary>Kubernetes configures a Kubernetes secret store. If the "type" is "Kubernetes" but no config provided, in cluster config will be used.</summary>
@@ -122,21 +103,6 @@ public partial class V1beta1StoreConfigSpecPlugin
     public string? Endpoint { get; set; }
 }
 
-/// <summary>Type configures which secret store to be used. Only the configuration block for this store will be used and others will be ignored if provided. Default is Kubernetes.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0")]
-public enum V1beta1StoreConfigSpecTypeEnum
-{
-    [EnumMember(Value = "Kubernetes"), JsonStringEnumMemberName("Kubernetes")]
-    /// <summary>Kubernetes</summary>
-    Kubernetes,
-    [EnumMember(Value = "Vault"), JsonStringEnumMemberName("Vault")]
-    /// <summary>Vault</summary>
-    Vault,
-    [EnumMember(Value = "Plugin"), JsonStringEnumMemberName("Plugin")]
-    /// <summary>Plugin</summary>
-    Plugin
-}
-
 /// <summary>A StoreConfigSpec defines the desired state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpec
@@ -155,8 +121,7 @@ public partial class V1beta1StoreConfigSpec
 
     /// <summary>Type configures which secret store to be used. Only the configuration block for this store will be used and others will be ignored if provided. Default is Kubernetes.</summary>
     [JsonPropertyName("type")]
-    [JsonConverter(typeof(JsonStringEnumConverter<V1beta1StoreConfigSpecTypeEnum>))]
-    public V1beta1StoreConfigSpecTypeEnum? Type { get; set; }
+    public string? Type { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
