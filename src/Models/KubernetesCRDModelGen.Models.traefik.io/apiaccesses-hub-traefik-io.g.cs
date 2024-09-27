@@ -8,6 +8,24 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>APIBundleReference references an APIBundle.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIAccessSpecApiBundles
+{
+    /// <summary>Name of the APIBundle.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>APIPlan defines which APIPlan will be used.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIAccessSpecApiPlan
+{
+    /// <summary>Name of the APIPlan.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessSpecApiSelectorMatchExpressions
@@ -60,6 +78,14 @@ public partial class V1alpha1APIAccessSpecOperationFilter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAccessSpec
 {
+    /// <summary>APIBundles defines a set of APIBundle that will be accessible to the configured audience. Multiple APIAccesses can select the same APIBundles.</summary>
+    [JsonPropertyName("apiBundles")]
+    public IList<V1alpha1APIAccessSpecApiBundles>? ApiBundles { get; set; }
+
+    /// <summary>APIPlan defines which APIPlan will be used.</summary>
+    [JsonPropertyName("apiPlan")]
+    public V1alpha1APIAccessSpecApiPlan? ApiPlan { get; set; }
+
     /// <summary>APISelector selects the APIs that will be accessible to the configured audience. Multiple APIAccesses can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
     [JsonPropertyName("apiSelector")]
     public V1alpha1APIAccessSpecApiSelector? ApiSelector { get; set; }
@@ -79,6 +105,10 @@ public partial class V1alpha1APIAccessSpec
     /// <summary>OperationFilter specifies the allowed operations on APIs and APIVersions. If not set, all operations are available. An empty OperationFilter prohibits all operations.</summary>
     [JsonPropertyName("operationFilter")]
     public V1alpha1APIAccessSpecOperationFilter? OperationFilter { get; set; }
+
+    /// <summary>Weight specifies the evaluation order of the plan.</summary>
+    [JsonPropertyName("weight")]
+    public int? Weight { get; set; }
 }
 
 /// <summary>The current status of this APIAccess.</summary>
