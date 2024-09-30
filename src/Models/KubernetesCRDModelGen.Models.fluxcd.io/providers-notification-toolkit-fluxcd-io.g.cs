@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notification.toolkit.fluxcd.io;
-/// <summary>CertSecretRef specifies the Secret containing a PEM-encoded CA certificate (in the `ca.crt` key).   Note: Support for the `caFile` key has been deprecated.</summary>
+/// <summary>CertSecretRef specifies the Secret containing a PEM-encoded CA certificate (in the `ca.crt` key).  Note: Support for the `caFile` key has been deprecated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta3ProviderSpecCertSecretRef
 {
@@ -34,7 +34,7 @@ public partial class V1beta3ProviderSpec
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 
-    /// <summary>CertSecretRef specifies the Secret containing a PEM-encoded CA certificate (in the `ca.crt` key).   Note: Support for the `caFile` key has been deprecated.</summary>
+    /// <summary>CertSecretRef specifies the Secret containing a PEM-encoded CA certificate (in the `ca.crt` key).  Note: Support for the `caFile` key has been deprecated.</summary>
     [JsonPropertyName("certSecretRef")]
     public V1beta3ProviderSpecCertSecretRef? CertSecretRef { get; set; }
 

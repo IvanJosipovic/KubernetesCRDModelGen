@@ -31,7 +31,7 @@ public partial class V2HelmReleaseSpecChartSpecSourceRef
 
     /// <summary>Kind of the referent.</summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -228,7 +228,7 @@ public partial class V2HelmReleaseSpecInstallRemediation
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseSpecInstall
 {
-    /// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Create` and if omitted CRDs are installed but not updated.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are applied (installed) during Helm install action. With this option users can opt in to CRD replace existing CRDs on Helm install actions, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
+    /// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Create` and if omitted CRDs are installed but not updated.  Skip: do neither install nor replace (update) any CRDs.  Create: new CRDs are created, existing CRDs are neither updated nor deleted.  CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.  By default, CRDs are applied (installed) during Helm install action. With this option users can opt in to CRD replace existing CRDs on Helm install actions, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
     [JsonPropertyName("crds")]
     public string? Crds { get; set; }
 
@@ -243,6 +243,10 @@ public partial class V2HelmReleaseSpecInstall
     /// <summary>DisableOpenAPIValidation prevents the Helm install action from validating rendered templates against the Kubernetes OpenAPI Schema.</summary>
     [JsonPropertyName("disableOpenAPIValidation")]
     public bool? DisableOpenAPIValidation { get; set; }
+
+    /// <summary>DisableSchemaValidation prevents the Helm install action from validating the values against the JSON Schema.</summary>
+    [JsonPropertyName("disableSchemaValidation")]
+    public bool? DisableSchemaValidation { get; set; }
 
     /// <summary>DisableWait disables the waiting for resources to be ready after a Helm install has been performed.</summary>
     [JsonPropertyName("disableWait")]
@@ -260,7 +264,7 @@ public partial class V2HelmReleaseSpecInstall
     [JsonPropertyName("replace")]
     public bool? Replace { get; set; }
 
-    /// <summary>SkipCRDs tells the Helm install action to not install any CRDs. By default, CRDs are installed if not already present.   Deprecated use CRD policy (`crds`) attribute with value `Skip` instead.</summary>
+    /// <summary>SkipCRDs tells the Helm install action to not install any CRDs. By default, CRDs are installed if not already present.  Deprecated use CRD policy (`crds`) attribute with value `Skip` instead.</summary>
     [JsonPropertyName("skipCRDs")]
     public bool? SkipCRDs { get; set; }
 
@@ -501,7 +505,7 @@ public partial class V2HelmReleaseSpecUpgrade
     [JsonPropertyName("cleanupOnFail")]
     public bool? CleanupOnFail { get; set; }
 
-    /// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Skip` and if omitted CRDs are neither installed nor upgraded.   Skip: do neither install nor replace (update) any CRDs.   Create: new CRDs are created, existing CRDs are neither updated nor deleted.   CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.   By default, CRDs are not applied during Helm upgrade action. With this option users can opt-in to CRD upgrade, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
+    /// <summary>CRDs upgrade CRDs from the Helm Chart's crds directory according to the CRD upgrade policy provided here. Valid values are `Skip`, `Create` or `CreateReplace`. Default is `Skip` and if omitted CRDs are neither installed nor upgraded.  Skip: do neither install nor replace (update) any CRDs.  Create: new CRDs are created, existing CRDs are neither updated nor deleted.  CreateReplace: new CRDs are created, existing CRDs are updated (replaced) but not deleted.  By default, CRDs are not applied during Helm upgrade action. With this option users can opt-in to CRD upgrade, which is not (yet) natively supported by Helm. https://helm.sh/docs/chart_best_practices/custom_resource_definitions.</summary>
     [JsonPropertyName("crds")]
     public string? Crds { get; set; }
 
@@ -512,6 +516,10 @@ public partial class V2HelmReleaseSpecUpgrade
     /// <summary>DisableOpenAPIValidation prevents the Helm upgrade action from validating rendered templates against the Kubernetes OpenAPI Schema.</summary>
     [JsonPropertyName("disableOpenAPIValidation")]
     public bool? DisableOpenAPIValidation { get; set; }
+
+    /// <summary>DisableSchemaValidation prevents the Helm upgrade action from validating the values against the JSON Schema.</summary>
+    [JsonPropertyName("disableSchemaValidation")]
+    public bool? DisableSchemaValidation { get; set; }
 
     /// <summary>DisableWait disables the waiting for resources to be ready after a Helm upgrade has been performed.</summary>
     [JsonPropertyName("disableWait")]
@@ -599,7 +607,7 @@ public partial class V2HelmReleaseSpec
     [JsonPropertyName("maxHistory")]
     public int? MaxHistory { get; set; }
 
-    /// <summary>PersistentClient tells the controller to use a persistent Kubernetes client for this release. When enabled, the client will be reused for the duration of the reconciliation, instead of being created and destroyed for each (step of a) Helm action.   This can improve performance, but may cause issues with some Helm charts that for example do create Custom Resource Definitions during installation outside Helm's CRD lifecycle hooks, which are then not observed to be available by e.g. post-install hooks.   If not set, it defaults to true.</summary>
+    /// <summary>PersistentClient tells the controller to use a persistent Kubernetes client for this release. When enabled, the client will be reused for the duration of the reconciliation, instead of being created and destroyed for each (step of a) Helm action.  This can improve performance, but may cause issues with some Helm charts that for example do create Custom Resource Definitions during installation outside Helm's CRD lifecycle hooks, which are then not observed to be available by e.g. post-install hooks.  If not set, it defaults to true.</summary>
     [JsonPropertyName("persistentClient")]
     public bool? PersistentClient { get; set; }
 
@@ -656,7 +664,7 @@ public partial class V2HelmReleaseSpec
     public IList<V2HelmReleaseSpecValuesFrom>? ValuesFrom { get; set; }
 }
 
-/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+/// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V2HelmReleaseStatusConditions
 {
@@ -680,7 +688,7 @@ public partial class V2HelmReleaseStatusConditions
     [JsonPropertyName("status")]
     public string Status { get; set; }
 
-    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
+    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }

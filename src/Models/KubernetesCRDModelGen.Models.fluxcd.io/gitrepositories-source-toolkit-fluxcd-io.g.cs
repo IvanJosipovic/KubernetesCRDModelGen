@@ -51,11 +51,11 @@ public partial class V1GitRepositorySpecRef
     [JsonPropertyName("branch")]
     public string? Branch { get; set; }
 
-    /// <summary>Commit SHA to check out, takes precedence over all reference fields.   This can be combined with Branch to shallow clone the branch, in which the commit is expected to exist.</summary>
+    /// <summary>Commit SHA to check out, takes precedence over all reference fields.  This can be combined with Branch to shallow clone the branch, in which the commit is expected to exist.</summary>
     [JsonPropertyName("commit")]
     public string? Commit { get; set; }
 
-    /// <summary>Name of the reference to check out; takes precedence over Branch, Tag and SemVer.   It must be a valid Git reference: https://git-scm.com/docs/git-check-ref-format#_description Examples: "refs/heads/main", "refs/tags/v0.1.0", "refs/pull/420/head", "refs/merge-requests/1/head"</summary>
+    /// <summary>Name of the reference to check out; takes precedence over Branch, Tag and SemVer.  It must be a valid Git reference: https://git-scm.com/docs/git-check-ref-format#_description Examples: "refs/heads/main", "refs/tags/v0.1.0", "refs/pull/420/head", "refs/merge-requests/1/head"</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -90,7 +90,7 @@ public partial class V1GitRepositorySpecVerifySecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositorySpecVerify
 {
-    /// <summary>Mode specifies which Git object(s) should be verified.   The variants "head" and "HEAD" both imply the same thing, i.e. verify the commit that the HEAD of the Git repository points to. The variant "head" solely exists to ensure backwards compatibility.</summary>
+    /// <summary>Mode specifies which Git object(s) should be verified.  The variants "head" and "HEAD" both imply the same thing, i.e. verify the commit that the HEAD of the Git repository points to. The variant "head" solely exists to ensure backwards compatibility.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
@@ -114,6 +114,10 @@ public partial class V1GitRepositorySpec
     /// <summary>Interval at which the GitRepository URL is checked for updates. This interval is approximate and may be subject to jitter to ensure efficient use of resources.</summary>
     [JsonPropertyName("interval")]
     public string Interval { get; set; }
+
+    /// <summary>Provider used for authentication, can be 'azure', 'generic'. When not specified, defaults to 'generic'.</summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
 
     /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the Git server.</summary>
     [JsonPropertyName("proxySecretRef")]
@@ -181,7 +185,7 @@ public partial class V1GitRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+/// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GitRepositoryStatusConditions
 {
@@ -205,7 +209,7 @@ public partial class V1GitRepositoryStatusConditions
     [JsonPropertyName("status")]
     public string Status { get; set; }
 
-    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
+    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }

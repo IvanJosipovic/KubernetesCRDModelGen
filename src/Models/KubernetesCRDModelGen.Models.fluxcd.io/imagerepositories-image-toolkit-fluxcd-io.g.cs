@@ -26,9 +26,18 @@ public partial class V1beta2ImageRepositorySpecAccessFrom
     public IList<V1beta2ImageRepositorySpecAccessFromNamespaceSelectors> NamespaceSelectors { get; set; }
 }
 
-/// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   Note: Support for the `caFile`, `certFile` and `keyFile` keys has been deprecated.</summary>
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  Note: Support for the `caFile`, `certFile` and `keyFile` keys has been deprecated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpecCertSecretRef
+{
+    /// <summary>Name of the referent.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the container registry.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2ImageRepositorySpecProxySecretRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -52,7 +61,7 @@ public partial class V1beta2ImageRepositorySpec
     [JsonPropertyName("accessFrom")]
     public V1beta2ImageRepositorySpecAccessFrom? AccessFrom { get; set; }
 
-    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   Note: Support for the `caFile`, `certFile` and `keyFile` keys has been deprecated.</summary>
+    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  Note: Support for the `caFile`, `certFile` and `keyFile` keys has been deprecated.</summary>
     [JsonPropertyName("certSecretRef")]
     public V1beta2ImageRepositorySpecCertSecretRef? CertSecretRef { get; set; }
 
@@ -62,7 +71,7 @@ public partial class V1beta2ImageRepositorySpec
 
     /// <summary>Image is the name of the image repository</summary>
     [JsonPropertyName("image")]
-    public string? Image { get; set; }
+    public string Image { get; set; }
 
     /// <summary>Insecure allows connecting to a non-TLS HTTP container registry.</summary>
     [JsonPropertyName("insecure")]
@@ -70,11 +79,15 @@ public partial class V1beta2ImageRepositorySpec
 
     /// <summary>Interval is the length of time to wait between scans of the image repository.</summary>
     [JsonPropertyName("interval")]
-    public string? Interval { get; set; }
+    public string Interval { get; set; }
 
     /// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
     [JsonPropertyName("provider")]
     public string? Provider { get; set; }
+
+    /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the container registry.</summary>
+    [JsonPropertyName("proxySecretRef")]
+    public V1beta2ImageRepositorySpecProxySecretRef? ProxySecretRef { get; set; }
 
     /// <summary>SecretRef can be given the name of a secret containing credentials to use for the image registry. The secret should be created with `kubectl create secret docker-registry`, or the equivalent.</summary>
     [JsonPropertyName("secretRef")]
@@ -93,7 +106,7 @@ public partial class V1beta2ImageRepositorySpec
     public string? Timeout { get; set; }
 }
 
-/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+/// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositoryStatusConditions
 {
@@ -117,7 +130,7 @@ public partial class V1beta2ImageRepositoryStatusConditions
     [JsonPropertyName("status")]
     public string Status { get; set; }
 
-    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
+    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }

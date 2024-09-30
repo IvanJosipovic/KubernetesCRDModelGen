@@ -16,11 +16,11 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCheckoutRef
     [JsonPropertyName("branch")]
     public string? Branch { get; set; }
 
-    /// <summary>Commit SHA to check out, takes precedence over all reference fields.   This can be combined with Branch to shallow clone the branch, in which the commit is expected to exist.</summary>
+    /// <summary>Commit SHA to check out, takes precedence over all reference fields.  This can be combined with Branch to shallow clone the branch, in which the commit is expected to exist.</summary>
     [JsonPropertyName("commit")]
     public string? Commit { get; set; }
 
-    /// <summary>Name of the reference to check out; takes precedence over Branch, Tag and SemVer.   It must be a valid Git reference: https://git-scm.com/docs/git-check-ref-format#_description Examples: "refs/heads/main", "refs/tags/v0.1.0", "refs/pull/420/head", "refs/merge-requests/1/head"</summary>
+    /// <summary>Name of the reference to check out; takes precedence over Branch, Tag and SemVer.  It must be a valid Git reference: https://git-scm.com/docs/git-check-ref-format#_description Examples: "refs/heads/main", "refs/tags/v0.1.0", "refs/pull/420/head", "refs/merge-requests/1/head"</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -70,7 +70,7 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommitSigningKey
 {
     /// <summary>SecretRef holds the name to a secret that contains a 'git.asc' key corresponding to the ASCII Armored file containing the GPG signing keypair as the value. It must be in the same namespace as the ImageUpdateAutomation.</summary>
     [JsonPropertyName("secretRef")]
-    public V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRef? SecretRef { get; set; }
+    public V1beta2ImageUpdateAutomationSpecGitCommitSigningKeySecretRef SecretRef { get; set; }
 }
 
 /// <summary>Commit specifies how to commit to the git repository.</summary>
@@ -217,7 +217,7 @@ public partial class V1beta2ImageUpdateAutomationSpec
     public V1beta2ImageUpdateAutomationSpecUpdate? Update { get; set; }
 }
 
-/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+/// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationStatusConditions
 {
@@ -241,7 +241,7 @@ public partial class V1beta2ImageUpdateAutomationStatusConditions
     [JsonPropertyName("status")]
     public string Status { get; set; }
 
-    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
+    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
