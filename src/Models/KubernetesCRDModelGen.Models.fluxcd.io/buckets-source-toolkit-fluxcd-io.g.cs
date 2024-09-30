@@ -8,44 +8,83 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
-/// <summary>NamespaceSelector selects the namespaces to which this ACL applies. An empty map of MatchLabels matches all namespaces in a cluster.</summary>
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the bucket. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  This field is only supported for the `generic` provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2BucketSpecAccessFromNamespaceSelectors
-{
-    /// <summary>MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-}
-
-/// <summary>AccessFrom specifies an Access Control List for allowing cross-namespace references to this object. NOTE: Not implemented, provisional as of https://github.com/fluxcd/flux2/pull/2092</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2BucketSpecAccessFrom
-{
-    /// <summary>NamespaceSelectors is the list of namespace selectors to which this ACL applies. Items in this list are evaluated using a logical OR operation.</summary>
-    [JsonPropertyName("namespaceSelectors")]
-    public IList<V1beta2BucketSpecAccessFromNamespaceSelectors> NamespaceSelectors { get; set; }
-}
-
-/// <summary>SecretRef specifies the Secret containing authentication credentials for the Bucket.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2BucketSpecSecretRef
+public partial class V1BucketSpecCertSecretRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
+/// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the Bucket server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1BucketSpecProxySecretRef
+{
+    /// <summary>Name of the referent.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretRef specifies the Secret containing authentication credentials for the Bucket.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1BucketSpecSecretRef
+{
+    /// <summary>Name of the referent.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the STS endpoint. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  This field is only supported for the `ldap` provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1BucketSpecStsCertSecretRef
+{
+    /// <summary>Name of the referent.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretRef specifies the Secret containing authentication credentials for the STS endpoint. This Secret must contain the fields `username` and `password` and is supported only for the `ldap` provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1BucketSpecStsSecretRef
+{
+    /// <summary>Name of the referent.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>STS specifies the required configuration to use a Security Token Service for fetching temporary credentials to authenticate in a Bucket provider.  This field is only supported for the `aws` and `generic` providers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1BucketSpecSts
+{
+    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the STS endpoint. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  This field is only supported for the `ldap` provider.</summary>
+    [JsonPropertyName("certSecretRef")]
+    public V1BucketSpecStsCertSecretRef? CertSecretRef { get; set; }
+
+    /// <summary>Endpoint is the HTTP/S endpoint of the Security Token Service from where temporary credentials will be fetched.</summary>
+    [JsonPropertyName("endpoint")]
+    public string Endpoint { get; set; }
+
+    /// <summary>Provider of the Security Token Service.</summary>
+    [JsonPropertyName("provider")]
+    public string Provider { get; set; }
+
+    /// <summary>SecretRef specifies the Secret containing authentication credentials for the STS endpoint. This Secret must contain the fields `username` and `password` and is supported only for the `ldap` provider.</summary>
+    [JsonPropertyName("secretRef")]
+    public V1BucketSpecStsSecretRef? SecretRef { get; set; }
+}
+
 /// <summary>BucketSpec specifies the required configuration to produce an Artifact for an object storage bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2BucketSpec
+public partial class V1BucketSpec
 {
-    /// <summary>AccessFrom specifies an Access Control List for allowing cross-namespace references to this object. NOTE: Not implemented, provisional as of https://github.com/fluxcd/flux2/pull/2092</summary>
-    [JsonPropertyName("accessFrom")]
-    public V1beta2BucketSpecAccessFrom? AccessFrom { get; set; }
-
     /// <summary>BucketName is the name of the object storage bucket.</summary>
     [JsonPropertyName("bucketName")]
     public string BucketName { get; set; }
+
+    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the bucket. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  This field is only supported for the `generic` provider.</summary>
+    [JsonPropertyName("certSecretRef")]
+    public V1BucketSpecCertSecretRef? CertSecretRef { get; set; }
 
     /// <summary>Endpoint is the object storage address the BucketName is located at.</summary>
     [JsonPropertyName("endpoint")]
@@ -71,13 +110,21 @@ public partial class V1beta2BucketSpec
     [JsonPropertyName("provider")]
     public string? Provider { get; set; }
 
+    /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the Bucket server.</summary>
+    [JsonPropertyName("proxySecretRef")]
+    public V1BucketSpecProxySecretRef? ProxySecretRef { get; set; }
+
     /// <summary>Region of the Endpoint where the BucketName is located in.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
     /// <summary>SecretRef specifies the Secret containing authentication credentials for the Bucket.</summary>
     [JsonPropertyName("secretRef")]
-    public V1beta2BucketSpecSecretRef? SecretRef { get; set; }
+    public V1BucketSpecSecretRef? SecretRef { get; set; }
+
+    /// <summary>STS specifies the required configuration to use a Security Token Service for fetching temporary credentials to authenticate in a Bucket provider.  This field is only supported for the `aws` and `generic` providers.</summary>
+    [JsonPropertyName("sts")]
+    public V1BucketSpecSts? Sts { get; set; }
 
     /// <summary>Suspend tells the controller to suspend the reconciliation of this Bucket.</summary>
     [JsonPropertyName("suspend")]
@@ -90,7 +137,7 @@ public partial class V1beta2BucketSpec
 
 /// <summary>Artifact represents the last successful Bucket reconciliation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2BucketStatusArtifact
+public partial class V1BucketStatusArtifact
 {
     /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
     [JsonPropertyName("digest")]
@@ -121,9 +168,9 @@ public partial class V1beta2BucketStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+/// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2BucketStatusConditions
+public partial class V1BucketStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -145,22 +192,22 @@ public partial class V1beta2BucketStatusConditions
     [JsonPropertyName("status")]
     public string Status { get; set; }
 
-    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
+    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
 
 /// <summary>BucketStatus records the observed state of a Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2BucketStatus
+public partial class V1BucketStatus
 {
     /// <summary>Artifact represents the last successful Bucket reconciliation.</summary>
     [JsonPropertyName("artifact")]
-    public V1beta2BucketStatusArtifact? Artifact { get; set; }
+    public V1BucketStatusArtifact? Artifact { get; set; }
 
     /// <summary>Conditions holds the conditions for the Bucket.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta2BucketStatusConditions>? Conditions { get; set; }
+    public IList<V1BucketStatusConditions>? Conditions { get; set; }
 
     /// <summary>LastHandledReconcileAt holds the value of the most recent reconcile request value, so a change of the annotation value can be detected.</summary>
     [JsonPropertyName("lastHandledReconcileAt")]
@@ -182,9 +229,9 @@ public partial class V1beta2BucketStatus
 /// <summary>Bucket is the Schema for the buckets API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2Bucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2BucketSpec>, IStatus<V1beta2BucketStatus>
+public partial class V1Bucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1BucketSpec>, IStatus<V1BucketStatus>
 {
-    public const string KubeApiVersion = "v1beta2";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "Bucket";
     public const string KubeGroup = "source.toolkit.fluxcd.io";
     public const string KubePluralName = "buckets";
@@ -202,9 +249,9 @@ public partial class V1beta2Bucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
 
     /// <summary>BucketSpec specifies the required configuration to produce an Artifact for an object storage bucket.</summary>
     [JsonPropertyName("spec")]
-    public V1beta2BucketSpec? Spec { get; set; }
+    public V1BucketSpec? Spec { get; set; }
 
     /// <summary>BucketStatus records the observed state of a Bucket.</summary>
     [JsonPropertyName("status")]
-    public V1beta2BucketStatus? Status { get; set; }
+    public V1BucketStatus? Status { get; set; }
 }

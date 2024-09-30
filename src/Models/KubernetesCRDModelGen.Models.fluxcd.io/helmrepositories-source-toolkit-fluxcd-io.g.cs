@@ -26,7 +26,7 @@ public partial class V1HelmRepositorySpecAccessFrom
     public IList<V1HelmRepositorySpecAccessFromNamespaceSelectors> NamespaceSelectors { get; set; }
 }
 
-/// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   It takes precedence over the values specified in the Secret referred to by `.spec.secretRef`.</summary>
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  It takes precedence over the values specified in the Secret referred to by `.spec.secretRef`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmRepositorySpecCertSecretRef
 {
@@ -52,7 +52,7 @@ public partial class V1HelmRepositorySpec
     [JsonPropertyName("accessFrom")]
     public V1HelmRepositorySpecAccessFrom? AccessFrom { get; set; }
 
-    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   It takes precedence over the values specified in the Secret referred to by `.spec.secretRef`.</summary>
+    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  It takes precedence over the values specified in the Secret referred to by `.spec.secretRef`.</summary>
     [JsonPropertyName("certSecretRef")]
     public V1HelmRepositorySpecCertSecretRef? CertSecretRef { get; set; }
 
@@ -126,7 +126,7 @@ public partial class V1HelmRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+/// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HelmRepositoryStatusConditions
 {
@@ -150,7 +150,7 @@ public partial class V1HelmRepositoryStatusConditions
     [JsonPropertyName("status")]
     public string Status { get; set; }
 
-    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
+    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }

@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
-/// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2OCIRepositorySpecCertSecretRef
 {
@@ -28,6 +28,15 @@ public partial class V1beta2OCIRepositorySpecLayerSelector
     /// <summary>Operation specifies how the selected layer should be processed. By default, the layer compressed content is extracted to storage. When the operation is set to 'copy', the layer compressed content is persisted to storage as it is.</summary>
     [JsonPropertyName("operation")]
     public string? Operation { get; set; }
+}
+
+/// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the container registry.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2OCIRepositorySpecProxySecretRef
+{
+    /// <summary>Name of the referent.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
 }
 
 /// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
@@ -103,7 +112,7 @@ public partial class V1beta2OCIRepositorySpecVerify
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2OCIRepositorySpec
 {
-    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.   Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
+    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
     [JsonPropertyName("certSecretRef")]
     public V1beta2OCIRepositorySpecCertSecretRef? CertSecretRef { get; set; }
 
@@ -126,6 +135,10 @@ public partial class V1beta2OCIRepositorySpec
     /// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
     [JsonPropertyName("provider")]
     public string? Provider { get; set; }
+
+    /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the container registry.</summary>
+    [JsonPropertyName("proxySecretRef")]
+    public V1beta2OCIRepositorySpecProxySecretRef? ProxySecretRef { get; set; }
 
     /// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
     [JsonPropertyName("ref")]
@@ -189,7 +202,7 @@ public partial class V1beta2OCIRepositoryStatusArtifact
     public string Url { get; set; }
 }
 
-/// <summary>Condition contains details for one aspect of the current state of this API Resource. --- This struct is intended for direct use as an array at the field path .status.conditions.  For example,   	type FooStatus struct{ 	    // Represents the observations of a foo's current state. 	    // Known .status.conditions.type are: "Available", "Progressing", and "Degraded" 	    // +patchMergeKey=type 	    // +patchStrategy=merge 	    // +listType=map 	    // +listMapKey=type 	    Conditions []metav1.Condition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,1,rep,name=conditions"`   	    // other fields 	}</summary>
+/// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2OCIRepositoryStatusConditions
 {
@@ -213,7 +226,7 @@ public partial class V1beta2OCIRepositoryStatusConditions
     [JsonPropertyName("status")]
     public string Status { get; set; }
 
-    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase. --- Many .condition.type values are consistent across resources like Available, but because arbitrary conditions can be useful (see .node.status.conditions), the ability to deconflict is important. The regex it matches is (dns1123SubdomainFmt/)?(qualifiedNameFmt)</summary>
+    /// <summary>type of condition in CamelCase or in foo.example.com/CamelCase.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
@@ -243,7 +256,7 @@ public partial class V1beta2OCIRepositoryStatus
     [JsonPropertyName("conditions")]
     public IList<V1beta2OCIRepositoryStatusConditions>? Conditions { get; set; }
 
-    /// <summary>ContentConfigChecksum is a checksum of all the configurations related to the content of the source artifact:  - .spec.ignore  - .spec.layerSelector observed in .status.observedGeneration version of the object. This can be used to determine if the content configuration has changed and the artifact needs to be rebuilt. It has the format of `&lt;algo&gt;:&lt;checksum&gt;`, for example: `sha256:&lt;checksum&gt;`.   Deprecated: Replaced with explicit fields for observed artifact content config in the status.</summary>
+    /// <summary>ContentConfigChecksum is a checksum of all the configurations related to the content of the source artifact:  - .spec.ignore  - .spec.layerSelector observed in .status.observedGeneration version of the object. This can be used to determine if the content configuration has changed and the artifact needs to be rebuilt. It has the format of `&lt;algo&gt;:&lt;checksum&gt;`, for example: `sha256:&lt;checksum&gt;`.  Deprecated: Replaced with explicit fields for observed artifact content config in the status.</summary>
     [JsonPropertyName("contentConfigChecksum")]
     public string? ContentConfigChecksum { get; set; }
 
