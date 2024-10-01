@@ -42,6 +42,10 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressPortsPortRange
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AdminNetworkPolicySpecEgressPorts
 {
+    /// <summary>NamedPort selects a port on a pod(s) based on name.   Support: Extended   &lt;network-policy-api:experimental&gt;</summary>
+    [JsonPropertyName("namedPort")]
+    public string? NamedPort { get; set; }
+
     /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
     [JsonPropertyName("portNumber")]
     public V1alpha1AdminNetworkPolicySpecEgressPortsPortNumber? PortNumber { get; set; }
@@ -75,6 +79,36 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressToNamespaces
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
     public IList<V1alpha1AdminNetworkPolicySpecEgressToNamespacesMatchExpressions>? MatchExpressions { get; set; }
+
+    /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+}
+
+/// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AdminNetworkPolicySpecEgressToNodesMatchExpressions
+{
+    /// <summary>key is the label key that the selector applies to.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.</summary>
+    [JsonPropertyName("operator")]
+    public string Operator { get; set; }
+
+    /// <summary>values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.</summary>
+    [JsonPropertyName("values")]
+    public IList<string>? Values { get; set; }
+}
+
+/// <summary>Nodes defines a way to select a set of nodes in the cluster. This field follows standard label selector semantics; if present but empty, it selects all Nodes.   Support: Extended   &lt;network-policy-api:experimental&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AdminNetworkPolicySpecEgressToNodes
+{
+    /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
+    [JsonPropertyName("matchExpressions")]
+    public IList<V1alpha1AdminNetworkPolicySpecEgressToNodesMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -161,6 +195,14 @@ public partial class V1alpha1AdminNetworkPolicySpecEgressTo
     /// <summary>Namespaces defines a way to select all pods within a set of Namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
     [JsonPropertyName("namespaces")]
     public V1alpha1AdminNetworkPolicySpecEgressToNamespaces? Namespaces { get; set; }
+
+    /// <summary>Networks defines a way to select peers via CIDR blocks. This is intended for representing entities that live outside the cluster, which can't be selected by pods, namespaces and nodes peers, but note that cluster-internal traffic will be checked against the rule as well. So if you Allow or Deny traffic to `"0.0.0.0/0"`, that will allow or deny all IPv4 pod-to-pod traffic as well. If you don't want that, add a rule that Passes all pod traffic before the Networks rule.   Each item in Networks should be provided in the CIDR format and should be IPv4 or IPv6, for example "10.0.0.0/8" or "fd00::/8".   Networks can have upto 25 CIDRs specified.   Support: Extended   &lt;network-policy-api:experimental&gt;</summary>
+    [JsonPropertyName("networks")]
+    public IList<string>? Networks { get; set; }
+
+    /// <summary>Nodes defines a way to select a set of nodes in the cluster. This field follows standard label selector semantics; if present but empty, it selects all Nodes.   Support: Extended   &lt;network-policy-api:experimental&gt;</summary>
+    [JsonPropertyName("nodes")]
+    public V1alpha1AdminNetworkPolicySpecEgressToNodes? Nodes { get; set; }
 
     /// <summary>Pods defines a way to select a set of pods in a set of namespaces. Note that host-networked pods are not included in this type of peer.   Support: Core</summary>
     [JsonPropertyName("pods")]
@@ -338,6 +380,10 @@ public partial class V1alpha1AdminNetworkPolicySpecIngressPortsPortRange
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AdminNetworkPolicySpecIngressPorts
 {
+    /// <summary>NamedPort selects a port on a pod(s) based on name.   Support: Extended   &lt;network-policy-api:experimental&gt;</summary>
+    [JsonPropertyName("namedPort")]
+    public string? NamedPort { get; set; }
+
     /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
     [JsonPropertyName("portNumber")]
     public V1alpha1AdminNetworkPolicySpecIngressPortsPortNumber? PortNumber { get; set; }
