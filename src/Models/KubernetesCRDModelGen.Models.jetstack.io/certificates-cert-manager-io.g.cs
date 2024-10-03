@@ -17,7 +17,7 @@ public partial class V1CertificateSpecAdditionalOutputFormats
     public string Type { get; set; }
 }
 
-/// <summary>Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.   The `name` field of the reference must always be specified.</summary>
+/// <summary>Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.  The `name` field of the reference must always be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecIssuerRef
 {
@@ -89,7 +89,7 @@ public partial class V1CertificateSpecKeystoresPkcs12
     [JsonPropertyName("passwordSecretRef")]
     public V1CertificateSpecKeystoresPkcs12PasswordSecretRef PasswordSecretRef { get; set; }
 
-    /// <summary>Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.   If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.</summary>
+    /// <summary>Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.  If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.</summary>
     [JsonPropertyName("profile")]
     public string? Profile { get; set; }
 }
@@ -149,7 +149,7 @@ public partial class V1CertificateSpecNameConstraintsPermitted
     public IList<string>? UriDomains { get; set; }
 }
 
-/// <summary>x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10   This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.</summary>
+/// <summary>x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10  This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecNameConstraints
 {
@@ -183,19 +183,19 @@ public partial class V1CertificateSpecOtherNames
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecPrivateKey
 {
-    /// <summary>Algorithm is the private key algorithm of the corresponding private key for this certificate.   If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.</summary>
+    /// <summary>Algorithm is the private key algorithm of the corresponding private key for this certificate.  If provided, allowed values are either `RSA`, `ECDSA` or `Ed25519`. If `algorithm` is specified and `size` is not provided, key size of 2048 will be used for `RSA` key algorithm and key size of 256 will be used for `ECDSA` key algorithm. key size is ignored when using the `Ed25519` key algorithm.</summary>
     [JsonPropertyName("algorithm")]
     public string? Algorithm { get; set; }
 
-    /// <summary>The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.   If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.</summary>
+    /// <summary>The private key cryptography standards (PKCS) encoding for this certificate's private key to be encoded in.  If provided, allowed values are `PKCS1` and `PKCS8` standing for PKCS#1 and PKCS#8, respectively. Defaults to `PKCS1` if not specified.</summary>
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 
-    /// <summary>RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.   If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exists but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.</summary>
+    /// <summary>RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.  If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exist but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.</summary>
     [JsonPropertyName("rotationPolicy")]
     public string? RotationPolicy { get; set; }
 
-    /// <summary>Size is the key bit size of the corresponding private key for this certificate.   If `algorithm` is set to `RSA`, valid values are `2048`, `4096` or `8192`, and will default to `2048` if not specified. If `algorithm` is set to `ECDSA`, valid values are `256`, `384` or `521`, and will default to `256` if not specified. If `algorithm` is set to `Ed25519`, Size is ignored. No other values are allowed.</summary>
+    /// <summary>Size is the key bit size of the corresponding private key for this certificate.  If `algorithm` is set to `RSA`, valid values are `2048`, `4096` or `8192`, and will default to `2048` if not specified. If `algorithm` is set to `ECDSA`, valid values are `256`, `384` or `521`, and will default to `256` if not specified. If `algorithm` is set to `Ed25519`, Size is ignored. No other values are allowed.</summary>
     [JsonPropertyName("size")]
     public int? Size { get; set; }
 }
@@ -213,7 +213,7 @@ public partial class V1CertificateSpecSecretTemplate
     public IDictionary<string, string>? Labels { get; set; }
 }
 
-/// <summary>Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6   The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.</summary>
+/// <summary>Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6  The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpecSubject
 {
@@ -254,11 +254,11 @@ public partial class V1CertificateSpecSubject
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpec
 {
-    /// <summary>Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.   This is a Beta Feature enabled by default. It can be disabled with the `--feature-gates=AdditionalCertificateOutputFormats=false` option set on both the controller and webhook components.</summary>
+    /// <summary>Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.  This is a Beta Feature enabled by default. It can be disabled with the `--feature-gates=AdditionalCertificateOutputFormats=false` option set on both the controller and webhook components.</summary>
     [JsonPropertyName("additionalOutputFormats")]
     public IList<V1CertificateSpecAdditionalOutputFormats>? AdditionalOutputFormats { get; set; }
 
-    /// <summary>Requested common name X509 certificate subject attribute. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6 NOTE: TLS clients will ignore this value when any subject alternative name is set (see https://tools.ietf.org/html/rfc6125#section-6.4.4).   Should have a length of 64 characters or fewer to avoid generating invalid CSRs. Cannot be set if the `literalSubject` field is set.</summary>
+    /// <summary>Requested common name X509 certificate subject attribute. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6 NOTE: TLS clients will ignore this value when any subject alternative name is set (see https://tools.ietf.org/html/rfc6125#section-6.4.4).  Should have a length of 64 characters or fewer to avoid generating invalid CSRs. Cannot be set if the `literalSubject` field is set.</summary>
     [JsonPropertyName("commonName")]
     public string? CommonName { get; set; }
 
@@ -266,7 +266,7 @@ public partial class V1CertificateSpec
     [JsonPropertyName("dnsNames")]
     public IList<string>? DnsNames { get; set; }
 
-    /// <summary>Requested 'duration' (i.e. lifetime) of the Certificate. Note that the issuer may choose to ignore the requested duration, just like any other requested attribute.   If unset, this defaults to 90 days. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.</summary>
+    /// <summary>Requested 'duration' (i.e. lifetime) of the Certificate. Note that the issuer may choose to ignore the requested duration, just like any other requested attribute.  If unset, this defaults to 90 days. Minimum accepted duration is 1 hour. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 
@@ -274,7 +274,7 @@ public partial class V1CertificateSpec
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 
-    /// <summary>Whether the KeyUsage and ExtKeyUsage extensions should be set in the encoded CSR.   This option defaults to true, and should only be disabled if the target issuer does not support CSRs with these X509 KeyUsage/ ExtKeyUsage extensions.</summary>
+    /// <summary>Whether the KeyUsage and ExtKeyUsage extensions should be set in the encoded CSR.  This option defaults to true, and should only be disabled if the target issuer does not support CSRs with these X509 KeyUsage/ ExtKeyUsage extensions.</summary>
     [JsonPropertyName("encodeUsagesInRequest")]
     public bool? EncodeUsagesInRequest { get; set; }
 
@@ -282,11 +282,11 @@ public partial class V1CertificateSpec
     [JsonPropertyName("ipAddresses")]
     public IList<string>? IpAddresses { get; set; }
 
-    /// <summary>Requested basic constraints isCA value. The isCA value is used to set the `isCA` field on the created CertificateRequest resources. Note that the issuer may choose to ignore the requested isCA value, just like any other requested attribute.   If true, this will automatically add the `cert sign` usage to the list of requested `usages`.</summary>
+    /// <summary>Requested basic constraints isCA value. The isCA value is used to set the `isCA` field on the created CertificateRequest resources. Note that the issuer may choose to ignore the requested isCA value, just like any other requested attribute.  If true, this will automatically add the `cert sign` usage to the list of requested `usages`.</summary>
     [JsonPropertyName("isCA")]
     public bool? IsCA { get; set; }
 
-    /// <summary>Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.   The `name` field of the reference must always be specified.</summary>
+    /// <summary>Reference to the issuer responsible for issuing the certificate. If the issuer is namespace-scoped, it must be in the same namespace as the Certificate. If the issuer is cluster-scoped, it can be used from any namespace.  The `name` field of the reference must always be specified.</summary>
     [JsonPropertyName("issuerRef")]
     public V1CertificateSpecIssuerRef IssuerRef { get; set; }
 
@@ -294,11 +294,11 @@ public partial class V1CertificateSpec
     [JsonPropertyName("keystores")]
     public V1CertificateSpecKeystores? Keystores { get; set; }
 
-    /// <summary>Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: `CN=foo,DC=corp,DC=example,DC=com` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424   Cannot be set if the `subject` or `commonName` field is set.</summary>
+    /// <summary>Requested X.509 certificate subject, represented using the LDAP "String Representation of a Distinguished Name" [1]. Important: the LDAP string format also specifies the order of the attributes in the subject, this is important when issuing certs for LDAP authentication. Example: `CN=foo,DC=corp,DC=example,DC=com` More info [1]: https://datatracker.ietf.org/doc/html/rfc4514 More info: https://github.com/cert-manager/cert-manager/issues/3203 More info: https://github.com/cert-manager/cert-manager/issues/4424  Cannot be set if the `subject` or `commonName` field is set.</summary>
     [JsonPropertyName("literalSubject")]
     public string? LiteralSubject { get; set; }
 
-    /// <summary>x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10   This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.</summary>
+    /// <summary>x.509 certificate NameConstraint extension which MUST NOT be used in a non-CA certificate. More Info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.10  This is an Alpha Feature and is only enabled with the `--feature-gates=NameConstraints=true` option set on both the controller and webhook components.</summary>
     [JsonPropertyName("nameConstraints")]
     public V1CertificateSpecNameConstraints? NameConstraints { get; set; }
 
@@ -310,11 +310,15 @@ public partial class V1CertificateSpec
     [JsonPropertyName("privateKey")]
     public V1CertificateSpecPrivateKey? PrivateKey { get; set; }
 
-    /// <summary>How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and `renewBefore=10m`, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid).   NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate.   If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration.</summary>
+    /// <summary>How long before the currently issued certificate's expiry cert-manager should renew the certificate. For example, if a certificate is valid for 60 minutes, and `renewBefore=10m`, cert-manager will begin to attempt to renew the certificate 50 minutes after it was issued (i.e. when there are 10 minutes remaining until the certificate is no longer valid).  NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate.  If unset, this defaults to 1/3 of the issued certificate's lifetime. Minimum accepted value is 5 minutes. Value must be in units accepted by Go time.ParseDuration https://golang.org/pkg/time/#ParseDuration. Cannot be set if the `renewBeforePercentage` field is set.</summary>
     [JsonPropertyName("renewBefore")]
     public string? RenewBefore { get; set; }
 
-    /// <summary>The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single `CertificateRequest` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number.   If set, revisionHistoryLimit must be a value of `1` or greater. If unset (`nil`), revisions will not be garbage collected. Default value is `nil`.</summary>
+    /// <summary>`renewBeforePercentage` is like `renewBefore`, except it is a relative percentage rather than an absolute duration. For example, if a certificate is valid for 60 minutes, and  `renewBeforePercentage=25`, cert-manager will begin to attempt to renew the certificate 45 minutes after it was issued (i.e. when there are 15 minutes (25%) remaining until the certificate is no longer valid).  NOTE: The actual lifetime of the issued certificate is used to determine the renewal time. If an issuer returns a certificate with a different lifetime than the one requested, cert-manager will use the lifetime of the issued certificate.  Value must be an integer in the range (0,100). The minimum effective `renewBefore` derived from the `renewBeforePercentage` and `duration` fields is 5 minutes. Cannot be set if the `renewBefore` field is set.</summary>
+    [JsonPropertyName("renewBeforePercentage")]
+    public int? RenewBeforePercentage { get; set; }
+
+    /// <summary>The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single `CertificateRequest` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number.  If set, revisionHistoryLimit must be a value of `1` or greater. If unset (`nil`), revisions will not be garbage collected. Default value is `nil`.</summary>
     [JsonPropertyName("revisionHistoryLimit")]
     public int? RevisionHistoryLimit { get; set; }
 
@@ -326,7 +330,7 @@ public partial class V1CertificateSpec
     [JsonPropertyName("secretTemplate")]
     public V1CertificateSpecSecretTemplate? SecretTemplate { get; set; }
 
-    /// <summary>Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6   The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.</summary>
+    /// <summary>Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6  The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.</summary>
     [JsonPropertyName("subject")]
     public V1CertificateSpecSubject? Subject { get; set; }
 
@@ -334,12 +338,12 @@ public partial class V1CertificateSpec
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
 
-    /// <summary>Requested key usages and extended key usages. These usages are used to set the `usages` field on the created CertificateRequest resources. If `encodeUsagesInRequest` is unset or set to `true`, the usages will additionally be encoded in the `request` field which contains the CSR blob.   If unset, defaults to `digital signature` and `key encipherment`.</summary>
+    /// <summary>Requested key usages and extended key usages. These usages are used to set the `usages` field on the created CertificateRequest resources. If `encodeUsagesInRequest` is unset or set to `true`, the usages will additionally be encoded in the `request` field which contains the CSR blob.  If unset, defaults to `digital signature` and `key encipherment`.</summary>
     [JsonPropertyName("usages")]
     public IList<string>? Usages { get; set; }
 }
 
-/// <summary>CertificateCondition contains condition information for an Certificate.</summary>
+/// <summary>CertificateCondition contains condition information for a Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateStatusConditions
 {
@@ -380,7 +384,7 @@ public partial class V1CertificateStatus
     [JsonPropertyName("failedIssuanceAttempts")]
     public int? FailedIssuanceAttempts { get; set; }
 
-    /// <summary>LastFailureTime is set only if the lastest issuance for this Certificate failed and contains the time of the failure. If an issuance has failed, the delay till the next issuance will be calculated using formula time.Hour * 2 ^ (failedIssuanceAttempts - 1). If the latest issuance has succeeded this field will be unset.</summary>
+    /// <summary>LastFailureTime is set only if the latest issuance for this Certificate failed and contains the time of the failure. If an issuance has failed, the delay till the next issuance will be calculated using formula time.Hour * 2 ^ (failedIssuanceAttempts - 1). If the latest issuance has succeeded this field will be unset.</summary>
     [JsonPropertyName("lastFailureTime")]
     public string? LastFailureTime { get; set; }
 
@@ -400,12 +404,12 @@ public partial class V1CertificateStatus
     [JsonPropertyName("renewalTime")]
     public string? RenewalTime { get; set; }
 
-    /// <summary>The current 'revision' of the certificate as issued.   When a CertificateRequest resource is created, it will have the `cert-manager.io/certificate-revision` set to one greater than the current value of this field.   Upon issuance, this field will be set to the value of the annotation on the CertificateRequest resource used to issue the certificate.   Persisting the value on the CertificateRequest resource allows the certificates controller to know whether a request is part of an old issuance or if it is part of the ongoing revision's issuance by checking if the revision value in the annotation is greater than this field.</summary>
+    /// <summary>The current 'revision' of the certificate as issued.  When a CertificateRequest resource is created, it will have the `cert-manager.io/certificate-revision` set to one greater than the current value of this field.  Upon issuance, this field will be set to the value of the annotation on the CertificateRequest resource used to issue the certificate.  Persisting the value on the CertificateRequest resource allows the certificates controller to know whether a request is part of an old issuance or if it is part of the ongoing revision's issuance by checking if the revision value in the annotation is greater than this field.</summary>
     [JsonPropertyName("revision")]
     public int? Revision { get; set; }
 }
 
-/// <summary>A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.   The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).</summary>
+/// <summary>A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.  The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Certificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1CertificateSpec>, IStatus<V1CertificateStatus>
