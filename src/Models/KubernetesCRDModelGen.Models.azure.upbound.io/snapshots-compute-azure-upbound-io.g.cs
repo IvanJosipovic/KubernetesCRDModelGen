@@ -171,6 +171,10 @@ public partial class V1beta1SnapshotSpecForProvider
     [JsonPropertyName("createOption")]
     public string? CreateOption { get; set; }
 
+    /// <summary>Specifies the ID of the Disk Access which should be used for this Snapshot. This is used in conjunction with setting network_access_policy to AllowPrivate.</summary>
+    [JsonPropertyName("diskAccessId")]
+    public string? DiskAccessId { get; set; }
+
     /// <summary>The size of the Snapshotted Disk in GB.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
@@ -186,6 +190,14 @@ public partial class V1beta1SnapshotSpecForProvider
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Policy for accessing the disk via network. Possible values are AllowAll, AllowPrivate, or DenyAll. Defaults to AllowAll.</summary>
+    [JsonPropertyName("networkAccessPolicy")]
+    public string? NetworkAccessPolicy { get; set; }
+
+    /// <summary>Policy for controlling export on the disk. Possible values are true or false. Defaults to true.</summary>
+    [JsonPropertyName("publicNetworkAccessEnabled")]
+    public bool? PublicNetworkAccessEnabled { get; set; }
 
     /// <summary>The name of the resource group in which to create the Snapshot. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
@@ -331,6 +343,10 @@ public partial class V1beta1SnapshotSpecInitProvider
     [JsonPropertyName("createOption")]
     public string? CreateOption { get; set; }
 
+    /// <summary>Specifies the ID of the Disk Access which should be used for this Snapshot. This is used in conjunction with setting network_access_policy to AllowPrivate.</summary>
+    [JsonPropertyName("diskAccessId")]
+    public string? DiskAccessId { get; set; }
+
     /// <summary>The size of the Snapshotted Disk in GB.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
@@ -346,6 +362,14 @@ public partial class V1beta1SnapshotSpecInitProvider
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Policy for accessing the disk via network. Possible values are AllowAll, AllowPrivate, or DenyAll. Defaults to AllowAll.</summary>
+    [JsonPropertyName("networkAccessPolicy")]
+    public string? NetworkAccessPolicy { get; set; }
+
+    /// <summary>Policy for controlling export on the disk. Possible values are true or false. Defaults to true.</summary>
+    [JsonPropertyName("publicNetworkAccessEnabled")]
+    public bool? PublicNetworkAccessEnabled { get; set; }
 
     /// <summary>Specifies a reference to an existing snapshot, when create_option is Copy. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sourceResourceId")]
@@ -555,6 +579,10 @@ public partial class V1beta1SnapshotStatusAtProvider
     [JsonPropertyName("createOption")]
     public string? CreateOption { get; set; }
 
+    /// <summary>Specifies the ID of the Disk Access which should be used for this Snapshot. This is used in conjunction with setting network_access_policy to AllowPrivate.</summary>
+    [JsonPropertyName("diskAccessId")]
+    public string? DiskAccessId { get; set; }
+
     /// <summary>The size of the Snapshotted Disk in GB.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
@@ -574,6 +602,14 @@ public partial class V1beta1SnapshotStatusAtProvider
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Policy for accessing the disk via network. Possible values are AllowAll, AllowPrivate, or DenyAll. Defaults to AllowAll.</summary>
+    [JsonPropertyName("networkAccessPolicy")]
+    public string? NetworkAccessPolicy { get; set; }
+
+    /// <summary>Policy for controlling export on the disk. Possible values are true or false. Defaults to true.</summary>
+    [JsonPropertyName("publicNetworkAccessEnabled")]
+    public bool? PublicNetworkAccessEnabled { get; set; }
 
     /// <summary>The name of the resource group in which to create the Snapshot. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

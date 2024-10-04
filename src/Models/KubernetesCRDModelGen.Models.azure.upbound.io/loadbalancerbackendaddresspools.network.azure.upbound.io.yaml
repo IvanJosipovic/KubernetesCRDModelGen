@@ -173,21 +173,24 @@ spec:
                             type: string
                         type: object
                     type: object
+                  synchronousMode:
+                    description: The backend address synchronous mode for the Backend Address Pool. Possible values are Automatic and Manual. This is required with virtual_network_id. Changing this forces a new resource to be created.
+                    type: string
                   tunnelInterface:
                     description: One or more tunnel_interface blocks as defined below.
                     items:
                       properties:
                         identifier:
-                          description: The unique identifier of this Gateway Lodbalancer Tunnel Interface.
+                          description: The unique identifier of this Gateway Load Balancer Tunnel Interface.
                           type: number
                         port:
-                          description: The port number that this Gateway Lodbalancer Tunnel Interface listens to.
+                          description: The port number that this Gateway Load Balancer Tunnel Interface listens to.
                           type: number
                         protocol:
-                          description: The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.
+                          description: The protocol used for this Gateway Load Balancer Tunnel Interface. Possible values are None, Native and VXLAN.
                           type: string
                         type:
-                          description: The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.
+                          description: The traffic type of this Gateway Load Balancer Tunnel Interface. Possible values are None, Internal and External.
                           type: string
                       type: object
                     type: array
@@ -217,21 +220,24 @@ spec:
 
                   autoscaler.
                 properties:
+                  synchronousMode:
+                    description: The backend address synchronous mode for the Backend Address Pool. Possible values are Automatic and Manual. This is required with virtual_network_id. Changing this forces a new resource to be created.
+                    type: string
                   tunnelInterface:
                     description: One or more tunnel_interface blocks as defined below.
                     items:
                       properties:
                         identifier:
-                          description: The unique identifier of this Gateway Lodbalancer Tunnel Interface.
+                          description: The unique identifier of this Gateway Load Balancer Tunnel Interface.
                           type: number
                         port:
-                          description: The port number that this Gateway Lodbalancer Tunnel Interface listens to.
+                          description: The port number that this Gateway Load Balancer Tunnel Interface listens to.
                           type: number
                         protocol:
-                          description: The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.
+                          description: The protocol used for this Gateway Load Balancer Tunnel Interface. Possible values are None, Native and VXLAN.
                           type: string
                         type:
-                          description: The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.
+                          description: The traffic type of this Gateway Load Balancer Tunnel Interface. Possible values are None, Internal and External.
                           type: string
                       type: object
                     type: array
@@ -478,21 +484,24 @@ spec:
                     items:
                       type: string
                     type: array
+                  synchronousMode:
+                    description: The backend address synchronous mode for the Backend Address Pool. Possible values are Automatic and Manual. This is required with virtual_network_id. Changing this forces a new resource to be created.
+                    type: string
                   tunnelInterface:
                     description: One or more tunnel_interface blocks as defined below.
                     items:
                       properties:
                         identifier:
-                          description: The unique identifier of this Gateway Lodbalancer Tunnel Interface.
+                          description: The unique identifier of this Gateway Load Balancer Tunnel Interface.
                           type: number
                         port:
-                          description: The port number that this Gateway Lodbalancer Tunnel Interface listens to.
+                          description: The port number that this Gateway Load Balancer Tunnel Interface listens to.
                           type: number
                         protocol:
-                          description: The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.
+                          description: The protocol used for this Gateway Load Balancer Tunnel Interface. Possible values are None, Native and VXLAN.
                           type: string
                         type:
-                          description: The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.
+                          description: The traffic type of this Gateway Load Balancer Tunnel Interface. Possible values are None, Internal and External.
                           type: string
                       type: object
                     type: array

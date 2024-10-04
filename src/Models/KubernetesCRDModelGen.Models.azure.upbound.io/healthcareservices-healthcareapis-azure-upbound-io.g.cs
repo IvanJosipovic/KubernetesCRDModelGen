@@ -50,6 +50,15 @@ public partial class V1beta1HealthcareServiceSpecForProviderCorsConfiguration
     public double? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary>An identity block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareServiceSpecForProviderIdentity
+{
+    /// <summary>The type of managed identity to assign. The only possible value is SystemAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderResourceGroupNameRefPolicy
@@ -118,6 +127,10 @@ public partial class V1beta1HealthcareServiceSpecForProvider
     [JsonPropertyName("authenticationConfiguration")]
     public IList<V1beta1HealthcareServiceSpecForProviderAuthenticationConfiguration>? AuthenticationConfiguration { get; set; }
 
+    /// <summary>Specifies the name of the storage account which the operation configuration information is exported to.</summary>
+    [JsonPropertyName("configurationExportStorageAccountName")]
+    public string? ConfigurationExportStorageAccountName { get; set; }
+
     /// <summary>A cors_configuration block as defined below.</summary>
     [JsonPropertyName("corsConfiguration")]
     public IList<V1beta1HealthcareServiceSpecForProviderCorsConfiguration>? CorsConfiguration { get; set; }
@@ -129,6 +142,10 @@ public partial class V1beta1HealthcareServiceSpecForProvider
     /// <summary>The provisioned throughput for the backing database. Range of 400-100000. Defaults to 1000.</summary>
     [JsonPropertyName("cosmosdbThroughput")]
     public double? CosmosdbThroughput { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1HealthcareServiceSpecForProviderIdentity? Identity { get; set; }
 
     /// <summary>The type of the service. Values at time of publication are: fhir, fhir-Stu3 and fhir-R4. Default value is fhir.</summary>
     [JsonPropertyName("kind")]
@@ -201,6 +218,15 @@ public partial class V1beta1HealthcareServiceSpecInitProviderCorsConfiguration
     public double? MaxAgeInSeconds { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareServiceSpecInitProviderIdentity
+{
+    /// <summary>The type of managed identity to assign. The only possible value is SystemAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecInitProvider
@@ -213,6 +239,10 @@ public partial class V1beta1HealthcareServiceSpecInitProvider
     [JsonPropertyName("authenticationConfiguration")]
     public IList<V1beta1HealthcareServiceSpecInitProviderAuthenticationConfiguration>? AuthenticationConfiguration { get; set; }
 
+    /// <summary>Specifies the name of the storage account which the operation configuration information is exported to.</summary>
+    [JsonPropertyName("configurationExportStorageAccountName")]
+    public string? ConfigurationExportStorageAccountName { get; set; }
+
     /// <summary>A cors_configuration block as defined below.</summary>
     [JsonPropertyName("corsConfiguration")]
     public IList<V1beta1HealthcareServiceSpecInitProviderCorsConfiguration>? CorsConfiguration { get; set; }
@@ -224,6 +254,10 @@ public partial class V1beta1HealthcareServiceSpecInitProvider
     /// <summary>The provisioned throughput for the backing database. Range of 400-100000. Defaults to 1000.</summary>
     [JsonPropertyName("cosmosdbThroughput")]
     public double? CosmosdbThroughput { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1HealthcareServiceSpecInitProviderIdentity>? Identity { get; set; }
 
     /// <summary>The type of the service. Values at time of publication are: fhir, fhir-Stu3 and fhir-R4. Default value is fhir.</summary>
     [JsonPropertyName("kind")]
@@ -418,6 +452,23 @@ public partial class V1beta1HealthcareServiceStatusAtProviderCorsConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareServiceStatusAtProviderIdentity
+{
+    /// <summary>The ID of the Healthcare Service.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The ID of the Healthcare Service.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+
+    /// <summary>The type of managed identity to assign. The only possible value is SystemAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceStatusAtProvider
 {
     /// <summary>A set of Azure object IDs that are allowed to access the Service.</summary>
@@ -427,6 +478,10 @@ public partial class V1beta1HealthcareServiceStatusAtProvider
     /// <summary>An authentication_configuration block as defined below.</summary>
     [JsonPropertyName("authenticationConfiguration")]
     public IList<V1beta1HealthcareServiceStatusAtProviderAuthenticationConfiguration>? AuthenticationConfiguration { get; set; }
+
+    /// <summary>Specifies the name of the storage account which the operation configuration information is exported to.</summary>
+    [JsonPropertyName("configurationExportStorageAccountName")]
+    public string? ConfigurationExportStorageAccountName { get; set; }
 
     /// <summary>A cors_configuration block as defined below.</summary>
     [JsonPropertyName("corsConfiguration")]
@@ -443,6 +498,10 @@ public partial class V1beta1HealthcareServiceStatusAtProvider
     /// <summary>The ID of the Healthcare Service.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1HealthcareServiceStatusAtProviderIdentity>? Identity { get; set; }
 
     /// <summary>The type of the service. Values at time of publication are: fhir, fhir-Stu3 and fhir-R4. Default value is fhir.</summary>
     [JsonPropertyName("kind")]

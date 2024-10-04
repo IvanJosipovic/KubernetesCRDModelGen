@@ -196,6 +196,9 @@ spec:
                               days:
                                 description: Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.
                                 type: number
+                              permanentDeleteEnabled:
+                                description: Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.
+                                type: boolean
                             type: object
                           type: array
                         lastAccessTimeEnabled:
@@ -235,7 +238,10 @@ spec:
                     items:
                       properties:
                         keyVaultKeyId:
-                          description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.
+                          description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
+                          type: string
+                        managedHsmKeyId:
+                          description: The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
                           type: string
                         userAssignedIdentityId:
                           description: The ID of a user assigned identity.
@@ -245,6 +251,9 @@ spec:
                   defaultToOauthAuthentication:
                     description: Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. The default value is false
                     type: boolean
+                  dnsEndpointType:
+                    description: Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.
+                    type: string
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
@@ -800,6 +809,9 @@ spec:
                               days:
                                 description: Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.
                                 type: number
+                              permanentDeleteEnabled:
+                                description: Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.
+                                type: boolean
                             type: object
                           type: array
                         lastAccessTimeEnabled:
@@ -839,7 +851,10 @@ spec:
                     items:
                       properties:
                         keyVaultKeyId:
-                          description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.
+                          description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
+                          type: string
+                        managedHsmKeyId:
+                          description: The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
                           type: string
                         userAssignedIdentityId:
                           description: The ID of a user assigned identity.
@@ -849,6 +864,9 @@ spec:
                   defaultToOauthAuthentication:
                     description: Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. The default value is false
                     type: boolean
+                  dnsEndpointType:
+                    description: Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.
+                    type: string
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
@@ -1513,6 +1531,9 @@ spec:
                               days:
                                 description: Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.
                                 type: number
+                              permanentDeleteEnabled:
+                                description: Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.
+                                type: boolean
                             type: object
                           type: array
                         lastAccessTimeEnabled:
@@ -1552,7 +1573,10 @@ spec:
                     items:
                       properties:
                         keyVaultKeyId:
-                          description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.
+                          description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
+                          type: string
+                        managedHsmKeyId:
+                          description: The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
                           type: string
                         userAssignedIdentityId:
                           description: The ID of a user assigned identity.
@@ -1562,6 +1586,9 @@ spec:
                   defaultToOauthAuthentication:
                     description: Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. The default value is false
                     type: boolean
+                  dnsEndpointType:
+                    description: Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.
+                    type: string
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
@@ -2341,6 +2368,9 @@ spec:
                           days:
                             description: Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.
                             type: number
+                          permanentDeleteEnabled:
+                            description: Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.
+                            type: boolean
                         type: object
                       lastAccessTimeEnabled:
                         description: Is the last access time based tracking enabled? Default to false.
@@ -2373,7 +2403,10 @@ spec:
                     description: A customer_managed_key block as documented below.
                     properties:
                       keyVaultKeyId:
-                        description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.
+                        description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
+                        type: string
+                      managedHsmKeyId:
+                        description: The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
                         type: string
                       userAssignedIdentityId:
                         description: The ID of a user assigned identity.
@@ -2382,6 +2415,9 @@ spec:
                   defaultToOauthAuthentication:
                     description: Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. The default value is false
                     type: boolean
+                  dnsEndpointType:
+                    description: Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.
+                    type: string
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
@@ -2903,6 +2939,9 @@ spec:
                           days:
                             description: Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.
                             type: number
+                          permanentDeleteEnabled:
+                            description: Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.
+                            type: boolean
                         type: object
                       lastAccessTimeEnabled:
                         description: Is the last access time based tracking enabled? Default to false.
@@ -2935,7 +2974,10 @@ spec:
                     description: A customer_managed_key block as documented below.
                     properties:
                       keyVaultKeyId:
-                        description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.
+                        description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
+                        type: string
+                      managedHsmKeyId:
+                        description: The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
                         type: string
                       userAssignedIdentityId:
                         description: The ID of a user assigned identity.
@@ -2944,6 +2986,9 @@ spec:
                   defaultToOauthAuthentication:
                     description: Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. The default value is false
                     type: boolean
+                  dnsEndpointType:
+                    description: Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.
+                    type: string
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
@@ -3574,6 +3619,9 @@ spec:
                           days:
                             description: Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.
                             type: number
+                          permanentDeleteEnabled:
+                            description: Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.
+                            type: boolean
                         type: object
                       lastAccessTimeEnabled:
                         description: Is the last access time based tracking enabled? Default to false.
@@ -3606,7 +3654,10 @@ spec:
                     description: A customer_managed_key block as documented below.
                     properties:
                       keyVaultKeyId:
-                        description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.
+                        description: The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
+                        type: string
+                      managedHsmKeyId:
+                        description: The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.
                         type: string
                       userAssignedIdentityId:
                         description: The ID of a user assigned identity.
@@ -3615,6 +3666,9 @@ spec:
                   defaultToOauthAuthentication:
                     description: Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. The default value is false
                     type: boolean
+                  dnsEndpointType:
+                    description: Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.
+                    type: string
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string

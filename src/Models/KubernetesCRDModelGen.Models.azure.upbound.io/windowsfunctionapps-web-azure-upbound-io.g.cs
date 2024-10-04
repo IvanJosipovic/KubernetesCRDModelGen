@@ -1660,6 +1660,23 @@ public partial class V1beta1WindowsFunctionAppSpecForProvider
     public string? ZipDeployFile { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsActiveDirectoryClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsActiveDirectory
@@ -1672,9 +1689,30 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsActive
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsActiveDirectoryClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
+}
+
+/// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsFacebookAppSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1685,6 +1723,10 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsFacebo
     [JsonPropertyName("appId")]
     public string? AppId { get; set; }
 
+    /// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
+    [JsonPropertyName("appSecretSecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsFacebookAppSecretSecretRef? AppSecretSecretRef { get; set; }
+
     /// <summary>The app setting name that contains the app_secret value used for Facebook Login. The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.</summary>
     [JsonPropertyName("appSecretSettingName")]
     public string? AppSecretSettingName { get; set; }
@@ -1692,6 +1734,23 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsFacebo
     /// <summary>Specifies a list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, wl.basic is used as the default scope. Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.</summary>
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
+}
+
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGithubClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1702,6 +1761,10 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGithub
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGithubClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
@@ -1709,6 +1772,23 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGithub
     /// <summary>Specifies a list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, wl.basic is used as the default scope. Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.</summary>
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
+}
+
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGoogleClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1719,6 +1799,10 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGoogle
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGoogleClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
@@ -1726,6 +1810,23 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsGoogle
     /// <summary>Specifies a list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, wl.basic is used as the default scope. Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.</summary>
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
+}
+
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsMicrosoftClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1736,6 +1837,10 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsMicros
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsMicrosoftClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
@@ -1745,6 +1850,23 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsMicros
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsTwitterConsumerSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsTwitter
@@ -1752,6 +1874,10 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsTwitte
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
     [JsonPropertyName("consumerKey")]
     public string? ConsumerKey { get; set; }
+
+    /// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
+    [JsonPropertyName("consumerSecretSecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderAuthSettingsTwitterConsumerSecretSecretRef? ConsumerSecretSecretRef { get; set; }
 
     /// <summary>The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.</summary>
     [JsonPropertyName("consumerSecretSettingName")]
@@ -2295,6 +2421,40 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigAppServi
     public double? RetentionPeriodDays { get; set; }
 }
 
+/// <summary>The Connection String for linking the Windows Function App to Application Insights. The Connection String for linking the Windows Function App to Application Insights.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicationInsightsConnectionStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The Instrumentation Key for connecting the Windows Function App to Application Insights. The Instrumentation Key for connecting the Windows Function App to Application Insights.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicationInsightsKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicationStack
@@ -2609,6 +2769,14 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderSiteConfig
     [JsonPropertyName("appServiceLogs")]
     public IList<V1beta1WindowsFunctionAppSpecInitProviderSiteConfigAppServiceLogs>? AppServiceLogs { get; set; }
 
+    /// <summary>The Connection String for linking the Windows Function App to Application Insights. The Connection String for linking the Windows Function App to Application Insights.</summary>
+    [JsonPropertyName("applicationInsightsConnectionStringSecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicationInsightsConnectionStringSecretRef? ApplicationInsightsConnectionStringSecretRef { get; set; }
+
+    /// <summary>The Instrumentation Key for connecting the Windows Function App to Application Insights. The Instrumentation Key for connecting the Windows Function App to Application Insights.</summary>
+    [JsonPropertyName("applicationInsightsKeySecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicationInsightsKeySecretRef? ApplicationInsightsKeySecretRef { get; set; }
+
     /// <summary>An application_stack block as defined above.</summary>
     [JsonPropertyName("applicationStack")]
     public IList<V1beta1WindowsFunctionAppSpecInitProviderSiteConfigApplicationStack>? ApplicationStack { get; set; }
@@ -2746,6 +2914,23 @@ public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccount
     /// <summary>The Azure Storage Type. Possible values include AzureFiles.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary>The access key which will be used to access the backend storage account for the Function App. Conflicts with storage_uses_managed_identity. The access key which will be used to access the storage account for the Function App.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSpecInitProviderStorageAccountAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -2963,6 +3148,10 @@ public partial class V1beta1WindowsFunctionAppSpecInitProvider
     /// <summary>One or more storage_account blocks as defined below.</summary>
     [JsonPropertyName("storageAccount")]
     public IList<V1beta1WindowsFunctionAppSpecInitProviderStorageAccount>? StorageAccount { get; set; }
+
+    /// <summary>The access key which will be used to access the backend storage account for the Function App. Conflicts with storage_uses_managed_identity. The access key which will be used to access the storage account for the Function App.</summary>
+    [JsonPropertyName("storageAccountAccessKeySecretRef")]
+    public V1beta1WindowsFunctionAppSpecInitProviderStorageAccountAccessKeySecretRef? StorageAccountAccessKeySecretRef { get; set; }
 
     /// <summary>The backend storage account name which will be used by this Function App. The backend storage account name which will be used by this Function App.</summary>
     [JsonPropertyName("storageAccountName")]

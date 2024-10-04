@@ -278,6 +278,9 @@ spec:
                   ipConnectEnabled:
                     description: Is IP Connect feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
+                  kerberosEnabled:
+                    description: Is Kerberos authentication feature enabled for the Bastion Host. Defaults to false.
+                    type: boolean
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Review Azure Bastion Host FAQ for supported locations.
                     type: string
@@ -377,7 +380,7 @@ spec:
                     description: Is Shareable Link feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
                   sku:
-                    description: The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic.
+                    description: The SKU of the Bastion Host. Accepted values are Developer, Basic and Standard. Defaults to Basic.
                     type: string
                   tags:
                     additionalProperties:
@@ -388,6 +391,9 @@ spec:
                   tunnelingEnabled:
                     description: Is Tunneling feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
+                  virtualNetworkId:
+                    description: The ID of the Virtual Network for the Developer Bastion Host. Changing this forces a new resource to be created.
+                    type: string
                 type: object
               initProvider:
                 description: >-
@@ -605,6 +611,9 @@ spec:
                   ipConnectEnabled:
                     description: Is IP Connect feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
+                  kerberosEnabled:
+                    description: Is Kerberos authentication feature enabled for the Bastion Host. Defaults to false.
+                    type: boolean
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Review Azure Bastion Host FAQ for supported locations.
                     type: string
@@ -615,7 +624,7 @@ spec:
                     description: Is Shareable Link feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
                   sku:
-                    description: The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic.
+                    description: The SKU of the Bastion Host. Accepted values are Developer, Basic and Standard. Defaults to Basic.
                     type: string
                   tags:
                     additionalProperties:
@@ -626,6 +635,9 @@ spec:
                   tunnelingEnabled:
                     description: Is Tunneling feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
+                  virtualNetworkId:
+                    description: The ID of the Virtual Network for the Developer Bastion Host. Changing this forces a new resource to be created.
+                    type: string
                 type: object
               managementPolicies:
                 default:
@@ -836,8 +848,6 @@ spec:
             - forProvider
             type: object
             x-kubernetes-validations:
-            - message: spec.forProvider.ipConfiguration is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.ipConfiguration) || (has(self.initProvider) && has(self.initProvider.ipConfiguration))"
             - message: spec.forProvider.location is a required parameter
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.location) || (has(self.initProvider) && has(self.initProvider.location))"
           status:
@@ -873,6 +883,9 @@ spec:
                   ipConnectEnabled:
                     description: Is IP Connect feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
+                  kerberosEnabled:
+                    description: Is Kerberos authentication feature enabled for the Bastion Host. Defaults to false.
+                    type: boolean
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Review Azure Bastion Host FAQ for supported locations.
                     type: string
@@ -886,7 +899,7 @@ spec:
                     description: Is Shareable Link feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
                   sku:
-                    description: The SKU of the Bastion Host. Accepted values are Basic and Standard. Defaults to Basic.
+                    description: The SKU of the Bastion Host. Accepted values are Developer, Basic and Standard. Defaults to Basic.
                     type: string
                   tags:
                     additionalProperties:
@@ -897,6 +910,9 @@ spec:
                   tunnelingEnabled:
                     description: Is Tunneling feature enabled for the Bastion Host. Defaults to false.
                     type: boolean
+                  virtualNetworkId:
+                    description: The ID of the Virtual Network for the Developer Bastion Host. Changing this forces a new resource to be created.
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

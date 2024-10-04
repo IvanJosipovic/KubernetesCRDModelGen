@@ -287,6 +287,112 @@ public partial class V1beta1HBaseClusterSpecForProviderNetwork
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfiguration
+{
+    /// <summary>The name of the script action.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Indicates whether this IP configuration is primary.</summary>
+    [JsonPropertyName("primary")]
+    public bool? Primary { get; set; }
+
+    /// <summary>The private IP address of the IP configuration.</summary>
+    [JsonPropertyName("privateIpAddress")]
+    public string? PrivateIpAddress { get; set; }
+
+    /// <summary>The private IP allocation method. The only possible value now is Dynamic.</summary>
+    [JsonPropertyName("privateIpAllocationMethod")]
+    public string? PrivateIpAllocationMethod { get; set; }
+
+    /// <summary>The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecForProviderPrivateLinkConfiguration
+{
+    /// <summary>The ID of the private link service group.</summary>
+    [JsonPropertyName("groupId")]
+    public string? GroupId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ipConfiguration")]
+    public IList<V1beta1HBaseClusterSpecForProviderPrivateLinkConfigurationIpConfiguration>? IpConfiguration { get; set; }
+
+    /// <summary>The name of the private link configuration.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HBaseClusterSpecForProviderResourceGroupNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1015,6 +1121,10 @@ public partial class V1beta1HBaseClusterSpecForProvider
     [JsonPropertyName("network")]
     public IList<V1beta1HBaseClusterSpecForProviderNetwork>? Network { get; set; }
 
+    /// <summary>A private_link_configuration block as defined below.</summary>
+    [JsonPropertyName("privateLinkConfiguration")]
+    public IList<V1beta1HBaseClusterSpecForProviderPrivateLinkConfiguration>? PrivateLinkConfiguration { get; set; }
+
     /// <summary>Specifies the name of the Resource Group in which this HDInsight HBase Cluster should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
@@ -1207,6 +1317,129 @@ public partial class V1beta1HBaseClusterSpecInitProviderNetwork
     public bool? PrivateLinkEnabled { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfiguration
+{
+    /// <summary>The name of the script action.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Indicates whether this IP configuration is primary.</summary>
+    [JsonPropertyName("primary")]
+    public bool? Primary { get; set; }
+
+    /// <summary>The private IP address of the IP configuration.</summary>
+    [JsonPropertyName("privateIpAddress")]
+    public string? PrivateIpAddress { get; set; }
+
+    /// <summary>The private IP allocation method. The only possible value now is Dynamic.</summary>
+    [JsonPropertyName("privateIpAllocationMethod")]
+    public string? PrivateIpAllocationMethod { get; set; }
+
+    /// <summary>The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfigurationSubnetIdSelector? SubnetIdSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderPrivateLinkConfiguration
+{
+    /// <summary>The ID of the private link service group.</summary>
+    [JsonPropertyName("groupId")]
+    public string? GroupId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ipConfiguration")]
+    public IList<V1beta1HBaseClusterSpecInitProviderPrivateLinkConfigurationIpConfiguration>? IpConfiguration { get; set; }
+
+    /// <summary>The name of the private link configuration.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderRolesHeadNodePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HBaseClusterSpecInitProviderRolesHeadNodeScriptActions
@@ -1284,6 +1517,10 @@ public partial class V1beta1HBaseClusterSpecInitProviderRolesHeadNodeSubnetIdSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HBaseClusterSpecInitProviderRolesHeadNode
 {
+    /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1HBaseClusterSpecInitProviderRolesHeadNodePasswordSecretRef? PasswordSecretRef { get; set; }
+
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1HBaseClusterSpecInitProviderRolesHeadNodeScriptActions>? ScriptActions { get; set; }
@@ -1354,6 +1591,23 @@ public partial class V1beta1HBaseClusterSpecInitProviderRolesWorkerNodeAutoscale
     /// <summary>A recurrence block as defined below.</summary>
     [JsonPropertyName("recurrence")]
     public IList<V1beta1HBaseClusterSpecInitProviderRolesWorkerNodeAutoscaleRecurrence>? Recurrence { get; set; }
+}
+
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderRolesWorkerNodePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1437,6 +1691,10 @@ public partial class V1beta1HBaseClusterSpecInitProviderRolesWorkerNode
     [JsonPropertyName("autoscale")]
     public IList<V1beta1HBaseClusterSpecInitProviderRolesWorkerNodeAutoscale>? Autoscale { get; set; }
 
+    /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1HBaseClusterSpecInitProviderRolesWorkerNodePasswordSecretRef? PasswordSecretRef { get; set; }
+
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1HBaseClusterSpecInitProviderRolesWorkerNodeScriptActions>? ScriptActions { get; set; }
@@ -1472,6 +1730,23 @@ public partial class V1beta1HBaseClusterSpecInitProviderRolesWorkerNode
     /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
+}
+
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterSpecInitProviderRolesZookeeperNodePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1551,6 +1826,10 @@ public partial class V1beta1HBaseClusterSpecInitProviderRolesZookeeperNodeSubnet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HBaseClusterSpecInitProviderRolesZookeeperNode
 {
+    /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1HBaseClusterSpecInitProviderRolesZookeeperNodePasswordSecretRef? PasswordSecretRef { get; set; }
+
     /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined above.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1HBaseClusterSpecInitProviderRolesZookeeperNodeScriptActions>? ScriptActions { get; set; }
@@ -1775,6 +2054,10 @@ public partial class V1beta1HBaseClusterSpecInitProvider
     /// <summary>A network block as defined below.</summary>
     [JsonPropertyName("network")]
     public IList<V1beta1HBaseClusterSpecInitProviderNetwork>? Network { get; set; }
+
+    /// <summary>A private_link_configuration block as defined below.</summary>
+    [JsonPropertyName("privateLinkConfiguration")]
+    public IList<V1beta1HBaseClusterSpecInitProviderPrivateLinkConfiguration>? PrivateLinkConfiguration { get; set; }
 
     /// <summary>A roles block as defined below.</summary>
     [JsonPropertyName("roles")]
@@ -2086,6 +2369,48 @@ public partial class V1beta1HBaseClusterStatusAtProviderNetwork
     /// <summary>Is the private link enabled? Possible values include true or false. Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("privateLinkEnabled")]
     public bool? PrivateLinkEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterStatusAtProviderPrivateLinkConfigurationIpConfiguration
+{
+    /// <summary>The name of the script action.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Indicates whether this IP configuration is primary.</summary>
+    [JsonPropertyName("primary")]
+    public bool? Primary { get; set; }
+
+    /// <summary>The private IP address of the IP configuration.</summary>
+    [JsonPropertyName("privateIpAddress")]
+    public string? PrivateIpAddress { get; set; }
+
+    /// <summary>The private IP allocation method. The only possible value now is Dynamic.</summary>
+    [JsonPropertyName("privateIpAllocationMethod")]
+    public string? PrivateIpAllocationMethod { get; set; }
+
+    /// <summary>The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HBaseClusterStatusAtProviderPrivateLinkConfiguration
+{
+    /// <summary>The ID of the private link service group.</summary>
+    [JsonPropertyName("groupId")]
+    public string? GroupId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ipConfiguration")]
+    public IList<V1beta1HBaseClusterStatusAtProviderPrivateLinkConfigurationIpConfiguration>? IpConfiguration { get; set; }
+
+    /// <summary>The name of the private link configuration.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 }
 
 /// <summary></summary>
@@ -2408,6 +2733,10 @@ public partial class V1beta1HBaseClusterStatusAtProvider
     /// <summary>A network block as defined below.</summary>
     [JsonPropertyName("network")]
     public IList<V1beta1HBaseClusterStatusAtProviderNetwork>? Network { get; set; }
+
+    /// <summary>A private_link_configuration block as defined below.</summary>
+    [JsonPropertyName("privateLinkConfiguration")]
+    public IList<V1beta1HBaseClusterStatusAtProviderPrivateLinkConfiguration>? PrivateLinkConfiguration { get; set; }
 
     /// <summary>Specifies the name of the Resource Group in which this HDInsight HBase Cluster should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

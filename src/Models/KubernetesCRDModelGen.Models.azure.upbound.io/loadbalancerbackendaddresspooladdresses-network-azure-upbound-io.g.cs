@@ -144,7 +144,7 @@ public partial class V1beta1LoadBalancerBackendAddressPoolAddressSpecForProvider
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist. For regional load balancer, user needs to specify `virtual_network_id` and `ip_address`</summary>
+    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
@@ -225,7 +225,7 @@ public partial class V1beta1LoadBalancerBackendAddressPoolAddressSpecInitProvide
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist. For regional load balancer, user needs to specify `virtual_network_id` and `ip_address`</summary>
+    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
@@ -411,7 +411,7 @@ public partial class V1beta1LoadBalancerBackendAddressPoolAddressStatusAtProvide
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist. For regional load balancer, user needs to specify `virtual_network_id` and `ip_address`</summary>
+    /// <summary>The ID of the Virtual Network within which the Backend Address Pool should exist.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 }

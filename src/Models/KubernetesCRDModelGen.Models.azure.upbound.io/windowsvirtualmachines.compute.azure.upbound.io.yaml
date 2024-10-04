@@ -88,6 +88,9 @@ spec:
                     description: A additional_capabilities block as defined below.
                     items:
                       properties:
+                        hibernationEnabled:
+                          description: Whether to enable the hibernation capability or not.
+                          type: boolean
                         ultraSsdEnabled:
                           description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                           type: boolean
@@ -650,6 +653,9 @@ spec:
                     description: A additional_capabilities block as defined below.
                     items:
                       properties:
+                        hibernationEnabled:
+                          description: Whether to enable the hibernation capability or not.
+                          type: boolean
                         ultraSsdEnabled:
                           description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                           type: boolean
@@ -691,6 +697,23 @@ spec:
                   computerName:
                     description: Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the name field. If the value of the name field is not a valid computer_name, then you must specify computer_name. Changing this forces a new resource to be created.
                     type: string
+                  customDataSecretRef:
+                    description: The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   dedicatedHostGroupId:
                     description: The ID of a Dedicated Host Group that this Windows Virtual Machine should be run within. Conflicts with dedicated_host_id.
                     type: string
@@ -1272,6 +1295,9 @@ spec:
                     description: A additional_capabilities block as defined below.
                     items:
                       properties:
+                        hibernationEnabled:
+                          description: Whether to enable the hibernation capability or not.
+                          type: boolean
                         ultraSsdEnabled:
                           description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                           type: boolean
@@ -1744,6 +1770,9 @@ spec:
                   additionalCapabilities:
                     description: A additional_capabilities block as defined below.
                     properties:
+                      hibernationEnabled:
+                        description: Whether to enable the hibernation capability or not.
+                        type: boolean
                       ultraSsdEnabled:
                         description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                         type: boolean
@@ -1868,7 +1897,7 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value.
@@ -1885,7 +1914,7 @@ spec:
                     description: Should the VM be patched without requiring a reboot? Possible values are true or false. Defaults to false. For more information about hot patching please see the product documentation.
                     type: boolean
                   identity:
-                    description: An identity block as defined below.
+                    description: An identity block as documented below.
                     properties:
                       identityIds:
                         description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine.
@@ -2286,6 +2315,9 @@ spec:
                   additionalCapabilities:
                     description: A additional_capabilities block as defined below.
                     properties:
+                      hibernationEnabled:
+                        description: Whether to enable the hibernation capability or not.
+                        type: boolean
                       ultraSsdEnabled:
                         description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                         type: boolean
@@ -2412,7 +2444,7 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value.
@@ -2429,7 +2461,7 @@ spec:
                     description: Should the VM be patched without requiring a reboot? Possible values are true or false. Defaults to false. For more information about hot patching please see the product documentation.
                     type: boolean
                   identity:
-                    description: An identity block as defined below.
+                    description: An identity block as documented below.
                     properties:
                       identityIds:
                         description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine.
@@ -2945,6 +2977,9 @@ spec:
                   additionalCapabilities:
                     description: A additional_capabilities block as defined below.
                     properties:
+                      hibernationEnabled:
+                        description: Whether to enable the hibernation capability or not.
+                        type: boolean
                       ultraSsdEnabled:
                         description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                         type: boolean
@@ -3018,7 +3053,7 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value.
@@ -3038,7 +3073,7 @@ spec:
                     description: The ID of the Windows Virtual Machine.
                     type: string
                   identity:
-                    description: An identity block as defined below.
+                    description: An identity block as documented below.
                     properties:
                       identityIds:
                         description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Windows Virtual Machine.

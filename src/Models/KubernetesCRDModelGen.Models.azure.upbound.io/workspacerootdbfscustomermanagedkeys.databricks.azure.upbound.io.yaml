@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: WorkspaceRootDbfsCustomerManagedKey is the Schema for the WorkspaceRootDbfsCustomerManagedKeys API. Manages a Customer Managed Key for the Databricks Workspaces root Databricks File System(DBFS)
+        description: WorkspaceRootDbfsCustomerManagedKey is the Schema for the WorkspaceRootDbfsCustomerManagedKeys API. Manages a Customer Managed Key for the Databricks Workspaces Root Databricks File System(DBFS)
         properties:
           apiVersion:
             description: >-
@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  keyVaultId:
+                    description: Specifies the Resource ID of the Key Vault which contains the key_vault_key_id.
+                    type: string
                   keyVaultKeyId:
                     description: The resource ID of the Key Vault Key to be used.
                     type: string
@@ -285,6 +288,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  keyVaultId:
+                    description: Specifies the Resource ID of the Key Vault which contains the key_vault_key_id.
+                    type: string
                   keyVaultKeyId:
                     description: The resource ID of the Key Vault Key to be used.
                     type: string
@@ -590,6 +596,9 @@ spec:
                 properties:
                   id:
                     description: The ID of the Databricks Workspace.
+                    type: string
+                  keyVaultId:
+                    description: Specifies the Resource ID of the Key Vault which contains the key_vault_key_id.
                     type: string
                   keyVaultKeyId:
                     description: The resource ID of the Key Vault Key to be used.

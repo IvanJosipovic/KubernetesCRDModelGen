@@ -72,6 +72,14 @@ public partial class V1beta1ContainerSpecForProvider
     [JsonPropertyName("containerAccessType")]
     public string? ContainerAccessType { get; set; }
 
+    /// <summary>The default encryption scope to use for blobs uploaded to this container. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("defaultEncryptionScope")]
+    public string? DefaultEncryptionScope { get; set; }
+
+    /// <summary>Whether to allow blobs to override the default encryption scope for this container. Can only be set when specifying default_encryption_scope. Defaults to true. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("encryptionScopeOverrideEnabled")]
+    public bool? EncryptionScopeOverrideEnabled { get; set; }
+
     /// <summary>A mapping of MetaData for this Container. All metadata keys should be lowercase.</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
@@ -96,6 +104,14 @@ public partial class V1beta1ContainerSpecInitProvider
     /// <summary>The Access Level configured for this Container. Possible values are blob, container or private. Defaults to private.</summary>
     [JsonPropertyName("containerAccessType")]
     public string? ContainerAccessType { get; set; }
+
+    /// <summary>The default encryption scope to use for blobs uploaded to this container. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("defaultEncryptionScope")]
+    public string? DefaultEncryptionScope { get; set; }
+
+    /// <summary>Whether to allow blobs to override the default encryption scope for this container. Can only be set when specifying default_encryption_scope. Defaults to true. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("encryptionScopeOverrideEnabled")]
+    public bool? EncryptionScopeOverrideEnabled { get; set; }
 
     /// <summary>A mapping of MetaData for this Container. All metadata keys should be lowercase.</summary>
     [JsonPropertyName("metadata")]
@@ -241,6 +257,14 @@ public partial class V1beta1ContainerStatusAtProvider
     /// <summary>The Access Level configured for this Container. Possible values are blob, container or private. Defaults to private.</summary>
     [JsonPropertyName("containerAccessType")]
     public string? ContainerAccessType { get; set; }
+
+    /// <summary>The default encryption scope to use for blobs uploaded to this container. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("defaultEncryptionScope")]
+    public string? DefaultEncryptionScope { get; set; }
+
+    /// <summary>Whether to allow blobs to override the default encryption scope for this container. Can only be set when specifying default_encryption_scope. Defaults to true. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("encryptionScopeOverrideEnabled")]
+    public bool? EncryptionScopeOverrideEnabled { get; set; }
 
     /// <summary>Is there an Immutability Policy configured on this Storage Container?</summary>
     [JsonPropertyName("hasImmutabilityPolicy")]

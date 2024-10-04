@@ -54,6 +54,19 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProviderCatalogInf
     public string? ServerEndpoint { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProviderCopyComputeScale
+{
+    /// <summary>Specifies the data integration unit number setting reserved for copy activity execution. Supported values are multiples of 4 in range 4-256.</summary>
+    [JsonPropertyName("dataIntegrationUnit")]
+    public double? DataIntegrationUnit { get; set; }
+
+    /// <summary>Specifies the time to live (in minutes) setting of integration runtime which will execute copy activity. Possible values are at least 5.</summary>
+    [JsonPropertyName("timeToLive")]
+    public double? TimeToLive { get; set; }
+}
+
 /// <summary>A container SAS token that gives access to the files. See https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProviderCustomSetupScriptSasTokenSecretRef
@@ -363,6 +376,23 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProviderPackageSto
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProviderPipelineExternalComputeScale
+{
+    /// <summary>Specifies the number of the external nodes, which should be greater than 0 and less than 11.</summary>
+    [JsonPropertyName("numberOfExternalNodes")]
+    public double? NumberOfExternalNodes { get; set; }
+
+    /// <summary>Specifies the number of the pipeline nodes, which should be greater than 0 and less than 11.</summary>
+    [JsonPropertyName("numberOfPipelineNodes")]
+    public double? NumberOfPipelineNodes { get; set; }
+
+    /// <summary>Specifies the time to live (in minutes) setting of integration runtime which will execute copy activity. Possible values are at least 5.</summary>
+    [JsonPropertyName("timeToLive")]
+    public double? TimeToLive { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProviderProxy
 {
     /// <summary>The path in the data store to be used when moving data between Self-Hosted and Azure-SSIS Integration Runtimes.</summary>
@@ -535,6 +565,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProvider
     [JsonPropertyName("catalogInfo")]
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecForProviderCatalogInfo>? CatalogInfo { get; set; }
 
+    /// <summary>One copy_compute_scale block as defined below.</summary>
+    [JsonPropertyName("copyComputeScale")]
+    public IList<V1beta1IntegrationRuntimeAzureSSISSpecForProviderCopyComputeScale>? CopyComputeScale { get; set; }
+
     /// <summary>The name of a Data Factory Credential that the SSIS integration will use to access data sources. For example, azurerm_data_factory_credential_user_managed_identity</summary>
     [JsonPropertyName("credentialName")]
     public string? CredentialName { get; set; }
@@ -595,6 +629,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProvider
     [JsonPropertyName("packageStore")]
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecForProviderPackageStore>? PackageStore { get; set; }
 
+    /// <summary>One pipeline_external_compute_scale block as defined below.</summary>
+    [JsonPropertyName("pipelineExternalComputeScale")]
+    public IList<V1beta1IntegrationRuntimeAzureSSISSpecForProviderPipelineExternalComputeScale>? PipelineExternalComputeScale { get; set; }
+
     /// <summary>A proxy block as defined below.</summary>
     [JsonPropertyName("proxy")]
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecForProviderProxy>? Proxy { get; set; }
@@ -604,6 +642,23 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecForProvider
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecForProviderVnetIntegration>? VnetIntegration { get; set; }
 }
 
+/// <summary>Administrator login password for the SQL Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCatalogInfoAdministratorPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCatalogInfo
@@ -611,6 +666,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCatalogIn
     /// <summary>Administrator login name for the SQL Server.</summary>
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
+
+    /// <summary>Administrator login password for the SQL Server.</summary>
+    [JsonPropertyName("administratorPasswordSecretRef")]
+    public V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCatalogInfoAdministratorPasswordSecretRef? AdministratorPasswordSecretRef { get; set; }
 
     /// <summary>The dual standby Azure-SSIS Integration Runtime pair with SSISDB failover.</summary>
     [JsonPropertyName("dualStandbyPairName")]
@@ -627,6 +686,19 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCatalogIn
     /// <summary>The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.</summary>
     [JsonPropertyName("serverEndpoint")]
     public string? ServerEndpoint { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCopyComputeScale
+{
+    /// <summary>Specifies the data integration unit number setting reserved for copy activity execution. Supported values are multiples of 4 in range 4-256.</summary>
+    [JsonPropertyName("dataIntegrationUnit")]
+    public double? DataIntegrationUnit { get; set; }
+
+    /// <summary>Specifies the time to live (in minutes) setting of integration runtime which will execute copy activity. Possible values are at least 5.</summary>
+    [JsonPropertyName("timeToLive")]
+    public double? TimeToLive { get; set; }
 }
 
 /// <summary></summary>
@@ -659,6 +731,23 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCu
     public string? SecretVersion { get; set; }
 }
 
+/// <summary>The password for the target device.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupCommandKeyPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupCommandKey
@@ -666,6 +755,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCu
     /// <summary>A key_vault_secret_reference block as defined below.</summary>
     [JsonPropertyName("keyVaultPassword")]
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupCommandKeyKeyVaultPassword>? KeyVaultPassword { get; set; }
+
+    /// <summary>The password for the target device.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupCommandKeyPasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The target computer or domain name.</summary>
     [JsonPropertyName("targetName")]
@@ -697,6 +790,23 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCu
     public string? SecretVersion { get; set; }
 }
 
+/// <summary>The license used for the Component.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupComponentLicenseSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupComponent
@@ -704,6 +814,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCu
     /// <summary>A key_vault_secret_reference block as defined below.</summary>
     [JsonPropertyName("keyVaultLicense")]
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupComponentKeyVaultLicense>? KeyVaultLicense { get; set; }
+
+    /// <summary>The license used for the Component.</summary>
+    [JsonPropertyName("licenseSecretRef")]
+    public V1beta1IntegrationRuntimeAzureSSISSpecInitProviderExpressCustomSetupComponentLicenseSecretRef? LicenseSecretRef { get; set; }
 
     /// <summary>Name of the package store.</summary>
     [JsonPropertyName("name")]
@@ -815,6 +929,23 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderPackageSt
     /// <summary>Name of the package store.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProviderPipelineExternalComputeScale
+{
+    /// <summary>Specifies the number of the external nodes, which should be greater than 0 and less than 11.</summary>
+    [JsonPropertyName("numberOfExternalNodes")]
+    public double? NumberOfExternalNodes { get; set; }
+
+    /// <summary>Specifies the number of the pipeline nodes, which should be greater than 0 and less than 11.</summary>
+    [JsonPropertyName("numberOfPipelineNodes")]
+    public double? NumberOfPipelineNodes { get; set; }
+
+    /// <summary>Specifies the time to live (in minutes) setting of integration runtime which will execute copy activity. Possible values are at least 5.</summary>
+    [JsonPropertyName("timeToLive")]
+    public double? TimeToLive { get; set; }
 }
 
 /// <summary></summary>
@@ -991,6 +1122,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProvider
     [JsonPropertyName("catalogInfo")]
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCatalogInfo>? CatalogInfo { get; set; }
 
+    /// <summary>One copy_compute_scale block as defined below.</summary>
+    [JsonPropertyName("copyComputeScale")]
+    public IList<V1beta1IntegrationRuntimeAzureSSISSpecInitProviderCopyComputeScale>? CopyComputeScale { get; set; }
+
     /// <summary>The name of a Data Factory Credential that the SSIS integration will use to access data sources. For example, azurerm_data_factory_credential_user_managed_identity</summary>
     [JsonPropertyName("credentialName")]
     public string? CredentialName { get; set; }
@@ -1038,6 +1173,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISSpecInitProvider
     /// <summary>One or more package_store block as defined below.</summary>
     [JsonPropertyName("packageStore")]
     public IList<V1beta1IntegrationRuntimeAzureSSISSpecInitProviderPackageStore>? PackageStore { get; set; }
+
+    /// <summary>One pipeline_external_compute_scale block as defined below.</summary>
+    [JsonPropertyName("pipelineExternalComputeScale")]
+    public IList<V1beta1IntegrationRuntimeAzureSSISSpecInitProviderPipelineExternalComputeScale>? PipelineExternalComputeScale { get; set; }
 
     /// <summary>A proxy block as defined below.</summary>
     [JsonPropertyName("proxy")]
@@ -1207,6 +1346,19 @@ public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProviderCatalogIn
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProviderCopyComputeScale
+{
+    /// <summary>Specifies the data integration unit number setting reserved for copy activity execution. Supported values are multiples of 4 in range 4-256.</summary>
+    [JsonPropertyName("dataIntegrationUnit")]
+    public double? DataIntegrationUnit { get; set; }
+
+    /// <summary>Specifies the time to live (in minutes) setting of integration runtime which will execute copy activity. Possible values are at least 5.</summary>
+    [JsonPropertyName("timeToLive")]
+    public double? TimeToLive { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProviderCustomSetupScript
 {
     /// <summary>The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup for more information.</summary>
@@ -1331,6 +1483,23 @@ public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProviderPackageSt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProviderPipelineExternalComputeScale
+{
+    /// <summary>Specifies the number of the external nodes, which should be greater than 0 and less than 11.</summary>
+    [JsonPropertyName("numberOfExternalNodes")]
+    public double? NumberOfExternalNodes { get; set; }
+
+    /// <summary>Specifies the number of the pipeline nodes, which should be greater than 0 and less than 11.</summary>
+    [JsonPropertyName("numberOfPipelineNodes")]
+    public double? NumberOfPipelineNodes { get; set; }
+
+    /// <summary>Specifies the time to live (in minutes) setting of integration runtime which will execute copy activity. Possible values are at least 5.</summary>
+    [JsonPropertyName("timeToLive")]
+    public double? TimeToLive { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProviderProxy
 {
     /// <summary>The path in the data store to be used when moving data between Self-Hosted and Azure-SSIS Integration Runtimes.</summary>
@@ -1374,6 +1543,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProvider
     /// <summary>A catalog_info block as defined below.</summary>
     [JsonPropertyName("catalogInfo")]
     public IList<V1beta1IntegrationRuntimeAzureSSISStatusAtProviderCatalogInfo>? CatalogInfo { get; set; }
+
+    /// <summary>One copy_compute_scale block as defined below.</summary>
+    [JsonPropertyName("copyComputeScale")]
+    public IList<V1beta1IntegrationRuntimeAzureSSISStatusAtProviderCopyComputeScale>? CopyComputeScale { get; set; }
 
     /// <summary>The name of a Data Factory Credential that the SSIS integration will use to access data sources. For example, azurerm_data_factory_credential_user_managed_identity</summary>
     [JsonPropertyName("credentialName")]
@@ -1430,6 +1603,10 @@ public partial class V1beta1IntegrationRuntimeAzureSSISStatusAtProvider
     /// <summary>One or more package_store block as defined below.</summary>
     [JsonPropertyName("packageStore")]
     public IList<V1beta1IntegrationRuntimeAzureSSISStatusAtProviderPackageStore>? PackageStore { get; set; }
+
+    /// <summary>One pipeline_external_compute_scale block as defined below.</summary>
+    [JsonPropertyName("pipelineExternalComputeScale")]
+    public IList<V1beta1IntegrationRuntimeAzureSSISStatusAtProviderPipelineExternalComputeScale>? PipelineExternalComputeScale { get; set; }
 
     /// <summary>A proxy block as defined below.</summary>
     [JsonPropertyName("proxy")]

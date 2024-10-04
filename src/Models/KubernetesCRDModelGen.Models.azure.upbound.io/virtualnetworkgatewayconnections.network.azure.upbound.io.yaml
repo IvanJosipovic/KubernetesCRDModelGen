@@ -375,6 +375,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  privateLinkFastPathEnabled:
+                    description: Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.
+                    type: boolean
                   resourceGroupName:
                     description: The name of the resource group in which to create the connection Changing this forces a new resource to be created.
                     type: string
@@ -629,6 +632,23 @@ spec:
 
                   autoscaler.
                 properties:
+                  authorizationKeySecretRef:
+                    description: The authorization key associated with the Express Route Circuit. This field is required only if the type is an ExpressRoute connection.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   connectionMode:
                     description: Connection mode to use. Possible values are Default, InitiatorOnly and ResponderOnly. Defaults to Default. Changing this value will force a resource to be created.
                     type: string
@@ -903,9 +923,29 @@ spec:
                             type: string
                         type: object
                     type: object
+                  privateLinkFastPathEnabled:
+                    description: Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.
+                    type: boolean
                   routingWeight:
                     description: The routing weight. Defaults to 10.
                     type: number
+                  sharedKeySecretRef:
+                    description: The shared IPSec key. A key could be provided if a Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   tags:
                     additionalProperties:
                       type: string
@@ -1352,6 +1392,9 @@ spec:
                   peerVirtualNetworkGatewayId:
                     description: The ID of the peer virtual network gateway when creating a VNet-to-VNet connection (i.e. when type is Vnet2Vnet). The peer Virtual Network Gateway can be in the same or in a different subscription. Changing this forces a new resource to be created.
                     type: string
+                  privateLinkFastPathEnabled:
+                    description: Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.
+                    type: boolean
                   resourceGroupName:
                     description: The name of the resource group in which to create the connection Changing this forces a new resource to be created.
                     type: string
@@ -1815,6 +1858,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  privateLinkFastPathEnabled:
+                    description: Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.
+                    type: boolean
                   resourceGroupName:
                     description: The name of the resource group in which to create the connection Changing this forces a new resource to be created.
                     type: string
@@ -2356,6 +2402,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  privateLinkFastPathEnabled:
+                    description: Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.
+                    type: boolean
                   routingWeight:
                     description: The routing weight. Defaults to 10.
                     type: number
@@ -2818,6 +2867,9 @@ spec:
                   peerVirtualNetworkGatewayId:
                     description: The ID of the peer virtual network gateway when creating a VNet-to-VNet connection (i.e. when type is Vnet2Vnet). The peer Virtual Network Gateway can be in the same or in a different subscription. Changing this forces a new resource to be created.
                     type: string
+                  privateLinkFastPathEnabled:
+                    description: Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.
+                    type: boolean
                   resourceGroupName:
                     description: The name of the resource group in which to create the connection Changing this forces a new resource to be created.
                     type: string

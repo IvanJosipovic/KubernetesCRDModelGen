@@ -332,6 +332,10 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("analyticalStorageEnabled")]
     public bool? AnalyticalStorageEnabled { get; set; }
 
+    /// <summary>Enable automatic failover for this Cosmos DB account.</summary>
+    [JsonPropertyName("automaticFailoverEnabled")]
+    public bool? AutomaticFailoverEnabled { get; set; }
+
     /// <summary>A backup block as defined below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1AccountSpecForProviderBackup>? Backup { get; set; }
@@ -372,6 +376,10 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("enableMultipleWriteLocations")]
     public bool? EnableMultipleWriteLocations { get; set; }
 
+    /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("freeTierEnabled")]
+    public bool? FreeTierEnabled { get; set; }
+
     /// <summary>Specifies a geo_location resource, used to define where data should be replicated with the failover_priority 0 specifying the primary location. Value is a geo_location block as defined below.</summary>
     [JsonPropertyName("geoLocation")]
     public IList<V1beta1AccountSpecForProviderGeoLocation>? GeoLocation { get; set; }
@@ -411,6 +419,10 @@ public partial class V1beta1AccountSpecForProvider
     /// <summary>The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.</summary>
     [JsonPropertyName("mongoServerVersion")]
     public string? MongoServerVersion { get; set; }
+
+    /// <summary>Enable multiple write locations for this Cosmos DB account.</summary>
+    [JsonPropertyName("multipleWriteLocationsEnabled")]
+    public bool? MultipleWriteLocationsEnabled { get; set; }
 
     /// <summary>If Azure services can bypass ACLs. Defaults to false.</summary>
     [JsonPropertyName("networkAclBypassForAzureServices")]
@@ -725,6 +737,10 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("analyticalStorageEnabled")]
     public bool? AnalyticalStorageEnabled { get; set; }
 
+    /// <summary>Enable automatic failover for this Cosmos DB account.</summary>
+    [JsonPropertyName("automaticFailoverEnabled")]
+    public bool? AutomaticFailoverEnabled { get; set; }
+
     /// <summary>A backup block as defined below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1AccountSpecInitProviderBackup>? Backup { get; set; }
@@ -765,6 +781,10 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("enableMultipleWriteLocations")]
     public bool? EnableMultipleWriteLocations { get; set; }
 
+    /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("freeTierEnabled")]
+    public bool? FreeTierEnabled { get; set; }
+
     /// <summary>Specifies a geo_location resource, used to define where data should be replicated with the failover_priority 0 specifying the primary location. Value is a geo_location block as defined below.</summary>
     [JsonPropertyName("geoLocation")]
     public IList<V1beta1AccountSpecInitProviderGeoLocation>? GeoLocation { get; set; }
@@ -804,6 +824,10 @@ public partial class V1beta1AccountSpecInitProvider
     /// <summary>The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.</summary>
     [JsonPropertyName("mongoServerVersion")]
     public string? MongoServerVersion { get; set; }
+
+    /// <summary>Enable multiple write locations for this Cosmos DB account.</summary>
+    [JsonPropertyName("multipleWriteLocationsEnabled")]
+    public bool? MultipleWriteLocationsEnabled { get; set; }
 
     /// <summary>If Azure services can bypass ACLs. Defaults to false.</summary>
     [JsonPropertyName("networkAclBypassForAzureServices")]
@@ -1186,6 +1210,10 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("analyticalStorageEnabled")]
     public bool? AnalyticalStorageEnabled { get; set; }
 
+    /// <summary>Enable automatic failover for this Cosmos DB account.</summary>
+    [JsonPropertyName("automaticFailoverEnabled")]
+    public bool? AutomaticFailoverEnabled { get; set; }
+
     /// <summary>A backup block as defined below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1AccountStatusAtProviderBackup>? Backup { get; set; }
@@ -1230,6 +1258,10 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
+    /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("freeTierEnabled")]
+    public bool? FreeTierEnabled { get; set; }
+
     /// <summary>Specifies a geo_location resource, used to define where data should be replicated with the failover_priority 0 specifying the primary location. Value is a geo_location block as defined below.</summary>
     [JsonPropertyName("geoLocation")]
     public IList<V1beta1AccountStatusAtProviderGeoLocation>? GeoLocation { get; set; }
@@ -1273,6 +1305,10 @@ public partial class V1beta1AccountStatusAtProvider
     /// <summary>The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.</summary>
     [JsonPropertyName("mongoServerVersion")]
     public string? MongoServerVersion { get; set; }
+
+    /// <summary>Enable multiple write locations for this Cosmos DB account.</summary>
+    [JsonPropertyName("multipleWriteLocationsEnabled")]
+    public bool? MultipleWriteLocationsEnabled { get; set; }
 
     /// <summary>If Azure services can bypass ACLs. Defaults to false.</summary>
     [JsonPropertyName("networkAclBypassForAzureServices")]

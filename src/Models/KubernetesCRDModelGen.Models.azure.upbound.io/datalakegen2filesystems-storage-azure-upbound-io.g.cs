@@ -93,6 +93,10 @@ public partial class V1beta1DataLakeGen2FileSystemSpecForProvider
     [JsonPropertyName("ace")]
     public IList<V1beta1DataLakeGen2FileSystemSpecForProviderAce>? Ace { get; set; }
 
+    /// <summary>The default encryption scope to use for this filesystem. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("defaultEncryptionScope")]
+    public string? DefaultEncryptionScope { get; set; }
+
     /// <summary>Specifies the Object ID of the Azure Active Directory Group to make the owning group of the root path (i.e. /). Possible values also include $superuser.</summary>
     [JsonPropertyName("group")]
     public string? Group { get; set; }
@@ -202,6 +206,10 @@ public partial class V1beta1DataLakeGen2FileSystemSpecInitProvider
     /// <summary>One or more ace blocks as defined below to specify the entries for the ACL for the path.</summary>
     [JsonPropertyName("ace")]
     public IList<V1beta1DataLakeGen2FileSystemSpecInitProviderAce>? Ace { get; set; }
+
+    /// <summary>The default encryption scope to use for this filesystem. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("defaultEncryptionScope")]
+    public string? DefaultEncryptionScope { get; set; }
 
     /// <summary>Specifies the Object ID of the Azure Active Directory Group to make the owning group of the root path (i.e. /). Possible values also include $superuser.</summary>
     [JsonPropertyName("group")]
@@ -388,6 +396,10 @@ public partial class V1beta1DataLakeGen2FileSystemStatusAtProvider
     /// <summary>One or more ace blocks as defined below to specify the entries for the ACL for the path.</summary>
     [JsonPropertyName("ace")]
     public IList<V1beta1DataLakeGen2FileSystemStatusAtProviderAce>? Ace { get; set; }
+
+    /// <summary>The default encryption scope to use for this filesystem. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("defaultEncryptionScope")]
+    public string? DefaultEncryptionScope { get; set; }
 
     /// <summary>Specifies the Object ID of the Azure Active Directory Group to make the owning group of the root path (i.e. /). Possible values also include $superuser.</summary>
     [JsonPropertyName("group")]

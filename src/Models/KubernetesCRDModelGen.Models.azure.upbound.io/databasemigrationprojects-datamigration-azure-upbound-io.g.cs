@@ -156,7 +156,7 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProvider
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1DatabaseMigrationProjectSpecForProviderServiceNameSelector? ServiceNameSelector { get; set; }
 
-    /// <summary>The platform type of the migration source. Currently only support: SQL(on-premises SQL Server). Changing this forces a new resource to be created.</summary>
+    /// <summary>The platform type of the migration source. Possible values are SQL, PostgreSQL, MySQL and MongoDb. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sourcePlatform")]
     public string? SourcePlatform { get; set; }
 
@@ -164,7 +164,7 @@ public partial class V1beta1DatabaseMigrationProjectSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The platform type of the migration target. Currently only support: SQLDB(Azure SQL Database). Changing this forces a new resource to be created.</summary>
+    /// <summary>The platform type of the migration target. Possible values are SQLDB, AzureDbForPostgreSql, AzureDbForMySql and MongoDb. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("targetPlatform")]
     public string? TargetPlatform { get; set; }
 }
@@ -181,7 +181,7 @@ public partial class V1beta1DatabaseMigrationProjectSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The platform type of the migration source. Currently only support: SQL(on-premises SQL Server). Changing this forces a new resource to be created.</summary>
+    /// <summary>The platform type of the migration source. Possible values are SQL, PostgreSQL, MySQL and MongoDb. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sourcePlatform")]
     public string? SourcePlatform { get; set; }
 
@@ -189,7 +189,7 @@ public partial class V1beta1DatabaseMigrationProjectSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The platform type of the migration target. Currently only support: SQLDB(Azure SQL Database). Changing this forces a new resource to be created.</summary>
+    /// <summary>The platform type of the migration target. Possible values are SQLDB, AzureDbForPostgreSql, AzureDbForMySql and MongoDb. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("targetPlatform")]
     public string? TargetPlatform { get; set; }
 }
@@ -350,7 +350,7 @@ public partial class V1beta1DatabaseMigrationProjectStatusAtProvider
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 
-    /// <summary>The platform type of the migration source. Currently only support: SQL(on-premises SQL Server). Changing this forces a new resource to be created.</summary>
+    /// <summary>The platform type of the migration source. Possible values are SQL, PostgreSQL, MySQL and MongoDb. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sourcePlatform")]
     public string? SourcePlatform { get; set; }
 
@@ -358,7 +358,7 @@ public partial class V1beta1DatabaseMigrationProjectStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The platform type of the migration target. Currently only support: SQLDB(Azure SQL Database). Changing this forces a new resource to be created.</summary>
+    /// <summary>The platform type of the migration target. Possible values are SQLDB, AzureDbForPostgreSql, AzureDbForMySql and MongoDb. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("targetPlatform")]
     public string? TargetPlatform { get; set; }
 }

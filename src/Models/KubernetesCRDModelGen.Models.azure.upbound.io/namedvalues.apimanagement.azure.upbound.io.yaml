@@ -348,6 +348,23 @@ spec:
                           type: string
                       type: object
                     type: array
+                  valueSecretRef:
+                    description: The value of this API Management Named Value.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                 type: object
               managementPolicies:
                 default:
@@ -921,7 +938,7 @@ spec:
                       type: string
                     type: array
                   valueFromKeyVault:
-                    description: A value_from_key_vault block as defined below.
+                    description: A value_from_key_vault block as defined below. If specified, secret must also be set to true.
                     properties:
                       identityClientId:
                         description: The client ID of User Assigned Identity, for the API Management Service, which will be used to access the key vault secret. The System Assigned Identity will be used in absence.
@@ -982,7 +999,7 @@ spec:
                       type: string
                     type: array
                   valueFromKeyVault:
-                    description: A value_from_key_vault block as defined below.
+                    description: A value_from_key_vault block as defined below. If specified, secret must also be set to true.
                     properties:
                       identityClientId:
                         description: The client ID of User Assigned Identity, for the API Management Service, which will be used to access the key vault secret. The System Assigned Identity will be used in absence.
@@ -1246,7 +1263,7 @@ spec:
                       type: string
                     type: array
                   valueFromKeyVault:
-                    description: A value_from_key_vault block as defined below.
+                    description: A value_from_key_vault block as defined below. If specified, secret must also be set to true.
                     properties:
                       identityClientId:
                         description: The client ID of User Assigned Identity, for the API Management Service, which will be used to access the key vault secret. The System Assigned Identity will be used in absence.

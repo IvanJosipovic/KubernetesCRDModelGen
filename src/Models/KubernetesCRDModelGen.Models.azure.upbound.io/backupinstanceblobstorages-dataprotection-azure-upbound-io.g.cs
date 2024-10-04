@@ -196,6 +196,10 @@ public partial class V1beta1BackupInstanceBlobStorageSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>The list of the container names of the source Storage Account.</summary>
+    [JsonPropertyName("storageAccountContainerNames")]
+    public IList<string>? StorageAccountContainerNames { get; set; }
+
     /// <summary>The ID of the source Storage Account. Changing this forces a new Backup Instance Blob Storage to be created.</summary>
     [JsonPropertyName("storageAccountId")]
     public string? StorageAccountId { get; set; }
@@ -352,6 +356,10 @@ public partial class V1beta1BackupInstanceBlobStorageSpecInitProvider
     /// <summary>The location of the source Storage Account. Changing this forces a new Backup Instance Blob Storage to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>The list of the container names of the source Storage Account.</summary>
+    [JsonPropertyName("storageAccountContainerNames")]
+    public IList<string>? StorageAccountContainerNames { get; set; }
 
     /// <summary>The ID of the source Storage Account. Changing this forces a new Backup Instance Blob Storage to be created.</summary>
     [JsonPropertyName("storageAccountId")]
@@ -513,6 +521,10 @@ public partial class V1beta1BackupInstanceBlobStorageStatusAtProvider
     /// <summary>The location of the source Storage Account. Changing this forces a new Backup Instance Blob Storage to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>The list of the container names of the source Storage Account.</summary>
+    [JsonPropertyName("storageAccountContainerNames")]
+    public IList<string>? StorageAccountContainerNames { get; set; }
 
     /// <summary>The ID of the source Storage Account. Changing this forces a new Backup Instance Blob Storage to be created.</summary>
     [JsonPropertyName("storageAccountId")]

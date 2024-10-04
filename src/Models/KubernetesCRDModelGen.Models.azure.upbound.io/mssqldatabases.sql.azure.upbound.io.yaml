@@ -238,6 +238,9 @@ spec:
                   sampleName:
                     description: Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.
                     type: string
+                  secondaryType:
+                    description: How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.
+                    type: string
                   serverId:
                     description: The id of the MS SQL Server on which to create the database. Changing this forces a new resource to be created.
                     type: string
@@ -636,6 +639,9 @@ spec:
                   sampleName:
                     description: Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.
                     type: string
+                  secondaryType:
+                    description: How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.
+                    type: string
                   shortTermRetentionPolicy:
                     description: A short_term_retention_policy block as defined below.
                     items:
@@ -685,6 +691,23 @@ spec:
                         state:
                           description: The State of the Policy. Possible values are Enabled or Disabled. Defaults to Disabled.
                           type: string
+                        storageAccountAccessKeySecretRef:
+                          description: Specifies the identifier key of the Threat Detection audit storage account. Required if state is Enabled.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         storageEndpoint:
                           description: Specifies the blob storage endpoint (e.g. https://example.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if state is Enabled.
                           type: string
@@ -1122,6 +1145,9 @@ spec:
                   sampleName:
                     description: Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.
                     type: string
+                  secondaryType:
+                    description: How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.
+                    type: string
                   serverId:
                     description: The id of the MS SQL Server on which to create the database. Changing this forces a new resource to be created.
                     type: string
@@ -1341,7 +1367,7 @@ spec:
                     description: Specifies the ID of the elastic pool containing this database.
                     type: string
                   enclaveType:
-                    description: Specifies the type of enclave to be used by the database. Possible value VBS.
+                    description: Specifies the type of enclave to be used by the elastic pool. When enclave_type is not specified (e.g., the default) enclaves are not enabled on the database.  Possible values are Default or VBS.
                     type: string
                   geoBackupEnabled:
                     description: A boolean that specifies if the Geo Backup Policy is enabled. Defaults to true.
@@ -1469,6 +1495,9 @@ spec:
                     type: string
                   sampleName:
                     description: Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.
+                    type: string
+                  secondaryType:
+                    description: How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.
                     type: string
                   serverId:
                     description: The id of the MS SQL Server on which to create the database. Changing this forces a new resource to be created.
@@ -1763,7 +1792,7 @@ spec:
                     description: Specifies the ID of the elastic pool containing this database.
                     type: string
                   enclaveType:
-                    description: Specifies the type of enclave to be used by the database. Possible value VBS.
+                    description: Specifies the type of enclave to be used by the elastic pool. When enclave_type is not specified (e.g., the default) enclaves are not enabled on the database.  Possible values are Default or VBS.
                     type: string
                   geoBackupEnabled:
                     description: A boolean that specifies if the Geo Backup Policy is enabled. Defaults to true.
@@ -1894,6 +1923,9 @@ spec:
                     type: string
                   sampleName:
                     description: Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.
+                    type: string
+                  secondaryType:
+                    description: How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.
                     type: string
                   shortTermRetentionPolicy:
                     description: A short_term_retention_policy block as defined below.
@@ -2290,7 +2322,7 @@ spec:
                     description: Specifies the ID of the elastic pool containing this database.
                     type: string
                   enclaveType:
-                    description: Specifies the type of enclave to be used by the database. Possible value VBS.
+                    description: Specifies the type of enclave to be used by the elastic pool. When enclave_type is not specified (e.g., the default) enclaves are not enabled on the database.  Possible values are Default or VBS.
                     type: string
                   geoBackupEnabled:
                     description: A boolean that specifies if the Geo Backup Policy is enabled. Defaults to true.
@@ -2387,6 +2419,9 @@ spec:
                     type: string
                   sampleName:
                     description: Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.
+                    type: string
+                  secondaryType:
+                    description: How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.
                     type: string
                   serverId:
                     description: The id of the MS SQL Server on which to create the database. Changing this forces a new resource to be created.

@@ -131,6 +131,8 @@ spec:
                   name:
                     description: The name of the Analysis Services Server. Only lowercase Alphanumeric characters allowed, starting with a letter. Changing this forces a new resource to be created.
                     type: string
+                  powerBiServiceEnabled:
+                    type: boolean
                   querypoolConnectionMode:
                     description: Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.
                     type: string
@@ -302,6 +304,8 @@ spec:
                   name:
                     description: The name of the Analysis Services Server. Only lowercase Alphanumeric characters allowed, starting with a letter. Changing this forces a new resource to be created.
                     type: string
+                  powerBiServiceEnabled:
+                    type: boolean
                   querypoolConnectionMode:
                     description: Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.
                     type: string
@@ -657,6 +661,8 @@ spec:
                   name:
                     description: The name of the Analysis Services Server. Only lowercase Alphanumeric characters allowed, starting with a letter. Changing this forces a new resource to be created.
                     type: string
+                  powerBiServiceEnabled:
+                    type: boolean
                   querypoolConnectionMode:
                     description: Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.
                     type: string

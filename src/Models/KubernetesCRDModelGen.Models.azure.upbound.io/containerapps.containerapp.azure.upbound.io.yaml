@@ -276,9 +276,9 @@ spec:
                                 type: string
                               ipAddressRange:
                                 description: >-
-                                  CIDR notation to match incoming IP address.
+                                  The incoming IP address or range of IP addresses (in CIDR notation).
 
-                                  CIDR notation to match incoming IP address.
+                                  The incoming IP address or range of IP addresses (in CIDR notation).
                                 type: string
                               name:
                                 description: >-
@@ -458,11 +458,23 @@ spec:
                     description: One or more secret block as detailed below.
                     items:
                       properties:
+                        identity:
+                          description: >-
+                            The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity.
+
+                            The identity to use for accessing key vault reference.
+                          type: string
+                        keyVaultSecretId:
+                          description: >-
+                            The ID of a Key Vault secret. This can be a versioned or version-less ID.
+
+                            The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
+                          type: string
                         nameSecretRef:
                           description: >-
-                            The Secret name.
+                            The secret name.
 
-                            The Secret name.
+                            The secret name.
                           properties:
                             key:
                               description: The key to select.
@@ -498,9 +510,6 @@ spec:
                           - name
                           - namespace
                           type: object
-                      required:
-                      - nameSecretRef
-                      - valueSecretRef
                       type: object
                     type: array
                   tags:
@@ -1266,9 +1275,9 @@ spec:
                                 type: string
                               ipAddressRange:
                                 description: >-
-                                  CIDR notation to match incoming IP address.
+                                  The incoming IP address or range of IP addresses (in CIDR notation).
 
-                                  CIDR notation to match incoming IP address.
+                                  The incoming IP address or range of IP addresses (in CIDR notation).
                                 type: string
                               name:
                                 description: >-
@@ -1358,6 +1367,61 @@ spec:
                   secret:
                     description: One or more secret block as detailed below.
                     items:
+                      properties:
+                        identity:
+                          description: >-
+                            The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity.
+
+                            The identity to use for accessing key vault reference.
+                          type: string
+                        keyVaultSecretId:
+                          description: >-
+                            The ID of a Key Vault secret. This can be a versioned or version-less ID.
+
+                            The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
+                          type: string
+                        nameSecretRef:
+                          description: >-
+                            The secret name.
+
+                            The secret name.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                        valueSecretRef:
+                          description: >-
+                            The value for this secret.
+
+                            The value for this secret.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                      required:
+                      - nameSecretRef
                       type: object
                     type: array
                   tags:
@@ -2248,9 +2312,9 @@ spec:
                                 type: string
                               ipAddressRange:
                                 description: >-
-                                  CIDR notation to match incoming IP address.
+                                  The incoming IP address or range of IP addresses (in CIDR notation).
 
-                                  CIDR notation to match incoming IP address.
+                                  The incoming IP address or range of IP addresses (in CIDR notation).
                                 type: string
                               name:
                                 description: >-
@@ -2364,49 +2428,18 @@ spec:
                     description: One or more secret block as detailed below.
                     items:
                       properties:
-                        nameSecretRef:
+                        identity:
                           description: >-
-                            The Secret name.
+                            The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity.
 
-                            The Secret name.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                        valueSecretRef:
+                            The identity to use for accessing key vault reference.
+                          type: string
+                        keyVaultSecretId:
                           description: >-
-                            The value for this secret.
+                            The ID of a Key Vault secret. This can be a versioned or version-less ID.
 
-                            The value for this secret.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                      required:
-                      - nameSecretRef
-                      - valueSecretRef
+                            The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
+                          type: string
                       type: object
                     type: array
                   tags:
@@ -3300,9 +3333,9 @@ spec:
                               type: string
                             ipAddressRange:
                               description: >-
-                                CIDR notation to match incoming IP address.
+                                The incoming IP address or range of IP addresses (in CIDR notation).
 
-                                CIDR notation to match incoming IP address.
+                                The incoming IP address or range of IP addresses (in CIDR notation).
                               type: string
                             name:
                               description: >-
@@ -3481,11 +3514,23 @@ spec:
                     description: One or more secret block as detailed below.
                     items:
                       properties:
+                        identity:
+                          description: >-
+                            The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity.
+
+                            The identity to use for accessing key vault reference.
+                          type: string
+                        keyVaultSecretId:
+                          description: >-
+                            The ID of a Key Vault secret. This can be a versioned or version-less ID.
+
+                            The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
+                          type: string
                         nameSecretRef:
                           description: >-
-                            The Secret name.
+                            The secret name.
 
-                            The Secret name.
+                            The secret name.
                           properties:
                             key:
                               description: The key to select.
@@ -4277,9 +4322,9 @@ spec:
                               type: string
                             ipAddressRange:
                               description: >-
-                                CIDR notation to match incoming IP address.
+                                The incoming IP address or range of IP addresses (in CIDR notation).
 
-                                CIDR notation to match incoming IP address.
+                                The incoming IP address or range of IP addresses (in CIDR notation).
                               type: string
                             name:
                               description: >-
@@ -4369,11 +4414,23 @@ spec:
                     description: One or more secret block as detailed below.
                     items:
                       properties:
+                        identity:
+                          description: >-
+                            The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity.
+
+                            The identity to use for accessing key vault reference.
+                          type: string
+                        keyVaultSecretId:
+                          description: >-
+                            The ID of a Key Vault secret. This can be a versioned or version-less ID.
+
+                            The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
+                          type: string
                         nameSecretRef:
                           description: >-
-                            The Secret name.
+                            The secret name.
 
-                            The Secret name.
+                            The secret name.
                           properties:
                             key:
                               description: The key to select.
@@ -4411,7 +4468,6 @@ spec:
                           type: object
                       required:
                       - nameSecretRef
-                      - valueSecretRef
                       type: object
                     type: array
                   tags:
@@ -5293,9 +5349,9 @@ spec:
                               type: string
                             ipAddressRange:
                               description: >-
-                                CIDR notation to match incoming IP address.
+                                The incoming IP address or range of IP addresses (in CIDR notation).
 
-                                CIDR notation to match incoming IP address.
+                                The incoming IP address or range of IP addresses (in CIDR notation).
                               type: string
                             name:
                               description: >-
@@ -5408,46 +5464,18 @@ spec:
                     description: One or more secret block as detailed below.
                     items:
                       properties:
-                        nameSecretRef:
+                        identity:
                           description: >-
-                            The Secret name.
+                            The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity.
 
-                            The Secret name.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                        valueSecretRef:
+                            The identity to use for accessing key vault reference.
+                          type: string
+                        keyVaultSecretId:
                           description: >-
-                            The value for this secret.
+                            The ID of a Key Vault secret. This can be a versioned or version-less ID.
 
-                            The value for this secret.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
+                            The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.
+                          type: string
                       type: object
                     type: array
                   tags:

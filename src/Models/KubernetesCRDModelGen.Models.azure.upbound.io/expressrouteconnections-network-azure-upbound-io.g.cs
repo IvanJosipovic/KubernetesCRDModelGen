@@ -194,6 +194,10 @@ public partial class V1beta1ExpressRouteConnectionSpecForProvider
     [JsonPropertyName("expressRouteGatewayIdSelector")]
     public V1beta1ExpressRouteConnectionSpecForProviderExpressRouteGatewayIdSelector? ExpressRouteGatewayIdSelector { get; set; }
 
+    /// <summary>Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass_enabled must be set to true. Defaults to false.</summary>
+    [JsonPropertyName("privateLinkFastPathEnabled")]
+    public bool? PrivateLinkFastPathEnabled { get; set; }
+
     /// <summary>A routing block as defined below.</summary>
     [JsonPropertyName("routing")]
     public IList<V1beta1ExpressRouteConnectionSpecForProviderRouting>? Routing { get; set; }
@@ -320,6 +324,10 @@ public partial class V1beta1ExpressRouteConnectionSpecInitProvider
     /// <summary>Specified whether Fast Path is enabled for Virtual Wan Firewall Hub. Defaults to false.</summary>
     [JsonPropertyName("expressRouteGatewayBypassEnabled")]
     public bool? ExpressRouteGatewayBypassEnabled { get; set; }
+
+    /// <summary>Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass_enabled must be set to true. Defaults to false.</summary>
+    [JsonPropertyName("privateLinkFastPathEnabled")]
+    public bool? PrivateLinkFastPathEnabled { get; set; }
 
     /// <summary>A routing block as defined below.</summary>
     [JsonPropertyName("routing")]
@@ -523,6 +531,10 @@ public partial class V1beta1ExpressRouteConnectionStatusAtProvider
     /// <summary>The ID of the Express Route Connection.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass_enabled must be set to true. Defaults to false.</summary>
+    [JsonPropertyName("privateLinkFastPathEnabled")]
+    public bool? PrivateLinkFastPathEnabled { get; set; }
 
     /// <summary>A routing block as defined below.</summary>
     [JsonPropertyName("routing")]

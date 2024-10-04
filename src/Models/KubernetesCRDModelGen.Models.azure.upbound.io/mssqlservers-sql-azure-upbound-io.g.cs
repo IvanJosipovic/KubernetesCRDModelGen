@@ -440,6 +440,23 @@ public partial class V1beta1MSSQLServerSpecForProvider
     public string? Version { get; set; }
 }
 
+/// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy. Required unless azuread_authentication_only in the azuread_administrator block is true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAzureadAdministratorLoginUsernameRefPolicy
@@ -721,6 +738,10 @@ public partial class V1beta1MSSQLServerSpecInitProvider
     /// <summary>The administrator login name for the new server. Required unless azuread_authentication_only in the azuread_administrator block is true. When omitted, Azure will generate a default username which cannot be subsequently changed. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
+
+    /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy. Required unless azuread_authentication_only in the azuread_administrator block is true.</summary>
+    [JsonPropertyName("administratorLoginPasswordSecretRef")]
+    public V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordSecretRef? AdministratorLoginPasswordSecretRef { get; set; }
 
     /// <summary>An azuread_administrator block as defined below.</summary>
     [JsonPropertyName("azureadAdministrator")]

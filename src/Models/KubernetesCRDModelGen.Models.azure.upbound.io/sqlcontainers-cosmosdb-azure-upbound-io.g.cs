@@ -333,9 +333,17 @@ public partial class V1beta1SQLContainerSpecForProvider
     [JsonPropertyName("indexingPolicy")]
     public IList<V1beta1SQLContainerSpecForProviderIndexingPolicy>? IndexingPolicy { get; set; }
 
-    /// <summary>Define a partition key. Changing this forces a new resource to be created.</summary>
+    /// <summary>Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("partitionKeyKind")]
+    public string? PartitionKeyKind { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("partitionKeyPath")]
     public string? PartitionKeyPath { get; set; }
+
+    /// <summary>A list of partition key paths. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("partitionKeyPaths")]
+    public IList<string>? PartitionKeyPaths { get; set; }
 
     /// <summary>Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
     [JsonPropertyName("partitionKeyVersion")]
@@ -495,9 +503,17 @@ public partial class V1beta1SQLContainerSpecInitProvider
     [JsonPropertyName("indexingPolicy")]
     public IList<V1beta1SQLContainerSpecInitProviderIndexingPolicy>? IndexingPolicy { get; set; }
 
-    /// <summary>Define a partition key. Changing this forces a new resource to be created.</summary>
+    /// <summary>Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("partitionKeyKind")]
+    public string? PartitionKeyKind { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("partitionKeyPath")]
     public string? PartitionKeyPath { get; set; }
+
+    /// <summary>A list of partition key paths. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("partitionKeyPaths")]
+    public IList<string>? PartitionKeyPaths { get; set; }
 
     /// <summary>Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
     [JsonPropertyName("partitionKeyVersion")]
@@ -793,9 +809,17 @@ public partial class V1beta1SQLContainerStatusAtProvider
     [JsonPropertyName("indexingPolicy")]
     public IList<V1beta1SQLContainerStatusAtProviderIndexingPolicy>? IndexingPolicy { get; set; }
 
-    /// <summary>Define a partition key. Changing this forces a new resource to be created.</summary>
+    /// <summary>Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("partitionKeyKind")]
+    public string? PartitionKeyKind { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("partitionKeyPath")]
     public string? PartitionKeyPath { get; set; }
+
+    /// <summary>A list of partition key paths. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("partitionKeyPaths")]
+    public IList<string>? PartitionKeyPaths { get; set; }
 
     /// <summary>Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
     [JsonPropertyName("partitionKeyVersion")]

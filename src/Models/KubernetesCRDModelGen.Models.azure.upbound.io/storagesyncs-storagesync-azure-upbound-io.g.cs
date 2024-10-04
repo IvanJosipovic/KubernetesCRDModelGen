@@ -258,6 +258,10 @@ public partial class V1beta1StorageSyncStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>A list of registered servers owned by this Storage Sync.</summary>
+    [JsonPropertyName("registeredServers")]
+    public IList<string>? RegisteredServers { get; set; }
+
     /// <summary>The name of the Resource Group where the Storage Sync should exist. Changing this forces a new Storage Sync to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }

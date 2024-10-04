@@ -25,10 +25,31 @@ public partial class V1beta1AccountSpecForProviderActiveDirectoryPasswordSecretR
     public string Namespace { get; set; }
 }
 
+/// <summary>When LDAP over SSL/TLS is enabled, the LDAP client is required to have a base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes. Required if ldap_over_tls_enabled is set to true. When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderActiveDirectoryServerRootCaCertificateSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderActiveDirectory
 {
+    /// <summary>If enabled, AES encryption will be enabled for SMB communication. Defaults to false. If enabled, AES encryption will be enabled for SMB communication.</summary>
+    [JsonPropertyName("aesEncryptionEnabled")]
+    public bool? AesEncryptionEnabled { get; set; }
+
     /// <summary>A list of DNS server IP addresses for the Active Directory domain. Only allows IPv4 address.</summary>
     [JsonPropertyName("dnsServers")]
     public IList<string>? DnsServers { get; set; }
@@ -37,13 +58,41 @@ public partial class V1beta1AccountSpecForProviderActiveDirectory
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>The Organizational Unit (OU) within the Active Directory Domain.</summary>
+    /// <summary>Name of the active directory machine. Name of the active directory machine. This optional parameter is used only while creating kerberos volume.</summary>
+    [JsonPropertyName("kerberosAdName")]
+    public string? KerberosAdName { get; set; }
+
+    /// <summary>kdc server IP addresses for the active directory machine. IP address of the KDC server (usually same the DC). This optional parameter is used only while creating kerberos volume.</summary>
+    [JsonPropertyName("kerberosKdcIp")]
+    public string? KerberosKdcIp { get; set; }
+
+    /// <summary>Specifies whether or not the LDAP traffic needs to be secured via TLS. Defaults to false. Specifies whether or not the LDAP traffic needs to be secured via TLS.</summary>
+    [JsonPropertyName("ldapOverTlsEnabled")]
+    public bool? LdapOverTlsEnabled { get; set; }
+
+    /// <summary>Specifies whether or not the LDAP traffic needs to be signed. Defaults to false. Specifies whether or not the LDAP traffic needs to be signed.</summary>
+    [JsonPropertyName("ldapSigningEnabled")]
+    public bool? LdapSigningEnabled { get; set; }
+
+    /// <summary>If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes. Defaults to false. If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.</summary>
+    [JsonPropertyName("localNfsUsersWithLdapAllowed")]
+    public bool? LocalNfsUsersWithLdapAllowed { get; set; }
+
+    /// <summary>The Organizational Unit (OU) within Active Directory where machines will be created. If blank, defaults to CN=Computers. The Organizational Unit (OU) within the Windows Active Directory where machines will be created. If blank, defaults to 'CN=Computers'</summary>
     [JsonPropertyName("organizationalUnit")]
     public string? OrganizationalUnit { get; set; }
 
     /// <summary>The password associated with the username.</summary>
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1AccountSpecForProviderActiveDirectoryPasswordSecretRef PasswordSecretRef { get; set; }
+
+    /// <summary>When LDAP over SSL/TLS is enabled, the LDAP client is required to have a base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes. Required if ldap_over_tls_enabled is set to true. When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.</summary>
+    [JsonPropertyName("serverRootCaCertificateSecretRef")]
+    public V1beta1AccountSpecForProviderActiveDirectoryServerRootCaCertificateSecretRef? ServerRootCaCertificateSecretRef { get; set; }
+
+    /// <summary>The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to Default-First-Site-Name. The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to 'Default-First-Site-Name'</summary>
+    [JsonPropertyName("siteName")]
+    public string? SiteName { get; set; }
 
     /// <summary>The NetBIOS name which should be used for the NetApp SMB Server, which will be registered as a computer account in the AD and used to mount volumes.</summary>
     [JsonPropertyName("smbServerName")]
@@ -156,10 +205,31 @@ public partial class V1beta1AccountSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>When LDAP over SSL/TLS is enabled, the LDAP client is required to have a base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes. Required if ldap_over_tls_enabled is set to true. When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderActiveDirectoryServerRootCaCertificateSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderActiveDirectory
 {
+    /// <summary>If enabled, AES encryption will be enabled for SMB communication. Defaults to false. If enabled, AES encryption will be enabled for SMB communication.</summary>
+    [JsonPropertyName("aesEncryptionEnabled")]
+    public bool? AesEncryptionEnabled { get; set; }
+
     /// <summary>A list of DNS server IP addresses for the Active Directory domain. Only allows IPv4 address.</summary>
     [JsonPropertyName("dnsServers")]
     public IList<string>? DnsServers { get; set; }
@@ -168,9 +238,37 @@ public partial class V1beta1AccountSpecInitProviderActiveDirectory
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>The Organizational Unit (OU) within the Active Directory Domain.</summary>
+    /// <summary>Name of the active directory machine. Name of the active directory machine. This optional parameter is used only while creating kerberos volume.</summary>
+    [JsonPropertyName("kerberosAdName")]
+    public string? KerberosAdName { get; set; }
+
+    /// <summary>kdc server IP addresses for the active directory machine. IP address of the KDC server (usually same the DC). This optional parameter is used only while creating kerberos volume.</summary>
+    [JsonPropertyName("kerberosKdcIp")]
+    public string? KerberosKdcIp { get; set; }
+
+    /// <summary>Specifies whether or not the LDAP traffic needs to be secured via TLS. Defaults to false. Specifies whether or not the LDAP traffic needs to be secured via TLS.</summary>
+    [JsonPropertyName("ldapOverTlsEnabled")]
+    public bool? LdapOverTlsEnabled { get; set; }
+
+    /// <summary>Specifies whether or not the LDAP traffic needs to be signed. Defaults to false. Specifies whether or not the LDAP traffic needs to be signed.</summary>
+    [JsonPropertyName("ldapSigningEnabled")]
+    public bool? LdapSigningEnabled { get; set; }
+
+    /// <summary>If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes. Defaults to false. If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.</summary>
+    [JsonPropertyName("localNfsUsersWithLdapAllowed")]
+    public bool? LocalNfsUsersWithLdapAllowed { get; set; }
+
+    /// <summary>The Organizational Unit (OU) within Active Directory where machines will be created. If blank, defaults to CN=Computers. The Organizational Unit (OU) within the Windows Active Directory where machines will be created. If blank, defaults to 'CN=Computers'</summary>
     [JsonPropertyName("organizationalUnit")]
     public string? OrganizationalUnit { get; set; }
+
+    /// <summary>When LDAP over SSL/TLS is enabled, the LDAP client is required to have a base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes. Required if ldap_over_tls_enabled is set to true. When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.</summary>
+    [JsonPropertyName("serverRootCaCertificateSecretRef")]
+    public V1beta1AccountSpecInitProviderActiveDirectoryServerRootCaCertificateSecretRef? ServerRootCaCertificateSecretRef { get; set; }
+
+    /// <summary>The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to Default-First-Site-Name. The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to 'Default-First-Site-Name'</summary>
+    [JsonPropertyName("siteName")]
+    public string? SiteName { get; set; }
 
     /// <summary>The NetBIOS name which should be used for the NetApp SMB Server, which will be registered as a computer account in the AD and used to mount volumes.</summary>
     [JsonPropertyName("smbServerName")]
@@ -351,6 +449,10 @@ public partial class V1beta1AccountSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderActiveDirectory
 {
+    /// <summary>If enabled, AES encryption will be enabled for SMB communication. Defaults to false. If enabled, AES encryption will be enabled for SMB communication.</summary>
+    [JsonPropertyName("aesEncryptionEnabled")]
+    public bool? AesEncryptionEnabled { get; set; }
+
     /// <summary>A list of DNS server IP addresses for the Active Directory domain. Only allows IPv4 address.</summary>
     [JsonPropertyName("dnsServers")]
     public IList<string>? DnsServers { get; set; }
@@ -359,9 +461,33 @@ public partial class V1beta1AccountStatusAtProviderActiveDirectory
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>The Organizational Unit (OU) within the Active Directory Domain.</summary>
+    /// <summary>Name of the active directory machine. Name of the active directory machine. This optional parameter is used only while creating kerberos volume.</summary>
+    [JsonPropertyName("kerberosAdName")]
+    public string? KerberosAdName { get; set; }
+
+    /// <summary>kdc server IP addresses for the active directory machine. IP address of the KDC server (usually same the DC). This optional parameter is used only while creating kerberos volume.</summary>
+    [JsonPropertyName("kerberosKdcIp")]
+    public string? KerberosKdcIp { get; set; }
+
+    /// <summary>Specifies whether or not the LDAP traffic needs to be secured via TLS. Defaults to false. Specifies whether or not the LDAP traffic needs to be secured via TLS.</summary>
+    [JsonPropertyName("ldapOverTlsEnabled")]
+    public bool? LdapOverTlsEnabled { get; set; }
+
+    /// <summary>Specifies whether or not the LDAP traffic needs to be signed. Defaults to false. Specifies whether or not the LDAP traffic needs to be signed.</summary>
+    [JsonPropertyName("ldapSigningEnabled")]
+    public bool? LdapSigningEnabled { get; set; }
+
+    /// <summary>If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes. Defaults to false. If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.</summary>
+    [JsonPropertyName("localNfsUsersWithLdapAllowed")]
+    public bool? LocalNfsUsersWithLdapAllowed { get; set; }
+
+    /// <summary>The Organizational Unit (OU) within Active Directory where machines will be created. If blank, defaults to CN=Computers. The Organizational Unit (OU) within the Windows Active Directory where machines will be created. If blank, defaults to 'CN=Computers'</summary>
     [JsonPropertyName("organizationalUnit")]
     public string? OrganizationalUnit { get; set; }
+
+    /// <summary>The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to Default-First-Site-Name. The Active Directory site the service will limit Domain Controller discovery to. If blank, defaults to 'Default-First-Site-Name'</summary>
+    [JsonPropertyName("siteName")]
+    public string? SiteName { get; set; }
 
     /// <summary>The NetBIOS name which should be used for the NetApp SMB Server, which will be registered as a computer account in the AD and used to mount volumes.</summary>
     [JsonPropertyName("smbServerName")]

@@ -618,6 +618,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderRollingU
     [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
     public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
 
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
+
     /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.</summary>
     [JsonPropertyName("pauseTimeBetweenBatches")]
     public string? PauseTimeBetweenBatches { get; set; }
@@ -1033,6 +1037,23 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderBootDia
     public string? StorageAccountUri { get; set; }
 }
 
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderCustomDataSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderDataDisk
@@ -1091,6 +1112,23 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensi
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtension
@@ -1114,6 +1152,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensi
     /// <summary>A protected_settings_from_key_vault block as defined below.</summary>
     [JsonPropertyName("protectedSettingsFromKeyVault")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsFromKeyVault>? ProtectedSettingsFromKeyVault { get; set; }
+
+    /// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
+    [JsonPropertyName("protectedSettingsSecretRef")]
+    public V1beta1WindowsVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsSecretRef? ProtectedSettingsSecretRef { get; set; }
 
     /// <summary>An ordered list of Extension names which this should be provisioned after.</summary>
     [JsonPropertyName("provisionAfterExtensions")]
@@ -1458,6 +1500,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderRolling
     [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
     public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
 
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
+
     /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.</summary>
     [JsonPropertyName("pauseTimeBetweenBatches")]
     public string? PauseTimeBetweenBatches { get; set; }
@@ -1614,6 +1660,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProvider
     /// <summary>The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the name field. If the value of the name field is not a valid computer_name_prefix, then you must specify computer_name_prefix. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("computerNamePrefix")]
     public string? ComputerNamePrefix { get; set; }
+
+    /// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
+    [JsonPropertyName("customDataSecretRef")]
+    public V1beta1WindowsVirtualMachineScaleSetSpecInitProviderCustomDataSecretRef? CustomDataSecretRef { get; set; }
 
     /// <summary>One or more data_disk blocks as defined below.</summary>
     [JsonPropertyName("dataDisk")]
@@ -2353,6 +2403,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderRolling
     /// <summary>The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.</summary>
     [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
     public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
+
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
 
     /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.</summary>
     [JsonPropertyName("pauseTimeBetweenBatches")]

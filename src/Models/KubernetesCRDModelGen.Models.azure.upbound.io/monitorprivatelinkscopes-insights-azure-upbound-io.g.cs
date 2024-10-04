@@ -68,6 +68,14 @@ public partial class V1beta1MonitorPrivateLinkScopeSpecForProviderResourceGroupN
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopeSpecForProvider
 {
+    /// <summary>The default ingestion access mode for the associated private endpoints in scope. Possible values are Open and PrivateOnly. Defaults to Open.</summary>
+    [JsonPropertyName("ingestionAccessMode")]
+    public string? IngestionAccessMode { get; set; }
+
+    /// <summary>The default query access mode for hte associated private endpoints in scope. Possible values are Open and PrivateOnly. Defaults to Open.</summary>
+    [JsonPropertyName("queryAccessMode")]
+    public string? QueryAccessMode { get; set; }
+
     /// <summary>The name of the Resource Group where the Azure Monitor Private Link Scope should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
@@ -89,6 +97,14 @@ public partial class V1beta1MonitorPrivateLinkScopeSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopeSpecInitProvider
 {
+    /// <summary>The default ingestion access mode for the associated private endpoints in scope. Possible values are Open and PrivateOnly. Defaults to Open.</summary>
+    [JsonPropertyName("ingestionAccessMode")]
+    public string? IngestionAccessMode { get; set; }
+
+    /// <summary>The default query access mode for hte associated private endpoints in scope. Possible values are Open and PrivateOnly. Defaults to Open.</summary>
+    [JsonPropertyName("queryAccessMode")]
+    public string? QueryAccessMode { get; set; }
+
     /// <summary>A mapping of tags which should be assigned to the Azure Monitor Private Link Scope.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -233,6 +249,14 @@ public partial class V1beta1MonitorPrivateLinkScopeStatusAtProvider
     /// <summary>The ID of the Azure Monitor Private Link Scope.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The default ingestion access mode for the associated private endpoints in scope. Possible values are Open and PrivateOnly. Defaults to Open.</summary>
+    [JsonPropertyName("ingestionAccessMode")]
+    public string? IngestionAccessMode { get; set; }
+
+    /// <summary>The default query access mode for hte associated private endpoints in scope. Possible values are Open and PrivateOnly. Defaults to Open.</summary>
+    [JsonPropertyName("queryAccessMode")]
+    public string? QueryAccessMode { get; set; }
 
     /// <summary>The name of the Resource Group where the Azure Monitor Private Link Scope should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

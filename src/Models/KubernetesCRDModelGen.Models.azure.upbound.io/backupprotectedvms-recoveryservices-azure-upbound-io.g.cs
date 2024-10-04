@@ -216,7 +216,7 @@ public partial class V1beta1BackupProtectedVMSpecForProvider
     [JsonPropertyName("recoveryVaultNameSelector")]
     public V1beta1BackupProtectedVMSpecForProviderRecoveryVaultNameSelector? RecoveryVaultNameSelector { get; set; }
 
-    /// <summary>The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the Resource Group associated with the Recovery Services Vault to use. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -441,7 +441,7 @@ public partial class V1beta1BackupProtectedVMSpecInitProvider
     [JsonPropertyName("recoveryVaultNameSelector")]
     public V1beta1BackupProtectedVMSpecInitProviderRecoveryVaultNameSelector? RecoveryVaultNameSelector { get; set; }
 
-    /// <summary>The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the Resource Group associated with the Recovery Services Vault to use. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -618,7 +618,7 @@ public partial class V1beta1BackupProtectedVMStatusAtProvider
     [JsonPropertyName("recoveryVaultName")]
     public string? RecoveryVaultName { get; set; }
 
-    /// <summary>The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the Resource Group associated with the Recovery Services Vault to use. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 

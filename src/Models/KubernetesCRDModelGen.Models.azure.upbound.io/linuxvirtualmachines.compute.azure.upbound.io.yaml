@@ -88,6 +88,9 @@ spec:
                     description: A additional_capabilities block as defined below.
                     items:
                       properties:
+                        hibernationEnabled:
+                          description: Whether to enable the hibernation capability or not.
+                          type: boolean
                         ultraSsdEnabled:
                           description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                           type: boolean
@@ -613,11 +616,31 @@ spec:
                     description: A additional_capabilities block as defined below.
                     items:
                       properties:
+                        hibernationEnabled:
+                          description: Whether to enable the hibernation capability or not.
+                          type: boolean
                         ultraSsdEnabled:
                           description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                           type: boolean
                       type: object
                     type: array
+                  adminPasswordSecretRef:
+                    description: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   adminSshKey:
                     description: One or more admin_ssh_key blocks as defined below. Changing this forces a new resource to be created.
                     items:
@@ -657,6 +680,23 @@ spec:
                   computerName:
                     description: Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the name field. If the value of the name field is not a valid computer_name, then you must specify computer_name. Changing this forces a new resource to be created.
                     type: string
+                  customDataSecretRef:
+                    description: The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   dedicatedHostGroupId:
                     description: The ID of a Dedicated Host Group that this Linux Virtual Machine should be run within. Conflicts with dedicated_host_id.
                     type: string
@@ -1215,6 +1255,9 @@ spec:
                     description: A additional_capabilities block as defined below.
                     items:
                       properties:
+                        hibernationEnabled:
+                          description: Whether to enable the hibernation capability or not.
+                          type: boolean
                         ultraSsdEnabled:
                           description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                           type: boolean
@@ -1669,6 +1712,9 @@ spec:
                   additionalCapabilities:
                     description: A additional_capabilities block as defined below.
                     properties:
+                      hibernationEnabled:
+                        description: Whether to enable the hibernation capability or not.
+                        type: boolean
                       ultraSsdEnabled:
                         description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                         type: boolean
@@ -1779,7 +1825,7 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value.
@@ -1793,7 +1839,7 @@ spec:
                       type: object
                     type: array
                   identity:
-                    description: An identity block as defined below.
+                    description: An identity block as documented below.
                     properties:
                       identityIds:
                         description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine.
@@ -1806,7 +1852,7 @@ spec:
                         type: string
                     type: object
                   licenseType:
-                    description: Specifies the BYOL Type for this Virtual Machine. Possible values are RHEL_BYOS and SLES_BYOS.
+                    description: Specifies the License Type for this Virtual Machine. Possible values are RHEL_BYOS, RHEL_BASE, RHEL_EUS, RHEL_SAPAPPS, RHEL_SAPHA, RHEL_BASESAPAPPS, RHEL_BASESAPHA, SLES_BYOS, SLES_SAP, SLES_HPC.
                     type: string
                   location:
                     description: The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
@@ -2176,6 +2222,9 @@ spec:
                   additionalCapabilities:
                     description: A additional_capabilities block as defined below.
                     properties:
+                      hibernationEnabled:
+                        description: Whether to enable the hibernation capability or not.
+                        type: boolean
                       ultraSsdEnabled:
                         description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                         type: boolean
@@ -2286,7 +2335,7 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value.
@@ -2300,7 +2349,7 @@ spec:
                       type: object
                     type: array
                   identity:
-                    description: An identity block as defined below.
+                    description: An identity block as documented below.
                     properties:
                       identityIds:
                         description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine.
@@ -2313,7 +2362,7 @@ spec:
                         type: string
                     type: object
                   licenseType:
-                    description: Specifies the BYOL Type for this Virtual Machine. Possible values are RHEL_BYOS and SLES_BYOS.
+                    description: Specifies the License Type for this Virtual Machine. Possible values are RHEL_BYOS, RHEL_BASE, RHEL_EUS, RHEL_SAPAPPS, RHEL_SAPHA, RHEL_BASESAPAPPS, RHEL_BASESAPHA, SLES_BYOS, SLES_SAP, SLES_HPC.
                     type: string
                   location:
                     description: The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
@@ -2794,6 +2843,9 @@ spec:
                   additionalCapabilities:
                     description: A additional_capabilities block as defined below.
                     properties:
+                      hibernationEnabled:
+                        description: Whether to enable the hibernation capability or not.
+                        type: boolean
                       ultraSsdEnabled:
                         description: Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.
                         type: boolean
@@ -2870,7 +2922,7 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value.
@@ -2887,7 +2939,7 @@ spec:
                     description: The ID of the Linux Virtual Machine.
                     type: string
                   identity:
-                    description: An identity block as defined below.
+                    description: An identity block as documented below.
                     properties:
                       identityIds:
                         description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Linux Virtual Machine.
@@ -2906,7 +2958,7 @@ spec:
                         type: string
                     type: object
                   licenseType:
-                    description: Specifies the BYOL Type for this Virtual Machine. Possible values are RHEL_BYOS and SLES_BYOS.
+                    description: Specifies the License Type for this Virtual Machine. Possible values are RHEL_BYOS, RHEL_BASE, RHEL_EUS, RHEL_SAPAPPS, RHEL_SAPHA, RHEL_BASESAPAPPS, RHEL_BASESAPHA, SLES_BYOS, SLES_SAP, SLES_HPC.
                     type: string
                   location:
                     description: The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.

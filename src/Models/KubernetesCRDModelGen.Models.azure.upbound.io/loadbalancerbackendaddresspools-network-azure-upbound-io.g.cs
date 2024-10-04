@@ -68,19 +68,19 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbal
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderTunnelInterface
 {
-    /// <summary>The unique identifier of this Gateway Lodbalancer Tunnel Interface.</summary>
+    /// <summary>The unique identifier of this Gateway Load Balancer Tunnel Interface.</summary>
     [JsonPropertyName("identifier")]
     public double? Identifier { get; set; }
 
-    /// <summary>The port number that this Gateway Lodbalancer Tunnel Interface listens to.</summary>
+    /// <summary>The port number that this Gateway Load Balancer Tunnel Interface listens to.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
+    /// <summary>The protocol used for this Gateway Load Balancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.</summary>
+    /// <summary>The traffic type of this Gateway Load Balancer Tunnel Interface. Possible values are None, Internal and External.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -101,6 +101,10 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProvider
     [JsonPropertyName("loadbalancerIdSelector")]
     public V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdSelector? LoadbalancerIdSelector { get; set; }
 
+    /// <summary>The backend address synchronous mode for the Backend Address Pool. Possible values are Automatic and Manual. This is required with virtual_network_id. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("synchronousMode")]
+    public string? SynchronousMode { get; set; }
+
     /// <summary>One or more tunnel_interface blocks as defined below.</summary>
     [JsonPropertyName("tunnelInterface")]
     public IList<V1beta1LoadBalancerBackendAddressPoolSpecForProviderTunnelInterface>? TunnelInterface { get; set; }
@@ -114,19 +118,19 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProviderTunnelInterface
 {
-    /// <summary>The unique identifier of this Gateway Lodbalancer Tunnel Interface.</summary>
+    /// <summary>The unique identifier of this Gateway Load Balancer Tunnel Interface.</summary>
     [JsonPropertyName("identifier")]
     public double? Identifier { get; set; }
 
-    /// <summary>The port number that this Gateway Lodbalancer Tunnel Interface listens to.</summary>
+    /// <summary>The port number that this Gateway Load Balancer Tunnel Interface listens to.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
+    /// <summary>The protocol used for this Gateway Load Balancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.</summary>
+    /// <summary>The traffic type of this Gateway Load Balancer Tunnel Interface. Possible values are None, Internal and External.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -135,6 +139,10 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProviderTunnel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecInitProvider
 {
+    /// <summary>The backend address synchronous mode for the Backend Address Pool. Possible values are Automatic and Manual. This is required with virtual_network_id. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("synchronousMode")]
+    public string? SynchronousMode { get; set; }
+
     /// <summary>One or more tunnel_interface blocks as defined below.</summary>
     [JsonPropertyName("tunnelInterface")]
     public IList<V1beta1LoadBalancerBackendAddressPoolSpecInitProviderTunnelInterface>? TunnelInterface { get; set; }
@@ -280,19 +288,19 @@ public partial class V1beta1LoadBalancerBackendAddressPoolSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProviderTunnelInterface
 {
-    /// <summary>The unique identifier of this Gateway Lodbalancer Tunnel Interface.</summary>
+    /// <summary>The unique identifier of this Gateway Load Balancer Tunnel Interface.</summary>
     [JsonPropertyName("identifier")]
     public double? Identifier { get; set; }
 
-    /// <summary>The port number that this Gateway Lodbalancer Tunnel Interface listens to.</summary>
+    /// <summary>The port number that this Gateway Load Balancer Tunnel Interface listens to.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
+    /// <summary>The protocol used for this Gateway Load Balancer Tunnel Interface. Possible values are None, Native and VXLAN.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.</summary>
+    /// <summary>The traffic type of this Gateway Load Balancer Tunnel Interface. Possible values are None, Internal and External.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -324,6 +332,10 @@ public partial class V1beta1LoadBalancerBackendAddressPoolStatusAtProvider
     /// <summary>An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.</summary>
     [JsonPropertyName("outboundRules")]
     public IList<string>? OutboundRules { get; set; }
+
+    /// <summary>The backend address synchronous mode for the Backend Address Pool. Possible values are Automatic and Manual. This is required with virtual_network_id. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("synchronousMode")]
+    public string? SynchronousMode { get; set; }
 
     /// <summary>One or more tunnel_interface blocks as defined below.</summary>
     [JsonPropertyName("tunnelInterface")]

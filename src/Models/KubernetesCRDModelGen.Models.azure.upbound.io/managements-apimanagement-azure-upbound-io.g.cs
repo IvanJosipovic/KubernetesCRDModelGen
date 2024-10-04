@@ -699,13 +699,51 @@ public partial class V1beta1ManagementSpecInitProviderAdditionalLocation
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>The password for the certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagementSpecInitProviderCertificateCertificatePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementSpecInitProviderCertificate
 {
+    /// <summary>The password for the certificate.</summary>
+    [JsonPropertyName("certificatePasswordSecretRef")]
+    public V1beta1ManagementSpecInitProviderCertificateCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
+
     /// <summary>The name of the Certificate Store where this certificate should be stored. Possible values are CertificateAuthority and Root.</summary>
     [JsonPropertyName("storeName")]
     public string? StoreName { get; set; }
+}
+
+/// <summary>A base64-encoded validation key to validate, that a request is coming from Azure API Management.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagementSpecInitProviderDelegationValidationKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -723,6 +761,10 @@ public partial class V1beta1ManagementSpecInitProviderDelegation
     /// <summary>Should user registration requests be delegated to an external url? Defaults to false.</summary>
     [JsonPropertyName("userRegistrationEnabled")]
     public bool? UserRegistrationEnabled { get; set; }
+
+    /// <summary>A base64-encoded validation key to validate, that a request is coming from Azure API Management.</summary>
+    [JsonPropertyName("validationKeySecretRef")]
+    public V1beta1ManagementSpecInitProviderDelegationValidationKeySecretRef? ValidationKeySecretRef { get; set; }
 }
 
 /// <summary></summary>

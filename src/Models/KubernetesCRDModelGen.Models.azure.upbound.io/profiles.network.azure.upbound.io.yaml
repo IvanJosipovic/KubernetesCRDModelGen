@@ -1022,7 +1022,7 @@ spec:
                   tags:
                     additionalProperties:
                       type: string
-                    description: A mapping of tags to assign to the resource.
+                    description: A mapping of tags assigned to the resource.
                     type: object
                     x-kubernetes-map-type: granular
                 type: object
@@ -1159,7 +1159,7 @@ spec:
                   tags:
                     additionalProperties:
                       type: string
-                    description: A mapping of tags to assign to the resource.
+                    description: A mapping of tags assigned to the resource.
                     type: object
                     x-kubernetes-map-type: granular
                 type: object
@@ -1417,7 +1417,7 @@ spec:
                   tags:
                     additionalProperties:
                       type: string
-                    description: A mapping of tags to assign to the resource.
+                    description: A mapping of tags assigned to the resource.
                     type: object
                     x-kubernetes-map-type: granular
                 type: object

@@ -409,6 +409,10 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProvider
     [JsonPropertyName("peerVirtualNetworkGatewayIdSelector")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderPeerVirtualNetworkGatewayIdSelector? PeerVirtualNetworkGatewayIdSelector { get; set; }
 
+    /// <summary>Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.</summary>
+    [JsonPropertyName("privateLinkFastPathEnabled")]
+    public bool? PrivateLinkFastPathEnabled { get; set; }
+
     /// <summary>The name of the resource group in which to create the connection Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
@@ -456,6 +460,23 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecForProvider
     /// <summary>Selector for a VirtualNetworkGateway in network to populate virtualNetworkGatewayId.</summary>
     [JsonPropertyName("virtualNetworkGatewayIdSelector")]
     public V1beta1VirtualNetworkGatewayConnectionSpecForProviderVirtualNetworkGatewayIdSelector? VirtualNetworkGatewayIdSelector { get; set; }
+}
+
+/// <summary>The authorization key associated with the Express Route Circuit. This field is required only if the type is an ExpressRoute connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderAuthorizationKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -620,6 +641,23 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerV
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The shared IPSec key. A key could be provided if a Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderSharedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderTrafficSelectorPolicy
@@ -693,6 +731,10 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProviderVirtu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProvider
 {
+    /// <summary>The authorization key associated with the Express Route Circuit. This field is required only if the type is an ExpressRoute connection.</summary>
+    [JsonPropertyName("authorizationKeySecretRef")]
+    public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderAuthorizationKeySecretRef? AuthorizationKeySecretRef { get; set; }
+
     /// <summary>Connection mode to use. Possible values are Default, InitiatorOnly and ResponderOnly. Defaults to Default. Changing this value will force a resource to be created.</summary>
     [JsonPropertyName("connectionMode")]
     public string? ConnectionMode { get; set; }
@@ -765,9 +807,17 @@ public partial class V1beta1VirtualNetworkGatewayConnectionSpecInitProvider
     [JsonPropertyName("peerVirtualNetworkGatewayIdSelector")]
     public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderPeerVirtualNetworkGatewayIdSelector? PeerVirtualNetworkGatewayIdSelector { get; set; }
 
+    /// <summary>Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.</summary>
+    [JsonPropertyName("privateLinkFastPathEnabled")]
+    public bool? PrivateLinkFastPathEnabled { get; set; }
+
     /// <summary>The routing weight. Defaults to 10.</summary>
     [JsonPropertyName("routingWeight")]
     public double? RoutingWeight { get; set; }
+
+    /// <summary>The shared IPSec key. A key could be provided if a Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.</summary>
+    [JsonPropertyName("sharedKeySecretRef")]
+    public V1beta1VirtualNetworkGatewayConnectionSpecInitProviderSharedKeySecretRef? SharedKeySecretRef { get; set; }
 
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
@@ -1056,6 +1106,10 @@ public partial class V1beta1VirtualNetworkGatewayConnectionStatusAtProvider
     /// <summary>The ID of the peer virtual network gateway when creating a VNet-to-VNet connection (i.e. when type is Vnet2Vnet). The peer Virtual Network Gateway can be in the same or in a different subscription. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("peerVirtualNetworkGatewayId")]
     public string? PeerVirtualNetworkGatewayId { get; set; }
+
+    /// <summary>Bypass the Express Route gateway when accessing private-links. When enabled express_route_gateway_bypass must be set to true. Defaults to false.</summary>
+    [JsonPropertyName("privateLinkFastPathEnabled")]
+    public bool? PrivateLinkFastPathEnabled { get; set; }
 
     /// <summary>The name of the resource group in which to create the connection Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

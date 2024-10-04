@@ -286,6 +286,30 @@ public partial class V1beta1VolumeSpecForProviderExportPolicyRule
     [JsonPropertyName("allowedClients")]
     public IList<string>? AllowedClients { get; set; }
 
+    /// <summary>Is Kerberos 5i read-only permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5IReadOnlyEnabled")]
+    public bool? Kerberos5IReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5i read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5IReadWriteEnabled")]
+    public bool? Kerberos5IReadWriteEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5p read-only permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5PReadOnlyEnabled")]
+    public bool? Kerberos5PReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5p read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5PReadWriteEnabled")]
+    public bool? Kerberos5PReadWriteEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5 read-only access permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5ReadOnlyEnabled")]
+    public bool? Kerberos5ReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5 read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5ReadWriteEnabled")]
+    public bool? Kerberos5ReadWriteEnabled { get; set; }
+
     /// <summary>A list of allowed protocols. Valid values include CIFS, NFSv3, or NFSv4.1. Only one value is supported at this time. This replaces the previous arguments: cifs_enabled, nfsv3_enabled and nfsv4_enabled.</summary>
     [JsonPropertyName("protocolsEnabled")]
     public IList<string>? ProtocolsEnabled { get; set; }
@@ -523,6 +547,10 @@ public partial class V1beta1VolumeSpecForProvider
     [JsonPropertyName("exportPolicyRule")]
     public IList<V1beta1VolumeSpecForProviderExportPolicyRule>? ExportPolicyRule { get; set; }
 
+    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
+    [JsonPropertyName("kerberosEnabled")]
+    public bool? KerberosEnabled { get; set; }
+
     /// <summary>The Private Endpoint ID for Key Vault, which is required when using customer-managed keys. This is required with encryption_key_source. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyVaultPrivateEndpointId")]
     public string? KeyVaultPrivateEndpointId { get; set; }
@@ -574,6 +602,10 @@ public partial class V1beta1VolumeSpecForProvider
     /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
     [JsonPropertyName("smbAccessBasedEnumerationEnabled")]
     public bool? SmbAccessBasedEnumerationEnabled { get; set; }
+
+    /// <summary>Enable SMB Continuous Availability. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
+    [JsonPropertyName("smbContinuousAvailabilityEnabled")]
+    public bool? SmbContinuousAvailabilityEnabled { get; set; }
 
     /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
     [JsonPropertyName("smbNonBrowsableEnabled")]
@@ -838,6 +870,30 @@ public partial class V1beta1VolumeSpecInitProviderExportPolicyRule
     [JsonPropertyName("allowedClients")]
     public IList<string>? AllowedClients { get; set; }
 
+    /// <summary>Is Kerberos 5i read-only permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5IReadOnlyEnabled")]
+    public bool? Kerberos5IReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5i read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5IReadWriteEnabled")]
+    public bool? Kerberos5IReadWriteEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5p read-only permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5PReadOnlyEnabled")]
+    public bool? Kerberos5PReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5p read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5PReadWriteEnabled")]
+    public bool? Kerberos5PReadWriteEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5 read-only access permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5ReadOnlyEnabled")]
+    public bool? Kerberos5ReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5 read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5ReadWriteEnabled")]
+    public bool? Kerberos5ReadWriteEnabled { get; set; }
+
     /// <summary>A list of allowed protocols. Valid values include CIFS, NFSv3, or NFSv4.1. Only one value is supported at this time. This replaces the previous arguments: cifs_enabled, nfsv3_enabled and nfsv4_enabled.</summary>
     [JsonPropertyName("protocolsEnabled")]
     public IList<string>? ProtocolsEnabled { get; set; }
@@ -951,6 +1007,10 @@ public partial class V1beta1VolumeSpecInitProvider
     [JsonPropertyName("exportPolicyRule")]
     public IList<V1beta1VolumeSpecInitProviderExportPolicyRule>? ExportPolicyRule { get; set; }
 
+    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
+    [JsonPropertyName("kerberosEnabled")]
+    public bool? KerberosEnabled { get; set; }
+
     /// <summary>The Private Endpoint ID for Key Vault, which is required when using customer-managed keys. This is required with encryption_key_source. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyVaultPrivateEndpointId")]
     public string? KeyVaultPrivateEndpointId { get; set; }
@@ -978,6 +1038,10 @@ public partial class V1beta1VolumeSpecInitProvider
     /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
     [JsonPropertyName("smbAccessBasedEnumerationEnabled")]
     public bool? SmbAccessBasedEnumerationEnabled { get; set; }
+
+    /// <summary>Enable SMB Continuous Availability. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
+    [JsonPropertyName("smbContinuousAvailabilityEnabled")]
+    public bool? SmbContinuousAvailabilityEnabled { get; set; }
 
     /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
     [JsonPropertyName("smbNonBrowsableEnabled")]
@@ -1190,6 +1254,30 @@ public partial class V1beta1VolumeStatusAtProviderExportPolicyRule
     [JsonPropertyName("allowedClients")]
     public IList<string>? AllowedClients { get; set; }
 
+    /// <summary>Is Kerberos 5i read-only permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5IReadOnlyEnabled")]
+    public bool? Kerberos5IReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5i read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5IReadWriteEnabled")]
+    public bool? Kerberos5IReadWriteEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5p read-only permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5PReadOnlyEnabled")]
+    public bool? Kerberos5PReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5p read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5PReadWriteEnabled")]
+    public bool? Kerberos5PReadWriteEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5 read-only access permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5ReadOnlyEnabled")]
+    public bool? Kerberos5ReadOnlyEnabled { get; set; }
+
+    /// <summary>Is Kerberos 5 read/write permitted to this volume?</summary>
+    [JsonPropertyName("kerberos5ReadWriteEnabled")]
+    public bool? Kerberos5ReadWriteEnabled { get; set; }
+
     /// <summary>A list of allowed protocols. Valid values include CIFS, NFSv3, or NFSv4.1. Only one value is supported at this time. This replaces the previous arguments: cifs_enabled, nfsv3_enabled and nfsv4_enabled.</summary>
     [JsonPropertyName("protocolsEnabled")]
     public IList<string>? ProtocolsEnabled { get; set; }
@@ -1247,6 +1335,10 @@ public partial class V1beta1VolumeStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
+    [JsonPropertyName("kerberosEnabled")]
+    public bool? KerberosEnabled { get; set; }
+
     /// <summary>The Private Endpoint ID for Key Vault, which is required when using customer-managed keys. This is required with encryption_key_source. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyVaultPrivateEndpointId")]
     public string? KeyVaultPrivateEndpointId { get; set; }
@@ -1286,6 +1378,10 @@ public partial class V1beta1VolumeStatusAtProvider
     /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
     [JsonPropertyName("smbAccessBasedEnumerationEnabled")]
     public bool? SmbAccessBasedEnumerationEnabled { get; set; }
+
+    /// <summary>Enable SMB Continuous Availability. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
+    [JsonPropertyName("smbContinuousAvailabilityEnabled")]
+    public bool? SmbContinuousAvailabilityEnabled { get; set; }
 
     /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
     [JsonPropertyName("smbNonBrowsableEnabled")]

@@ -12,6 +12,10 @@ namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalCapabilities
 {
+    /// <summary>Whether to enable the hibernation capability or not.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
+
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
@@ -626,6 +630,10 @@ public partial class V1beta1WindowsVirtualMachineSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalCapabilities
 {
+    /// <summary>Whether to enable the hibernation capability or not.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
+
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
@@ -647,6 +655,23 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderBootDiagnostics
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
     [JsonPropertyName("storageAccountUri")]
     public string? StorageAccountUri { get; set; }
+}
+
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsVirtualMachineSpecInitProviderCustomDataSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -939,6 +964,10 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProvider
     /// <summary>Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the name field. If the value of the name field is not a valid computer_name, then you must specify computer_name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("computerName")]
     public string? ComputerName { get; set; }
+
+    /// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("customDataSecretRef")]
+    public V1beta1WindowsVirtualMachineSpecInitProviderCustomDataSecretRef? CustomDataSecretRef { get; set; }
 
     /// <summary>The ID of a Dedicated Host Group that this Windows Virtual Machine should be run within. Conflicts with dedicated_host_id.</summary>
     [JsonPropertyName("dedicatedHostGroupId")]
@@ -1241,6 +1270,10 @@ public partial class V1beta1WindowsVirtualMachineSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineStatusAtProviderAdditionalCapabilities
 {
+    /// <summary>Whether to enable the hibernation capability or not.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
+
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }

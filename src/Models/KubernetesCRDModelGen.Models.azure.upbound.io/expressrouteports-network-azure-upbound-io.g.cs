@@ -424,6 +424,14 @@ public partial class V1beta1ExpressRoutePortStatusAtProviderIdentity
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
+    /// <summary>The ID of the Express Route Port.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The ID of the Express Route Port.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this Express Route Port. Only possible value is UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }

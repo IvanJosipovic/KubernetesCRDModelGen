@@ -345,9 +345,17 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderPodSubnetIdS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderUpgradeSettings
 {
+    /// <summary>The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.</summary>
+    [JsonPropertyName("drainTimeoutInMinutes")]
+    public double? DrainTimeoutInMinutes { get; set; }
+
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public double? NodeSoakDurationInMinutes { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -893,9 +901,17 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderPodSubnetId
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderUpgradeSettings
 {
+    /// <summary>The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.</summary>
+    [JsonPropertyName("drainTimeoutInMinutes")]
+    public double? DrainTimeoutInMinutes { get; set; }
+
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public double? NodeSoakDurationInMinutes { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1505,9 +1521,17 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetwork
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderUpgradeSettings
 {
+    /// <summary>The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.</summary>
+    [JsonPropertyName("drainTimeoutInMinutes")]
+    public double? DrainTimeoutInMinutes { get; set; }
+
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public double? NodeSoakDurationInMinutes { get; set; }
 }
 
 /// <summary></summary>

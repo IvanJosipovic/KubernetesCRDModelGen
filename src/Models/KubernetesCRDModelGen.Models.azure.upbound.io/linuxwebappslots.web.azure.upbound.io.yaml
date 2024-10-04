@@ -1335,7 +1335,25 @@ spec:
                                         type: object
                                       type: array
                                     slowRequest:
-                                      description: One or more slow_request blocks as defined above.
+                                      description: A slow_request block as defined above.
+                                      items:
+                                        properties:
+                                          count:
+                                            description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
+                                            type: number
+                                          interval:
+                                            description: The time interval in the form hh:mm:ss.
+                                            type: string
+                                          path:
+                                            description: The path to which this rule status code applies.
+                                            type: string
+                                          timeTaken:
+                                            description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
+                                            type: string
+                                        type: object
+                                      type: array
+                                    slowRequestWithPath:
+                                      description: One or more slow_request_with_path blocks as defined above.
                                       items:
                                         properties:
                                           count:
@@ -2081,6 +2099,26 @@ spec:
 
                                   The ID of the Client to use to authenticate with Azure Active Directory.
                                 type: string
+                              clientSecretSecretRef:
+                                description: >-
+                                  The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name.
+
+                                  The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               clientSecretSettingName:
                                 description: >-
                                   The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
@@ -2128,6 +2166,26 @@ spec:
 
                                   The App ID of the Facebook app used for login.
                                 type: string
+                              appSecretSecretRef:
+                                description: >-
+                                  The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name.
+
+                                  The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               appSecretSettingName:
                                 description: >-
                                   The app setting name that contains the app_secret value used for Facebook Login.
@@ -2154,6 +2212,26 @@ spec:
 
                                   The ID of the GitHub app used for login.
                                 type: string
+                              clientSecretSecretRef:
+                                description: >-
+                                  The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name.
+
+                                  The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               clientSecretSettingName:
                                 description: >-
                                   The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
@@ -2180,6 +2258,26 @@ spec:
 
                                   The OpenID Connect Client ID for the Google web application.
                                 type: string
+                              clientSecretSecretRef:
+                                description: >-
+                                  The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name.
+
+                                  The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               clientSecretSettingName:
                                 description: >-
                                   The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
@@ -2212,6 +2310,26 @@ spec:
 
                                   The OAuth 2.0 client ID that was created for the app used for authentication.
                                 type: string
+                              clientSecretSecretRef:
+                                description: >-
+                                  The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name.
+
+                                  The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               clientSecretSettingName:
                                 description: >-
                                   The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
@@ -2256,6 +2374,26 @@ spec:
 
                                   The OAuth 1.0a consumer key of the Twitter application used for sign-in.
                                 type: string
+                              consumerSecretSecretRef:
+                                description: >-
+                                  The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name.
+
+                                  The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               consumerSecretSettingName:
                                 description: >-
                                   The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
@@ -2944,6 +3082,23 @@ spec:
                                 type: string
                               dockerImageTag:
                                 type: string
+                              dockerRegistryPasswordSecretRef:
+                                description: The User Name to use for authentication against the registry to pull the image.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                               dockerRegistryUrl:
                                 description: The URL of the container registry where the docker_image_name is located. e.g. https://index.docker.io or https://mcr.microsoft.com. This value is required with docker_image_name.
                                 type: string
@@ -3015,7 +3170,25 @@ spec:
                                         type: object
                                       type: array
                                     slowRequest:
-                                      description: One or more slow_request blocks as defined above.
+                                      description: A slow_request block as defined above.
+                                      items:
+                                        properties:
+                                          count:
+                                            description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
+                                            type: number
+                                          interval:
+                                            description: The time interval in the form hh:mm:ss.
+                                            type: string
+                                          path:
+                                            description: The path to which this rule status code applies.
+                                            type: string
+                                          timeTaken:
+                                            description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
+                                            type: string
+                                        type: object
+                                      type: array
+                                    slowRequestWithPath:
+                                      description: One or more slow_request_with_path blocks as defined above.
                                       items:
                                         properties:
                                           count:
@@ -4870,7 +5043,25 @@ spec:
                                         type: object
                                       type: array
                                     slowRequest:
-                                      description: One or more slow_request blocks as defined above.
+                                      description: A slow_request block as defined above.
+                                      items:
+                                        properties:
+                                          count:
+                                            description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
+                                            type: number
+                                          interval:
+                                            description: The time interval in the form hh:mm:ss.
+                                            type: string
+                                          path:
+                                            description: The path to which this rule status code applies.
+                                            type: string
+                                          timeTaken:
+                                            description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
+                                            type: string
+                                        type: object
+                                      type: array
+                                    slowRequestWithPath:
+                                      description: One or more slow_request_with_path blocks as defined above.
                                       items:
                                         properties:
                                           count:
@@ -5837,7 +6028,7 @@ spec:
                             x-kubernetes-map-type: granular
                           tenantAuthEndpoint:
                             description: >-
-                              The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/
+                              The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/
 
                               The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
                             type: string
@@ -6524,7 +6715,7 @@ spec:
                                     type: string
                                 type: object
                               slowRequest:
-                                description: One or more slow_request blocks as defined above.
+                                description: A slow_request block as defined above.
                                 properties:
                                   count:
                                     description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
@@ -6539,6 +6730,24 @@ spec:
                                     description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
                                     type: string
                                 type: object
+                              slowRequestWithPath:
+                                description: One or more slow_request_with_path blocks as defined above.
+                                items:
+                                  properties:
+                                    count:
+                                      description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
+                                      type: number
+                                    interval:
+                                      description: The time interval in the form hh:mm:ss.
+                                      type: string
+                                    path:
+                                      description: The path to which this rule status code applies.
+                                      type: string
+                                    timeTaken:
+                                      description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
+                                      type: string
+                                  type: object
+                                type: array
                               statusCode:
                                 description: One or more status_code blocks as defined above.
                                 items:
@@ -6605,7 +6814,7 @@ spec:
                         description: >-
                           The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path.
 
-                          The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
+                          The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`
                         type: number
                       healthCheckPath:
                         description: The path to the Health Check.
@@ -7637,7 +7846,7 @@ spec:
                             x-kubernetes-map-type: granular
                           tenantAuthEndpoint:
                             description: >-
-                              The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/
+                              The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/
 
                               The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
                             type: string
@@ -8330,7 +8539,7 @@ spec:
                                     type: string
                                 type: object
                               slowRequest:
-                                description: One or more slow_request blocks as defined above.
+                                description: A slow_request block as defined above.
                                 properties:
                                   count:
                                     description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
@@ -8345,6 +8554,24 @@ spec:
                                     description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
                                     type: string
                                 type: object
+                              slowRequestWithPath:
+                                description: One or more slow_request_with_path blocks as defined above.
+                                items:
+                                  properties:
+                                    count:
+                                      description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
+                                      type: number
+                                    interval:
+                                      description: The time interval in the form hh:mm:ss.
+                                      type: string
+                                    path:
+                                      description: The path to which this rule status code applies.
+                                      type: string
+                                    timeTaken:
+                                      description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
+                                      type: string
+                                  type: object
+                                type: array
                               statusCode:
                                 description: One or more status_code blocks as defined above.
                                 items:
@@ -8411,7 +8638,7 @@ spec:
                         description: >-
                           The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path.
 
-                          The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
+                          The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`
                         type: number
                       healthCheckPath:
                         description: The path to the Health Check.
@@ -9441,7 +9668,7 @@ spec:
                             x-kubernetes-map-type: granular
                           tenantAuthEndpoint:
                             description: >-
-                              The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/
+                              The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/
 
                               The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
                             type: string
@@ -10132,7 +10359,7 @@ spec:
                                     type: string
                                 type: object
                               slowRequest:
-                                description: One or more slow_request blocks as defined above.
+                                description: A slow_request block as defined above.
                                 properties:
                                   count:
                                     description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
@@ -10147,6 +10374,24 @@ spec:
                                     description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
                                     type: string
                                 type: object
+                              slowRequestWithPath:
+                                description: One or more slow_request_with_path blocks as defined above.
+                                items:
+                                  properties:
+                                    count:
+                                      description: The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.
+                                      type: number
+                                    interval:
+                                      description: The time interval in the form hh:mm:ss.
+                                      type: string
+                                    path:
+                                      description: The path to which this rule status code applies.
+                                      type: string
+                                    timeTaken:
+                                      description: The threshold of time passed to qualify as a Slow Request in hh:mm:ss.
+                                      type: string
+                                  type: object
+                                type: array
                               statusCode:
                                 description: One or more status_code blocks as defined above.
                                 items:
@@ -10216,7 +10461,7 @@ spec:
                         description: >-
                           The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path.
 
-                          The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
+                          The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`
                         type: number
                       healthCheckPath:
                         description: The path to the Health Check.

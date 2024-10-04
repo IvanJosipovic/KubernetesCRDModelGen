@@ -408,6 +408,10 @@ public partial class V1beta1MonitorActivityLogAlertSpecForProvider
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary>The Azure Region where the activity log alert rule should exist. Changing this forces a new resource to be created. Defaults to global.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
     /// <summary>The name of the activity log alert. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -841,6 +845,10 @@ public partial class V1beta1MonitorActivityLogAlertSpecInitProvider
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary>The Azure Region where the activity log alert rule should exist. Changing this forces a new resource to be created. Defaults to global.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
     /// <summary>The name of the activity log alert. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -1169,6 +1177,10 @@ public partial class V1beta1MonitorActivityLogAlertStatusAtProvider
     /// <summary>The ID of the activity log alert.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The Azure Region where the activity log alert rule should exist. Changing this forces a new resource to be created. Defaults to global.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
 
     /// <summary>The name of the activity log alert. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]

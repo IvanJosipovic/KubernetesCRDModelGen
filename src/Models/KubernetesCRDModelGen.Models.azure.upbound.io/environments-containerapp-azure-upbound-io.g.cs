@@ -265,7 +265,7 @@ public partial class V1beta1EnvironmentSpecForProviderWorkloadProfile
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Workload profile type for the workloads to run on. Possible values include D4, D8, D16, D32, E4, E8, E16 and E32.</summary>
+    /// <summary>Workload profile type for the workloads to run on. Possible values include Consumption, D4, D8, D16, D32, E4, E8, E16 and E32.</summary>
     [JsonPropertyName("workloadProfileType")]
     public string? WorkloadProfileType { get; set; }
 }
@@ -321,6 +321,10 @@ public partial class V1beta1EnvironmentSpecForProvider
     /// <summary>Selector for a Workspace in operationalinsights to populate logAnalyticsWorkspaceId.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceIdSelector")]
     public V1beta1EnvironmentSpecForProviderLogAnalyticsWorkspaceIdSelector? LogAnalyticsWorkspaceIdSelector { get; set; }
+
+    /// <summary>Should mutual transport layer security (mTLS) be enabled? Defaults to false. Should mutual transport layer security (mTLS) be enabled? Defaults to `false`. **Note:** This feature is in public preview. Enabling mTLS for your applications may increase response latency and reduce maximum throughput in high-load scenarios.</summary>
+    [JsonPropertyName("mutualTlsEnabled")]
+    public bool? MutualTlsEnabled { get; set; }
 
     /// <summary>The name of the resource group in which the Container App Environment is to be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
@@ -548,7 +552,7 @@ public partial class V1beta1EnvironmentSpecInitProviderWorkloadProfile
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Workload profile type for the workloads to run on. Possible values include D4, D8, D16, D32, E4, E8, E16 and E32.</summary>
+    /// <summary>Workload profile type for the workloads to run on. Possible values include Consumption, D4, D8, D16, D32, E4, E8, E16 and E32.</summary>
     [JsonPropertyName("workloadProfileType")]
     public string? WorkloadProfileType { get; set; }
 }
@@ -604,6 +608,10 @@ public partial class V1beta1EnvironmentSpecInitProvider
     /// <summary>Selector for a Workspace in operationalinsights to populate logAnalyticsWorkspaceId.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceIdSelector")]
     public V1beta1EnvironmentSpecInitProviderLogAnalyticsWorkspaceIdSelector? LogAnalyticsWorkspaceIdSelector { get; set; }
+
+    /// <summary>Should mutual transport layer security (mTLS) be enabled? Defaults to false. Should mutual transport layer security (mTLS) be enabled? Defaults to `false`. **Note:** This feature is in public preview. Enabling mTLS for your applications may increase response latency and reduce maximum throughput in high-load scenarios.</summary>
+    [JsonPropertyName("mutualTlsEnabled")]
+    public bool? MutualTlsEnabled { get; set; }
 
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
@@ -766,7 +774,7 @@ public partial class V1beta1EnvironmentStatusAtProviderWorkloadProfile
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Workload profile type for the workloads to run on. Possible values include D4, D8, D16, D32, E4, E8, E16 and E32.</summary>
+    /// <summary>Workload profile type for the workloads to run on. Possible values include Consumption, D4, D8, D16, D32, E4, E8, E16 and E32.</summary>
     [JsonPropertyName("workloadProfileType")]
     public string? WorkloadProfileType { get; set; }
 }
@@ -775,6 +783,10 @@ public partial class V1beta1EnvironmentStatusAtProviderWorkloadProfile
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProvider
 {
+    /// <summary>The ID of the Custom Domain Verification for this Container App Environment. The ID of the Custom Domain Verification for this Container App Environment.</summary>
+    [JsonPropertyName("customDomainVerificationId")]
+    public string? CustomDomainVerificationId { get; set; }
+
     /// <summary>The default, publicly resolvable, name of this Container App Environment. The default publicly resolvable name of this Container App Environment</summary>
     [JsonPropertyName("defaultDomain")]
     public string? DefaultDomain { get; set; }
@@ -806,6 +818,10 @@ public partial class V1beta1EnvironmentStatusAtProvider
     /// <summary>The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. Changing this forces a new resource to be created. The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
+
+    /// <summary>Should mutual transport layer security (mTLS) be enabled? Defaults to false. Should mutual transport layer security (mTLS) be enabled? Defaults to `false`. **Note:** This feature is in public preview. Enabling mTLS for your applications may increase response latency and reduce maximum throughput in high-load scenarios.</summary>
+    [JsonPropertyName("mutualTlsEnabled")]
+    public bool? MutualTlsEnabled { get; set; }
 
     /// <summary>The IP range, in CIDR notation, that is reserved for environment infrastructure IP addresses. The IP range, in CIDR notation, that is reserved for environment infrastructure IP addresses.</summary>
     [JsonPropertyName("platformReservedCidr")]

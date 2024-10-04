@@ -192,6 +192,22 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProvider
     [JsonPropertyName("allowVirtualNetworkAccess")]
     public bool? AllowVirtualNetworkAccess { get; set; }
 
+    /// <summary>A list of local Subnet names that are Subnet peered with remote Virtual Network.</summary>
+    [JsonPropertyName("localSubnetNames")]
+    public IList<string>? LocalSubnetNames { get; set; }
+
+    /// <summary>Specifies whether only IPv6 address space is peered for Subnet peering. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("onlyIpv6PeeringEnabled")]
+    public bool? OnlyIpv6PeeringEnabled { get; set; }
+
+    /// <summary>Specifies whether complete Virtual Network address space is peered. Defaults to true. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("peerCompleteVirtualNetworksEnabled")]
+    public bool? PeerCompleteVirtualNetworksEnabled { get; set; }
+
+    /// <summary>A list of remote Subnet names from remote Virtual Network that are Subnet peered.</summary>
+    [JsonPropertyName("remoteSubnetNames")]
+    public IList<string>? RemoteSubnetNames { get; set; }
+
     /// <summary>The full Azure resource ID of the remote virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("remoteVirtualNetworkId")]
     public string? RemoteVirtualNetworkId { get; set; }
@@ -308,6 +324,22 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProvider
     /// <summary>Controls if the VMs in the remote virtual network can access VMs in the local virtual network. Defaults to true.</summary>
     [JsonPropertyName("allowVirtualNetworkAccess")]
     public bool? AllowVirtualNetworkAccess { get; set; }
+
+    /// <summary>A list of local Subnet names that are Subnet peered with remote Virtual Network.</summary>
+    [JsonPropertyName("localSubnetNames")]
+    public IList<string>? LocalSubnetNames { get; set; }
+
+    /// <summary>Specifies whether only IPv6 address space is peered for Subnet peering. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("onlyIpv6PeeringEnabled")]
+    public bool? OnlyIpv6PeeringEnabled { get; set; }
+
+    /// <summary>Specifies whether complete Virtual Network address space is peered. Defaults to true. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("peerCompleteVirtualNetworksEnabled")]
+    public bool? PeerCompleteVirtualNetworksEnabled { get; set; }
+
+    /// <summary>A list of remote Subnet names from remote Virtual Network that are Subnet peered.</summary>
+    [JsonPropertyName("remoteSubnetNames")]
+    public IList<string>? RemoteSubnetNames { get; set; }
 
     /// <summary>The full Azure resource ID of the remote virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("remoteVirtualNetworkId")]
@@ -481,6 +513,22 @@ public partial class V1beta1VirtualNetworkPeeringStatusAtProvider
     /// <summary>The ID of the Virtual Network Peering.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>A list of local Subnet names that are Subnet peered with remote Virtual Network.</summary>
+    [JsonPropertyName("localSubnetNames")]
+    public IList<string>? LocalSubnetNames { get; set; }
+
+    /// <summary>Specifies whether only IPv6 address space is peered for Subnet peering. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("onlyIpv6PeeringEnabled")]
+    public bool? OnlyIpv6PeeringEnabled { get; set; }
+
+    /// <summary>Specifies whether complete Virtual Network address space is peered. Defaults to true. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("peerCompleteVirtualNetworksEnabled")]
+    public bool? PeerCompleteVirtualNetworksEnabled { get; set; }
+
+    /// <summary>A list of remote Subnet names from remote Virtual Network that are Subnet peered.</summary>
+    [JsonPropertyName("remoteSubnetNames")]
+    public IList<string>? RemoteSubnetNames { get; set; }
 
     /// <summary>The full Azure resource ID of the remote virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("remoteVirtualNetworkId")]

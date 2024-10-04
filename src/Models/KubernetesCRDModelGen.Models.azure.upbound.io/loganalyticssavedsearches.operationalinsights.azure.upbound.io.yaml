@@ -98,7 +98,6 @@ spec:
                     items:
                       type: string
                     type: array
-                    x-kubernetes-list-type: set
                   logAnalyticsWorkspaceId:
                     description: Specifies the ID of the Log Analytics Workspace that the Saved Search will be associated with. Changing this forces a new resource to be created.
                     type: string
@@ -234,7 +233,6 @@ spec:
                     items:
                       type: string
                     type: array
-                    x-kubernetes-list-type: set
                   query:
                     description: The query expression for the saved search. Changing this forces a new resource to be created.
                     type: string
@@ -479,7 +477,6 @@ spec:
                     items:
                       type: string
                     type: array
-                    x-kubernetes-list-type: set
                   id:
                     description: The Log Analytics Saved Search ID.
                     type: string

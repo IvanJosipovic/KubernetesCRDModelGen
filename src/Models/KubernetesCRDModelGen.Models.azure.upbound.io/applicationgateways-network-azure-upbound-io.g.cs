@@ -2207,10 +2207,48 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSku
     public string? Tier { get; set; }
 }
 
+/// <summary>The base64-encoded PFX certificate data. Required if key_vault_secret_id is not set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificateDataSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Password for the pfx file specified in data. Required if data is set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificatePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificate
 {
+    /// <summary>The base64-encoded PFX certificate data. Required if key_vault_secret_id is not set.</summary>
+    [JsonPropertyName("dataSecretRef")]
+    public V1beta1ApplicationGatewaySpecInitProviderSslCertificateDataSecretRef? DataSecretRef { get; set; }
+
     /// <summary>The Secret ID of (base-64 encoded unencrypted pfx) the Secret or Certificate object stored in Azure KeyVault. You need to enable soft delete for Key Vault to use this feature. Required if data is not set.</summary>
     [JsonPropertyName("keyVaultSecretId")]
     public string? KeyVaultSecretId { get; set; }
@@ -2218,6 +2256,10 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderSslCertificate
     /// <summary>The Name of the SSL certificate that is unique within this Application Gateway</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Password for the pfx file specified in data. Required if data is set.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1ApplicationGatewaySpecInitProviderSslCertificatePasswordSecretRef? PasswordSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -2304,10 +2346,31 @@ public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedClientCerti
     public string? Name { get; set; }
 }
 
+/// <summary>The contents of the Trusted Root Certificate which should be used. Required if key_vault_secret_id is not set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertificateDataSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertificate
 {
+    /// <summary>The contents of the Trusted Root Certificate which should be used. Required if key_vault_secret_id is not set.</summary>
+    [JsonPropertyName("dataSecretRef")]
+    public V1beta1ApplicationGatewaySpecInitProviderTrustedRootCertificateDataSecretRef? DataSecretRef { get; set; }
+
     /// <summary>The Secret ID of (base-64 encoded unencrypted pfx) Secret or Certificate object stored in Azure KeyVault. You need to enable soft delete for the Key Vault to use this feature. Required if data is not set.</summary>
     [JsonPropertyName("keyVaultSecretId")]
     public string? KeyVaultSecretId { get; set; }
@@ -3043,6 +3106,14 @@ public partial class V1beta1ApplicationGatewayStatusAtProviderIdentity
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Application Gateway.</summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>The ID of the Application Gateway.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The ID of the Application Gateway.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
 
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this Application Gateway. Only possible value is UserAssigned.</summary>
     [JsonPropertyName("type")]
