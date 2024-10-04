@@ -358,6 +358,10 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("privateDnsZoneIdSelector")]
     public V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelector? PrivateDnsZoneIdSelector { get; set; }
 
+    /// <summary>Specifies whether this PostgreSQL Flexible Server is publicly accessible. Defaults to true.</summary>
+    [JsonPropertyName("publicNetworkAccessEnabled")]
+    public bool? PublicNetworkAccessEnabled { get; set; }
+
     /// <summary>The replication role for the PostgreSQL Flexible Server. Possible value is None.</summary>
     [JsonPropertyName("replicationRole")]
     public string? ReplicationRole { get; set; }
@@ -401,6 +405,23 @@ public partial class V1beta1FlexibleServerSpecForProvider
     /// <summary>Specifies the Availability Zone in which the PostgreSQL Flexible Server should be located.</summary>
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
+}
+
+/// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Required when create_mode is Default and authentication.password_auth_enabled is true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlexibleServerSpecInitProviderAdministratorPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -604,6 +625,10 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Required when create_mode is Default and authentication.password_auth_enabled is true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+    [JsonPropertyName("administratorPasswordSecretRef")]
+    public V1beta1FlexibleServerSpecInitProviderAdministratorPasswordSecretRef? AdministratorPasswordSecretRef { get; set; }
+
     /// <summary>An authentication block as defined below.</summary>
     [JsonPropertyName("authentication")]
     public IList<V1beta1FlexibleServerSpecInitProviderAuthentication>? Authentication { get; set; }
@@ -671,6 +696,10 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     /// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
     [JsonPropertyName("privateDnsZoneIdSelector")]
     public V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelector? PrivateDnsZoneIdSelector { get; set; }
+
+    /// <summary>Specifies whether this PostgreSQL Flexible Server is publicly accessible. Defaults to true.</summary>
+    [JsonPropertyName("publicNetworkAccessEnabled")]
+    public bool? PublicNetworkAccessEnabled { get; set; }
 
     /// <summary>The replication role for the PostgreSQL Flexible Server. Possible value is None.</summary>
     [JsonPropertyName("replicationRole")]

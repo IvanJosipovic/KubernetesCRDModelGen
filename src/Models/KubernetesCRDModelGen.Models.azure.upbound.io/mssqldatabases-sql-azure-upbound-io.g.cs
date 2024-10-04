@@ -384,6 +384,10 @@ public partial class V1beta1MSSQLDatabaseSpecForProvider
     [JsonPropertyName("sampleName")]
     public string? SampleName { get; set; }
 
+    /// <summary>How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("secondaryType")]
+    public string? SecondaryType { get; set; }
+
     /// <summary>The id of the MS SQL Server on which to create the database. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serverId")]
     public string? ServerId { get; set; }
@@ -517,6 +521,23 @@ public partial class V1beta1MSSQLDatabaseSpecInitProviderShortTermRetentionPolic
     public double? RetentionDays { get; set; }
 }
 
+/// <summary>Specifies the identifier key of the Threat Detection audit storage account. Required if state is Enabled.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLDatabaseSpecInitProviderThreatDetectionPolicyStorageAccountAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLDatabaseSpecInitProviderThreatDetectionPolicy
@@ -540,6 +561,10 @@ public partial class V1beta1MSSQLDatabaseSpecInitProviderThreatDetectionPolicy
     /// <summary>The State of the Policy. Possible values are Enabled or Disabled. Defaults to Disabled.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
+
+    /// <summary>Specifies the identifier key of the Threat Detection audit storage account. Required if state is Enabled.</summary>
+    [JsonPropertyName("storageAccountAccessKeySecretRef")]
+    public V1beta1MSSQLDatabaseSpecInitProviderThreatDetectionPolicyStorageAccountAccessKeySecretRef? StorageAccountAccessKeySecretRef { get; set; }
 
     /// <summary>Specifies the blob storage endpoint (e.g. https://example.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if state is Enabled.</summary>
     [JsonPropertyName("storageEndpoint")]
@@ -697,6 +722,10 @@ public partial class V1beta1MSSQLDatabaseSpecInitProvider
     /// <summary>Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.</summary>
     [JsonPropertyName("sampleName")]
     public string? SampleName { get; set; }
+
+    /// <summary>How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("secondaryType")]
+    public string? SecondaryType { get; set; }
 
     /// <summary>A short_term_retention_policy block as defined below.</summary>
     [JsonPropertyName("shortTermRetentionPolicy")]
@@ -1079,6 +1108,10 @@ public partial class V1beta1MSSQLDatabaseStatusAtProvider
     /// <summary>Specifies the name of the sample schema to apply when creating this database. Possible value is AdventureWorksLT.</summary>
     [JsonPropertyName("sampleName")]
     public string? SampleName { get; set; }
+
+    /// <summary>How do you want your replica to be made? Valid values include Geo and Named. Defaults to Geo. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("secondaryType")]
+    public string? SecondaryType { get; set; }
 
     /// <summary>The id of the MS SQL Server on which to create the database. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serverId")]

@@ -140,6 +140,10 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProvider
     [JsonPropertyName("keyVaultKeyIdSelector")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelector? KeyVaultKeyIdSelector { get; set; }
 
+    /// <summary>The ID of the MSSQL encryption protector</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
+
     /// <summary>Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serverId")]
     public string? ServerId { get; set; }
@@ -228,6 +232,10 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     /// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
     [JsonPropertyName("keyVaultKeyIdSelector")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelector? KeyVaultKeyIdSelector { get; set; }
+
+    /// <summary>The ID of the MSSQL encryption protector</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -377,6 +385,10 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusAtProvider
     /// <summary>To use customer managed keys from Azure Key Vault, provide the AKV Key ID. To use service managed keys, omit this field.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>The ID of the MSSQL encryption protector</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 
     /// <summary>Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serverId")]

@@ -246,7 +246,7 @@ public partial class V1beta1AppTriggerHTTPRequestSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppTriggerHTTPRequestStatusAtProvider
 {
-    /// <summary>The URL for the workflow trigger</summary>
+    /// <summary>The URL of the Trigger within the Logic App Workflow. For use with certain resources like monitor_action_group and security_center_automation.</summary>
     [JsonPropertyName("callbackUrl")]
     public string? CallbackUrl { get; set; }
 

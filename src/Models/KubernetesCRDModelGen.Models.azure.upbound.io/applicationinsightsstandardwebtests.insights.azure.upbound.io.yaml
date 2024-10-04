@@ -1145,7 +1145,7 @@ spec:
                           type: object
                         type: array
                       httpVerb:
-                        description: Which HTTP verb to use for the call. Options are 'GET', 'POST', 'PUT', 'PATCH', and 'DELETE'. Defaults to GET.
+                        description: Which HTTP verb to use for the call. Options are 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', and 'OPTIONS'. Defaults to GET.
                         type: string
                       parseDependentRequestsEnabled:
                         description: Should the parsing of dependend requests be enabled? Defaults to true.
@@ -1432,7 +1432,7 @@ spec:
                           type: object
                         type: array
                       httpVerb:
-                        description: Which HTTP verb to use for the call. Options are 'GET', 'POST', 'PUT', 'PATCH', and 'DELETE'. Defaults to GET.
+                        description: Which HTTP verb to use for the call. Options are 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', and 'OPTIONS'. Defaults to GET.
                         type: string
                       parseDependentRequestsEnabled:
                         description: Should the parsing of dependend requests be enabled? Defaults to true.
@@ -1745,7 +1745,7 @@ spec:
                           type: object
                         type: array
                       httpVerb:
-                        description: Which HTTP verb to use for the call. Options are 'GET', 'POST', 'PUT', 'PATCH', and 'DELETE'. Defaults to GET.
+                        description: Which HTTP verb to use for the call. Options are 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', and 'OPTIONS'. Defaults to GET.
                         type: string
                       parseDependentRequestsEnabled:
                         description: Should the parsing of dependend requests be enabled? Defaults to true.

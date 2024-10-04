@@ -212,6 +212,23 @@ public partial class V1beta1NamedValueSpecInitProviderValueFromKeyVault
     public string? SecretId { get; set; }
 }
 
+/// <summary>The value of this API Management Named Value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NamedValueSpecInitProviderValueSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamedValueSpecInitProvider
@@ -231,6 +248,10 @@ public partial class V1beta1NamedValueSpecInitProvider
     /// <summary>A value_from_key_vault block as defined below.</summary>
     [JsonPropertyName("valueFromKeyVault")]
     public IList<V1beta1NamedValueSpecInitProviderValueFromKeyVault>? ValueFromKeyVault { get; set; }
+
+    /// <summary>The value of this API Management Named Value.</summary>
+    [JsonPropertyName("valueSecretRef")]
+    public V1beta1NamedValueSpecInitProviderValueSecretRef? ValueSecretRef { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>

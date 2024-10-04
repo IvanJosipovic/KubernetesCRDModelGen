@@ -29,7 +29,7 @@ public partial class V1beta1RouteMapSpecForProviderRuleActionParameter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecForProviderRuleAction
 {
-    /// <summary>A parameter block as defined below.</summary>
+    /// <summary>A parameter block as defined below. Required if type is anything other than Drop.</summary>
     [JsonPropertyName("parameter")]
     public IList<V1beta1RouteMapSpecForProviderRuleActionParameter>? Parameter { get; set; }
 
@@ -178,7 +178,7 @@ public partial class V1beta1RouteMapSpecInitProviderRuleActionParameter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapSpecInitProviderRuleAction
 {
-    /// <summary>A parameter block as defined below.</summary>
+    /// <summary>A parameter block as defined below. Required if type is anything other than Drop.</summary>
     [JsonPropertyName("parameter")]
     public IList<V1beta1RouteMapSpecInitProviderRuleActionParameter>? Parameter { get; set; }
 
@@ -391,7 +391,7 @@ public partial class V1beta1RouteMapStatusAtProviderRuleActionParameter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteMapStatusAtProviderRuleAction
 {
-    /// <summary>A parameter block as defined below.</summary>
+    /// <summary>A parameter block as defined below. Required if type is anything other than Drop.</summary>
     [JsonPropertyName("parameter")]
     public IList<V1beta1RouteMapStatusAtProviderRuleActionParameter>? Parameter { get; set; }
 

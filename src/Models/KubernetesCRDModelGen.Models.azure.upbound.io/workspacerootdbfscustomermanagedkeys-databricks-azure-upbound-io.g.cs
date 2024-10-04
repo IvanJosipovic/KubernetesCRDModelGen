@@ -124,6 +124,10 @@ public partial class V1beta1WorkspaceRootDbfsCustomerManagedKeySpecForProviderWo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceRootDbfsCustomerManagedKeySpecForProvider
 {
+    /// <summary>Specifies the Resource ID of the Key Vault which contains the key_vault_key_id.</summary>
+    [JsonPropertyName("keyVaultId")]
+    public string? KeyVaultId { get; set; }
+
     /// <summary>The resource ID of the Key Vault Key to be used.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
@@ -209,6 +213,10 @@ public partial class V1beta1WorkspaceRootDbfsCustomerManagedKeySpecInitProviderK
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceRootDbfsCustomerManagedKeySpecInitProvider
 {
+    /// <summary>Specifies the Resource ID of the Key Vault which contains the key_vault_key_id.</summary>
+    [JsonPropertyName("keyVaultId")]
+    public string? KeyVaultId { get; set; }
+
     /// <summary>The resource ID of the Key Vault Key to be used.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
@@ -362,6 +370,10 @@ public partial class V1beta1WorkspaceRootDbfsCustomerManagedKeyStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Specifies the Resource ID of the Key Vault which contains the key_vault_key_id.</summary>
+    [JsonPropertyName("keyVaultId")]
+    public string? KeyVaultId { get; set; }
+
     /// <summary>The resource ID of the Key Vault Key to be used.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
@@ -417,7 +429,7 @@ public partial class V1beta1WorkspaceRootDbfsCustomerManagedKeyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>WorkspaceRootDbfsCustomerManagedKey is the Schema for the WorkspaceRootDbfsCustomerManagedKeys API. Manages a Customer Managed Key for the Databricks Workspaces root Databricks File System(DBFS)</summary>
+/// <summary>WorkspaceRootDbfsCustomerManagedKey is the Schema for the WorkspaceRootDbfsCustomerManagedKeys API. Manages a Customer Managed Key for the Databricks Workspaces Root Databricks File System(DBFS)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1WorkspaceRootDbfsCustomerManagedKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkspaceRootDbfsCustomerManagedKeySpec>, IStatus<V1beta1WorkspaceRootDbfsCustomerManagedKeyStatus>

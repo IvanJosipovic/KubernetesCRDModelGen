@@ -601,6 +601,10 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderRollingUpg
     [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
     public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
 
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
+
     /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.</summary>
     [JsonPropertyName("pauseTimeBetweenBatches")]
     public string? PauseTimeBetweenBatches { get; set; }
@@ -939,6 +943,23 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdditiona
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminSshKey
@@ -985,6 +1006,23 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderBootDiagn
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
     [JsonPropertyName("storageAccountUri")]
     public string? StorageAccountUri { get; set; }
+}
+
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderCustomDataSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1045,6 +1083,23 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtension
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtension
@@ -1068,6 +1123,10 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtension
     /// <summary>A protected_settings_from_key_vault block as defined below.</summary>
     [JsonPropertyName("protectedSettingsFromKeyVault")]
     public IList<V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsFromKeyVault>? ProtectedSettingsFromKeyVault { get; set; }
+
+    /// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
+    [JsonPropertyName("protectedSettingsSecretRef")]
+    public V1beta1LinuxVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsSecretRef? ProtectedSettingsSecretRef { get; set; }
 
     /// <summary>An ordered list of Extension names which this should be provisioned after.</summary>
     [JsonPropertyName("provisionAfterExtensions")]
@@ -1412,6 +1471,10 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderRollingUp
     [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
     public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
 
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
+
     /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.</summary>
     [JsonPropertyName("pauseTimeBetweenBatches")]
     public string? PauseTimeBetweenBatches { get; set; }
@@ -1524,6 +1587,10 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("additionalCapabilities")]
     public IList<V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdditionalCapabilities>? AdditionalCapabilities { get; set; }
 
+    /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("adminPasswordSecretRef")]
+    public V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminPasswordSecretRef? AdminPasswordSecretRef { get; set; }
+
     /// <summary>One or more admin_ssh_key blocks as defined below.</summary>
     [JsonPropertyName("adminSshKey")]
     public IList<V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminSshKey>? AdminSshKey { get; set; }
@@ -1551,6 +1618,10 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProvider
     /// <summary>The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the name field. If the value of the name field is not a valid computer_name_prefix, then you must specify computer_name_prefix. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("computerNamePrefix")]
     public string? ComputerNamePrefix { get; set; }
+
+    /// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
+    [JsonPropertyName("customDataSecretRef")]
+    public V1beta1LinuxVirtualMachineScaleSetSpecInitProviderCustomDataSecretRef? CustomDataSecretRef { get; set; }
 
     /// <summary>One or more data_disk blocks as defined below.</summary>
     [JsonPropertyName("dataDisk")]
@@ -2278,6 +2349,10 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderRollingUp
     /// <summary>The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.</summary>
     [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
     public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
+
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
 
     /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format.</summary>
     [JsonPropertyName("pauseTimeBetweenBatches")]

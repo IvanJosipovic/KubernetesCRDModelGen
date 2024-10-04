@@ -1266,7 +1266,7 @@ spec:
                       type: string
                     type: array
                   virtualNetworkConfiguration:
-                    description: A virtual_network_configuration block as defined below. Changing this forces a new resource to be created.
+                    description: A virtual_network_configuration block as defined below.
                     properties:
                       dataManagementPublicIpId:
                         description: Data management's service public IP address resource id.
@@ -1483,7 +1483,7 @@ spec:
                       type: string
                     type: array
                   virtualNetworkConfiguration:
-                    description: A virtual_network_configuration block as defined below. Changing this forces a new resource to be created.
+                    description: A virtual_network_configuration block as defined below.
                     properties:
                       dataManagementPublicIpId:
                         description: Data management's service public IP address resource id.
@@ -1914,7 +1914,7 @@ spec:
                     description: The FQDN of the Azure Kusto Cluster.
                     type: string
                   virtualNetworkConfiguration:
-                    description: A virtual_network_configuration block as defined below. Changing this forces a new resource to be created.
+                    description: A virtual_network_configuration block as defined below.
                     properties:
                       dataManagementPublicIpId:
                         description: Data management's service public IP address resource id.

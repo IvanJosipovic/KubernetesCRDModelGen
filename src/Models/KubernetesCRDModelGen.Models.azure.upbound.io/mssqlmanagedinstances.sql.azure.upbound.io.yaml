@@ -1381,7 +1381,7 @@ spec:
                     description: Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_Gen8IM, GP_Gen8IH, BC_Gen4, BC_Gen5, BC_Gen8IM or BC_Gen8IH.
                     type: string
                   storageAccountType:
-                    description: Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, LRS and ZRS. Defaults to GRS.
+                    description: Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, GZRS, LRS, and ZRS. Defaults to GRS.
                     type: string
                   storageSizeInGb:
                     description: Maximum storage space for the SQL Managed instance. This should be a multiple of 32 (GB).
@@ -1660,7 +1660,7 @@ spec:
                     description: Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_Gen8IM, GP_Gen8IH, BC_Gen4, BC_Gen5, BC_Gen8IM or BC_Gen8IH.
                     type: string
                   storageAccountType:
-                    description: Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, LRS and ZRS. Defaults to GRS.
+                    description: Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, GZRS, LRS, and ZRS. Defaults to GRS.
                     type: string
                   storageSizeInGb:
                     description: Maximum storage space for the SQL Managed instance. This should be a multiple of 32 (GB).
@@ -2062,7 +2062,7 @@ spec:
                     description: Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_Gen8IM, GP_Gen8IH, BC_Gen4, BC_Gen5, BC_Gen8IM or BC_Gen8IH.
                     type: string
                   storageAccountType:
-                    description: Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, LRS and ZRS. Defaults to GRS.
+                    description: Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, GZRS, LRS, and ZRS. Defaults to GRS.
                     type: string
                   storageSizeInGb:
                     description: Maximum storage space for the SQL Managed instance. This should be a multiple of 32 (GB).

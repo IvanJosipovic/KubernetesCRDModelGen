@@ -233,6 +233,10 @@ public partial class V1beta1NetworkInterfaceSpecForProviderResourceGroupNameSele
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSpecForProvider
 {
+    /// <summary>Should Accelerated Networking be enabled? Defaults to false.</summary>
+    [JsonPropertyName("acceleratedNetworkingEnabled")]
+    public bool? AcceleratedNetworkingEnabled { get; set; }
+
     /// <summary>Specifies the auxiliary mode used to enable network high-performance feature on Network Virtual Appliances (NVAs). This feature offers competitive performance in Connections Per Second (CPS) optimization, along with improvements to handling large amounts of simultaneous connections. Possible values are AcceleratedConnections, Floating, MaxConnections and None.</summary>
     [JsonPropertyName("auxiliaryMode")]
     public string? AuxiliaryMode { get; set; }
@@ -249,11 +253,11 @@ public partial class V1beta1NetworkInterfaceSpecForProvider
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
 
-    /// <summary>Should Accelerated Networking be enabled? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableAcceleratedNetworking")]
     public bool? EnableAcceleratedNetworking { get; set; }
 
-    /// <summary>Should IP Forwarding be enabled? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableIpForwarding")]
     public bool? EnableIpForwarding { get; set; }
 
@@ -264,6 +268,10 @@ public partial class V1beta1NetworkInterfaceSpecForProvider
     /// <summary>One or more ip_configuration blocks as defined below.</summary>
     [JsonPropertyName("ipConfiguration")]
     public IList<V1beta1NetworkInterfaceSpecForProviderIpConfiguration>? IpConfiguration { get; set; }
+
+    /// <summary>Should IP Forwarding be enabled? Defaults to false.</summary>
+    [JsonPropertyName("ipForwardingEnabled")]
+    public bool? IpForwardingEnabled { get; set; }
 
     /// <summary>The location where the Network Interface should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -455,6 +463,10 @@ public partial class V1beta1NetworkInterfaceSpecInitProviderIpConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSpecInitProvider
 {
+    /// <summary>Should Accelerated Networking be enabled? Defaults to false.</summary>
+    [JsonPropertyName("acceleratedNetworkingEnabled")]
+    public bool? AcceleratedNetworkingEnabled { get; set; }
+
     /// <summary>Specifies the auxiliary mode used to enable network high-performance feature on Network Virtual Appliances (NVAs). This feature offers competitive performance in Connections Per Second (CPS) optimization, along with improvements to handling large amounts of simultaneous connections. Possible values are AcceleratedConnections, Floating, MaxConnections and None.</summary>
     [JsonPropertyName("auxiliaryMode")]
     public string? AuxiliaryMode { get; set; }
@@ -471,11 +483,11 @@ public partial class V1beta1NetworkInterfaceSpecInitProvider
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
 
-    /// <summary>Should Accelerated Networking be enabled? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableAcceleratedNetworking")]
     public bool? EnableAcceleratedNetworking { get; set; }
 
-    /// <summary>Should IP Forwarding be enabled? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableIpForwarding")]
     public bool? EnableIpForwarding { get; set; }
 
@@ -486,6 +498,10 @@ public partial class V1beta1NetworkInterfaceSpecInitProvider
     /// <summary>One or more ip_configuration blocks as defined below.</summary>
     [JsonPropertyName("ipConfiguration")]
     public IList<V1beta1NetworkInterfaceSpecInitProviderIpConfiguration>? IpConfiguration { get; set; }
+
+    /// <summary>Should IP Forwarding be enabled? Defaults to false.</summary>
+    [JsonPropertyName("ipForwardingEnabled")]
+    public bool? IpForwardingEnabled { get; set; }
 
     /// <summary>The location where the Network Interface should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -669,6 +685,10 @@ public partial class V1beta1NetworkInterfaceStatusAtProviderIpConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceStatusAtProvider
 {
+    /// <summary>Should Accelerated Networking be enabled? Defaults to false.</summary>
+    [JsonPropertyName("acceleratedNetworkingEnabled")]
+    public bool? AcceleratedNetworkingEnabled { get; set; }
+
     /// <summary>If the Virtual Machine using this Network Interface is part of an Availability Set, then this list will have the union of all DNS servers from all Network Interfaces that are part of the Availability Set.</summary>
     [JsonPropertyName("appliedDnsServers")]
     public IList<string>? AppliedDnsServers { get; set; }
@@ -689,11 +709,11 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
 
-    /// <summary>Should Accelerated Networking be enabled? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableAcceleratedNetworking")]
     public bool? EnableAcceleratedNetworking { get; set; }
 
-    /// <summary>Should IP Forwarding be enabled? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableIpForwarding")]
     public bool? EnableIpForwarding { get; set; }
 
@@ -712,6 +732,10 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     /// <summary>One or more ip_configuration blocks as defined below.</summary>
     [JsonPropertyName("ipConfiguration")]
     public IList<V1beta1NetworkInterfaceStatusAtProviderIpConfiguration>? IpConfiguration { get; set; }
+
+    /// <summary>Should IP Forwarding be enabled? Defaults to false.</summary>
+    [JsonPropertyName("ipForwardingEnabled")]
+    public bool? IpForwardingEnabled { get; set; }
 
     /// <summary>The location where the Network Interface should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]

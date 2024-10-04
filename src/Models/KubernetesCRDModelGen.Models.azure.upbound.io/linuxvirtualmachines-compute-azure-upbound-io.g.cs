@@ -12,6 +12,10 @@ namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdditionalCapabilities
 {
+    /// <summary>Whether to enable the hibernation capability or not.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
+
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
@@ -580,9 +584,30 @@ public partial class V1beta1LinuxVirtualMachineSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdditionalCapabilities
 {
+    /// <summary>Whether to enable the hibernation capability or not.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
+
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
+}
+
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -605,6 +630,23 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderBootDiagnostics
     /// <summary>The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</summary>
     [JsonPropertyName("storageAccountUri")]
     public string? StorageAccountUri { get; set; }
+}
+
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxVirtualMachineSpecInitProviderCustomDataSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -849,6 +891,10 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProvider
     [JsonPropertyName("additionalCapabilities")]
     public IList<V1beta1LinuxVirtualMachineSpecInitProviderAdditionalCapabilities>? AdditionalCapabilities { get; set; }
 
+    /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("adminPasswordSecretRef")]
+    public V1beta1LinuxVirtualMachineSpecInitProviderAdminPasswordSecretRef? AdminPasswordSecretRef { get; set; }
+
     /// <summary>One or more admin_ssh_key blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminSshKey")]
     public IList<V1beta1LinuxVirtualMachineSpecInitProviderAdminSshKey>? AdminSshKey { get; set; }
@@ -880,6 +926,10 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProvider
     /// <summary>Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the name field. If the value of the name field is not a valid computer_name, then you must specify computer_name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("computerName")]
     public string? ComputerName { get; set; }
+
+    /// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("customDataSecretRef")]
+    public V1beta1LinuxVirtualMachineSpecInitProviderCustomDataSecretRef? CustomDataSecretRef { get; set; }
 
     /// <summary>The ID of a Dedicated Host Group that this Linux Virtual Machine should be run within. Conflicts with dedicated_host_id.</summary>
     [JsonPropertyName("dedicatedHostGroupId")]
@@ -1170,6 +1220,10 @@ public partial class V1beta1LinuxVirtualMachineSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdditionalCapabilities
 {
+    /// <summary>Whether to enable the hibernation capability or not.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
+
     /// <summary>Should the capacity to enable Data Disks of the UltraSSD_LRS storage account type be supported on this Virtual Machine? Defaults to false.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }

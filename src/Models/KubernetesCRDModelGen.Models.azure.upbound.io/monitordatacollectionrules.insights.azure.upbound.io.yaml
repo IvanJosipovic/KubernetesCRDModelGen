@@ -3573,7 +3573,7 @@ spec:
                             type: object
                           type: array
                         streamName:
-                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks.
+                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.
                           type: string
                       type: object
                     type: array
@@ -4422,7 +4422,7 @@ spec:
                             type: object
                           type: array
                         streamName:
-                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks.
+                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.
                           type: string
                       type: object
                     type: array
@@ -5054,7 +5054,7 @@ spec:
                             type: object
                           type: array
                         streamName:
-                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks.
+                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.
                           type: string
                       type: object
                     type: array

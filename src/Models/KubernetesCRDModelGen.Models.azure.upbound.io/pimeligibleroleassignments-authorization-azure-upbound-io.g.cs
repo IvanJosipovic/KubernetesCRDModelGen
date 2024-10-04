@@ -8,32 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
-/// <summary>A expiration block as defined above.</summary>
+/// <summary>An expiration block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecForProviderScheduleExpiration
 {
-    /// <summary>The duration of the role assignment in days. Conflicts with schedule[0].expiration[0].duration_hours,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Eligible Role Assignment to be created. The duration of the assignment in days.</summary>
+    /// <summary>The duration of the role assignment in days. Changing this forces a new resource to be created. The duration of the eligible role assignment in days</summary>
     [JsonPropertyName("durationDays")]
     public double? DurationDays { get; set; }
 
-    /// <summary>The duration of the role assignment in hours. Conflicts with schedule[0].expiration[0].duration_days,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Eligible Role Assignment to be created. The duration of the assignment in hours.</summary>
+    /// <summary>The duration of the role assignment in hours. Changing this forces a new resource to be created. The duration of the eligible role assignment in hours</summary>
     [JsonPropertyName("durationHours")]
     public double? DurationHours { get; set; }
 
-    /// <summary>The end date time of the role assignment. Conflicts with schedule[0].expiration[0].duration_days,schedule[0].expiration[0].duration_hours Changing this forces a new Pim Eligible Role Assignment to be created. The end date time of the assignment.</summary>
+    /// <summary>The end date/time of the role assignment. Changing this forces a new resource to be created. The end date/time of the eligible role assignment</summary>
     [JsonPropertyName("endDateTime")]
     public string? EndDateTime { get; set; }
 }
 
-/// <summary>A schedule block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. The schedule details of this eligible role assignment.</summary>
+/// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this eligible role assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecForProviderSchedule
 {
-    /// <summary>A expiration block as defined above.</summary>
+    /// <summary>An expiration block as defined above.</summary>
     [JsonPropertyName("expiration")]
     public V1beta1PimEligibleRoleAssignmentSpecForProviderScheduleExpiration? Expiration { get; set; }
 
-    /// <summary>The start date time of the role assignment. Changing this forces a new Pim Eligible Role Assignment to be created. The start date time.</summary>
+    /// <summary>The start date/time of the role assignment. Changing this forces a new resource to be created. The start date/time</summary>
     [JsonPropertyName("startDateTime")]
     public string? StartDateTime { get; set; }
 }
@@ -94,15 +94,15 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecForProviderScopeSelecto
     public V1beta1PimEligibleRoleAssignmentSpecForProviderScopeSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>A ticket block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. Ticket details relating to the assignment.</summary>
+/// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the eligible assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecForProviderTicket
 {
-    /// <summary>The ticket number. The ticket number.</summary>
+    /// <summary>User-supplied ticket number to be included with the request. Changing this forces a new resource to be created. User-supplied ticket number to be included with the request</summary>
     [JsonPropertyName("number")]
     public string? Number { get; set; }
 
-    /// <summary>The ticket system. The ticket system.</summary>
+    /// <summary>User-supplied ticket system name to be included with the request. Changing this forces a new resource to be created. User-supplied ticket system name to be included with the request</summary>
     [JsonPropertyName("system")]
     public string? System { get; set; }
 }
@@ -111,23 +111,23 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecForProviderTicket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecForProvider
 {
-    /// <summary>The justification of the role assignment. Changing this forces a new Pim Eligible Role Assignment to be created. The justification of the eligible role assignment.</summary>
+    /// <summary>The justification of the role assignment. Changing this forces a new resource to be created. The justification for this eligible role assignment</summary>
     [JsonPropertyName("justification")]
     public string? Justification { get; set; }
 
-    /// <summary>The principal id. Changing this forces a new Pim Eligible Role Assignment to be created. The principal id.</summary>
+    /// <summary>Object ID of the principal for this eligible role assignment. Changing this forces a new resource to be created. Object ID of the principal for this eligible role assignment</summary>
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 
-    /// <summary>The role definition id. Changing this forces a new Pim Eligible Role Assignment to be created. The role definition id.</summary>
+    /// <summary>The role definition ID for this eligible role assignment. Changing this forces a new resource to be created. Role definition ID for this eligible role assignment</summary>
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
-    /// <summary>A schedule block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. The schedule details of this eligible role assignment.</summary>
+    /// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this eligible role assignment</summary>
     [JsonPropertyName("schedule")]
     public V1beta1PimEligibleRoleAssignmentSpecForProviderSchedule? Schedule { get; set; }
 
-    /// <summary>The scope. Changing this forces a new Pim Eligible Role Assignment to be created. The scope.</summary>
+    /// <summary>The scope for this eligible role assignment, should be a valid resource ID. Changing this forces a new resource to be created. Scope for this eligible role assignment, should be a valid resource ID</summary>
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 
@@ -139,37 +139,37 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecForProvider
     [JsonPropertyName("scopeSelector")]
     public V1beta1PimEligibleRoleAssignmentSpecForProviderScopeSelector? ScopeSelector { get; set; }
 
-    /// <summary>A ticket block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. Ticket details relating to the assignment.</summary>
+    /// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the eligible assignment</summary>
     [JsonPropertyName("ticket")]
     public V1beta1PimEligibleRoleAssignmentSpecForProviderTicket? Ticket { get; set; }
 }
 
-/// <summary>A expiration block as defined above.</summary>
+/// <summary>An expiration block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecInitProviderScheduleExpiration
 {
-    /// <summary>The duration of the role assignment in days. Conflicts with schedule[0].expiration[0].duration_hours,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Eligible Role Assignment to be created. The duration of the assignment in days.</summary>
+    /// <summary>The duration of the role assignment in days. Changing this forces a new resource to be created. The duration of the eligible role assignment in days</summary>
     [JsonPropertyName("durationDays")]
     public double? DurationDays { get; set; }
 
-    /// <summary>The duration of the role assignment in hours. Conflicts with schedule[0].expiration[0].duration_days,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Eligible Role Assignment to be created. The duration of the assignment in hours.</summary>
+    /// <summary>The duration of the role assignment in hours. Changing this forces a new resource to be created. The duration of the eligible role assignment in hours</summary>
     [JsonPropertyName("durationHours")]
     public double? DurationHours { get; set; }
 
-    /// <summary>The end date time of the role assignment. Conflicts with schedule[0].expiration[0].duration_days,schedule[0].expiration[0].duration_hours Changing this forces a new Pim Eligible Role Assignment to be created. The end date time of the assignment.</summary>
+    /// <summary>The end date/time of the role assignment. Changing this forces a new resource to be created. The end date/time of the eligible role assignment</summary>
     [JsonPropertyName("endDateTime")]
     public string? EndDateTime { get; set; }
 }
 
-/// <summary>A schedule block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. The schedule details of this eligible role assignment.</summary>
+/// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this eligible role assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecInitProviderSchedule
 {
-    /// <summary>A expiration block as defined above.</summary>
+    /// <summary>An expiration block as defined above.</summary>
     [JsonPropertyName("expiration")]
     public V1beta1PimEligibleRoleAssignmentSpecInitProviderScheduleExpiration? Expiration { get; set; }
 
-    /// <summary>The start date time of the role assignment. Changing this forces a new Pim Eligible Role Assignment to be created. The start date time.</summary>
+    /// <summary>The start date/time of the role assignment. Changing this forces a new resource to be created. The start date/time</summary>
     [JsonPropertyName("startDateTime")]
     public string? StartDateTime { get; set; }
 }
@@ -230,15 +230,15 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecInitProviderScopeSelect
     public V1beta1PimEligibleRoleAssignmentSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>A ticket block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. Ticket details relating to the assignment.</summary>
+/// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the eligible assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecInitProviderTicket
 {
-    /// <summary>The ticket number. The ticket number.</summary>
+    /// <summary>User-supplied ticket number to be included with the request. Changing this forces a new resource to be created. User-supplied ticket number to be included with the request</summary>
     [JsonPropertyName("number")]
     public string? Number { get; set; }
 
-    /// <summary>The ticket system. The ticket system.</summary>
+    /// <summary>User-supplied ticket system name to be included with the request. Changing this forces a new resource to be created. User-supplied ticket system name to be included with the request</summary>
     [JsonPropertyName("system")]
     public string? System { get; set; }
 }
@@ -247,23 +247,23 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecInitProviderTicket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecInitProvider
 {
-    /// <summary>The justification of the role assignment. Changing this forces a new Pim Eligible Role Assignment to be created. The justification of the eligible role assignment.</summary>
+    /// <summary>The justification of the role assignment. Changing this forces a new resource to be created. The justification for this eligible role assignment</summary>
     [JsonPropertyName("justification")]
     public string? Justification { get; set; }
 
-    /// <summary>The principal id. Changing this forces a new Pim Eligible Role Assignment to be created. The principal id.</summary>
+    /// <summary>Object ID of the principal for this eligible role assignment. Changing this forces a new resource to be created. Object ID of the principal for this eligible role assignment</summary>
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 
-    /// <summary>The role definition id. Changing this forces a new Pim Eligible Role Assignment to be created. The role definition id.</summary>
+    /// <summary>The role definition ID for this eligible role assignment. Changing this forces a new resource to be created. Role definition ID for this eligible role assignment</summary>
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
-    /// <summary>A schedule block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. The schedule details of this eligible role assignment.</summary>
+    /// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this eligible role assignment</summary>
     [JsonPropertyName("schedule")]
     public V1beta1PimEligibleRoleAssignmentSpecInitProviderSchedule? Schedule { get; set; }
 
-    /// <summary>The scope. Changing this forces a new Pim Eligible Role Assignment to be created. The scope.</summary>
+    /// <summary>The scope for this eligible role assignment, should be a valid resource ID. Changing this forces a new resource to be created. Scope for this eligible role assignment, should be a valid resource ID</summary>
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 
@@ -275,7 +275,7 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecInitProvider
     [JsonPropertyName("scopeSelector")]
     public V1beta1PimEligibleRoleAssignmentSpecInitProviderScopeSelector? ScopeSelector { get; set; }
 
-    /// <summary>A ticket block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. Ticket details relating to the assignment.</summary>
+    /// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the eligible assignment</summary>
     [JsonPropertyName("ticket")]
     public V1beta1PimEligibleRoleAssignmentSpecInitProviderTicket? Ticket { get; set; }
 }
@@ -412,45 +412,45 @@ public partial class V1beta1PimEligibleRoleAssignmentSpec
     public V1beta1PimEligibleRoleAssignmentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
-/// <summary>A expiration block as defined above.</summary>
+/// <summary>An expiration block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentStatusAtProviderScheduleExpiration
 {
-    /// <summary>The duration of the role assignment in days. Conflicts with schedule[0].expiration[0].duration_hours,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Eligible Role Assignment to be created. The duration of the assignment in days.</summary>
+    /// <summary>The duration of the role assignment in days. Changing this forces a new resource to be created. The duration of the eligible role assignment in days</summary>
     [JsonPropertyName("durationDays")]
     public double? DurationDays { get; set; }
 
-    /// <summary>The duration of the role assignment in hours. Conflicts with schedule[0].expiration[0].duration_days,schedule[0].expiration[0].end_date_time Changing this forces a new Pim Eligible Role Assignment to be created. The duration of the assignment in hours.</summary>
+    /// <summary>The duration of the role assignment in hours. Changing this forces a new resource to be created. The duration of the eligible role assignment in hours</summary>
     [JsonPropertyName("durationHours")]
     public double? DurationHours { get; set; }
 
-    /// <summary>The end date time of the role assignment. Conflicts with schedule[0].expiration[0].duration_days,schedule[0].expiration[0].duration_hours Changing this forces a new Pim Eligible Role Assignment to be created. The end date time of the assignment.</summary>
+    /// <summary>The end date/time of the role assignment. Changing this forces a new resource to be created. The end date/time of the eligible role assignment</summary>
     [JsonPropertyName("endDateTime")]
     public string? EndDateTime { get; set; }
 }
 
-/// <summary>A schedule block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. The schedule details of this eligible role assignment.</summary>
+/// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this eligible role assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentStatusAtProviderSchedule
 {
-    /// <summary>A expiration block as defined above.</summary>
+    /// <summary>An expiration block as defined above.</summary>
     [JsonPropertyName("expiration")]
     public V1beta1PimEligibleRoleAssignmentStatusAtProviderScheduleExpiration? Expiration { get; set; }
 
-    /// <summary>The start date time of the role assignment. Changing this forces a new Pim Eligible Role Assignment to be created. The start date time.</summary>
+    /// <summary>The start date/time of the role assignment. Changing this forces a new resource to be created. The start date/time</summary>
     [JsonPropertyName("startDateTime")]
     public string? StartDateTime { get; set; }
 }
 
-/// <summary>A ticket block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. Ticket details relating to the assignment.</summary>
+/// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the eligible assignment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentStatusAtProviderTicket
 {
-    /// <summary>The ticket number. The ticket number.</summary>
+    /// <summary>User-supplied ticket number to be included with the request. Changing this forces a new resource to be created. User-supplied ticket number to be included with the request</summary>
     [JsonPropertyName("number")]
     public string? Number { get; set; }
 
-    /// <summary>The ticket system. The ticket system.</summary>
+    /// <summary>User-supplied ticket system name to be included with the request. Changing this forces a new resource to be created. User-supplied ticket system name to be included with the request</summary>
     [JsonPropertyName("system")]
     public string? System { get; set; }
 }
@@ -459,35 +459,35 @@ public partial class V1beta1PimEligibleRoleAssignmentStatusAtProviderTicket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentStatusAtProvider
 {
-    /// <summary>The ID of the Pim Eligible Role Assignment.</summary>
+    /// <summary>The ID of the PIM Eligible Role Assignment.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The justification of the role assignment. Changing this forces a new Pim Eligible Role Assignment to be created. The justification of the eligible role assignment.</summary>
+    /// <summary>The justification of the role assignment. Changing this forces a new resource to be created. The justification for this eligible role assignment</summary>
     [JsonPropertyName("justification")]
     public string? Justification { get; set; }
 
-    /// <summary>The principal id. Changing this forces a new Pim Eligible Role Assignment to be created. The principal id.</summary>
+    /// <summary>Object ID of the principal for this eligible role assignment. Changing this forces a new resource to be created. Object ID of the principal for this eligible role assignment</summary>
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 
-    /// <summary>The type of principal. The type of principal.</summary>
+    /// <summary>Type of principal to which the role will be assigned. Type of principal to which the role will be assigned</summary>
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
 
-    /// <summary>The role definition id. Changing this forces a new Pim Eligible Role Assignment to be created. The role definition id.</summary>
+    /// <summary>The role definition ID for this eligible role assignment. Changing this forces a new resource to be created. Role definition ID for this eligible role assignment</summary>
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
-    /// <summary>A schedule block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. The schedule details of this eligible role assignment.</summary>
+    /// <summary>A schedule block as defined below. Changing this forces a new resource to be created. The schedule details for this eligible role assignment</summary>
     [JsonPropertyName("schedule")]
     public V1beta1PimEligibleRoleAssignmentStatusAtProviderSchedule? Schedule { get; set; }
 
-    /// <summary>The scope. Changing this forces a new Pim Eligible Role Assignment to be created. The scope.</summary>
+    /// <summary>The scope for this eligible role assignment, should be a valid resource ID. Changing this forces a new resource to be created. Scope for this eligible role assignment, should be a valid resource ID</summary>
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 
-    /// <summary>A ticket block as defined below. Changing this forces a new Pim Eligible Role Assignment to be created. Ticket details relating to the assignment.</summary>
+    /// <summary>A ticket block as defined below. Changing this forces a new resource to be created. Ticket details relating to the eligible assignment</summary>
     [JsonPropertyName("ticket")]
     public V1beta1PimEligibleRoleAssignmentStatusAtProviderTicket? Ticket { get; set; }
 }
@@ -538,7 +538,7 @@ public partial class V1beta1PimEligibleRoleAssignmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>PimEligibleRoleAssignment is the Schema for the PimEligibleRoleAssignments API. Manages a Pim Eligible Role Assignment.</summary>
+/// <summary>PimEligibleRoleAssignment is the Schema for the PimEligibleRoleAssignments API. Manages a PIM Eligible Role Assignment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1PimEligibleRoleAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PimEligibleRoleAssignmentSpec>, IStatus<V1beta1PimEligibleRoleAssignmentStatus>

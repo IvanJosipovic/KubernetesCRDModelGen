@@ -91,6 +91,10 @@ public partial class V1beta1AccountSpecForProviderBlobPropertiesDeleteRetentionP
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
+
+    /// <summary>Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.</summary>
+    [JsonPropertyName("permanentDeleteEnabled")]
+    public bool? PermanentDeleteEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -160,9 +164,13 @@ public partial class V1beta1AccountSpecForProviderCustomDomain
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderCustomerManagedKey
 {
-    /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.</summary>
+    /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 
     /// <summary>The ID of a user assigned identity.</summary>
     [JsonPropertyName("userAssignedIdentityId")]
@@ -577,6 +585,10 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("defaultToOauthAuthentication")]
     public bool? DefaultToOauthAuthentication { get; set; }
 
+    /// <summary>Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("dnsEndpointType")]
+    public string? DnsEndpointType { get; set; }
+
     /// <summary>Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
@@ -765,6 +777,10 @@ public partial class V1beta1AccountSpecInitProviderBlobPropertiesDeleteRetention
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
+
+    /// <summary>Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.</summary>
+    [JsonPropertyName("permanentDeleteEnabled")]
+    public bool? PermanentDeleteEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -834,9 +850,13 @@ public partial class V1beta1AccountSpecInitProviderCustomDomain
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderCustomerManagedKey
 {
-    /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.</summary>
+    /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 
     /// <summary>The ID of a user assigned identity.</summary>
     [JsonPropertyName("userAssignedIdentityId")]
@@ -1195,6 +1215,10 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("defaultToOauthAuthentication")]
     public bool? DefaultToOauthAuthentication { get; set; }
 
+    /// <summary>Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("dnsEndpointType")]
+    public string? DnsEndpointType { get; set; }
+
     /// <summary>Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
@@ -1503,6 +1527,10 @@ public partial class V1beta1AccountStatusAtProviderBlobPropertiesDeleteRetention
     /// <summary>Specifies the number of days that the azurerm_storage_share should be retained, between 1 and 365 days. Defaults to 7.</summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
+
+    /// <summary>Indicates whether permanent deletion of the soft deleted blob versions and snapshots is allowed. Defaults to false.</summary>
+    [JsonPropertyName("permanentDeleteEnabled")]
+    public bool? PermanentDeleteEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -1572,9 +1600,13 @@ public partial class V1beta1AccountStatusAtProviderCustomDomain
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderCustomerManagedKey
 {
-    /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key.</summary>
+    /// <summary>The ID of the Key Vault Key, supplying a version-less key ID will enable auto-rotation of this key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>The ID of the managed HSM Key. Exactly one of key_vault_key_id and managed_hsm_key_id may be specified.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 
     /// <summary>The ID of a user assigned identity.</summary>
     [JsonPropertyName("userAssignedIdentityId")]
@@ -1940,6 +1972,10 @@ public partial class V1beta1AccountStatusAtProvider
     /// <summary>Default to Azure Active Directory authorization in the Azure portal when accessing the Storage Account. The default value is false</summary>
     [JsonPropertyName("defaultToOauthAuthentication")]
     public bool? DefaultToOauthAuthentication { get; set; }
+
+    /// <summary>Specifies which DNS endpoint type to use. Possible values are Standard and AzureDnsZone. Defaults to Standard. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("dnsEndpointType")]
+    public string? DnsEndpointType { get; set; }
 
     /// <summary>Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.</summary>
     [JsonPropertyName("edgeZone")]

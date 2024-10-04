@@ -1036,6 +1036,27 @@ public partial class V1beta1LinuxWebAppSlotSpecForProviderSiteConfigAutoHealSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecForProviderSiteConfigAutoHealSettingTriggerSlowRequestWithPath
+{
+    /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>The time interval in the form hh:mm:ss.</summary>
+    [JsonPropertyName("interval")]
+    public string? Interval { get; set; }
+
+    /// <summary>The path to which this rule status code applies.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
+    [JsonPropertyName("timeTaken")]
+    public string? TimeTaken { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSlotSpecForProviderSiteConfigAutoHealSettingTriggerStatusCode
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -1071,9 +1092,13 @@ public partial class V1beta1LinuxWebAppSlotSpecForProviderSiteConfigAutoHealSett
     [JsonPropertyName("requests")]
     public IList<V1beta1LinuxWebAppSlotSpecForProviderSiteConfigAutoHealSettingTriggerRequests>? Requests { get; set; }
 
-    /// <summary>One or more slow_request blocks as defined above.</summary>
+    /// <summary>A slow_request block as defined above.</summary>
     [JsonPropertyName("slowRequest")]
     public IList<V1beta1LinuxWebAppSlotSpecForProviderSiteConfigAutoHealSettingTriggerSlowRequest>? SlowRequest { get; set; }
+
+    /// <summary>One or more slow_request_with_path blocks as defined above.</summary>
+    [JsonPropertyName("slowRequestWithPath")]
+    public IList<V1beta1LinuxWebAppSlotSpecForProviderSiteConfigAutoHealSettingTriggerSlowRequestWithPath>? SlowRequestWithPath { get; set; }
 
     /// <summary>One or more status_code blocks as defined above.</summary>
     [JsonPropertyName("statusCode")]
@@ -1762,6 +1787,23 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAppServiceIdSelector
     public V1beta1LinuxWebAppSlotSpecInitProviderAppServiceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsActiveDirectoryClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsActiveDirectory
@@ -1774,9 +1816,30 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsActiveDir
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsActiveDirectoryClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
+}
+
+/// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsFacebookAppSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1787,6 +1850,10 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsFacebook
     [JsonPropertyName("appId")]
     public string? AppId { get; set; }
 
+    /// <summary>The App Secret of the Facebook app used for Facebook login. Cannot be specified with app_secret_setting_name. The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.</summary>
+    [JsonPropertyName("appSecretSecretRef")]
+    public V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsFacebookAppSecretSecretRef? AppSecretSecretRef { get; set; }
+
     /// <summary>The app setting name that contains the app_secret value used for Facebook Login. The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.</summary>
     [JsonPropertyName("appSecretSettingName")]
     public string? AppSecretSettingName { get; set; }
@@ -1794,6 +1861,23 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsFacebook
     /// <summary>Specifies a list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, "wl.basic" is used as the default scope. Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.</summary>
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
+}
+
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGithubClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1804,6 +1888,10 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGithub
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGithubClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
@@ -1811,6 +1899,23 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGithub
     /// <summary>Specifies a list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, "wl.basic" is used as the default scope. Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.</summary>
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
+}
+
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGoogleClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1821,6 +1926,10 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGoogle
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGoogleClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
@@ -1828,6 +1937,23 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsGoogle
     /// <summary>Specifies a list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, "wl.basic" is used as the default scope. Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.</summary>
     [JsonPropertyName("oauthScopes")]
     public IList<string>? OauthScopes { get; set; }
+}
+
+/// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsMicrosoftClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1838,6 +1964,10 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsMicrosoft
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsMicrosoftClientSecretSecretRef? ClientSecretSecretRef { get; set; }
+
     /// <summary>The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.</summary>
     [JsonPropertyName("clientSecretSettingName")]
     public string? ClientSecretSettingName { get; set; }
@@ -1847,6 +1977,23 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsMicrosoft
     public IList<string>? OauthScopes { get; set; }
 }
 
+/// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsTwitterConsumerSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsTwitter
@@ -1854,6 +2001,10 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsTwitter
     /// <summary>The OAuth 1.0a consumer key of the Twitter application used for sign-in. The OAuth 1.0a consumer key of the Twitter application used for sign-in.</summary>
     [JsonPropertyName("consumerKey")]
     public string? ConsumerKey { get; set; }
+
+    /// <summary>The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with consumer_secret_setting_name. The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.</summary>
+    [JsonPropertyName("consumerSecretSecretRef")]
+    public V1beta1LinuxWebAppSlotSpecInitProviderAuthSettingsTwitterConsumerSecretSecretRef? ConsumerSecretSecretRef { get; set; }
 
     /// <summary>The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.</summary>
     [JsonPropertyName("consumerSecretSettingName")]
@@ -2414,6 +2565,23 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderLogs
     public IList<V1beta1LinuxWebAppSlotSpecInitProviderLogsHttpLogs>? HttpLogs { get; set; }
 }
 
+/// <summary>The User Name to use for authentication against the registry to pull the image.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigApplicationStackDockerRegistryPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigApplicationStack
@@ -2429,6 +2597,10 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigApplication
     /// <summary></summary>
     [JsonPropertyName("dockerImageTag")]
     public string? DockerImageTag { get; set; }
+
+    /// <summary>The User Name to use for authentication against the registry to pull the image.</summary>
+    [JsonPropertyName("dockerRegistryPasswordSecretRef")]
+    public V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigApplicationStackDockerRegistryPasswordSecretRef? DockerRegistryPasswordSecretRef { get; set; }
 
     /// <summary>The URL of the container registry where the docker_image_name is located. e.g. https://index.docker.io or https://mcr.microsoft.com. This value is required with docker_image_name.</summary>
     [JsonPropertyName("dockerRegistryUrl")]
@@ -2524,6 +2696,27 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigAutoHealSet
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigAutoHealSettingTriggerSlowRequestWithPath
+{
+    /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>The time interval in the form hh:mm:ss.</summary>
+    [JsonPropertyName("interval")]
+    public string? Interval { get; set; }
+
+    /// <summary>The path to which this rule status code applies.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
+    [JsonPropertyName("timeTaken")]
+    public string? TimeTaken { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigAutoHealSettingTriggerStatusCode
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -2559,9 +2752,13 @@ public partial class V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigAutoHealSet
     [JsonPropertyName("requests")]
     public IList<V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigAutoHealSettingTriggerRequests>? Requests { get; set; }
 
-    /// <summary>One or more slow_request blocks as defined above.</summary>
+    /// <summary>A slow_request block as defined above.</summary>
     [JsonPropertyName("slowRequest")]
     public IList<V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigAutoHealSettingTriggerSlowRequest>? SlowRequest { get; set; }
+
+    /// <summary>One or more slow_request_with_path blocks as defined above.</summary>
+    [JsonPropertyName("slowRequestWithPath")]
+    public IList<V1beta1LinuxWebAppSlotSpecInitProviderSiteConfigAutoHealSettingTriggerSlowRequestWithPath>? SlowRequestWithPath { get; set; }
 
     /// <summary>One or more status_code blocks as defined above.</summary>
     [JsonPropertyName("statusCode")]
@@ -4107,6 +4304,27 @@ public partial class V1beta1LinuxWebAppSlotStatusAtProviderSiteConfigAutoHealSet
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSlotStatusAtProviderSiteConfigAutoHealSettingTriggerSlowRequestWithPath
+{
+    /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>The time interval in the form hh:mm:ss.</summary>
+    [JsonPropertyName("interval")]
+    public string? Interval { get; set; }
+
+    /// <summary>The path to which this rule status code applies.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
+    [JsonPropertyName("timeTaken")]
+    public string? TimeTaken { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSlotStatusAtProviderSiteConfigAutoHealSettingTriggerStatusCode
 {
     /// <summary>The number of occurrences of the defined status_code in the specified interval on which to trigger this rule.</summary>
@@ -4142,9 +4360,13 @@ public partial class V1beta1LinuxWebAppSlotStatusAtProviderSiteConfigAutoHealSet
     [JsonPropertyName("requests")]
     public IList<V1beta1LinuxWebAppSlotStatusAtProviderSiteConfigAutoHealSettingTriggerRequests>? Requests { get; set; }
 
-    /// <summary>One or more slow_request blocks as defined above.</summary>
+    /// <summary>A slow_request block as defined above.</summary>
     [JsonPropertyName("slowRequest")]
     public IList<V1beta1LinuxWebAppSlotStatusAtProviderSiteConfigAutoHealSettingTriggerSlowRequest>? SlowRequest { get; set; }
+
+    /// <summary>One or more slow_request_with_path blocks as defined above.</summary>
+    [JsonPropertyName("slowRequestWithPath")]
+    public IList<V1beta1LinuxWebAppSlotStatusAtProviderSiteConfigAutoHealSettingTriggerSlowRequestWithPath>? SlowRequestWithPath { get; set; }
 
     /// <summary>One or more status_code blocks as defined above.</summary>
     [JsonPropertyName("statusCode")]

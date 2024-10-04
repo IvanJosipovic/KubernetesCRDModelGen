@@ -305,6 +305,10 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProvider
 {
+    /// <summary>Access Connector ID to use when default storage account firewall is enabled.</summary>
+    [JsonPropertyName("accessConnectorId")]
+    public string? AccessConnectorId { get; set; }
+
     /// <summary>A custom_parameters block as documented below.</summary>
     [JsonPropertyName("customParameters")]
     public IList<V1beta1WorkspaceSpecForProviderCustomParameters>? CustomParameters { get; set; }
@@ -312,6 +316,10 @@ public partial class V1beta1WorkspaceSpecForProvider
     /// <summary>Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.</summary>
     [JsonPropertyName("customerManagedKeyEnabled")]
     public bool? CustomerManagedKeyEnabled { get; set; }
+
+    /// <summary>Disallow public access to default storage account. Defaults to false.</summary>
+    [JsonPropertyName("defaultStorageFirewallEnabled")]
+    public bool? DefaultStorageFirewallEnabled { get; set; }
 
     /// <summary>Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("infrastructureEncryptionEnabled")]
@@ -324,6 +332,10 @@ public partial class V1beta1WorkspaceSpecForProvider
     /// <summary>Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.</summary>
+    [JsonPropertyName("managedDiskCmkKeyVaultId")]
+    public string? ManagedDiskCmkKeyVaultId { get; set; }
 
     /// <summary>Customer managed encryption properties for the Databricks Workspace managed disks.</summary>
     [JsonPropertyName("managedDiskCmkKeyVaultKeyId")]
@@ -344,6 +356,10 @@ public partial class V1beta1WorkspaceSpecForProvider
     /// <summary>Selector for a ResourceGroup in azure to populate managedResourceGroupName.</summary>
     [JsonPropertyName("managedResourceGroupNameSelector")]
     public V1beta1WorkspaceSpecForProviderManagedResourceGroupNameSelector? ManagedResourceGroupNameSelector { get; set; }
+
+    /// <summary>Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.</summary>
+    [JsonPropertyName("managedServicesCmkKeyVaultId")]
+    public string? ManagedServicesCmkKeyVaultId { get; set; }
 
     /// <summary>Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).</summary>
     [JsonPropertyName("managedServicesCmkKeyVaultKeyId")]
@@ -619,6 +635,10 @@ public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProvider
 {
+    /// <summary>Access Connector ID to use when default storage account firewall is enabled.</summary>
+    [JsonPropertyName("accessConnectorId")]
+    public string? AccessConnectorId { get; set; }
+
     /// <summary>A custom_parameters block as documented below.</summary>
     [JsonPropertyName("customParameters")]
     public IList<V1beta1WorkspaceSpecInitProviderCustomParameters>? CustomParameters { get; set; }
@@ -626,6 +646,10 @@ public partial class V1beta1WorkspaceSpecInitProvider
     /// <summary>Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.</summary>
     [JsonPropertyName("customerManagedKeyEnabled")]
     public bool? CustomerManagedKeyEnabled { get; set; }
+
+    /// <summary>Disallow public access to default storage account. Defaults to false.</summary>
+    [JsonPropertyName("defaultStorageFirewallEnabled")]
+    public bool? DefaultStorageFirewallEnabled { get; set; }
 
     /// <summary>Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("infrastructureEncryptionEnabled")]
@@ -638,6 +662,10 @@ public partial class V1beta1WorkspaceSpecInitProvider
     /// <summary>Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.</summary>
+    [JsonPropertyName("managedDiskCmkKeyVaultId")]
+    public string? ManagedDiskCmkKeyVaultId { get; set; }
 
     /// <summary>Customer managed encryption properties for the Databricks Workspace managed disks.</summary>
     [JsonPropertyName("managedDiskCmkKeyVaultKeyId")]
@@ -658,6 +686,10 @@ public partial class V1beta1WorkspaceSpecInitProvider
     /// <summary>Selector for a ResourceGroup in azure to populate managedResourceGroupName.</summary>
     [JsonPropertyName("managedResourceGroupNameSelector")]
     public V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSelector? ManagedResourceGroupNameSelector { get; set; }
+
+    /// <summary>Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.</summary>
+    [JsonPropertyName("managedServicesCmkKeyVaultId")]
+    public string? ManagedServicesCmkKeyVaultId { get; set; }
 
     /// <summary>Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).</summary>
     [JsonPropertyName("managedServicesCmkKeyVaultKeyId")]
@@ -903,6 +935,10 @@ public partial class V1beta1WorkspaceStatusAtProviderStorageAccountIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProvider
 {
+    /// <summary>Access Connector ID to use when default storage account firewall is enabled.</summary>
+    [JsonPropertyName("accessConnectorId")]
+    public string? AccessConnectorId { get; set; }
+
     /// <summary>A custom_parameters block as documented below.</summary>
     [JsonPropertyName("customParameters")]
     public IList<V1beta1WorkspaceStatusAtProviderCustomParameters>? CustomParameters { get; set; }
@@ -910,6 +946,10 @@ public partial class V1beta1WorkspaceStatusAtProvider
     /// <summary>Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.</summary>
     [JsonPropertyName("customerManagedKeyEnabled")]
     public bool? CustomerManagedKeyEnabled { get; set; }
+
+    /// <summary>Disallow public access to default storage account. Defaults to false.</summary>
+    [JsonPropertyName("defaultStorageFirewallEnabled")]
+    public bool? DefaultStorageFirewallEnabled { get; set; }
 
     /// <summary>The ID of Managed Disk Encryption Set created by the Databricks Workspace.</summary>
     [JsonPropertyName("diskEncryptionSetId")]
@@ -931,6 +971,10 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.</summary>
+    [JsonPropertyName("managedDiskCmkKeyVaultId")]
+    public string? ManagedDiskCmkKeyVaultId { get; set; }
+
     /// <summary>Customer managed encryption properties for the Databricks Workspace managed disks.</summary>
     [JsonPropertyName("managedDiskCmkKeyVaultKeyId")]
     public string? ManagedDiskCmkKeyVaultKeyId { get; set; }
@@ -950,6 +994,10 @@ public partial class V1beta1WorkspaceStatusAtProvider
     /// <summary>The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("managedResourceGroupName")]
     public string? ManagedResourceGroupName { get; set; }
+
+    /// <summary>Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.</summary>
+    [JsonPropertyName("managedServicesCmkKeyVaultId")]
+    public string? ManagedServicesCmkKeyVaultId { get; set; }
 
     /// <summary>Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).</summary>
     [JsonPropertyName("managedServicesCmkKeyVaultKeyId")]

@@ -102,6 +102,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  defaultEncryptionScope:
+                    description: The default encryption scope to use for this filesystem. Changing this forces a new resource to be created.
+                    type: string
                   group:
                     description: Specifies the Object ID of the Azure Active Directory Group to make the owning group of the root path (i.e. /). Possible values also include $superuser.
                     type: string
@@ -244,6 +247,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  defaultEncryptionScope:
+                    description: The default encryption scope to use for this filesystem. Changing this forces a new resource to be created.
+                    type: string
                   group:
                     description: Specifies the Object ID of the Azure Active Directory Group to make the owning group of the root path (i.e. /). Possible values also include $superuser.
                     type: string
@@ -577,6 +583,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  defaultEncryptionScope:
+                    description: The default encryption scope to use for this filesystem. Changing this forces a new resource to be created.
+                    type: string
                   group:
                     description: Specifies the Object ID of the Azure Active Directory Group to make the owning group of the root path (i.e. /). Possible values also include $superuser.
                     type: string

@@ -1327,7 +1327,7 @@ spec:
                     description: A description for this credential.
                     type: string
                   draft:
-                    description: A draft block as defined below .
+                    description: A draft block as defined below.
                     properties:
                       contentLink:
                         description: A publish_content_link block as defined above.
@@ -1380,21 +1380,23 @@ spec:
                         type: array
                     type: object
                   jobSchedule:
+                    description: One or more job_schedule block as defined below.
                     items:
                       properties:
                         jobScheduleId:
-                          description: The Automation Runbook ID.
+                          description: The UUID of automation runbook job schedule ID.
                           type: string
                         parameters:
                           additionalProperties:
                             type: string
-                          description: A list of parameters block as defined below.
+                          description: A map of key/value pairs corresponding to the arguments that can be passed to the Runbook.
                           type: object
                           x-kubernetes-map-type: granular
                         runOn:
+                          description: Name of a Hybrid Worker Group the Runbook will be executed on.
                           type: string
                         scheduleName:
-                          description: Specifies the name of the Runbook. Changing this forces a new resource to be created.
+                          description: The name of the Schedule.
                           type: string
                       type: object
                     type: array
@@ -1650,7 +1652,7 @@ spec:
                     description: A description for this credential.
                     type: string
                   draft:
-                    description: A draft block as defined below .
+                    description: A draft block as defined below.
                     properties:
                       contentLink:
                         description: A publish_content_link block as defined above.
@@ -1703,21 +1705,23 @@ spec:
                         type: array
                     type: object
                   jobSchedule:
+                    description: One or more job_schedule block as defined below.
                     items:
                       properties:
                         jobScheduleId:
-                          description: The Automation Runbook ID.
+                          description: The UUID of automation runbook job schedule ID.
                           type: string
                         parameters:
                           additionalProperties:
                             type: string
-                          description: A list of parameters block as defined below.
+                          description: A map of key/value pairs corresponding to the arguments that can be passed to the Runbook.
                           type: object
                           x-kubernetes-map-type: granular
                         runOn:
+                          description: Name of a Hybrid Worker Group the Runbook will be executed on.
                           type: string
                         scheduleName:
-                          description: Specifies the name of the Runbook. Changing this forces a new resource to be created.
+                          description: The name of the Schedule.
                           type: string
                       type: object
                     type: array
@@ -2089,7 +2093,7 @@ spec:
                     description: A description for this credential.
                     type: string
                   draft:
-                    description: A draft block as defined below .
+                    description: A draft block as defined below.
                     properties:
                       contentLink:
                         description: A publish_content_link block as defined above.
@@ -2149,21 +2153,23 @@ spec:
                     description: The Automation Runbook ID.
                     type: string
                   jobSchedule:
+                    description: One or more job_schedule block as defined below.
                     items:
                       properties:
                         jobScheduleId:
-                          description: The Automation Runbook ID.
+                          description: The UUID of automation runbook job schedule ID.
                           type: string
                         parameters:
                           additionalProperties:
                             type: string
-                          description: A list of parameters block as defined below.
+                          description: A map of key/value pairs corresponding to the arguments that can be passed to the Runbook.
                           type: object
                           x-kubernetes-map-type: granular
                         runOn:
+                          description: Name of a Hybrid Worker Group the Runbook will be executed on.
                           type: string
                         scheduleName:
-                          description: Specifies the name of the Runbook. Changing this forces a new resource to be created.
+                          description: The name of the Schedule.
                           type: string
                       type: object
                     type: array

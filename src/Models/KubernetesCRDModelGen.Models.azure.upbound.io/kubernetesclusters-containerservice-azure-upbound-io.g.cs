@@ -575,9 +575,17 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolPodSu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolUpgradeSettings
 {
+    /// <summary>The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors pod disruption budgets for upgrades. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.</summary>
+    [JsonPropertyName("drainTimeoutInMinutes")]
+    public double? DrainTimeoutInMinutes { get; set; }
+
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public double? NodeSoakDurationInMinutes { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1265,6 +1273,10 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
     [JsonPropertyName("natGatewayProfile")]
     public IList<V1beta1KubernetesClusterSpecForProviderNetworkProfileNatGatewayProfile>? NatGatewayProfile { get; set; }
 
+    /// <summary>Specifies the data plane used for building the Kubernetes network. Possible values are azure and cilium. Defaults to azure. Disabling this forces a new resource to be created.</summary>
+    [JsonPropertyName("networkDataPlane")]
+    public string? NetworkDataPlane { get; set; }
+
     /// <summary>Network mode to be used with Azure CNI. Possible values are bridge and transparent. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("networkMode")]
     public string? NetworkMode { get; set; }
@@ -1280,6 +1292,14 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
     /// <summary>Sets up network policy to be used with Azure CNI. Network policy allows us to control the traffic flow between pods. Currently supported values are calico, azure and cilium.</summary>
     [JsonPropertyName("networkPolicy")]
     public string? NetworkPolicy { get; set; }
+
+    /// <summary>The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</summary>
+    [JsonPropertyName("outboundIpAddressIds")]
+    public IList<string>? OutboundIpAddressIds { get; set; }
+
+    /// <summary>The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</summary>
+    [JsonPropertyName("outboundIpPrefixIds")]
+    public IList<string>? OutboundIpPrefixIds { get; set; }
 
     /// <summary>The outbound (egress) routing method which should be used for this Kubernetes Cluster. Possible values are loadBalancer, userDefinedRouting, managedNATGateway and userAssignedNATGateway. Defaults to loadBalancer. More information on supported migration paths for outbound_type can be found in this documentation.</summary>
     [JsonPropertyName("outboundType")]
@@ -1503,9 +1523,13 @@ public partial class V1beta1KubernetesClusterSpecForProviderStorageProfile
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderWebAppRouting
 {
-    /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
+    /// <summary>The Kubernetes Managed Cluster ID.</summary>
     [JsonPropertyName("dnsZoneId")]
     public string? DnsZoneId { get; set; }
+
+    /// <summary>Specifies the list of the DNS Zone IDs in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. If not using Bring-Your-Own DNS zones this property should be set to an empty list.</summary>
+    [JsonPropertyName("dnsZoneIds")]
+    public IList<string>? DnsZoneIds { get; set; }
 }
 
 /// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
@@ -1607,6 +1631,10 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     /// <summary>A confidential_computing block as defined below. For more details please the documentation</summary>
     [JsonPropertyName("confidentialComputing")]
     public IList<V1beta1KubernetesClusterSpecForProviderConfidentialComputing>? ConfidentialComputing { get; set; }
+
+    /// <summary>Should cost analysis be enabled for this Kubernetes Cluster? Defaults to false. The sku_tier must be set to Standard or Premium to enable this feature. Enabling this will add Kubernetes Namespace and Deployment details to the Cost Analysis views in the Azure portal.</summary>
+    [JsonPropertyName("costAnalysisEnabled")]
+    public bool? CostAnalysisEnabled { get; set; }
 
     /// <summary>A list of up to 10 base64 encoded CAs that will be added to the trust store on nodes with the custom_ca_trust_enabled feature enabled.</summary>
     [JsonPropertyName("customCaTrustCertificatesBase64")]
@@ -2044,6 +2072,23 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
     public bool? SkipNodesWithSystemPods { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControl
@@ -2067,6 +2112,10 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirector
     /// <summary>The Server ID of an Azure Active Directory Application.</summary>
     [JsonPropertyName("serverAppId")]
     public string? ServerAppId { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("serverAppSecretSecretRef")]
+    public V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef? ServerAppSecretSecretRef { get; set; }
 
     /// <summary>The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.</summary>
     [JsonPropertyName("tenantId")]
@@ -2363,9 +2412,17 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolPodS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolUpgradeSettings
 {
+    /// <summary>The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors pod disruption budgets for upgrades. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.</summary>
+    [JsonPropertyName("drainTimeoutInMinutes")]
+    public double? DrainTimeoutInMinutes { get; set; }
+
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public double? NodeSoakDurationInMinutes { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -2601,6 +2658,23 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     public IList<string>? Zones { get; set; }
 }
 
+/// <summary>The base64 encoded alternative CA certificate content in PEM format.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfigTrustedCaSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfig
@@ -2616,6 +2690,10 @@ public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfig
     /// <summary>The list of domains that will not use the proxy for communication.</summary>
     [JsonPropertyName("noProxy")]
     public IList<string>? NoProxy { get; set; }
+
+    /// <summary>The base64 encoded alternative CA certificate content in PEM format.</summary>
+    [JsonPropertyName("trustedCaSecretRef")]
+    public V1beta1KubernetesClusterSpecInitProviderHttpProxyConfigTrustedCaSecretRef? TrustedCaSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -3032,6 +3110,10 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
     [JsonPropertyName("natGatewayProfile")]
     public IList<V1beta1KubernetesClusterSpecInitProviderNetworkProfileNatGatewayProfile>? NatGatewayProfile { get; set; }
 
+    /// <summary>Specifies the data plane used for building the Kubernetes network. Possible values are azure and cilium. Defaults to azure. Disabling this forces a new resource to be created.</summary>
+    [JsonPropertyName("networkDataPlane")]
+    public string? NetworkDataPlane { get; set; }
+
     /// <summary>Network mode to be used with Azure CNI. Possible values are bridge and transparent. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("networkMode")]
     public string? NetworkMode { get; set; }
@@ -3047,6 +3129,14 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
     /// <summary>Sets up network policy to be used with Azure CNI. Network policy allows us to control the traffic flow between pods. Currently supported values are calico, azure and cilium.</summary>
     [JsonPropertyName("networkPolicy")]
     public string? NetworkPolicy { get; set; }
+
+    /// <summary>The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</summary>
+    [JsonPropertyName("outboundIpAddressIds")]
+    public IList<string>? OutboundIpAddressIds { get; set; }
+
+    /// <summary>The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</summary>
+    [JsonPropertyName("outboundIpPrefixIds")]
+    public IList<string>? OutboundIpPrefixIds { get; set; }
 
     /// <summary>The outbound (egress) routing method which should be used for this Kubernetes Cluster. Possible values are loadBalancer, userDefinedRouting, managedNATGateway and userAssignedNATGateway. Defaults to loadBalancer. More information on supported migration paths for outbound_type can be found in this documentation.</summary>
     [JsonPropertyName("outboundType")]
@@ -3193,9 +3283,30 @@ public partial class V1beta1KubernetesClusterSpecInitProviderStorageProfile
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderWebAppRouting
 {
-    /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
+    /// <summary>The Kubernetes Managed Cluster ID.</summary>
     [JsonPropertyName("dnsZoneId")]
     public string? DnsZoneId { get; set; }
+
+    /// <summary>Specifies the list of the DNS Zone IDs in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. If not using Bring-Your-Own DNS zones this property should be set to an empty list.</summary>
+    [JsonPropertyName("dnsZoneIds")]
+    public IList<string>? DnsZoneIds { get; set; }
+}
+
+/// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfileAdminPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -3215,6 +3326,10 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfileGmsa
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfile
 {
+    /// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
+    [JsonPropertyName("adminPasswordSecretRef")]
+    public V1beta1KubernetesClusterSpecInitProviderWindowsProfileAdminPasswordSecretRef? AdminPasswordSecretRef { get; set; }
+
     /// <summary>The Admin Username for Windows VMs. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminUsername")]
     public string? AdminUsername { get; set; }
@@ -3276,6 +3391,10 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     /// <summary>A confidential_computing block as defined below. For more details please the documentation</summary>
     [JsonPropertyName("confidentialComputing")]
     public IList<V1beta1KubernetesClusterSpecInitProviderConfidentialComputing>? ConfidentialComputing { get; set; }
+
+    /// <summary>Should cost analysis be enabled for this Kubernetes Cluster? Defaults to false. The sku_tier must be set to Standard or Premium to enable this feature. Enabling this will add Kubernetes Namespace and Deployment details to the Cost Analysis views in the Azure portal.</summary>
+    [JsonPropertyName("costAnalysisEnabled")]
+    public bool? CostAnalysisEnabled { get; set; }
 
     /// <summary>A list of up to 10 base64 encoded CAs that will be added to the trust store on nodes with the custom_ca_trust_enabled feature enabled.</summary>
     [JsonPropertyName("customCaTrustCertificatesBase64")]
@@ -3989,9 +4108,17 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNode
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolUpgradeSettings
 {
+    /// <summary>The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors pod disruption budgets for upgrades. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.</summary>
+    [JsonPropertyName("drainTimeoutInMinutes")]
+    public double? DrainTimeoutInMinutes { get; set; }
+
     /// <summary>The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.</summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public double? NodeSoakDurationInMinutes { get; set; }
 }
 
 /// <summary></summary>
@@ -4584,6 +4711,10 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
     [JsonPropertyName("natGatewayProfile")]
     public IList<V1beta1KubernetesClusterStatusAtProviderNetworkProfileNatGatewayProfile>? NatGatewayProfile { get; set; }
 
+    /// <summary>Specifies the data plane used for building the Kubernetes network. Possible values are azure and cilium. Defaults to azure. Disabling this forces a new resource to be created.</summary>
+    [JsonPropertyName("networkDataPlane")]
+    public string? NetworkDataPlane { get; set; }
+
     /// <summary>Network mode to be used with Azure CNI. Possible values are bridge and transparent. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("networkMode")]
     public string? NetworkMode { get; set; }
@@ -4599,6 +4730,14 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
     /// <summary>Sets up network policy to be used with Azure CNI. Network policy allows us to control the traffic flow between pods. Currently supported values are calico, azure and cilium.</summary>
     [JsonPropertyName("networkPolicy")]
     public string? NetworkPolicy { get; set; }
+
+    /// <summary>The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</summary>
+    [JsonPropertyName("outboundIpAddressIds")]
+    public IList<string>? OutboundIpAddressIds { get; set; }
+
+    /// <summary>The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</summary>
+    [JsonPropertyName("outboundIpPrefixIds")]
+    public IList<string>? OutboundIpPrefixIds { get; set; }
 
     /// <summary>The outbound (egress) routing method which should be used for this Kubernetes Cluster. Possible values are loadBalancer, userDefinedRouting, managedNATGateway and userAssignedNATGateway. Defaults to loadBalancer. More information on supported migration paths for outbound_type can be found in this documentation.</summary>
     [JsonPropertyName("outboundType")]
@@ -4727,9 +4866,13 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRoutingWebApp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRouting
 {
-    /// <summary>Specifies the ID of the DNS Zone in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. For Bring-Your-Own DNS zones this property should be set to an empty string "".</summary>
+    /// <summary>The Kubernetes Managed Cluster ID.</summary>
     [JsonPropertyName("dnsZoneId")]
     public string? DnsZoneId { get; set; }
+
+    /// <summary>Specifies the list of the DNS Zone IDs in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. If not using Bring-Your-Own DNS zones this property should be set to an empty list.</summary>
+    [JsonPropertyName("dnsZoneIds")]
+    public IList<string>? DnsZoneIds { get; set; }
 
     /// <summary>A web_app_routing_identity block is exported. The exported attributes are defined below.</summary>
     [JsonPropertyName("webAppRoutingIdentity")]
@@ -4822,6 +4965,10 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     /// <summary>A confidential_computing block as defined below. For more details please the documentation</summary>
     [JsonPropertyName("confidentialComputing")]
     public IList<V1beta1KubernetesClusterStatusAtProviderConfidentialComputing>? ConfidentialComputing { get; set; }
+
+    /// <summary>Should cost analysis be enabled for this Kubernetes Cluster? Defaults to false. The sku_tier must be set to Standard or Premium to enable this feature. Enabling this will add Kubernetes Namespace and Deployment details to the Cost Analysis views in the Azure portal.</summary>
+    [JsonPropertyName("costAnalysisEnabled")]
+    public bool? CostAnalysisEnabled { get; set; }
 
     /// <summary>The current version running on the Azure Kubernetes Managed Cluster.</summary>
     [JsonPropertyName("currentKubernetesVersion")]

@@ -8,6 +8,69 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.upbound.io;
+/// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRuleCriteria
+{
+    /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("absoluteCriteria")]
+    public string? AbsoluteCriteria { get; set; }
+
+    /// <summary>Must be between 0 and 28. 0 for last day within the month. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("daysOfMonth")]
+    public IList<double>? DaysOfMonth { get; set; }
+
+    /// <summary>Possible values are Monday, Tuesday, Thursday, Friday, Saturday and Sunday. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("daysOfWeek")]
+    public IList<string>? DaysOfWeek { get; set; }
+
+    /// <summary>Possible values are January, February, March, April, May, June, July, August, September, October, November and December. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("monthsOfYear")]
+    public IList<string>? MonthsOfYear { get; set; }
+
+    /// <summary>Specifies a list of backup times for backup in the RFC3339 format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("scheduledBackupTimes")]
+    public IList<string>? ScheduledBackupTimes { get; set; }
+
+    /// <summary>Possible values are First, Second, Third, Fourth and Last. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("weeksOfMonth")]
+    public IList<string>? WeeksOfMonth { get; set; }
+}
+
+/// <summary>A life_cycle block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRuleLifeCycle
+{
+    /// <summary>The type of data store. The only possible value is VaultStore. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("dataStoreType")]
+    public string? DataStoreType { get; set; }
+
+    /// <summary>Duration after which the backup is deleted. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("duration")]
+    public string? Duration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRule
+{
+    /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("criteria")]
+    public V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRuleCriteria? Criteria { get; set; }
+
+    /// <summary>A life_cycle block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("lifeCycle")]
+    public V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRuleLifeCycle? LifeCycle { get; set; }
+
+    /// <summary>The name which should be used for this retention rule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Specifies the priority of the rule. The priority number must be unique for each rule. The lower the priority number, the higher the priority of the rule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("priority")]
+    public double? Priority { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyBlobStorageSpecForProviderVaultIdRefPolicy
@@ -68,9 +131,29 @@ public partial class V1beta1BackupPolicyBlobStorageSpecForProviderVaultIdSelecto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyBlobStorageSpecForProvider
 {
+    /// <summary>Specifies a list of repeating time interval. It should follow ISO 8601 repeating time interval. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("backupRepeatingTimeIntervals")]
+    public IList<string>? BackupRepeatingTimeIntervals { get; set; }
+
+    /// <summary>The duration of operational default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("operationalDefaultRetentionDuration")]
+    public string? OperationalDefaultRetentionDuration { get; set; }
+
     /// <summary>Duration of deletion after given timespan. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("retentionDuration")]
     public string? RetentionDuration { get; set; }
+
+    /// <summary>One or more retention_rule blocks as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("retentionRule")]
+    public IList<V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRule>? RetentionRule { get; set; }
+
+    /// <summary>Specifies the Time Zone which should be used by the backup schedule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("timeZone")]
+    public string? TimeZone { get; set; }
+
+    /// <summary>The duration of vault default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("vaultDefaultRetentionDuration")]
+    public string? VaultDefaultRetentionDuration { get; set; }
 
     /// <summary>The ID of the Backup Vault within which the Backup Policy Blob Storage should exist. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("vaultId")]
@@ -85,13 +168,96 @@ public partial class V1beta1BackupPolicyBlobStorageSpecForProvider
     public V1beta1BackupPolicyBlobStorageSpecForProviderVaultIdSelector? VaultIdSelector { get; set; }
 }
 
+/// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageSpecInitProviderRetentionRuleCriteria
+{
+    /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("absoluteCriteria")]
+    public string? AbsoluteCriteria { get; set; }
+
+    /// <summary>Must be between 0 and 28. 0 for last day within the month. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("daysOfMonth")]
+    public IList<double>? DaysOfMonth { get; set; }
+
+    /// <summary>Possible values are Monday, Tuesday, Thursday, Friday, Saturday and Sunday. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("daysOfWeek")]
+    public IList<string>? DaysOfWeek { get; set; }
+
+    /// <summary>Possible values are January, February, March, April, May, June, July, August, September, October, November and December. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("monthsOfYear")]
+    public IList<string>? MonthsOfYear { get; set; }
+
+    /// <summary>Specifies a list of backup times for backup in the RFC3339 format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("scheduledBackupTimes")]
+    public IList<string>? ScheduledBackupTimes { get; set; }
+
+    /// <summary>Possible values are First, Second, Third, Fourth and Last. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("weeksOfMonth")]
+    public IList<string>? WeeksOfMonth { get; set; }
+}
+
+/// <summary>A life_cycle block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageSpecInitProviderRetentionRuleLifeCycle
+{
+    /// <summary>The type of data store. The only possible value is VaultStore. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("dataStoreType")]
+    public string? DataStoreType { get; set; }
+
+    /// <summary>Duration after which the backup is deleted. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("duration")]
+    public string? Duration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageSpecInitProviderRetentionRule
+{
+    /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("criteria")]
+    public V1beta1BackupPolicyBlobStorageSpecInitProviderRetentionRuleCriteria? Criteria { get; set; }
+
+    /// <summary>A life_cycle block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("lifeCycle")]
+    public V1beta1BackupPolicyBlobStorageSpecInitProviderRetentionRuleLifeCycle? LifeCycle { get; set; }
+
+    /// <summary>The name which should be used for this retention rule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Specifies the priority of the rule. The priority number must be unique for each rule. The lower the priority number, the higher the priority of the rule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("priority")]
+    public double? Priority { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyBlobStorageSpecInitProvider
 {
+    /// <summary>Specifies a list of repeating time interval. It should follow ISO 8601 repeating time interval. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("backupRepeatingTimeIntervals")]
+    public IList<string>? BackupRepeatingTimeIntervals { get; set; }
+
+    /// <summary>The duration of operational default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("operationalDefaultRetentionDuration")]
+    public string? OperationalDefaultRetentionDuration { get; set; }
+
     /// <summary>Duration of deletion after given timespan. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("retentionDuration")]
     public string? RetentionDuration { get; set; }
+
+    /// <summary>One or more retention_rule blocks as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("retentionRule")]
+    public IList<V1beta1BackupPolicyBlobStorageSpecInitProviderRetentionRule>? RetentionRule { get; set; }
+
+    /// <summary>Specifies the Time Zone which should be used by the backup schedule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("timeZone")]
+    public string? TimeZone { get; set; }
+
+    /// <summary>The duration of vault default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("vaultDefaultRetentionDuration")]
+    public string? VaultDefaultRetentionDuration { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -226,17 +392,100 @@ public partial class V1beta1BackupPolicyBlobStorageSpec
     public V1beta1BackupPolicyBlobStorageSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageStatusAtProviderRetentionRuleCriteria
+{
+    /// <summary>Possible values are AllBackup, FirstOfDay, FirstOfWeek, FirstOfMonth and FirstOfYear. These values mean the first successful backup of the day/week/month/year. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("absoluteCriteria")]
+    public string? AbsoluteCriteria { get; set; }
+
+    /// <summary>Must be between 0 and 28. 0 for last day within the month. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("daysOfMonth")]
+    public IList<double>? DaysOfMonth { get; set; }
+
+    /// <summary>Possible values are Monday, Tuesday, Thursday, Friday, Saturday and Sunday. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("daysOfWeek")]
+    public IList<string>? DaysOfWeek { get; set; }
+
+    /// <summary>Possible values are January, February, March, April, May, June, July, August, September, October, November and December. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("monthsOfYear")]
+    public IList<string>? MonthsOfYear { get; set; }
+
+    /// <summary>Specifies a list of backup times for backup in the RFC3339 format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("scheduledBackupTimes")]
+    public IList<string>? ScheduledBackupTimes { get; set; }
+
+    /// <summary>Possible values are First, Second, Third, Fourth and Last. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("weeksOfMonth")]
+    public IList<string>? WeeksOfMonth { get; set; }
+}
+
+/// <summary>A life_cycle block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageStatusAtProviderRetentionRuleLifeCycle
+{
+    /// <summary>The type of data store. The only possible value is VaultStore. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("dataStoreType")]
+    public string? DataStoreType { get; set; }
+
+    /// <summary>Duration after which the backup is deleted. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("duration")]
+    public string? Duration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyBlobStorageStatusAtProviderRetentionRule
+{
+    /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("criteria")]
+    public V1beta1BackupPolicyBlobStorageStatusAtProviderRetentionRuleCriteria? Criteria { get; set; }
+
+    /// <summary>A life_cycle block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("lifeCycle")]
+    public V1beta1BackupPolicyBlobStorageStatusAtProviderRetentionRuleLifeCycle? LifeCycle { get; set; }
+
+    /// <summary>The name which should be used for this retention rule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Specifies the priority of the rule. The priority number must be unique for each rule. The lower the priority number, the higher the priority of the rule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("priority")]
+    public double? Priority { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyBlobStorageStatusAtProvider
 {
+    /// <summary>Specifies a list of repeating time interval. It should follow ISO 8601 repeating time interval. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("backupRepeatingTimeIntervals")]
+    public IList<string>? BackupRepeatingTimeIntervals { get; set; }
+
     /// <summary>The ID of the Backup Policy Blob Storage.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>The duration of operational default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("operationalDefaultRetentionDuration")]
+    public string? OperationalDefaultRetentionDuration { get; set; }
+
     /// <summary>Duration of deletion after given timespan. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("retentionDuration")]
     public string? RetentionDuration { get; set; }
+
+    /// <summary>One or more retention_rule blocks as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("retentionRule")]
+    public IList<V1beta1BackupPolicyBlobStorageStatusAtProviderRetentionRule>? RetentionRule { get; set; }
+
+    /// <summary>Specifies the Time Zone which should be used by the backup schedule. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("timeZone")]
+    public string? TimeZone { get; set; }
+
+    /// <summary>The duration of vault default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    [JsonPropertyName("vaultDefaultRetentionDuration")]
+    public string? VaultDefaultRetentionDuration { get; set; }
 
     /// <summary>The ID of the Backup Vault within which the Backup Policy Blob Storage should exist. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("vaultId")]

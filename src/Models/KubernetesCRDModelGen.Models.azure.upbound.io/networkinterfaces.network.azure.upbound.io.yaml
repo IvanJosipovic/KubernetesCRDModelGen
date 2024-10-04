@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  acceleratedNetworkingEnabled:
+                    description: Should Accelerated Networking be enabled? Defaults to false.
+                    type: boolean
                   auxiliaryMode:
                     description: Specifies the auxiliary mode used to enable network high-performance feature on Network Virtual Appliances (NVAs). This feature offers competitive performance in Connections Per Second (CPS) optimization, along with improvements to handling large amounts of simultaneous connections. Possible values are AcceleratedConnections, Floating, MaxConnections and None.
                     type: string
@@ -99,10 +102,8 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Network Interface should exist. Changing this forces a new Network Interface to be created.
                     type: string
                   enableAcceleratedNetworking:
-                    description: Should Accelerated Networking be enabled? Defaults to false.
                     type: boolean
                   enableIpForwarding:
-                    description: Should IP Forwarding be enabled? Defaults to false.
                     type: boolean
                   internalDnsNameLabel:
                     description: The (relative) DNS Name used for internal communications between Virtual Machines in the same Virtual Network.
@@ -309,6 +310,9 @@ spec:
                           type: object
                       type: object
                     type: array
+                  ipForwardingEnabled:
+                    description: Should IP Forwarding be enabled? Defaults to false.
+                    type: boolean
                   location:
                     description: The location where the Network Interface should exist. Changing this forces a new resource to be created.
                     type: string
@@ -430,6 +434,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  acceleratedNetworkingEnabled:
+                    description: Should Accelerated Networking be enabled? Defaults to false.
+                    type: boolean
                   auxiliaryMode:
                     description: Specifies the auxiliary mode used to enable network high-performance feature on Network Virtual Appliances (NVAs). This feature offers competitive performance in Connections Per Second (CPS) optimization, along with improvements to handling large amounts of simultaneous connections. Possible values are AcceleratedConnections, Floating, MaxConnections and None.
                     type: string
@@ -445,10 +452,8 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Network Interface should exist. Changing this forces a new Network Interface to be created.
                     type: string
                   enableAcceleratedNetworking:
-                    description: Should Accelerated Networking be enabled? Defaults to false.
                     type: boolean
                   enableIpForwarding:
-                    description: Should IP Forwarding be enabled? Defaults to false.
                     type: boolean
                   internalDnsNameLabel:
                     description: The (relative) DNS Name used for internal communications between Virtual Machines in the same Virtual Network.
@@ -655,6 +660,9 @@ spec:
                           type: object
                       type: object
                     type: array
+                  ipForwardingEnabled:
+                    description: Should IP Forwarding be enabled? Defaults to false.
+                    type: boolean
                   location:
                     description: The location where the Network Interface should exist. Changing this forces a new resource to be created.
                     type: string
@@ -883,6 +891,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  acceleratedNetworkingEnabled:
+                    description: Should Accelerated Networking be enabled? Defaults to false.
+                    type: boolean
                   appliedDnsServers:
                     description: If the Virtual Machine using this Network Interface is part of an Availability Set, then this list will have the union of all DNS servers from all Network Interfaces that are part of the Availability Set.
                     items:
@@ -903,10 +914,8 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Network Interface should exist. Changing this forces a new Network Interface to be created.
                     type: string
                   enableAcceleratedNetworking:
-                    description: Should Accelerated Networking be enabled? Defaults to false.
                     type: boolean
                   enableIpForwarding:
-                    description: Should IP Forwarding be enabled? Defaults to false.
                     type: boolean
                   id:
                     description: The ID of the Network Interface.
@@ -947,6 +956,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  ipForwardingEnabled:
+                    description: Should IP Forwarding be enabled? Defaults to false.
+                    type: boolean
                   location:
                     description: The location where the Network Interface should exist. Changing this forces a new resource to be created.
                     type: string

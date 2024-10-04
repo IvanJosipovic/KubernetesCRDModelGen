@@ -1027,6 +1027,23 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderEx
     public string? SourceVaultId { get; set; }
 }
 
+/// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderExtension
@@ -1054,6 +1071,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderEx
     /// <summary>A protected_settings_from_key_vault block as defined below.</summary>
     [JsonPropertyName("protectedSettingsFromKeyVault")]
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsFromKeyVault>? ProtectedSettingsFromKeyVault { get; set; }
+
+    /// <summary>A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.</summary>
+    [JsonPropertyName("protectedSettingsSecretRef")]
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderExtensionProtectedSettingsSecretRef? ProtectedSettingsSecretRef { get; set; }
 
     /// <summary>Specifies the Publisher of the Extension.</summary>
     [JsonPropertyName("publisher")]
@@ -1307,6 +1328,40 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOs
     public bool? WriteAcceleratorEnabled { get; set; }
 }
 
+/// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileCustomDataSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfigurationAdminPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfigurationAdminSshKey
@@ -1346,6 +1401,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfiguration
 {
+    /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("adminPasswordSecretRef")]
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfigurationAdminPasswordSecretRef? AdminPasswordSecretRef { get; set; }
+
     /// <summary>A admin_ssh_key block as documented below.</summary>
     [JsonPropertyName("adminSshKey")]
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfigurationAdminSshKey>? AdminSshKey { get; set; }
@@ -1480,6 +1539,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfile
 {
+    /// <summary>The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</summary>
+    [JsonPropertyName("customDataSecretRef")]
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileCustomDataSecretRef? CustomDataSecretRef { get; set; }
+
     /// <summary>A linux_configuration block as documented below.</summary>
     [JsonPropertyName("linuxConfiguration")]
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfiguration>? LinuxConfiguration { get; set; }
@@ -1551,6 +1614,23 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderTe
     /// <summary>Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.</summary>
     [JsonPropertyName("timeout")]
     public string? Timeout { get; set; }
+}
+
+/// <summary>The Base64-Encoded User Data which should be used for this Virtual Machine Scale Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderUserDataBase64SecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -1672,6 +1752,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProvider
     /// <summary>A termination_notification block as defined below.</summary>
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderTerminationNotification>? TerminationNotification { get; set; }
+
+    /// <summary>The Base64-Encoded User Data which should be used for this Virtual Machine Scale Set.</summary>
+    [JsonPropertyName("userDataBase64SecretRef")]
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderUserDataBase64SecretRef? UserDataBase64SecretRef { get; set; }
 
     /// <summary>Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("zoneBalance")]

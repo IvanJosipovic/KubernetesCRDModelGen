@@ -482,6 +482,83 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecForProviderServerlessCompute
+{
+    /// <summary>Should serverless compute nodes deployed in a custom Virtual Network have public IP addresses enabled for a workspace with private endpoint? Defaults to false.</summary>
+    [JsonPropertyName("publicIpEnabled")]
+    public bool? PublicIpEnabled { get; set; }
+
+    /// <summary>The ID of an existing Virtual Network Subnet in which the serverless compute nodes should be deployed to.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1WorkspaceSpecForProviderServerlessComputeSubnetIdSelector? SubnetIdSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -639,6 +716,10 @@ public partial class V1beta1WorkspaceSpecForProvider
     /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1WorkspaceSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
+
+    /// <summary>A serverless_compute block as defined below.</summary>
+    [JsonPropertyName("serverlessCompute")]
+    public IList<V1beta1WorkspaceSpecForProviderServerlessCompute>? ServerlessCompute { get; set; }
 
     /// <summary>SKU/edition of the Machine Learning Workspace, possible values are Free, Basic, Standard and Premium. Defaults to Basic.</summary>
     [JsonPropertyName("skuName")]
@@ -1083,6 +1164,83 @@ public partial class V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentity
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecInitProviderServerlessCompute
+{
+    /// <summary>Should serverless compute nodes deployed in a custom Virtual Network have public IP addresses enabled for a workspace with private endpoint? Defaults to false.</summary>
+    [JsonPropertyName("publicIpEnabled")]
+    public bool? PublicIpEnabled { get; set; }
+
+    /// <summary>The ID of an existing Virtual Network Subnet in which the serverless compute nodes should be deployed to.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1WorkspaceSpecInitProviderServerlessComputeSubnetIdSelector? SubnetIdSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -1228,6 +1386,10 @@ public partial class V1beta1WorkspaceSpecInitProvider
     /// <summary>Enable public access when this Machine Learning Workspace is behind VNet.</summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
+
+    /// <summary>A serverless_compute block as defined below.</summary>
+    [JsonPropertyName("serverlessCompute")]
+    public IList<V1beta1WorkspaceSpecInitProviderServerlessCompute>? ServerlessCompute { get; set; }
 
     /// <summary>SKU/edition of the Machine Learning Workspace, possible values are Free, Basic, Standard and Premium. Defaults to Basic.</summary>
     [JsonPropertyName("skuName")]
@@ -1452,6 +1614,19 @@ public partial class V1beta1WorkspaceStatusAtProviderManagedNetwork
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceStatusAtProviderServerlessCompute
+{
+    /// <summary>Should serverless compute nodes deployed in a custom Virtual Network have public IP addresses enabled for a workspace with private endpoint? Defaults to false.</summary>
+    [JsonPropertyName("publicIpEnabled")]
+    public bool? PublicIpEnabled { get; set; }
+
+    /// <summary>The ID of an existing Virtual Network Subnet in which the serverless compute nodes should be deployed to.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProvider
 {
     /// <summary>The ID of the Application Insights associated with this Machine Learning Workspace. Changing this forces a new resource to be created.</summary>
@@ -1529,6 +1704,10 @@ public partial class V1beta1WorkspaceStatusAtProvider
     /// <summary>Specifies the name of the Resource Group in which the Machine Learning Workspace should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
+
+    /// <summary>A serverless_compute block as defined below.</summary>
+    [JsonPropertyName("serverlessCompute")]
+    public IList<V1beta1WorkspaceStatusAtProviderServerlessCompute>? ServerlessCompute { get; set; }
 
     /// <summary>SKU/edition of the Machine Learning Workspace, possible values are Free, Basic, Standard and Premium. Defaults to Basic.</summary>
     [JsonPropertyName("skuName")]

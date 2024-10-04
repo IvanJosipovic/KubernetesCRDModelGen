@@ -274,6 +274,10 @@ public partial class V1beta1MonitorDataCollectionEndpointStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>The immutable ID of the Data Collection Endpoint.</summary>
+    [JsonPropertyName("immutableId")]
+    public string? ImmutableId { get; set; }
+
     /// <summary>The kind of the Data Collection Endpoint. Possible values are Linux and Windows.</summary>
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }

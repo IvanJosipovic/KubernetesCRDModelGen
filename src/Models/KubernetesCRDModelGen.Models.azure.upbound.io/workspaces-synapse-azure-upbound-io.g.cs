@@ -862,6 +862,23 @@ public partial class V1beta1WorkspaceSpecInitProviderSqlAadAdmin
     public string? TenantId { get; set; }
 }
 
+/// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecInitProviderSqlAdministratorLoginPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2FilesystemIdRefPolicy
@@ -1001,6 +1018,10 @@ public partial class V1beta1WorkspaceSpecInitProvider
     /// <summary>Specifies The login name of the SQL administrator. Changing this forces a new resource to be created. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
     [JsonPropertyName("sqlAdministratorLogin")]
     public string? SqlAdministratorLogin { get; set; }
+
+    /// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+    [JsonPropertyName("sqlAdministratorLoginPasswordSecretRef")]
+    public V1beta1WorkspaceSpecInitProviderSqlAdministratorLoginPasswordSecretRef? SqlAdministratorLoginPasswordSecretRef { get; set; }
 
     /// <summary>Are pipelines (running as workspace's system assigned identity) allowed to access SQL pools?</summary>
     [JsonPropertyName("sqlIdentityControlEnabled")]

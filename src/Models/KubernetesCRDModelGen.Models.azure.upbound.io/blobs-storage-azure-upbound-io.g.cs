@@ -140,6 +140,10 @@ public partial class V1beta1BlobSpecForProvider
     [JsonPropertyName("contentType")]
     public string? ContentType { get; set; }
 
+    /// <summary>The encryption scope to use for this blob.</summary>
+    [JsonPropertyName("encryptionScope")]
+    public string? EncryptionScope { get; set; }
+
     /// <summary>A map of custom blob metadata.</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
@@ -212,6 +216,10 @@ public partial class V1beta1BlobSpecInitProvider
     /// <summary>The content type of the storage blob. Cannot be defined if source_uri is defined. Defaults to application/octet-stream.</summary>
     [JsonPropertyName("contentType")]
     public string? ContentType { get; set; }
+
+    /// <summary>The encryption scope to use for this blob.</summary>
+    [JsonPropertyName("encryptionScope")]
+    public string? EncryptionScope { get; set; }
 
     /// <summary>A map of custom blob metadata.</summary>
     [JsonPropertyName("metadata")]
@@ -393,6 +401,10 @@ public partial class V1beta1BlobStatusAtProvider
     /// <summary>The content type of the storage blob. Cannot be defined if source_uri is defined. Defaults to application/octet-stream.</summary>
     [JsonPropertyName("contentType")]
     public string? ContentType { get; set; }
+
+    /// <summary>The encryption scope to use for this blob.</summary>
+    [JsonPropertyName("encryptionScope")]
+    public string? EncryptionScope { get; set; }
 
     /// <summary>The ID of the Storage Blob.</summary>
     [JsonPropertyName("id")]

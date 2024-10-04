@@ -126,6 +126,10 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("powerBiServiceEnabled")]
+    public bool? PowerBiServiceEnabled { get; set; }
+
     /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.</summary>
     [JsonPropertyName("querypoolConnectionMode")]
     public string? QuerypoolConnectionMode { get; set; }
@@ -268,6 +272,10 @@ public partial class V1beta1ServerSpecInitProvider
     /// <summary>The name of the Analysis Services Server. Only lowercase Alphanumeric characters allowed, starting with a letter. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("powerBiServiceEnabled")]
+    public bool? PowerBiServiceEnabled { get; set; }
 
     /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.</summary>
     [JsonPropertyName("querypoolConnectionMode")]
@@ -470,6 +478,10 @@ public partial class V1beta1ServerStatusAtProvider
     /// <summary>The name of the Analysis Services Server. Only lowercase Alphanumeric characters allowed, starting with a letter. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("powerBiServiceEnabled")]
+    public bool? PowerBiServiceEnabled { get; set; }
 
     /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.</summary>
     [JsonPropertyName("querypoolConnectionMode")]

@@ -346,9 +346,16 @@ spec:
                           type: array
                       type: object
                     type: array
-                  partitionKeyPath:
-                    description: Define a partition key. Changing this forces a new resource to be created.
+                  partitionKeyKind:
+                    description: Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.
                     type: string
+                  partitionKeyPath:
+                    type: string
+                  partitionKeyPaths:
+                    description: A list of partition key paths. Changing this forces a new resource to be created.
+                    items:
+                      type: string
+                    type: array
                   partitionKeyVersion:
                     description: Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.
                     type: number
@@ -563,9 +570,16 @@ spec:
                           type: array
                       type: object
                     type: array
-                  partitionKeyPath:
-                    description: Define a partition key. Changing this forces a new resource to be created.
+                  partitionKeyKind:
+                    description: Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.
                     type: string
+                  partitionKeyPath:
+                    type: string
+                  partitionKeyPaths:
+                    description: A list of partition key paths. Changing this forces a new resource to be created.
+                    items:
+                      type: string
+                    type: array
                   partitionKeyVersion:
                     description: Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.
                     type: number
@@ -793,9 +807,6 @@ spec:
             required:
             - forProvider
             type: object
-            x-kubernetes-validations:
-            - message: spec.forProvider.partitionKeyPath is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.partitionKeyPath) || (has(self.initProvider) && has(self.initProvider.partitionKeyPath))"
           status:
             description: SQLContainerStatus defines the observed state of SQLContainer.
             properties:
@@ -900,9 +911,16 @@ spec:
                           type: array
                       type: object
                     type: array
-                  partitionKeyPath:
-                    description: Define a partition key. Changing this forces a new resource to be created.
+                  partitionKeyKind:
+                    description: Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.
                     type: string
+                  partitionKeyPath:
+                    type: string
+                  partitionKeyPaths:
+                    description: A list of partition key paths. Changing this forces a new resource to be created.
+                    items:
+                      type: string
+                    type: array
                   partitionKeyVersion:
                     description: Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.
                     type: number
@@ -1314,9 +1332,16 @@ spec:
                           type: object
                         type: array
                     type: object
-                  partitionKeyPath:
-                    description: Define a partition key. Changing this forces a new resource to be created.
+                  partitionKeyKind:
+                    description: Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.
                     type: string
+                  partitionKeyPath:
+                    type: string
+                  partitionKeyPaths:
+                    description: A list of partition key paths. Changing this forces a new resource to be created.
+                    items:
+                      type: string
+                    type: array
                   partitionKeyVersion:
                     description: Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.
                     type: number
@@ -1525,9 +1550,16 @@ spec:
                           type: object
                         type: array
                     type: object
-                  partitionKeyPath:
-                    description: Define a partition key. Changing this forces a new resource to be created.
+                  partitionKeyKind:
+                    description: Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.
                     type: string
+                  partitionKeyPath:
+                    type: string
+                  partitionKeyPaths:
+                    description: A list of partition key paths. Changing this forces a new resource to be created.
+                    items:
+                      type: string
+                    type: array
                   partitionKeyVersion:
                     description: Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.
                     type: number
@@ -1755,9 +1787,6 @@ spec:
             required:
             - forProvider
             type: object
-            x-kubernetes-validations:
-            - message: spec.forProvider.partitionKeyPath is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.partitionKeyPath) || (has(self.initProvider) && has(self.initProvider.partitionKeyPath))"
           status:
             description: SQLContainerStatus defines the observed state of SQLContainer.
             properties:
@@ -1856,9 +1885,16 @@ spec:
                           type: object
                         type: array
                     type: object
-                  partitionKeyPath:
-                    description: Define a partition key. Changing this forces a new resource to be created.
+                  partitionKeyKind:
+                    description: Define a partition key kind. Possible values are Hash and MultiHash. Defaults to Hash. Changing this forces a new resource to be created.
                     type: string
+                  partitionKeyPath:
+                    type: string
+                  partitionKeyPaths:
+                    description: A list of partition key paths. Changing this forces a new resource to be created.
+                    items:
+                      type: string
+                    type: array
                   partitionKeyVersion:
                     description: Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.
                     type: number

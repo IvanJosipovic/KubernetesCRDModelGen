@@ -321,6 +321,10 @@ public partial class V1beta1ManagementGroupStatusAtProvider
     /// <summary>A list of Subscription GUIDs which should be assigned to the Management Group.</summary>
     [JsonPropertyName("subscriptionIds")]
     public IList<string>? SubscriptionIds { get; set; }
+
+    /// <summary>The Management Group ID with the Tenant ID prefix.</summary>
+    [JsonPropertyName("tenantScopedId")]
+    public string? TenantScopedId { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

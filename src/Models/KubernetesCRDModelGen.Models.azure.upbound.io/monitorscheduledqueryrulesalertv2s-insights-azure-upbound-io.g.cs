@@ -88,6 +88,19 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderCrit
     public string? TimeAggregationMethod { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderIdentity
+{
+    /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Scheduled Query Rule.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Scheduled Query Rule. Possible values are SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderResourceGroupNameRefPolicy
@@ -232,6 +245,10 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecForProvider
     [JsonPropertyName("evaluationFrequency")]
     public string? EvaluationFrequency { get; set; }
 
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1MonitorScheduledQueryRulesAlertV2SpecForProviderIdentity>? Identity { get; set; }
+
     /// <summary>Specifies the Azure Region where the Monitor Scheduled Query Rule should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
@@ -373,6 +390,19 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderCri
     public string? TimeAggregationMethod { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderIdentity
+{
+    /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Scheduled Query Rule.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Scheduled Query Rule. Possible values are SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderScopesRefsPolicy
@@ -460,6 +490,10 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProvider
     /// <summary>How often the scheduled query rule is evaluated, represented in ISO 8601 duration format. Possible values are PT1M, PT5M, PT10M, PT15M, PT30M, PT45M, PT1H, PT2H, PT3H, PT4H, PT5H, PT6H, P1D.</summary>
     [JsonPropertyName("evaluationFrequency")]
     public string? EvaluationFrequency { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1MonitorScheduledQueryRulesAlertV2SpecInitProviderIdentity>? Identity { get; set; }
 
     /// <summary>Specifies the Azure Region where the Monitor Scheduled Query Rule should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -724,6 +758,27 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderCri
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderIdentity
+{
+    /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Scheduled Query Rule.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>The Principal ID for the Service Principal associated with the Managed Service Identity of this App Service slot.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The Tenant ID for the Service Principal associated with the Managed Service Identity of this App Service slot.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Scheduled Query Rule. Possible values are SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProvider
 {
     /// <summary>An action block as defined below.</summary>
@@ -761,6 +816,10 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProvider
     /// <summary>The ID of the Monitor Scheduled Query Rule.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1MonitorScheduledQueryRulesAlertV2StatusAtProviderIdentity>? Identity { get; set; }
 
     /// <summary>True if this alert rule is a legacy Log Analytic Rule.</summary>
     [JsonPropertyName("isALegacyLogAnalyticsRule")]

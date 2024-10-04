@@ -234,6 +234,10 @@ public partial class V1beta1AppTriggerCustomStatusAtProvider
     [JsonPropertyName("body")]
     public string? Body { get; set; }
 
+    /// <summary>The URL of the Trigger within the Logic App Workflow. For use with certain resources like monitor_action_group and security_center_automation.</summary>
+    [JsonPropertyName("callbackUrl")]
+    public string? CallbackUrl { get; set; }
+
     /// <summary>The ID of the Trigger within the Logic App Workflow.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

@@ -546,9 +546,15 @@ spec:
                     description: A upgrade_settings block as documented below.
                     items:
                       properties:
+                        drainTimeoutInMinutes:
+                          description: The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.
+                          type: number
                         maxSurge:
                           description: The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
                           type: string
+                        nodeSoakDurationInMinutes:
+                          description: The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.
+                          type: number
                       type: object
                     type: array
                   vmSize:
@@ -1057,9 +1063,15 @@ spec:
                     description: A upgrade_settings block as documented below.
                     items:
                       properties:
+                        drainTimeoutInMinutes:
+                          description: The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.
+                          type: number
                         maxSurge:
                           description: The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
                           type: string
+                        nodeSoakDurationInMinutes:
+                          description: The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.
+                          type: number
                       type: object
                     type: array
                   vmSize:
@@ -1682,9 +1694,15 @@ spec:
                     description: A upgrade_settings block as documented below.
                     items:
                       properties:
+                        drainTimeoutInMinutes:
+                          description: The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.
+                          type: number
                         maxSurge:
                           description: The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
                           type: string
+                        nodeSoakDurationInMinutes:
+                          description: The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.
+                          type: number
                       type: object
                     type: array
                   vmSize:
@@ -2298,9 +2316,15 @@ spec:
                   upgradeSettings:
                     description: A upgrade_settings block as documented below.
                     properties:
+                      drainTimeoutInMinutes:
+                        description: The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.
+                        type: number
                       maxSurge:
                         description: The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
                         type: string
+                      nodeSoakDurationInMinutes:
+                        description: The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.
+                        type: number
                     type: object
                   vmSize:
                     description: The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
@@ -2797,9 +2821,15 @@ spec:
                   upgradeSettings:
                     description: A upgrade_settings block as documented below.
                     properties:
+                      drainTimeoutInMinutes:
+                        description: The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.
+                        type: number
                       maxSurge:
                         description: The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
                         type: string
+                      nodeSoakDurationInMinutes:
+                        description: The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.
+                        type: number
                     type: object
                   vmSize:
                     description: The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.
@@ -3410,9 +3440,15 @@ spec:
                   upgradeSettings:
                     description: A upgrade_settings block as documented below.
                     properties:
+                      drainTimeoutInMinutes:
+                        description: The amount of time in minutes to wait on eviction of pods and graceful termination per node. This eviction wait time honors waiting on pod disruption budgets. If this time is exceeded, the upgrade fails. Unsetting this after configuring it will force a new resource to be created.
+                        type: number
                       maxSurge:
                         description: The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
                         type: string
+                      nodeSoakDurationInMinutes:
+                        description: The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.
+                        type: number
                     type: object
                   vmSize:
                     description: The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.

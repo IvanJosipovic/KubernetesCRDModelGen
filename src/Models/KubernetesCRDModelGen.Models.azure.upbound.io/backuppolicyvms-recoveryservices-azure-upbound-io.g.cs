@@ -236,6 +236,32 @@ public partial class V1beta1BackupPolicyVMSpecForProviderRetentionYearly
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyVMSpecForProviderTieringPolicyArchivedRestorePoint
+{
+    /// <summary>The number of days/weeks/months/years to retain backups in current tier before tiering.</summary>
+    [JsonPropertyName("duration")]
+    public double? Duration { get; set; }
+
+    /// <summary>The retention duration type. Possible values are Days, Weeks, Months and Years.</summary>
+    [JsonPropertyName("durationType")]
+    public string? DurationType { get; set; }
+
+    /// <summary>The tiering mode to control automatic tiering of recovery points. Possible values are TierAfter and TierRecommended.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyVMSpecForProviderTieringPolicy
+{
+    /// <summary>An archived_restore_point block as defined below.</summary>
+    [JsonPropertyName("archivedRestorePoint")]
+    public IList<V1beta1BackupPolicyVMSpecForProviderTieringPolicyArchivedRestorePoint>? ArchivedRestorePoint { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMSpecForProvider
 {
     /// <summary>Configures the Policy backup frequency, times &amp; days as documented in the backup block below.</summary>
@@ -293,6 +319,10 @@ public partial class V1beta1BackupPolicyVMSpecForProvider
     /// <summary>Configures the policy yearly retention as documented in the retention_yearly block below.</summary>
     [JsonPropertyName("retentionYearly")]
     public IList<V1beta1BackupPolicyVMSpecForProviderRetentionYearly>? RetentionYearly { get; set; }
+
+    /// <summary>A tiering_policy block as defined below.</summary>
+    [JsonPropertyName("tieringPolicy")]
+    public IList<V1beta1BackupPolicyVMSpecForProviderTieringPolicy>? TieringPolicy { get; set; }
 
     /// <summary>Specifies the timezone. the possible values are defined here. Defaults to UTC</summary>
     [JsonPropertyName("timezone")]
@@ -413,6 +443,32 @@ public partial class V1beta1BackupPolicyVMSpecInitProviderRetentionYearly
     public IList<string>? Weeks { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyVMSpecInitProviderTieringPolicyArchivedRestorePoint
+{
+    /// <summary>The number of days/weeks/months/years to retain backups in current tier before tiering.</summary>
+    [JsonPropertyName("duration")]
+    public double? Duration { get; set; }
+
+    /// <summary>The retention duration type. Possible values are Days, Weeks, Months and Years.</summary>
+    [JsonPropertyName("durationType")]
+    public string? DurationType { get; set; }
+
+    /// <summary>The tiering mode to control automatic tiering of recovery points. Possible values are TierAfter and TierRecommended.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyVMSpecInitProviderTieringPolicy
+{
+    /// <summary>An archived_restore_point block as defined below.</summary>
+    [JsonPropertyName("archivedRestorePoint")]
+    public IList<V1beta1BackupPolicyVMSpecInitProviderTieringPolicyArchivedRestorePoint>? ArchivedRestorePoint { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMSpecInitProvider
@@ -448,6 +504,10 @@ public partial class V1beta1BackupPolicyVMSpecInitProvider
     /// <summary>Configures the policy yearly retention as documented in the retention_yearly block below.</summary>
     [JsonPropertyName("retentionYearly")]
     public IList<V1beta1BackupPolicyVMSpecInitProviderRetentionYearly>? RetentionYearly { get; set; }
+
+    /// <summary>A tiering_policy block as defined below.</summary>
+    [JsonPropertyName("tieringPolicy")]
+    public IList<V1beta1BackupPolicyVMSpecInitProviderTieringPolicy>? TieringPolicy { get; set; }
 
     /// <summary>Specifies the timezone. the possible values are defined here. Defaults to UTC</summary>
     [JsonPropertyName("timezone")]
@@ -702,6 +762,32 @@ public partial class V1beta1BackupPolicyVMStatusAtProviderRetentionYearly
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyVMStatusAtProviderTieringPolicyArchivedRestorePoint
+{
+    /// <summary>The number of days/weeks/months/years to retain backups in current tier before tiering.</summary>
+    [JsonPropertyName("duration")]
+    public double? Duration { get; set; }
+
+    /// <summary>The retention duration type. Possible values are Days, Weeks, Months and Years.</summary>
+    [JsonPropertyName("durationType")]
+    public string? DurationType { get; set; }
+
+    /// <summary>The tiering mode to control automatic tiering of recovery points. Possible values are TierAfter and TierRecommended.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackupPolicyVMStatusAtProviderTieringPolicy
+{
+    /// <summary>An archived_restore_point block as defined below.</summary>
+    [JsonPropertyName("archivedRestorePoint")]
+    public IList<V1beta1BackupPolicyVMStatusAtProviderTieringPolicyArchivedRestorePoint>? ArchivedRestorePoint { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMStatusAtProvider
 {
     /// <summary>Configures the Policy backup frequency, times &amp; days as documented in the backup block below.</summary>
@@ -747,6 +833,10 @@ public partial class V1beta1BackupPolicyVMStatusAtProvider
     /// <summary>Configures the policy yearly retention as documented in the retention_yearly block below.</summary>
     [JsonPropertyName("retentionYearly")]
     public IList<V1beta1BackupPolicyVMStatusAtProviderRetentionYearly>? RetentionYearly { get; set; }
+
+    /// <summary>A tiering_policy block as defined below.</summary>
+    [JsonPropertyName("tieringPolicy")]
+    public IList<V1beta1BackupPolicyVMStatusAtProviderTieringPolicy>? TieringPolicy { get; set; }
 
     /// <summary>Specifies the timezone. the possible values are defined here. Defaults to UTC</summary>
     [JsonPropertyName("timezone")]

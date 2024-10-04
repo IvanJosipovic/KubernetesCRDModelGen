@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  accessConnectorId:
+                    description: Access Connector ID to use when default storage account firewall is enabled.
+                    type: string
                   customParameters:
                     description: A custom_parameters block as documented below.
                     items:
@@ -301,6 +304,9 @@ spec:
                   customerManagedKeyEnabled:
                     description: Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.
                     type: boolean
+                  defaultStorageFirewallEnabled:
+                    description: Disallow public access to default storage account. Defaults to false.
+                    type: boolean
                   infrastructureEncryptionEnabled:
                     description: Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.
                     type: boolean
@@ -309,6 +315,9 @@ spec:
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
+                    type: string
+                  managedDiskCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.
                     type: string
                   managedDiskCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed disks.
@@ -405,6 +414,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  managedServicesCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.
+                    type: string
                   managedServicesCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).
                     type: string
@@ -535,6 +547,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  accessConnectorId:
+                    description: Access Connector ID to use when default storage account firewall is enabled.
+                    type: string
                   customParameters:
                     description: A custom_parameters block as documented below.
                     items:
@@ -752,6 +767,9 @@ spec:
                   customerManagedKeyEnabled:
                     description: Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.
                     type: boolean
+                  defaultStorageFirewallEnabled:
+                    description: Disallow public access to default storage account. Defaults to false.
+                    type: boolean
                   infrastructureEncryptionEnabled:
                     description: Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.
                     type: boolean
@@ -760,6 +778,9 @@ spec:
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
+                    type: string
+                  managedDiskCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.
                     type: string
                   managedDiskCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed disks.
@@ -856,6 +877,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  managedServicesCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.
+                    type: string
                   managedServicesCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).
                     type: string
@@ -1093,6 +1117,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  accessConnectorId:
+                    description: Access Connector ID to use when default storage account firewall is enabled.
+                    type: string
                   customParameters:
                     description: A custom_parameters block as documented below.
                     items:
@@ -1138,6 +1165,9 @@ spec:
                   customerManagedKeyEnabled:
                     description: Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.
                     type: boolean
+                  defaultStorageFirewallEnabled:
+                    description: Disallow public access to default storage account. Defaults to false.
+                    type: boolean
                   diskEncryptionSetId:
                     description: The ID of Managed Disk Encryption Set created by the Databricks Workspace.
                     type: string
@@ -1152,6 +1182,9 @@ spec:
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
+                    type: string
+                  managedDiskCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.
                     type: string
                   managedDiskCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed disks.
@@ -1179,6 +1212,9 @@ spec:
                     type: string
                   managedResourceGroupName:
                     description: The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
+                    type: string
+                  managedServicesCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.
                     type: string
                   managedServicesCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).
@@ -1356,6 +1392,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  accessConnectorId:
+                    description: Access Connector ID to use when default storage account firewall is enabled.
+                    type: string
                   customParameters:
                     description: A custom_parameters block as documented below.
                     properties:
@@ -1571,6 +1610,9 @@ spec:
                   customerManagedKeyEnabled:
                     description: Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.
                     type: boolean
+                  defaultStorageFirewallEnabled:
+                    description: Disallow public access to default storage account. Defaults to false.
+                    type: boolean
                   infrastructureEncryptionEnabled:
                     description: Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.
                     type: boolean
@@ -1579,6 +1621,9 @@ spec:
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
+                    type: string
+                  managedDiskCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.
                     type: string
                   managedDiskCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed disks.
@@ -1675,6 +1720,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  managedServicesCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.
+                    type: string
                   managedServicesCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).
                     type: string
@@ -1805,6 +1853,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  accessConnectorId:
+                    description: Access Connector ID to use when default storage account firewall is enabled.
+                    type: string
                   customParameters:
                     description: A custom_parameters block as documented below.
                     properties:
@@ -2020,6 +2071,9 @@ spec:
                   customerManagedKeyEnabled:
                     description: Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.
                     type: boolean
+                  defaultStorageFirewallEnabled:
+                    description: Disallow public access to default storage account. Defaults to false.
+                    type: boolean
                   infrastructureEncryptionEnabled:
                     description: Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.
                     type: boolean
@@ -2028,6 +2082,9 @@ spec:
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
+                    type: string
+                  managedDiskCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.
                     type: string
                   managedDiskCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed disks.
@@ -2124,6 +2181,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  managedServicesCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.
+                    type: string
                   managedServicesCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).
                     type: string
@@ -2361,6 +2421,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  accessConnectorId:
+                    description: Access Connector ID to use when default storage account firewall is enabled.
+                    type: string
                   customParameters:
                     description: A custom_parameters block as documented below.
                     properties:
@@ -2404,6 +2467,9 @@ spec:
                   customerManagedKeyEnabled:
                     description: Is the workspace enabled for customer managed key encryption? If true this enables the Managed Identity for the managed storage account. Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium.
                     type: boolean
+                  defaultStorageFirewallEnabled:
+                    description: Disallow public access to default storage account. Defaults to false.
+                    type: boolean
                   diskEncryptionSetId:
                     description: The ID of Managed Disk Encryption Set created by the Databricks Workspace.
                     type: string
@@ -2418,6 +2484,9 @@ spec:
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
+                    type: string
+                  managedDiskCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_disk_cmk_key_vault_key_id key.
                     type: string
                   managedDiskCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed disks.
@@ -2445,6 +2514,9 @@ spec:
                     type: string
                   managedResourceGroupName:
                     description: The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
+                    type: string
+                  managedServicesCmkKeyVaultId:
+                    description: Resource ID of the Key Vault which contains the managed_services_cmk_key_vault_key_id key.
                     type: string
                   managedServicesCmkKeyVaultKeyId:
                     description: Customer managed encryption properties for the Databricks Workspace managed resources(e.g. Notebooks and Artifacts).

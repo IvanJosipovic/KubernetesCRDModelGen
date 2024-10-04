@@ -709,7 +709,7 @@ spec:
                     description: A sku block as defined below.
                     properties:
                       capacity:
-                        description: Specifies the number of instances to be reserved. It must be a positive integer and not exceed the quota in the subscription.
+                        description: Specifies the number of instances to be reserved. It must be greater than or equal to 0 and not exceed the quota in the subscription.
                         type: number
                       name:
                         description: Name of the sku, such as Standard_F2. Changing this forces a new resource to be created.
@@ -751,7 +751,7 @@ spec:
                     description: A sku block as defined below.
                     properties:
                       capacity:
-                        description: Specifies the number of instances to be reserved. It must be a positive integer and not exceed the quota in the subscription.
+                        description: Specifies the number of instances to be reserved. It must be greater than or equal to 0 and not exceed the quota in the subscription.
                         type: number
                       name:
                         description: Name of the sku, such as Standard_F2. Changing this forces a new resource to be created.
@@ -993,7 +993,7 @@ spec:
                     description: A sku block as defined below.
                     properties:
                       capacity:
-                        description: Specifies the number of instances to be reserved. It must be a positive integer and not exceed the quota in the subscription.
+                        description: Specifies the number of instances to be reserved. It must be greater than or equal to 0 and not exceed the quota in the subscription.
                         type: number
                       name:
                         description: Name of the sku, such as Standard_F2. Changing this forces a new resource to be created.

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.loadtestservice.azure.upbound.io;
+/// <summary>An identity block as defined below. Changing this forces a new Load Test to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadTestSpecForProviderEncryptionIdentity
+{
+    /// <summary>The User Assigned Identity ID that should be assigned to this Load Test Encryption. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("identityId")]
+    public string? IdentityId { get; set; }
+
+    /// <summary>Specifies the type of Managed Identity that should be assigned to this Load Test. Possible values are SystemAssigned, SystemAssigned, UserAssigned and UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>An encryption block as defined below. Changing this forces a new Load Test to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadTestSpecForProviderEncryption
+{
+    /// <summary>An identity block as defined below. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1LoadTestSpecForProviderEncryptionIdentity? Identity { get; set; }
+
+    /// <summary>The URI specifying the Key vault and key to be used to encrypt data in this resource. The URI should include the key version. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("keyUrl")]
+    public string? KeyUrl { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadTestSpecForProviderIdentity
@@ -85,6 +111,10 @@ public partial class V1beta1LoadTestSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>An encryption block as defined below. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("encryption")]
+    public V1beta1LoadTestSpecForProviderEncryption? Encryption { get; set; }
+
     /// <summary>An identity block as defined below. Specifies the Managed Identity which should be assigned to this Load Test.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1LoadTestSpecForProviderIdentity>? Identity { get; set; }
@@ -112,6 +142,32 @@ public partial class V1beta1LoadTestSpecForProvider
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadTestSpecInitProviderEncryptionIdentity
+{
+    /// <summary>The User Assigned Identity ID that should be assigned to this Load Test Encryption. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("identityId")]
+    public string? IdentityId { get; set; }
+
+    /// <summary>Specifies the type of Managed Identity that should be assigned to this Load Test. Possible values are SystemAssigned, SystemAssigned, UserAssigned and UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadTestSpecInitProviderEncryption
+{
+    /// <summary>An identity block as defined below. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("identity")]
+    public IList<V1beta1LoadTestSpecInitProviderEncryptionIdentity>? Identity { get; set; }
+
+    /// <summary>The URI specifying the Key vault and key to be used to encrypt data in this resource. The URI should include the key version. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("keyUrl")]
+    public string? KeyUrl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadTestSpecInitProviderIdentity
 {
     /// <summary>A list of the User Assigned Identity IDs that should be assigned to this Load Test.</summary>
@@ -130,6 +186,10 @@ public partial class V1beta1LoadTestSpecInitProvider
     /// <summary>Description of the resource. Changing this forces a new Load Test to be created.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>An encryption block as defined below. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("encryption")]
+    public IList<V1beta1LoadTestSpecInitProviderEncryption>? Encryption { get; set; }
 
     /// <summary>An identity block as defined below. Specifies the Managed Identity which should be assigned to this Load Test.</summary>
     [JsonPropertyName("identity")]
@@ -276,6 +336,32 @@ public partial class V1beta1LoadTestSpec
     public V1beta1LoadTestSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>An identity block as defined below. Changing this forces a new Load Test to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadTestStatusAtProviderEncryptionIdentity
+{
+    /// <summary>The User Assigned Identity ID that should be assigned to this Load Test Encryption. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("identityId")]
+    public string? IdentityId { get; set; }
+
+    /// <summary>Specifies the type of Managed Identity that should be assigned to this Load Test. Possible values are SystemAssigned, SystemAssigned, UserAssigned and UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>An encryption block as defined below. Changing this forces a new Load Test to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoadTestStatusAtProviderEncryption
+{
+    /// <summary>An identity block as defined below. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1LoadTestStatusAtProviderEncryptionIdentity? Identity { get; set; }
+
+    /// <summary>The URI specifying the Key vault and key to be used to encrypt data in this resource. The URI should include the key version. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("keyUrl")]
+    public string? KeyUrl { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadTestStatusAtProviderIdentity
@@ -308,6 +394,10 @@ public partial class V1beta1LoadTestStatusAtProvider
     /// <summary>Description of the resource. Changing this forces a new Load Test to be created.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>An encryption block as defined below. Changing this forces a new Load Test to be created.</summary>
+    [JsonPropertyName("encryption")]
+    public V1beta1LoadTestStatusAtProviderEncryption? Encryption { get; set; }
 
     /// <summary>The ID of the Load Test.</summary>
     [JsonPropertyName("id")]

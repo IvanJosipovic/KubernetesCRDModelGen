@@ -96,6 +96,10 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecForProvider
     /// <summary>A rbac_authorization block as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("rbacAuthorization")]
     public IList<V1beta1IntegrationRuntimeSelfHostedSpecForProviderRbacAuthorization>? RbacAuthorization { get; set; }
+
+    /// <summary>Specifies whether enable interactive authoring function when your self-hosted integration runtime is unable to establish a connection with Azure Relay.</summary>
+    [JsonPropertyName("selfContainedInteractiveAuthoringEnabled")]
+    public bool? SelfContainedInteractiveAuthoringEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -118,6 +122,10 @@ public partial class V1beta1IntegrationRuntimeSelfHostedSpecInitProvider
     /// <summary>A rbac_authorization block as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("rbacAuthorization")]
     public IList<V1beta1IntegrationRuntimeSelfHostedSpecInitProviderRbacAuthorization>? RbacAuthorization { get; set; }
+
+    /// <summary>Specifies whether enable interactive authoring function when your self-hosted integration runtime is unable to establish a connection with Azure Relay.</summary>
+    [JsonPropertyName("selfContainedInteractiveAuthoringEnabled")]
+    public bool? SelfContainedInteractiveAuthoringEnabled { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -288,6 +296,10 @@ public partial class V1beta1IntegrationRuntimeSelfHostedStatusAtProvider
     /// <summary>The secondary integration runtime authentication key.</summary>
     [JsonPropertyName("secondaryAuthorizationKey")]
     public string? SecondaryAuthorizationKey { get; set; }
+
+    /// <summary>Specifies whether enable interactive authoring function when your self-hosted integration runtime is unable to establish a connection with Azure Relay.</summary>
+    [JsonPropertyName("selfContainedInteractiveAuthoringEnabled")]
+    public bool? SelfContainedInteractiveAuthoringEnabled { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

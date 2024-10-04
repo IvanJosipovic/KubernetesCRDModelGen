@@ -8,6 +8,41 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.maps.azure.upbound.io;
+/// <summary>- A cors block as defined below</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderCors
+{
+    /// <summary>A list of origins that should be allowed to make cross-origin calls.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderDataStore
+{
+    /// <summary>The ID of the Storage Account that should be linked to this Azure Maps Account.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+
+    /// <summary>The name given to the linked Storage Account.</summary>
+    [JsonPropertyName("uniqueName")]
+    public string? UniqueName { get; set; }
+}
+
+/// <summary>An identity block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderIdentity
+{
+    /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Azure Maps Account.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Azure Maps Account. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderResourceGroupNameRefPolicy
@@ -68,9 +103,25 @@ public partial class V1beta1AccountSpecForProviderResourceGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProvider
 {
+    /// <summary>- A cors block as defined below</summary>
+    [JsonPropertyName("cors")]
+    public V1beta1AccountSpecForProviderCors? Cors { get; set; }
+
+    /// <summary>One or more data_store blocks as defined below.</summary>
+    [JsonPropertyName("dataStore")]
+    public IList<V1beta1AccountSpecForProviderDataStore>? DataStore { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1AccountSpecForProviderIdentity? Identity { get; set; }
+
     /// <summary>Is local authentication enabled for this Azure Maps Account? When false, all authentication to the Azure Maps data-plane REST API is disabled, except Azure AD authentication. Defaults to true.</summary>
     [JsonPropertyName("localAuthenticationEnabled")]
     public bool? LocalAuthenticationEnabled { get; set; }
+
+    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created. Defaults to global.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
 
     /// <summary>The name of the Resource Group in which the Azure Maps Account should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
@@ -93,13 +144,64 @@ public partial class V1beta1AccountSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>- A cors block as defined below</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderCors
+{
+    /// <summary>A list of origins that should be allowed to make cross-origin calls.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderDataStore
+{
+    /// <summary>The ID of the Storage Account that should be linked to this Azure Maps Account.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+
+    /// <summary>The name given to the linked Storage Account.</summary>
+    [JsonPropertyName("uniqueName")]
+    public string? UniqueName { get; set; }
+}
+
+/// <summary>An identity block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderIdentity
+{
+    /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Azure Maps Account.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Azure Maps Account. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProvider
 {
+    /// <summary>- A cors block as defined below</summary>
+    [JsonPropertyName("cors")]
+    public V1beta1AccountSpecInitProviderCors? Cors { get; set; }
+
+    /// <summary>One or more data_store blocks as defined below.</summary>
+    [JsonPropertyName("dataStore")]
+    public IList<V1beta1AccountSpecInitProviderDataStore>? DataStore { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1AccountSpecInitProviderIdentity? Identity { get; set; }
+
     /// <summary>Is local authentication enabled for this Azure Maps Account? When false, all authentication to the Azure Maps data-plane REST API is disabled, except Azure AD authentication. Defaults to true.</summary>
     [JsonPropertyName("localAuthenticationEnabled")]
     public bool? LocalAuthenticationEnabled { get; set; }
+
+    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created. Defaults to global.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
 
     /// <summary>The SKU of the Azure Maps Account. Possible values are S0, S1 and G2. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("skuName")]
@@ -242,17 +344,76 @@ public partial class V1beta1AccountSpec
     public V1beta1AccountSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>- A cors block as defined below</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountStatusAtProviderCors
+{
+    /// <summary>A list of origins that should be allowed to make cross-origin calls.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountStatusAtProviderDataStore
+{
+    /// <summary>The ID of the Storage Account that should be linked to this Azure Maps Account.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+
+    /// <summary>The name given to the linked Storage Account.</summary>
+    [JsonPropertyName("uniqueName")]
+    public string? UniqueName { get; set; }
+}
+
+/// <summary>An identity block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountStatusAtProviderIdentity
+{
+    /// <summary>A list of User Assigned Managed Identity IDs to be assigned to this Azure Maps Account.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>The Principal ID associated with this Managed Service Identity.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The Tenant ID associated with this Managed Service Identity.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Azure Maps Account. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProvider
 {
+    /// <summary>- A cors block as defined below</summary>
+    [JsonPropertyName("cors")]
+    public V1beta1AccountStatusAtProviderCors? Cors { get; set; }
+
+    /// <summary>One or more data_store blocks as defined below.</summary>
+    [JsonPropertyName("dataStore")]
+    public IList<V1beta1AccountStatusAtProviderDataStore>? DataStore { get; set; }
+
     /// <summary>The ID of the Azure Maps Account.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1AccountStatusAtProviderIdentity? Identity { get; set; }
+
     /// <summary>Is local authentication enabled for this Azure Maps Account? When false, all authentication to the Azure Maps data-plane REST API is disabled, except Azure AD authentication. Defaults to true.</summary>
     [JsonPropertyName("localAuthenticationEnabled")]
     public bool? LocalAuthenticationEnabled { get; set; }
+
+    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created. Defaults to global.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
 
     /// <summary>The name of the Resource Group in which the Azure Maps Account should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

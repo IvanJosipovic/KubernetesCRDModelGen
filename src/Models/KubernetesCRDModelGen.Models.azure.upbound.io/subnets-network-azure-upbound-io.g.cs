@@ -154,6 +154,10 @@ public partial class V1beta1SubnetSpecForProvider
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 
+    /// <summary>Enable default outbound access to the internet for the subnet. Defaults to true.</summary>
+    [JsonPropertyName("defaultOutboundAccessEnabled")]
+    public bool? DefaultOutboundAccessEnabled { get; set; }
+
     /// <summary>One or more delegation blocks as defined below.</summary>
     [JsonPropertyName("delegation")]
     public IList<V1beta1SubnetSpecForProviderDelegation>? Delegation { get; set; }
@@ -166,7 +170,11 @@ public partial class V1beta1SubnetSpecForProvider
     [JsonPropertyName("enforcePrivateLinkServiceNetworkPolicies")]
     public bool? EnforcePrivateLinkServiceNetworkPolicies { get; set; }
 
-    /// <summary>Enable or Disable network policies for the private endpoint on the subnet. Setting this to true will Enable the policy and setting this to false will Disable the policy. Defaults to true.</summary>
+    /// <summary>Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.</summary>
+    [JsonPropertyName("privateEndpointNetworkPolicies")]
+    public string? PrivateEndpointNetworkPolicies { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("privateEndpointNetworkPoliciesEnabled")]
     public bool? PrivateEndpointNetworkPoliciesEnabled { get; set; }
 
@@ -241,6 +249,10 @@ public partial class V1beta1SubnetSpecInitProvider
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 
+    /// <summary>Enable default outbound access to the internet for the subnet. Defaults to true.</summary>
+    [JsonPropertyName("defaultOutboundAccessEnabled")]
+    public bool? DefaultOutboundAccessEnabled { get; set; }
+
     /// <summary>One or more delegation blocks as defined below.</summary>
     [JsonPropertyName("delegation")]
     public IList<V1beta1SubnetSpecInitProviderDelegation>? Delegation { get; set; }
@@ -253,7 +265,11 @@ public partial class V1beta1SubnetSpecInitProvider
     [JsonPropertyName("enforcePrivateLinkServiceNetworkPolicies")]
     public bool? EnforcePrivateLinkServiceNetworkPolicies { get; set; }
 
-    /// <summary>Enable or Disable network policies for the private endpoint on the subnet. Setting this to true will Enable the policy and setting this to false will Disable the policy. Defaults to true.</summary>
+    /// <summary>Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.</summary>
+    [JsonPropertyName("privateEndpointNetworkPolicies")]
+    public string? PrivateEndpointNetworkPolicies { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("privateEndpointNetworkPoliciesEnabled")]
     public bool? PrivateEndpointNetworkPoliciesEnabled { get; set; }
 
@@ -436,6 +452,10 @@ public partial class V1beta1SubnetStatusAtProvider
     [JsonPropertyName("addressPrefixes")]
     public IList<string>? AddressPrefixes { get; set; }
 
+    /// <summary>Enable default outbound access to the internet for the subnet. Defaults to true.</summary>
+    [JsonPropertyName("defaultOutboundAccessEnabled")]
+    public bool? DefaultOutboundAccessEnabled { get; set; }
+
     /// <summary>One or more delegation blocks as defined below.</summary>
     [JsonPropertyName("delegation")]
     public IList<V1beta1SubnetStatusAtProviderDelegation>? Delegation { get; set; }
@@ -452,7 +472,11 @@ public partial class V1beta1SubnetStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Enable or Disable network policies for the private endpoint on the subnet. Setting this to true will Enable the policy and setting this to false will Disable the policy. Defaults to true.</summary>
+    /// <summary>Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.</summary>
+    [JsonPropertyName("privateEndpointNetworkPolicies")]
+    public string? PrivateEndpointNetworkPolicies { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("privateEndpointNetworkPoliciesEnabled")]
     public bool? PrivateEndpointNetworkPoliciesEnabled { get; set; }
 

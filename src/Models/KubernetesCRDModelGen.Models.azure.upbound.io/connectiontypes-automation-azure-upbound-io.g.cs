@@ -521,7 +521,7 @@ public partial class V1beta1ConnectionTypeStatusAtProvider
     [JsonPropertyName("field")]
     public IList<V1beta1ConnectionTypeStatusAtProviderField>? Field { get; set; }
 
-    /// <summary>The the Automation Connection Type ID.</summary>
+    /// <summary>The Automation Connection Type ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 

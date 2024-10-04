@@ -123,7 +123,7 @@ public partial class V1beta1ContainerAppSpecForProviderIngressIpSecurityRestrict
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>CIDR notation to match incoming IP address. CIDR notation to match incoming IP address.</summary>
+    /// <summary>The incoming IP address or range of IP addresses (in CIDR notation). The incoming IP address or range of IP addresses (in CIDR notation).</summary>
     [JsonPropertyName("ipAddressRange")]
     public string? IpAddressRange { get; set; }
 
@@ -267,7 +267,7 @@ public partial class V1beta1ContainerAppSpecForProviderResourceGroupNameSelector
     public V1beta1ContainerAppSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>The Secret name. The Secret name.</summary>
+/// <summary>The secret name. The secret name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecretNameSecretRef
 {
@@ -305,13 +305,21 @@ public partial class V1beta1ContainerAppSpecForProviderSecretValueSecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderSecret
 {
-    /// <summary>The Secret name. The Secret name.</summary>
+    /// <summary>The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity. The identity to use for accessing key vault reference.</summary>
+    [JsonPropertyName("identity")]
+    public string? Identity { get; set; }
+
+    /// <summary>The ID of a Key Vault secret. This can be a versioned or version-less ID. The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.</summary>
+    [JsonPropertyName("keyVaultSecretId")]
+    public string? KeyVaultSecretId { get; set; }
+
+    /// <summary>The secret name. The secret name.</summary>
     [JsonPropertyName("nameSecretRef")]
-    public V1beta1ContainerAppSpecForProviderSecretNameSecretRef NameSecretRef { get; set; }
+    public V1beta1ContainerAppSpecForProviderSecretNameSecretRef? NameSecretRef { get; set; }
 
     /// <summary>The value for this secret. The value for this secret.</summary>
     [JsonPropertyName("valueSecretRef")]
-    public V1beta1ContainerAppSpecForProviderSecretValueSecretRef ValueSecretRef { get; set; }
+    public V1beta1ContainerAppSpecForProviderSecretValueSecretRef? ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -988,7 +996,7 @@ public partial class V1beta1ContainerAppSpecInitProviderIngressIpSecurityRestric
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>CIDR notation to match incoming IP address. CIDR notation to match incoming IP address.</summary>
+    /// <summary>The incoming IP address or range of IP addresses (in CIDR notation). The incoming IP address or range of IP addresses (in CIDR notation).</summary>
     [JsonPropertyName("ipAddressRange")]
     public string? IpAddressRange { get; set; }
 
@@ -1076,10 +1084,59 @@ public partial class V1beta1ContainerAppSpecInitProviderRegistry
     public string? Username { get; set; }
 }
 
+/// <summary>The secret name. The secret name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ContainerAppSpecInitProviderSecretNameSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The value for this secret. The value for this secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ContainerAppSpecInitProviderSecretValueSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderSecret
 {
+    /// <summary>The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity. The identity to use for accessing key vault reference.</summary>
+    [JsonPropertyName("identity")]
+    public string? Identity { get; set; }
+
+    /// <summary>The ID of a Key Vault secret. This can be a versioned or version-less ID. The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.</summary>
+    [JsonPropertyName("keyVaultSecretId")]
+    public string? KeyVaultSecretId { get; set; }
+
+    /// <summary>The secret name. The secret name.</summary>
+    [JsonPropertyName("nameSecretRef")]
+    public V1beta1ContainerAppSpecInitProviderSecretNameSecretRef NameSecretRef { get; set; }
+
+    /// <summary>The value for this secret. The value for this secret.</summary>
+    [JsonPropertyName("valueSecretRef")]
+    public V1beta1ContainerAppSpecInitProviderSecretValueSecretRef? ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -1828,7 +1885,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressIpSecurityRestric
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>CIDR notation to match incoming IP address. CIDR notation to match incoming IP address.</summary>
+    /// <summary>The incoming IP address or range of IP addresses (in CIDR notation). The incoming IP address or range of IP addresses (in CIDR notation).</summary>
     [JsonPropertyName("ipAddressRange")]
     public string? IpAddressRange { get; set; }
 
@@ -1920,51 +1977,17 @@ public partial class V1beta1ContainerAppStatusAtProviderRegistry
     public string? Username { get; set; }
 }
 
-/// <summary>The Secret name. The Secret name.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAppStatusAtProviderSecretNameSecretRef
-{
-    /// <summary>The key to select.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Namespace of the secret.</summary>
-    [JsonPropertyName("namespace")]
-    public string Namespace { get; set; }
-}
-
-/// <summary>The value for this secret. The value for this secret.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAppStatusAtProviderSecretValueSecretRef
-{
-    /// <summary>The key to select.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Namespace of the secret.</summary>
-    [JsonPropertyName("namespace")]
-    public string Namespace { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderSecret
 {
-    /// <summary>The Secret name. The Secret name.</summary>
-    [JsonPropertyName("nameSecretRef")]
-    public V1beta1ContainerAppStatusAtProviderSecretNameSecretRef NameSecretRef { get; set; }
+    /// <summary>The identity to use for accessing the Key Vault secret reference. This can either be the Resource ID of a User Assigned Identity, or System for the System Assigned Identity. The identity to use for accessing key vault reference.</summary>
+    [JsonPropertyName("identity")]
+    public string? Identity { get; set; }
 
-    /// <summary>The value for this secret. The value for this secret.</summary>
-    [JsonPropertyName("valueSecretRef")]
-    public V1beta1ContainerAppStatusAtProviderSecretValueSecretRef ValueSecretRef { get; set; }
+    /// <summary>The ID of a Key Vault secret. This can be a versioned or version-less ID. The Key Vault Secret ID. Could be either one of `id` or `versionless_id`.</summary>
+    [JsonPropertyName("keyVaultSecretId")]
+    public string? KeyVaultSecretId { get; set; }
 }
 
 /// <summary></summary>
