@@ -361,6 +361,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("interfaceRefreshInterval")]
     public string? InterfaceRefreshInterval { get; set; }
 
+    /// <summary>IPForwarding controls whether Felix sets the host sysctls to enable IP forwarding.  IP forwarding is required when using Calico for workload networking.  This should only be disabled on hosts where Calico is used for host protection.  [Default: Enabled]</summary>
+    [JsonPropertyName("ipForwarding")]
+    public string? IpForwarding { get; set; }
+
     /// <summary>IPIPEnabled overrides whether Felix should configure an IPIP interface on the host. Optional as Felix determines this based on the existing IP pools. [Default: nil (unset)]</summary>
     [JsonPropertyName("ipipEnabled")]
     public bool? IpipEnabled { get; set; }
