@@ -8,9 +8,9 @@ metadata:
     app: cert-manager
     app.kubernetes.io/name: cert-manager
     app.kubernetes.io/instance: release-name
-    app.kubernetes.io/version: v1.16.0
+    app.kubernetes.io/version: v1.16.1
     app.kubernetes.io/managed-by: Helm
-    helm.sh/chart: cert-manager-v1.16.0
+    helm.sh/chart: cert-manager-v1.16.1
 spec:
   group: cert-manager.io
   names:
