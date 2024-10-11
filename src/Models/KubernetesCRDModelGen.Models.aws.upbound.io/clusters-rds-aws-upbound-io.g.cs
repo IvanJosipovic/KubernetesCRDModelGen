@@ -385,6 +385,10 @@ public partial class V1beta1ClusterSpecForProviderRestoreToPointInTime
     [JsonPropertyName("sourceClusterIdentifierSelector")]
     public V1beta1ClusterSpecForProviderRestoreToPointInTimeSourceClusterIdentifierSelector? SourceClusterIdentifierSelector { get; set; }
 
+    /// <summary>Cluster resource ID of the source database cluster from which to restore. To be used for restoring a deleted cluster in the same account which still has a retained automatic backup available.</summary>
+    [JsonPropertyName("sourceClusterResourceId")]
+    public string? SourceClusterResourceId { get; set; }
+
     /// <summary>Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with restore_to_time.</summary>
     [JsonPropertyName("useLatestRestorableTime")]
     public bool? UseLatestRestorableTime { get; set; }
@@ -494,6 +498,10 @@ public partial class V1beta1ClusterSpecForProviderScalingConfiguration
     /// <summary>Minimum capacity for an Aurora DB cluster in serverless DB engine mode. The minimum capacity must be lesser than or equal to the maximum capacity. Valid Aurora MySQL capacity values are 1, 2, 4, 8, 16, 32, 64, 128, 256. Valid Aurora PostgreSQL capacity values are (2, 4, 8, 16, 32, 64, 192, and 384). Defaults to 1.</summary>
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
+
+    /// <summary>Amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless scaling before enforcing the timeout action. Valid values are 60 through 600. Defaults to 300.</summary>
+    [JsonPropertyName("secondsBeforeTimeout")]
+    public double? SecondsBeforeTimeout { get; set; }
 
     /// <summary>Time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are 300 through 86400. Defaults to 300.</summary>
     [JsonPropertyName("secondsUntilAutoPause")]
@@ -701,6 +709,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
+    /// <summary>The life cycle type for this DB instance. This setting is valid for cluster types Aurora DB clusters and Multi-AZ DB clusters. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
+
     /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. See the RDS User Guide for limitations when using serverless.</summary>
     [JsonPropertyName("engineMode")]
     public string? EngineMode { get; set; }
@@ -764,6 +776,18 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Network type of the cluster. Valid values: IPV4, DUAL.</summary>
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Enables Performance Insights for the RDS Cluster</summary>
+    [JsonPropertyName("performanceInsightsEnabled")]
+    public bool? PerformanceInsightsEnabled { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
+    [JsonPropertyName("performanceInsightsKmsKeyId")]
+    public string? PerformanceInsightsKmsKeyId { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
+    [JsonPropertyName("performanceInsightsRetentionPeriod")]
+    public double? PerformanceInsightsRetentionPeriod { get; set; }
 
     /// <summary>Port on which the DB accepts connections</summary>
     [JsonPropertyName("port")]
@@ -1215,6 +1239,10 @@ public partial class V1beta1ClusterSpecInitProviderRestoreToPointInTime
     [JsonPropertyName("sourceClusterIdentifierSelector")]
     public V1beta1ClusterSpecInitProviderRestoreToPointInTimeSourceClusterIdentifierSelector? SourceClusterIdentifierSelector { get; set; }
 
+    /// <summary>Cluster resource ID of the source database cluster from which to restore. To be used for restoring a deleted cluster in the same account which still has a retained automatic backup available.</summary>
+    [JsonPropertyName("sourceClusterResourceId")]
+    public string? SourceClusterResourceId { get; set; }
+
     /// <summary>Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with restore_to_time.</summary>
     [JsonPropertyName("useLatestRestorableTime")]
     public bool? UseLatestRestorableTime { get; set; }
@@ -1324,6 +1352,10 @@ public partial class V1beta1ClusterSpecInitProviderScalingConfiguration
     /// <summary>Minimum capacity for an Aurora DB cluster in serverless DB engine mode. The minimum capacity must be lesser than or equal to the maximum capacity. Valid Aurora MySQL capacity values are 1, 2, 4, 8, 16, 32, 64, 128, 256. Valid Aurora PostgreSQL capacity values are (2, 4, 8, 16, 32, 64, 192, and 384). Defaults to 1.</summary>
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
+
+    /// <summary>Amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless scaling before enforcing the timeout action. Valid values are 60 through 600. Defaults to 300.</summary>
+    [JsonPropertyName("secondsBeforeTimeout")]
+    public double? SecondsBeforeTimeout { get; set; }
 
     /// <summary>Time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are 300 through 86400. Defaults to 300.</summary>
     [JsonPropertyName("secondsUntilAutoPause")]
@@ -1527,6 +1559,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
+    /// <summary>The life cycle type for this DB instance. This setting is valid for cluster types Aurora DB clusters and Multi-AZ DB clusters. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
+
     /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. See the RDS User Guide for limitations when using serverless.</summary>
     [JsonPropertyName("engineMode")]
     public string? EngineMode { get; set; }
@@ -1590,6 +1626,18 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Network type of the cluster. Valid values: IPV4, DUAL.</summary>
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Enables Performance Insights for the RDS Cluster</summary>
+    [JsonPropertyName("performanceInsightsEnabled")]
+    public bool? PerformanceInsightsEnabled { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
+    [JsonPropertyName("performanceInsightsKmsKeyId")]
+    public string? PerformanceInsightsKmsKeyId { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
+    [JsonPropertyName("performanceInsightsRetentionPeriod")]
+    public double? PerformanceInsightsRetentionPeriod { get; set; }
 
     /// <summary>Port on which the DB accepts connections</summary>
     [JsonPropertyName("port")]
@@ -1825,6 +1873,10 @@ public partial class V1beta1ClusterStatusAtProviderRestoreToPointInTime
     [JsonPropertyName("sourceClusterIdentifier")]
     public string? SourceClusterIdentifier { get; set; }
 
+    /// <summary>Cluster resource ID of the source database cluster from which to restore. To be used for restoring a deleted cluster in the same account which still has a retained automatic backup available.</summary>
+    [JsonPropertyName("sourceClusterResourceId")]
+    public string? SourceClusterResourceId { get; set; }
+
     /// <summary>Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with restore_to_time.</summary>
     [JsonPropertyName("useLatestRestorableTime")]
     public bool? UseLatestRestorableTime { get; set; }
@@ -1870,6 +1922,10 @@ public partial class V1beta1ClusterStatusAtProviderScalingConfiguration
     /// <summary>Minimum capacity for an Aurora DB cluster in serverless DB engine mode. The minimum capacity must be lesser than or equal to the maximum capacity. Valid Aurora MySQL capacity values are 1, 2, 4, 8, 16, 32, 64, 128, 256. Valid Aurora PostgreSQL capacity values are (2, 4, 8, 16, 32, 64, 192, and 384). Defaults to 1.</summary>
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
+
+    /// <summary>Amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless scaling before enforcing the timeout action. Valid values are 60 through 600. Defaults to 300.</summary>
+    [JsonPropertyName("secondsBeforeTimeout")]
+    public double? SecondsBeforeTimeout { get; set; }
 
     /// <summary>Time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are 300 through 86400. Defaults to 300.</summary>
     [JsonPropertyName("secondsUntilAutoPause")]
@@ -2009,6 +2065,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
+    /// <summary>The life cycle type for this DB instance. This setting is valid for cluster types Aurora DB clusters and Multi-AZ DB clusters. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
+
     /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. See the RDS User Guide for limitations when using serverless.</summary>
     [JsonPropertyName("engineMode")]
     public string? EngineMode { get; set; }
@@ -2072,6 +2132,18 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Network type of the cluster. Valid values: IPV4, DUAL.</summary>
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Enables Performance Insights for the RDS Cluster</summary>
+    [JsonPropertyName("performanceInsightsEnabled")]
+    public bool? PerformanceInsightsEnabled { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
+    [JsonPropertyName("performanceInsightsKmsKeyId")]
+    public string? PerformanceInsightsKmsKeyId { get; set; }
+
+    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
+    [JsonPropertyName("performanceInsightsRetentionPeriod")]
+    public double? PerformanceInsightsRetentionPeriod { get; set; }
 
     /// <summary>Port on which the DB accepts connections</summary>
     [JsonPropertyName("port")]

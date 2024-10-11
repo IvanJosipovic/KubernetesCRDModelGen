@@ -178,6 +178,40 @@ public partial class V1beta1ImagePipelineSpecForProviderSchedule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImagePipelineSpecForProviderWorkflowParameter
+{
+    /// <summary>The name of the Workflow parameter.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The value of the Workflow parameter.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImagePipelineSpecForProviderWorkflow
+{
+    /// <summary>The action to take if the workflow fails. Must be one of CONTINUE or ABORT.</summary>
+    [JsonPropertyName("onFailure")]
+    public string? OnFailure { get; set; }
+
+    /// <summary>The parallel group in which to run a test Workflow.</summary>
+    [JsonPropertyName("parallelGroup")]
+    public string? ParallelGroup { get; set; }
+
+    /// <summary>Configuration block for the workflow parameters. Detailed below.</summary>
+    [JsonPropertyName("parameter")]
+    public IList<V1beta1ImagePipelineSpecForProviderWorkflowParameter>? Parameter { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the Image Builder Workflow.</summary>
+    [JsonPropertyName("workflowArn")]
+    public string? WorkflowArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImagePipelineSpecForProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the container recipe.</summary>
@@ -195,6 +229,10 @@ public partial class V1beta1ImagePipelineSpecForProvider
     /// <summary>Whether additional information about the image being created is collected. Defaults to true.</summary>
     [JsonPropertyName("enhancedImageMetadataEnabled")]
     public bool? EnhancedImageMetadataEnabled { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.</summary>
+    [JsonPropertyName("executionRole")]
+    public string? ExecutionRole { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of the image recipe.</summary>
     [JsonPropertyName("imageRecipeArn")]
@@ -247,6 +285,10 @@ public partial class V1beta1ImagePipelineSpecForProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Configuration block with the workflow configuration. Detailed below.</summary>
+    [JsonPropertyName("workflow")]
+    public IList<V1beta1ImagePipelineSpecForProviderWorkflow>? Workflow { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -417,6 +459,40 @@ public partial class V1beta1ImagePipelineSpecInitProviderSchedule
     public string? Timezone { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImagePipelineSpecInitProviderWorkflowParameter
+{
+    /// <summary>The name of the Workflow parameter.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The value of the Workflow parameter.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImagePipelineSpecInitProviderWorkflow
+{
+    /// <summary>The action to take if the workflow fails. Must be one of CONTINUE or ABORT.</summary>
+    [JsonPropertyName("onFailure")]
+    public string? OnFailure { get; set; }
+
+    /// <summary>The parallel group in which to run a test Workflow.</summary>
+    [JsonPropertyName("parallelGroup")]
+    public string? ParallelGroup { get; set; }
+
+    /// <summary>Configuration block for the workflow parameters. Detailed below.</summary>
+    [JsonPropertyName("parameter")]
+    public IList<V1beta1ImagePipelineSpecInitProviderWorkflowParameter>? Parameter { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the Image Builder Workflow.</summary>
+    [JsonPropertyName("workflowArn")]
+    public string? WorkflowArn { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImagePipelineSpecInitProvider
@@ -436,6 +512,10 @@ public partial class V1beta1ImagePipelineSpecInitProvider
     /// <summary>Whether additional information about the image being created is collected. Defaults to true.</summary>
     [JsonPropertyName("enhancedImageMetadataEnabled")]
     public bool? EnhancedImageMetadataEnabled { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.</summary>
+    [JsonPropertyName("executionRole")]
+    public string? ExecutionRole { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of the image recipe.</summary>
     [JsonPropertyName("imageRecipeArn")]
@@ -484,6 +564,10 @@ public partial class V1beta1ImagePipelineSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Configuration block with the workflow configuration. Detailed below.</summary>
+    [JsonPropertyName("workflow")]
+    public IList<V1beta1ImagePipelineSpecInitProviderWorkflow>? Workflow { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -676,6 +760,40 @@ public partial class V1beta1ImagePipelineStatusAtProviderSchedule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImagePipelineStatusAtProviderWorkflowParameter
+{
+    /// <summary>The name of the Workflow parameter.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The value of the Workflow parameter.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImagePipelineStatusAtProviderWorkflow
+{
+    /// <summary>The action to take if the workflow fails. Must be one of CONTINUE or ABORT.</summary>
+    [JsonPropertyName("onFailure")]
+    public string? OnFailure { get; set; }
+
+    /// <summary>The parallel group in which to run a test Workflow.</summary>
+    [JsonPropertyName("parallelGroup")]
+    public string? ParallelGroup { get; set; }
+
+    /// <summary>Configuration block for the workflow parameters. Detailed below.</summary>
+    [JsonPropertyName("parameter")]
+    public IList<V1beta1ImagePipelineStatusAtProviderWorkflowParameter>? Parameter { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the Image Builder Workflow.</summary>
+    [JsonPropertyName("workflowArn")]
+    public string? WorkflowArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImagePipelineStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the image pipeline.</summary>
@@ -713,6 +831,10 @@ public partial class V1beta1ImagePipelineStatusAtProvider
     /// <summary>Whether additional information about the image being created is collected. Defaults to true.</summary>
     [JsonPropertyName("enhancedImageMetadataEnabled")]
     public bool? EnhancedImageMetadataEnabled { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.</summary>
+    [JsonPropertyName("executionRole")]
+    public string? ExecutionRole { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -757,6 +879,10 @@ public partial class V1beta1ImagePipelineStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>Configuration block with the workflow configuration. Detailed below.</summary>
+    [JsonPropertyName("workflow")]
+    public IList<V1beta1ImagePipelineStatusAtProviderWorkflow>? Workflow { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

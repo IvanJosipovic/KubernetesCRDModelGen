@@ -274,6 +274,10 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     [JsonPropertyName("prefixFormat")]
     public string? PrefixFormat { get; set; }
 
+    /// <summary>Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION</summary>
+    [JsonPropertyName("prefixHierarchy")]
+    public IList<string>? PrefixHierarchy { get; set; }
+
     /// <summary>Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.</summary>
     [JsonPropertyName("prefixType")]
     public string? PrefixType { get; set; }
@@ -473,6 +477,10 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
     [JsonPropertyName("prefixFormat")]
     public string? PrefixFormat { get; set; }
 
+    /// <summary>Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION</summary>
+    [JsonPropertyName("prefixHierarchy")]
+    public IList<string>? PrefixHierarchy { get; set; }
+
     /// <summary>Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.</summary>
     [JsonPropertyName("prefixType")]
     public string? PrefixType { get; set; }
@@ -626,6 +634,32 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfig
     /// <summary>This stores the information that is required to query a particular connector. See Destination Connector Properties for more information.</summary>
     [JsonPropertyName("destinationConnectorProperties")]
     public IList<V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorProperties>? DestinationConnectorProperties { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecForProviderMetadataCatalogConfigGlueDataCatalog
+{
+    /// <summary>The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.</summary>
+    [JsonPropertyName("databaseName")]
+    public string? DatabaseName { get; set; }
+
+    /// <summary>The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>A naming prefix for each Data Catalog table that Amazon AppFlow creates</summary>
+    [JsonPropertyName("tablePrefix")]
+    public string? TablePrefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecForProviderMetadataCatalogConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("glueDataCatalog")]
+    public IList<V1beta1FlowSpecForProviderMetadataCatalogConfigGlueDataCatalog>? GlueDataCatalog { get; set; }
 }
 
 /// <summary></summary>
@@ -1149,6 +1183,10 @@ public partial class V1beta1FlowSpecForProvider
     [JsonPropertyName("kmsArn")]
     public string? KmsArn { get; set; }
 
+    /// <summary>A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.</summary>
+    [JsonPropertyName("metadataCatalogConfig")]
+    public IList<V1beta1FlowSpecForProviderMetadataCatalogConfig>? MetadataCatalogConfig { get; set; }
+
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
@@ -1436,6 +1474,10 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     [JsonPropertyName("prefixFormat")]
     public string? PrefixFormat { get; set; }
 
+    /// <summary>Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION</summary>
+    [JsonPropertyName("prefixHierarchy")]
+    public IList<string>? PrefixHierarchy { get; set; }
+
     /// <summary>Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.</summary>
     [JsonPropertyName("prefixType")]
     public string? PrefixType { get; set; }
@@ -1635,6 +1677,10 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
     [JsonPropertyName("prefixFormat")]
     public string? PrefixFormat { get; set; }
 
+    /// <summary>Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION</summary>
+    [JsonPropertyName("prefixHierarchy")]
+    public IList<string>? PrefixHierarchy { get; set; }
+
     /// <summary>Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.</summary>
     [JsonPropertyName("prefixType")]
     public string? PrefixType { get; set; }
@@ -1788,6 +1834,32 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfig
     /// <summary>This stores the information that is required to query a particular connector. See Destination Connector Properties for more information.</summary>
     [JsonPropertyName("destinationConnectorProperties")]
     public IList<V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorProperties>? DestinationConnectorProperties { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecInitProviderMetadataCatalogConfigGlueDataCatalog
+{
+    /// <summary>The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.</summary>
+    [JsonPropertyName("databaseName")]
+    public string? DatabaseName { get; set; }
+
+    /// <summary>The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>A naming prefix for each Data Catalog table that Amazon AppFlow creates</summary>
+    [JsonPropertyName("tablePrefix")]
+    public string? TablePrefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecInitProviderMetadataCatalogConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("glueDataCatalog")]
+    public IList<V1beta1FlowSpecInitProviderMetadataCatalogConfigGlueDataCatalog>? GlueDataCatalog { get; set; }
 }
 
 /// <summary></summary>
@@ -2311,6 +2383,10 @@ public partial class V1beta1FlowSpecInitProvider
     [JsonPropertyName("kmsArn")]
     public string? KmsArn { get; set; }
 
+    /// <summary>A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.</summary>
+    [JsonPropertyName("metadataCatalogConfig")]
+    public IList<V1beta1FlowSpecInitProviderMetadataCatalogConfig>? MetadataCatalogConfig { get; set; }
+
     /// <summary>The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.</summary>
     [JsonPropertyName("sourceFlowConfig")]
     public IList<V1beta1FlowSpecInitProviderSourceFlowConfig>? SourceFlowConfig { get; set; }
@@ -2670,6 +2746,10 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     [JsonPropertyName("prefixFormat")]
     public string? PrefixFormat { get; set; }
 
+    /// <summary>Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION</summary>
+    [JsonPropertyName("prefixHierarchy")]
+    public IList<string>? PrefixHierarchy { get; set; }
+
     /// <summary>Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.</summary>
     [JsonPropertyName("prefixType")]
     public string? PrefixType { get; set; }
@@ -2861,6 +2941,10 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
     [JsonPropertyName("prefixFormat")]
     public string? PrefixFormat { get; set; }
 
+    /// <summary>Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION</summary>
+    [JsonPropertyName("prefixHierarchy")]
+    public IList<string>? PrefixHierarchy { get; set; }
+
     /// <summary>Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.</summary>
     [JsonPropertyName("prefixType")]
     public string? PrefixType { get; set; }
@@ -3014,6 +3098,32 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfig
     /// <summary>This stores the information that is required to query a particular connector. See Destination Connector Properties for more information.</summary>
     [JsonPropertyName("destinationConnectorProperties")]
     public IList<V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorProperties>? DestinationConnectorProperties { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowStatusAtProviderMetadataCatalogConfigGlueDataCatalog
+{
+    /// <summary>The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.</summary>
+    [JsonPropertyName("databaseName")]
+    public string? DatabaseName { get; set; }
+
+    /// <summary>The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>A naming prefix for each Data Catalog table that Amazon AppFlow creates</summary>
+    [JsonPropertyName("tablePrefix")]
+    public string? TablePrefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowStatusAtProviderMetadataCatalogConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("glueDataCatalog")]
+    public IList<V1beta1FlowStatusAtProviderMetadataCatalogConfigGlueDataCatalog>? GlueDataCatalog { get; set; }
 }
 
 /// <summary></summary>
@@ -3484,6 +3594,10 @@ public partial class V1beta1FlowStatusAtProvider
     /// <summary>ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for encryption. This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.</summary>
     [JsonPropertyName("kmsArn")]
     public string? KmsArn { get; set; }
+
+    /// <summary>A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.</summary>
+    [JsonPropertyName("metadataCatalogConfig")]
+    public IList<V1beta1FlowStatusAtProviderMetadataCatalogConfig>? MetadataCatalogConfig { get; set; }
 
     /// <summary>The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.</summary>
     [JsonPropertyName("sourceFlowConfig")]

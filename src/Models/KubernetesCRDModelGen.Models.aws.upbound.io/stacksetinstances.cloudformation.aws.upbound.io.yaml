@@ -118,6 +118,9 @@ spec:
                     description: Preferences for how AWS CloudFormation performs a stack set operation.
                     items:
                       properties:
+                        concurrencyMode:
+                          description: Specifies how the concurrency level behaves during the operation execution. Valid values are STRICT_FAILURE_TOLERANCE and SOFT_FAILURE_TOLERANCE.
+                          type: string
                         failureToleranceCount:
                           description: The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.
                           type: number
@@ -303,6 +306,9 @@ spec:
                     description: Preferences for how AWS CloudFormation performs a stack set operation.
                     items:
                       properties:
+                        concurrencyMode:
+                          description: Specifies how the concurrency level behaves during the operation execution. Valid values are STRICT_FAILURE_TOLERANCE and SOFT_FAILURE_TOLERANCE.
+                          type: string
                         failureToleranceCount:
                           description: The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.
                           type: number
@@ -674,6 +680,9 @@ spec:
                     description: Preferences for how AWS CloudFormation performs a stack set operation.
                     items:
                       properties:
+                        concurrencyMode:
+                          description: Specifies how the concurrency level behaves during the operation execution. Valid values are STRICT_FAILURE_TOLERANCE and SOFT_FAILURE_TOLERANCE.
+                          type: string
                         failureToleranceCount:
                           description: The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.
                           type: number
@@ -897,6 +906,9 @@ spec:
                   operationPreferences:
                     description: Preferences for how AWS CloudFormation performs a stack set operation.
                     properties:
+                      concurrencyMode:
+                        description: Specifies how the concurrency level behaves during the operation execution. Valid values are STRICT_FAILURE_TOLERANCE and SOFT_FAILURE_TOLERANCE.
+                        type: string
                       failureToleranceCount:
                         description: Number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.
                         type: number
@@ -1078,6 +1090,9 @@ spec:
                   operationPreferences:
                     description: Preferences for how AWS CloudFormation performs a stack set operation.
                     properties:
+                      concurrencyMode:
+                        description: Specifies how the concurrency level behaves during the operation execution. Valid values are STRICT_FAILURE_TOLERANCE and SOFT_FAILURE_TOLERANCE.
+                        type: string
                       failureToleranceCount:
                         description: Number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.
                         type: number
@@ -1445,6 +1460,9 @@ spec:
                   operationPreferences:
                     description: Preferences for how AWS CloudFormation performs a stack set operation.
                     properties:
+                      concurrencyMode:
+                        description: Specifies how the concurrency level behaves during the operation execution. Valid values are STRICT_FAILURE_TOLERANCE and SOFT_FAILURE_TOLERANCE.
+                        type: string
                       failureToleranceCount:
                         description: Number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.
                         type: number

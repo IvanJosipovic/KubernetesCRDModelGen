@@ -116,6 +116,10 @@ public partial class V1beta1ReportDefinitionSpecForProvider
     [JsonPropertyName("s3Region")]
     public string? S3Region { get; set; }
 
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
     /// <summary>The frequency on which report data are measured and displayed.  Valid values are: DAILY, HOURLY, MONTHLY.</summary>
     [JsonPropertyName("timeUnit")]
     public string? TimeUnit { get; set; }
@@ -224,6 +228,10 @@ public partial class V1beta1ReportDefinitionSpecInitProvider
     /// <summary>Region of the existing S3 bucket to hold generated reports.</summary>
     [JsonPropertyName("s3Region")]
     public string? S3Region { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 
     /// <summary>The frequency on which report data are measured and displayed.  Valid values are: DAILY, HOURLY, MONTHLY.</summary>
     [JsonPropertyName("timeUnit")]
@@ -409,6 +417,14 @@ public partial class V1beta1ReportDefinitionStatusAtProvider
     /// <summary>Region of the existing S3 bucket to hold generated reports.</summary>
     [JsonPropertyName("s3Region")]
     public string? S3Region { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
 
     /// <summary>The frequency on which report data are measured and displayed.  Valid values are: DAILY, HOURLY, MONTHLY.</summary>
     [JsonPropertyName("timeUnit")]

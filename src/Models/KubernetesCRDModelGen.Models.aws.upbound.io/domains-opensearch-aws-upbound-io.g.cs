@@ -1892,9 +1892,17 @@ public partial class V1beta1DomainStatusAtProvider
     [JsonPropertyName("dashboardEndpoint")]
     public string? DashboardEndpoint { get; set; }
 
+    /// <summary>V2 domain endpoint for Dashboard that works with both IPv4 and IPv6 addresses, without https scheme.</summary>
+    [JsonPropertyName("dashboardEndpointV2")]
+    public string? DashboardEndpointV2 { get; set; }
+
     /// <summary>Configuration block for domain endpoint HTTP(S) related options. Detailed below.</summary>
     [JsonPropertyName("domainEndpointOptions")]
     public IList<V1beta1DomainStatusAtProviderDomainEndpointOptions>? DomainEndpointOptions { get; set; }
+
+    /// <summary>Dual stack hosted zone ID for the domain.</summary>
+    [JsonPropertyName("domainEndpointV2HostedZoneId")]
+    public string? DomainEndpointV2HostedZoneId { get; set; }
 
     /// <summary>Unique identifier for the domain.</summary>
     [JsonPropertyName("domainId")]
@@ -1915,6 +1923,10 @@ public partial class V1beta1DomainStatusAtProvider
     /// <summary>Domain-specific endpoint used to submit index, search, and data upload requests.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
+
+    /// <summary>V2 domain endpoint that works with both IPv4 and IPv6 addresses, used to submit index, search, and data upload requests.</summary>
+    [JsonPropertyName("endpointV2")]
+    public string? EndpointV2 { get; set; }
 
     /// <summary>while Elasticsearch has elasticsearch_version</summary>
     [JsonPropertyName("engineVersion")]

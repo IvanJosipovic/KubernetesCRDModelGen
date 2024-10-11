@@ -68,6 +68,10 @@ public partial class V1beta1LicenseAssociationSpecForProviderWorkspaceIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LicenseAssociationSpecForProvider
 {
+    /// <summary>A token from Grafana Labs that ties your AWS account with a Grafana Labs account.</summary>
+    [JsonPropertyName("grafanaToken")]
+    public string? GrafanaToken { get; set; }
+
     /// <summary>The type of license for the workspace license association. Valid values are ENTERPRISE and ENTERPRISE_FREE_TRIAL.</summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
@@ -149,6 +153,10 @@ public partial class V1beta1LicenseAssociationSpecInitProviderWorkspaceIdSelecto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LicenseAssociationSpecInitProvider
 {
+    /// <summary>A token from Grafana Labs that ties your AWS account with a Grafana Labs account.</summary>
+    [JsonPropertyName("grafanaToken")]
+    public string? GrafanaToken { get; set; }
+
     /// <summary>The type of license for the workspace license association. Valid values are ENTERPRISE and ENTERPRISE_FREE_TRIAL.</summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
@@ -305,6 +313,10 @@ public partial class V1beta1LicenseAssociationStatusAtProvider
     /// <summary>If license_type is set to ENTERPRISE_FREE_TRIAL, this is the expiration date of the free trial.</summary>
     [JsonPropertyName("freeTrialExpiration")]
     public string? FreeTrialExpiration { get; set; }
+
+    /// <summary>A token from Grafana Labs that ties your AWS account with a Grafana Labs account.</summary>
+    [JsonPropertyName("grafanaToken")]
+    public string? GrafanaToken { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]

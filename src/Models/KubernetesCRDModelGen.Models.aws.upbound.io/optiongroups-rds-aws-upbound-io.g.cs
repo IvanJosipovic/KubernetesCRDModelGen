@@ -74,6 +74,10 @@ public partial class V1beta1OptionGroupSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("skipDestroy")]
+    public bool? SkipDestroy { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -140,6 +144,10 @@ public partial class V1beta1OptionGroupSpecInitProvider
     /// <summary>Description of the option group.</summary>
     [JsonPropertyName("optionGroupDescription")]
     public string? OptionGroupDescription { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipDestroy")]
+    public bool? SkipDestroy { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -347,6 +355,10 @@ public partial class V1beta1OptionGroupStatusAtProvider
     /// <summary>Description of the option group.</summary>
     [JsonPropertyName("optionGroupDescription")]
     public string? OptionGroupDescription { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipDestroy")]
+    public bool? SkipDestroy { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

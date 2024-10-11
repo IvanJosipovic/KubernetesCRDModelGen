@@ -80,6 +80,10 @@ public partial class V1beta1GlobalClusterSpecForProvider
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
+    /// <summary>The life cycle type for this DB instance. This setting applies only to Aurora PostgreSQL-based global databases. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
+
     /// <summary>Engine version of the Aurora global database. The engine, engine_version, and instance_class (on the aws_rds_cluster_instance) must together support global databases. See Using Amazon Aurora global databases for more information. NOTE: To avoid an inconsistent final plan error while upgrading, use the lifecycle ignore_changes for engine_version meta argument on the associated aws_rds_cluster resource as shown above in Upgrading Engine Versions example.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
@@ -180,6 +184,10 @@ public partial class V1beta1GlobalClusterSpecInitProvider
     /// <summary>Name of the database engine to be used for this DB cluster. Valid values: aurora, aurora-mysql, aurora-postgresql. Defaults to aurora. Conflicts with source_db_cluster_identifier.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
+
+    /// <summary>The life cycle type for this DB instance. This setting applies only to Aurora PostgreSQL-based global databases. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
 
     /// <summary>Engine version of the Aurora global database. The engine, engine_version, and instance_class (on the aws_rds_cluster_instance) must together support global databases. See Using Amazon Aurora global databases for more information. NOTE: To avoid an inconsistent final plan error while upgrading, use the lifecycle ignore_changes for engine_version meta argument on the associated aws_rds_cluster resource as shown above in Upgrading Engine Versions example.</summary>
     [JsonPropertyName("engineVersion")]
@@ -370,6 +378,10 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     /// <summary>Name of the database engine to be used for this DB cluster. Valid values: aurora, aurora-mysql, aurora-postgresql. Defaults to aurora. Conflicts with source_db_cluster_identifier.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
+
+    /// <summary>The life cycle type for this DB instance. This setting applies only to Aurora PostgreSQL-based global databases. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
 
     /// <summary>Engine version of the Aurora global database. The engine, engine_version, and instance_class (on the aws_rds_cluster_instance) must together support global databases. See Using Amazon Aurora global databases for more information. NOTE: To avoid an inconsistent final plan error while upgrading, use the lifecycle ignore_changes for engine_version meta argument on the associated aws_rds_cluster resource as shown above in Upgrading Engine Versions example.</summary>
     [JsonPropertyName("engineVersion")]

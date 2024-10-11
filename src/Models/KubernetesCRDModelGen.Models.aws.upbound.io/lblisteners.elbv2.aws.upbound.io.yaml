@@ -2147,7 +2147,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   sslPolicy:
-                    description: Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS.
+                    description: Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS. Default is ELBSecurityPolicy-2016-08.
                     type: string
                   tags:
                     additionalProperties:
@@ -2651,7 +2651,7 @@ spec:
                     description: Protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are HTTP and HTTPS, with a default of HTTP. For Network Load Balancers, valid values are TCP, TLS, UDP, and TCP_UDP. Not valid to use UDP or TCP_UDP if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
                     type: string
                   sslPolicy:
-                    description: Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS.
+                    description: Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS. Default is ELBSecurityPolicy-2016-08.
                     type: string
                   tags:
                     additionalProperties:
@@ -3076,7 +3076,7 @@ spec:
                     description: Protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are HTTP and HTTPS, with a default of HTTP. For Network Load Balancers, valid values are TCP, TLS, UDP, and TCP_UDP. Not valid to use UDP or TCP_UDP if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
                     type: string
                   sslPolicy:
-                    description: Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS.
+                    description: Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS. Default is ELBSecurityPolicy-2016-08.
                     type: string
                   tags:
                     additionalProperties:

@@ -1509,6 +1509,23 @@ public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurati
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfiguration
 {
     /// <summary>The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.</summary>
@@ -1562,6 +1579,10 @@ public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurati
     /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secret Manager Configuration. See secrets_manager_configuration block below for details.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The HTTP endpoint URL to which Kinesis Firehose sends your data.</summary>
     [JsonPropertyName("url")]
@@ -2589,7 +2610,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationCl
     public string? LogStreamName { get; set; }
 }
 
-/// <summary>The password for the username above.</summary>
+/// <summary>The password for the username above. This value is required if secrets_manager_configuration is not provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationPasswordSecretRef
 {
@@ -3075,6 +3096,23 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationS3
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfiguration
 {
     /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
@@ -3097,7 +3135,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfiguration
     [JsonPropertyName("dataTableName")]
     public string? DataTableName { get; set; }
 
-    /// <summary>The password for the username above.</summary>
+    /// <summary>The password for the username above. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationPasswordSecretRef? PasswordSecretRef { get; set; }
 
@@ -3132,6 +3170,10 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfiguration
     /// <summary>The S3 Configuration. See s3_configuration below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</summary>
     [JsonPropertyName("username")]
@@ -3189,7 +3231,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationK
     public string Namespace { get; set; }
 }
 
-/// <summary>The private key for authentication.</summary>
+/// <summary>The private key for authentication. This value is required if secrets_manager_configuration is not provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationPrivateKeySecretRef
 {
@@ -3489,6 +3531,23 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationSnowflakeRoleConfiguration
 {
     /// <summary>Enables or disables the logging. Defaults to false.</summary>
@@ -3517,6 +3576,14 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfiguration
     [JsonPropertyName("accountUrl")]
     public string? AccountUrl { get; set; }
 
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 900, before delivering it to the destination.  The default value is 0s.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 to 128, before delivering it to the destination.  The default value is 1MB.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
     /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
@@ -3541,7 +3608,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfiguration
     [JsonPropertyName("metadataColumnName")]
     public string? MetadataColumnName { get; set; }
 
-    /// <summary>The private key for authentication.</summary>
+    /// <summary>The private key for authentication. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("privateKeySecretRef")]
     public V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationPrivateKeySecretRef? PrivateKeySecretRef { get; set; }
 
@@ -3577,6 +3644,10 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfiguration
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
+
     /// <summary>The configuration for Snowflake role.</summary>
     [JsonPropertyName("snowflakeRoleConfiguration")]
     public IList<V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationSnowflakeRoleConfiguration>? SnowflakeRoleConfiguration { get; set; }
@@ -3611,7 +3682,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationClou
     public string? LogStreamName { get; set; }
 }
 
-/// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.</summary>
+/// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint. This value is required if secrets_manager_configuration is not provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationHecTokenSecretRef
 {
@@ -3855,6 +3926,23 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationS3Co
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfiguration
 {
     /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 60, before delivering it to the destination.  The default value is 60s.</summary>
@@ -3881,7 +3969,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfiguration
     [JsonPropertyName("hecEndpointType")]
     public string? HecEndpointType { get; set; }
 
-    /// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.</summary>
+    /// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("hecTokenSecretRef")]
     public V1beta1DeliveryStreamSpecForProviderSplunkConfigurationHecTokenSecretRef? HecTokenSecretRef { get; set; }
 
@@ -3900,6 +3988,10 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfiguration
     /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamSpecForProviderSplunkConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderSplunkConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 }
 
 /// <summary></summary>
@@ -5472,6 +5564,23 @@ public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurat
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfiguration
 {
     /// <summary>The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.</summary>
@@ -5525,6 +5634,10 @@ public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurat
     /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secret Manager Configuration. See secrets_manager_configuration block below for details.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The HTTP endpoint URL to which Kinesis Firehose sends your data.</summary>
     [JsonPropertyName("url")]
@@ -6552,7 +6665,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationC
     public string? LogStreamName { get; set; }
 }
 
-/// <summary>The password for the username above.</summary>
+/// <summary>The password for the username above. This value is required if secrets_manager_configuration is not provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationPasswordSecretRef
 {
@@ -7038,6 +7151,23 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfiguration
 {
     /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
@@ -7060,9 +7190,9 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfiguration
     [JsonPropertyName("dataTableName")]
     public string? DataTableName { get; set; }
 
-    /// <summary>The password for the username above.</summary>
+    /// <summary>The password for the username above. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationPasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationPasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The data processing configuration.  See processing_configuration block below for details.</summary>
     [JsonPropertyName("processingConfiguration")]
@@ -7095,6 +7225,10 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfiguration
     /// <summary>The S3 Configuration. See s3_configuration below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</summary>
     [JsonPropertyName("username")]
@@ -7152,7 +7286,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
     public string Namespace { get; set; }
 }
 
-/// <summary>The private key for authentication.</summary>
+/// <summary>The private key for authentication. This value is required if secrets_manager_configuration is not provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationPrivateKeySecretRef
 {
@@ -7452,6 +7586,23 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationSnowflakeRoleConfiguration
 {
     /// <summary>Enables or disables the logging. Defaults to false.</summary>
@@ -7480,6 +7631,14 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
     [JsonPropertyName("accountUrl")]
     public string? AccountUrl { get; set; }
 
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 900, before delivering it to the destination.  The default value is 0s.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 to 128, before delivering it to the destination.  The default value is 1MB.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
     /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
     [JsonPropertyName("cloudwatchLoggingOptions")]
     public IList<V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
@@ -7504,9 +7663,9 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
     [JsonPropertyName("metadataColumnName")]
     public string? MetadataColumnName { get; set; }
 
-    /// <summary>The private key for authentication.</summary>
+    /// <summary>The private key for authentication. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("privateKeySecretRef")]
-    public V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationPrivateKeySecretRef PrivateKeySecretRef { get; set; }
+    public V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationPrivateKeySecretRef? PrivateKeySecretRef { get; set; }
 
     /// <summary>The processing configuration. See processing_configuration block below for details.</summary>
     [JsonPropertyName("processingConfiguration")]
@@ -7539,6 +7698,10 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
     /// <summary>The Snowflake schema name.</summary>
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The configuration for Snowflake role.</summary>
     [JsonPropertyName("snowflakeRoleConfiguration")]
@@ -7574,7 +7737,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationClo
     public string? LogStreamName { get; set; }
 }
 
-/// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.</summary>
+/// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint. This value is required if secrets_manager_configuration is not provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationHecTokenSecretRef
 {
@@ -7818,6 +7981,23 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationS3C
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfiguration
 {
     /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 60, before delivering it to the destination.  The default value is 60s.</summary>
@@ -7844,9 +8024,9 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfiguration
     [JsonPropertyName("hecEndpointType")]
     public string? HecEndpointType { get; set; }
 
-    /// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.</summary>
+    /// <summary>The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("hecTokenSecretRef")]
-    public V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationHecTokenSecretRef HecTokenSecretRef { get; set; }
+    public V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationHecTokenSecretRef? HecTokenSecretRef { get; set; }
 
     /// <summary>The data processing configuration.  See processing_configuration block below for details.</summary>
     [JsonPropertyName("processingConfiguration")]
@@ -7863,6 +8043,10 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfiguration
     /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -8794,6 +8978,23 @@ public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurat
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfiguration
 {
     /// <summary>Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).</summary>
@@ -8835,6 +9036,10 @@ public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurat
     /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secret Manager Configuration. See secrets_manager_configuration block below for details.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The HTTP endpoint URL to which Kinesis Firehose sends your data.</summary>
     [JsonPropertyName("url")]
@@ -9451,6 +9656,23 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfiguration
 {
     /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
@@ -9496,6 +9718,10 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfiguration
     /// <summary>The S3 Configuration. See s3_configuration below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</summary>
     [JsonPropertyName("username")]
@@ -9635,6 +9861,23 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfigurationSnowflakeRoleConfiguration
 {
     /// <summary>Enables or disables the logging. Defaults to false.</summary>
@@ -9662,6 +9905,14 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfiguration
     /// <summary>The URL of the Snowflake account. Format: https://[account_identifier].snowflakecomputing.com.</summary>
     [JsonPropertyName("accountUrl")]
     public string? AccountUrl { get; set; }
+
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 900, before delivering it to the destination.  The default value is 0s.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 to 128, before delivering it to the destination.  The default value is 1MB.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
 
     /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
     [JsonPropertyName("cloudwatchLoggingOptions")]
@@ -9706,6 +9957,10 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfiguration
     /// <summary>The Snowflake schema name.</summary>
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderSnowflakeConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
     /// <summary>The configuration for Snowflake role.</summary>
     [JsonPropertyName("snowflakeRoleConfiguration")]
@@ -9840,6 +10095,23 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationS3C
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationSecretsManagerConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The ARN of the Secrets Manager secret. This value is required if enabled is true.</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfiguration
 {
     /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 60, before delivering it to the destination.  The default value is 60s.</summary>
@@ -9881,6 +10153,10 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfiguration
     /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationS3Configuration>? S3Configuration { get; set; }
+
+    /// <summary>The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if user and private_key are not provided.</summary>
+    [JsonPropertyName("secretsManagerConfiguration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 }
 
 /// <summary></summary>

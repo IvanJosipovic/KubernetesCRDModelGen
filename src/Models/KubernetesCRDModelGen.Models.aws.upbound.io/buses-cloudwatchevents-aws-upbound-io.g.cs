@@ -16,6 +16,10 @@ public partial class V1beta1BusSpecForProvider
     [JsonPropertyName("eventSourceName")]
     public string? EventSourceName { get; set; }
 
+    /// <summary>The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt events on this event bus. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
+
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
@@ -32,6 +36,10 @@ public partial class V1beta1BusSpecInitProvider
     /// <summary>The partner event source that the new event bus will be matched with. Must match name.</summary>
     [JsonPropertyName("eventSourceName")]
     public string? EventSourceName { get; set; }
+
+    /// <summary>The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt events on this event bus. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -185,6 +193,10 @@ public partial class V1beta1BusStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt events on this event bus. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

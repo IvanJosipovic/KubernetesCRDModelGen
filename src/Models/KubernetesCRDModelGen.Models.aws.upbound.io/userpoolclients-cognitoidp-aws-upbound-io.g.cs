@@ -242,35 +242,35 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("accessTokenValidity")]
     public double? AccessTokenValidity { get; set; }
 
-    /// <summary>List of allowed OAuth flows (code, implicit, client_credentials).</summary>
+    /// <summary>List of allowed OAuth flows, including code, implicit, and client_credentials. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("allowedOauthFlows")]
     public IList<string>? AllowedOauthFlows { get; set; }
 
-    /// <summary>Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.</summary>
+    /// <summary>Whether the client is allowed to use OAuth 2.0 features. allowed_oauth_flows_user_pool_client must be set to true before you can configure the following arguments: callback_urls, logout_urls, allowed_oauth_scopes and allowed_oauth_flows.</summary>
     [JsonPropertyName("allowedOauthFlowsUserPoolClient")]
     public bool? AllowedOauthFlowsUserPoolClient { get; set; }
 
-    /// <summary>List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</summary>
+    /// <summary>List of allowed OAuth scopes, including phone, email, openid, profile, and aws.cognito.signin.user.admin. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("allowedOauthScopes")]
     public IList<string>? AllowedOauthScopes { get; set; }
 
-    /// <summary>Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.</summary>
+    /// <summary>Configuration block for Amazon Pinpoint analytics that collects metrics for this user pool. See details below.</summary>
     [JsonPropertyName("analyticsConfiguration")]
     public IList<V1beta1UserPoolClientSpecForProviderAnalyticsConfiguration>? AnalyticsConfiguration { get; set; }
 
-    /// <summary>Amazon Cognito creates a session token for each API request in an authentication flow. AuthSessionValidity is the duration, in minutes, of that session token. Your user pool native user must respond to each authentication challenge before the session expires. Valid values between 3 and 15. Default value is 3.</summary>
+    /// <summary>Duration, in minutes, of the session token created by Amazon Cognito for each API request in an authentication flow. The session token must be responded to by the native user of the user pool before it expires. Valid values for auth_session_validity are between 3 and 15, with a default value of 3.</summary>
     [JsonPropertyName("authSessionValidity")]
     public double? AuthSessionValidity { get; set; }
 
-    /// <summary>List of allowed callback URLs for the identity providers.</summary>
+    /// <summary>List of allowed callback URLs for the identity providers. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("callbackUrls")]
     public IList<string>? CallbackUrls { get; set; }
 
-    /// <summary>Default redirect URI. Must be in the list of callback URLs.</summary>
+    /// <summary>Default redirect URI and must be included in the list of callback URLs.</summary>
     [JsonPropertyName("defaultRedirectUri")]
     public string? DefaultRedirectUri { get; set; }
 
-    /// <summary>Activates the propagation of additional user context data.</summary>
+    /// <summary>Enables the propagation of additional user context data.</summary>
     [JsonPropertyName("enablePropagateAdditionalUserContextData")]
     public bool? EnablePropagateAdditionalUserContextData { get; set; }
 
@@ -278,11 +278,11 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("enableTokenRevocation")]
     public bool? EnableTokenRevocation { get; set; }
 
-    /// <summary>List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).</summary>
+    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, and ALLOW_REFRESH_TOKEN_AUTH.</summary>
     [JsonPropertyName("explicitAuthFlows")]
     public IList<string>? ExplicitAuthFlows { get; set; }
 
-    /// <summary>Should an application secret be generated.</summary>
+    /// <summary>Boolean flag indicating whether an application secret should be generated.</summary>
     [JsonPropertyName("generateSecret")]
     public bool? GenerateSecret { get; set; }
 
@@ -290,7 +290,7 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("idTokenValidity")]
     public double? IdTokenValidity { get; set; }
 
-    /// <summary>List of allowed logout URLs for the identity providers.</summary>
+    /// <summary>List of allowed logout URLs for the identity providers. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("logoutUrls")]
     public IList<string>? LogoutUrls { get; set; }
 
@@ -298,11 +298,11 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to ENABLED and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to LEGACY, those APIs will return a UserNotFoundException exception if the user does not exist in the user pool.</summary>
+    /// <summary>Setting determines the errors and responses returned by Cognito APIs when a user does not exist in the user pool during authentication, account confirmation, and password recovery.</summary>
     [JsonPropertyName("preventUserExistenceErrors")]
     public string? PreventUserExistenceErrors { get; set; }
 
-    /// <summary>List of user pool attributes the application client can read from.</summary>
+    /// <summary>List of user pool attributes that the application client can read from.</summary>
     [JsonPropertyName("readAttributes")]
     public IList<string>? ReadAttributes { get; set; }
 
@@ -314,11 +314,11 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>List of provider names for the identity providers that are supported on this client. Uses the provider_name attribute of aws_cognito_identity_provider resource(s), or the equivalent string(s).</summary>
+    /// <summary>List of provider names for the identity providers that are supported on this client. It uses the provider_name attribute of the aws_cognito_identity_provider resource(s), or the equivalent string(s).</summary>
     [JsonPropertyName("supportedIdentityProviders")]
     public IList<string>? SupportedIdentityProviders { get; set; }
 
-    /// <summary>Configuration block for units in which the validity times are represented in. Detailed below.</summary>
+    /// <summary>Configuration block for representing the validity times in units. See details below. Detailed below.</summary>
     [JsonPropertyName("tokenValidityUnits")]
     public IList<V1beta1UserPoolClientSpecForProviderTokenValidityUnits>? TokenValidityUnits { get; set; }
 
@@ -334,7 +334,7 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1UserPoolClientSpecForProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 
-    /// <summary>List of user pool attributes the application client can write to.</summary>
+    /// <summary>List of user pool attributes that the application client can write to.</summary>
     [JsonPropertyName("writeAttributes")]
     public IList<string>? WriteAttributes { get; set; }
 }
@@ -573,35 +573,35 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     [JsonPropertyName("accessTokenValidity")]
     public double? AccessTokenValidity { get; set; }
 
-    /// <summary>List of allowed OAuth flows (code, implicit, client_credentials).</summary>
+    /// <summary>List of allowed OAuth flows, including code, implicit, and client_credentials. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("allowedOauthFlows")]
     public IList<string>? AllowedOauthFlows { get; set; }
 
-    /// <summary>Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.</summary>
+    /// <summary>Whether the client is allowed to use OAuth 2.0 features. allowed_oauth_flows_user_pool_client must be set to true before you can configure the following arguments: callback_urls, logout_urls, allowed_oauth_scopes and allowed_oauth_flows.</summary>
     [JsonPropertyName("allowedOauthFlowsUserPoolClient")]
     public bool? AllowedOauthFlowsUserPoolClient { get; set; }
 
-    /// <summary>List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</summary>
+    /// <summary>List of allowed OAuth scopes, including phone, email, openid, profile, and aws.cognito.signin.user.admin. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("allowedOauthScopes")]
     public IList<string>? AllowedOauthScopes { get; set; }
 
-    /// <summary>Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.</summary>
+    /// <summary>Configuration block for Amazon Pinpoint analytics that collects metrics for this user pool. See details below.</summary>
     [JsonPropertyName("analyticsConfiguration")]
     public IList<V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration>? AnalyticsConfiguration { get; set; }
 
-    /// <summary>Amazon Cognito creates a session token for each API request in an authentication flow. AuthSessionValidity is the duration, in minutes, of that session token. Your user pool native user must respond to each authentication challenge before the session expires. Valid values between 3 and 15. Default value is 3.</summary>
+    /// <summary>Duration, in minutes, of the session token created by Amazon Cognito for each API request in an authentication flow. The session token must be responded to by the native user of the user pool before it expires. Valid values for auth_session_validity are between 3 and 15, with a default value of 3.</summary>
     [JsonPropertyName("authSessionValidity")]
     public double? AuthSessionValidity { get; set; }
 
-    /// <summary>List of allowed callback URLs for the identity providers.</summary>
+    /// <summary>List of allowed callback URLs for the identity providers. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("callbackUrls")]
     public IList<string>? CallbackUrls { get; set; }
 
-    /// <summary>Default redirect URI. Must be in the list of callback URLs.</summary>
+    /// <summary>Default redirect URI and must be included in the list of callback URLs.</summary>
     [JsonPropertyName("defaultRedirectUri")]
     public string? DefaultRedirectUri { get; set; }
 
-    /// <summary>Activates the propagation of additional user context data.</summary>
+    /// <summary>Enables the propagation of additional user context data.</summary>
     [JsonPropertyName("enablePropagateAdditionalUserContextData")]
     public bool? EnablePropagateAdditionalUserContextData { get; set; }
 
@@ -609,11 +609,11 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     [JsonPropertyName("enableTokenRevocation")]
     public bool? EnableTokenRevocation { get; set; }
 
-    /// <summary>List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).</summary>
+    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, and ALLOW_REFRESH_TOKEN_AUTH.</summary>
     [JsonPropertyName("explicitAuthFlows")]
     public IList<string>? ExplicitAuthFlows { get; set; }
 
-    /// <summary>Should an application secret be generated.</summary>
+    /// <summary>Boolean flag indicating whether an application secret should be generated.</summary>
     [JsonPropertyName("generateSecret")]
     public bool? GenerateSecret { get; set; }
 
@@ -621,7 +621,7 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     [JsonPropertyName("idTokenValidity")]
     public double? IdTokenValidity { get; set; }
 
-    /// <summary>List of allowed logout URLs for the identity providers.</summary>
+    /// <summary>List of allowed logout URLs for the identity providers. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("logoutUrls")]
     public IList<string>? LogoutUrls { get; set; }
 
@@ -629,11 +629,11 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to ENABLED and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to LEGACY, those APIs will return a UserNotFoundException exception if the user does not exist in the user pool.</summary>
+    /// <summary>Setting determines the errors and responses returned by Cognito APIs when a user does not exist in the user pool during authentication, account confirmation, and password recovery.</summary>
     [JsonPropertyName("preventUserExistenceErrors")]
     public string? PreventUserExistenceErrors { get; set; }
 
-    /// <summary>List of user pool attributes the application client can read from.</summary>
+    /// <summary>List of user pool attributes that the application client can read from.</summary>
     [JsonPropertyName("readAttributes")]
     public IList<string>? ReadAttributes { get; set; }
 
@@ -641,11 +641,11 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     [JsonPropertyName("refreshTokenValidity")]
     public double? RefreshTokenValidity { get; set; }
 
-    /// <summary>List of provider names for the identity providers that are supported on this client. Uses the provider_name attribute of aws_cognito_identity_provider resource(s), or the equivalent string(s).</summary>
+    /// <summary>List of provider names for the identity providers that are supported on this client. It uses the provider_name attribute of the aws_cognito_identity_provider resource(s), or the equivalent string(s).</summary>
     [JsonPropertyName("supportedIdentityProviders")]
     public IList<string>? SupportedIdentityProviders { get; set; }
 
-    /// <summary>Configuration block for units in which the validity times are represented in. Detailed below.</summary>
+    /// <summary>Configuration block for representing the validity times in units. See details below. Detailed below.</summary>
     [JsonPropertyName("tokenValidityUnits")]
     public IList<V1beta1UserPoolClientSpecInitProviderTokenValidityUnits>? TokenValidityUnits { get; set; }
 
@@ -661,7 +661,7 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     [JsonPropertyName("userPoolIdSelector")]
     public V1beta1UserPoolClientSpecInitProviderUserPoolIdSelector? UserPoolIdSelector { get; set; }
 
-    /// <summary>List of user pool attributes the application client can write to.</summary>
+    /// <summary>List of user pool attributes that the application client can write to.</summary>
     [JsonPropertyName("writeAttributes")]
     public IList<string>? WriteAttributes { get; set; }
 }
@@ -848,35 +848,35 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("accessTokenValidity")]
     public double? AccessTokenValidity { get; set; }
 
-    /// <summary>List of allowed OAuth flows (code, implicit, client_credentials).</summary>
+    /// <summary>List of allowed OAuth flows, including code, implicit, and client_credentials. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("allowedOauthFlows")]
     public IList<string>? AllowedOauthFlows { get; set; }
 
-    /// <summary>Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.</summary>
+    /// <summary>Whether the client is allowed to use OAuth 2.0 features. allowed_oauth_flows_user_pool_client must be set to true before you can configure the following arguments: callback_urls, logout_urls, allowed_oauth_scopes and allowed_oauth_flows.</summary>
     [JsonPropertyName("allowedOauthFlowsUserPoolClient")]
     public bool? AllowedOauthFlowsUserPoolClient { get; set; }
 
-    /// <summary>List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</summary>
+    /// <summary>List of allowed OAuth scopes, including phone, email, openid, profile, and aws.cognito.signin.user.admin. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("allowedOauthScopes")]
     public IList<string>? AllowedOauthScopes { get; set; }
 
-    /// <summary>Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.</summary>
+    /// <summary>Configuration block for Amazon Pinpoint analytics that collects metrics for this user pool. See details below.</summary>
     [JsonPropertyName("analyticsConfiguration")]
     public IList<V1beta1UserPoolClientStatusAtProviderAnalyticsConfiguration>? AnalyticsConfiguration { get; set; }
 
-    /// <summary>Amazon Cognito creates a session token for each API request in an authentication flow. AuthSessionValidity is the duration, in minutes, of that session token. Your user pool native user must respond to each authentication challenge before the session expires. Valid values between 3 and 15. Default value is 3.</summary>
+    /// <summary>Duration, in minutes, of the session token created by Amazon Cognito for each API request in an authentication flow. The session token must be responded to by the native user of the user pool before it expires. Valid values for auth_session_validity are between 3 and 15, with a default value of 3.</summary>
     [JsonPropertyName("authSessionValidity")]
     public double? AuthSessionValidity { get; set; }
 
-    /// <summary>List of allowed callback URLs for the identity providers.</summary>
+    /// <summary>List of allowed callback URLs for the identity providers. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("callbackUrls")]
     public IList<string>? CallbackUrls { get; set; }
 
-    /// <summary>Default redirect URI. Must be in the list of callback URLs.</summary>
+    /// <summary>Default redirect URI and must be included in the list of callback URLs.</summary>
     [JsonPropertyName("defaultRedirectUri")]
     public string? DefaultRedirectUri { get; set; }
 
-    /// <summary>Activates the propagation of additional user context data.</summary>
+    /// <summary>Enables the propagation of additional user context data.</summary>
     [JsonPropertyName("enablePropagateAdditionalUserContextData")]
     public bool? EnablePropagateAdditionalUserContextData { get; set; }
 
@@ -884,11 +884,11 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("enableTokenRevocation")]
     public bool? EnableTokenRevocation { get; set; }
 
-    /// <summary>List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).</summary>
+    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, and ALLOW_REFRESH_TOKEN_AUTH.</summary>
     [JsonPropertyName("explicitAuthFlows")]
     public IList<string>? ExplicitAuthFlows { get; set; }
 
-    /// <summary>Should an application secret be generated.</summary>
+    /// <summary>Boolean flag indicating whether an application secret should be generated.</summary>
     [JsonPropertyName("generateSecret")]
     public bool? GenerateSecret { get; set; }
 
@@ -900,7 +900,7 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("idTokenValidity")]
     public double? IdTokenValidity { get; set; }
 
-    /// <summary>List of allowed logout URLs for the identity providers.</summary>
+    /// <summary>List of allowed logout URLs for the identity providers. allowed_oauth_flows_user_pool_client must be set to true before you can configure this option.</summary>
     [JsonPropertyName("logoutUrls")]
     public IList<string>? LogoutUrls { get; set; }
 
@@ -908,11 +908,11 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to ENABLED and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to LEGACY, those APIs will return a UserNotFoundException exception if the user does not exist in the user pool.</summary>
+    /// <summary>Setting determines the errors and responses returned by Cognito APIs when a user does not exist in the user pool during authentication, account confirmation, and password recovery.</summary>
     [JsonPropertyName("preventUserExistenceErrors")]
     public string? PreventUserExistenceErrors { get; set; }
 
-    /// <summary>List of user pool attributes the application client can read from.</summary>
+    /// <summary>List of user pool attributes that the application client can read from.</summary>
     [JsonPropertyName("readAttributes")]
     public IList<string>? ReadAttributes { get; set; }
 
@@ -920,11 +920,11 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("refreshTokenValidity")]
     public double? RefreshTokenValidity { get; set; }
 
-    /// <summary>List of provider names for the identity providers that are supported on this client. Uses the provider_name attribute of aws_cognito_identity_provider resource(s), or the equivalent string(s).</summary>
+    /// <summary>List of provider names for the identity providers that are supported on this client. It uses the provider_name attribute of the aws_cognito_identity_provider resource(s), or the equivalent string(s).</summary>
     [JsonPropertyName("supportedIdentityProviders")]
     public IList<string>? SupportedIdentityProviders { get; set; }
 
-    /// <summary>Configuration block for units in which the validity times are represented in. Detailed below.</summary>
+    /// <summary>Configuration block for representing the validity times in units. See details below. Detailed below.</summary>
     [JsonPropertyName("tokenValidityUnits")]
     public IList<V1beta1UserPoolClientStatusAtProviderTokenValidityUnits>? TokenValidityUnits { get; set; }
 
@@ -932,7 +932,7 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("userPoolId")]
     public string? UserPoolId { get; set; }
 
-    /// <summary>List of user pool attributes the application client can write to.</summary>
+    /// <summary>List of user pool attributes that the application client can write to.</summary>
     [JsonPropertyName("writeAttributes")]
     public IList<string>? WriteAttributes { get; set; }
 }

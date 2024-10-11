@@ -109,7 +109,7 @@ spec:
                     description: The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with identity_type set to QUICKSIGHT.
                     type: string
                   userRole:
-                    description: 'The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, or ADMIN'
+                    description: 'The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.'
                     type: string
                 required:
                 - region
@@ -158,7 +158,7 @@ spec:
                     description: The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with identity_type set to QUICKSIGHT.
                     type: string
                   userRole:
-                    description: 'The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, or ADMIN'
+                    description: 'The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.'
                     type: string
                 type: object
               managementPolicies:
@@ -408,7 +408,7 @@ spec:
                     description: The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with identity_type set to QUICKSIGHT.
                     type: string
                   userRole:
-                    description: 'The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, or ADMIN'
+                    description: 'The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.'
                     type: string
                 type: object
               conditions:

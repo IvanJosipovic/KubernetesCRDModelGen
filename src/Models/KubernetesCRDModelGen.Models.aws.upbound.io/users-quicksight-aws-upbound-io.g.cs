@@ -44,7 +44,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 
-    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, or ADMIN</summary>
+    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.</summary>
     [JsonPropertyName("userRole")]
     public string? UserRole { get; set; }
 }
@@ -81,7 +81,7 @@ public partial class V1beta1UserSpecInitProvider
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 
-    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, or ADMIN</summary>
+    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.</summary>
     [JsonPropertyName("userRole")]
     public string? UserRole { get; set; }
 }
@@ -258,7 +258,7 @@ public partial class V1beta1UserStatusAtProvider
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 
-    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, or ADMIN</summary>
+    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.</summary>
     [JsonPropertyName("userRole")]
     public string? UserRole { get; set; }
 }

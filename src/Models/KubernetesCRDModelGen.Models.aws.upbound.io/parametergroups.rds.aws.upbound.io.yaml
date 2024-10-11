@@ -113,6 +113,8 @@ spec:
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
+                  skipDestroy:
+                    type: boolean
                   tags:
                     additionalProperties:
                       type: string
@@ -170,6 +172,8 @@ spec:
                           type: string
                       type: object
                     type: array
+                  skipDestroy:
+                    type: boolean
                   tags:
                     additionalProperties:
                       type: string
@@ -425,6 +429,8 @@ spec:
                           type: string
                       type: object
                     type: array
+                  skipDestroy:
+                    type: boolean
                   tags:
                     additionalProperties:
                       type: string

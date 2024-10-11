@@ -288,7 +288,7 @@ spec:
                         type: object
                     type: object
                   loggingConfiguration:
-                    description: The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
+                    description: The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.
                     properties:
                       dagProcessingLogs:
                         description: Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
@@ -342,17 +342,19 @@ spec:
                         type: object
                     type: object
                   maxWebservers:
+                    description: The maximum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.
                     type: number
                   maxWorkers:
                     description: The maximum number of workers that can be automatically scaled up. Value need to be between 1 and 25. Will be 10 by default.
                     type: number
                   minWebservers:
+                    description: The minimum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.
                     type: number
                   minWorkers:
                     description: The minimum number of workers that you want to run in your environment. Will be 1 by default.
                     type: number
                   networkConfiguration:
-                    description: Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
+                    description: Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.
                     properties:
                       securityGroupIds:
                         description: Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
@@ -890,7 +892,7 @@ spec:
                         type: object
                     type: object
                   loggingConfiguration:
-                    description: The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
+                    description: The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.
                     properties:
                       dagProcessingLogs:
                         description: Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
@@ -944,17 +946,19 @@ spec:
                         type: object
                     type: object
                   maxWebservers:
+                    description: The maximum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.
                     type: number
                   maxWorkers:
                     description: The maximum number of workers that can be automatically scaled up. Value need to be between 1 and 25. Will be 10 by default.
                     type: number
                   minWebservers:
+                    description: The minimum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.
                     type: number
                   minWorkers:
                     description: The minimum number of workers that you want to run in your environment. Will be 1 by default.
                     type: number
                   networkConfiguration:
-                    description: Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
+                    description: Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.
                     properties:
                       securityGroupIds:
                         description: Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
@@ -1538,7 +1542,7 @@ spec:
                       type: object
                     type: array
                   loggingConfiguration:
-                    description: The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
+                    description: The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.
                     properties:
                       dagProcessingLogs:
                         description: Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
@@ -1607,17 +1611,19 @@ spec:
                         type: object
                     type: object
                   maxWebservers:
+                    description: The maximum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.
                     type: number
                   maxWorkers:
                     description: The maximum number of workers that can be automatically scaled up. Value need to be between 1 and 25. Will be 10 by default.
                     type: number
                   minWebservers:
+                    description: The minimum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.
                     type: number
                   minWorkers:
                     description: The minimum number of workers that you want to run in your environment. Will be 1 by default.
                     type: number
                   networkConfiguration:
-                    description: Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
+                    description: Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.
                     properties:
                       securityGroupIds:
                         description: Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.

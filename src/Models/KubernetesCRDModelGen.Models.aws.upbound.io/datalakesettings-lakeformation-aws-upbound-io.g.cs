@@ -46,6 +46,10 @@ public partial class V1beta1DataLakeSettingsSpecForProvider
     [JsonPropertyName("allowExternalDataFiltering")]
     public bool? AllowExternalDataFiltering { get; set; }
 
+    /// <summary>Whether to allow a third-party query engine to get data access credentials without session tags when a caller has full data access permissions.</summary>
+    [JsonPropertyName("allowFullTableExternalDataAccess")]
+    public bool? AllowFullTableExternalDataAccess { get; set; }
+
     /// <summary>Lake Formation relies on a privileged process secured by Amazon EMR or the third party integrator to tag the user's role while assuming it.</summary>
     [JsonPropertyName("authorizedSessionTagValueList")]
     public IList<string>? AuthorizedSessionTagValueList { get; set; }
@@ -116,6 +120,10 @@ public partial class V1beta1DataLakeSettingsSpecInitProvider
     /// <summary>Whether to allow Amazon EMR clusters to access data managed by Lake Formation.</summary>
     [JsonPropertyName("allowExternalDataFiltering")]
     public bool? AllowExternalDataFiltering { get; set; }
+
+    /// <summary>Whether to allow a third-party query engine to get data access credentials without session tags when a caller has full data access permissions.</summary>
+    [JsonPropertyName("allowFullTableExternalDataAccess")]
+    public bool? AllowFullTableExternalDataAccess { get; set; }
 
     /// <summary>Lake Formation relies on a privileged process secured by Amazon EMR or the third party integrator to tag the user's role while assuming it.</summary>
     [JsonPropertyName("authorizedSessionTagValueList")]
@@ -315,6 +323,10 @@ public partial class V1beta1DataLakeSettingsStatusAtProvider
     /// <summary>Whether to allow Amazon EMR clusters to access data managed by Lake Formation.</summary>
     [JsonPropertyName("allowExternalDataFiltering")]
     public bool? AllowExternalDataFiltering { get; set; }
+
+    /// <summary>Whether to allow a third-party query engine to get data access credentials without session tags when a caller has full data access permissions.</summary>
+    [JsonPropertyName("allowFullTableExternalDataAccess")]
+    public bool? AllowFullTableExternalDataAccess { get; set; }
 
     /// <summary>Lake Formation relies on a privileged process secured by Amazon EMR or the third party integrator to tag the user's role while assuming it.</summary>
     [JsonPropertyName("authorizedSessionTagValueList")]

@@ -119,6 +119,15 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesImagePullSecret
+{
+    /// <summary>Unique identifier.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesMetadata
 {
     /// <summary></summary>
@@ -198,6 +207,10 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
     [JsonPropertyName("hostNetwork")]
     public bool? HostNetwork { get; set; }
 
+    /// <summary>List of Kubernetes secret resources. See image_pull_secret below.</summary>
+    [JsonPropertyName("imagePullSecret")]
+    public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesImagePullSecret>? ImagePullSecret { get; set; }
+
     /// <summary>Metadata about the Kubernetes pod.</summary>
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
@@ -274,6 +287,10 @@ public partial class V1beta1JobDefinitionSpecForProvider
     /// <summary>When updating a job definition a new revision is created. This parameter determines if the previous version is deregistered (INACTIVE) or left  ACTIVE. Defaults to true.</summary>
     [JsonPropertyName("deregisterOnNewRevision")]
     public bool? DeregisterOnNewRevision { get; set; }
+
+    /// <summary>Valid ECS properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
+    [JsonPropertyName("ecsProperties")]
+    public string? EcsProperties { get; set; }
 
     /// <summary>A valid eks properties. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("eksProperties")]
@@ -435,6 +452,15 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesImagePullSecret
+{
+    /// <summary>Unique identifier.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesMetadata
 {
     /// <summary></summary>
@@ -514,6 +540,10 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
     [JsonPropertyName("hostNetwork")]
     public bool? HostNetwork { get; set; }
 
+    /// <summary>List of Kubernetes secret resources. See image_pull_secret below.</summary>
+    [JsonPropertyName("imagePullSecret")]
+    public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesImagePullSecret>? ImagePullSecret { get; set; }
+
     /// <summary>Metadata about the Kubernetes pod.</summary>
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
@@ -590,6 +620,10 @@ public partial class V1beta1JobDefinitionSpecInitProvider
     /// <summary>When updating a job definition a new revision is created. This parameter determines if the previous version is deregistered (INACTIVE) or left  ACTIVE. Defaults to true.</summary>
     [JsonPropertyName("deregisterOnNewRevision")]
     public bool? DeregisterOnNewRevision { get; set; }
+
+    /// <summary>Valid ECS properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
+    [JsonPropertyName("ecsProperties")]
+    public string? EcsProperties { get; set; }
 
     /// <summary>A valid eks properties. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("eksProperties")]
@@ -879,6 +913,15 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesImagePullSecret
+{
+    /// <summary>Unique identifier.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesMetadata
 {
     /// <summary></summary>
@@ -957,6 +1000,10 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
     /// <summary>Indicates if the pod uses the hosts' network IP address. The default value is true. Setting this to false enables the Kubernetes pod networking model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation for each pod for incoming connections.</summary>
     [JsonPropertyName("hostNetwork")]
     public bool? HostNetwork { get; set; }
+
+    /// <summary>List of Kubernetes secret resources. See image_pull_secret below.</summary>
+    [JsonPropertyName("imagePullSecret")]
+    public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesImagePullSecret>? ImagePullSecret { get; set; }
 
     /// <summary>Metadata about the Kubernetes pod.</summary>
     [JsonPropertyName("metadata")]
@@ -1042,6 +1089,10 @@ public partial class V1beta1JobDefinitionStatusAtProvider
     /// <summary>When updating a job definition a new revision is created. This parameter determines if the previous version is deregistered (INACTIVE) or left  ACTIVE. Defaults to true.</summary>
     [JsonPropertyName("deregisterOnNewRevision")]
     public bool? DeregisterOnNewRevision { get; set; }
+
+    /// <summary>Valid ECS properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
+    [JsonPropertyName("ecsProperties")]
+    public string? EcsProperties { get; set; }
 
     /// <summary>A valid eks properties. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("eksProperties")]

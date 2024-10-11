@@ -340,7 +340,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("dbParameterGroupNameSelector")]
     public V1beta1ClusterInstanceSpecForProviderDbParameterGroupNameSelector? DbParameterGroupNameSelector { get; set; }
 
-    /// <summary>DB subnet group to associate with this DB instance. NOTE: This must match the db_subnet_group_name of the attached aws_rds_cluster.</summary>
+    /// <summary>Specifies the DB subnet group to associate with this DB instance. The default behavior varies depending on whether db_subnet_group_name is specified. Please refer to official AWS documentation to understand how db_subnet_group_name and publicly_accessible parameters affect DB instance behaviour. NOTE: This must match the db_subnet_group_name of the attached aws_rds_cluster.</summary>
     [JsonPropertyName("dbSubnetGroupName")]
     public string? DbSubnetGroupName { get; set; }
 
@@ -360,7 +360,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details.</summary>
+    /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details. For Aurora Serverless v2 use db.serverless.</summary>
     [JsonPropertyName("instanceClass")]
     public string? InstanceClass { get; set; }
 
@@ -757,7 +757,7 @@ public partial class V1beta1ClusterInstanceSpecInitProvider
     [JsonPropertyName("dbParameterGroupNameSelector")]
     public V1beta1ClusterInstanceSpecInitProviderDbParameterGroupNameSelector? DbParameterGroupNameSelector { get; set; }
 
-    /// <summary>DB subnet group to associate with this DB instance. NOTE: This must match the db_subnet_group_name of the attached aws_rds_cluster.</summary>
+    /// <summary>Specifies the DB subnet group to associate with this DB instance. The default behavior varies depending on whether db_subnet_group_name is specified. Please refer to official AWS documentation to understand how db_subnet_group_name and publicly_accessible parameters affect DB instance behaviour. NOTE: This must match the db_subnet_group_name of the attached aws_rds_cluster.</summary>
     [JsonPropertyName("dbSubnetGroupName")]
     public string? DbSubnetGroupName { get; set; }
 
@@ -777,7 +777,7 @@ public partial class V1beta1ClusterInstanceSpecInitProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details.</summary>
+    /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details. For Aurora Serverless v2 use db.serverless.</summary>
     [JsonPropertyName("instanceClass")]
     public string? InstanceClass { get; set; }
 
@@ -1010,7 +1010,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("dbParameterGroupName")]
     public string? DbParameterGroupName { get; set; }
 
-    /// <summary>DB subnet group to associate with this DB instance. NOTE: This must match the db_subnet_group_name of the attached aws_rds_cluster.</summary>
+    /// <summary>Specifies the DB subnet group to associate with this DB instance. The default behavior varies depending on whether db_subnet_group_name is specified. Please refer to official AWS documentation to understand how db_subnet_group_name and publicly_accessible parameters affect DB instance behaviour. NOTE: This must match the db_subnet_group_name of the attached aws_rds_cluster.</summary>
     [JsonPropertyName("dbSubnetGroupName")]
     public string? DbSubnetGroupName { get; set; }
 
@@ -1038,7 +1038,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details.</summary>
+    /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details. For Aurora Serverless v2 use db.serverless.</summary>
     [JsonPropertyName("instanceClass")]
     public string? InstanceClass { get; set; }
 

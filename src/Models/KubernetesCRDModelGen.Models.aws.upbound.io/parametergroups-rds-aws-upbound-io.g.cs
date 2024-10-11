@@ -45,6 +45,10 @@ public partial class V1beta1ParameterGroupSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("skipDestroy")]
+    public bool? SkipDestroy { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -82,6 +86,10 @@ public partial class V1beta1ParameterGroupSpecInitProvider
     /// <summary>The DB parameters to apply. See parameter Block below for more details. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via aws rds describe-db-parameters after initial creation of the group.</summary>
     [JsonPropertyName("parameter")]
     public IList<V1beta1ParameterGroupSpecInitProviderParameter>? Parameter { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipDestroy")]
+    public bool? SkipDestroy { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -260,6 +268,10 @@ public partial class V1beta1ParameterGroupStatusAtProvider
     /// <summary>The DB parameters to apply. See parameter Block below for more details. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via aws rds describe-db-parameters after initial creation of the group.</summary>
     [JsonPropertyName("parameter")]
     public IList<V1beta1ParameterGroupStatusAtProviderParameter>? Parameter { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipDestroy")]
+    public bool? SkipDestroy { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

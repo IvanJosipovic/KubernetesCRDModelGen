@@ -356,6 +356,10 @@ public partial class V1beta1WindowsFileSystemSpecForProvider
     [JsonPropertyName("diskIopsConfiguration")]
     public IList<V1beta1WindowsFileSystemSpecForProviderDiskIopsConfiguration>? DiskIopsConfiguration { get; set; }
 
+    /// <summary>A map of tags to apply to the file system's final backup.</summary>
+    [JsonPropertyName("finalBackupTags")]
+    public IDictionary<string, string>? FinalBackupTags { get; set; }
+
     /// <summary>ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS managed KMS Key.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
@@ -777,6 +781,10 @@ public partial class V1beta1WindowsFileSystemSpecInitProvider
     [JsonPropertyName("diskIopsConfiguration")]
     public IList<V1beta1WindowsFileSystemSpecInitProviderDiskIopsConfiguration>? DiskIopsConfiguration { get; set; }
 
+    /// <summary>A map of tags to apply to the file system's final backup.</summary>
+    [JsonPropertyName("finalBackupTags")]
+    public IDictionary<string, string>? FinalBackupTags { get; set; }
+
     /// <summary>ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS managed KMS Key.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
@@ -1080,6 +1088,10 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     /// <summary>DNS name for the file system, e.g., fs-12345678.corp.example.com (domain name matching the Active Directory domain name)</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
+
+    /// <summary>A map of tags to apply to the file system's final backup.</summary>
+    [JsonPropertyName("finalBackupTags")]
+    public IDictionary<string, string>? FinalBackupTags { get; set; }
 
     /// <summary>Identifier of the file system (e.g. fs-12345678).</summary>
     [JsonPropertyName("id")]

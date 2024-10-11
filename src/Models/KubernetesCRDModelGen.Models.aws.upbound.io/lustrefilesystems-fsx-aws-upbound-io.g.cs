@@ -259,6 +259,10 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     [JsonPropertyName("fileSystemTypeVersion")]
     public string? FileSystemTypeVersion { get; set; }
 
+    /// <summary>A map of tags to apply to the file system's final backup.</summary>
+    [JsonPropertyName("finalBackupTags")]
+    public IDictionary<string, string>? FinalBackupTags { get; set; }
+
     /// <summary>S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, s3://example-bucket/optional-prefix/. Only supported on PERSISTENT_1 deployment types.</summary>
     [JsonPropertyName("importPath")]
     public string? ImportPath { get; set; }
@@ -310,6 +314,10 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     /// <summary>A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
+
+    /// <summary>When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.</summary>
+    [JsonPropertyName("skipFinalBackup")]
+    public bool? SkipFinalBackup { get; set; }
 
     /// <summary>The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.</summary>
     [JsonPropertyName("storageCapacity")]
@@ -591,6 +599,10 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     [JsonPropertyName("fileSystemTypeVersion")]
     public string? FileSystemTypeVersion { get; set; }
 
+    /// <summary>A map of tags to apply to the file system's final backup.</summary>
+    [JsonPropertyName("finalBackupTags")]
+    public IDictionary<string, string>? FinalBackupTags { get; set; }
+
     /// <summary>S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, s3://example-bucket/optional-prefix/. Only supported on PERSISTENT_1 deployment types.</summary>
     [JsonPropertyName("importPath")]
     public string? ImportPath { get; set; }
@@ -638,6 +650,10 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     /// <summary>A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
+
+    /// <summary>When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.</summary>
+    [JsonPropertyName("skipFinalBackup")]
+    public bool? SkipFinalBackup { get; set; }
 
     /// <summary>The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.</summary>
     [JsonPropertyName("storageCapacity")]
@@ -891,6 +907,10 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     [JsonPropertyName("fileSystemTypeVersion")]
     public string? FileSystemTypeVersion { get; set; }
 
+    /// <summary>A map of tags to apply to the file system's final backup.</summary>
+    [JsonPropertyName("finalBackupTags")]
+    public IDictionary<string, string>? FinalBackupTags { get; set; }
+
     /// <summary>Identifier of the file system, e.g., fs-12345678</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -938,6 +958,10 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     /// <summary>A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
+
+    /// <summary>When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.</summary>
+    [JsonPropertyName("skipFinalBackup")]
+    public bool? SkipFinalBackup { get; set; }
 
     /// <summary>The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.</summary>
     [JsonPropertyName("storageCapacity")]

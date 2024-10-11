@@ -951,7 +951,7 @@ spec:
                     description: The name of the app.
                     type: string
                   appType:
-                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.
+                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.
                     type: string
                   domainId:
                     description: The domain ID.
@@ -1191,7 +1191,7 @@ spec:
                     description: The name of the app.
                     type: string
                   appType:
-                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.
+                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.
                     type: string
                   domainId:
                     description: The domain ID.
@@ -1622,7 +1622,7 @@ spec:
                     description: The name of the app.
                     type: string
                   appType:
-                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.
+                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.
                     type: string
                   arn:
                     description: The Amazon Resource Name (ARN) of the app.

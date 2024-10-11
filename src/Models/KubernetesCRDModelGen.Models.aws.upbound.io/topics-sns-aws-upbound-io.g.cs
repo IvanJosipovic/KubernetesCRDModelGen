@@ -616,7 +616,7 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is false).</summary>
+    /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic. FIFO topics can't deliver messages to customer managed endpoints, such as email addresses, mobile apps, SMS, or HTTP(S) endpoints. These endpoint types aren't guaranteed to preserve strict message ordering. Default is false.</summary>
     [JsonPropertyName("fifoTopic")]
     public bool? FifoTopic { get; set; }
 
@@ -1365,7 +1365,7 @@ public partial class V1beta1TopicSpecInitProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is false).</summary>
+    /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic. FIFO topics can't deliver messages to customer managed endpoints, such as email addresses, mobile apps, SMS, or HTTP(S) endpoints. These endpoint types aren't guaranteed to preserve strict message ordering. Default is false.</summary>
     [JsonPropertyName("fifoTopic")]
     public bool? FifoTopic { get; set; }
 
@@ -1674,7 +1674,7 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is false).</summary>
+    /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic. FIFO topics can't deliver messages to customer managed endpoints, such as email addresses, mobile apps, SMS, or HTTP(S) endpoints. These endpoint types aren't guaranteed to preserve strict message ordering. Default is false.</summary>
     [JsonPropertyName("fifoTopic")]
     public bool? FifoTopic { get; set; }
 

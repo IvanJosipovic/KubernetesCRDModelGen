@@ -138,6 +138,15 @@ public partial class V1beta1ClusterSpecForProviderRoleArnSelector
     public V1beta1ClusterSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderUpgradePolicy
+{
+    /// <summary>Support type to use for the cluster. If the cluster is set to EXTENDED, it will enter extended support at the end of standard support. If the cluster is set to STANDARD, it will be automatically upgraded at the end of standard support. Valid values are EXTENDED, STANDARD</summary>
+    [JsonPropertyName("supportType")]
+    public string? SupportType { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdRefsPolicy
@@ -343,6 +352,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Configuration block for the support policy to use for the cluster.  See upgrade_policy for details.</summary>
+    [JsonPropertyName("upgradePolicy")]
+    public IList<V1beta1ClusterSpecForProviderUpgradePolicy>? UpgradePolicy { get; set; }
+
     /// <summary>–  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
@@ -480,6 +493,15 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnSelector
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderUpgradePolicy
+{
+    /// <summary>Support type to use for the cluster. If the cluster is set to EXTENDED, it will enter extended support at the end of standard support. If the cluster is set to STANDARD, it will be automatically upgraded at the end of standard support. Valid values are EXTENDED, STANDARD</summary>
+    [JsonPropertyName("supportType")]
+    public string? SupportType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -682,6 +704,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Configuration block for the support policy to use for the cluster.  See upgrade_policy for details.</summary>
+    [JsonPropertyName("upgradePolicy")]
+    public IList<V1beta1ClusterSpecInitProviderUpgradePolicy>? UpgradePolicy { get; set; }
 
     /// <summary>–  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
     [JsonPropertyName("version")]
@@ -931,6 +957,15 @@ public partial class V1beta1ClusterStatusAtProviderOutpostConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
+{
+    /// <summary>Support type to use for the cluster. If the cluster is set to EXTENDED, it will enter extended support at the end of standard support. If the cluster is set to STANDARD, it will be automatically upgraded at the end of standard support. Valid values are EXTENDED, STANDARD</summary>
+    [JsonPropertyName("supportType")]
+    public string? SupportType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVpcConfig
 {
     /// <summary>Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.</summary>
@@ -1041,6 +1076,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>Configuration block for the support policy to use for the cluster.  See upgrade_policy for details.</summary>
+    [JsonPropertyName("upgradePolicy")]
+    public IList<V1beta1ClusterStatusAtProviderUpgradePolicy>? UpgradePolicy { get; set; }
 
     /// <summary>–  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
     [JsonPropertyName("version")]

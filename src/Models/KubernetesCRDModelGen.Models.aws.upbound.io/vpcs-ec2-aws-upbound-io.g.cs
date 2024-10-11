@@ -120,7 +120,7 @@ public partial class V1beta1VPCSpecForProvider
     [JsonPropertyName("ipv6IpamPoolId")]
     public string? Ipv6IpamPoolId { get; set; }
 
-    /// <summary>Netmask length to request from IPAM Pool. Conflicts with ipv6_cidr_block. This can be omitted if IPAM pool as a allocation_default_netmask_length set. Valid values: 56.</summary>
+    /// <summary>Netmask length to request from IPAM Pool. Conflicts with ipv6_cidr_block. This can be omitted if IPAM pool as a allocation_default_netmask_length set. Valid values are from 44 to 60 in increments of 4.</summary>
     [JsonPropertyName("ipv6NetmaskLength")]
     public double? Ipv6NetmaskLength { get; set; }
 
@@ -245,7 +245,7 @@ public partial class V1beta1VPCSpecInitProvider
     [JsonPropertyName("ipv6IpamPoolId")]
     public string? Ipv6IpamPoolId { get; set; }
 
-    /// <summary>Netmask length to request from IPAM Pool. Conflicts with ipv6_cidr_block. This can be omitted if IPAM pool as a allocation_default_netmask_length set. Valid values: 56.</summary>
+    /// <summary>Netmask length to request from IPAM Pool. Conflicts with ipv6_cidr_block. This can be omitted if IPAM pool as a allocation_default_netmask_length set. Valid values are from 44 to 60 in increments of 4.</summary>
     [JsonPropertyName("ipv6NetmaskLength")]
     public double? Ipv6NetmaskLength { get; set; }
 
@@ -462,7 +462,7 @@ public partial class V1beta1VPCStatusAtProvider
     [JsonPropertyName("ipv6IpamPoolId")]
     public string? Ipv6IpamPoolId { get; set; }
 
-    /// <summary>Netmask length to request from IPAM Pool. Conflicts with ipv6_cidr_block. This can be omitted if IPAM pool as a allocation_default_netmask_length set. Valid values: 56.</summary>
+    /// <summary>Netmask length to request from IPAM Pool. Conflicts with ipv6_cidr_block. This can be omitted if IPAM pool as a allocation_default_netmask_length set. Valid values are from 44 to 60 in increments of 4.</summary>
     [JsonPropertyName("ipv6NetmaskLength")]
     public double? Ipv6NetmaskLength { get; set; }
 

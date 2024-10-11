@@ -382,6 +382,11 @@ spec:
                                                 prefixFormat:
                                                   description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                                   type: string
+                                                prefixHierarchy:
+                                                  description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                                  items:
+                                                    type: string
+                                                  type: array
                                                 prefixType:
                                                   description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                                   type: string
@@ -533,6 +538,11 @@ spec:
                                                 prefixFormat:
                                                   description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                                   type: string
+                                                prefixHierarchy:
+                                                  description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                                  items:
+                                                    type: string
+                                                  type: array
                                                 prefixType:
                                                   description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                                   type: string
@@ -581,6 +591,26 @@ spec:
                   kmsArn:
                     description: ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for encryption. This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
                     type: string
+                  metadataCatalogConfig:
+                    description: A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.
+                    items:
+                      properties:
+                        glueDataCatalog:
+                          items:
+                            properties:
+                              databaseName:
+                                description: The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.
+                                type: string
+                              roleArn:
+                                description: The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.
+                                type: string
+                              tablePrefix:
+                                description: A naming prefix for each Data Catalog table that Amazon AppFlow creates
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -1327,6 +1357,11 @@ spec:
                                                 prefixFormat:
                                                   description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                                   type: string
+                                                prefixHierarchy:
+                                                  description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                                  items:
+                                                    type: string
+                                                  type: array
                                                 prefixType:
                                                   description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                                   type: string
@@ -1478,6 +1513,11 @@ spec:
                                                 prefixFormat:
                                                   description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                                   type: string
+                                                prefixHierarchy:
+                                                  description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                                  items:
+                                                    type: string
+                                                  type: array
                                                 prefixType:
                                                   description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                                   type: string
@@ -1526,6 +1566,26 @@ spec:
                   kmsArn:
                     description: ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for encryption. This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
                     type: string
+                  metadataCatalogConfig:
+                    description: A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.
+                    items:
+                      properties:
+                        glueDataCatalog:
+                          items:
+                            properties:
+                              databaseName:
+                                description: The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.
+                                type: string
+                              roleArn:
+                                description: The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.
+                                type: string
+                              tablePrefix:
+                                description: A naming prefix for each Data Catalog table that Amazon AppFlow creates
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
                     items:
@@ -2384,6 +2444,11 @@ spec:
                                                 prefixFormat:
                                                   description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                                   type: string
+                                                prefixHierarchy:
+                                                  description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                                  items:
+                                                    type: string
+                                                  type: array
                                                 prefixType:
                                                   description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                                   type: string
@@ -2535,6 +2600,11 @@ spec:
                                                 prefixFormat:
                                                   description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                                   type: string
+                                                prefixHierarchy:
+                                                  description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                                  items:
+                                                    type: string
+                                                  type: array
                                                 prefixType:
                                                   description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                                   type: string
@@ -2588,6 +2658,26 @@ spec:
                   kmsArn:
                     description: ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for encryption. This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
                     type: string
+                  metadataCatalogConfig:
+                    description: A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.
+                    items:
+                      properties:
+                        glueDataCatalog:
+                          items:
+                            properties:
+                              databaseName:
+                                description: The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.
+                                type: string
+                              roleArn:
+                                description: The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.
+                                type: string
+                              tablePrefix:
+                                description: A naming prefix for each Data Catalog table that Amazon AppFlow creates
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
                     items:
@@ -3330,6 +3420,11 @@ spec:
                                         prefixFormat:
                                           description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                           type: string
+                                        prefixHierarchy:
+                                          description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                          items:
+                                            type: string
+                                          type: array
                                         prefixType:
                                           description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                           type: string
@@ -3459,6 +3554,11 @@ spec:
                                         prefixFormat:
                                           description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                           type: string
+                                        prefixHierarchy:
+                                          description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                          items:
+                                            type: string
+                                          type: array
                                         prefixType:
                                           description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                           type: string
@@ -3499,6 +3599,22 @@ spec:
                   kmsArn:
                     description: ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for encryption. This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
                     type: string
+                  metadataCatalogConfig:
+                    description: A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.
+                    properties:
+                      glueDataCatalog:
+                        properties:
+                          databaseName:
+                            description: The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.
+                            type: string
+                          roleArn:
+                            description: The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.
+                            type: string
+                          tablePrefix:
+                            description: A naming prefix for each Data Catalog table that Amazon AppFlow creates
+                            type: string
+                        type: object
+                    type: object
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -4169,6 +4285,11 @@ spec:
                                         prefixFormat:
                                           description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                           type: string
+                                        prefixHierarchy:
+                                          description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                          items:
+                                            type: string
+                                          type: array
                                         prefixType:
                                           description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                           type: string
@@ -4298,6 +4419,11 @@ spec:
                                         prefixFormat:
                                           description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                           type: string
+                                        prefixHierarchy:
+                                          description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                          items:
+                                            type: string
+                                          type: array
                                         prefixType:
                                           description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                           type: string
@@ -4338,6 +4464,22 @@ spec:
                   kmsArn:
                     description: ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for encryption. This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
                     type: string
+                  metadataCatalogConfig:
+                    description: A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.
+                    properties:
+                      glueDataCatalog:
+                        properties:
+                          databaseName:
+                            description: The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.
+                            type: string
+                          roleArn:
+                            description: The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.
+                            type: string
+                          tablePrefix:
+                            description: A naming prefix for each Data Catalog table that Amazon AppFlow creates
+                            type: string
+                        type: object
+                    type: object
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
                     properties:
@@ -5120,6 +5262,11 @@ spec:
                                         prefixFormat:
                                           description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                           type: string
+                                        prefixHierarchy:
+                                          description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                          items:
+                                            type: string
+                                          type: array
                                         prefixType:
                                           description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                           type: string
@@ -5249,6 +5396,11 @@ spec:
                                         prefixFormat:
                                           description: Determines the level of granularity that's included in the prefix. Valid values are YEAR, MONTH, DAY, HOUR, and MINUTE.
                                           type: string
+                                        prefixHierarchy:
+                                          description: Determines whether the destination file path includes either or both of the selected elements. Valid values are EXECUTION_ID and SCHEMA_VERSION
+                                          items:
+                                            type: string
+                                          type: array
                                         prefixType:
                                           description: Determines the format of the prefix, and whether it applies to the file name, file path, or both. Valid values are FILENAME, PATH, and PATH_AND_FILENAME.
                                           type: string
@@ -5294,6 +5446,22 @@ spec:
                   kmsArn:
                     description: ARN (Amazon Resource Name) of the Key Management Service (KMS) key you provide for encryption. This is required if you do not want to use the Amazon AppFlow-managed KMS key. If you don't provide anything here, Amazon AppFlow uses the Amazon AppFlow-managed KMS key.
                     type: string
+                  metadataCatalogConfig:
+                    description: A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.
+                    properties:
+                      glueDataCatalog:
+                        properties:
+                          databaseName:
+                            description: The name of an existing Glue database to store the metadata tables that Amazon AppFlow creates.
+                            type: string
+                          roleArn:
+                            description: The ARN of an IAM role that grants AppFlow the permissions it needs to create Data Catalog tables, databases, and partitions.
+                            type: string
+                          tablePrefix:
+                            description: A naming prefix for each Data Catalog table that Amazon AppFlow creates
+                            type: string
+                        type: object
+                    type: object
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
                     properties:

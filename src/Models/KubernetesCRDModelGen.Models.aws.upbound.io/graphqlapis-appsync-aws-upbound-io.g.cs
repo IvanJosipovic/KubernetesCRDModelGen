@@ -86,6 +86,23 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecForProviderEnhancedMetricsConfig
+{
+    /// <summary>How data source metrics will be emitted to CloudWatch. Valid values: FULL_REQUEST_DATA_SOURCE_METRICS, PER_DATA_SOURCE_METRICS</summary>
+    [JsonPropertyName("dataSourceLevelMetricsBehavior")]
+    public string? DataSourceLevelMetricsBehavior { get; set; }
+
+    /// <summary>How operation metrics will be emitted to CloudWatch. Valid values: ENABLED, DISABLED</summary>
+    [JsonPropertyName("operationLevelMetricsConfig")]
+    public string? OperationLevelMetricsConfig { get; set; }
+
+    /// <summary>How resolver metrics will be emitted to CloudWatch. Valid values: FULL_REQUEST_RESOLVER_METRICS, PER_RESOLVER_METRICS</summary>
+    [JsonPropertyName("resolverLevelMetricsBehavior")]
+    public string? ResolverLevelMetricsBehavior { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -180,6 +197,62 @@ public partial class V1beta1GraphQLAPISpecForProviderLogConfig
     /// <summary>Field logging level. Valid values: ALL, ERROR, NONE.</summary>
     [JsonPropertyName("fieldLogLevel")]
     public string? FieldLogLevel { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -296,9 +369,17 @@ public partial class V1beta1GraphQLAPISpecForProvider
     [JsonPropertyName("additionalAuthenticationProvider")]
     public IList<V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProvider>? AdditionalAuthenticationProvider { get; set; }
 
+    /// <summary>API type. Valid values are GRAPHQL or MERGED. A MERGED type requires merged_api_execution_role_arn to be set.</summary>
+    [JsonPropertyName("apiType")]
+    public string? ApiType { get; set; }
+
     /// <summary>Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA</summary>
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
+
+    /// <summary>Enables and controls the enhanced metrics feature. See enhanced_metrics_config Block for details.</summary>
+    [JsonPropertyName("enhancedMetricsConfig")]
+    public IList<V1beta1GraphQLAPISpecForProviderEnhancedMetricsConfig>? EnhancedMetricsConfig { get; set; }
 
     /// <summary>Sets the value of the GraphQL API to enable (ENABLED) or disable (DISABLED) introspection. If no value is provided, the introspection configuration will be set to ENABLED by default. This field will produce an error if the operation attempts to use the introspection feature while this field is disabled. For more information about introspection, see GraphQL introspection.</summary>
     [JsonPropertyName("introspectionConfig")]
@@ -311,6 +392,18 @@ public partial class V1beta1GraphQLAPISpecForProvider
     /// <summary>Nested argument containing logging configuration. Defined below.</summary>
     [JsonPropertyName("logConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderLogConfig>? LogConfig { get; set; }
+
+    /// <summary>ARN of the execution role when api_type is set to MERGED.</summary>
+    [JsonPropertyName("mergedApiExecutionRoleArn")]
+    public string? MergedApiExecutionRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+    [JsonPropertyName("mergedApiExecutionRoleArnRef")]
+    public V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnRef? MergedApiExecutionRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+    [JsonPropertyName("mergedApiExecutionRoleArnSelector")]
+    public V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelector? MergedApiExecutionRoleArnSelector { get; set; }
 
     /// <summary>User-supplied name for the GraphqlApi.</summary>
     [JsonPropertyName("name")]
@@ -431,6 +524,23 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecInitProviderEnhancedMetricsConfig
+{
+    /// <summary>How data source metrics will be emitted to CloudWatch. Valid values: FULL_REQUEST_DATA_SOURCE_METRICS, PER_DATA_SOURCE_METRICS</summary>
+    [JsonPropertyName("dataSourceLevelMetricsBehavior")]
+    public string? DataSourceLevelMetricsBehavior { get; set; }
+
+    /// <summary>How operation metrics will be emitted to CloudWatch. Valid values: ENABLED, DISABLED</summary>
+    [JsonPropertyName("operationLevelMetricsConfig")]
+    public string? OperationLevelMetricsConfig { get; set; }
+
+    /// <summary>How resolver metrics will be emitted to CloudWatch. Valid values: FULL_REQUEST_RESOLVER_METRICS, PER_RESOLVER_METRICS</summary>
+    [JsonPropertyName("resolverLevelMetricsBehavior")]
+    public string? ResolverLevelMetricsBehavior { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -525,6 +635,62 @@ public partial class V1beta1GraphQLAPISpecInitProviderLogConfig
     /// <summary>Field logging level. Valid values: ALL, ERROR, NONE.</summary>
     [JsonPropertyName("fieldLogLevel")]
     public string? FieldLogLevel { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -641,9 +807,17 @@ public partial class V1beta1GraphQLAPISpecInitProvider
     [JsonPropertyName("additionalAuthenticationProvider")]
     public IList<V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProvider>? AdditionalAuthenticationProvider { get; set; }
 
+    /// <summary>API type. Valid values are GRAPHQL or MERGED. A MERGED type requires merged_api_execution_role_arn to be set.</summary>
+    [JsonPropertyName("apiType")]
+    public string? ApiType { get; set; }
+
     /// <summary>Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA</summary>
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
+
+    /// <summary>Enables and controls the enhanced metrics feature. See enhanced_metrics_config Block for details.</summary>
+    [JsonPropertyName("enhancedMetricsConfig")]
+    public IList<V1beta1GraphQLAPISpecInitProviderEnhancedMetricsConfig>? EnhancedMetricsConfig { get; set; }
 
     /// <summary>Sets the value of the GraphQL API to enable (ENABLED) or disable (DISABLED) introspection. If no value is provided, the introspection configuration will be set to ENABLED by default. This field will produce an error if the operation attempts to use the introspection feature while this field is disabled. For more information about introspection, see GraphQL introspection.</summary>
     [JsonPropertyName("introspectionConfig")]
@@ -656,6 +830,18 @@ public partial class V1beta1GraphQLAPISpecInitProvider
     /// <summary>Nested argument containing logging configuration. Defined below.</summary>
     [JsonPropertyName("logConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderLogConfig>? LogConfig { get; set; }
+
+    /// <summary>ARN of the execution role when api_type is set to MERGED.</summary>
+    [JsonPropertyName("mergedApiExecutionRoleArn")]
+    public string? MergedApiExecutionRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+    [JsonPropertyName("mergedApiExecutionRoleArnRef")]
+    public V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnRef? MergedApiExecutionRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate mergedApiExecutionRoleArn.</summary>
+    [JsonPropertyName("mergedApiExecutionRoleArnSelector")]
+    public V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelector? MergedApiExecutionRoleArnSelector { get; set; }
 
     /// <summary>User-supplied name for the GraphqlApi.</summary>
     [JsonPropertyName("name")]
@@ -904,6 +1090,23 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1GraphQLAPIStatusAtProviderEnhancedMetricsConfig
+{
+    /// <summary>How data source metrics will be emitted to CloudWatch. Valid values: FULL_REQUEST_DATA_SOURCE_METRICS, PER_DATA_SOURCE_METRICS</summary>
+    [JsonPropertyName("dataSourceLevelMetricsBehavior")]
+    public string? DataSourceLevelMetricsBehavior { get; set; }
+
+    /// <summary>How operation metrics will be emitted to CloudWatch. Valid values: ENABLED, DISABLED</summary>
+    [JsonPropertyName("operationLevelMetricsConfig")]
+    public string? OperationLevelMetricsConfig { get; set; }
+
+    /// <summary>How resolver metrics will be emitted to CloudWatch. Valid values: FULL_REQUEST_RESOLVER_METRICS, PER_RESOLVER_METRICS</summary>
+    [JsonPropertyName("resolverLevelMetricsBehavior")]
+    public string? ResolverLevelMetricsBehavior { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProviderLambdaAuthorizerConfig
 {
     /// <summary>Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.</summary>
@@ -986,6 +1189,10 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     [JsonPropertyName("additionalAuthenticationProvider")]
     public IList<V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProvider>? AdditionalAuthenticationProvider { get; set; }
 
+    /// <summary>API type. Valid values are GRAPHQL or MERGED. A MERGED type requires merged_api_execution_role_arn to be set.</summary>
+    [JsonPropertyName("apiType")]
+    public string? ApiType { get; set; }
+
     /// <summary>ARN</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
@@ -993,6 +1200,10 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     /// <summary>Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA</summary>
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
+
+    /// <summary>Enables and controls the enhanced metrics feature. See enhanced_metrics_config Block for details.</summary>
+    [JsonPropertyName("enhancedMetricsConfig")]
+    public IList<V1beta1GraphQLAPIStatusAtProviderEnhancedMetricsConfig>? EnhancedMetricsConfig { get; set; }
 
     /// <summary>API ID</summary>
     [JsonPropertyName("id")]
@@ -1009,6 +1220,10 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     /// <summary>Nested argument containing logging configuration. Defined below.</summary>
     [JsonPropertyName("logConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderLogConfig>? LogConfig { get; set; }
+
+    /// <summary>ARN of the execution role when api_type is set to MERGED.</summary>
+    [JsonPropertyName("mergedApiExecutionRoleArn")]
+    public string? MergedApiExecutionRoleArn { get; set; }
 
     /// <summary>User-supplied name for the GraphqlApi.</summary>
     [JsonPropertyName("name")]

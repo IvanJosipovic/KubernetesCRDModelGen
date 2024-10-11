@@ -198,7 +198,7 @@ public partial class V1beta1EnvironmentSpecForProviderLoggingConfigurationWorker
     public string? LogLevel { get; set; }
 }
 
-/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
+/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderLoggingConfiguration
 {
@@ -335,7 +335,7 @@ public partial class V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnet
     public V1beta1EnvironmentSpecForProviderNetworkConfigurationSubnetIdsSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
+/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderNetworkConfiguration
 {
@@ -468,11 +468,11 @@ public partial class V1beta1EnvironmentSpecForProvider
     [JsonPropertyName("kmsKeySelector")]
     public V1beta1EnvironmentSpecForProviderKmsKeySelector? KmsKeySelector { get; set; }
 
-    /// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
+    /// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.</summary>
     [JsonPropertyName("loggingConfiguration")]
     public V1beta1EnvironmentSpecForProviderLoggingConfiguration? LoggingConfiguration { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The maximum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.</summary>
     [JsonPropertyName("maxWebservers")]
     public double? MaxWebservers { get; set; }
 
@@ -480,7 +480,7 @@ public partial class V1beta1EnvironmentSpecForProvider
     [JsonPropertyName("maxWorkers")]
     public double? MaxWorkers { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The minimum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.</summary>
     [JsonPropertyName("minWebservers")]
     public double? MinWebservers { get; set; }
 
@@ -488,7 +488,7 @@ public partial class V1beta1EnvironmentSpecForProvider
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 
-    /// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
+    /// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.</summary>
     [JsonPropertyName("networkConfiguration")]
     public V1beta1EnvironmentSpecForProviderNetworkConfiguration? NetworkConfiguration { get; set; }
 
@@ -726,7 +726,7 @@ public partial class V1beta1EnvironmentSpecInitProviderLoggingConfigurationWorke
     public string? LogLevel { get; set; }
 }
 
-/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
+/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderLoggingConfiguration
 {
@@ -863,7 +863,7 @@ public partial class V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubne
     public V1beta1EnvironmentSpecInitProviderNetworkConfigurationSubnetIdsSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
+/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderNetworkConfiguration
 {
@@ -996,11 +996,11 @@ public partial class V1beta1EnvironmentSpecInitProvider
     [JsonPropertyName("kmsKeySelector")]
     public V1beta1EnvironmentSpecInitProviderKmsKeySelector? KmsKeySelector { get; set; }
 
-    /// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
+    /// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.</summary>
     [JsonPropertyName("loggingConfiguration")]
     public V1beta1EnvironmentSpecInitProviderLoggingConfiguration? LoggingConfiguration { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The maximum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.</summary>
     [JsonPropertyName("maxWebservers")]
     public double? MaxWebservers { get; set; }
 
@@ -1008,7 +1008,7 @@ public partial class V1beta1EnvironmentSpecInitProvider
     [JsonPropertyName("maxWorkers")]
     public double? MaxWorkers { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The minimum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.</summary>
     [JsonPropertyName("minWebservers")]
     public double? MinWebservers { get; set; }
 
@@ -1016,7 +1016,7 @@ public partial class V1beta1EnvironmentSpecInitProvider
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 
-    /// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
+    /// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.</summary>
     [JsonPropertyName("networkConfiguration")]
     public V1beta1EnvironmentSpecInitProviderNetworkConfiguration? NetworkConfiguration { get; set; }
 
@@ -1320,7 +1320,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfigurationWorke
     public string? LogLevel { get; set; }
 }
 
-/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
+/// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderLoggingConfiguration
 {
@@ -1345,7 +1345,7 @@ public partial class V1beta1EnvironmentStatusAtProviderLoggingConfiguration
     public V1beta1EnvironmentStatusAtProviderLoggingConfigurationWorkerLogs? WorkerLogs { get; set; }
 }
 
-/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
+/// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderNetworkConfiguration
 {
@@ -1406,11 +1406,11 @@ public partial class V1beta1EnvironmentStatusAtProvider
     [JsonPropertyName("lastUpdated")]
     public IList<V1beta1EnvironmentStatusAtProviderLastUpdated>? LastUpdated { get; set; }
 
-    /// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs.</summary>
+    /// <summary>The Apache Airflow logs you want to send to Amazon CloudWatch Logs. See logging_configuration Block for details.</summary>
     [JsonPropertyName("loggingConfiguration")]
     public V1beta1EnvironmentStatusAtProviderLoggingConfiguration? LoggingConfiguration { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The maximum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.</summary>
     [JsonPropertyName("maxWebservers")]
     public double? MaxWebservers { get; set; }
 
@@ -1418,7 +1418,7 @@ public partial class V1beta1EnvironmentStatusAtProvider
     [JsonPropertyName("maxWorkers")]
     public double? MaxWorkers { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The minimum number of web servers that you want to run in your environment. Value need to be between 2 and 5. Will be 2 by default.</summary>
     [JsonPropertyName("minWebservers")]
     public double? MinWebservers { get; set; }
 
@@ -1426,7 +1426,7 @@ public partial class V1beta1EnvironmentStatusAtProvider
     [JsonPropertyName("minWorkers")]
     public double? MinWorkers { get; set; }
 
-    /// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.</summary>
+    /// <summary>Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See network_configuration Block for details.</summary>
     [JsonPropertyName("networkConfiguration")]
     public V1beta1EnvironmentStatusAtProviderNetworkConfiguration? NetworkConfiguration { get; set; }
 

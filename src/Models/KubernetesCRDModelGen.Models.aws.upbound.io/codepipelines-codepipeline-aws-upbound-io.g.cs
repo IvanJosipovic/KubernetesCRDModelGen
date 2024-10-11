@@ -210,6 +210,10 @@ public partial class V1beta1CodepipelineSpecForProviderStageAction
     [JsonPropertyName("runOrder")]
     public double? RunOrder { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("timeoutInMinutes")]
+    public double? TimeoutInMinutes { get; set; }
+
     /// <summary>A string that identifies the action type.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
@@ -616,6 +620,10 @@ public partial class V1beta1CodepipelineSpecInitProviderStageAction
     /// <summary>The order in which actions are run.</summary>
     [JsonPropertyName("runOrder")]
     public double? RunOrder { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("timeoutInMinutes")]
+    public double? TimeoutInMinutes { get; set; }
 
     /// <summary>A string that identifies the action type.</summary>
     [JsonPropertyName("version")]
@@ -1039,6 +1047,10 @@ public partial class V1beta1CodepipelineStatusAtProviderStageAction
     /// <summary>The order in which actions are run.</summary>
     [JsonPropertyName("runOrder")]
     public double? RunOrder { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("timeoutInMinutes")]
+    public double? TimeoutInMinutes { get; set; }
 
     /// <summary>A string that identifies the action type.</summary>
     [JsonPropertyName("version")]

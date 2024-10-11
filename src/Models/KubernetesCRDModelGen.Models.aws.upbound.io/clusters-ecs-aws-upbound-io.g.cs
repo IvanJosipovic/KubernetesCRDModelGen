@@ -52,11 +52,28 @@ public partial class V1beta1ClusterSpecForProviderConfigurationExecuteCommandCon
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderConfigurationManagedStorageConfiguration
+{
+    /// <summary>AWS Key Management Service key ID for the Fargate ephemeral storage.</summary>
+    [JsonPropertyName("fargateEphemeralStorageKmsKeyId")]
+    public string? FargateEphemeralStorageKmsKeyId { get; set; }
+
+    /// <summary>AWS Key Management Service key ID to encrypt the managed storage.</summary>
+    [JsonPropertyName("kmsKeyId")]
+    public string? KmsKeyId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfiguration
 {
     /// <summary>The details of the execute command configuration. Detailed below.</summary>
     [JsonPropertyName("executeCommandConfiguration")]
     public IList<V1beta1ClusterSpecForProviderConfigurationExecuteCommandConfiguration>? ExecuteCommandConfiguration { get; set; }
+
+    /// <summary>Details of the managed storage configuration. See managed_storage_configuration Block for details.</summary>
+    [JsonPropertyName("managedStorageConfiguration")]
+    public IList<V1beta1ClusterSpecForProviderConfigurationManagedStorageConfiguration>? ManagedStorageConfiguration { get; set; }
 }
 
 /// <summary></summary>
@@ -150,11 +167,28 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationExecuteCommandCo
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderConfigurationManagedStorageConfiguration
+{
+    /// <summary>AWS Key Management Service key ID for the Fargate ephemeral storage.</summary>
+    [JsonPropertyName("fargateEphemeralStorageKmsKeyId")]
+    public string? FargateEphemeralStorageKmsKeyId { get; set; }
+
+    /// <summary>AWS Key Management Service key ID to encrypt the managed storage.</summary>
+    [JsonPropertyName("kmsKeyId")]
+    public string? KmsKeyId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfiguration
 {
     /// <summary>The details of the execute command configuration. Detailed below.</summary>
     [JsonPropertyName("executeCommandConfiguration")]
     public IList<V1beta1ClusterSpecInitProviderConfigurationExecuteCommandConfiguration>? ExecuteCommandConfiguration { get; set; }
+
+    /// <summary>Details of the managed storage configuration. See managed_storage_configuration Block for details.</summary>
+    [JsonPropertyName("managedStorageConfiguration")]
+    public IList<V1beta1ClusterSpecInitProviderConfigurationManagedStorageConfiguration>? ManagedStorageConfiguration { get; set; }
 }
 
 /// <summary></summary>
@@ -376,11 +410,28 @@ public partial class V1beta1ClusterStatusAtProviderConfigurationExecuteCommandCo
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderConfigurationManagedStorageConfiguration
+{
+    /// <summary>AWS Key Management Service key ID for the Fargate ephemeral storage.</summary>
+    [JsonPropertyName("fargateEphemeralStorageKmsKeyId")]
+    public string? FargateEphemeralStorageKmsKeyId { get; set; }
+
+    /// <summary>AWS Key Management Service key ID to encrypt the managed storage.</summary>
+    [JsonPropertyName("kmsKeyId")]
+    public string? KmsKeyId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderConfiguration
 {
     /// <summary>The details of the execute command configuration. Detailed below.</summary>
     [JsonPropertyName("executeCommandConfiguration")]
     public IList<V1beta1ClusterStatusAtProviderConfigurationExecuteCommandConfiguration>? ExecuteCommandConfiguration { get; set; }
+
+    /// <summary>Details of the managed storage configuration. See managed_storage_configuration Block for details.</summary>
+    [JsonPropertyName("managedStorageConfiguration")]
+    public IList<V1beta1ClusterStatusAtProviderConfigurationManagedStorageConfiguration>? ManagedStorageConfiguration { get; set; }
 }
 
 /// <summary></summary>

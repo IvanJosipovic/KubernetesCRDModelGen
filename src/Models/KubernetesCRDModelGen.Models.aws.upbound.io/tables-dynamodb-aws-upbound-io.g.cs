@@ -251,6 +251,10 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("restoreSourceName")]
     public string? RestoreSourceName { get; set; }
 
+    /// <summary>ARN of the source table to restore. Must be supplied for cross-region restores.</summary>
+    [JsonPropertyName("restoreSourceTableArn")]
+    public string? RestoreSourceTableArn { get; set; }
+
     /// <summary>If set, restores table to the most recent point-in-time recovery point.</summary>
     [JsonPropertyName("restoreToLatestTime")]
     public bool? RestoreToLatestTime { get; set; }
@@ -522,6 +526,10 @@ public partial class V1beta1TableSpecInitProvider
     /// <summary>Name of the table to restore. Must match the name of an existing table.</summary>
     [JsonPropertyName("restoreSourceName")]
     public string? RestoreSourceName { get; set; }
+
+    /// <summary>ARN of the source table to restore. Must be supplied for cross-region restores.</summary>
+    [JsonPropertyName("restoreSourceTableArn")]
+    public string? RestoreSourceTableArn { get; set; }
 
     /// <summary>If set, restores table to the most recent point-in-time recovery point.</summary>
     [JsonPropertyName("restoreToLatestTime")]
@@ -946,6 +954,10 @@ public partial class V1beta1TableStatusAtProvider
     /// <summary>Name of the table to restore. Must match the name of an existing table.</summary>
     [JsonPropertyName("restoreSourceName")]
     public string? RestoreSourceName { get; set; }
+
+    /// <summary>ARN of the source table to restore. Must be supplied for cross-region restores.</summary>
+    [JsonPropertyName("restoreSourceTableArn")]
+    public string? RestoreSourceTableArn { get; set; }
 
     /// <summary>If set, restores table to the most recent point-in-time recovery point.</summary>
     [JsonPropertyName("restoreToLatestTime")]

@@ -65,6 +65,19 @@ public partial class V1beta1ExperimentTemplateSpecForProviderAction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentOptions
+{
+    /// <summary>Specifies the account targeting setting for experiment options. Supports single-account and multi-account.</summary>
+    [JsonPropertyName("accountTargeting")]
+    public string? AccountTargeting { get; set; }
+
+    /// <summary>Specifies the empty target resolution mode for experiment options. Supports fail and skip.</summary>
+    [JsonPropertyName("emptyTargetResolutionMode")]
+    public string? EmptyTargetResolutionMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationCloudwatchLogsConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.</summary>
@@ -242,6 +255,10 @@ public partial class V1beta1ExperimentTemplateSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>The experiment options for the experiment template. See experiment_options below for more details!</summary>
+    [JsonPropertyName("experimentOptions")]
+    public IList<V1beta1ExperimentTemplateSpecForProviderExperimentOptions>? ExperimentOptions { get; set; }
+
     /// <summary>The configuration for experiment logging. See below.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ExperimentTemplateSpecForProviderLogConfiguration>? LogConfiguration { get; set; }
@@ -328,6 +345,19 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderAction
     /// <summary>Action's target, if applicable. See below.</summary>
     [JsonPropertyName("target")]
     public IList<V1beta1ExperimentTemplateSpecInitProviderActionTarget>? Target { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentOptions
+{
+    /// <summary>Specifies the account targeting setting for experiment options. Supports single-account and multi-account.</summary>
+    [JsonPropertyName("accountTargeting")]
+    public string? AccountTargeting { get; set; }
+
+    /// <summary>Specifies the empty target resolution mode for experiment options. Supports fail and skip.</summary>
+    [JsonPropertyName("emptyTargetResolutionMode")]
+    public string? EmptyTargetResolutionMode { get; set; }
 }
 
 /// <summary></summary>
@@ -508,6 +538,10 @@ public partial class V1beta1ExperimentTemplateSpecInitProvider
     /// <summary>Description for the experiment template.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>The experiment options for the experiment template. See experiment_options below for more details!</summary>
+    [JsonPropertyName("experimentOptions")]
+    public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentOptions>? ExperimentOptions { get; set; }
 
     /// <summary>The configuration for experiment logging. See below.</summary>
     [JsonPropertyName("logConfiguration")]
@@ -727,6 +761,19 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderAction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentOptions
+{
+    /// <summary>Specifies the account targeting setting for experiment options. Supports single-account and multi-account.</summary>
+    [JsonPropertyName("accountTargeting")]
+    public string? AccountTargeting { get; set; }
+
+    /// <summary>Specifies the empty target resolution mode for experiment options. Supports fail and skip.</summary>
+    [JsonPropertyName("emptyTargetResolutionMode")]
+    public string? EmptyTargetResolutionMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationCloudwatchLogsConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.</summary>
@@ -847,6 +894,10 @@ public partial class V1beta1ExperimentTemplateStatusAtProvider
     /// <summary>Description for the experiment template.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>The experiment options for the experiment template. See experiment_options below for more details!</summary>
+    [JsonPropertyName("experimentOptions")]
+    public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentOptions>? ExperimentOptions { get; set; }
 
     /// <summary>Experiment Template ID.</summary>
     [JsonPropertyName("id")]

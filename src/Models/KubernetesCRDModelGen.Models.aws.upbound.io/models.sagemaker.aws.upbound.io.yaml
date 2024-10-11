@@ -121,6 +121,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -135,6 +138,15 @@ spec:
                                     compressionType:
                                       description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                       type: string
+                                    modelAccessConfig:
+                                      description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                      items:
+                                        properties:
+                                          acceptEula:
+                                            description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                            type: boolean
+                                        type: object
+                                      type: array
                                     s3DataType:
                                       description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                       type: string
@@ -151,6 +163,15 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          items:
+                            properties:
+                              modelCacheSetting:
+                                description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   enableNetworkIsolation:
@@ -291,6 +312,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -305,6 +329,15 @@ spec:
                                     compressionType:
                                       description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                       type: string
+                                    modelAccessConfig:
+                                      description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                      items:
+                                        properties:
+                                          acceptEula:
+                                            description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                            type: boolean
+                                        type: object
+                                      type: array
                                     s3DataType:
                                       description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                       type: string
@@ -321,6 +354,15 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          items:
+                            properties:
+                              modelCacheSetting:
+                                description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   region:
@@ -410,6 +452,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -424,6 +469,15 @@ spec:
                                     compressionType:
                                       description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                       type: string
+                                    modelAccessConfig:
+                                      description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                      items:
+                                        properties:
+                                          acceptEula:
+                                            description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                            type: boolean
+                                        type: object
+                                      type: array
                                     s3DataType:
                                       description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                       type: string
@@ -440,6 +494,15 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          items:
+                            properties:
+                              modelCacheSetting:
+                                description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   enableNetworkIsolation:
@@ -580,6 +643,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -594,6 +660,15 @@ spec:
                                     compressionType:
                                       description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                       type: string
+                                    modelAccessConfig:
+                                      description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                      items:
+                                        properties:
+                                          acceptEula:
+                                            description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                            type: boolean
+                                        type: object
+                                      type: array
                                     s3DataType:
                                       description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                       type: string
@@ -610,6 +685,15 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          items:
+                            properties:
+                              modelCacheSetting:
+                                description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   tags:
@@ -888,6 +972,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -902,6 +989,15 @@ spec:
                                     compressionType:
                                       description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                       type: string
+                                    modelAccessConfig:
+                                      description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                      items:
+                                        properties:
+                                          acceptEula:
+                                            description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                            type: boolean
+                                        type: object
+                                      type: array
                                     s3DataType:
                                       description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                       type: string
@@ -918,6 +1014,15 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          items:
+                            properties:
+                              modelCacheSetting:
+                                description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   enableNetworkIsolation:
@@ -974,6 +1079,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -988,6 +1096,15 @@ spec:
                                     compressionType:
                                       description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                       type: string
+                                    modelAccessConfig:
+                                      description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                      items:
+                                        properties:
+                                          acceptEula:
+                                            description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                            type: boolean
+                                        type: object
+                                      type: array
                                     s3DataType:
                                       description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                       type: string
@@ -1004,6 +1121,15 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          items:
+                            properties:
+                              modelCacheSetting:
+                                description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   tags:
@@ -1201,6 +1327,9 @@ spec:
                                   type: string
                               type: object
                           type: object
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -1214,6 +1343,13 @@ spec:
                                   compressionType:
                                     description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                     type: string
+                                  modelAccessConfig:
+                                    description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                    properties:
+                                      acceptEula:
+                                        description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                        type: boolean
+                                    type: object
                                   s3DataType:
                                     description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                     type: string
@@ -1229,6 +1365,13 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          properties:
+                            modelCacheSetting:
+                              description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                              type: string
+                          type: object
                       type: object
                     type: array
                   enableNetworkIsolation:
@@ -1362,6 +1505,9 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      inferenceSpecificationName:
+                        description: The inference specification name in the model package version.
+                        type: string
                       mode:
                         description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                         type: string
@@ -1375,6 +1521,13 @@ spec:
                                 compressionType:
                                   description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                   type: string
+                                modelAccessConfig:
+                                  description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                  properties:
+                                    acceptEula:
+                                      description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                      type: boolean
+                                  type: object
                                 s3DataType:
                                   description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                   type: string
@@ -1390,6 +1543,13 @@ spec:
                       modelPackageName:
                         description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                         type: string
+                      multiModelConfig:
+                        description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                        properties:
+                          modelCacheSetting:
+                            description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                            type: string
+                        type: object
                     type: object
                   region:
                     description: Region is the region you'd like your resource to be created in.
@@ -1472,6 +1632,9 @@ spec:
                                   type: string
                               type: object
                           type: object
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -1485,6 +1648,13 @@ spec:
                                   compressionType:
                                     description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                     type: string
+                                  modelAccessConfig:
+                                    description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                    properties:
+                                      acceptEula:
+                                        description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                        type: boolean
+                                    type: object
                                   s3DataType:
                                     description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                     type: string
@@ -1500,6 +1670,13 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          properties:
+                            modelCacheSetting:
+                              description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                              type: string
+                          type: object
                       type: object
                     type: array
                   enableNetworkIsolation:
@@ -1633,6 +1810,9 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      inferenceSpecificationName:
+                        description: The inference specification name in the model package version.
+                        type: string
                       mode:
                         description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                         type: string
@@ -1646,6 +1826,13 @@ spec:
                                 compressionType:
                                   description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                   type: string
+                                modelAccessConfig:
+                                  description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                  properties:
+                                    acceptEula:
+                                      description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                      type: boolean
+                                  type: object
                                 s3DataType:
                                   description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                   type: string
@@ -1661,6 +1848,13 @@ spec:
                       modelPackageName:
                         description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                         type: string
+                      multiModelConfig:
+                        description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                        properties:
+                          modelCacheSetting:
+                            description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                            type: string
+                        type: object
                     type: object
                   tags:
                     additionalProperties:
@@ -1932,6 +2126,9 @@ spec:
                                   type: string
                               type: object
                           type: object
+                        inferenceSpecificationName:
+                          description: The inference specification name in the model package version.
+                          type: string
                         mode:
                           description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                           type: string
@@ -1945,6 +2142,13 @@ spec:
                                   compressionType:
                                     description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                     type: string
+                                  modelAccessConfig:
+                                    description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                    properties:
+                                      acceptEula:
+                                        description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                        type: boolean
+                                    type: object
                                   s3DataType:
                                     description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                     type: string
@@ -1960,6 +2164,13 @@ spec:
                         modelPackageName:
                           description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                           type: string
+                        multiModelConfig:
+                          description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                          properties:
+                            modelCacheSetting:
+                              description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                              type: string
+                          type: object
                       type: object
                     type: array
                   enableNetworkIsolation:
@@ -2009,6 +2220,9 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      inferenceSpecificationName:
+                        description: The inference specification name in the model package version.
+                        type: string
                       mode:
                         description: The container hosts value SingleModel/MultiModel. The default value is SingleModel.
                         type: string
@@ -2022,6 +2236,13 @@ spec:
                                 compressionType:
                                   description: 'How the model data is prepared. Allowed values are: None and Gzip.'
                                   type: string
+                                modelAccessConfig:
+                                  description: Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.
+                                  properties:
+                                    acceptEula:
+                                      description: Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.
+                                      type: boolean
+                                  type: object
                                 s3DataType:
                                   description: 'The type of model data to deploy. Allowed values are: S3Object and S3Prefix.'
                                   type: string
@@ -2037,6 +2258,13 @@ spec:
                       modelPackageName:
                         description: The Amazon Resource Name (ARN) of the model package to use to create the model.
                         type: string
+                      multiModelConfig:
+                        description: Specifies additional configuration for multi-model endpoints. see Multi Model Config.
+                        properties:
+                          modelCacheSetting:
+                            description: 'Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.'
+                            type: string
+                        type: object
                     type: object
                   tags:
                     additionalProperties:
