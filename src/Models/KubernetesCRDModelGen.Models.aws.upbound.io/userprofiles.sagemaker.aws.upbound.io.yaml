@@ -603,6 +603,24 @@ spec:
                         studioWebPortal:
                           description: Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.
                           type: string
+                        studioWebPortalSettings:
+                          description: The Studio Web Portal settings. See studio_web_portal_settings Block below.
+                          items:
+                            properties:
+                              hiddenAppTypes:
+                                description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              hiddenMlTools:
+                                description: The machine learning tools that are hidden from the Studio left navigation pane.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                            type: object
+                          type: array
                         tensorBoardAppSettings:
                           description: The TensorBoard app settings. See TensorBoard App Settings below.
                           items:
@@ -1173,6 +1191,24 @@ spec:
                         studioWebPortal:
                           description: Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.
                           type: string
+                        studioWebPortalSettings:
+                          description: The Studio Web Portal settings. See studio_web_portal_settings Block below.
+                          items:
+                            properties:
+                              hiddenAppTypes:
+                                description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              hiddenMlTools:
+                                description: The machine learning tools that are hidden from the Studio left navigation pane.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                            type: object
+                          type: array
                         tensorBoardAppSettings:
                           description: The TensorBoard app settings. See TensorBoard App Settings below.
                           items:
@@ -1864,6 +1900,24 @@ spec:
                         studioWebPortal:
                           description: Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.
                           type: string
+                        studioWebPortalSettings:
+                          description: The Studio Web Portal settings. See studio_web_portal_settings Block below.
+                          items:
+                            properties:
+                              hiddenAppTypes:
+                                description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              hiddenMlTools:
+                                description: The machine learning tools that are hidden from the Studio left navigation pane.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                            type: object
+                          type: array
                         tensorBoardAppSettings:
                           description: The TensorBoard app settings. See TensorBoard App Settings below.
                           items:
@@ -2503,6 +2557,22 @@ spec:
                       studioWebPortal:
                         description: Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.
                         type: string
+                      studioWebPortalSettings:
+                        description: The Studio Web Portal settings. See studio_web_portal_settings Block below.
+                        properties:
+                          hiddenAppTypes:
+                            description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
+                          hiddenMlTools:
+                            description: The machine learning tools that are hidden from the Studio left navigation pane.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
+                        type: object
                       tensorBoardAppSettings:
                         description: The TensorBoard app settings. See TensorBoard App Settings below.
                         properties:
@@ -3025,6 +3095,22 @@ spec:
                       studioWebPortal:
                         description: Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.
                         type: string
+                      studioWebPortalSettings:
+                        description: The Studio Web Portal settings. See studio_web_portal_settings Block below.
+                        properties:
+                          hiddenAppTypes:
+                            description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
+                          hiddenMlTools:
+                            description: The machine learning tools that are hidden from the Studio left navigation pane.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
+                        type: object
                       tensorBoardAppSettings:
                         description: The TensorBoard app settings. See TensorBoard App Settings below.
                         properties:
@@ -3668,6 +3754,22 @@ spec:
                       studioWebPortal:
                         description: Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.
                         type: string
+                      studioWebPortalSettings:
+                        description: The Studio Web Portal settings. See studio_web_portal_settings Block below.
+                        properties:
+                          hiddenAppTypes:
+                            description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
+                          hiddenMlTools:
+                            description: The machine learning tools that are hidden from the Studio left navigation pane.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
+                        type: object
                       tensorBoardAppSettings:
                         description: The TensorBoard app settings. See TensorBoard App Settings below.
                         properties:

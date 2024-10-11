@@ -85,11 +85,54 @@ public partial class V1beta1LBTargetGroupSpecForProviderTargetFailover
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealthDnsFailover
+{
+    /// <summary>The minimum number of targets that must be healthy. If the number of healthy targets is below this value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values are off or an integer from 1 to the maximum number of targets. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsCount")]
+    public string? MinimumHealthyTargetsCount { get; set; }
+
+    /// <summary>The minimum percentage of targets that must be healthy. If the percentage of healthy targets is below this value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values are off or an integer from 1 to 100. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsPercentage")]
+    public string? MinimumHealthyTargetsPercentage { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealthUnhealthyStateRouting
+{
+    /// <summary>The minimum number of targets that must be healthy. If the number of healthy targets is below this value, send traffic to all targets, including unhealthy targets. The possible values are 1 to the maximum number of targets. The default is 1.</summary>
+    [JsonPropertyName("minimumHealthyTargetsCount")]
+    public double? MinimumHealthyTargetsCount { get; set; }
+
+    /// <summary>The minimum percentage of targets that must be healthy. If the percentage of healthy targets is below this value, send traffic to all targets, including unhealthy targets. The possible values are off or an integer from 1 to 100. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsPercentage")]
+    public string? MinimumHealthyTargetsPercentage { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupSpecForProviderTargetGroupHealth
+{
+    /// <summary>Block to configure DNS Failover requirements. See DNS Failover below for details on attributes.</summary>
+    [JsonPropertyName("dnsFailover")]
+    public IList<V1beta1LBTargetGroupSpecForProviderTargetGroupHealthDnsFailover>? DnsFailover { get; set; }
+
+    /// <summary>Block to configure Unhealthy State Routing requirements. See Unhealthy State Routing below for details on attributes.</summary>
+    [JsonPropertyName("unhealthyStateRouting")]
+    public IList<V1beta1LBTargetGroupSpecForProviderTargetGroupHealthUnhealthyStateRouting>? UnhealthyStateRouting { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecForProviderTargetHealthState
 {
     /// <summary>Indicates whether the load balancer terminates connections to unhealthy targets. Possible values are true or false. Default: true.</summary>
     [JsonPropertyName("enableUnhealthyConnectionTermination")]
     public bool? EnableUnhealthyConnectionTermination { get; set; }
+
+    /// <summary>Indicates the time to wait for in-flight requests to complete when a target becomes unhealthy. The range is 0-360000. This value has to be set only if enable_unhealthy_connection_termination is set to false. Default: 0.</summary>
+    [JsonPropertyName("unhealthyDrainingInterval")]
+    public double? UnhealthyDrainingInterval { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -228,6 +271,10 @@ public partial class V1beta1LBTargetGroupSpecForProvider
     [JsonPropertyName("targetFailover")]
     public IList<V1beta1LBTargetGroupSpecForProviderTargetFailover>? TargetFailover { get; set; }
 
+    /// <summary>Target health requirements block. See target_group_health for more information.</summary>
+    [JsonPropertyName("targetGroupHealth")]
+    public IList<V1beta1LBTargetGroupSpecForProviderTargetGroupHealth>? TargetGroupHealth { get; set; }
+
     /// <summary>Target health state block. Only applicable for Network Load Balancer target groups when protocol is TCP or TLS. See target_health_state for more information.</summary>
     [JsonPropertyName("targetHealthState")]
     public IList<V1beta1LBTargetGroupSpecForProviderTargetHealthState>? TargetHealthState { get; set; }
@@ -326,11 +373,54 @@ public partial class V1beta1LBTargetGroupSpecInitProviderTargetFailover
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthDnsFailover
+{
+    /// <summary>The minimum number of targets that must be healthy. If the number of healthy targets is below this value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values are off or an integer from 1 to the maximum number of targets. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsCount")]
+    public string? MinimumHealthyTargetsCount { get; set; }
+
+    /// <summary>The minimum percentage of targets that must be healthy. If the percentage of healthy targets is below this value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values are off or an integer from 1 to 100. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsPercentage")]
+    public string? MinimumHealthyTargetsPercentage { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthUnhealthyStateRouting
+{
+    /// <summary>The minimum number of targets that must be healthy. If the number of healthy targets is below this value, send traffic to all targets, including unhealthy targets. The possible values are 1 to the maximum number of targets. The default is 1.</summary>
+    [JsonPropertyName("minimumHealthyTargetsCount")]
+    public double? MinimumHealthyTargetsCount { get; set; }
+
+    /// <summary>The minimum percentage of targets that must be healthy. If the percentage of healthy targets is below this value, send traffic to all targets, including unhealthy targets. The possible values are off or an integer from 1 to 100. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsPercentage")]
+    public string? MinimumHealthyTargetsPercentage { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupSpecInitProviderTargetGroupHealth
+{
+    /// <summary>Block to configure DNS Failover requirements. See DNS Failover below for details on attributes.</summary>
+    [JsonPropertyName("dnsFailover")]
+    public IList<V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthDnsFailover>? DnsFailover { get; set; }
+
+    /// <summary>Block to configure Unhealthy State Routing requirements. See Unhealthy State Routing below for details on attributes.</summary>
+    [JsonPropertyName("unhealthyStateRouting")]
+    public IList<V1beta1LBTargetGroupSpecInitProviderTargetGroupHealthUnhealthyStateRouting>? UnhealthyStateRouting { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupSpecInitProviderTargetHealthState
 {
     /// <summary>Indicates whether the load balancer terminates connections to unhealthy targets. Possible values are true or false. Default: true.</summary>
     [JsonPropertyName("enableUnhealthyConnectionTermination")]
     public bool? EnableUnhealthyConnectionTermination { get; set; }
+
+    /// <summary>Indicates the time to wait for in-flight requests to complete when a target becomes unhealthy. The range is 0-360000. This value has to be set only if enable_unhealthy_connection_termination is set to false. Default: 0.</summary>
+    [JsonPropertyName("unhealthyDrainingInterval")]
+    public double? UnhealthyDrainingInterval { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -464,6 +554,10 @@ public partial class V1beta1LBTargetGroupSpecInitProvider
     /// <summary>Target failover block. Only applicable for Gateway Load Balancer target groups. See target_failover for more information.</summary>
     [JsonPropertyName("targetFailover")]
     public IList<V1beta1LBTargetGroupSpecInitProviderTargetFailover>? TargetFailover { get; set; }
+
+    /// <summary>Target health requirements block. See target_group_health for more information.</summary>
+    [JsonPropertyName("targetGroupHealth")]
+    public IList<V1beta1LBTargetGroupSpecInitProviderTargetGroupHealth>? TargetGroupHealth { get; set; }
 
     /// <summary>Target health state block. Only applicable for Network Load Balancer target groups when protocol is TCP or TLS. See target_health_state for more information.</summary>
     [JsonPropertyName("targetHealthState")]
@@ -695,11 +789,54 @@ public partial class V1beta1LBTargetGroupStatusAtProviderTargetFailover
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthDnsFailover
+{
+    /// <summary>The minimum number of targets that must be healthy. If the number of healthy targets is below this value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values are off or an integer from 1 to the maximum number of targets. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsCount")]
+    public string? MinimumHealthyTargetsCount { get; set; }
+
+    /// <summary>The minimum percentage of targets that must be healthy. If the percentage of healthy targets is below this value, mark the zone as unhealthy in DNS, so that traffic is routed only to healthy zones. The possible values are off or an integer from 1 to 100. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsPercentage")]
+    public string? MinimumHealthyTargetsPercentage { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthUnhealthyStateRouting
+{
+    /// <summary>The minimum number of targets that must be healthy. If the number of healthy targets is below this value, send traffic to all targets, including unhealthy targets. The possible values are 1 to the maximum number of targets. The default is 1.</summary>
+    [JsonPropertyName("minimumHealthyTargetsCount")]
+    public double? MinimumHealthyTargetsCount { get; set; }
+
+    /// <summary>The minimum percentage of targets that must be healthy. If the percentage of healthy targets is below this value, send traffic to all targets, including unhealthy targets. The possible values are off or an integer from 1 to 100. The default is off.</summary>
+    [JsonPropertyName("minimumHealthyTargetsPercentage")]
+    public string? MinimumHealthyTargetsPercentage { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBTargetGroupStatusAtProviderTargetGroupHealth
+{
+    /// <summary>Block to configure DNS Failover requirements. See DNS Failover below for details on attributes.</summary>
+    [JsonPropertyName("dnsFailover")]
+    public IList<V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthDnsFailover>? DnsFailover { get; set; }
+
+    /// <summary>Block to configure Unhealthy State Routing requirements. See Unhealthy State Routing below for details on attributes.</summary>
+    [JsonPropertyName("unhealthyStateRouting")]
+    public IList<V1beta1LBTargetGroupStatusAtProviderTargetGroupHealthUnhealthyStateRouting>? UnhealthyStateRouting { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupStatusAtProviderTargetHealthState
 {
     /// <summary>Indicates whether the load balancer terminates connections to unhealthy targets. Possible values are true or false. Default: true.</summary>
     [JsonPropertyName("enableUnhealthyConnectionTermination")]
     public bool? EnableUnhealthyConnectionTermination { get; set; }
+
+    /// <summary>Indicates the time to wait for in-flight requests to complete when a target becomes unhealthy. The range is 0-360000. This value has to be set only if enable_unhealthy_connection_termination is set to false. Default: 0.</summary>
+    [JsonPropertyName("unhealthyDrainingInterval")]
+    public double? UnhealthyDrainingInterval { get; set; }
 }
 
 /// <summary></summary>
@@ -797,6 +934,10 @@ public partial class V1beta1LBTargetGroupStatusAtProvider
     /// <summary>Target failover block. Only applicable for Gateway Load Balancer target groups. See target_failover for more information.</summary>
     [JsonPropertyName("targetFailover")]
     public IList<V1beta1LBTargetGroupStatusAtProviderTargetFailover>? TargetFailover { get; set; }
+
+    /// <summary>Target health requirements block. See target_group_health for more information.</summary>
+    [JsonPropertyName("targetGroupHealth")]
+    public IList<V1beta1LBTargetGroupStatusAtProviderTargetGroupHealth>? TargetGroupHealth { get; set; }
 
     /// <summary>Target health state block. Only applicable for Network Load Balancer target groups when protocol is TCP or TLS. See target_health_state for more information.</summary>
     [JsonPropertyName("targetHealthState")]

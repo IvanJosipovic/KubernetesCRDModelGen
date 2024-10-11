@@ -10,6 +10,113 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfig
+{
+    /// <summary>The ID of your Amazon EFS file system.</summary>
+    [JsonPropertyName("fileSystemId")]
+    public string? FileSystemId { get; set; }
+
+    /// <summary>The path to the file system directory that is accessible in Amazon SageMaker Studio. Permitted users can access only this directory and below.</summary>
+    [JsonPropertyName("fileSystemPath")]
+    public string? FileSystemPath { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsCustomFileSystemConfig
+{
+    /// <summary>The default EBS storage settings for a private space. See efs_file_system_config Block below.</summary>
+    [JsonPropertyName("efsFileSystemConfig")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsCustomPosixUserConfig
+{
+    /// <summary>The POSIX group ID.</summary>
+    [JsonPropertyName("gid")]
+    public double? Gid { get; set; }
+
+    /// <summary>The POSIX user ID.</summary>
+    [JsonPropertyName("uid")]
+    public double? Uid { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettingsCodeRepository
+{
+    /// <summary>The URL of the Git repository.</summary>
+    [JsonPropertyName("repositoryUrl")]
+    public string? RepositoryUrl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettingsCustomImage
+{
+    /// <summary>The name of the App Image Config.</summary>
+    [JsonPropertyName("appImageConfigName")]
+    public string? AppImageConfigName { get; set; }
+
+    /// <summary>The name of the Custom Image.</summary>
+    [JsonPropertyName("imageName")]
+    public string? ImageName { get; set; }
+
+    /// <summary>The version number of the Custom Image.</summary>
+    [JsonPropertyName("imageVersionNumber")]
+    public double? ImageVersionNumber { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
+{
+    /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
+    [JsonPropertyName("instanceType")]
+    public string? InstanceType { get; set; }
+
+    /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.</summary>
+    [JsonPropertyName("lifecycleConfigArn")]
+    public string? LifecycleConfigArn { get; set; }
+
+    /// <summary>The ARN of the SageMaker image that the image version belongs to.</summary>
+    [JsonPropertyName("sagemakerImageArn")]
+    public string? SagemakerImageArn { get; set; }
+
+    /// <summary>The SageMaker Image Version Alias.</summary>
+    [JsonPropertyName("sagemakerImageVersionAlias")]
+    public string? SagemakerImageVersionAlias { get; set; }
+
+    /// <summary>The ARN of the image version created on the instance.</summary>
+    [JsonPropertyName("sagemakerImageVersionArn")]
+    public string? SagemakerImageVersionArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettings
+{
+    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
+    [JsonPropertyName("codeRepository")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
+
+    /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
+    [JsonPropertyName("customImage")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettingsCustomImage>? CustomImage { get; set; }
+
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
+    [JsonPropertyName("defaultResourceSpec")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
+
+    /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configurations.</summary>
+    [JsonPropertyName("lifecycleConfigArns")]
+    public IList<string>? LifecycleConfigArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -120,11 +227,45 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsKernelGatew
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettings
+{
+    /// <summary>The default size of the EBS storage volume for a private space.</summary>
+    [JsonPropertyName("defaultEbsVolumeSizeInGb")]
+    public double? DefaultEbsVolumeSizeInGb { get; set; }
+
+    /// <summary>The maximum size of the EBS storage volume for a private space.</summary>
+    [JsonPropertyName("maximumEbsVolumeSizeInGb")]
+    public double? MaximumEbsVolumeSizeInGb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultSpaceSettingsSpaceStorageSettings
+{
+    /// <summary>The default EBS storage settings for a private space. See default_ebs_storage_settings Block below.</summary>
+    [JsonPropertyName("defaultEbsStorageSettings")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecForProviderDefaultSpaceSettings
 {
+    /// <summary>The settings for assigning a custom file system to a user profile. Permitted users can access this file system in Amazon SageMaker Studio. See custom_file_system_config Block below.</summary>
+    [JsonPropertyName("customFileSystemConfig")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsCustomFileSystemConfig>? CustomFileSystemConfig { get; set; }
+
+    /// <summary>Details about the POSIX identity that is used for file system operations. See custom_posix_user_config Block below.</summary>
+    [JsonPropertyName("customPosixUserConfig")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsCustomPosixUserConfig>? CustomPosixUserConfig { get; set; }
+
     /// <summary>The execution role for the space.</summary>
     [JsonPropertyName("executionRole")]
     public string? ExecutionRole { get; set; }
+
+    /// <summary>The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.</summary>
+    [JsonPropertyName("jupyterLabAppSettings")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsJupyterLabAppSettings>? JupyterLabAppSettings { get; set; }
 
     /// <summary>The Jupyter server's app settings. See jupyter_server_app_settings Block below.</summary>
     [JsonPropertyName("jupyterServerAppSettings")]
@@ -137,6 +278,10 @@ public partial class V1beta1DomainSpecForProviderDefaultSpaceSettings
     /// <summary>The security groups for the Amazon Virtual Private Cloud that the space uses for communication.</summary>
     [JsonPropertyName("securityGroups")]
     public IList<string>? SecurityGroups { get; set; }
+
+    /// <summary>The storage settings for a private space. See space_storage_settings Block below.</summary>
+    [JsonPropertyName("spaceStorageSettings")]
+    public IList<V1beta1DomainSpecForProviderDefaultSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -824,6 +969,19 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettingsSpaceStorage
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDefaultUserSettingsStudioWebPortalSettings
+{
+    /// <summary>The Applications supported in Studio that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenAppTypes")]
+    public IList<string>? HiddenAppTypes { get; set; }
+
+    /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenMlTools")]
+    public IList<string>? HiddenMlTools { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -928,9 +1086,26 @@ public partial class V1beta1DomainSpecForProviderDefaultUserSettings
     [JsonPropertyName("studioWebPortal")]
     public string? StudioWebPortal { get; set; }
 
+    /// <summary>The Studio Web Portal settings. See studio_web_portal_settings Block below.</summary>
+    [JsonPropertyName("studioWebPortalSettings")]
+    public IList<V1beta1DomainSpecForProviderDefaultUserSettingsStudioWebPortalSettings>? StudioWebPortalSettings { get; set; }
+
     /// <summary>The TensorBoard app settings. See tensor_board_app_settings Block below.</summary>
     [JsonPropertyName("tensorBoardAppSettings")]
     public IList<V1beta1DomainSpecForProviderDefaultUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderDomainSettingsDockerSettings
+{
+    /// <summary>Indicates whether the domain can access Docker. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("enableDockerAccess")]
+    public string? EnableDockerAccess { get; set; }
+
+    /// <summary>The list of Amazon Web Services accounts that are trusted when the domain is created in VPC-only mode.</summary>
+    [JsonPropertyName("vpcOnlyTrustedAccounts")]
+    public IList<string>? VpcOnlyTrustedAccounts { get; set; }
 }
 
 /// <summary></summary>
@@ -983,6 +1158,10 @@ public partial class V1beta1DomainSpecForProviderDomainSettingsRStudioServerProD
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecForProviderDomainSettings
 {
+    /// <summary>A collection of settings that configure the domain’s Docker interaction. see docker_settings Block below.</summary>
+    [JsonPropertyName("dockerSettings")]
+    public IList<V1beta1DomainSpecForProviderDomainSettingsDockerSettings>? DockerSettings { get; set; }
+
     /// <summary>The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.</summary>
     [JsonPropertyName("executionRoleIdentityConfig")]
     public string? ExecutionRoleIdentityConfig { get; set; }
@@ -1256,6 +1435,113 @@ public partial class V1beta1DomainSpecForProvider
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfig
+{
+    /// <summary>The ID of your Amazon EFS file system.</summary>
+    [JsonPropertyName("fileSystemId")]
+    public string? FileSystemId { get; set; }
+
+    /// <summary>The path to the file system directory that is accessible in Amazon SageMaker Studio. Permitted users can access only this directory and below.</summary>
+    [JsonPropertyName("fileSystemPath")]
+    public string? FileSystemPath { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsCustomFileSystemConfig
+{
+    /// <summary>The default EBS storage settings for a private space. See efs_file_system_config Block below.</summary>
+    [JsonPropertyName("efsFileSystemConfig")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsCustomPosixUserConfig
+{
+    /// <summary>The POSIX group ID.</summary>
+    [JsonPropertyName("gid")]
+    public double? Gid { get; set; }
+
+    /// <summary>The POSIX user ID.</summary>
+    [JsonPropertyName("uid")]
+    public double? Uid { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettingsCodeRepository
+{
+    /// <summary>The URL of the Git repository.</summary>
+    [JsonPropertyName("repositoryUrl")]
+    public string? RepositoryUrl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettingsCustomImage
+{
+    /// <summary>The name of the App Image Config.</summary>
+    [JsonPropertyName("appImageConfigName")]
+    public string? AppImageConfigName { get; set; }
+
+    /// <summary>The name of the Custom Image.</summary>
+    [JsonPropertyName("imageName")]
+    public string? ImageName { get; set; }
+
+    /// <summary>The version number of the Custom Image.</summary>
+    [JsonPropertyName("imageVersionNumber")]
+    public double? ImageVersionNumber { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
+{
+    /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
+    [JsonPropertyName("instanceType")]
+    public string? InstanceType { get; set; }
+
+    /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.</summary>
+    [JsonPropertyName("lifecycleConfigArn")]
+    public string? LifecycleConfigArn { get; set; }
+
+    /// <summary>The ARN of the SageMaker image that the image version belongs to.</summary>
+    [JsonPropertyName("sagemakerImageArn")]
+    public string? SagemakerImageArn { get; set; }
+
+    /// <summary>The SageMaker Image Version Alias.</summary>
+    [JsonPropertyName("sagemakerImageVersionAlias")]
+    public string? SagemakerImageVersionAlias { get; set; }
+
+    /// <summary>The ARN of the image version created on the instance.</summary>
+    [JsonPropertyName("sagemakerImageVersionArn")]
+    public string? SagemakerImageVersionArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettings
+{
+    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
+    [JsonPropertyName("codeRepository")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
+
+    /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
+    [JsonPropertyName("customImage")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettingsCustomImage>? CustomImage { get; set; }
+
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
+    [JsonPropertyName("defaultResourceSpec")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
+
+    /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configurations.</summary>
+    [JsonPropertyName("lifecycleConfigArns")]
+    public IList<string>? LifecycleConfigArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -1366,11 +1652,45 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsKernelGate
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettings
+{
+    /// <summary>The default size of the EBS storage volume for a private space.</summary>
+    [JsonPropertyName("defaultEbsVolumeSizeInGb")]
+    public double? DefaultEbsVolumeSizeInGb { get; set; }
+
+    /// <summary>The maximum size of the EBS storage volume for a private space.</summary>
+    [JsonPropertyName("maximumEbsVolumeSizeInGb")]
+    public double? MaximumEbsVolumeSizeInGb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettingsSpaceStorageSettings
+{
+    /// <summary>The default EBS storage settings for a private space. See default_ebs_storage_settings Block below.</summary>
+    [JsonPropertyName("defaultEbsStorageSettings")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettings
 {
+    /// <summary>The settings for assigning a custom file system to a user profile. Permitted users can access this file system in Amazon SageMaker Studio. See custom_file_system_config Block below.</summary>
+    [JsonPropertyName("customFileSystemConfig")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsCustomFileSystemConfig>? CustomFileSystemConfig { get; set; }
+
+    /// <summary>Details about the POSIX identity that is used for file system operations. See custom_posix_user_config Block below.</summary>
+    [JsonPropertyName("customPosixUserConfig")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsCustomPosixUserConfig>? CustomPosixUserConfig { get; set; }
+
     /// <summary>The execution role for the space.</summary>
     [JsonPropertyName("executionRole")]
     public string? ExecutionRole { get; set; }
+
+    /// <summary>The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.</summary>
+    [JsonPropertyName("jupyterLabAppSettings")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsJupyterLabAppSettings>? JupyterLabAppSettings { get; set; }
 
     /// <summary>The Jupyter server's app settings. See jupyter_server_app_settings Block below.</summary>
     [JsonPropertyName("jupyterServerAppSettings")]
@@ -1383,6 +1703,10 @@ public partial class V1beta1DomainSpecInitProviderDefaultSpaceSettings
     /// <summary>The security groups for the Amazon Virtual Private Cloud that the space uses for communication.</summary>
     [JsonPropertyName("securityGroups")]
     public IList<string>? SecurityGroups { get; set; }
+
+    /// <summary>The storage settings for a private space. See space_storage_settings Block below.</summary>
+    [JsonPropertyName("spaceStorageSettings")]
+    public IList<V1beta1DomainSpecInitProviderDefaultSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -2070,6 +2394,19 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsSpaceStorag
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsStudioWebPortalSettings
+{
+    /// <summary>The Applications supported in Studio that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenAppTypes")]
+    public IList<string>? HiddenAppTypes { get; set; }
+
+    /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenMlTools")]
+    public IList<string>? HiddenMlTools { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -2174,9 +2511,26 @@ public partial class V1beta1DomainSpecInitProviderDefaultUserSettings
     [JsonPropertyName("studioWebPortal")]
     public string? StudioWebPortal { get; set; }
 
+    /// <summary>The Studio Web Portal settings. See studio_web_portal_settings Block below.</summary>
+    [JsonPropertyName("studioWebPortalSettings")]
+    public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsStudioWebPortalSettings>? StudioWebPortalSettings { get; set; }
+
     /// <summary>The TensorBoard app settings. See tensor_board_app_settings Block below.</summary>
     [JsonPropertyName("tensorBoardAppSettings")]
     public IList<V1beta1DomainSpecInitProviderDefaultUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderDomainSettingsDockerSettings
+{
+    /// <summary>Indicates whether the domain can access Docker. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("enableDockerAccess")]
+    public string? EnableDockerAccess { get; set; }
+
+    /// <summary>The list of Amazon Web Services accounts that are trusted when the domain is created in VPC-only mode.</summary>
+    [JsonPropertyName("vpcOnlyTrustedAccounts")]
+    public IList<string>? VpcOnlyTrustedAccounts { get; set; }
 }
 
 /// <summary></summary>
@@ -2229,6 +2583,10 @@ public partial class V1beta1DomainSpecInitProviderDomainSettingsRStudioServerPro
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecInitProviderDomainSettings
 {
+    /// <summary>A collection of settings that configure the domain’s Docker interaction. see docker_settings Block below.</summary>
+    [JsonPropertyName("dockerSettings")]
+    public IList<V1beta1DomainSpecInitProviderDomainSettingsDockerSettings>? DockerSettings { get; set; }
+
     /// <summary>The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.</summary>
     [JsonPropertyName("executionRoleIdentityConfig")]
     public string? ExecutionRoleIdentityConfig { get; set; }
@@ -2630,6 +2988,113 @@ public partial class V1beta1DomainSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfig
+{
+    /// <summary>The ID of your Amazon EFS file system.</summary>
+    [JsonPropertyName("fileSystemId")]
+    public string? FileSystemId { get; set; }
+
+    /// <summary>The path to the file system directory that is accessible in Amazon SageMaker Studio. Permitted users can access only this directory and below.</summary>
+    [JsonPropertyName("fileSystemPath")]
+    public string? FileSystemPath { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsCustomFileSystemConfig
+{
+    /// <summary>The default EBS storage settings for a private space. See efs_file_system_config Block below.</summary>
+    [JsonPropertyName("efsFileSystemConfig")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfig>? EfsFileSystemConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsCustomPosixUserConfig
+{
+    /// <summary>The POSIX group ID.</summary>
+    [JsonPropertyName("gid")]
+    public double? Gid { get; set; }
+
+    /// <summary>The POSIX user ID.</summary>
+    [JsonPropertyName("uid")]
+    public double? Uid { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettingsCodeRepository
+{
+    /// <summary>The URL of the Git repository.</summary>
+    [JsonPropertyName("repositoryUrl")]
+    public string? RepositoryUrl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettingsCustomImage
+{
+    /// <summary>The name of the App Image Config.</summary>
+    [JsonPropertyName("appImageConfigName")]
+    public string? AppImageConfigName { get; set; }
+
+    /// <summary>The name of the Custom Image.</summary>
+    [JsonPropertyName("imageName")]
+    public string? ImageName { get; set; }
+
+    /// <summary>The version number of the Custom Image.</summary>
+    [JsonPropertyName("imageVersionNumber")]
+    public double? ImageVersionNumber { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec
+{
+    /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
+    [JsonPropertyName("instanceType")]
+    public string? InstanceType { get; set; }
+
+    /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.</summary>
+    [JsonPropertyName("lifecycleConfigArn")]
+    public string? LifecycleConfigArn { get; set; }
+
+    /// <summary>The ARN of the SageMaker image that the image version belongs to.</summary>
+    [JsonPropertyName("sagemakerImageArn")]
+    public string? SagemakerImageArn { get; set; }
+
+    /// <summary>The SageMaker Image Version Alias.</summary>
+    [JsonPropertyName("sagemakerImageVersionAlias")]
+    public string? SagemakerImageVersionAlias { get; set; }
+
+    /// <summary>The ARN of the image version created on the instance.</summary>
+    [JsonPropertyName("sagemakerImageVersionArn")]
+    public string? SagemakerImageVersionArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettings
+{
+    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.</summary>
+    [JsonPropertyName("codeRepository")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
+
+    /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.</summary>
+    [JsonPropertyName("customImage")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettingsCustomImage>? CustomImage { get; set; }
+
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.</summary>
+    [JsonPropertyName("defaultResourceSpec")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
+
+    /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configurations.</summary>
+    [JsonPropertyName("lifecycleConfigArns")]
+    public IList<string>? LifecycleConfigArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterServerAppSettingsCodeRepository
 {
     /// <summary>The URL of the Git repository.</summary>
@@ -2740,11 +3205,45 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsKernelGate
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettings
+{
+    /// <summary>The default size of the EBS storage volume for a private space.</summary>
+    [JsonPropertyName("defaultEbsVolumeSizeInGb")]
+    public double? DefaultEbsVolumeSizeInGb { get; set; }
+
+    /// <summary>The maximum size of the EBS storage volume for a private space.</summary>
+    [JsonPropertyName("maximumEbsVolumeSizeInGb")]
+    public double? MaximumEbsVolumeSizeInGb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettingsSpaceStorageSettings
+{
+    /// <summary>The default EBS storage settings for a private space. See default_ebs_storage_settings Block below.</summary>
+    [JsonPropertyName("defaultEbsStorageSettings")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsSpaceStorageSettingsDefaultEbsStorageSettings>? DefaultEbsStorageSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettings
 {
+    /// <summary>The settings for assigning a custom file system to a user profile. Permitted users can access this file system in Amazon SageMaker Studio. See custom_file_system_config Block below.</summary>
+    [JsonPropertyName("customFileSystemConfig")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsCustomFileSystemConfig>? CustomFileSystemConfig { get; set; }
+
+    /// <summary>Details about the POSIX identity that is used for file system operations. See custom_posix_user_config Block below.</summary>
+    [JsonPropertyName("customPosixUserConfig")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsCustomPosixUserConfig>? CustomPosixUserConfig { get; set; }
+
     /// <summary>The execution role for the space.</summary>
     [JsonPropertyName("executionRole")]
     public string? ExecutionRole { get; set; }
+
+    /// <summary>The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.</summary>
+    [JsonPropertyName("jupyterLabAppSettings")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsJupyterLabAppSettings>? JupyterLabAppSettings { get; set; }
 
     /// <summary>The Jupyter server's app settings. See jupyter_server_app_settings Block below.</summary>
     [JsonPropertyName("jupyterServerAppSettings")]
@@ -2757,6 +3256,10 @@ public partial class V1beta1DomainStatusAtProviderDefaultSpaceSettings
     /// <summary>The security groups for the Amazon Virtual Private Cloud that the space uses for communication.</summary>
     [JsonPropertyName("securityGroups")]
     public IList<string>? SecurityGroups { get; set; }
+
+    /// <summary>The storage settings for a private space. See space_storage_settings Block below.</summary>
+    [JsonPropertyName("spaceStorageSettings")]
+    public IList<V1beta1DomainStatusAtProviderDefaultSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -3260,6 +3763,19 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsSpaceStorag
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsStudioWebPortalSettings
+{
+    /// <summary>The Applications supported in Studio that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenAppTypes")]
+    public IList<string>? HiddenAppTypes { get; set; }
+
+    /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenMlTools")]
+    public IList<string>? HiddenMlTools { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -3356,9 +3872,26 @@ public partial class V1beta1DomainStatusAtProviderDefaultUserSettings
     [JsonPropertyName("studioWebPortal")]
     public string? StudioWebPortal { get; set; }
 
+    /// <summary>The Studio Web Portal settings. See studio_web_portal_settings Block below.</summary>
+    [JsonPropertyName("studioWebPortalSettings")]
+    public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsStudioWebPortalSettings>? StudioWebPortalSettings { get; set; }
+
     /// <summary>The TensorBoard app settings. See tensor_board_app_settings Block below.</summary>
     [JsonPropertyName("tensorBoardAppSettings")]
     public IList<V1beta1DomainStatusAtProviderDefaultUserSettingsTensorBoardAppSettings>? TensorBoardAppSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderDomainSettingsDockerSettings
+{
+    /// <summary>Indicates whether the domain can access Docker. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("enableDockerAccess")]
+    public string? EnableDockerAccess { get; set; }
+
+    /// <summary>The list of Amazon Web Services accounts that are trusted when the domain is created in VPC-only mode.</summary>
+    [JsonPropertyName("vpcOnlyTrustedAccounts")]
+    public IList<string>? VpcOnlyTrustedAccounts { get; set; }
 }
 
 /// <summary></summary>
@@ -3411,6 +3944,10 @@ public partial class V1beta1DomainStatusAtProviderDomainSettingsRStudioServerPro
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainStatusAtProviderDomainSettings
 {
+    /// <summary>A collection of settings that configure the domain’s Docker interaction. see docker_settings Block below.</summary>
+    [JsonPropertyName("dockerSettings")]
+    public IList<V1beta1DomainStatusAtProviderDomainSettingsDockerSettings>? DockerSettings { get; set; }
+
     /// <summary>The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.</summary>
     [JsonPropertyName("executionRoleIdentityConfig")]
     public string? ExecutionRoleIdentityConfig { get; set; }

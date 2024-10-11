@@ -178,7 +178,7 @@ public partial class V1beta1ConfigurationProfileSpecForProvider
     [JsonPropertyName("locationUri")]
     public string? LocationUri { get; set; }
 
-    /// <summary>Name for the configuration profile. Must be between 1 and 64 characters in length.</summary>
+    /// <summary>Name for the configuration profile. Must be between 1 and 128 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -381,7 +381,7 @@ public partial class V1beta1ConfigurationProfileSpecInitProvider
     [JsonPropertyName("locationUri")]
     public string? LocationUri { get; set; }
 
-    /// <summary>Name for the configuration profile. Must be between 1 and 64 characters in length.</summary>
+    /// <summary>Name for the configuration profile. Must be between 1 and 128 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -583,7 +583,7 @@ public partial class V1beta1ConfigurationProfileStatusAtProvider
     [JsonPropertyName("locationUri")]
     public string? LocationUri { get; set; }
 
-    /// <summary>Name for the configuration profile. Must be between 1 and 64 characters in length.</summary>
+    /// <summary>Name for the configuration profile. Must be between 1 and 128 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

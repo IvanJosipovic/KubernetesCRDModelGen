@@ -600,6 +600,10 @@ public partial class V1beta2InstanceSpecForProvider
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
+    /// <summary>The life cycle type for this DB instance. This setting applies only to RDS for MySQL and RDS for PostgreSQL. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
+
     /// <summary>The engine version to use. If `autoMinorVersionUpgrade` is enabled, you can provide a prefix of the version such as 5.7 (for 5.7.10). The actual engine version used is returned in the attribute `status.atProvider.engineVersionActual`. For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html). Note that for Amazon Aurora instances the engine version must match the [DB Cluster](https://marketplace.upbound.io/providers/upbound/provider-aws/latest/resources/rds.aws.upbound.io/Cluster/v1beta1)'s engine version'.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
@@ -791,6 +795,10 @@ public partial class V1beta2InstanceSpecForProvider
     /// <summary>Time zone of the DB instance. timezone is currently only supported by Microsoft SQL Server. The timezone can only be set on creation. See MSSQL User Guide for more information.</summary>
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
+
+    /// <summary>Whether to upgrade the storage file system configuration on the read replica. Can only be set with replicate_source_db.</summary>
+    [JsonPropertyName("upgradeStorageConfig")]
+    public bool? UpgradeStorageConfig { get; set; }
 
     /// <summary>Username for the master DB user. Cannot be specified for a replica.</summary>
     [JsonPropertyName("username")]
@@ -1397,6 +1405,10 @@ public partial class V1beta2InstanceSpecInitProvider
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
+    /// <summary>The life cycle type for this DB instance. This setting applies only to RDS for MySQL and RDS for PostgreSQL. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
+
     /// <summary>The engine version to use. If `autoMinorVersionUpgrade` is enabled, you can provide a prefix of the version such as 5.7 (for 5.7.10). The actual engine version used is returned in the attribute `status.atProvider.engineVersionActual`. For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html). Note that for Amazon Aurora instances the engine version must match the [DB Cluster](https://marketplace.upbound.io/providers/upbound/provider-aws/latest/resources/rds.aws.upbound.io/Cluster/v1beta1)'s engine version'.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
@@ -1584,6 +1596,10 @@ public partial class V1beta2InstanceSpecInitProvider
     /// <summary>Time zone of the DB instance. timezone is currently only supported by Microsoft SQL Server. The timezone can only be set on creation. See MSSQL User Guide for more information.</summary>
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
+
+    /// <summary>Whether to upgrade the storage file system configuration on the read replica. Can only be set with replicate_source_db.</summary>
+    [JsonPropertyName("upgradeStorageConfig")]
+    public bool? UpgradeStorageConfig { get; set; }
 
     /// <summary>Username for the master DB user. Cannot be specified for a replica.</summary>
     [JsonPropertyName("username")]
@@ -1951,6 +1967,10 @@ public partial class V1beta2InstanceStatusAtProvider
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
+    /// <summary>The life cycle type for this DB instance. This setting applies only to RDS for MySQL and RDS for PostgreSQL. Valid values are open-source-rds-extended-support, open-source-rds-extended-support-disabled. Default value is open-source-rds-extended-support. [Using Amazon RDS Extended Support]: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html</summary>
+    [JsonPropertyName("engineLifecycleSupport")]
+    public string? EngineLifecycleSupport { get; set; }
+
     /// <summary>The engine version to use. If `autoMinorVersionUpgrade` is enabled, you can provide a prefix of the version such as 5.7 (for 5.7.10). The actual engine version used is returned in the attribute `status.atProvider.engineVersionActual`. For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html). Note that for Amazon Aurora instances the engine version must match the [DB Cluster](https://marketplace.upbound.io/providers/upbound/provider-aws/latest/resources/rds.aws.upbound.io/Cluster/v1beta1)'s engine version'.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
@@ -2134,6 +2154,10 @@ public partial class V1beta2InstanceStatusAtProvider
     /// <summary>Time zone of the DB instance. timezone is currently only supported by Microsoft SQL Server. The timezone can only be set on creation. See MSSQL User Guide for more information.</summary>
     [JsonPropertyName("timezone")]
     public string? Timezone { get; set; }
+
+    /// <summary>Whether to upgrade the storage file system configuration on the read replica. Can only be set with replicate_source_db.</summary>
+    [JsonPropertyName("upgradeStorageConfig")]
+    public bool? UpgradeStorageConfig { get; set; }
 
     /// <summary>Username for the master DB user. Cannot be specified for a replica.</summary>
     [JsonPropertyName("username")]

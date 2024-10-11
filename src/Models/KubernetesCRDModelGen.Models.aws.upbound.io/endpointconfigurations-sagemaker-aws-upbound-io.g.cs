@@ -188,6 +188,23 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsManagedInstanceScaling
+{
+    /// <summary>The maximum number of instances that the endpoint can provision when it scales up to accommodate an increase in traffic.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>The minimum number of instances that the endpoint must retain when it scales down to accommodate a decrease in traffic.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>Indicates whether managed instance scaling is enabled. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderProductionVariantsModelNameRefPolicy
@@ -306,6 +323,10 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
+    /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
+    [JsonPropertyName("managedInstanceScaling")]
+    public IList<V1beta1EndpointConfigurationSpecForProviderProductionVariantsManagedInstanceScaling>? ManagedInstanceScaling { get; set; }
+
     /// <summary>The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the individual inference instance associated with this production variant. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("modelDataDownloadTimeoutInSeconds")]
     public double? ModelDataDownloadTimeoutInSeconds { get; set; }
@@ -350,6 +371,23 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsManagedInstanceScaling
+{
+    /// <summary>The maximum number of instances that the endpoint can provision when it scales up to accommodate an increase in traffic.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>The minimum number of instances that the endpoint must retain when it scales down to accommodate a decrease in traffic.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>Indicates whether managed instance scaling is enabled. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
 }
 
 /// <summary></summary>
@@ -413,6 +451,10 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     /// <summary>The type of instance to start.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
+
+    /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
+    [JsonPropertyName("managedInstanceScaling")]
+    public IList<V1beta1EndpointConfigurationSpecForProviderShadowProductionVariantsManagedInstanceScaling>? ManagedInstanceScaling { get; set; }
 
     /// <summary>The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the individual inference instance associated with this production variant. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("modelDataDownloadTimeoutInSeconds")]
@@ -660,6 +702,23 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     public string? KmsKeyId { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsManagedInstanceScaling
+{
+    /// <summary>The maximum number of instances that the endpoint can provision when it scales up to accommodate an increase in traffic.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>The minimum number of instances that the endpoint must retain when it scales down to accommodate a decrease in traffic.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>Indicates whether managed instance scaling is enabled. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVariantsModelNameRefPolicy
@@ -778,6 +837,10 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
+    /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
+    [JsonPropertyName("managedInstanceScaling")]
+    public IList<V1beta1EndpointConfigurationSpecInitProviderProductionVariantsManagedInstanceScaling>? ManagedInstanceScaling { get; set; }
+
     /// <summary>The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the individual inference instance associated with this production variant. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("modelDataDownloadTimeoutInSeconds")]
     public double? ModelDataDownloadTimeoutInSeconds { get; set; }
@@ -822,6 +885,23 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsManagedInstanceScaling
+{
+    /// <summary>The maximum number of instances that the endpoint can provision when it scales up to accommodate an increase in traffic.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>The minimum number of instances that the endpoint must retain when it scales down to accommodate a decrease in traffic.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>Indicates whether managed instance scaling is enabled. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
 }
 
 /// <summary></summary>
@@ -885,6 +965,10 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     /// <summary>The type of instance to start.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
+
+    /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
+    [JsonPropertyName("managedInstanceScaling")]
+    public IList<V1beta1EndpointConfigurationSpecInitProviderShadowProductionVariantsManagedInstanceScaling>? ManagedInstanceScaling { get; set; }
 
     /// <summary>The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the individual inference instance associated with this production variant. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("modelDataDownloadTimeoutInSeconds")]
@@ -1206,6 +1290,23 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsManagedInstanceScaling
+{
+    /// <summary>The maximum number of instances that the endpoint can provision when it scales up to accommodate an increase in traffic.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>The minimum number of instances that the endpoint must retain when it scales down to accommodate a decrease in traffic.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>Indicates whether managed instance scaling is enabled. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVariantsRoutingConfig
 {
     /// <summary>Sets how the endpoint routes incoming traffic. Valid values are LEAST_OUTSTANDING_REQUESTS and RANDOM. LEAST_OUTSTANDING_REQUESTS routes requests to the specific instances that have more capacity to process them. RANDOM routes each request to a randomly chosen instance.</summary>
@@ -1266,6 +1367,10 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
+    /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
+    [JsonPropertyName("managedInstanceScaling")]
+    public IList<V1beta1EndpointConfigurationStatusAtProviderProductionVariantsManagedInstanceScaling>? ManagedInstanceScaling { get; set; }
+
     /// <summary>The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the individual inference instance associated with this production variant. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("modelDataDownloadTimeoutInSeconds")]
     public double? ModelDataDownloadTimeoutInSeconds { get; set; }
@@ -1302,6 +1407,23 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsManagedInstanceScaling
+{
+    /// <summary>The maximum number of instances that the endpoint can provision when it scales up to accommodate an increase in traffic.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>The minimum number of instances that the endpoint must retain when it scales down to accommodate a decrease in traffic.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>Indicates whether managed instance scaling is enabled. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
 }
 
 /// <summary></summary>
@@ -1365,6 +1487,10 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     /// <summary>The type of instance to start.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
+
+    /// <summary>Settings that control the range in the number of instances that the endpoint provisions as it scales up or down to accommodate traffic.</summary>
+    [JsonPropertyName("managedInstanceScaling")]
+    public IList<V1beta1EndpointConfigurationStatusAtProviderShadowProductionVariantsManagedInstanceScaling>? ManagedInstanceScaling { get; set; }
 
     /// <summary>The timeout value, in seconds, to download and extract the model that you want to host from Amazon S3 to the individual inference instance associated with this production variant. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("modelDataDownloadTimeoutInSeconds")]

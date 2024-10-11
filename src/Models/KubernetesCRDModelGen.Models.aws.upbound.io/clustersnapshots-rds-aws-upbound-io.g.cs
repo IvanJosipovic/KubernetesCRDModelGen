@@ -88,6 +88,10 @@ public partial class V1beta1ClusterSnapshotSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    [JsonPropertyName("sharedAccounts")]
+    public IList<string>? SharedAccounts { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -168,6 +172,10 @@ public partial class V1beta1ClusterSnapshotSpecInitProvider
     /// <summary>The Identifier for the snapshot.</summary>
     [JsonPropertyName("dbClusterSnapshotIdentifier")]
     public string? DbClusterSnapshotIdentifier { get; set; }
+
+    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    [JsonPropertyName("sharedAccounts")]
+    public IList<string>? SharedAccounts { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -353,6 +361,10 @@ public partial class V1beta1ClusterSnapshotStatusAtProvider
     /// <summary>Port that the DB cluster was listening on at the time of the snapshot.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    [JsonPropertyName("sharedAccounts")]
+    public IList<string>? SharedAccounts { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("snapshotType")]

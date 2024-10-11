@@ -1891,7 +1891,7 @@ spec:
                     description: 'The domain of the storage system that is used for file transfers. Valid values are: S3 and EFS. The default value is S3.'
                     type: string
                   endpointDetails:
-                    description: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details block below for details.
+                    description: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details Block below for details.
                     properties:
                       addressAllocationIds:
                         description: A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when endpoint_type is set to VPC.
@@ -2160,7 +2160,7 @@ spec:
                     - namespace
                     type: object
                   protocolDetails:
-                    description: The protocol settings that are configured for your server. See protocol_details block below for details.
+                    description: The protocol settings that are configured for your server. See protocol_details Block below for details.
                     properties:
                       as2Transports:
                         description: Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
@@ -2188,7 +2188,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   s3StorageOptions:
-                    description: Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options block below for details.
+                    description: Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options Block below for details.
                     properties:
                       directoryListingOptimization:
                         description: Specifies whether or not performance for your Amazon S3 directories is optimized. Valid values are DISABLED, ENABLED.
@@ -2219,10 +2219,10 @@ spec:
                     description: '- URL of the service endpoint used to authenticate users with an identity_provider_type of API_GATEWAY.'
                     type: string
                   workflowDetails:
-                    description: Specifies the workflow details. See workflow_details block below for details.
+                    description: Specifies the workflow details. See workflow_details Block below for details.
                     properties:
                       onPartialUpload:
-                        description: A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.
+                        description: A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload Block below for details.
                         properties:
                           executionRole:
                             description: Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.
@@ -2232,7 +2232,7 @@ spec:
                             type: string
                         type: object
                       onUpload:
-                        description: 'A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload block below for details.'
+                        description: 'A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload Block below for details.'
                         properties:
                           executionRole:
                             description: Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.
@@ -2449,7 +2449,7 @@ spec:
                     description: 'The domain of the storage system that is used for file transfers. Valid values are: S3 and EFS. The default value is S3.'
                     type: string
                   endpointDetails:
-                    description: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details block below for details.
+                    description: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details Block below for details.
                     properties:
                       addressAllocationIds:
                         description: A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when endpoint_type is set to VPC.
@@ -2718,7 +2718,7 @@ spec:
                     - namespace
                     type: object
                   protocolDetails:
-                    description: The protocol settings that are configured for your server. See protocol_details block below for details.
+                    description: The protocol settings that are configured for your server. See protocol_details Block below for details.
                     properties:
                       as2Transports:
                         description: Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
@@ -2743,7 +2743,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   s3StorageOptions:
-                    description: Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options block below for details.
+                    description: Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options Block below for details.
                     properties:
                       directoryListingOptimization:
                         description: Specifies whether or not performance for your Amazon S3 directories is optimized. Valid values are DISABLED, ENABLED.
@@ -2774,10 +2774,10 @@ spec:
                     description: '- URL of the service endpoint used to authenticate users with an identity_provider_type of API_GATEWAY.'
                     type: string
                   workflowDetails:
-                    description: Specifies the workflow details. See workflow_details block below for details.
+                    description: Specifies the workflow details. See workflow_details Block below for details.
                     properties:
                       onPartialUpload:
-                        description: A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.
+                        description: A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload Block below for details.
                         properties:
                           executionRole:
                             description: Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.
@@ -2787,7 +2787,7 @@ spec:
                             type: string
                         type: object
                       onUpload:
-                        description: 'A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload block below for details.'
+                        description: 'A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload Block below for details.'
                         properties:
                           executionRole:
                             description: Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.
@@ -3027,7 +3027,7 @@ spec:
                     description: The endpoint of the Transfer Server (e.g., s-12345678.server.transfer.REGION.amazonaws.com)
                     type: string
                   endpointDetails:
-                    description: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details block below for details.
+                    description: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details Block below for details.
                     properties:
                       addressAllocationIds:
                         description: A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when endpoint_type is set to VPC.
@@ -3079,7 +3079,7 @@ spec:
                     description: Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
                     type: string
                   protocolDetails:
-                    description: The protocol settings that are configured for your server. See protocol_details block below for details.
+                    description: The protocol settings that are configured for your server. See protocol_details Block below for details.
                     properties:
                       as2Transports:
                         description: Indicates the transport method for the AS2 messages. Currently, only HTTP is supported.
@@ -3104,7 +3104,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   s3StorageOptions:
-                    description: Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options block below for details.
+                    description: Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options Block below for details.
                     properties:
                       directoryListingOptimization:
                         description: Specifies whether or not performance for your Amazon S3 directories is optimized. Valid values are DISABLED, ENABLED.
@@ -3141,10 +3141,10 @@ spec:
                     description: '- URL of the service endpoint used to authenticate users with an identity_provider_type of API_GATEWAY.'
                     type: string
                   workflowDetails:
-                    description: Specifies the workflow details. See workflow_details block below for details.
+                    description: Specifies the workflow details. See workflow_details Block below for details.
                     properties:
                       onPartialUpload:
-                        description: A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.
+                        description: A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload Block below for details.
                         properties:
                           executionRole:
                             description: Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.
@@ -3154,7 +3154,7 @@ spec:
                             type: string
                         type: object
                       onUpload:
-                        description: 'A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload block below for details.'
+                        description: 'A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload Block below for details.'
                         properties:
                           executionRole:
                             description: Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can assume, so that all workflow steps can operate on the required resources.

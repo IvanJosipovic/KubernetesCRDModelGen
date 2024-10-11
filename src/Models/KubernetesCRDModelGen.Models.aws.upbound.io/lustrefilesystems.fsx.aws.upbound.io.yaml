@@ -114,6 +114,12 @@ spec:
                   fileSystemTypeVersion:
                     description: Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for SCRATCH_1, SCRATCH_2 and PERSISTENT_1 deployment types. Valid values for 2.12 include all deployment types.
                     type: string
+                  finalBackupTags:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags to apply to the file system's final backup.
+                    type: object
+                    x-kubernetes-map-type: granular
                   importPath:
                     description: S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, s3://example-bucket/optional-prefix/. Only supported on PERSISTENT_1 deployment types.
                     type: string
@@ -347,6 +353,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  skipFinalBackup:
+                    description: When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.
+                    type: boolean
                   storageCapacity:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
@@ -511,6 +520,12 @@ spec:
                   fileSystemTypeVersion:
                     description: Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for SCRATCH_1, SCRATCH_2 and PERSISTENT_1 deployment types. Valid values for 2.12 include all deployment types.
                     type: string
+                  finalBackupTags:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags to apply to the file system's final backup.
+                    type: object
+                    x-kubernetes-map-type: granular
                   importPath:
                     description: S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, s3://example-bucket/optional-prefix/. Only supported on PERSISTENT_1 deployment types.
                     type: string
@@ -741,6 +756,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  skipFinalBackup:
+                    description: When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.
+                    type: boolean
                   storageCapacity:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
@@ -1100,6 +1118,12 @@ spec:
                   fileSystemTypeVersion:
                     description: Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for SCRATCH_1, SCRATCH_2 and PERSISTENT_1 deployment types. Valid values for 2.12 include all deployment types.
                     type: string
+                  finalBackupTags:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags to apply to the file system's final backup.
+                    type: object
+                    x-kubernetes-map-type: granular
                   id:
                     description: Identifier of the file system, e.g., fs-12345678
                     type: string
@@ -1169,6 +1193,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  skipFinalBackup:
+                    description: When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.
+                    type: boolean
                   storageCapacity:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
@@ -1362,6 +1389,12 @@ spec:
                   fileSystemTypeVersion:
                     description: Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for SCRATCH_1, SCRATCH_2 and PERSISTENT_1 deployment types. Valid values for 2.12 include all deployment types.
                     type: string
+                  finalBackupTags:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags to apply to the file system's final backup.
+                    type: object
+                    x-kubernetes-map-type: granular
                   importPath:
                     description: S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, s3://example-bucket/optional-prefix/. Only supported on PERSISTENT_1 deployment types.
                     type: string
@@ -1458,7 +1491,7 @@ spec:
                         type: object
                     type: object
                   logConfiguration:
-                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.
                     properties:
                       destination:
                         description: The Amazon Resource Name (ARN) that specifies the destination of the logs. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. If you do not provide a destination, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/lustre log group.
@@ -1468,7 +1501,7 @@ spec:
                         type: string
                     type: object
                   metadataConfiguration:
-                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.
+                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
                     properties:
                       iops:
                         description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
@@ -1484,7 +1517,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   rootSquashConfiguration:
-                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.
+                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
                     properties:
                       noSquashNids:
                         description: 'When root squash is enabled, you can optionally specify an array of NIDs of clients for which root squash does not apply. A client NID is a Lustre Network Identifier used to uniquely identify a client. You can specify the NID as either a single address or a range of addresses: 1. A single address is described in standard Lustre NID format by specifying the client’s IP address followed by the Lustre network ID (for example, 10.0.1.6@tcp). 2. An address range is described using a dash to separate the range (for example, 10.0.[2-10].[1-255]@tcp).'
@@ -1591,6 +1624,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  skipFinalBackup:
+                    description: When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.
+                    type: boolean
                   storageCapacity:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
@@ -1755,6 +1791,12 @@ spec:
                   fileSystemTypeVersion:
                     description: Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for SCRATCH_1, SCRATCH_2 and PERSISTENT_1 deployment types. Valid values for 2.12 include all deployment types.
                     type: string
+                  finalBackupTags:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags to apply to the file system's final backup.
+                    type: object
+                    x-kubernetes-map-type: granular
                   importPath:
                     description: S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, s3://example-bucket/optional-prefix/. Only supported on PERSISTENT_1 deployment types.
                     type: string
@@ -1851,7 +1893,7 @@ spec:
                         type: object
                     type: object
                   logConfiguration:
-                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.
                     properties:
                       destination:
                         description: The Amazon Resource Name (ARN) that specifies the destination of the logs. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. If you do not provide a destination, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/lustre log group.
@@ -1861,7 +1903,7 @@ spec:
                         type: string
                     type: object
                   metadataConfiguration:
-                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.
+                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
                     properties:
                       iops:
                         description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
@@ -1874,7 +1916,7 @@ spec:
                     description: '- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.'
                     type: number
                   rootSquashConfiguration:
-                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.
+                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
                     properties:
                       noSquashNids:
                         description: 'When root squash is enabled, you can optionally specify an array of NIDs of clients for which root squash does not apply. A client NID is a Lustre Network Identifier used to uniquely identify a client. You can specify the NID as either a single address or a range of addresses: 1. A single address is described in standard Lustre NID format by specifying the client’s IP address followed by the Lustre network ID (for example, 10.0.1.6@tcp). 2. An address range is described using a dash to separate the range (for example, 10.0.[2-10].[1-255]@tcp).'
@@ -1981,6 +2023,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  skipFinalBackup:
+                    description: When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.
+                    type: boolean
                   storageCapacity:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
@@ -2340,6 +2385,12 @@ spec:
                   fileSystemTypeVersion:
                     description: Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for SCRATCH_1, SCRATCH_2 and PERSISTENT_1 deployment types. Valid values for 2.12 include all deployment types.
                     type: string
+                  finalBackupTags:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags to apply to the file system's final backup.
+                    type: object
+                    x-kubernetes-map-type: granular
                   id:
                     description: Identifier of the file system, e.g., fs-12345678
                     type: string
@@ -2353,7 +2404,7 @@ spec:
                     description: ARN for the KMS Key to encrypt the file system at rest, applicable for PERSISTENT_1 and PERSISTENT_2 deployment_type. Defaults to an AWS managed KMS Key.
                     type: string
                   logConfiguration:
-                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.
                     properties:
                       destination:
                         description: The Amazon Resource Name (ARN) that specifies the destination of the logs. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. If you do not provide a destination, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/lustre log group.
@@ -2363,7 +2414,7 @@ spec:
                         type: string
                     type: object
                   metadataConfiguration:
-                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.
+                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
                     properties:
                       iops:
                         description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
@@ -2387,7 +2438,7 @@ spec:
                     description: '- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.'
                     type: number
                   rootSquashConfiguration:
-                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.
+                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
                     properties:
                       noSquashNids:
                         description: 'When root squash is enabled, you can optionally specify an array of NIDs of clients for which root squash does not apply. A client NID is a Lustre Network Identifier used to uniquely identify a client. You can specify the NID as either a single address or a range of addresses: 1. A single address is described in standard Lustre NID format by specifying the client’s IP address followed by the Lustre network ID (for example, 10.0.1.6@tcp). 2. An address range is described using a dash to separate the range (for example, 10.0.[2-10].[1-255]@tcp).'
@@ -2405,6 +2456,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  skipFinalBackup:
+                    description: When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to true.
+                    type: boolean
                   storageCapacity:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number

@@ -126,6 +126,62 @@ public partial class V1beta1EventSourceMappingSpecForProviderFunctionNameSelecto
     public V1beta1EventSourceMappingSpecForProviderFunctionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderKmsKeyArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderKmsKeyArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecForProviderKmsKeyArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderKmsKeyArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderKmsKeyArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecForProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderScalingConfig
@@ -217,6 +273,18 @@ public partial class V1beta1EventSourceMappingSpecForProvider
     /// <summary>A list of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
     [JsonPropertyName("functionResponseTypes")]
     public IList<string>? FunctionResponseTypes { get; set; }
+
+    /// <summary>The ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
+    [JsonPropertyName("kmsKeyArn")]
+    public string? KmsKeyArn { get; set; }
+
+    /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
+    [JsonPropertyName("kmsKeyArnRef")]
+    public V1beta1EventSourceMappingSpecForProviderKmsKeyArnRef? KmsKeyArnRef { get; set; }
+
+    /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
+    [JsonPropertyName("kmsKeyArnSelector")]
+    public V1beta1EventSourceMappingSpecForProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
     /// <summary>The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
     [JsonPropertyName("maximumBatchingWindowInSeconds")]
@@ -393,6 +461,62 @@ public partial class V1beta1EventSourceMappingSpecInitProviderFunctionNameSelect
     public V1beta1EventSourceMappingSpecInitProviderFunctionNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderKmsKeyArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderKmsKeyArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecInitProviderKmsKeyArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderKmsKeyArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderKmsKeyArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecInitProviderKmsKeyArnSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderScalingConfig
@@ -484,6 +608,18 @@ public partial class V1beta1EventSourceMappingSpecInitProvider
     /// <summary>A list of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
     [JsonPropertyName("functionResponseTypes")]
     public IList<string>? FunctionResponseTypes { get; set; }
+
+    /// <summary>The ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
+    [JsonPropertyName("kmsKeyArn")]
+    public string? KmsKeyArn { get; set; }
+
+    /// <summary>Reference to a Key in kms to populate kmsKeyArn.</summary>
+    [JsonPropertyName("kmsKeyArnRef")]
+    public V1beta1EventSourceMappingSpecInitProviderKmsKeyArnRef? KmsKeyArnRef { get; set; }
+
+    /// <summary>Selector for a Key in kms to populate kmsKeyArn.</summary>
+    [JsonPropertyName("kmsKeyArnSelector")]
+    public V1beta1EventSourceMappingSpecInitProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
     /// <summary>The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
     [JsonPropertyName("maximumBatchingWindowInSeconds")]
@@ -823,6 +959,10 @@ public partial class V1beta1EventSourceMappingStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
+    [JsonPropertyName("kmsKeyArn")]
+    public string? KmsKeyArn { get; set; }
 
     /// <summary>The date this resource was last modified.</summary>
     [JsonPropertyName("lastModified")]

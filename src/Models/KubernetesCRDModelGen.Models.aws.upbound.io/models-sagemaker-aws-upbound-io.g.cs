@@ -32,11 +32,24 @@ public partial class V1beta1ModelSpecForProviderContainerImageConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSourceModelAccessConfig
+{
+    /// <summary>Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.</summary>
+    [JsonPropertyName("acceptEula")]
+    public bool? AcceptEula { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
     [JsonPropertyName("compressionType")]
     public string? CompressionType { get; set; }
+
+    /// <summary>Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.</summary>
+    [JsonPropertyName("modelAccessConfig")]
+    public IList<V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSourceModelAccessConfig>? ModelAccessConfig { get; set; }
 
     /// <summary>The type of model data to deploy. Allowed values are: S3Object and S3Prefix.</summary>
     [JsonPropertyName("s3DataType")]
@@ -54,6 +67,15 @@ public partial class V1beta1ModelSpecForProviderContainerModelDataSource
     /// <summary>The S3 location of model data to deploy.</summary>
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecForProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecForProviderContainerMultiModelConfig
+{
+    /// <summary>Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.</summary>
+    [JsonPropertyName("modelCacheSetting")]
+    public string? ModelCacheSetting { get; set; }
 }
 
 /// <summary></summary>
@@ -76,6 +98,10 @@ public partial class V1beta1ModelSpecForProviderContainer
     [JsonPropertyName("imageConfig")]
     public IList<V1beta1ModelSpecForProviderContainerImageConfig>? ImageConfig { get; set; }
 
+    /// <summary>The inference specification name in the model package version.</summary>
+    [JsonPropertyName("inferenceSpecificationName")]
+    public string? InferenceSpecificationName { get; set; }
+
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
@@ -91,6 +117,10 @@ public partial class V1beta1ModelSpecForProviderContainer
     /// <summary>The Amazon Resource Name (ARN) of the model package to use to create the model.</summary>
     [JsonPropertyName("modelPackageName")]
     public string? ModelPackageName { get; set; }
+
+    /// <summary>Specifies additional configuration for multi-model endpoints. see Multi Model Config.</summary>
+    [JsonPropertyName("multiModelConfig")]
+    public IList<V1beta1ModelSpecForProviderContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -182,11 +212,24 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerImageConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig
+{
+    /// <summary>Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.</summary>
+    [JsonPropertyName("acceptEula")]
+    public bool? AcceptEula { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
     [JsonPropertyName("compressionType")]
     public string? CompressionType { get; set; }
+
+    /// <summary>Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.</summary>
+    [JsonPropertyName("modelAccessConfig")]
+    public IList<V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig>? ModelAccessConfig { get; set; }
 
     /// <summary>The type of model data to deploy. Allowed values are: S3Object and S3Prefix.</summary>
     [JsonPropertyName("s3DataType")]
@@ -204,6 +247,15 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainerModelDataSource
     /// <summary>The S3 location of model data to deploy.</summary>
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecForProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecForProviderPrimaryContainerMultiModelConfig
+{
+    /// <summary>Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.</summary>
+    [JsonPropertyName("modelCacheSetting")]
+    public string? ModelCacheSetting { get; set; }
 }
 
 /// <summary></summary>
@@ -226,6 +278,10 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainer
     [JsonPropertyName("imageConfig")]
     public IList<V1beta1ModelSpecForProviderPrimaryContainerImageConfig>? ImageConfig { get; set; }
 
+    /// <summary>The inference specification name in the model package version.</summary>
+    [JsonPropertyName("inferenceSpecificationName")]
+    public string? InferenceSpecificationName { get; set; }
+
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
@@ -241,6 +297,10 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainer
     /// <summary>The Amazon Resource Name (ARN) of the model package to use to create the model.</summary>
     [JsonPropertyName("modelPackageName")]
     public string? ModelPackageName { get; set; }
+
+    /// <summary>Specifies additional configuration for multi-model endpoints. see Multi Model Config.</summary>
+    [JsonPropertyName("multiModelConfig")]
+    public IList<V1beta1ModelSpecForProviderPrimaryContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -325,11 +385,24 @@ public partial class V1beta1ModelSpecInitProviderContainerImageConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSourceModelAccessConfig
+{
+    /// <summary>Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.</summary>
+    [JsonPropertyName("acceptEula")]
+    public bool? AcceptEula { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
     [JsonPropertyName("compressionType")]
     public string? CompressionType { get; set; }
+
+    /// <summary>Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.</summary>
+    [JsonPropertyName("modelAccessConfig")]
+    public IList<V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSourceModelAccessConfig>? ModelAccessConfig { get; set; }
 
     /// <summary>The type of model data to deploy. Allowed values are: S3Object and S3Prefix.</summary>
     [JsonPropertyName("s3DataType")]
@@ -347,6 +420,15 @@ public partial class V1beta1ModelSpecInitProviderContainerModelDataSource
     /// <summary>The S3 location of model data to deploy.</summary>
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecInitProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecInitProviderContainerMultiModelConfig
+{
+    /// <summary>Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.</summary>
+    [JsonPropertyName("modelCacheSetting")]
+    public string? ModelCacheSetting { get; set; }
 }
 
 /// <summary></summary>
@@ -369,6 +451,10 @@ public partial class V1beta1ModelSpecInitProviderContainer
     [JsonPropertyName("imageConfig")]
     public IList<V1beta1ModelSpecInitProviderContainerImageConfig>? ImageConfig { get; set; }
 
+    /// <summary>The inference specification name in the model package version.</summary>
+    [JsonPropertyName("inferenceSpecificationName")]
+    public string? InferenceSpecificationName { get; set; }
+
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
@@ -384,6 +470,10 @@ public partial class V1beta1ModelSpecInitProviderContainer
     /// <summary>The Amazon Resource Name (ARN) of the model package to use to create the model.</summary>
     [JsonPropertyName("modelPackageName")]
     public string? ModelPackageName { get; set; }
+
+    /// <summary>Specifies additional configuration for multi-model endpoints. see Multi Model Config.</summary>
+    [JsonPropertyName("multiModelConfig")]
+    public IList<V1beta1ModelSpecInitProviderContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -475,11 +565,24 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerImageConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig
+{
+    /// <summary>Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.</summary>
+    [JsonPropertyName("acceptEula")]
+    public bool? AcceptEula { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
     [JsonPropertyName("compressionType")]
     public string? CompressionType { get; set; }
+
+    /// <summary>Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.</summary>
+    [JsonPropertyName("modelAccessConfig")]
+    public IList<V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig>? ModelAccessConfig { get; set; }
 
     /// <summary>The type of model data to deploy. Allowed values are: S3Object and S3Prefix.</summary>
     [JsonPropertyName("s3DataType")]
@@ -497,6 +600,15 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource
     /// <summary>The S3 location of model data to deploy.</summary>
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelSpecInitProviderPrimaryContainerMultiModelConfig
+{
+    /// <summary>Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.</summary>
+    [JsonPropertyName("modelCacheSetting")]
+    public string? ModelCacheSetting { get; set; }
 }
 
 /// <summary></summary>
@@ -519,6 +631,10 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainer
     [JsonPropertyName("imageConfig")]
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerImageConfig>? ImageConfig { get; set; }
 
+    /// <summary>The inference specification name in the model package version.</summary>
+    [JsonPropertyName("inferenceSpecificationName")]
+    public string? InferenceSpecificationName { get; set; }
+
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
@@ -534,6 +650,10 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainer
     /// <summary>The Amazon Resource Name (ARN) of the model package to use to create the model.</summary>
     [JsonPropertyName("modelPackageName")]
     public string? ModelPackageName { get; set; }
+
+    /// <summary>Specifies additional configuration for multi-model endpoints. see Multi Model Config.</summary>
+    [JsonPropertyName("multiModelConfig")]
+    public IList<V1beta1ModelSpecInitProviderPrimaryContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -746,11 +866,24 @@ public partial class V1beta1ModelStatusAtProviderContainerImageConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSourceModelAccessConfig
+{
+    /// <summary>Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.</summary>
+    [JsonPropertyName("acceptEula")]
+    public bool? AcceptEula { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
     [JsonPropertyName("compressionType")]
     public string? CompressionType { get; set; }
+
+    /// <summary>Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.</summary>
+    [JsonPropertyName("modelAccessConfig")]
+    public IList<V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSourceModelAccessConfig>? ModelAccessConfig { get; set; }
 
     /// <summary>The type of model data to deploy. Allowed values are: S3Object and S3Prefix.</summary>
     [JsonPropertyName("s3DataType")]
@@ -768,6 +901,15 @@ public partial class V1beta1ModelStatusAtProviderContainerModelDataSource
     /// <summary>The S3 location of model data to deploy.</summary>
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelStatusAtProviderContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelStatusAtProviderContainerMultiModelConfig
+{
+    /// <summary>Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.</summary>
+    [JsonPropertyName("modelCacheSetting")]
+    public string? ModelCacheSetting { get; set; }
 }
 
 /// <summary></summary>
@@ -790,6 +932,10 @@ public partial class V1beta1ModelStatusAtProviderContainer
     [JsonPropertyName("imageConfig")]
     public IList<V1beta1ModelStatusAtProviderContainerImageConfig>? ImageConfig { get; set; }
 
+    /// <summary>The inference specification name in the model package version.</summary>
+    [JsonPropertyName("inferenceSpecificationName")]
+    public string? InferenceSpecificationName { get; set; }
+
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
@@ -805,6 +951,10 @@ public partial class V1beta1ModelStatusAtProviderContainer
     /// <summary>The Amazon Resource Name (ARN) of the model package to use to create the model.</summary>
     [JsonPropertyName("modelPackageName")]
     public string? ModelPackageName { get; set; }
+
+    /// <summary>Specifies additional configuration for multi-model endpoints. see Multi Model Config.</summary>
+    [JsonPropertyName("multiModelConfig")]
+    public IList<V1beta1ModelStatusAtProviderContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -840,11 +990,24 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerImageConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig
+{
+    /// <summary>Specifies agreement to the model end-user license agreement (EULA). The AcceptEula value must be explicitly defined as true in order to accept the EULA that this model requires. You are responsible for reviewing and complying with any applicable license terms and making sure they are acceptable for your use case before downloading or using a model.</summary>
+    [JsonPropertyName("acceptEula")]
+    public bool? AcceptEula { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSource
 {
     /// <summary>How the model data is prepared. Allowed values are: None and Gzip.</summary>
     [JsonPropertyName("compressionType")]
     public string? CompressionType { get; set; }
+
+    /// <summary>Specifies the access configuration file for the ML model. You can explicitly accept the model end-user license agreement (EULA) within the [model_access_config configuration block]. see Model Access Config.</summary>
+    [JsonPropertyName("modelAccessConfig")]
+    public IList<V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig>? ModelAccessConfig { get; set; }
 
     /// <summary>The type of model data to deploy. Allowed values are: S3Object and S3Prefix.</summary>
     [JsonPropertyName("s3DataType")]
@@ -862,6 +1025,15 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource
     /// <summary>The S3 location of model data to deploy.</summary>
     [JsonPropertyName("s3DataSource")]
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerModelDataSourceS3DataSource>? S3DataSource { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ModelStatusAtProviderPrimaryContainerMultiModelConfig
+{
+    /// <summary>Whether to cache models for a multi-model endpoint. By default, multi-model endpoints cache models so that a model does not have to be loaded into memory each time it is invoked. Some use cases do not benefit from model caching. For example, if an endpoint hosts a large number of models that are each invoked infrequently, the endpoint might perform better if you disable model caching. To disable model caching, set the value of this parameter to Disabled. Allowed values are: Enabled and Disabled.</summary>
+    [JsonPropertyName("modelCacheSetting")]
+    public string? ModelCacheSetting { get; set; }
 }
 
 /// <summary></summary>
@@ -884,6 +1056,10 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainer
     [JsonPropertyName("imageConfig")]
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerImageConfig>? ImageConfig { get; set; }
 
+    /// <summary>The inference specification name in the model package version.</summary>
+    [JsonPropertyName("inferenceSpecificationName")]
+    public string? InferenceSpecificationName { get; set; }
+
     /// <summary>The container hosts value SingleModel/MultiModel. The default value is SingleModel.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
@@ -899,6 +1075,10 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainer
     /// <summary>The Amazon Resource Name (ARN) of the model package to use to create the model.</summary>
     [JsonPropertyName("modelPackageName")]
     public string? ModelPackageName { get; set; }
+
+    /// <summary>Specifies additional configuration for multi-model endpoints. see Multi Model Config.</summary>
+    [JsonPropertyName("multiModelConfig")]
+    public IList<V1beta1ModelStatusAtProviderPrimaryContainerMultiModelConfig>? MultiModelConfig { get; set; }
 }
 
 /// <summary></summary>

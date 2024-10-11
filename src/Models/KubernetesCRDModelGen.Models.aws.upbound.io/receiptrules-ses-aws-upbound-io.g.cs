@@ -83,6 +83,10 @@ public partial class V1beta1ReceiptRuleSpecForProviderS3Action
     [JsonPropertyName("bucketName")]
     public string? BucketName { get; set; }
 
+    /// <summary>The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer managed key, and publishing to the Amazon SNS topic</summary>
+    [JsonPropertyName("iamRoleArn")]
+    public string? IamRoleArn { get; set; }
+
     /// <summary>The ARN of the KMS key</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
@@ -290,6 +294,10 @@ public partial class V1beta1ReceiptRuleSpecInitProviderS3Action
     /// <summary>The name of the S3 bucket</summary>
     [JsonPropertyName("bucketName")]
     public string? BucketName { get; set; }
+
+    /// <summary>The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer managed key, and publishing to the Amazon SNS topic</summary>
+    [JsonPropertyName("iamRoleArn")]
+    public string? IamRoleArn { get; set; }
 
     /// <summary>The ARN of the KMS key</summary>
     [JsonPropertyName("kmsKeyArn")]
@@ -626,6 +634,10 @@ public partial class V1beta1ReceiptRuleStatusAtProviderS3Action
     /// <summary>The name of the S3 bucket</summary>
     [JsonPropertyName("bucketName")]
     public string? BucketName { get; set; }
+
+    /// <summary>The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer managed key, and publishing to the Amazon SNS topic</summary>
+    [JsonPropertyName("iamRoleArn")]
+    public string? IamRoleArn { get; set; }
 
     /// <summary>The ARN of the KMS key</summary>
     [JsonPropertyName("kmsKeyArn")]

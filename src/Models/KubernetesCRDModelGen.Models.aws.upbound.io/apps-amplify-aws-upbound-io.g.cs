@@ -106,6 +106,15 @@ public partial class V1beta1AppSpecForProviderBasicAuthCredentialsSecretRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecForProviderCacheConfig
+{
+    /// <summary>Type of cache configuration to use for an Amplify app. Valid values: AMPLIFY_MANAGED, AMPLIFY_MANAGED_NO_COOKIES.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecForProviderCustomRule
 {
     /// <summary>Condition for a URL rewrite or redirect rule, such as a country code.</summary>
@@ -221,6 +230,10 @@ public partial class V1beta1AppSpecForProvider
     /// <summary>The build specification (build spec) for an Amplify app.</summary>
     [JsonPropertyName("buildSpec")]
     public string? BuildSpec { get; set; }
+
+    /// <summary>Cache configuration for the Amplify app. See cache_config Block for details.</summary>
+    [JsonPropertyName("cacheConfig")]
+    public IList<V1beta1AppSpecForProviderCacheConfig>? CacheConfig { get; set; }
 
     /// <summary>The custom HTTP headers for an Amplify app.</summary>
     [JsonPropertyName("customHeaders")]
@@ -389,6 +402,15 @@ public partial class V1beta1AppSpecInitProviderBasicAuthCredentialsSecretRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecInitProviderCacheConfig
+{
+    /// <summary>Type of cache configuration to use for an Amplify app. Valid values: AMPLIFY_MANAGED, AMPLIFY_MANAGED_NO_COOKIES.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecInitProviderCustomRule
 {
     /// <summary>Condition for a URL rewrite or redirect rule, such as a country code.</summary>
@@ -504,6 +526,10 @@ public partial class V1beta1AppSpecInitProvider
     /// <summary>The build specification (build spec) for an Amplify app.</summary>
     [JsonPropertyName("buildSpec")]
     public string? BuildSpec { get; set; }
+
+    /// <summary>Cache configuration for the Amplify app. See cache_config Block for details.</summary>
+    [JsonPropertyName("cacheConfig")]
+    public IList<V1beta1AppSpecInitProviderCacheConfig>? CacheConfig { get; set; }
 
     /// <summary>The custom HTTP headers for an Amplify app.</summary>
     [JsonPropertyName("customHeaders")]
@@ -745,6 +771,15 @@ public partial class V1beta1AppStatusAtProviderAutoBranchCreationConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppStatusAtProviderCacheConfig
+{
+    /// <summary>Type of cache configuration to use for an Amplify app. Valid values: AMPLIFY_MANAGED, AMPLIFY_MANAGED_NO_COOKIES.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppStatusAtProviderCustomRule
 {
     /// <summary>Condition for a URL rewrite or redirect rule, such as a country code.</summary>
@@ -804,6 +839,10 @@ public partial class V1beta1AppStatusAtProvider
     /// <summary>The build specification (build spec) for an Amplify app.</summary>
     [JsonPropertyName("buildSpec")]
     public string? BuildSpec { get; set; }
+
+    /// <summary>Cache configuration for the Amplify app. See cache_config Block for details.</summary>
+    [JsonPropertyName("cacheConfig")]
+    public IList<V1beta1AppStatusAtProviderCacheConfig>? CacheConfig { get; set; }
 
     /// <summary>The custom HTTP headers for an Amplify app.</summary>
     [JsonPropertyName("customHeaders")]

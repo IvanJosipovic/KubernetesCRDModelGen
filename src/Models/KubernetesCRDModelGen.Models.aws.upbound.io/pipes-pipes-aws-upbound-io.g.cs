@@ -94,6 +94,62 @@ public partial class V1beta1PipeSpecForProviderEnrichmentSelector
     public V1beta1PipeSpecForProviderEnrichmentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Group in cloudwatchlogs to populate logGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Group in cloudwatchlogs to populate logGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestination
@@ -101,6 +157,14 @@ public partial class V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLog
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
     [JsonPropertyName("logGroupArn")]
     public string? LogGroupArn { get; set; }
+
+    /// <summary>Reference to a Group in cloudwatchlogs to populate logGroupArn.</summary>
+    [JsonPropertyName("logGroupArnRef")]
+    public V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRef? LogGroupArnRef { get; set; }
+
+    /// <summary>Selector for a Group in cloudwatchlogs to populate logGroupArn.</summary>
+    [JsonPropertyName("logGroupArnSelector")]
+    public V1beta1PipeSpecForProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelector? LogGroupArnSelector { get; set; }
 }
 
 /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
@@ -144,6 +208,10 @@ public partial class V1beta1PipeSpecForProviderLogConfiguration
     /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
     [JsonPropertyName("firehoseLogDestination")]
     public V1beta1PipeSpecForProviderLogConfigurationFirehoseLogDestination? FirehoseLogDestination { get; set; }
+
+    /// <summary>String list that specifies whether the execution data (specifically, the payload, awsRequest, and awsResponse fields) is included in the log messages for this pipe. This applies to all log destinations for the pipe. Valid values ALL.</summary>
+    [JsonPropertyName("includeExecutionData")]
+    public IList<string>? IncludeExecutionData { get; set; }
 
     /// <summary>The level of logging detail to include. Valid values OFF, ERROR, INFO and TRACE.</summary>
     [JsonPropertyName("level")]
@@ -1413,6 +1481,62 @@ public partial class V1beta1PipeSpecInitProviderEnrichmentSelector
     public V1beta1PipeSpecInitProviderEnrichmentSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Group in cloudwatchlogs to populate logGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Group in cloudwatchlogs to populate logGroupArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary>Amazon CloudWatch Logs logging configuration settings for the pipe. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestination
@@ -1420,6 +1544,14 @@ public partial class V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLo
     /// <summary>Amazon Web Services Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log records.</summary>
     [JsonPropertyName("logGroupArn")]
     public string? LogGroupArn { get; set; }
+
+    /// <summary>Reference to a Group in cloudwatchlogs to populate logGroupArn.</summary>
+    [JsonPropertyName("logGroupArnRef")]
+    public V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnRef? LogGroupArnRef { get; set; }
+
+    /// <summary>Selector for a Group in cloudwatchlogs to populate logGroupArn.</summary>
+    [JsonPropertyName("logGroupArnSelector")]
+    public V1beta1PipeSpecInitProviderLogConfigurationCloudwatchLogsLogDestinationLogGroupArnSelector? LogGroupArnSelector { get; set; }
 }
 
 /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
@@ -1463,6 +1595,10 @@ public partial class V1beta1PipeSpecInitProviderLogConfiguration
     /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
     [JsonPropertyName("firehoseLogDestination")]
     public V1beta1PipeSpecInitProviderLogConfigurationFirehoseLogDestination? FirehoseLogDestination { get; set; }
+
+    /// <summary>String list that specifies whether the execution data (specifically, the payload, awsRequest, and awsResponse fields) is included in the log messages for this pipe. This applies to all log destinations for the pipe. Valid values ALL.</summary>
+    [JsonPropertyName("includeExecutionData")]
+    public IList<string>? IncludeExecutionData { get; set; }
 
     /// <summary>The level of logging detail to include. Valid values OFF, ERROR, INFO and TRACE.</summary>
     [JsonPropertyName("level")]
@@ -2854,6 +2990,10 @@ public partial class V1beta1PipeStatusAtProviderLogConfiguration
     /// <summary>Amazon Kinesis Data Firehose logging configuration settings for the pipe. Detailed below.</summary>
     [JsonPropertyName("firehoseLogDestination")]
     public V1beta1PipeStatusAtProviderLogConfigurationFirehoseLogDestination? FirehoseLogDestination { get; set; }
+
+    /// <summary>String list that specifies whether the execution data (specifically, the payload, awsRequest, and awsResponse fields) is included in the log messages for this pipe. This applies to all log destinations for the pipe. Valid values ALL.</summary>
+    [JsonPropertyName("includeExecutionData")]
+    public IList<string>? IncludeExecutionData { get; set; }
 
     /// <summary>The level of logging detail to include. Valid values OFF, ERROR, INFO and TRACE.</summary>
     [JsonPropertyName("level")]

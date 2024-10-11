@@ -254,7 +254,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("dbSubnetGroupName")]
     public string? DbSubnetGroupName { get; set; }
 
-    /// <summary>A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
+    /// <summary>A boolean value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. Defaults to false.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -593,7 +593,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("dbSubnetGroupName")]
     public string? DbSubnetGroupName { get; set; }
 
-    /// <summary>A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
+    /// <summary>A boolean value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. Defaults to false.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -879,7 +879,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("dbSubnetGroupName")]
     public string? DbSubnetGroupName { get; set; }
 
-    /// <summary>A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
+    /// <summary>A boolean value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. Defaults to false.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 

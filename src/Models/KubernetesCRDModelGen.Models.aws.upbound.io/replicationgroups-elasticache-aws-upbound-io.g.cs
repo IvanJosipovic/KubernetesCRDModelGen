@@ -302,6 +302,10 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("automaticFailoverEnabled")]
     public bool? AutomaticFailoverEnabled { get; set; }
 
+    /// <summary>Specifies whether cluster mode is enabled or disabled. Valid values are enabled or disabled or compatible</summary>
+    [JsonPropertyName("clusterMode")]
+    public string? ClusterMode { get; set; }
+
     /// <summary>Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to true when using r6gd nodes.</summary>
     [JsonPropertyName("dataTieringEnabled")]
     public bool? DataTieringEnabled { get; set; }
@@ -378,7 +382,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("numCacheClusters")]
     public double? NumCacheClusters { get; set; }
 
-    /// <summary>Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications.</summary>
+    /// <summary>Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications. Conflicts with num_cache_clusters.</summary>
     [JsonPropertyName("numNodeGroups")]
     public double? NumNodeGroups { get; set; }
 
@@ -398,7 +402,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5.</summary>
+    /// <summary>Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5. Conflicts with num_cache_clusters. Can only be set if num_node_groups is set.</summary>
     [JsonPropertyName("replicasPerNodeGroup")]
     public double? ReplicasPerNodeGroup { get; set; }
 
@@ -753,6 +757,10 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("automaticFailoverEnabled")]
     public bool? AutomaticFailoverEnabled { get; set; }
 
+    /// <summary>Specifies whether cluster mode is enabled or disabled. Valid values are enabled or disabled or compatible</summary>
+    [JsonPropertyName("clusterMode")]
+    public string? ClusterMode { get; set; }
+
     /// <summary>Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to true when using r6gd nodes.</summary>
     [JsonPropertyName("dataTieringEnabled")]
     public bool? DataTieringEnabled { get; set; }
@@ -829,7 +837,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("numCacheClusters")]
     public double? NumCacheClusters { get; set; }
 
-    /// <summary>Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications.</summary>
+    /// <summary>Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications. Conflicts with num_cache_clusters.</summary>
     [JsonPropertyName("numNodeGroups")]
     public double? NumNodeGroups { get; set; }
 
@@ -845,7 +853,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("preferredCacheClusterAzs")]
     public IList<string>? PreferredCacheClusterAzs { get; set; }
 
-    /// <summary>Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5.</summary>
+    /// <summary>Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5. Conflicts with num_cache_clusters. Can only be set if num_node_groups is set.</summary>
     [JsonPropertyName("replicasPerNodeGroup")]
     public double? ReplicasPerNodeGroup { get; set; }
 
@@ -1095,6 +1103,10 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("clusterEnabled")]
     public bool? ClusterEnabled { get; set; }
 
+    /// <summary>Specifies whether cluster mode is enabled or disabled. Valid values are enabled or disabled or compatible</summary>
+    [JsonPropertyName("clusterMode")]
+    public string? ClusterMode { get; set; }
+
     /// <summary>Address of the replication group configuration endpoint when cluster mode is enabled.</summary>
     [JsonPropertyName("configurationEndpointAddress")]
     public string? ConfigurationEndpointAddress { get; set; }
@@ -1171,7 +1183,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("numCacheClusters")]
     public double? NumCacheClusters { get; set; }
 
-    /// <summary>Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications.</summary>
+    /// <summary>Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications. Conflicts with num_cache_clusters.</summary>
     [JsonPropertyName("numNodeGroups")]
     public double? NumNodeGroups { get; set; }
 
@@ -1195,7 +1207,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("readerEndpointAddress")]
     public string? ReaderEndpointAddress { get; set; }
 
-    /// <summary>Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5.</summary>
+    /// <summary>Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5. Conflicts with num_cache_clusters. Can only be set if num_node_groups is set.</summary>
     [JsonPropertyName("replicasPerNodeGroup")]
     public double? ReplicasPerNodeGroup { get; set; }
 

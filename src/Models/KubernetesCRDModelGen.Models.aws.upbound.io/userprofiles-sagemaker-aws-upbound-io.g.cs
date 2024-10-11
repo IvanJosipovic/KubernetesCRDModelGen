@@ -565,6 +565,19 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsSpaceStorageSe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecForProviderUserSettingsStudioWebPortalSettings
+{
+    /// <summary>The Applications supported in Studio that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenAppTypes")]
+    public IList<string>? HiddenAppTypes { get; set; }
+
+    /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenMlTools")]
+    public IList<string>? HiddenMlTools { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecForProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -660,6 +673,10 @@ public partial class V1beta1UserProfileSpecForProviderUserSettings
     /// <summary>Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.</summary>
     [JsonPropertyName("studioWebPortal")]
     public string? StudioWebPortal { get; set; }
+
+    /// <summary>The Studio Web Portal settings. See studio_web_portal_settings Block below.</summary>
+    [JsonPropertyName("studioWebPortalSettings")]
+    public IList<V1beta1UserProfileSpecForProviderUserSettingsStudioWebPortalSettings>? StudioWebPortalSettings { get; set; }
 
     /// <summary>The TensorBoard app settings. See TensorBoard App Settings below.</summary>
     [JsonPropertyName("tensorBoardAppSettings")]
@@ -1264,6 +1281,19 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsSpaceStorageS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecInitProviderUserSettingsStudioWebPortalSettings
+{
+    /// <summary>The Applications supported in Studio that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenAppTypes")]
+    public IList<string>? HiddenAppTypes { get; set; }
+
+    /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenMlTools")]
+    public IList<string>? HiddenMlTools { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -1359,6 +1389,10 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettings
     /// <summary>Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.</summary>
     [JsonPropertyName("studioWebPortal")]
     public string? StudioWebPortal { get; set; }
+
+    /// <summary>The Studio Web Portal settings. See studio_web_portal_settings Block below.</summary>
+    [JsonPropertyName("studioWebPortalSettings")]
+    public IList<V1beta1UserProfileSpecInitProviderUserSettingsStudioWebPortalSettings>? StudioWebPortalSettings { get; set; }
 
     /// <summary>The TensorBoard app settings. See TensorBoard App Settings below.</summary>
     [JsonPropertyName("tensorBoardAppSettings")]
@@ -2035,6 +2069,19 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsSpaceStorageS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileStatusAtProviderUserSettingsStudioWebPortalSettings
+{
+    /// <summary>The Applications supported in Studio that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenAppTypes")]
+    public IList<string>? HiddenAppTypes { get; set; }
+
+    /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
+    [JsonPropertyName("hiddenMlTools")]
+    public IList<string>? HiddenMlTools { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type that the image version runs on.. For valid values see SageMaker Instance Types.</summary>
@@ -2130,6 +2177,10 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettings
     /// <summary>Whether the user can access Studio. If this value is set to DISABLED, the user cannot access Studio, even if that is the default experience for the domain. Valid values are ENABLED and DISABLED.</summary>
     [JsonPropertyName("studioWebPortal")]
     public string? StudioWebPortal { get; set; }
+
+    /// <summary>The Studio Web Portal settings. See studio_web_portal_settings Block below.</summary>
+    [JsonPropertyName("studioWebPortalSettings")]
+    public IList<V1beta1UserProfileStatusAtProviderUserSettingsStudioWebPortalSettings>? StudioWebPortalSettings { get; set; }
 
     /// <summary>The TensorBoard app settings. See TensorBoard App Settings below.</summary>
     [JsonPropertyName("tensorBoardAppSettings")]

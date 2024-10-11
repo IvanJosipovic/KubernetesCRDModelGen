@@ -20,7 +20,7 @@ public partial class V1beta1DiskSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The instance port the load balancer will connect.</summary>
+    /// <summary>The size of the disk in GB.</summary>
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 
@@ -37,7 +37,7 @@ public partial class V1beta1DiskSpecInitProvider
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The instance port the load balancer will connect.</summary>
+    /// <summary>The size of the disk in GB.</summary>
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 
@@ -182,7 +182,7 @@ public partial class V1beta1DiskSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskStatusAtProvider
 {
-    /// <summary>The ARN of the Lightsail load balancer.</summary>
+    /// <summary>The ARN of the Lightsail disk.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -190,15 +190,15 @@ public partial class V1beta1DiskStatusAtProvider
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The timestamp when the load balancer was created.</summary>
+    /// <summary>The timestamp when the disk was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
-    /// <summary>The name of the disk  (matches name).</summary>
+    /// <summary>The name of the disk (matches name).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The instance port the load balancer will connect.</summary>
+    /// <summary>The size of the disk in GB.</summary>
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 

@@ -201,6 +201,14 @@ spec:
                         enabled:
                           description: 'When the event destination is enabled, the specified event types are sent to the destinations. Default: false.'
                           type: boolean
+                        eventBridgeDestination:
+                          items:
+                            properties:
+                              eventBusArn:
+                                description: The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.
+                                type: string
+                            type: object
+                          type: array
                         kinesisFirehoseDestination:
                           description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
                           items:
@@ -729,6 +737,14 @@ spec:
                         enabled:
                           description: 'When the event destination is enabled, the specified event types are sent to the destinations. Default: false.'
                           type: boolean
+                        eventBridgeDestination:
+                          items:
+                            properties:
+                              eventBusArn:
+                                description: The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.
+                                type: string
+                            type: object
+                          type: array
                         kinesisFirehoseDestination:
                           description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
                           items:
@@ -1362,6 +1378,14 @@ spec:
                         enabled:
                           description: 'When the event destination is enabled, the specified event types are sent to the destinations. Default: false.'
                           type: boolean
+                        eventBridgeDestination:
+                          items:
+                            properties:
+                              eventBusArn:
+                                description: The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.
+                                type: string
+                            type: object
+                          type: array
                         kinesisFirehoseDestination:
                           description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
                           items:
@@ -1631,10 +1655,10 @@ spec:
                     description: A name that identifies the event destination within the configuration set.
                     properties:
                       cloudWatchDestination:
-                        description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below
+                        description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.
                         properties:
                           dimensionConfiguration:
-                            description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.
+                            description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.
                             items:
                               properties:
                                 defaultDimensionValue:
@@ -1652,8 +1676,14 @@ spec:
                       enabled:
                         description: 'When the event destination is enabled, the specified event types are sent to the destinations. Default: false.'
                         type: boolean
+                      eventBridgeDestination:
+                        properties:
+                          eventBusArn:
+                            description: The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.
+                            type: string
+                        type: object
                       kinesisFirehoseDestination:
-                        description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
+                        description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.
                         properties:
                           deliveryStreamArn:
                             description: The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that the Amazon SES API v2 sends email events to.
@@ -1839,8 +1869,9 @@ spec:
                         items:
                           type: string
                         type: array
+                        x-kubernetes-list-type: set
                       pinpointDestination:
-                        description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.
+                        description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.
                         properties:
                           applicationArn:
                             type: string
@@ -1932,7 +1963,7 @@ spec:
                             type: object
                         type: object
                       snsDestination:
-                        description: An object that defines an Amazon SNS destination for email events. See sns_destination below.
+                        description: An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.
                         properties:
                           topicArn:
                             description: The Amazon Resource Name (ARN) of the Amazon SNS topic to publish email events to.
@@ -2026,7 +2057,7 @@ spec:
                         type: object
                     type: object
                   eventDestinationName:
-                    description: An object that defines the event destination. See event_destination below.
+                    description: An object that defines the event destination. See event_destination Block for details.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
@@ -2149,10 +2180,10 @@ spec:
                     description: A name that identifies the event destination within the configuration set.
                     properties:
                       cloudWatchDestination:
-                        description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below
+                        description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.
                         properties:
                           dimensionConfiguration:
-                            description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.
+                            description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.
                             items:
                               properties:
                                 defaultDimensionValue:
@@ -2170,8 +2201,14 @@ spec:
                       enabled:
                         description: 'When the event destination is enabled, the specified event types are sent to the destinations. Default: false.'
                         type: boolean
+                      eventBridgeDestination:
+                        properties:
+                          eventBusArn:
+                            description: The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.
+                            type: string
+                        type: object
                       kinesisFirehoseDestination:
-                        description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
+                        description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.
                         properties:
                           deliveryStreamArn:
                             description: The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that the Amazon SES API v2 sends email events to.
@@ -2357,8 +2394,9 @@ spec:
                         items:
                           type: string
                         type: array
+                        x-kubernetes-list-type: set
                       pinpointDestination:
-                        description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.
+                        description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.
                         properties:
                           applicationArn:
                             type: string
@@ -2450,7 +2488,7 @@ spec:
                             type: object
                         type: object
                       snsDestination:
-                        description: An object that defines an Amazon SNS destination for email events. See sns_destination below.
+                        description: An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.
                         properties:
                           topicArn:
                             description: The Amazon Resource Name (ARN) of the Amazon SNS topic to publish email events to.
@@ -2544,7 +2582,7 @@ spec:
                         type: object
                     type: object
                   eventDestinationName:
-                    description: An object that defines the event destination. See event_destination below.
+                    description: An object that defines the event destination. See event_destination Block for details.
                     type: string
                 type: object
               managementPolicies:
@@ -2772,10 +2810,10 @@ spec:
                     description: A name that identifies the event destination within the configuration set.
                     properties:
                       cloudWatchDestination:
-                        description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below
+                        description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.
                         properties:
                           dimensionConfiguration:
-                            description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.
+                            description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.
                             items:
                               properties:
                                 defaultDimensionValue:
@@ -2793,8 +2831,14 @@ spec:
                       enabled:
                         description: 'When the event destination is enabled, the specified event types are sent to the destinations. Default: false.'
                         type: boolean
+                      eventBridgeDestination:
+                        properties:
+                          eventBusArn:
+                            description: The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.
+                            type: string
+                        type: object
                       kinesisFirehoseDestination:
-                        description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
+                        description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.
                         properties:
                           deliveryStreamArn:
                             description: The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that the Amazon SES API v2 sends email events to.
@@ -2808,14 +2852,15 @@ spec:
                         items:
                           type: string
                         type: array
+                        x-kubernetes-list-type: set
                       pinpointDestination:
-                        description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.
+                        description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.
                         properties:
                           applicationArn:
                             type: string
                         type: object
                       snsDestination:
-                        description: An object that defines an Amazon SNS destination for email events. See sns_destination below.
+                        description: An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.
                         properties:
                           topicArn:
                             description: The Amazon Resource Name (ARN) of the Amazon SNS topic to publish email events to.
@@ -2823,7 +2868,7 @@ spec:
                         type: object
                     type: object
                   eventDestinationName:
-                    description: An object that defines the event destination. See event_destination below.
+                    description: An object that defines the event destination. See event_destination Block for details.
                     type: string
                   id:
                     description: A pipe-delimited string combining configuration_set_name and event_destination_name.

@@ -132,6 +132,18 @@ spec:
                   description:
                     description: Description for the experiment template.
                     type: string
+                  experimentOptions:
+                    description: The experiment options for the experiment template. See experiment_options below for more details!
+                    items:
+                      properties:
+                        accountTargeting:
+                          description: Specifies the account targeting setting for experiment options. Supports single-account and multi-account.
+                          type: string
+                        emptyTargetResolutionMode:
+                          description: Specifies the empty target resolution mode for experiment options. Supports fail and skip.
+                          type: string
+                      type: object
+                    type: array
                   logConfiguration:
                     description: The configuration for experiment logging. See below.
                     items:
@@ -399,6 +411,18 @@ spec:
                   description:
                     description: Description for the experiment template.
                     type: string
+                  experimentOptions:
+                    description: The experiment options for the experiment template. See experiment_options below for more details!
+                    items:
+                      properties:
+                        accountTargeting:
+                          description: Specifies the account targeting setting for experiment options. Supports single-account and multi-account.
+                          type: string
+                        emptyTargetResolutionMode:
+                          description: Specifies the empty target resolution mode for experiment options. Supports fail and skip.
+                          type: string
+                      type: object
+                    type: array
                   logConfiguration:
                     description: The configuration for experiment logging. See below.
                     items:
@@ -859,6 +883,18 @@ spec:
                   description:
                     description: Description for the experiment template.
                     type: string
+                  experimentOptions:
+                    description: The experiment options for the experiment template. See experiment_options below for more details!
+                    items:
+                      properties:
+                        accountTargeting:
+                          description: Specifies the account targeting setting for experiment options. Supports single-account and multi-account.
+                          type: string
+                        emptyTargetResolutionMode:
+                          description: Specifies the empty target resolution mode for experiment options. Supports fail and skip.
+                          type: string
+                      type: object
+                    type: array
                   id:
                     description: Experiment Template ID.
                     type: string
@@ -1152,6 +1188,16 @@ spec:
                   description:
                     description: Description for the experiment template.
                     type: string
+                  experimentOptions:
+                    description: The experiment options for the experiment template. See experiment_options below for more details!
+                    properties:
+                      accountTargeting:
+                        description: Specifies the account targeting setting for experiment options. Supports single-account and multi-account.
+                        type: string
+                      emptyTargetResolutionMode:
+                        description: Specifies the empty target resolution mode for experiment options. Supports fail and skip.
+                        type: string
+                    type: object
                   logConfiguration:
                     description: The configuration for experiment logging. See below.
                     properties:
@@ -1411,6 +1457,16 @@ spec:
                   description:
                     description: Description for the experiment template.
                     type: string
+                  experimentOptions:
+                    description: The experiment options for the experiment template. See experiment_options below for more details!
+                    properties:
+                      accountTargeting:
+                        description: Specifies the account targeting setting for experiment options. Supports single-account and multi-account.
+                        type: string
+                      emptyTargetResolutionMode:
+                        description: Specifies the empty target resolution mode for experiment options. Supports fail and skip.
+                        type: string
+                    type: object
                   logConfiguration:
                     description: The configuration for experiment logging. See below.
                     properties:
@@ -1863,6 +1919,16 @@ spec:
                   description:
                     description: Description for the experiment template.
                     type: string
+                  experimentOptions:
+                    description: The experiment options for the experiment template. See experiment_options below for more details!
+                    properties:
+                      accountTargeting:
+                        description: Specifies the account targeting setting for experiment options. Supports single-account and multi-account.
+                        type: string
+                      emptyTargetResolutionMode:
+                        description: Specifies the empty target resolution mode for experiment options. Supports fail and skip.
+                        type: string
+                    type: object
                   id:
                     description: Experiment Template ID.
                     type: string

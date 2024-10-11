@@ -1038,6 +1038,10 @@ public partial class V1beta1UserPoolSpecForProviderPasswordPolicy
     [JsonPropertyName("minimumLength")]
     public double? MinimumLength { get; set; }
 
+    /// <summary>Number of previous passwords that you want Amazon Cognito to restrict each user from reusing. Users can't set a password that matches any of number of previous passwords specified by this argument. A value of 0 means that password history is not enforced. Valid values are between 0 and 24.</summary>
+    [JsonPropertyName("passwordHistorySize")]
+    public double? PasswordHistorySize { get; set; }
+
     /// <summary>Whether you have required users to use at least one lowercase letter in their password.</summary>
     [JsonPropertyName("requireLowercase")]
     public bool? RequireLowercase { get; set; }
@@ -2399,6 +2403,10 @@ public partial class V1beta1UserPoolSpecInitProviderPasswordPolicy
     [JsonPropertyName("minimumLength")]
     public double? MinimumLength { get; set; }
 
+    /// <summary>Number of previous passwords that you want Amazon Cognito to restrict each user from reusing. Users can't set a password that matches any of number of previous passwords specified by this argument. A value of 0 means that password history is not enforced. Valid values are between 0 and 24.</summary>
+    [JsonPropertyName("passwordHistorySize")]
+    public double? PasswordHistorySize { get; set; }
+
     /// <summary>Whether you have required users to use at least one lowercase letter in their password.</summary>
     [JsonPropertyName("requireLowercase")]
     public bool? RequireLowercase { get; set; }
@@ -3055,6 +3063,10 @@ public partial class V1beta1UserPoolStatusAtProviderPasswordPolicy
     /// <summary>Minimum length of the password policy that you have set.</summary>
     [JsonPropertyName("minimumLength")]
     public double? MinimumLength { get; set; }
+
+    /// <summary>Number of previous passwords that you want Amazon Cognito to restrict each user from reusing. Users can't set a password that matches any of number of previous passwords specified by this argument. A value of 0 means that password history is not enforced. Valid values are between 0 and 24.</summary>
+    [JsonPropertyName("passwordHistorySize")]
+    public double? PasswordHistorySize { get; set; }
 
     /// <summary>Whether you have required users to use at least one lowercase letter in their password.</summary>
     [JsonPropertyName("requireLowercase")]

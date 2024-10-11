@@ -135,6 +135,10 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("glueVersion")]
     public string? GlueVersion { get; set; }
 
+    /// <summary>Specifies whether job run queuing is enabled for the job runs for this job. A value of true means job run queuing is enabled for the job runs. If false or not populated, the job runs will not be considered for queueing.</summary>
+    [JsonPropertyName("jobRunQueuingEnabled")]
+    public bool? JobRunQueuingEnabled { get; set; }
+
     /// <summary>–  Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
@@ -318,6 +322,10 @@ public partial class V1beta1JobSpecInitProvider
     /// <summary>The version of glue to use, for example "1.0". Ray jobs should set this to 4.0 or greater. For information about available versions, see the AWS Glue Release Notes.</summary>
     [JsonPropertyName("glueVersion")]
     public string? GlueVersion { get; set; }
+
+    /// <summary>Specifies whether job run queuing is enabled for the job runs for this job. A value of true means job run queuing is enabled for the job runs. If false or not populated, the job runs will not be considered for queueing.</summary>
+    [JsonPropertyName("jobRunQueuingEnabled")]
+    public bool? JobRunQueuingEnabled { get; set; }
 
     /// <summary>–  Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
     [JsonPropertyName("maintenanceWindow")]
@@ -582,6 +590,10 @@ public partial class V1beta1JobStatusAtProvider
     /// <summary>Job name</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Specifies whether job run queuing is enabled for the job runs for this job. A value of true means job run queuing is enabled for the job runs. If false or not populated, the job runs will not be considered for queueing.</summary>
+    [JsonPropertyName("jobRunQueuingEnabled")]
+    public bool? JobRunQueuingEnabled { get; set; }
 
     /// <summary>–  Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
     [JsonPropertyName("maintenanceWindow")]

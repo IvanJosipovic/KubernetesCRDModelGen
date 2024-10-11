@@ -96,6 +96,9 @@ spec:
                   enhancedImageMetadataEnabled:
                     description: Whether additional information about the image being created is collected. Defaults to true.
                     type: boolean
+                  executionRole:
+                    description: Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.
+                    type: string
                   imageRecipeArn:
                     description: Amazon Resource Name (ARN) of the image recipe.
                     type: string
@@ -340,6 +343,33 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  workflow:
+                    description: Configuration block with the workflow configuration. Detailed below.
+                    items:
+                      properties:
+                        onFailure:
+                          description: The action to take if the workflow fails. Must be one of CONTINUE or ABORT.
+                          type: string
+                        parallelGroup:
+                          description: The parallel group in which to run a test Workflow.
+                          type: string
+                        parameter:
+                          description: Configuration block for the workflow parameters. Detailed below.
+                          items:
+                            properties:
+                              name:
+                                description: The name of the Workflow parameter.
+                                type: string
+                              value:
+                                description: The value of the Workflow parameter.
+                                type: string
+                            type: object
+                          type: array
+                        workflowArn:
+                          description: Amazon Resource Name (ARN) of the Image Builder Workflow.
+                          type: string
+                      type: object
+                    type: array
                 required:
                 - region
                 type: object
@@ -377,6 +407,9 @@ spec:
                   enhancedImageMetadataEnabled:
                     description: Whether additional information about the image being created is collected. Defaults to true.
                     type: boolean
+                  executionRole:
+                    description: Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.
+                    type: string
                   imageRecipeArn:
                     description: Amazon Resource Name (ARN) of the image recipe.
                     type: string
@@ -618,6 +651,33 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  workflow:
+                    description: Configuration block with the workflow configuration. Detailed below.
+                    items:
+                      properties:
+                        onFailure:
+                          description: The action to take if the workflow fails. Must be one of CONTINUE or ABORT.
+                          type: string
+                        parallelGroup:
+                          description: The parallel group in which to run a test Workflow.
+                          type: string
+                        parameter:
+                          description: Configuration block for the workflow parameters. Detailed below.
+                          items:
+                            properties:
+                              name:
+                                description: The name of the Workflow parameter.
+                                type: string
+                              value:
+                                description: The value of the Workflow parameter.
+                                type: string
+                            type: object
+                          type: array
+                        workflowArn:
+                          description: Amazon Resource Name (ARN) of the Image Builder Workflow.
+                          type: string
+                      type: object
+                    type: array
                 type: object
               managementPolicies:
                 default:
@@ -862,6 +922,9 @@ spec:
                   enhancedImageMetadataEnabled:
                     description: Whether additional information about the image being created is collected. Defaults to true.
                     type: boolean
+                  executionRole:
+                    description: Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.
+                    type: string
                   id:
                     type: string
                   imageRecipeArn:
@@ -942,6 +1005,33 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  workflow:
+                    description: Configuration block with the workflow configuration. Detailed below.
+                    items:
+                      properties:
+                        onFailure:
+                          description: The action to take if the workflow fails. Must be one of CONTINUE or ABORT.
+                          type: string
+                        parallelGroup:
+                          description: The parallel group in which to run a test Workflow.
+                          type: string
+                        parameter:
+                          description: Configuration block for the workflow parameters. Detailed below.
+                          items:
+                            properties:
+                              name:
+                                description: The name of the Workflow parameter.
+                                type: string
+                              value:
+                                description: The value of the Workflow parameter.
+                                type: string
+                            type: object
+                          type: array
+                        workflowArn:
+                          description: Amazon Resource Name (ARN) of the Image Builder Workflow.
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.
@@ -1088,6 +1178,9 @@ spec:
                   enhancedImageMetadataEnabled:
                     description: Whether additional information about the image being created is collected. Defaults to true.
                     type: boolean
+                  executionRole:
+                    description: Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.
+                    type: string
                   imageRecipeArn:
                     description: Amazon Resource Name (ARN) of the image recipe.
                     type: string
@@ -1324,6 +1417,33 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  workflow:
+                    description: Configuration block with the workflow configuration. Detailed below.
+                    items:
+                      properties:
+                        onFailure:
+                          description: The action to take if the workflow fails. Must be one of CONTINUE or ABORT.
+                          type: string
+                        parallelGroup:
+                          description: The parallel group in which to run a test Workflow.
+                          type: string
+                        parameter:
+                          description: Configuration block for the workflow parameters. Detailed below.
+                          items:
+                            properties:
+                              name:
+                                description: The name of the Workflow parameter.
+                                type: string
+                              value:
+                                description: The value of the Workflow parameter.
+                                type: string
+                            type: object
+                          type: array
+                        workflowArn:
+                          description: Amazon Resource Name (ARN) of the Image Builder Workflow.
+                          type: string
+                      type: object
+                    type: array
                 required:
                 - region
                 type: object
@@ -1361,6 +1481,9 @@ spec:
                   enhancedImageMetadataEnabled:
                     description: Whether additional information about the image being created is collected. Defaults to true.
                     type: boolean
+                  executionRole:
+                    description: Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.
+                    type: string
                   imageRecipeArn:
                     description: Amazon Resource Name (ARN) of the image recipe.
                     type: string
@@ -1594,6 +1717,33 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  workflow:
+                    description: Configuration block with the workflow configuration. Detailed below.
+                    items:
+                      properties:
+                        onFailure:
+                          description: The action to take if the workflow fails. Must be one of CONTINUE or ABORT.
+                          type: string
+                        parallelGroup:
+                          description: The parallel group in which to run a test Workflow.
+                          type: string
+                        parameter:
+                          description: Configuration block for the workflow parameters. Detailed below.
+                          items:
+                            properties:
+                              name:
+                                description: The name of the Workflow parameter.
+                                type: string
+                              value:
+                                description: The value of the Workflow parameter.
+                                type: string
+                            type: object
+                          type: array
+                        workflowArn:
+                          description: Amazon Resource Name (ARN) of the Image Builder Workflow.
+                          type: string
+                      type: object
+                    type: array
                 type: object
               managementPolicies:
                 default:
@@ -1838,6 +1988,9 @@ spec:
                   enhancedImageMetadataEnabled:
                     description: Whether additional information about the image being created is collected. Defaults to true.
                     type: boolean
+                  executionRole:
+                    description: Amazon Resource Name (ARN) of the service-linked role to be used by Image Builder to execute workflows.
+                    type: string
                   id:
                     type: string
                   imageRecipeArn:
@@ -1910,6 +2063,33 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  workflow:
+                    description: Configuration block with the workflow configuration. Detailed below.
+                    items:
+                      properties:
+                        onFailure:
+                          description: The action to take if the workflow fails. Must be one of CONTINUE or ABORT.
+                          type: string
+                        parallelGroup:
+                          description: The parallel group in which to run a test Workflow.
+                          type: string
+                        parameter:
+                          description: Configuration block for the workflow parameters. Detailed below.
+                          items:
+                            properties:
+                              name:
+                                description: The name of the Workflow parameter.
+                                type: string
+                              value:
+                                description: The value of the Workflow parameter.
+                                type: string
+                            type: object
+                          type: array
+                        workflowArn:
+                          description: Amazon Resource Name (ARN) of the Image Builder Workflow.
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

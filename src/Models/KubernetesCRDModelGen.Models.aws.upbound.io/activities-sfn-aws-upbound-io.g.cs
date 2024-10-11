@@ -8,10 +8,95 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sfn.aws.upbound.io;
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Defines what encryption configuration is used to encrypt data in the Activity. For more information see the section Data at rest encyption in the AWS Step Functions User Guide.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecForProviderEncryptionConfiguration
+{
+    /// <summary>Maximum duration for which Activities will reuse data keys. When the period expires, Activities will call GenerateDataKey. This setting only applies to customer managed KMS key and does not apply to AWS owned KMS key.</summary>
+    [JsonPropertyName("kmsDataKeyReusePeriodSeconds")]
+    public double? KmsDataKeyReusePeriodSeconds { get; set; }
+
+    /// <summary>The alias, alias ARN, key ID, or key ARN of the symmetric encryption KMS key that encrypts the data key. To specify a KMS key in a different AWS account, the customer must use the key ARN or alias ARN. For more information regarding kms_key_id, see KeyId in the KMS documentation.</summary>
+    [JsonPropertyName("kmsKeyId")]
+    public string? KmsKeyId { get; set; }
+
+    /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
+    [JsonPropertyName("kmsKeyIdRef")]
+    public V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdRef? KmsKeyIdRef { get; set; }
+
+    /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
+    [JsonPropertyName("kmsKeyIdSelector")]
+    public V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
+
+    /// <summary>The encryption option specified for the activity. Valid values: AWS_KMS_KEY, CUSTOMER_MANAGED_KMS_KEY</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActivitySpecForProvider
 {
+    /// <summary>Defines what encryption configuration is used to encrypt data in the Activity. For more information see the section Data at rest encyption in the AWS Step Functions User Guide.</summary>
+    [JsonPropertyName("encryptionConfiguration")]
+    public V1beta1ActivitySpecForProviderEncryptionConfiguration? EncryptionConfiguration { get; set; }
+
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
@@ -21,10 +106,95 @@ public partial class V1beta1ActivitySpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Defines what encryption configuration is used to encrypt data in the Activity. For more information see the section Data at rest encyption in the AWS Step Functions User Guide.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivitySpecInitProviderEncryptionConfiguration
+{
+    /// <summary>Maximum duration for which Activities will reuse data keys. When the period expires, Activities will call GenerateDataKey. This setting only applies to customer managed KMS key and does not apply to AWS owned KMS key.</summary>
+    [JsonPropertyName("kmsDataKeyReusePeriodSeconds")]
+    public double? KmsDataKeyReusePeriodSeconds { get; set; }
+
+    /// <summary>The alias, alias ARN, key ID, or key ARN of the symmetric encryption KMS key that encrypts the data key. To specify a KMS key in a different AWS account, the customer must use the key ARN or alias ARN. For more information regarding kms_key_id, see KeyId in the KMS documentation.</summary>
+    [JsonPropertyName("kmsKeyId")]
+    public string? KmsKeyId { get; set; }
+
+    /// <summary>Reference to a Key in kms to populate kmsKeyId.</summary>
+    [JsonPropertyName("kmsKeyIdRef")]
+    public V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdRef? KmsKeyIdRef { get; set; }
+
+    /// <summary>Selector for a Key in kms to populate kmsKeyId.</summary>
+    [JsonPropertyName("kmsKeyIdSelector")]
+    public V1beta1ActivitySpecInitProviderEncryptionConfigurationKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
+
+    /// <summary>The encryption option specified for the activity. Valid values: AWS_KMS_KEY, CUSTOMER_MANAGED_KMS_KEY</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActivitySpecInitProvider
 {
+    /// <summary>Defines what encryption configuration is used to encrypt data in the Activity. For more information see the section Data at rest encyption in the AWS Step Functions User Guide.</summary>
+    [JsonPropertyName("encryptionConfiguration")]
+    public V1beta1ActivitySpecInitProviderEncryptionConfiguration? EncryptionConfiguration { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -162,6 +332,23 @@ public partial class V1beta1ActivitySpec
     public V1beta1ActivitySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Defines what encryption configuration is used to encrypt data in the Activity. For more information see the section Data at rest encyption in the AWS Step Functions User Guide.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ActivityStatusAtProviderEncryptionConfiguration
+{
+    /// <summary>Maximum duration for which Activities will reuse data keys. When the period expires, Activities will call GenerateDataKey. This setting only applies to customer managed KMS key and does not apply to AWS owned KMS key.</summary>
+    [JsonPropertyName("kmsDataKeyReusePeriodSeconds")]
+    public double? KmsDataKeyReusePeriodSeconds { get; set; }
+
+    /// <summary>The alias, alias ARN, key ID, or key ARN of the symmetric encryption KMS key that encrypts the data key. To specify a KMS key in a different AWS account, the customer must use the key ARN or alias ARN. For more information regarding kms_key_id, see KeyId in the KMS documentation.</summary>
+    [JsonPropertyName("kmsKeyId")]
+    public string? KmsKeyId { get; set; }
+
+    /// <summary>The encryption option specified for the activity. Valid values: AWS_KMS_KEY, CUSTOMER_MANAGED_KMS_KEY</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActivityStatusAtProvider
@@ -169,6 +356,10 @@ public partial class V1beta1ActivityStatusAtProvider
     /// <summary>The date the activity was created.</summary>
     [JsonPropertyName("creationDate")]
     public string? CreationDate { get; set; }
+
+    /// <summary>Defines what encryption configuration is used to encrypt data in the Activity. For more information see the section Data at rest encyption in the AWS Step Functions User Guide.</summary>
+    [JsonPropertyName("encryptionConfiguration")]
+    public V1beta1ActivityStatusAtProviderEncryptionConfiguration? EncryptionConfiguration { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) that identifies the created activity.</summary>
     [JsonPropertyName("id")]

@@ -150,6 +150,18 @@ spec:
                           type: string
                       type: object
                     type: array
+                  interactiveConfiguration:
+                    description: –  Enables the interactive use cases to use when running an application.
+                    items:
+                      properties:
+                        livyEndpointEnabled:
+                          description: Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+                          type: boolean
+                        studioEnabled:
+                          description: Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.
+                          type: boolean
+                      type: object
+                    type: array
                   maximumCapacity:
                     description: –  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.
                     items:
@@ -290,6 +302,18 @@ spec:
                         initialCapacityType:
                           description: The worker type for an analytics framework. For Spark applications, the key can either be set to Driver or Executor. For Hive applications, it can be set to HiveDriver or TezTask.
                           type: string
+                      type: object
+                    type: array
+                  interactiveConfiguration:
+                    description: –  Enables the interactive use cases to use when running an application.
+                    items:
+                      properties:
+                        livyEndpointEnabled:
+                          description: Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+                          type: boolean
+                        studioEnabled:
+                          description: Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.
+                          type: boolean
                       type: object
                     type: array
                   maximumCapacity:
@@ -631,6 +655,18 @@ spec:
                         initialCapacityType:
                           description: The worker type for an analytics framework. For Spark applications, the key can either be set to Driver or Executor. For Hive applications, it can be set to HiveDriver or TezTask.
                           type: string
+                      type: object
+                    type: array
+                  interactiveConfiguration:
+                    description: –  Enables the interactive use cases to use when running an application.
+                    items:
+                      properties:
+                        livyEndpointEnabled:
+                          description: Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+                          type: boolean
+                        studioEnabled:
+                          description: Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.
+                          type: boolean
                       type: object
                     type: array
                   maximumCapacity:
@@ -877,6 +913,16 @@ spec:
                           type: string
                       type: object
                     type: array
+                  interactiveConfiguration:
+                    description: –  Enables the interactive use cases to use when running an application.
+                    properties:
+                      livyEndpointEnabled:
+                        description: Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+                        type: boolean
+                      studioEnabled:
+                        description: Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.
+                        type: boolean
+                    type: object
                   maximumCapacity:
                     description: –  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.
                     properties:
@@ -1005,6 +1051,16 @@ spec:
                           type: string
                       type: object
                     type: array
+                  interactiveConfiguration:
+                    description: –  Enables the interactive use cases to use when running an application.
+                    properties:
+                      livyEndpointEnabled:
+                        description: Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+                        type: boolean
+                      studioEnabled:
+                        description: Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.
+                        type: boolean
+                    type: object
                   maximumCapacity:
                     description: –  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.
                     properties:
@@ -1332,6 +1388,16 @@ spec:
                           type: string
                       type: object
                     type: array
+                  interactiveConfiguration:
+                    description: –  Enables the interactive use cases to use when running an application.
+                    properties:
+                      livyEndpointEnabled:
+                        description: Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+                        type: boolean
+                      studioEnabled:
+                        description: Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.
+                        type: boolean
+                    type: object
                   maximumCapacity:
                     description: –  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.
                     properties:

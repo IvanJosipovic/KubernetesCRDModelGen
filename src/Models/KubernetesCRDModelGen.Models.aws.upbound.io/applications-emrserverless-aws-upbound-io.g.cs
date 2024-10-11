@@ -84,6 +84,19 @@ public partial class V1beta1ApplicationSpecForProviderInitialCapacity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecForProviderInteractiveConfiguration
+{
+    /// <summary>Enables an Apache Livy endpoint that you can connect to and run interactive jobs.</summary>
+    [JsonPropertyName("livyEndpointEnabled")]
+    public bool? LivyEndpointEnabled { get; set; }
+
+    /// <summary>Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.</summary>
+    [JsonPropertyName("studioEnabled")]
+    public bool? StudioEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderMaximumCapacity
 {
     /// <summary>The maximum allowed CPU for an application.</summary>
@@ -135,6 +148,10 @@ public partial class V1beta1ApplicationSpecForProvider
     /// <summary>–  The capacity to initialize when the application is created.</summary>
     [JsonPropertyName("initialCapacity")]
     public IList<V1beta1ApplicationSpecForProviderInitialCapacity>? InitialCapacity { get; set; }
+
+    /// <summary>–  Enables the interactive use cases to use when running an application.</summary>
+    [JsonPropertyName("interactiveConfiguration")]
+    public IList<V1beta1ApplicationSpecForProviderInteractiveConfiguration>? InteractiveConfiguration { get; set; }
 
     /// <summary>–  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
     [JsonPropertyName("maximumCapacity")]
@@ -241,6 +258,19 @@ public partial class V1beta1ApplicationSpecInitProviderInitialCapacity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecInitProviderInteractiveConfiguration
+{
+    /// <summary>Enables an Apache Livy endpoint that you can connect to and run interactive jobs.</summary>
+    [JsonPropertyName("livyEndpointEnabled")]
+    public bool? LivyEndpointEnabled { get; set; }
+
+    /// <summary>Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.</summary>
+    [JsonPropertyName("studioEnabled")]
+    public bool? StudioEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderMaximumCapacity
 {
     /// <summary>The maximum allowed CPU for an application.</summary>
@@ -292,6 +322,10 @@ public partial class V1beta1ApplicationSpecInitProvider
     /// <summary>–  The capacity to initialize when the application is created.</summary>
     [JsonPropertyName("initialCapacity")]
     public IList<V1beta1ApplicationSpecInitProviderInitialCapacity>? InitialCapacity { get; set; }
+
+    /// <summary>–  Enables the interactive use cases to use when running an application.</summary>
+    [JsonPropertyName("interactiveConfiguration")]
+    public IList<V1beta1ApplicationSpecInitProviderInteractiveConfiguration>? InteractiveConfiguration { get; set; }
 
     /// <summary>–  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
     [JsonPropertyName("maximumCapacity")]
@@ -526,6 +560,19 @@ public partial class V1beta1ApplicationStatusAtProviderInitialCapacity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationStatusAtProviderInteractiveConfiguration
+{
+    /// <summary>Enables an Apache Livy endpoint that you can connect to and run interactive jobs.</summary>
+    [JsonPropertyName("livyEndpointEnabled")]
+    public bool? LivyEndpointEnabled { get; set; }
+
+    /// <summary>Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a notebook.</summary>
+    [JsonPropertyName("studioEnabled")]
+    public bool? StudioEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderMaximumCapacity
 {
     /// <summary>The maximum allowed CPU for an application.</summary>
@@ -585,6 +632,10 @@ public partial class V1beta1ApplicationStatusAtProvider
     /// <summary>–  The capacity to initialize when the application is created.</summary>
     [JsonPropertyName("initialCapacity")]
     public IList<V1beta1ApplicationStatusAtProviderInitialCapacity>? InitialCapacity { get; set; }
+
+    /// <summary>–  Enables the interactive use cases to use when running an application.</summary>
+    [JsonPropertyName("interactiveConfiguration")]
+    public IList<V1beta1ApplicationStatusAtProviderInteractiveConfiguration>? InteractiveConfiguration { get; set; }
 
     /// <summary>–  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
     [JsonPropertyName("maximumCapacity")]

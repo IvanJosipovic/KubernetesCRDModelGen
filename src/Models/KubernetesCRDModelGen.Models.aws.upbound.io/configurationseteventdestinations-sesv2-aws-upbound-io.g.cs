@@ -90,6 +90,15 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEvent
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationCloudWatchDestinationDimensionConfiguration>? DimensionConfiguration { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationEventBridgeDestination
+{
+    /// <summary>The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.</summary>
+    [JsonPropertyName("eventBusArn")]
+    public string? EventBusArn { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationKinesisFirehoseDestinationDeliveryStreamArnRefPolicy
@@ -389,6 +398,10 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEvent
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("eventBridgeDestination")]
+    public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationEventBridgeDestination>? EventBridgeDestination { get; set; }
+
     /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.</summary>
     [JsonPropertyName("kinesisFirehoseDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationKinesisFirehoseDestination>? KinesisFirehoseDestination { get; set; }
@@ -515,6 +528,15 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEven
     /// <summary>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.</summary>
     [JsonPropertyName("dimensionConfiguration")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationCloudWatchDestinationDimensionConfiguration>? DimensionConfiguration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationEventBridgeDestination
+{
+    /// <summary>The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.</summary>
+    [JsonPropertyName("eventBusArn")]
+    public string? EventBusArn { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -816,6 +838,10 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEven
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("eventBridgeDestination")]
+    public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationEventBridgeDestination>? EventBridgeDestination { get; set; }
+
     /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.</summary>
     [JsonPropertyName("kinesisFirehoseDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationKinesisFirehoseDestination>? KinesisFirehoseDestination { get; set; }
@@ -1018,6 +1044,15 @@ public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEven
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationEventBridgeDestination
+{
+    /// <summary>The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to. Only the default bus is supported.</summary>
+    [JsonPropertyName("eventBusArn")]
+    public string? EventBusArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationKinesisFirehoseDestination
 {
     /// <summary>The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that the Amazon SES API v2 sends email events to.</summary>
@@ -1058,6 +1093,10 @@ public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEven
     /// <summary>When the event destination is enabled, the specified event types are sent to the destinations. Default: false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("eventBridgeDestination")]
+    public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationEventBridgeDestination>? EventBridgeDestination { get; set; }
 
     /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.</summary>
     [JsonPropertyName("kinesisFirehoseDestination")]

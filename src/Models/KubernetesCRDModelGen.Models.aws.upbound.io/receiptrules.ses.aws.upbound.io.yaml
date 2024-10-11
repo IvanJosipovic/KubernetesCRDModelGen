@@ -169,6 +169,9 @@ spec:
                         bucketName:
                           description: The name of the S3 bucket
                           type: string
+                        iamRoleArn:
+                          description: The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer managed key, and publishing to the Amazon SNS topic
+                          type: string
                         kmsKeyArn:
                           description: The ARN of the KMS key
                           type: string
@@ -340,6 +343,9 @@ spec:
                       properties:
                         bucketName:
                           description: The name of the S3 bucket
+                          type: string
+                        iamRoleArn:
+                          description: The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer managed key, and publishing to the Amazon SNS topic
                           type: string
                         kmsKeyArn:
                           description: The ARN of the KMS key
@@ -712,6 +718,9 @@ spec:
                       properties:
                         bucketName:
                           description: The name of the S3 bucket
+                          type: string
+                        iamRoleArn:
+                          description: The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer managed key, and publishing to the Amazon SNS topic
                           type: string
                         kmsKeyArn:
                           description: The ARN of the KMS key
