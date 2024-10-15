@@ -68,6 +68,10 @@ public partial class V1alpha1AlloyDBInstanceSpecNetworkConfig
     [JsonPropertyName("authorizedExternalNetworks")]
     public IList<V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalNetworks>? AuthorizedExternalNetworks { get; set; }
 
+    /// <summary>Enabling outbound public ip for the instance.</summary>
+    [JsonPropertyName("enableOutboundPublicIp")]
+    public bool? EnableOutboundPublicIp { get; set; }
+
     /// <summary>Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.</summary>
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
@@ -183,6 +187,10 @@ public partial class V1alpha1AlloyDBInstanceStatus
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
+
+    /// <summary>The outbound public IP addresses for the instance. This is available ONLY when networkConfig.enableOutboundPublicIp is set to true. These IP addresses are used for outbound connections.</summary>
+    [JsonPropertyName("outboundPublicIpAddresses")]
+    public IList<string>? OutboundPublicIpAddresses { get; set; }
 
     /// <summary>The public IP addresses for the Instance. This is available ONLY when networkConfig.enablePublicIp is set to true. This is the connection endpoint for an end-user application.</summary>
     [JsonPropertyName("publicIpAddress")]

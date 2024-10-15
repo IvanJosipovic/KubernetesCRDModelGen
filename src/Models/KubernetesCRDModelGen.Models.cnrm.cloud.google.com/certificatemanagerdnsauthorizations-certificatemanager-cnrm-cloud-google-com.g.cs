@@ -41,6 +41,10 @@ public partial class V1beta1CertificateManagerDNSAuthorizationSpec
     [JsonPropertyName("domain")]
     public string Domain { get; set; }
 
+    /// <summary>Immutable. Optional. Location represents the geographical location of the DnsAuthorization. If not specified, "global" is used.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
     public V1beta1CertificateManagerDNSAuthorizationSpecProjectRef ProjectRef { get; set; }
@@ -79,15 +83,15 @@ public partial class V1beta1CertificateManagerDNSAuthorizationStatusConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateManagerDNSAuthorizationStatusDnsResourceRecord
 {
-    /// <summary>Data of the DNS Resource Record.</summary>
+    /// <summary>Output only. Data of the DNS Resource Record.</summary>
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>Fully qualified name of the DNS Resource Record. E.g. '_acme-challenge.example.com'.</summary>
+    /// <summary>Output only. Fully qualified name of the DNS Resource Record. e.g. `_acme-challenge.example.com`</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Type of the DNS Resource Record.</summary>
+    /// <summary>Output only. Type of the DNS Resource Record. Currently always set to "CNAME".</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -103,6 +107,10 @@ public partial class V1beta1CertificateManagerDNSAuthorizationStatus
     /// <summary>The structure describing the DNS Resource Record that needs to be added to DNS configuration for the authorization to be usable by certificate.</summary>
     [JsonPropertyName("dnsResourceRecord")]
     public IList<V1beta1CertificateManagerDNSAuthorizationStatusDnsResourceRecord>? DnsResourceRecord { get; set; }
+
+    /// <summary>A unique specifier for the CertificateManagerDNSAuthorization resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]

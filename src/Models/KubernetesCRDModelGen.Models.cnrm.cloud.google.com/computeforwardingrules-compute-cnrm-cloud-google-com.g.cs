@@ -252,6 +252,10 @@ public partial class V1beta1ComputeForwardingRuleSpecTargetTargetVPNGatewayRef
 public partial class V1beta1ComputeForwardingRuleSpecTarget
 {
     /// <summary></summary>
+    [JsonPropertyName("googleAPIsBundle")]
+    public string? GoogleAPIsBundle { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("serviceAttachmentRef")]
     public V1beta1ComputeForwardingRuleSpecTargetServiceAttachmentRef? ServiceAttachmentRef { get; set; }
 
