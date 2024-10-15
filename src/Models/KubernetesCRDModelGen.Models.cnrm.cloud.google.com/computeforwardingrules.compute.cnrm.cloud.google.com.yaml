@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.123.1
+    cnrm.cloud.google.com/version: 1.124.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -561,6 +561,8 @@ spec:
               target:
                 description: The target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
                 properties:
+                  googleAPIsBundle:
+                    type: string
                   serviceAttachmentRef:
                     oneOf:
                     - not:

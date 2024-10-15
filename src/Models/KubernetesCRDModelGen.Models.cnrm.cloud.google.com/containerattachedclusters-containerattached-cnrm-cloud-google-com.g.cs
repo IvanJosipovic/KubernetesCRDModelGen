@@ -8,55 +8,55 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerattached.cnrm.cloud.google.com;
-/// <summary>Configuration related to the cluster RBAC settings.</summary>
+/// <summary>Optional. Configuration related to the cluster RBAC settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecAuthorization
 {
-    /// <summary>Users that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the 'cluster-admin' ClusterRole to the users. Up to ten admin users can be provided.  For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles.</summary>
+    /// <summary>Optional. Users that can perform operations as a cluster admin. A managed  ClusterRoleBinding will be created to grant the `cluster-admin` ClusterRole  to the users. Up to ten admin users can be provided.   For more info on RBAC, see  https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles</summary>
     [JsonPropertyName("adminUsers")]
     public IList<string>? AdminUsers { get; set; }
 }
 
-/// <summary>Binary Authorization configuration.</summary>
+/// <summary>Optional. Binary Authorization configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecBinaryAuthorization
 {
-    /// <summary>Configure Binary Authorization evaluation mode. Possible values: ["DISABLED", "PROJECT_SINGLETON_POLICY_ENFORCE"].</summary>
+    /// <summary>Mode of operation for binauthz policy evaluation. If unspecified, defaults to DISABLED. Possible values: ["DISABLED", "PROJECT_SINGLETON_POLICY_ENFORCE"].</summary>
     [JsonPropertyName("evaluationMode")]
     public string? EvaluationMode { get; set; }
 }
 
-/// <summary>The number of the Fleet host project where this cluster will be registered.</summary>
+/// <summary>The id of the Fleet host project where this cluster will be registered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecFleetProjectRef
 {
-    /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
+    /// <summary>The project of the fleet. Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>Name of the project resource. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>Namespace of the project resource. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary>Fleet configuration.</summary>
+/// <summary>Required. Fleet configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecFleet
 {
-    /// <summary>The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;.</summary>
+    /// <summary>Output only. The name of the managed Hub Membership resource associated to  this cluster.   Membership names are formatted as  `projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;`.</summary>
     [JsonPropertyName("membership")]
     public string? Membership { get; set; }
 
-    /// <summary>The number of the Fleet host project where this cluster will be registered.</summary>
+    /// <summary>The id of the Fleet host project where this cluster will be registered.</summary>
     [JsonPropertyName("projectRef")]
     public V1beta1ContainerAttachedClusterSpecFleetProjectRef ProjectRef { get; set; }
 }
 
-/// <summary>The configuration of the logging components.</summary>
+/// <summary>The configuration of the logging components;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecLoggingConfigComponentConfig
 {
@@ -65,11 +65,11 @@ public partial class V1beta1ContainerAttachedClusterSpecLoggingConfigComponentCo
     public IList<string>? EnableComponents { get; set; }
 }
 
-/// <summary>Logging configuration.</summary>
+/// <summary>Optional. Logging configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecLoggingConfig
 {
-    /// <summary>The configuration of the logging components.</summary>
+    /// <summary>The configuration of the logging components;</summary>
     [JsonPropertyName("componentConfig")]
     public V1beta1ContainerAttachedClusterSpecLoggingConfigComponentConfig? ComponentConfig { get; set; }
 }
@@ -83,7 +83,7 @@ public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfigManagedP
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Monitoring configuration.</summary>
+/// <summary>Optional. Monitoring configuration for this cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfig
 {
@@ -92,15 +92,15 @@ public partial class V1beta1ContainerAttachedClusterSpecMonitoringConfig
     public V1beta1ContainerAttachedClusterSpecMonitoringConfigManagedPrometheusConfig? ManagedPrometheusConfig { get; set; }
 }
 
-/// <summary>OIDC discovery information of the target cluster.  Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This fields indicates how GCP services validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP.  Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the 'issuer_url' field while clusters with private issuers need to provide both 'issuer_url' and 'jwks'.</summary>
+/// <summary>Required. OpenID Connect (OIDC) discovery information of the target cluster.  Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This field indicates how GCP services	validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP.  Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the 'issuerUrl' field while clusters with private issuers need to provide both 'issuerUrl' and 'jwks'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecOidcConfig
 {
-    /// <summary>Immutable. A JSON Web Token (JWT) issuer URI. 'issuer' must start with 'https://'.</summary>
+    /// <summary>Immutable. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://`.</summary>
     [JsonPropertyName("issuerUrl")]
     public string IssuerUrl { get; set; }
 
-    /// <summary>Immutable. OIDC verification keys in JWKS format (RFC 7517).</summary>
+    /// <summary>Immutable, Optional. OIDC verification keys in JWKS format (RFC 7517).  It contains a list of OIDC verification keys that can be used to verify  OIDC JWTs.   This field is required for cluster that doesn't have a publicly available  discovery endpoint. When provided, it will be directly used  to verify the OIDC JWT asserted by the IDP.</summary>
     [JsonPropertyName("jwks")]
     public string? Jwks { get; set; }
 }
@@ -109,48 +109,52 @@ public partial class V1beta1ContainerAttachedClusterSpecOidcConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecProjectRef
 {
-    /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ContainerAttachedClusterSpec defines the desired state of ContainerAttachedCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpec
 {
-    /// <summary>Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
+    /// <summary>Optional. Annotations on the cluster.   This field has the same restrictions as Kubernetes annotations.  The total size of all keys and values combined is limited to 256k.  Key can have 2 segments: prefix (optional) and name (required),  separated by a slash (/).  Prefix must be a DNS subdomain.  Name must be 63 characters or less, begin and end with alphanumerics,  with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
 
-    /// <summary>Configuration related to the cluster RBAC settings.</summary>
+    /// <summary>Optional. Configuration related to the cluster RBAC settings.</summary>
     [JsonPropertyName("authorization")]
     public V1beta1ContainerAttachedClusterSpecAuthorization? Authorization { get; set; }
 
-    /// <summary>Binary Authorization configuration.</summary>
+    /// <summary>Optional. Binary Authorization configuration for this cluster.</summary>
     [JsonPropertyName("binaryAuthorization")]
     public V1beta1ContainerAttachedClusterSpecBinaryAuthorization? BinaryAuthorization { get; set; }
 
-    /// <summary>Policy to determine what flags to send on delete.</summary>
+    /// <summary>Optional. Policy to determine what flags to send on delete.</summary>
     [JsonPropertyName("deletionPolicy")]
     public string? DeletionPolicy { get; set; }
 
-    /// <summary>A human readable description of this attached cluster. Cannot be longer than 255 UTF-8 encoded bytes.</summary>
+    /// <summary>Optional. A human readable description of this Attached cluster. Cannot be longer than 255 UTF-8 encoded bytes.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Immutable. The Kubernetes distribution of the underlying attached cluster. Supported values: "eks", "aks".</summary>
+    /// <summary>Immutable. The Kubernetes distribution of the underlying attached cluster.   Supported values: ["eks", "aks", "generic"].</summary>
     [JsonPropertyName("distribution")]
     public string Distribution { get; set; }
 
-    /// <summary>Fleet configuration.</summary>
+    /// <summary>Required. Fleet configuration.</summary>
     [JsonPropertyName("fleet")]
     public V1beta1ContainerAttachedClusterSpecFleet Fleet { get; set; }
 
@@ -158,27 +162,27 @@ public partial class V1beta1ContainerAttachedClusterSpec
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>Logging configuration.</summary>
+    /// <summary>Optional. Logging configuration for this cluster.</summary>
     [JsonPropertyName("loggingConfig")]
     public V1beta1ContainerAttachedClusterSpecLoggingConfig? LoggingConfig { get; set; }
 
-    /// <summary>Monitoring configuration.</summary>
+    /// <summary>Optional. Monitoring configuration for this cluster.</summary>
     [JsonPropertyName("monitoringConfig")]
     public V1beta1ContainerAttachedClusterSpecMonitoringConfig? MonitoringConfig { get; set; }
 
-    /// <summary>OIDC discovery information of the target cluster.  Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This fields indicates how GCP services validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP.  Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the 'issuer_url' field while clusters with private issuers need to provide both 'issuer_url' and 'jwks'.</summary>
+    /// <summary>Required. OpenID Connect (OIDC) discovery information of the target cluster.  Kubernetes Service Account (KSA) tokens are JWT tokens signed by the cluster API server. This field indicates how GCP services	validate KSA tokens in order to allow system workloads (such as GKE Connect and telemetry agents) to authenticate back to GCP.  Both clusters with public and private issuer URLs are supported. Clusters with public issuers only need to specify the 'issuerUrl' field while clusters with private issuers need to provide both 'issuerUrl' and 'jwks'.</summary>
     [JsonPropertyName("oidcConfig")]
     public V1beta1ContainerAttachedClusterSpecOidcConfig OidcConfig { get; set; }
 
-    /// <summary>The platform version for the cluster (e.g. '1.23.0-gke.1').</summary>
+    /// <summary>Required. The platform version for the cluster (e.g. `1.30.0-gke.1`).</summary>
     [JsonPropertyName("platformVersion")]
     public string PlatformVersion { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1ContainerAttachedClusterSpecProjectRef ProjectRef { get; set; }
+    public V1beta1ContainerAttachedClusterSpecProjectRef? ProjectRef { get; set; }
 
-    /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>Immutable, Optional. The ContainerAttachedCluster name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
@@ -217,6 +221,15 @@ public partial class V1beta1ContainerAttachedClusterStatusErrors
     public string? Message { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ContainerAttachedClusterStatusObservedState
+{
+    /// <summary>Output only. The name of the managed Hub Membership resource associated to  this cluster.   Membership names are formatted as  `projects/&lt;project-number&gt;/locations/global/membership/&lt;cluster-id&gt;`.  This field mirrors the Spec.Fleet.Membership field.</summary>
+    [JsonPropertyName("fleetMembership")]
+    public string? FleetMembership { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig
@@ -234,19 +247,19 @@ public partial class V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig
     public string? WorkloadPool { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ContainerAttachedClusterStatus defines the config connector machine state of ContainerAttachedCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterStatus
 {
-    /// <summary>Output only. The region where this cluster runs.  For EKS clusters, this is an AWS region. For AKS clusters, this is an Azure region.</summary>
+    /// <summary>The region where this cluster runs.   For EKS clusters, this is an AWS region. For AKS clusters,  this is an Azure region.</summary>
     [JsonPropertyName("clusterRegion")]
     public string? ClusterRegion { get; set; }
 
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1beta1ContainerAttachedClusterStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Output only. The time at which this cluster was created.</summary>
+    /// <summary>The time at which this cluster was registered.</summary>
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
@@ -260,13 +273,17 @@ public partial class V1beta1ContainerAttachedClusterStatus
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1beta1ContainerAttachedClusterStatusObservedState? ObservedState { get; set; }
 
     /// <summary>If set, there are currently changes in flight to the cluster.</summary>
     [JsonPropertyName("reconciling")]
     public bool? Reconciling { get; set; }
 
-    /// <summary>The current state of the cluster. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING, STOPPING, ERROR, DEGRADED.</summary>
+    /// <summary>The current state of the cluster. Possible values:	STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING, STOPPING, ERROR,	DEGRADED.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
@@ -283,7 +300,7 @@ public partial class V1beta1ContainerAttachedClusterStatus
     public IList<V1beta1ContainerAttachedClusterStatusWorkloadIdentityConfig>? WorkloadIdentityConfig { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ContainerAttachedCluster is the Schema for the ContainerAttachedCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ContainerAttachedCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerAttachedClusterSpec>, IStatus<V1beta1ContainerAttachedClusterStatus>
@@ -304,11 +321,11 @@ public partial class V1beta1ContainerAttachedCluster : IKubernetesObject<V1Objec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>ContainerAttachedClusterSpec defines the desired state of ContainerAttachedCluster</summary>
     [JsonPropertyName("spec")]
     public V1beta1ContainerAttachedClusterSpec Spec { get; set; }
 
-    /// <summary></summary>
+    /// <summary>ContainerAttachedClusterStatus defines the config connector machine state of ContainerAttachedCluster</summary>
     [JsonPropertyName("status")]
     public V1beta1ContainerAttachedClusterStatus? Status { get; set; }
 }

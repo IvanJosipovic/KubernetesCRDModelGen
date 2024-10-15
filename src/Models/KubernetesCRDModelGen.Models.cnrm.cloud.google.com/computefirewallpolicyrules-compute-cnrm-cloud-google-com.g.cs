@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecFirewallPolicyRef
 {
-    /// <summary>The firewall policy of the resource.  Allowed value: The Google Cloud resource name of a `ComputeFirewallPolicy` resource (format: `locations/global/firewallPolicies/{{name}}`).</summary>
+    /// <summary>A reference to an externally managed ComputeFirewallPolicy resource. Should be in the format `locations/global/firewallPolicies/&lt;firewallPolicy&gt;`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The `name` field of a `ComputeFirewall olicy ` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` field of a `ComputeFirewallPolicy ` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -91,15 +91,15 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecMatch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetResources
 {
-    /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
+    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The `name` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -108,7 +108,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetResources
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetServiceAccounts
 {
-    /// <summary>Allowed value: The Google Cloud resource name of an `IAMServiceAccount` resource (format: `projects/{{project}}/serviceAccounts/{{name}}@{{project}}.iam.gserviceaccount.com`).</summary>
+    /// <summary>The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
@@ -195,9 +195,13 @@ public partial class V1beta1ComputeFirewallPolicyRuleStatusConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleStatus
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1beta1ComputeFirewallPolicyRuleStatusConditions>? Conditions { get; set; }
+
+    /// <summary>A unique Config Connector specifier for the resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules</summary>
     [JsonPropertyName("kind")]
@@ -205,14 +209,14 @@ public partial class V1beta1ComputeFirewallPolicyRuleStatus
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
 
     /// <summary>Calculation of the complexity of a single firewall policy rule.</summary>
     [JsonPropertyName("ruleTupleCount")]
     public long? RuleTupleCount { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ComputeFirewallPolicyRule is the Schema for the compute API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ComputeFirewallPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeFirewallPolicyRuleSpec>, IStatus<V1beta1ComputeFirewallPolicyRuleStatus>
@@ -235,7 +239,7 @@ public partial class V1beta1ComputeFirewallPolicyRule : IKubernetesObject<V1Obje
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeFirewallPolicyRuleSpec Spec { get; set; }
+    public V1beta1ComputeFirewallPolicyRuleSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]

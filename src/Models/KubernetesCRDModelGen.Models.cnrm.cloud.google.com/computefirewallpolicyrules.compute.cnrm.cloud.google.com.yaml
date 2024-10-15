@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.123.1
+    cnrm.cloud.google.com/version: 1.124.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/dcl2crd: true
@@ -16,6 +16,7 @@ spec:
     categories:
     - gcp
     kind: ComputeFirewallPolicyRule
+    listKind: ComputeFirewallPolicyRuleList
     plural: computefirewallpolicyrules
     shortNames:
     - gcpcomputefirewallpolicyrule
@@ -42,12 +43,13 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
+        description: ComputeFirewallPolicyRule is the Schema for the compute API
         properties:
           apiVersion:
-            description: 'apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources'
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
             type: string
           kind:
-            description: 'kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds'
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
             type: string
           metadata:
             type: object
@@ -86,17 +88,13 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
-                      The firewall policy of the resource.
-
-
-                      Allowed value: The Google Cloud resource name of a `ComputeFirewallPolicy` resource (format: `locations/global/firewallPolicies/{{name}}`).
+                    description: A reference to an externally managed ComputeFirewallPolicy resource. Should be in the format `locations/global/firewallPolicies/<firewallPolicy>`.
                     type: string
                   name:
-                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                    description: The `name` field of a `ComputeFirewall olicy ` resource.
                     type: string
                   namespace:
-                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                    description: The `namespace` field of a `ComputeFirewallPolicy ` resource.
                     type: string
                 type: object
               match:
@@ -193,13 +191,13 @@ spec:
                     - external
                   properties:
                     external:
-                      description: 'Allowed value: The `selfLink` field of a `ComputeNetwork` resource.'
+                      description: A reference to an externally managed Compute Network resource. Should be in the format `projects/<projectID>/global/networks/<network>`.
                       type: string
                     name:
-                      description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                      description: The `name` field of a `ComputeNetwork` resource.
                       type: string
                     namespace:
-                      description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                      description: The `namespace` field of a `ComputeNetwork` resource.
                       type: string
                   type: object
                 type: array
@@ -221,7 +219,7 @@ spec:
                     - external
                   properties:
                     external:
-                      description: 'Allowed value: The Google Cloud resource name of an `IAMServiceAccount` resource (format: `projects/{{project}}/serviceAccounts/{{name}}@{{project}}.iam.gserviceaccount.com`).'
+                      description: The `email` field of an `IAMServiceAccount` resource.
                       type: string
                     name:
                       description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
@@ -241,7 +239,7 @@ spec:
           status:
             properties:
               conditions:
-                description: Conditions represent the latest available observation of the resource's current state.
+                description: Conditions represent the latest available observations of the object's current state.
                 items:
                   properties:
                     lastTransitionTime:
@@ -261,19 +259,21 @@ spec:
                       type: string
                   type: object
                 type: array
+              externalRef:
+                description: A unique Config Connector specifier for the resource in GCP.
+                type: string
               kind:
                 description: Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
+                format: int64
                 type: integer
               ruleTupleCount:
                 description: Calculation of the complexity of a single firewall policy rule.
                 format: int64
                 type: integer
             type: object
-        required:
-        - spec
         type: object
     served: true
     storage: true
@@ -283,5 +283,5 @@ status:
   acceptedNames:
     kind: ''
     plural: ''
-  conditions: []
-  storedVersions: []
+  conditions: 
+  storedVersions: 

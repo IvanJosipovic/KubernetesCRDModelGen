@@ -12,44 +12,48 @@ namespace KubernetesCRDModelGen.Models.bigqueryanalyticshub.cnrm.cloud.google.co
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpecProjectRef
 {
-    /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>BigQueryAnalyticsHubDataExchangeSpec defines the desired state of BigQueryAnalyticsHubDataExchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpec
 {
-    /// <summary>Description of the data exchange.</summary>
+    /// <summary>Optional. Description of the data exchange. The description must not contain Unicode non-characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). Default value is an empty string. Max length: 2000 bytes.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Human-readable display name of the data exchange. The display name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and must not start or end with spaces.</summary>
-    [JsonPropertyName("displayName")]
-    public string DisplayName { get; set; }
+    /// <summary>Optional. Type of discovery on the discovery page for all the listings under this exchange. Updating this field also updates (overwrites) the discovery_type field for all the listings under this exchange.</summary>
+    [JsonPropertyName("discoveryType")]
+    public string? DiscoveryType { get; set; }
 
-    /// <summary>Documentation describing the data exchange.</summary>
+    /// <summary>Required. Human-readable display name of the data exchange. The display name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&amp;) and must not start or end with spaces. Default value is an empty string. Max length: 63 bytes.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>Optional. Documentation describing the data exchange.</summary>
     [JsonPropertyName("documentation")]
     public string? Documentation { get; set; }
-
-    /// <summary>Base64 encoded image representing the data exchange.</summary>
-    [JsonPropertyName("icon")]
-    public string? Icon { get; set; }
 
     /// <summary>Immutable. The name of the location this data exchange.</summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>Email or URL of the primary point of contact of the data exchange.</summary>
+    /// <summary>Optional. Email or URL of the primary point of contact of the data exchange. Max Length: 1000 bytes.</summary>
     [JsonPropertyName("primaryContact")]
     public string? PrimaryContact { get; set; }
 
@@ -57,7 +61,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpec
     [JsonPropertyName("projectRef")]
     public V1alpha1BigQueryAnalyticsHubDataExchangeSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. Optional. The dataExchangeId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>Immutable. The BigQueryAnalyticsHubDataExchange name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
@@ -87,28 +91,37 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusObservedState
+{
+    /// <summary>Number of listings contained in the data exchange.</summary>
+    [JsonPropertyName("listingCount")]
+    public long? ListingCount { get; set; }
+}
+
+/// <summary>BigQueryAnalyticsHubDataExchangeStatus defines the config connector machine state of BigQueryAnalyticsHubDataExchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatus
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1alpha1BigQueryAnalyticsHubDataExchangeStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Number of listings contained in the data exchange.</summary>
-    [JsonPropertyName("listingCount")]
-    public int? ListingCount { get; set; }
-
-    /// <summary>The resource name of the data exchange, for example: "projects/myproject/locations/US/dataExchanges/123".</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
+    /// <summary>A unique specifier for the BigQueryAnalyticsHubDataExchange resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1alpha1BigQueryAnalyticsHubDataExchangeStatusObservedState? ObservedState { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>BigQueryAnalyticsHubDataExchange is the Schema for the BigQueryAnalyticsHubDataExchange API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1BigQueryAnalyticsHubDataExchange : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryAnalyticsHubDataExchangeSpec>, IStatus<V1alpha1BigQueryAnalyticsHubDataExchangeStatus>
@@ -129,11 +142,11 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchange : IKubernetesObjec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>BigQueryAnalyticsHubDataExchangeSpec defines the desired state of BigQueryAnalyticsHubDataExchange</summary>
     [JsonPropertyName("spec")]
     public V1alpha1BigQueryAnalyticsHubDataExchangeSpec Spec { get; set; }
 
-    /// <summary></summary>
+    /// <summary>BigQueryAnalyticsHubDataExchangeStatus defines the config connector machine state of BigQueryAnalyticsHubDataExchange</summary>
     [JsonPropertyName("status")]
     public V1alpha1BigQueryAnalyticsHubDataExchangeStatus? Status { get; set; }
 }
