@@ -4,7 +4,7 @@ metadata:
   name: triggers.eventing.knative.dev
   labels:
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.15.2
+    app.kubernetes.io/version: 1.15.3
     app.kubernetes.io/name: knative-eventing
 spec:
   group: eventing.knative.dev
