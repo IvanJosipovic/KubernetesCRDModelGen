@@ -21,358 +21,6 @@ public partial class V1CompositionSpecCompositeTypeRef
     public string Kind { get; set; }
 }
 
-/// <summary>Ref is a named reference to a single EnvironmentConfig. Either Ref or Selector is required.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentEnvironmentConfigsRef
-{
-    /// <summary>The name of the object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>An EnvironmentSourceSelectorLabelMatcher acts like a k8s label selector but can draw the label value from a different path.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabels
-{
-    /// <summary>FromFieldPathPolicy specifies the policy for the valueFromFieldPath. The default is Required, meaning that an error will be returned if the field is not found in the composite resource. Optional means that if the field is not found in the composite resource, that label pair will just be skipped. N.B. other specified label matchers will still be used to retrieve the desired environment config, if any.</summary>
-    [JsonPropertyName("fromFieldPathPolicy")]
-    public string? FromFieldPathPolicy { get; set; }
-
-    /// <summary>Key of the label to match.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Type specifies where the value for a label comes from.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-
-    /// <summary>Value specifies a literal label value.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>ValueFromFieldPath specifies the field path to look for the label value.</summary>
-    [JsonPropertyName("valueFromFieldPath")]
-    public string? ValueFromFieldPath { get; set; }
-}
-
-/// <summary>Selector selects EnvironmentConfig(s) via labels.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentEnvironmentConfigsSelector
-{
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IList<V1CompositionSpecEnvironmentEnvironmentConfigsSelectorMatchLabels>? MatchLabels { get; set; }
-
-    /// <summary>MaxMatch specifies the number of extracted EnvironmentConfigs in Multiple mode, extracts all if nil.</summary>
-    [JsonPropertyName("maxMatch")]
-    public long? MaxMatch { get; set; }
-
-    /// <summary>MinMatch specifies the required minimum of extracted EnvironmentConfigs in Multiple mode.</summary>
-    [JsonPropertyName("minMatch")]
-    public long? MinMatch { get; set; }
-
-    /// <summary>Mode specifies retrieval strategy: "Single" or "Multiple".</summary>
-    [JsonPropertyName("mode")]
-    public string? Mode { get; set; }
-
-    /// <summary>SortByFieldPath is the path to the field based on which list of EnvironmentConfigs is alphabetically sorted.</summary>
-    [JsonPropertyName("sortByFieldPath")]
-    public string? SortByFieldPath { get; set; }
-}
-
-/// <summary>EnvironmentSource selects a EnvironmentConfig resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentEnvironmentConfigs
-{
-    /// <summary>Ref is a named reference to a single EnvironmentConfig. Either Ref or Selector is required.</summary>
-    [JsonPropertyName("ref")]
-    public V1CompositionSpecEnvironmentEnvironmentConfigsRef? Ref { get; set; }
-
-    /// <summary>Selector selects EnvironmentConfig(s) via labels.</summary>
-    [JsonPropertyName("selector")]
-    public V1CompositionSpecEnvironmentEnvironmentConfigsSelector? Selector { get; set; }
-
-    /// <summary>Type specifies the way the EnvironmentConfig is selected. Default is `Reference`</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesCombineString
-{
-    /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
-    [JsonPropertyName("fmt")]
-    public string Fmt { get; set; }
-}
-
-/// <summary>A CombineVariable defines the source of a value that is combined with others to form and patch an output value. Currently, this only supports retrieving values from a field path.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesCombineVariables
-{
-    /// <summary>FromFieldPath is the path of the field on the source whose value is to be used as input.</summary>
-    [JsonPropertyName("fromFieldPath")]
-    public string FromFieldPath { get; set; }
-}
-
-/// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesCombine
-{
-    /// <summary>Strategy defines the strategy to use to combine the input variable values. Currently only string is supported.</summary>
-    [JsonPropertyName("strategy")]
-    public string Strategy { get; set; }
-
-    /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
-    [JsonPropertyName("string")]
-    public V1CompositionSpecEnvironmentPatchesCombineString? String { get; set; }
-
-    /// <summary>Variables are the list of variables whose values will be retrieved and combined.</summary>
-    [JsonPropertyName("variables")]
-    public IList<V1CompositionSpecEnvironmentPatchesCombineVariables> Variables { get; set; }
-}
-
-/// <summary>MergeOptions Specifies merge options on a field path.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesPolicyMergeOptions
-{
-    /// <summary>Specifies that already existing elements in a merged slice should be preserved</summary>
-    [JsonPropertyName("appendSlice")]
-    public bool? AppendSlice { get; set; }
-
-    /// <summary>Specifies that already existing values in a merged map should be preserved</summary>
-    [JsonPropertyName("keepMapValues")]
-    public bool? KeepMapValues { get; set; }
-}
-
-/// <summary>Policy configures the specifics of patching behaviour.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesPolicy
-{
-    /// <summary>FromFieldPath specifies how to patch from a field path. The default is 'Optional', which means the patch will be a no-op if the specified fromFieldPath does not exist. Use 'Required' if the patch should fail if the specified path does not exist.</summary>
-    [JsonPropertyName("fromFieldPath")]
-    public string? FromFieldPath { get; set; }
-
-    /// <summary>MergeOptions Specifies merge options on a field path.</summary>
-    [JsonPropertyName("mergeOptions")]
-    public V1CompositionSpecEnvironmentPatchesPolicyMergeOptions? MergeOptions { get; set; }
-}
-
-/// <summary>Convert is used to cast the input into the given output type.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransformsConvert
-{
-    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
-    [JsonPropertyName("format")]
-    public string? Format { get; set; }
-
-    /// <summary>ToType is the type of the output of this transform.</summary>
-    [JsonPropertyName("toType")]
-    public string ToType { get; set; }
-}
-
-/// <summary>MatchTransformPattern is a transform that returns the value that matches a pattern.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransformsMatchPatterns
-{
-    /// <summary>Literal exactly matches the input string (case sensitive). Is required if `type` is `literal`.</summary>
-    [JsonPropertyName("literal")]
-    public string? Literal { get; set; }
-
-    /// <summary>Regexp to match against the input string. Is required if `type` is `regexp`.</summary>
-    [JsonPropertyName("regexp")]
-    public string? Regexp { get; set; }
-
-    /// <summary>The value that is used as result of the transform if the pattern matches.</summary>
-    [JsonPropertyName("result")]
-    public JsonNode Result { get; set; }
-
-    /// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
-    [JsonPropertyName("type")]
-    public string Type { get; set; }
-}
-
-/// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransformsMatch
-{
-    /// <summary>Determines to what value the transform should fallback if no pattern matches.</summary>
-    [JsonPropertyName("fallbackTo")]
-    public string? FallbackTo { get; set; }
-
-    /// <summary>The fallback value that should be returned by the transform if now pattern matches.</summary>
-    [JsonPropertyName("fallbackValue")]
-    public JsonNode? FallbackValue { get; set; }
-
-    /// <summary>The patterns that should be tested against the input string. Patterns are tested in order. The value of the first match is used as result of this transform.</summary>
-    [JsonPropertyName("patterns")]
-    public IList<V1CompositionSpecEnvironmentPatchesTransformsMatchPatterns>? Patterns { get; set; }
-}
-
-/// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransformsMath
-{
-    /// <summary>ClampMax makes sure that the value is not bigger than the given value.</summary>
-    [JsonPropertyName("clampMax")]
-    public long? ClampMax { get; set; }
-
-    /// <summary>ClampMin makes sure that the value is not smaller than the given value.</summary>
-    [JsonPropertyName("clampMin")]
-    public long? ClampMin { get; set; }
-
-    /// <summary>Multiply the value.</summary>
-    [JsonPropertyName("multiply")]
-    public long? Multiply { get; set; }
-
-    /// <summary>Type of the math transform to be run.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary>Join defines parameters to join a slice of values to a string.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransformsStringJoin
-{
-    /// <summary>Separator defines the character that should separate the values from each other in the joined string.</summary>
-    [JsonPropertyName("separator")]
-    public string Separator { get; set; }
-}
-
-/// <summary>Extract a match from the input using a regular expression.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransformsStringRegexp
-{
-    /// <summary>Group number to match. 0 (the default) matches the entire expression.</summary>
-    [JsonPropertyName("group")]
-    public int? Group { get; set; }
-
-    /// <summary>Match string. May optionally include submatches, aka capture groups. See https://pkg.go.dev/regexp/ for details.</summary>
-    [JsonPropertyName("match")]
-    public string Match { get; set; }
-}
-
-/// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransformsString
-{
-    /// <summary>Optional conversion method to be specified. `ToUpper` and `ToLower` change the letter case of the input string. `ToBase64` and `FromBase64` perform a base64 conversion based on the input string. `ToJson` converts any input value into its raw JSON representation. `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input converted to JSON. `ToAdler32` generate a addler32 hash based on the input string.</summary>
-    [JsonPropertyName("convert")]
-    public string? Convert { get; set; }
-
-    /// <summary>Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.</summary>
-    [JsonPropertyName("fmt")]
-    public string? Fmt { get; set; }
-
-    /// <summary>Join defines parameters to join a slice of values to a string.</summary>
-    [JsonPropertyName("join")]
-    public V1CompositionSpecEnvironmentPatchesTransformsStringJoin? Join { get; set; }
-
-    /// <summary>Extract a match from the input using a regular expression.</summary>
-    [JsonPropertyName("regexp")]
-    public V1CompositionSpecEnvironmentPatchesTransformsStringRegexp? Regexp { get; set; }
-
-    /// <summary>Trim the prefix or suffix from the input</summary>
-    [JsonPropertyName("trim")]
-    public string? Trim { get; set; }
-
-    /// <summary>Type of the string transform to be run.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary>Transform is a unit of process whose input is transformed into an output with the supplied configuration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatchesTransforms
-{
-    /// <summary>Convert is used to cast the input into the given output type.</summary>
-    [JsonPropertyName("convert")]
-    public V1CompositionSpecEnvironmentPatchesTransformsConvert? Convert { get; set; }
-
-    /// <summary>Map uses the input as a key in the given map and returns the value.</summary>
-    [JsonPropertyName("map")]
-    public IDictionary<string, JsonNode>? Map { get; set; }
-
-    /// <summary>Match is a more complex version of Map that matches a list of patterns.</summary>
-    [JsonPropertyName("match")]
-    public V1CompositionSpecEnvironmentPatchesTransformsMatch? Match { get; set; }
-
-    /// <summary>Math is used to transform the input via mathematical operations such as multiplication.</summary>
-    [JsonPropertyName("math")]
-    public V1CompositionSpecEnvironmentPatchesTransformsMath? Math { get; set; }
-
-    /// <summary>String is used to transform the input into a string or a different kind of string. Note that the input does not necessarily need to be a string.</summary>
-    [JsonPropertyName("string")]
-    public V1CompositionSpecEnvironmentPatchesTransformsString? String { get; set; }
-
-    /// <summary>Type of the transform to be run.</summary>
-    [JsonPropertyName("type")]
-    public string Type { get; set; }
-}
-
-/// <summary>EnvironmentPatch is a patch for a Composition environment.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPatches
-{
-    /// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
-    [JsonPropertyName("combine")]
-    public V1CompositionSpecEnvironmentPatchesCombine? Combine { get; set; }
-
-    /// <summary>FromFieldPath is the path of the field on the resource whose value is to be used as input. Required when type is FromCompositeFieldPath or ToCompositeFieldPath.</summary>
-    [JsonPropertyName("fromFieldPath")]
-    public string? FromFieldPath { get; set; }
-
-    /// <summary>Policy configures the specifics of patching behaviour.</summary>
-    [JsonPropertyName("policy")]
-    public V1CompositionSpecEnvironmentPatchesPolicy? Policy { get; set; }
-
-    /// <summary>ToFieldPath is the path of the field on the resource whose value will be changed with the result of transforms. Leave empty if you'd like to propagate to the same path as fromFieldPath.</summary>
-    [JsonPropertyName("toFieldPath")]
-    public string? ToFieldPath { get; set; }
-
-    /// <summary>Transforms are the list of functions that are used as a FIFO pipe for the input to be transformed.</summary>
-    [JsonPropertyName("transforms")]
-    public IList<V1CompositionSpecEnvironmentPatchesTransforms>? Transforms { get; set; }
-
-    /// <summary>Type sets the patching behaviour to be used. Each patch type may require its own fields to be set on the Patch object.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary>Policy represents the Resolve and Resolution policies which apply to all EnvironmentSourceReferences in EnvironmentConfigs list.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironmentPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Environment configures the environment in which resources are rendered.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1CompositionSpecEnvironment
-{
-    /// <summary>DefaultData statically defines the initial state of the environment. It has the same schema-less structure as the data field in environment configs. It is overwritten by the selected environment configs.</summary>
-    [JsonPropertyName("defaultData")]
-    public IDictionary<string, JsonNode>? DefaultData { get; set; }
-
-    /// <summary>EnvironmentConfigs selects a list of `EnvironmentConfig`s. The resolved resources are stored in the composite resource at `spec.environmentConfigRefs` and is only updated if it is null.   The list of references is used to compute an in-memory environment at compose time. The data of all object is merged in the order they are listed, meaning the values of EnvironmentConfigs with a larger index take priority over ones with smaller indices.   The computed environment can be accessed in a composition using `FromEnvironmentFieldPath` and `CombineFromEnvironment` patches.</summary>
-    [JsonPropertyName("environmentConfigs")]
-    public IList<V1CompositionSpecEnvironmentEnvironmentConfigs>? EnvironmentConfigs { get; set; }
-
-    /// <summary>Patches is a list of environment patches that are executed before a composition's resources are composed.</summary>
-    [JsonPropertyName("patches")]
-    public IList<V1CompositionSpecEnvironmentPatches>? Patches { get; set; }
-
-    /// <summary>Policy represents the Resolve and Resolution policies which apply to all EnvironmentSourceReferences in EnvironmentConfigs list.</summary>
-    [JsonPropertyName("policy")]
-    public V1CompositionSpecEnvironmentPolicy? Policy { get; set; }
-}
-
 /// <summary>String declares that input variables should be combined into a single string, using the relevant settings for formatting purposes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesCombineString
@@ -391,7 +39,7 @@ public partial class V1CompositionSpecPatchSetsPatchesCombineVariables
     public string FromFieldPath { get; set; }
 }
 
-/// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
+/// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesCombine
 {
@@ -590,11 +238,11 @@ public partial class V1CompositionSpecPatchSetsPatchesTransforms
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatches
 {
-    /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
+    /// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
     [JsonPropertyName("combine")]
     public V1CompositionSpecPatchSetsPatchesCombine? Combine { get; set; }
 
-    /// <summary>FromFieldPath is the path of the field on the resource whose value is to be used as input. Required when type is FromCompositeFieldPath, FromEnvironmentFieldPath, ToCompositeFieldPath, ToEnvironmentFieldPath.</summary>
+    /// <summary>FromFieldPath is the path of the field on the resource whose value is to be used as input. Required when type is FromCompositeFieldPath or ToCompositeFieldPath.</summary>
     [JsonPropertyName("fromFieldPath")]
     public string? FromFieldPath { get; set; }
 
@@ -744,7 +392,7 @@ public partial class V1CompositionSpecResourcesPatchesCombineVariables
     public string FromFieldPath { get; set; }
 }
 
-/// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
+/// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesCombine
 {
@@ -943,11 +591,11 @@ public partial class V1CompositionSpecResourcesPatchesTransforms
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatches
 {
-    /// <summary>Combine is the patch configuration for a CombineFromComposite, CombineFromEnvironment, CombineToComposite or CombineToEnvironment patch.</summary>
+    /// <summary>Combine is the patch configuration for a CombineFromComposite or CombineToComposite patch.</summary>
     [JsonPropertyName("combine")]
     public V1CompositionSpecResourcesPatchesCombine? Combine { get; set; }
 
-    /// <summary>FromFieldPath is the path of the field on the resource whose value is to be used as input. Required when type is FromCompositeFieldPath, FromEnvironmentFieldPath, ToCompositeFieldPath, ToEnvironmentFieldPath.</summary>
+    /// <summary>FromFieldPath is the path of the field on the resource whose value is to be used as input. Required when type is FromCompositeFieldPath or ToCompositeFieldPath.</summary>
     [JsonPropertyName("fromFieldPath")]
     public string? FromFieldPath { get; set; }
 
@@ -1042,10 +690,6 @@ public partial class V1CompositionSpec
     /// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
     [JsonPropertyName("compositeTypeRef")]
     public V1CompositionSpecCompositeTypeRef CompositeTypeRef { get; set; }
-
-    /// <summary>Environment configures the environment in which resources are rendered.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
-    [JsonPropertyName("environment")]
-    public V1CompositionSpecEnvironment? Environment { get; set; }
 
     /// <summary>Mode controls what type or "mode" of Composition will be used.   "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.   "Resources" indicates that a Composition uses what is commonly referred to as "Patch &amp; Transform" or P&amp;T composition. This mode of Composition uses an array of resources, each a template for a composed resource.   All Compositions should use Pipeline mode. Resources mode is deprecated. Resources mode won't be removed in Crossplane 1.x, and will remain the default to avoid breaking legacy Compositions. However, it's no longer accepting new features, and only accepting security related bug fixes.</summary>
     [JsonPropertyName("mode")]
