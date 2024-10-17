@@ -5,7 +5,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: keda-operator
-    helm.sh/chart: keda-2.15.1
+    helm.sh/chart: keda-2.15.2
     app.kubernetes.io/component: operator
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: keda-operator
@@ -99,6 +99,10 @@ spec:
                       enum:
                       - keda.scaledobject.ready.v1
                       - keda.scaledobject.failed.v1
+                      - keda.scaledobject.removed.v1
+                      - keda.scaledjob.ready.v1
+                      - keda.scaledjob.failed.v1
+                      - keda.scaledjob.removed.v1
                       type: string
                     type: array
                   includedEventTypes:
@@ -107,6 +111,10 @@ spec:
                       enum:
                       - keda.scaledobject.ready.v1
                       - keda.scaledobject.failed.v1
+                      - keda.scaledobject.removed.v1
+                      - keda.scaledjob.ready.v1
+                      - keda.scaledjob.failed.v1
+                      - keda.scaledjob.removed.v1
                       type: string
                     type: array
                 type: object
