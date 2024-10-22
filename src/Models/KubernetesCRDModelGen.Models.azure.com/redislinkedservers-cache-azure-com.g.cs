@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
 /// <summary>LinkedRedisCacheReference: Fully qualified resourceId of the linked redis cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisLinkedServerSpecLinkedRedisCacheReference
+public partial class V1api20230801storageRedisLinkedServerSpecLinkedRedisCacheReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -31,7 +31,7 @@ public partial class V1api20230401storageRedisLinkedServerSpecLinkedRedisCacheRe
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisLinkedServerSpecOwner
+public partial class V1api20230801storageRedisLinkedServerSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -42,9 +42,9 @@ public partial class V1api20230401storageRedisLinkedServerSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_LinkedServer_Spec</summary>
+/// <summary>Storage version of v1api20230801.RedisLinkedServer_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisLinkedServerSpec
+public partial class V1api20230801storageRedisLinkedServerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -60,7 +60,7 @@ public partial class V1api20230401storageRedisLinkedServerSpec
 
     /// <summary>LinkedRedisCacheReference: Fully qualified resourceId of the linked redis cache.</summary>
     [JsonPropertyName("linkedRedisCacheReference")]
-    public V1api20230401storageRedisLinkedServerSpecLinkedRedisCacheReference LinkedRedisCacheReference { get; set; }
+    public V1api20230801storageRedisLinkedServerSpecLinkedRedisCacheReference LinkedRedisCacheReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -68,7 +68,7 @@ public partial class V1api20230401storageRedisLinkedServerSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20230401storageRedisLinkedServerSpecOwner Owner { get; set; }
+    public V1api20230801storageRedisLinkedServerSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("serverRole")]
@@ -77,7 +77,7 @@ public partial class V1api20230401storageRedisLinkedServerSpec
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisLinkedServerStatusConditions
+public partial class V1api20230801storageRedisLinkedServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -108,9 +108,9 @@ public partial class V1api20230401storageRedisLinkedServerStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_LinkedServer_STATUS</summary>
+/// <summary>Storage version of v1api20230801.Redis_LinkedServer_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisLinkedServerStatus
+public partial class V1api20230801storageRedisLinkedServerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -118,7 +118,7 @@ public partial class V1api20230401storageRedisLinkedServerStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20230401storageRedisLinkedServerStatusConditions>? Conditions { get; set; }
+    public IList<V1api20230801storageRedisLinkedServerStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("geoReplicatedPrimaryHostName")]
@@ -157,12 +157,12 @@ public partial class V1api20230401storageRedisLinkedServerStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisLinkedServer Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/linkedServers/{linkedServerName}</summary>
+/// <summary>Storage version of v1api20230801.RedisLinkedServer Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/linkedServers/{linkedServerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230401storageRedisLinkedServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230401storageRedisLinkedServerSpec>, IStatus<V1api20230401storageRedisLinkedServerStatus>
+public partial class V1api20230801storageRedisLinkedServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230801storageRedisLinkedServerSpec>, IStatus<V1api20230801storageRedisLinkedServerStatus>
 {
-    public const string KubeApiVersion = "v1api20230401storage";
+    public const string KubeApiVersion = "v1api20230801storage";
     public const string KubeKind = "RedisLinkedServer";
     public const string KubeGroup = "cache.azure.com";
     public const string KubePluralName = "redislinkedservers";
@@ -178,11 +178,11 @@ public partial class V1api20230401storageRedisLinkedServer : IKubernetesObject<V
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_LinkedServer_Spec</summary>
+    /// <summary>Storage version of v1api20230801.RedisLinkedServer_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20230401storageRedisLinkedServerSpec? Spec { get; set; }
+    public V1api20230801storageRedisLinkedServerSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_LinkedServer_STATUS</summary>
+    /// <summary>Storage version of v1api20230801.Redis_LinkedServer_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20230401storageRedisLinkedServerStatus? Status { get; set; }
+    public V1api20230801storageRedisLinkedServerStatus? Status { get; set; }
 }

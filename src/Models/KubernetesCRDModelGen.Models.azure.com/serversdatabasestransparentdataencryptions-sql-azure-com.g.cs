@@ -21,7 +21,7 @@ public partial class V1api20211101storageServersDatabasesTransparentDataEncrypti
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Databases_TransparentDataEncryption_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersDatabasesTransparentDataEncryption_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesTransparentDataEncryptionSpec
 {
@@ -75,7 +75,7 @@ public partial class V1api20211101storageServersDatabasesTransparentDataEncrypti
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Databases_TransparentDataEncryption_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersDatabasesTransparentDataEncryption_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesTransparentDataEncryptionStatus
 {
@@ -125,11 +125,11 @@ public partial class V1api20211101storageServersDatabasesTransparentDataEncrypti
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Databases_TransparentDataEncryption_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersDatabasesTransparentDataEncryption_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersDatabasesTransparentDataEncryptionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Databases_TransparentDataEncryption_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersDatabasesTransparentDataEncryption_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersDatabasesTransparentDataEncryptionStatus? Status { get; set; }
 }

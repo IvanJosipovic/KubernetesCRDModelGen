@@ -55,7 +55,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     public int? Port { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.DnsForwardingRulesets_ForwardingRule_Spec</summary>
+/// <summary>Storage version of v1api20220701.DnsForwardingRuleSetsForwardingRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
 {
@@ -175,7 +175,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStat
     public int? Port { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.DnsForwardingRulesets_ForwardingRule_STATUS</summary>
+/// <summary>Storage version of v1api20220701.DnsForwardingRuleSetsForwardingRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatus
 {
@@ -249,11 +249,11 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRule : I
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.DnsForwardingRulesets_ForwardingRule_Spec</summary>
+    /// <summary>Storage version of v1api20220701.DnsForwardingRuleSetsForwardingRule_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.DnsForwardingRulesets_ForwardingRule_STATUS</summary>
+    /// <summary>Storage version of v1api20220701.DnsForwardingRuleSetsForwardingRule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatus? Status { get; set; }
 }

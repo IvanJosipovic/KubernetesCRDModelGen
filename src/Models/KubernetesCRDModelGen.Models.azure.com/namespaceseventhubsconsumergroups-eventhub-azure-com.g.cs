@@ -21,7 +21,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOwn
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespaces_Eventhubs_Consumergroup_Spec</summary>
+/// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpec
 {
@@ -112,7 +112,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusS
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespaces_Eventhubs_Consumergroup_STATUS</summary>
+/// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatus
 {
@@ -178,11 +178,11 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroup : IKub
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespaces_Eventhubs_Consumergroup_Spec</summary>
+    /// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageNamespacesEventhubsConsumerGroupSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespaces_Eventhubs_Consumergroup_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageNamespacesEventhubsConsumerGroupStatus? Status { get; set; }
 }

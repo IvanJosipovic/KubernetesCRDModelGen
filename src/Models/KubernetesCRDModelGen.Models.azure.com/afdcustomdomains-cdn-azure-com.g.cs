@@ -144,7 +144,7 @@ public partial class V1api20230501storageAfdCustomDomainSpecTlsSettings
     public V1api20230501storageAfdCustomDomainSpecTlsSettingsSecret? Secret { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_CustomDomain_Spec</summary>
+/// <summary>Storage version of v1api20230501.AfdCustomDomain_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainSpec
 {
@@ -328,7 +328,7 @@ public partial class V1api20230501storageAfdCustomDomainStatusValidationProperti
     public string? ValidationToken { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_CustomDomain_STATUS</summary>
+/// <summary>Storage version of v1api20230501.AfdCustomDomain_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdCustomDomainStatus
 {
@@ -418,11 +418,11 @@ public partial class V1api20230501storageAfdCustomDomain : IKubernetesObject<V1O
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_CustomDomain_Spec</summary>
+    /// <summary>Storage version of v1api20230501.AfdCustomDomain_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230501storageAfdCustomDomainSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_CustomDomain_STATUS</summary>
+    /// <summary>Storage version of v1api20230501.AfdCustomDomain_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230501storageAfdCustomDomainStatus? Status { get; set; }
 }

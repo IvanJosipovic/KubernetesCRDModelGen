@@ -542,7 +542,7 @@ public partial class V1api20231101storageBackupVaultsBackupPolicySpecProperties
     public V1api20231101storageBackupVaultsBackupPolicySpecPropertiesBackupPolicy? BackupPolicy { get; set; }
 }
 
-/// <summary>Storage version of v1api20231101.BackupVaults_BackupPolicy_Spec</summary>
+/// <summary>Storage version of v1api20231101.BackupVaultsBackupPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultsBackupPolicySpec
 {
@@ -1170,7 +1170,7 @@ public partial class V1api20231101storageBackupVaultsBackupPolicyStatusSystemDat
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231101.BackupVaults_BackupPolicy_STATUS</summary>
+/// <summary>Storage version of v1api20231101.BackupVaultsBackupPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultsBackupPolicyStatus
 {
@@ -1224,11 +1224,11 @@ public partial class V1api20231101storageBackupVaultsBackupPolicy : IKubernetesO
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231101.BackupVaults_BackupPolicy_Spec</summary>
+    /// <summary>Storage version of v1api20231101.BackupVaultsBackupPolicy_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231101storageBackupVaultsBackupPolicySpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231101.BackupVaults_BackupPolicy_STATUS</summary>
+    /// <summary>Storage version of v1api20231101.BackupVaultsBackupPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231101storageBackupVaultsBackupPolicyStatus? Status { get; set; }
 }

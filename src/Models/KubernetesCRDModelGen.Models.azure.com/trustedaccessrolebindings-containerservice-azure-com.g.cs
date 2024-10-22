@@ -42,7 +42,7 @@ public partial class V1api20231001storageTrustedAccessRoleBindingSpecSourceResou
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusters_TrustedAccessRoleBinding_Spec</summary>
+/// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231001storageTrustedAccessRoleBindingSpec
 {
@@ -137,7 +137,7 @@ public partial class V1api20231001storageTrustedAccessRoleBindingStatusSystemDat
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusters_TrustedAccessRoleBinding_STATUS</summary>
+/// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231001storageTrustedAccessRoleBindingStatus
 {
@@ -199,11 +199,11 @@ public partial class V1api20231001storageTrustedAccessRoleBinding : IKubernetesO
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusters_TrustedAccessRoleBinding_Spec</summary>
+    /// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231001storageTrustedAccessRoleBindingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusters_TrustedAccessRoleBinding_STATUS</summary>
+    /// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231001storageTrustedAccessRoleBindingStatus? Status { get; set; }
 }

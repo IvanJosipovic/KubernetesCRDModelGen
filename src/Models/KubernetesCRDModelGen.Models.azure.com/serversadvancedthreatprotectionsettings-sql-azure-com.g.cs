@@ -21,7 +21,7 @@ public partial class V1api20211101storageServersAdvancedThreatProtectionSettingS
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_AdvancedThreatProtectionSetting_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersAdvancedThreatProtectionSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAdvancedThreatProtectionSettingSpec
 {
@@ -108,7 +108,7 @@ public partial class V1api20211101storageServersAdvancedThreatProtectionSettingS
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_AdvancedThreatProtectionSetting_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersAdvancedThreatProtectionSetting_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAdvancedThreatProtectionSettingStatus
 {
@@ -166,11 +166,11 @@ public partial class V1api20211101storageServersAdvancedThreatProtectionSetting 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_AdvancedThreatProtectionSetting_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersAdvancedThreatProtectionSetting_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersAdvancedThreatProtectionSettingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_AdvancedThreatProtectionSetting_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersAdvancedThreatProtectionSetting_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersAdvancedThreatProtectionSettingStatus? Status { get; set; }
 }

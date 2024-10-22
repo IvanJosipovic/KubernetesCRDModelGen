@@ -34,7 +34,7 @@ public partial class V1api20231115storageSqlRoleAssignmentSpecPrincipalIdFromCon
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlRoleAssignment_Spec</summary>
+/// <summary>Storage version of v1api20231115.SqlRoleAssignment_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlRoleAssignmentSpec
 {
@@ -104,7 +104,7 @@ public partial class V1api20231115storageSqlRoleAssignmentStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlRoleAssignment_STATUS</summary>
+/// <summary>Storage version of v1api20231115.SqlRoleAssignment_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlRoleAssignmentStatus
 {
@@ -162,11 +162,11 @@ public partial class V1api20231115storageSqlRoleAssignment : IKubernetesObject<V
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlRoleAssignment_Spec</summary>
+    /// <summary>Storage version of v1api20231115.SqlRoleAssignment_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageSqlRoleAssignmentSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlRoleAssignment_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.SqlRoleAssignment_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageSqlRoleAssignmentStatus? Status { get; set; }
 }

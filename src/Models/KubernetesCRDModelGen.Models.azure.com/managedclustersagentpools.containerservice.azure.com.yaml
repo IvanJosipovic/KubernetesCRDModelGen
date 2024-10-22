@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.9.0
+    app.kubernetes.io/version: v2.10.0
   name: managedclustersagentpools.containerservice.azure.com
 spec:
   conversion:
@@ -1014,7 +1014,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20210501.ManagedClusters_AgentPool_Spec
+            description: Storage version of v1api20210501.ManagedClustersAgentPool_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1340,7 +1340,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20210501.ManagedClusters_AgentPool_STATUS
+            description: Storage version of v1api20210501.ManagedClustersAgentPool_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2792,7 +2792,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20230201.ManagedClusters_AgentPool_Spec
+            description: Storage version of v1api20230201.ManagedClustersAgentPool_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -3223,7 +3223,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20230201.ManagedClusters_AgentPool_STATUS
+            description: Storage version of v1api20230201.ManagedClustersAgentPool_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -4871,7 +4871,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20231001.ManagedClusters_AgentPool_Spec
+            description: Storage version of v1api20231001.ManagedClustersAgentPool_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -5409,7 +5409,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20231001.ManagedClusters_AgentPool_STATUS
+            description: Storage version of v1api20231001.ManagedClustersAgentPool_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -7389,7 +7389,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20231102preview.ManagedClusters_AgentPool_Spec
+            description: Storage version of v1api20231102preview.ManagedClustersAgentPool_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -8077,7 +8077,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20231102preview.ManagedClusters_AgentPool_STATUS
+            description: Storage version of v1api20231102preview.ManagedClustersAgentPool_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -10350,7 +10350,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20240402preview.ManagedClusters_AgentPool_Spec
+            description: Storage version of v1api20240402preview.ManagedClustersAgentPool_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -11084,7 +11084,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20240402preview.ManagedClusters_AgentPool_STATUS
+            description: Storage version of v1api20240402preview.ManagedClustersAgentPool_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

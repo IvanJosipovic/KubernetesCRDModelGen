@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.9.0
+    app.kubernetes.io/version: v2.10.0
   name: backupvaultsbackuppolicies.dataprotection.azure.com
 spec:
   conversion:
@@ -877,7 +877,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20230101.BackupVaults_BackupPolicy_Spec
+            description: Storage version of v1api20230101.BackupVaultsBackupPolicy_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1395,7 +1395,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20230101.BackupVaults_BackupPolicy_STATUS
+            description: Storage version of v1api20230101.BackupVaultsBackupPolicy_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2830,7 +2830,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20231101.BackupVaults_BackupPolicy_Spec
+            description: Storage version of v1api20231101.BackupVaultsBackupPolicy_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -3348,7 +3348,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20231101.BackupVaults_BackupPolicy_STATUS
+            description: Storage version of v1api20231101.BackupVaultsBackupPolicy_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

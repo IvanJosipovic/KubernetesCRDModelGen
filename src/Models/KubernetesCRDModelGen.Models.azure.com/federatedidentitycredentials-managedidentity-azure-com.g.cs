@@ -47,7 +47,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialSpecSubjectF
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230131.UserAssignedIdentities_FederatedIdentityCredential_Spec</summary>
+/// <summary>Storage version of v1api20230131.FederatedIdentityCredential_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230131storageFederatedIdentityCredentialSpec
 {
@@ -154,7 +154,7 @@ public partial class V1api20230131storageFederatedIdentityCredentialStatusSystem
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230131.UserAssignedIdentities_FederatedIdentityCredential_STATUS</summary>
+/// <summary>Storage version of v1api20230131.FederatedIdentityCredential_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230131storageFederatedIdentityCredentialStatus
 {
@@ -216,11 +216,11 @@ public partial class V1api20230131storageFederatedIdentityCredential : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230131.UserAssignedIdentities_FederatedIdentityCredential_Spec</summary>
+    /// <summary>Storage version of v1api20230131.FederatedIdentityCredential_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230131storageFederatedIdentityCredentialSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230131.UserAssignedIdentities_FederatedIdentityCredential_STATUS</summary>
+    /// <summary>Storage version of v1api20230131.FederatedIdentityCredential_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230131storageFederatedIdentityCredentialStatus? Status { get; set; }
 }

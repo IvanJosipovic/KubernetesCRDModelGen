@@ -21,7 +21,7 @@ public partial class V1api20211101storageServersDatabasesBackupShortTermRetentio
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Databases_BackupShortTermRetentionPolicy_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersDatabasesBackupShortTermRetentionPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesBackupShortTermRetentionPolicySpec
 {
@@ -79,7 +79,7 @@ public partial class V1api20211101storageServersDatabasesBackupShortTermRetentio
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Databases_BackupShortTermRetentionPolicy_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersDatabasesBackupShortTermRetentionPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesBackupShortTermRetentionPolicyStatus
 {
@@ -133,11 +133,11 @@ public partial class V1api20211101storageServersDatabasesBackupShortTermRetentio
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Databases_BackupShortTermRetentionPolicy_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersDatabasesBackupShortTermRetentionPolicy_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersDatabasesBackupShortTermRetentionPolicySpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Databases_BackupShortTermRetentionPolicy_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersDatabasesBackupShortTermRetentionPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersDatabasesBackupShortTermRetentionPolicyStatus? Status { get; set; }
 }

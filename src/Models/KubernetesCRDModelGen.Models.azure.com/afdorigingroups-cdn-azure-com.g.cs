@@ -67,7 +67,7 @@ public partial class V1api20230501storageAfdOriginGroupSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_OriginGroup_Spec</summary>
+/// <summary>Storage version of v1api20230501.AfdOriginGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdOriginGroupSpec
 {
@@ -216,7 +216,7 @@ public partial class V1api20230501storageAfdOriginGroupStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_OriginGroup_STATUS</summary>
+/// <summary>Storage version of v1api20230501.AfdOriginGroup_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdOriginGroupStatus
 {
@@ -294,11 +294,11 @@ public partial class V1api20230501storageAfdOriginGroup : IKubernetesObject<V1Ob
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_OriginGroup_Spec</summary>
+    /// <summary>Storage version of v1api20230501.AfdOriginGroup_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230501storageAfdOriginGroupSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_OriginGroup_STATUS</summary>
+    /// <summary>Storage version of v1api20230501.AfdOriginGroup_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230501storageAfdOriginGroupStatus? Status { get; set; }
 }

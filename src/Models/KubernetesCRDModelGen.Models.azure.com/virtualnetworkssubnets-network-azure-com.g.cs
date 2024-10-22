@@ -259,7 +259,7 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecServiceEndpoin
     public string? Service { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworks_Subnet_Spec</summary>
+/// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksSubnetSpec
 {
@@ -562,7 +562,7 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceEndpo
     public string? Service { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworks_Subnet_STATUS</summary>
+/// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksSubnetStatus
 {
@@ -688,11 +688,11 @@ public partial class V1api20201101storageVirtualNetworksSubnet : IKubernetesObje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworks_Subnet_Spec</summary>
+    /// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20201101storageVirtualNetworksSubnetSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworks_Subnet_STATUS</summary>
+    /// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20201101storageVirtualNetworksSubnetStatus? Status { get; set; }
 }

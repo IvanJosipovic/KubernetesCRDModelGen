@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisPatchScheduleSpecOwner
+public partial class V1api20230801storageRedisPatchScheduleSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -21,9 +21,9 @@ public partial class V1api20230401storageRedisPatchScheduleSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.ScheduleEntry Patch schedule entry for a Premium Redis Cache.</summary>
+/// <summary>Storage version of v1api20230801.ScheduleEntry Patch schedule entry for a Premium Redis Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisPatchScheduleSpecScheduleEntries
+public partial class V1api20230801storageRedisPatchScheduleSpecScheduleEntries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -42,9 +42,9 @@ public partial class V1api20230401storageRedisPatchScheduleSpecScheduleEntries
     public int? StartHourUtc { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_PatchSchedule_Spec</summary>
+/// <summary>Storage version of v1api20230801.RedisPatchSchedule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisPatchScheduleSpec
+public partial class V1api20230801storageRedisPatchScheduleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -56,16 +56,16 @@ public partial class V1api20230401storageRedisPatchScheduleSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20230401storageRedisPatchScheduleSpecOwner Owner { get; set; }
+    public V1api20230801storageRedisPatchScheduleSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scheduleEntries")]
-    public IList<V1api20230401storageRedisPatchScheduleSpecScheduleEntries>? ScheduleEntries { get; set; }
+    public IList<V1api20230801storageRedisPatchScheduleSpecScheduleEntries>? ScheduleEntries { get; set; }
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisPatchScheduleStatusConditions
+public partial class V1api20230801storageRedisPatchScheduleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,9 +96,9 @@ public partial class V1api20230401storageRedisPatchScheduleStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.ScheduleEntry_STATUS Patch schedule entry for a Premium Redis Cache.</summary>
+/// <summary>Storage version of v1api20230801.ScheduleEntry_STATUS Patch schedule entry for a Premium Redis Cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisPatchScheduleStatusScheduleEntries
+public partial class V1api20230801storageRedisPatchScheduleStatusScheduleEntries
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -117,9 +117,9 @@ public partial class V1api20230401storageRedisPatchScheduleStatusScheduleEntries
     public int? StartHourUtc { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_PatchSchedule_STATUS</summary>
+/// <summary>Storage version of v1api20230801.RedisPatchSchedule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisPatchScheduleStatus
+public partial class V1api20230801storageRedisPatchScheduleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -127,7 +127,7 @@ public partial class V1api20230401storageRedisPatchScheduleStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20230401storageRedisPatchScheduleStatusConditions>? Conditions { get; set; }
+    public IList<V1api20230801storageRedisPatchScheduleStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -143,19 +143,19 @@ public partial class V1api20230401storageRedisPatchScheduleStatus
 
     /// <summary></summary>
     [JsonPropertyName("scheduleEntries")]
-    public IList<V1api20230401storageRedisPatchScheduleStatusScheduleEntries>? ScheduleEntries { get; set; }
+    public IList<V1api20230801storageRedisPatchScheduleStatusScheduleEntries>? ScheduleEntries { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisPatchSchedule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/patchSchedules/default</summary>
+/// <summary>Storage version of v1api20230801.RedisPatchSchedule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/patchSchedules/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230401storageRedisPatchSchedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230401storageRedisPatchScheduleSpec>, IStatus<V1api20230401storageRedisPatchScheduleStatus>
+public partial class V1api20230801storageRedisPatchSchedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230801storageRedisPatchScheduleSpec>, IStatus<V1api20230801storageRedisPatchScheduleStatus>
 {
-    public const string KubeApiVersion = "v1api20230401storage";
+    public const string KubeApiVersion = "v1api20230801storage";
     public const string KubeKind = "RedisPatchSchedule";
     public const string KubeGroup = "cache.azure.com";
     public const string KubePluralName = "redispatchschedules";
@@ -171,11 +171,11 @@ public partial class V1api20230401storageRedisPatchSchedule : IKubernetesObject<
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_PatchSchedule_Spec</summary>
+    /// <summary>Storage version of v1api20230801.RedisPatchSchedule_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20230401storageRedisPatchScheduleSpec? Spec { get; set; }
+    public V1api20230801storageRedisPatchScheduleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_PatchSchedule_STATUS</summary>
+    /// <summary>Storage version of v1api20230801.RedisPatchSchedule_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20230401storageRedisPatchScheduleStatus? Status { get; set; }
+    public V1api20230801storageRedisPatchScheduleStatus? Status { get; set; }
 }

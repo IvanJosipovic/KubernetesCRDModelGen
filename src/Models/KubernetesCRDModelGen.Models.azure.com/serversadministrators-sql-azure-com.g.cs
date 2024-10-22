@@ -47,7 +47,7 @@ public partial class V1api20211101storageServersAdministratorSpecTenantIdFromCon
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Administrator_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersAdministrator_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAdministratorSpec
 {
@@ -121,7 +121,7 @@ public partial class V1api20211101storageServersAdministratorStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Administrator_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersAdministrator_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAdministratorStatus
 {
@@ -187,11 +187,11 @@ public partial class V1api20211101storageServersAdministrator : IKubernetesObjec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Administrator_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersAdministrator_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersAdministratorSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Administrator_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersAdministrator_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersAdministratorStatus? Status { get; set; }
 }

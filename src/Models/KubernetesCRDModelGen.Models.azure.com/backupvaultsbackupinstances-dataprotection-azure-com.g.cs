@@ -512,7 +512,7 @@ public partial class V1api20231101storageBackupVaultsBackupInstanceSpecPropertie
     public string? ValidationType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231101.BackupVaults_BackupInstance_Spec</summary>
+/// <summary>Storage version of v1api20231101.BackupVaultsBackupInstance_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultsBackupInstanceSpec
 {
@@ -1375,7 +1375,7 @@ public partial class V1api20231101storageBackupVaultsBackupInstanceStatusSystemD
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231101.BackupVaults_BackupInstance_STATUS</summary>
+/// <summary>Storage version of v1api20231101.BackupVaultsBackupInstance_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultsBackupInstanceStatus
 {
@@ -1433,11 +1433,11 @@ public partial class V1api20231101storageBackupVaultsBackupInstance : IKubernete
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231101.BackupVaults_BackupInstance_Spec</summary>
+    /// <summary>Storage version of v1api20231101.BackupVaultsBackupInstance_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231101storageBackupVaultsBackupInstanceSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231101.BackupVaults_BackupInstance_STATUS</summary>
+    /// <summary>Storage version of v1api20231101.BackupVaultsBackupInstance_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231101storageBackupVaultsBackupInstanceStatus? Status { get; set; }
 }

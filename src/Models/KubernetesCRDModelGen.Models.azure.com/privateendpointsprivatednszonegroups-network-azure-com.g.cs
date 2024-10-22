@@ -59,7 +59,7 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec
     public V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigsPrivateDnsZoneReference? PrivateDnsZoneReference { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpoints_PrivateDnsZoneGroup_Spec</summary>
+/// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec
 {
@@ -171,7 +171,7 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStat
     public IList<V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigsRecordSets>? RecordSets { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpoints_PrivateDnsZoneGroup_STATUS</summary>
+/// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatus
 {
@@ -225,11 +225,11 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroup : I
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpoints_PrivateDnsZoneGroup_Spec</summary>
+    /// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpoints_PrivateDnsZoneGroup_STATUS</summary>
+    /// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatus? Status { get; set; }
 }

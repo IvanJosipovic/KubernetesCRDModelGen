@@ -47,7 +47,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorizations_AccessPolicy_Spec</summary>
+/// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpec
 {
@@ -117,7 +117,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorizations_AccessPolicy_STATUS</summary>
+/// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicyStatus
 {
@@ -171,11 +171,11 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorizations_AccessPolicy_Spec</summary>
+    /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorizations_AccessPolicy_STATUS</summary>
+    /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicyStatus? Status { get; set; }
 }

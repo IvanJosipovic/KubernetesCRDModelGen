@@ -85,7 +85,7 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecResourc
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_ThroughputSetting_Spec</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseThroughputSettingSpec
 {
@@ -243,7 +243,7 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResou
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_ThroughputSetting_STATUS</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseThroughputSettingStatus
 {
@@ -301,11 +301,11 @@ public partial class V1api20231115storageSqlDatabaseThroughputSetting : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_ThroughputSetting_Spec</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageSqlDatabaseThroughputSettingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_ThroughputSetting_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageSqlDatabaseThroughputSettingStatus? Status { get; set; }
 }

@@ -547,7 +547,7 @@ public partial class V1api20201101storagePublicIPAddressStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded Public IP address resource.</summary>
+/// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storagePublicIPAddressStatus
 {
@@ -673,7 +673,7 @@ public partial class V1api20201101storagePublicIPAddress : IKubernetesObject<V1O
     [JsonPropertyName("spec")]
     public V1api20201101storagePublicIPAddressSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded Public IP address resource.</summary>
+    /// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS Public IP address resource.</summary>
     [JsonPropertyName("status")]
     public V1api20201101storagePublicIPAddressStatus? Status { get; set; }
 }

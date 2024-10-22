@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.9.0
+    app.kubernetes.io/version: v2.10.0
   name: flexibleservers.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -226,13 +226,13 @@ spec:
                           will not be retrieved from Azure.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -777,16 +777,18 @@ spec:
                         description: >-
                           SecretDestination describes the location to store a single secret value.
 
-                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
+                          Note: This is similar to: ConfigMapDestination in configmaps.go.
+
+                          Changes to one may need to be made to the others as well.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -1330,9 +1332,9 @@ spec:
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes ConfigMap being referenced.
+                              Name is the name of the Kubernetes ConfigMap to write to.
 
-                              The ConfigMap must be in the same namespace as the resource
+                              The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -1349,13 +1351,13 @@ spec:
                           will not be retrieved from Azure.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -1900,16 +1902,18 @@ spec:
                         description: >-
                           ConfigMapDestination describes the location to store a single configmap value
 
-                          Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.
+                          Note: This is similar to: SecretDestination in secrets.go.
+
+                          Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes ConfigMap being referenced.
+                              Name is the name of the Kubernetes ConfigMap to write to.
 
-                              The ConfigMap must be in the same namespace as the resource
+                              The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -1931,16 +1935,18 @@ spec:
                         description: >-
                           SecretDestination describes the location to store a single secret value.
 
-                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
+                          Note: This is similar to: ConfigMapDestination in configmaps.go.
+
+                          Changes to one may need to be made to the others as well.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -2413,6 +2419,22 @@ spec:
                   primaryKeyURI:
                     description: 'PrimaryKeyURI: URI for the key for data encryption for primary server.'
                     type: string
+                  primaryKeyURIFromConfig:
+                    description: 'PrimaryKeyURIFromConfig: URI for the key for data encryption for primary server.'
+                    properties:
+                      key:
+                        description: Key is the key in the Kubernetes configmap being referenced
+                        type: string
+                      name:
+                        description: >-
+                          Name is the name of the Kubernetes configmap being referenced.
+
+                          The configmap must be in the same namespace as the resource
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
                   primaryUserAssignedIdentityReference:
                     description: >-
                       PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for
@@ -2600,9 +2622,9 @@ spec:
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes ConfigMap being referenced.
+                              Name is the name of the Kubernetes ConfigMap to write to.
 
-                              The ConfigMap must be in the same namespace as the resource
+                              The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -2619,13 +2641,13 @@ spec:
                           will not be retrieved from Azure.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -3154,6 +3176,25 @@ spec:
                     type: object
                   primaryKeyURI:
                     type: string
+                  primaryKeyURIFromConfig:
+                    description: >-
+                      ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
+
+                      the resource it is on.
+                    properties:
+                      key:
+                        description: Key is the key in the Kubernetes configmap being referenced
+                        type: string
+                      name:
+                        description: >-
+                          Name is the name of the Kubernetes configmap being referenced.
+
+                          The configmap must be in the same namespace as the resource
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
                   primaryUserAssignedIdentityReference:
                     description: >-
                       PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for
@@ -3380,16 +3421,18 @@ spec:
                         description: >-
                           ConfigMapDestination describes the location to store a single configmap value
 
-                          Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.
+                          Note: This is similar to: SecretDestination in secrets.go.
+
+                          Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes ConfigMap being referenced.
+                              Name is the name of the Kubernetes ConfigMap to write to.
 
-                              The ConfigMap must be in the same namespace as the resource
+                              The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -3411,16 +3454,18 @@ spec:
                         description: >-
                           SecretDestination describes the location to store a single secret value.
 
-                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
+                          Note: This is similar to: ConfigMapDestination in configmaps.go.
+
+                          Changes to one may need to be made to the others as well.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -3988,6 +4033,22 @@ spec:
                   geoBackupKeyURI:
                     description: 'GeoBackupKeyURI: URI for the key in keyvault for data encryption for geo-backup of server.'
                     type: string
+                  geoBackupKeyURIFromConfig:
+                    description: 'GeoBackupKeyURIFromConfig: URI for the key in keyvault for data encryption for geo-backup of server.'
+                    properties:
+                      key:
+                        description: Key is the key in the Kubernetes configmap being referenced
+                        type: string
+                      name:
+                        description: >-
+                          Name is the name of the Kubernetes configmap being referenced.
+
+                          The configmap must be in the same namespace as the resource
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
                   geoBackupUserAssignedIdentityReference:
                     description: >-
                       GeoBackupUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for
@@ -4022,6 +4083,22 @@ spec:
                   primaryKeyURI:
                     description: 'PrimaryKeyURI: URI for the key in keyvault for data encryption of the primary server.'
                     type: string
+                  primaryKeyURIFromConfig:
+                    description: 'PrimaryKeyURIFromConfig: URI for the key in keyvault for data encryption of the primary server.'
+                    properties:
+                      key:
+                        description: Key is the key in the Kubernetes configmap being referenced
+                        type: string
+                      name:
+                        description: >-
+                          Name is the name of the Kubernetes configmap being referenced.
+
+                          The configmap must be in the same namespace as the resource
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
                   primaryUserAssignedIdentityReference:
                     description: >-
                       PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption of the
@@ -4215,9 +4292,9 @@ spec:
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes ConfigMap being referenced.
+                              Name is the name of the Kubernetes ConfigMap to write to.
 
-                              The ConfigMap must be in the same namespace as the resource
+                              The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -4234,13 +4311,13 @@ spec:
                           will not be retrieved from Azure.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -4910,6 +4987,25 @@ spec:
                     type: string
                   geoBackupKeyURI:
                     type: string
+                  geoBackupKeyURIFromConfig:
+                    description: >-
+                      ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
+
+                      the resource it is on.
+                    properties:
+                      key:
+                        description: Key is the key in the Kubernetes configmap being referenced
+                        type: string
+                      name:
+                        description: >-
+                          Name is the name of the Kubernetes configmap being referenced.
+
+                          The configmap must be in the same namespace as the resource
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
                   geoBackupUserAssignedIdentityReference:
                     description: >-
                       GeoBackupUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for
@@ -4939,6 +5035,25 @@ spec:
                     type: string
                   primaryKeyURI:
                     type: string
+                  primaryKeyURIFromConfig:
+                    description: >-
+                      ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
+
+                      the resource it is on.
+                    properties:
+                      key:
+                        description: Key is the key in the Kubernetes configmap being referenced
+                        type: string
+                      name:
+                        description: >-
+                          Name is the name of the Kubernetes configmap being referenced.
+
+                          The configmap must be in the same namespace as the resource
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
                   primaryUserAssignedIdentityReference:
                     description: >-
                       PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption of the
@@ -5167,16 +5282,18 @@ spec:
                         description: >-
                           ConfigMapDestination describes the location to store a single configmap value
 
-                          Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.
+                          Note: This is similar to: SecretDestination in secrets.go.
+
+                          Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes ConfigMap being referenced.
+                              Name is the name of the Kubernetes ConfigMap to write to.
 
-                              The ConfigMap must be in the same namespace as the resource
+                              The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key
@@ -5198,16 +5315,18 @@ spec:
                         description: >-
                           SecretDestination describes the location to store a single secret value.
 
-                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
+                          Note: This is similar to: ConfigMapDestination in configmaps.go.
+
+                          Changes to one may need to be made to the others as well.
                         properties:
                           key:
-                            description: Key is the key in the Kubernetes secret being referenced
+                            description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
                             description: >-
-                              Name is the name of the Kubernetes secret being referenced.
+                              Name is the name of the Kubernetes secret to write to.
 
-                              The secret must be in the same namespace as the resource
+                              The secret will be created in the same namespace as the resource.
                             type: string
                         required:
                         - key

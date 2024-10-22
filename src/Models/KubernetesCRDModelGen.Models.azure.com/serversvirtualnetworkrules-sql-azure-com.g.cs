@@ -42,7 +42,7 @@ public partial class V1api20211101storageServersVirtualNetworkRuleSpecVirtualNet
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_VirtualNetworkRule_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersVirtualNetworkRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersVirtualNetworkRuleSpec
 {
@@ -104,7 +104,7 @@ public partial class V1api20211101storageServersVirtualNetworkRuleStatusConditio
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_VirtualNetworkRule_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersVirtualNetworkRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersVirtualNetworkRuleStatus
 {
@@ -162,11 +162,11 @@ public partial class V1api20211101storageServersVirtualNetworkRule : IKubernetes
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_VirtualNetworkRule_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersVirtualNetworkRule_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersVirtualNetworkRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_VirtualNetworkRule_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersVirtualNetworkRule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersVirtualNetworkRuleStatus? Status { get; set; }
 }

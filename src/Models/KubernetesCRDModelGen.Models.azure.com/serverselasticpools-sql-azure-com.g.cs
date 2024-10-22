@@ -67,7 +67,7 @@ public partial class V1api20211101storageServersElasticPoolSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_ElasticPool_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersElasticPool_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersElasticPoolSpec
 {
@@ -207,7 +207,7 @@ public partial class V1api20211101storageServersElasticPoolStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_ElasticPool_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersElasticPool_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersElasticPoolStatus
 {
@@ -305,11 +305,11 @@ public partial class V1api20211101storageServersElasticPool : IKubernetesObject<
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_ElasticPool_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersElasticPool_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersElasticPoolSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_ElasticPool_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersElasticPool_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersElasticPoolStatus? Status { get; set; }
 }

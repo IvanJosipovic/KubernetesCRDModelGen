@@ -202,7 +202,7 @@ public partial class V1api20220801storageBackendSpecTls
     public bool? ValidateCertificateName { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_Backend_Spec</summary>
+/// <summary>Storage version of v1api20220801.Backend_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendSpec
 {
@@ -435,7 +435,7 @@ public partial class V1api20220801storageBackendStatusTls
     public bool? ValidateCertificateName { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_Backend_STATUS</summary>
+/// <summary>Storage version of v1api20220801.Backend_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageBackendStatus
 {
@@ -517,11 +517,11 @@ public partial class V1api20220801storageBackend : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_Backend_Spec</summary>
+    /// <summary>Storage version of v1api20220801.Backend_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220801storageBackendSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_Backend_STATUS</summary>
+    /// <summary>Storage version of v1api20220801.Backend_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageBackendStatus? Status { get; set; }
 }

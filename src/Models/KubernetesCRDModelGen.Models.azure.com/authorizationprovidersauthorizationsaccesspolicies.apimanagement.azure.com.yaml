@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.9.0
+    app.kubernetes.io/version: v2.10.0
   name: authorizationprovidersauthorizationsaccesspolicies.apimanagement.azure.com
 spec:
   conversion:
@@ -269,7 +269,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20220801.Service_AuthorizationProviders_Authorizations_AccessPolicy_Spec
+            description: Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -348,7 +348,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20220801.Service_AuthorizationProviders_Authorizations_AccessPolicy_STATUS
+            description: Storage version of v1api20220801.AuthorizationProvidersAuthorizationsAccessPolicy_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -673,7 +673,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20230501preview.Service_AuthorizationProviders_Authorizations_AccessPolicy_Spec
+            description: Storage version of v1api20230501preview.AuthorizationProvidersAuthorizationsAccessPolicy_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -756,7 +756,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20230501preview.Service_AuthorizationProviders_Authorizations_AccessPolicy_STATUS
+            description: Storage version of v1api20230501preview.AuthorizationProvidersAuthorizationsAccessPolicy_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

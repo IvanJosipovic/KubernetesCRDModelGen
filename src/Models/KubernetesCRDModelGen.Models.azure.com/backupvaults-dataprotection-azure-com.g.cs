@@ -59,7 +59,7 @@ public partial class V1api20231101storageBackupVaultSpecIdentity
     public IList<V1api20231101storageBackupVaultSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPrincipalId
 {
@@ -67,7 +67,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPr
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes ConfigMap to write to. The ConfigMap will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
@@ -80,7 +80,7 @@ public partial class V1api20231101storageBackupVaultSpecOperatorSpecConfigMaps
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("principalId")]
     public V1api20231101storageBackupVaultSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
 }

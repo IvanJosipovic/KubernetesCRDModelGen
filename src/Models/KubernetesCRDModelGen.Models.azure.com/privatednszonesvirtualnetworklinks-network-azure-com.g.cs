@@ -55,7 +55,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVi
     public V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpecVirtualNetworkReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20200601.PrivateDnsZones_VirtualNetworkLink_Spec</summary>
+/// <summary>Storage version of v1api20200601.PrivateDnsZonesVirtualNetworkLink_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpec
 {
@@ -142,7 +142,7 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20200601.PrivateDnsZones_VirtualNetworkLink_STATUS</summary>
+/// <summary>Storage version of v1api20200601.PrivateDnsZonesVirtualNetworkLink_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus
 {
@@ -216,11 +216,11 @@ public partial class V1api20200601storagePrivateDnsZonesVirtualNetworkLink : IKu
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20200601.PrivateDnsZones_VirtualNetworkLink_Spec</summary>
+    /// <summary>Storage version of v1api20200601.PrivateDnsZonesVirtualNetworkLink_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20200601storagePrivateDnsZonesVirtualNetworkLinkSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20200601.PrivateDnsZones_VirtualNetworkLink_STATUS</summary>
+    /// <summary>Storage version of v1api20200601.PrivateDnsZonesVirtualNetworkLink_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20200601storagePrivateDnsZonesVirtualNetworkLinkStatus? Status { get; set; }
 }

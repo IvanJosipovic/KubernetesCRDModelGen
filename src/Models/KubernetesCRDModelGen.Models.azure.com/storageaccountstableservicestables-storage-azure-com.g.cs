@@ -80,7 +80,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableSpecSi
     public V1api20230101storageStorageAccountsTableServicesTableSpecSignedIdentifiersReference Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_TableServices_Table_Spec</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsTableServicesTable_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServicesTableSpec
 {
@@ -176,7 +176,7 @@ public partial class V1api20230101storageStorageAccountsTableServicesTableStatus
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_TableServices_Table_STATUS</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsTableServicesTable_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsTableServicesTableStatus
 {
@@ -230,11 +230,11 @@ public partial class V1api20230101storageStorageAccountsTableServicesTable : IKu
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_TableServices_Table_Spec</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsTableServicesTable_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230101storageStorageAccountsTableServicesTableSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_TableServices_Table_STATUS</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsTableServicesTable_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsTableServicesTableStatus? Status { get; set; }
 }

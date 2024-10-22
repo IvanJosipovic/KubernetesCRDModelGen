@@ -34,7 +34,7 @@ public partial class V1api20211101storageServersAuditingSettingSpecStorageAccoun
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_AuditingSetting_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersAuditingSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAuditingSettingSpec
 {
@@ -128,7 +128,7 @@ public partial class V1api20211101storageServersAuditingSettingStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_AuditingSetting_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersAuditingSetting_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersAuditingSettingStatus
 {
@@ -214,11 +214,11 @@ public partial class V1api20211101storageServersAuditingSetting : IKubernetesObj
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_AuditingSetting_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersAuditingSetting_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersAuditingSettingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_AuditingSetting_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersAuditingSetting_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersAuditingSettingStatus? Status { get; set; }
 }

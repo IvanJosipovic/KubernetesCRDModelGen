@@ -21,7 +21,7 @@ public partial class V1api20200601storageDomainsTopicSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20200601.Domains_Topic_Spec</summary>
+/// <summary>Storage version of v1api20200601.DomainsTopic_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageDomainsTopicSpec
 {
@@ -108,7 +108,7 @@ public partial class V1api20200601storageDomainsTopicStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20200601.Domains_Topic_STATUS</summary>
+/// <summary>Storage version of v1api20200601.DomainsTopic_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageDomainsTopicStatus
 {
@@ -162,11 +162,11 @@ public partial class V1api20200601storageDomainsTopic : IKubernetesObject<V1Obje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20200601.Domains_Topic_Spec</summary>
+    /// <summary>Storage version of v1api20200601.DomainsTopic_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20200601storageDomainsTopicSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20200601.Domains_Topic_STATUS</summary>
+    /// <summary>Storage version of v1api20200601.DomainsTopic_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20200601storageDomainsTopicStatus? Status { get; set; }
 }

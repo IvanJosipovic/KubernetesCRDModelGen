@@ -85,7 +85,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSp
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_Spec</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainerThroughputSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSpec
 {
@@ -243,7 +243,7 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingSt
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainerThroughputSetting_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerThroughputSettingStatus
 {
@@ -301,11 +301,11 @@ public partial class V1api20231115storageSqlDatabaseContainerThroughputSetting :
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_Spec</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerThroughputSetting_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageSqlDatabaseContainerThroughputSettingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerThroughputSetting_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageSqlDatabaseContainerThroughputSettingStatus? Status { get; set; }
 }

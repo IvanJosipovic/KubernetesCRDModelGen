@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.9.0
+    app.kubernetes.io/version: v2.10.0
   name: routes.cdn.azure.com
 spec:
   conversion:
@@ -515,7 +515,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20230501.Profiles_AfdEndpoints_Route_Spec
+            description: Storage version of v1api20230501.Route_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -725,7 +725,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20230501.Profiles_AfdEndpoints_Route_STATUS
+            description: Storage version of v1api20230501.Route_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

@@ -143,7 +143,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolSpecSparkConfigPro
     public string? Filename { get; set; }
 }
 
-/// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_Spec</summary>
+/// <summary>Storage version of v1api20210601.WorkspacesBigDataPool_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolSpec
 {
@@ -415,7 +415,7 @@ public partial class V1api20210601storageWorkspacesBigDataPoolStatusSparkConfigP
     public string? Time { get; set; }
 }
 
-/// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_STATUS</summary>
+/// <summary>Storage version of v1api20210601.WorkspacesBigDataPool_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspacesBigDataPoolStatus
 {
@@ -545,11 +545,11 @@ public partial class V1api20210601storageWorkspacesBigDataPool : IKubernetesObje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_Spec</summary>
+    /// <summary>Storage version of v1api20210601.WorkspacesBigDataPool_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20210601storageWorkspacesBigDataPoolSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20210601.Workspaces_BigDataPool_STATUS</summary>
+    /// <summary>Storage version of v1api20210601.WorkspacesBigDataPool_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20210601storageWorkspacesBigDataPoolStatus? Status { get; set; }
 }

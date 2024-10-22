@@ -89,7 +89,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecSo
     public V1api20201101storageNetworkSecurityGroupsSecurityRuleSpecSourceApplicationSecurityGroupsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkSecurityGroups_SecurityRule_Spec</summary>
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroupsSecurityRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleSpec
 {
@@ -229,7 +229,7 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkSecurityGroups_SecurityRule_STATUS</summary>
+/// <summary>Storage version of v1api20201101.NetworkSecurityGroupsSecurityRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus
 {
@@ -343,11 +343,11 @@ public partial class V1api20201101storageNetworkSecurityGroupsSecurityRule : IKu
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.NetworkSecurityGroups_SecurityRule_Spec</summary>
+    /// <summary>Storage version of v1api20201101.NetworkSecurityGroupsSecurityRule_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20201101storageNetworkSecurityGroupsSecurityRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.NetworkSecurityGroups_SecurityRule_STATUS</summary>
+    /// <summary>Storage version of v1api20201101.NetworkSecurityGroupsSecurityRule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20201101storageNetworkSecurityGroupsSecurityRuleStatus? Status { get; set; }
 }

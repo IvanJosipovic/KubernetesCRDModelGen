@@ -104,7 +104,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecMonitorConfig
     public int? ToleratedNumberOfFailures { get; set; }
 }
 
-/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapsDnsConfigFqdn
 {
@@ -112,7 +112,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes ConfigMap to write to. The ConfigMap will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
@@ -125,7 +125,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOperatorSpecCo
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("dnsConfigFqdn")]
     public V1api20220401storageTrafficManagerProfileSpecOperatorSpecConfigMapsDnsConfigFqdn? DnsConfigFqdn { get; set; }
 }
@@ -156,7 +156,7 @@ public partial class V1api20220401storageTrafficManagerProfileSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220401.Trafficmanagerprofile_Spec</summary>
+/// <summary>Storage version of v1api20220401.TrafficManagerProfile_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileSpec
 {
@@ -367,7 +367,7 @@ public partial class V1api20220401storageTrafficManagerProfileStatusMonitorConfi
     public int? ToleratedNumberOfFailures { get; set; }
 }
 
-/// <summary>Storage version of v1api20220401.Trafficmanagerprofile_STATUS</summary>
+/// <summary>Storage version of v1api20220401.TrafficManagerProfile_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfileStatus
 {
@@ -453,11 +453,11 @@ public partial class V1api20220401storageTrafficManagerProfile : IKubernetesObje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220401.Trafficmanagerprofile_Spec</summary>
+    /// <summary>Storage version of v1api20220401.TrafficManagerProfile_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220401storageTrafficManagerProfileSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220401.Trafficmanagerprofile_STATUS</summary>
+    /// <summary>Storage version of v1api20220401.TrafficManagerProfile_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220401storageTrafficManagerProfileStatus? Status { get; set; }
 }

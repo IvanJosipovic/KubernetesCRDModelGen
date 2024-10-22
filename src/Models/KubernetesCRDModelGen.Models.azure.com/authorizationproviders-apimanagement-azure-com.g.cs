@@ -73,7 +73,7 @@ public partial class V1api20220801storageAuthorizationProviderSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_AuthorizationProvider_Spec</summary>
+/// <summary>Storage version of v1api20220801.AuthorizationProvider_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProviderSpec
 {
@@ -173,7 +173,7 @@ public partial class V1api20220801storageAuthorizationProviderStatusOauth2
     public string? RedirectUrl { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_AuthorizationProvider_STATUS</summary>
+/// <summary>Storage version of v1api20220801.AuthorizationProvider_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProviderStatus
 {
@@ -231,11 +231,11 @@ public partial class V1api20220801storageAuthorizationProvider : IKubernetesObje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_AuthorizationProvider_Spec</summary>
+    /// <summary>Storage version of v1api20220801.AuthorizationProvider_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220801storageAuthorizationProviderSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_AuthorizationProvider_STATUS</summary>
+    /// <summary>Storage version of v1api20220801.AuthorizationProvider_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageAuthorizationProviderStatus? Status { get; set; }
 }

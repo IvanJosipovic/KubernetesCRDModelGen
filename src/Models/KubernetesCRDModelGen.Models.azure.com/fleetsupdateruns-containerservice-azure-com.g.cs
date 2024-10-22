@@ -98,7 +98,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunSpecStrategy
     public IList<V1api20230315previewstorageFleetsUpdateRunSpecStrategyStages>? Stages { get; set; }
 }
 
-/// <summary>Storage version of v1api20230315preview.Fleets_UpdateRun_Spec</summary>
+/// <summary>Storage version of v1api20230315preview.FleetsUpdateRun_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpec
 {
@@ -940,7 +940,7 @@ public partial class V1api20230315previewstorageFleetsUpdateRunStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230315preview.Fleets_UpdateRun_STATUS</summary>
+/// <summary>Storage version of v1api20230315preview.FleetsUpdateRun_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunStatus
 {
@@ -1010,11 +1010,11 @@ public partial class V1api20230315previewstorageFleetsUpdateRun : IKubernetesObj
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230315preview.Fleets_UpdateRun_Spec</summary>
+    /// <summary>Storage version of v1api20230315preview.FleetsUpdateRun_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230315previewstorageFleetsUpdateRunSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230315preview.Fleets_UpdateRun_STATUS</summary>
+    /// <summary>Storage version of v1api20230315preview.FleetsUpdateRun_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetsUpdateRunStatus? Status { get; set; }
 }

@@ -80,7 +80,7 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_NestedEndpoint_Spec</summary>
+/// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSpec
 {
@@ -232,7 +232,7 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointSta
     public int? Scope { get; set; }
 }
 
-/// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_NestedEndpoint_STATUS</summary>
+/// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointStatus
 {
@@ -334,11 +334,11 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpoint : 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_NestedEndpoint_Spec</summary>
+    /// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220401storageTrafficManagerProfilesNestedEndpointSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_NestedEndpoint_STATUS</summary>
+    /// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220401storageTrafficManagerProfilesNestedEndpointStatus? Status { get; set; }
 }

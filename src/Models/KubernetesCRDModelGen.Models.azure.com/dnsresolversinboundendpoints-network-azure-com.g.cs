@@ -76,7 +76,7 @@ public partial class V1api20220701storageDnsResolversInboundEndpointSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.DnsResolvers_InboundEndpoint_Spec</summary>
+/// <summary>Storage version of v1api20220701.DnsResolversInboundEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsResolversInboundEndpointSpec
 {
@@ -209,7 +209,7 @@ public partial class V1api20220701storageDnsResolversInboundEndpointStatusSystem
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.DnsResolvers_InboundEndpoint_STATUS</summary>
+/// <summary>Storage version of v1api20220701.DnsResolversInboundEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsResolversInboundEndpointStatus
 {
@@ -283,11 +283,11 @@ public partial class V1api20220701storageDnsResolversInboundEndpoint : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.DnsResolvers_InboundEndpoint_Spec</summary>
+    /// <summary>Storage version of v1api20220701.DnsResolversInboundEndpoint_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220701storageDnsResolversInboundEndpointSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.DnsResolvers_InboundEndpoint_STATUS</summary>
+    /// <summary>Storage version of v1api20220701.DnsResolversInboundEndpoint_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220701storageDnsResolversInboundEndpointStatus? Status { get; set; }
 }

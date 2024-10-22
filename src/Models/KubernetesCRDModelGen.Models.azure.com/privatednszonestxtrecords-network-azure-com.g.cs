@@ -165,7 +165,7 @@ public partial class V1api20200601storagePrivateDnsZonesTXTRecordSpecTxtRecords
     public IList<string>? Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20200601.PrivateDnsZones_TXT_Spec</summary>
+/// <summary>Storage version of v1api20200601.PrivateDnsZonesTXTRecord_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesTXTRecordSpec
 {
@@ -407,7 +407,7 @@ public partial class V1api20200601storagePrivateDnsZonesTXTRecordStatusTxtRecord
     public IList<string>? Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20200601.PrivateDnsZones_TXT_STATUS</summary>
+/// <summary>Storage version of v1api20200601.PrivateDnsZonesTXTRecord_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storagePrivateDnsZonesTXTRecordStatus
 {
@@ -505,11 +505,11 @@ public partial class V1api20200601storagePrivateDnsZonesTXTRecord : IKubernetesO
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20200601.PrivateDnsZones_TXT_Spec</summary>
+    /// <summary>Storage version of v1api20200601.PrivateDnsZonesTXTRecord_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20200601storagePrivateDnsZonesTXTRecordSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20200601.PrivateDnsZones_TXT_STATUS</summary>
+    /// <summary>Storage version of v1api20200601.PrivateDnsZonesTXTRecord_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20200601storagePrivateDnsZonesTXTRecordStatus? Status { get; set; }
 }

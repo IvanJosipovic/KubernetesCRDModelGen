@@ -193,7 +193,7 @@ public partial class V1api20220301storageServerFarmSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20220301.Serverfarm_Spec</summary>
+/// <summary>Storage version of v1api20220301.ServerFarm_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmSpec
 {
@@ -477,7 +477,7 @@ public partial class V1api20220301storageServerFarmStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20220301.Serverfarm_STATUS</summary>
+/// <summary>Storage version of v1api20220301.ServerFarm_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageServerFarmStatus
 {
@@ -635,11 +635,11 @@ public partial class V1api20220301storageServerFarm : IKubernetesObject<V1Object
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220301.Serverfarm_Spec</summary>
+    /// <summary>Storage version of v1api20220301.ServerFarm_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220301storageServerFarmSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220301.Serverfarm_STATUS</summary>
+    /// <summary>Storage version of v1api20220301.ServerFarm_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220301storageServerFarmStatus? Status { get; set; }
 }
