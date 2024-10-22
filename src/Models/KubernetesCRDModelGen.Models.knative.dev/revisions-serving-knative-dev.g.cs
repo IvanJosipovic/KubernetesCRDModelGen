@@ -16,7 +16,7 @@ public partial class V1RevisionSpecContainersEnvValueFromConfigMapKeyRef
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -33,7 +33,7 @@ public partial class V1RevisionSpecContainersEnvValueFromSecretKeyRef
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -84,7 +84,7 @@ public partial class V1RevisionSpecContainersEnv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1RevisionSpecContainersEnvFromConfigMapRef
 {
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -97,7 +97,7 @@ public partial class V1RevisionSpecContainersEnvFromConfigMapRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1RevisionSpecContainersEnvFromSecretRef
 {
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -665,7 +665,7 @@ public partial class V1RevisionSpecContainers
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1RevisionSpecImagePullSecrets
 {
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -699,7 +699,7 @@ public partial class V1RevisionSpecVolumesConfigMap
     [JsonPropertyName("items")]
     public IList<V1RevisionSpecVolumesConfigMapItems>? Items { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -733,7 +733,7 @@ public partial class V1RevisionSpecVolumesProjectedSourcesConfigMap
     [JsonPropertyName("items")]
     public IList<V1RevisionSpecVolumesProjectedSourcesConfigMapItems>? Items { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -742,7 +742,7 @@ public partial class V1RevisionSpecVolumesProjectedSourcesConfigMap
     public bool? Optional { get; set; }
 }
 
-/// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
+/// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1RevisionSpecVolumesProjectedSourcesDownwardAPIItemsFieldRef
 {
@@ -776,7 +776,7 @@ public partial class V1RevisionSpecVolumesProjectedSourcesDownwardAPIItemsResour
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1RevisionSpecVolumesProjectedSourcesDownwardAPIItems
 {
-    /// <summary>Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.</summary>
+    /// <summary>Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.</summary>
     [JsonPropertyName("fieldRef")]
     public V1RevisionSpecVolumesProjectedSourcesDownwardAPIItemsFieldRef? FieldRef { get; set; }
 
@@ -827,7 +827,7 @@ public partial class V1RevisionSpecVolumesProjectedSourcesSecret
     [JsonPropertyName("items")]
     public IList<V1RevisionSpecVolumesProjectedSourcesSecretItems>? Items { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -989,6 +989,18 @@ public partial class V1RevisionSpec
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-hostaliases</summary>
     [JsonPropertyName("hostAliases")]
     public IList<JsonNode>? HostAliases { get; set; }
+
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-hostipc</summary>
+    [JsonPropertyName("hostIPC")]
+    public JsonNode? HostIPC { get; set; }
+
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-hostnetwork</summary>
+    [JsonPropertyName("hostNetwork")]
+    public JsonNode? HostNetwork { get; set; }
+
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-hostpid</summary>
+    [JsonPropertyName("hostPID")]
+    public JsonNode? HostPID { get; set; }
 
     /// <summary>IdleTimeoutSeconds is the maximum duration in seconds a request will be allowed to stay open while not receiving any bytes from the user's application. If unspecified, a system default will be provided.</summary>
     [JsonPropertyName("idleTimeoutSeconds")]
