@@ -137,6 +137,10 @@ public partial class V1alpha1JobSinkStatus
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1alpha1JobSinkStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
 }
 
 /// <summary>JobSink triggers long-running jobs when an event occur.</summary>

@@ -110,6 +110,39 @@ public partial class V1alpha1EventPolicySpecTo
     public V1alpha1EventPolicySpecToSelector? Selector { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1EventPolicySpecFilters
+{
+    /// <summary>All evaluates to true if all the nested expressions evaluate to true. It must contain at least one filter expression</summary>
+    [JsonPropertyName("all")]
+    public IList<JsonNode>? All { get; set; }
+
+    /// <summary>Any evaluates to true if any of the nested expressions evaluate to true. It must contain at least one filter expression</summary>
+    [JsonPropertyName("any")]
+    public IList<JsonNode>? Any { get; set; }
+
+    /// <summary>CESQL is a CloudEvents SQL v1 expression that will evaluate to true or false for each CloudEvent.</summary>
+    [JsonPropertyName("cesql")]
+    public string? Cesql { get; set; }
+
+    /// <summary>Exact evaluates to true if the values of the matching CloudEvents attributes all exactly match with the associated value string specified (case sensitive)</summary>
+    [JsonPropertyName("exact")]
+    public JsonNode? Exact { get; set; }
+
+    /// <summary>Not evaluates to true if the nested expression evaluates to false.</summary>
+    [JsonPropertyName("not")]
+    public JsonNode? Not { get; set; }
+
+    /// <summary>Prefix evaluates to true if the values of the matching CloudEvents attributes all start with the associated value string specified (case sensitive)</summary>
+    [JsonPropertyName("prefix")]
+    public JsonNode? Prefix { get; set; }
+
+    /// <summary>Exact evaluates to true if the values of the matching CloudEvents attributes all end with the associated value string specified (case sensitive)</summary>
+    [JsonPropertyName("suffix")]
+    public JsonNode? Suffix { get; set; }
+}
+
 /// <summary>Spec defines the desired state of the EventPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EventPolicySpec
@@ -121,6 +154,10 @@ public partial class V1alpha1EventPolicySpec
     /// <summary>To lists all resources for which this policy applies. Resources in this list must act like an ingress and have an audience. The resources are part of the same namespace as the EventPolicy. An empty list means it applies to all resources in the EventPolicies namespace</summary>
     [JsonPropertyName("to")]
     public IList<V1alpha1EventPolicySpecTo>? To { get; set; }
+
+    /// <summary>Filters is an array of SubscriptionsAPIFilters that evaluate to true or false. If any filter expression in the array evaluates to false, the event will not continue pass the ingress of the target resources of the policy</summary>
+    [JsonPropertyName("filters")]
+    public IList<V1alpha1EventPolicySpecFilters>? Filters { get; set; }
 }
 
 /// <summary></summary>
