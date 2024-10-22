@@ -859,6 +859,62 @@ public partial class V1beta1KubernetesClusterSpecForProviderHttpProxyConfig
     public V1beta1KubernetesClusterSpecForProviderHttpProxyConfigTrustedCaSecretRef? TrustedCaSecretRef { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderIdentity
@@ -866,6 +922,14 @@ public partial class V1beta1KubernetesClusterSpecForProviderIdentity
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>References to UserAssignedIdentity in managedidentity to populate identityIds.</summary>
+    [JsonPropertyName("identityIdsRefs")]
+    public IList<V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsRefs>? IdentityIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
+    [JsonPropertyName("identityIdsSelector")]
+    public V1beta1KubernetesClusterSpecForProviderIdentityIdentityIdsSelector? IdentityIdsSelector { get; set; }
 
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this Kubernetes Cluster. Possible values are SystemAssigned or UserAssigned.</summary>
     [JsonPropertyName("type")]
@@ -2696,6 +2760,62 @@ public partial class V1beta1KubernetesClusterSpecInitProviderHttpProxyConfig
     public V1beta1KubernetesClusterSpecInitProviderHttpProxyConfigTrustedCaSecretRef? TrustedCaSecretRef { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderIdentity
@@ -2703,6 +2823,14 @@ public partial class V1beta1KubernetesClusterSpecInitProviderIdentity
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Kubernetes Cluster.</summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>References to UserAssignedIdentity in managedidentity to populate identityIds.</summary>
+    [JsonPropertyName("identityIdsRefs")]
+    public IList<V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsRefs>? IdentityIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of UserAssignedIdentity in managedidentity to populate identityIds.</summary>
+    [JsonPropertyName("identityIdsSelector")]
+    public V1beta1KubernetesClusterSpecInitProviderIdentityIdentityIdsSelector? IdentityIdsSelector { get; set; }
 
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this Kubernetes Cluster. Possible values are SystemAssigned or UserAssigned.</summary>
     [JsonPropertyName("type")]
