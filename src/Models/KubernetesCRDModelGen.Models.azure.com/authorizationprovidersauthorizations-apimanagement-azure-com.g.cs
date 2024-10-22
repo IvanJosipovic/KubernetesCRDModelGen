@@ -30,7 +30,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpec
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorization_Spec</summary>
+/// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorization_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationSpec
 {
@@ -113,7 +113,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationStat
     public string? Message { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorization_STATUS</summary>
+/// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorization_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationStatus
 {
@@ -179,11 +179,11 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorization : I
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorization_Spec</summary>
+    /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorization_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220801storageAuthorizationProvidersAuthorizationSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_AuthorizationProviders_Authorization_STATUS</summary>
+    /// <summary>Storage version of v1api20220801.AuthorizationProvidersAuthorization_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageAuthorizationProvidersAuthorizationStatus? Status { get; set; }
 }

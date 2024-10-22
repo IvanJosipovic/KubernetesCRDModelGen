@@ -372,7 +372,7 @@ public partial class V1api20221001storageAutoscaleSettingSpecTargetResourceUriRe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20221001.Autoscalesetting_Spec</summary>
+/// <summary>Storage version of v1api20221001.AutoscaleSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221001storageAutoscaleSettingSpec
 {
@@ -890,7 +890,7 @@ public partial class V1api20221001storageAutoscaleSetting : IKubernetesObject<V1
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20221001.Autoscalesetting_Spec</summary>
+    /// <summary>Storage version of v1api20221001.AutoscaleSetting_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20221001storageAutoscaleSettingSpec? Spec { get; set; }
 

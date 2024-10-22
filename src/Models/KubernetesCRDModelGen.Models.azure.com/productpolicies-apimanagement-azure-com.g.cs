@@ -21,7 +21,7 @@ public partial class V1api20220801storageProductPolicySpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_Products_Policy_Spec</summary>
+/// <summary>Storage version of v1api20220801.ProductPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageProductPolicySpec
 {
@@ -79,7 +79,7 @@ public partial class V1api20220801storageProductPolicyStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_Products_Policy_STATUS</summary>
+/// <summary>Storage version of v1api20220801.ProductPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageProductPolicyStatus
 {
@@ -133,11 +133,11 @@ public partial class V1api20220801storageProductPolicy : IKubernetesObject<V1Obj
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_Products_Policy_Spec</summary>
+    /// <summary>Storage version of v1api20220801.ProductPolicy_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220801storageProductPolicySpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_Products_Policy_STATUS</summary>
+    /// <summary>Storage version of v1api20220801.ProductPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageProductPolicyStatus? Status { get; set; }
 }

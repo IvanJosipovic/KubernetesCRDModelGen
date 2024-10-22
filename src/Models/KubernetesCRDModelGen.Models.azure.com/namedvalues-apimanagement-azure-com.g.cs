@@ -55,7 +55,7 @@ public partial class V1api20220801storageNamedValueSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_NamedValue_Spec</summary>
+/// <summary>Storage version of v1api20220801.NamedValue_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageNamedValueSpec
 {
@@ -171,7 +171,7 @@ public partial class V1api20220801storageNamedValueStatusKeyVault
     public string? SecretIdentifier { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_NamedValue_STATUS</summary>
+/// <summary>Storage version of v1api20220801.NamedValue_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageNamedValueStatus
 {
@@ -237,11 +237,11 @@ public partial class V1api20220801storageNamedValue : IKubernetesObject<V1Object
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_NamedValue_Spec</summary>
+    /// <summary>Storage version of v1api20220801.NamedValue_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220801storageNamedValueSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_NamedValue_STATUS</summary>
+    /// <summary>Storage version of v1api20220801.NamedValue_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageNamedValueStatus? Status { get; set; }
 }

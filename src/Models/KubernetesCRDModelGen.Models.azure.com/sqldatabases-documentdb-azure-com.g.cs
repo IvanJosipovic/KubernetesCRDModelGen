@@ -89,7 +89,7 @@ public partial class V1api20231115storageSqlDatabaseSpecResource
     public V1api20231115storageSqlDatabaseSpecResourceRestoreParameters? RestoreParameters { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabase_Spec</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabase_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseSpec
 {
@@ -247,7 +247,7 @@ public partial class V1api20231115storageSqlDatabaseStatusResource
     public V1api20231115storageSqlDatabaseStatusResourceRestoreParameters? RestoreParameters { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabase_STATUS</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabase_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseStatus
 {
@@ -309,11 +309,11 @@ public partial class V1api20231115storageSqlDatabase : IKubernetesObject<V1Objec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabase_Spec</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabase_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageSqlDatabaseSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabase_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabase_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageSqlDatabaseStatus? Status { get; set; }
 }

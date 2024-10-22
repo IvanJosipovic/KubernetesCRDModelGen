@@ -68,7 +68,7 @@ public partial class V1api20231115storageSqlDatabaseContainerUserDefinedFunction
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_UserDefinedFunction_Spec</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainerUserDefinedFunction_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerUserDefinedFunctionSpec
 {
@@ -167,7 +167,7 @@ public partial class V1api20231115storageSqlDatabaseContainerUserDefinedFunction
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_UserDefinedFunction_STATUS</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainerUserDefinedFunction_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerUserDefinedFunctionStatus
 {
@@ -225,11 +225,11 @@ public partial class V1api20231115storageSqlDatabaseContainerUserDefinedFunction
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_UserDefinedFunction_Spec</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerUserDefinedFunction_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageSqlDatabaseContainerUserDefinedFunctionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_UserDefinedFunction_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerUserDefinedFunction_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageSqlDatabaseContainerUserDefinedFunctionStatus? Status { get; set; }
 }

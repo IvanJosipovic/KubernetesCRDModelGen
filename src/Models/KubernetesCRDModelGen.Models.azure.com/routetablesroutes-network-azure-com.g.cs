@@ -21,7 +21,7 @@ public partial class V1api20201101storageRouteTablesRouteSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.RouteTables_Route_Spec</summary>
+/// <summary>Storage version of v1api20201101.RouteTablesRoute_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageRouteTablesRouteSpec
 {
@@ -91,7 +91,7 @@ public partial class V1api20201101storageRouteTablesRouteStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.RouteTables_Route_STATUS</summary>
+/// <summary>Storage version of v1api20201101.RouteTablesRoute_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageRouteTablesRouteStatus
 {
@@ -161,11 +161,11 @@ public partial class V1api20201101storageRouteTablesRoute : IKubernetesObject<V1
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.RouteTables_Route_Spec</summary>
+    /// <summary>Storage version of v1api20201101.RouteTablesRoute_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20201101storageRouteTablesRouteSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.RouteTables_Route_STATUS</summary>
+    /// <summary>Storage version of v1api20201101.RouteTablesRoute_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20201101storageRouteTablesRouteStatus? Status { get; set; }
 }

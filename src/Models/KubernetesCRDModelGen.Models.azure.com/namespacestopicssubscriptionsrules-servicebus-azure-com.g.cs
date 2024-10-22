@@ -112,7 +112,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecSq
     public string? SqlExpression { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscriptions_Rule_Spec</summary>
+/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec
 {
@@ -306,7 +306,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscriptions_Rule_STATUS</summary>
+/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
 {
@@ -376,11 +376,11 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRule : IKu
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscriptions_Rule_Spec</summary>
+    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscriptions_Rule_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus? Status { get; set; }
 }

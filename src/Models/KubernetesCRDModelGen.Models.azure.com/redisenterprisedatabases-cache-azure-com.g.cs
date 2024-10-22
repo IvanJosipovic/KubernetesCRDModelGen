@@ -114,7 +114,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseSpecPersistence
     public string? RdbFrequency { get; set; }
 }
 
-/// <summary>Storage version of v1api20230701.RedisEnterprise_Database_Spec</summary>
+/// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseSpec
 {
@@ -276,7 +276,7 @@ public partial class V1api20230701storageRedisEnterpriseDatabaseStatusPersistenc
     public string? RdbFrequency { get; set; }
 }
 
-/// <summary>Storage version of v1api20230701.RedisEnterprise_Database_STATUS</summary>
+/// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRedisEnterpriseDatabaseStatus
 {
@@ -358,11 +358,11 @@ public partial class V1api20230701storageRedisEnterpriseDatabase : IKubernetesOb
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230701.RedisEnterprise_Database_Spec</summary>
+    /// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230701storageRedisEnterpriseDatabaseSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230701.RedisEnterprise_Database_STATUS</summary>
+    /// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230701storageRedisEnterpriseDatabaseStatus? Status { get; set; }
 }

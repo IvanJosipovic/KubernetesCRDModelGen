@@ -164,7 +164,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceSpecRestorePo
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_BlobService_Spec</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsBlobService_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceSpec
 {
@@ -418,7 +418,7 @@ public partial class V1api20230101storageStorageAccountsBlobServiceStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_BlobService_STATUS</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsBlobService_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServiceStatus
 {
@@ -504,11 +504,11 @@ public partial class V1api20230101storageStorageAccountsBlobService : IKubernete
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_BlobService_Spec</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsBlobService_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230101storageStorageAccountsBlobServiceSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_BlobService_STATUS</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsBlobService_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsBlobServiceStatus? Status { get; set; }
 }

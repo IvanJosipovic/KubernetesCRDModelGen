@@ -1944,7 +1944,7 @@ public partial class V1api20210601storageProfilesEndpointSpecWebApplicationFirew
     public V1api20210601storageProfilesEndpointSpecWebApplicationFirewallPolicyLinkReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20210601.Profiles_Endpoint_Spec</summary>
+/// <summary>Storage version of v1api20210601.ProfilesEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointSpec
 {
@@ -3904,7 +3904,7 @@ public partial class V1api20210601storageProfilesEndpointStatusWebApplicationFir
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20210601.Profiles_Endpoint_STATUS</summary>
+/// <summary>Storage version of v1api20210601.ProfilesEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageProfilesEndpointStatus
 {
@@ -4042,11 +4042,11 @@ public partial class V1api20210601storageProfilesEndpoint : IKubernetesObject<V1
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20210601.Profiles_Endpoint_Spec</summary>
+    /// <summary>Storage version of v1api20210601.ProfilesEndpoint_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20210601storageProfilesEndpointSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20210601.Profiles_Endpoint_STATUS</summary>
+    /// <summary>Storage version of v1api20210601.ProfilesEndpoint_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20210601storageProfilesEndpointStatus? Status { get; set; }
 }

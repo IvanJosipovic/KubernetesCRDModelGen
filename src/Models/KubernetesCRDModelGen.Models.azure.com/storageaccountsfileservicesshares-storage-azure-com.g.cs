@@ -80,7 +80,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareSpecSig
     public V1api20230101storageStorageAccountsFileServicesShareSpecSignedIdentifiersReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_FileServices_Share_Spec</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareSpec
 {
@@ -196,7 +196,7 @@ public partial class V1api20230101storageStorageAccountsFileServicesShareStatusS
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_FileServices_Share_STATUS</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsFileServicesShareStatus
 {
@@ -318,11 +318,11 @@ public partial class V1api20230101storageStorageAccountsFileServicesShare : IKub
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_FileServices_Share_Spec</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230101storageStorageAccountsFileServicesShareSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_FileServices_Share_STATUS</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsFileServicesShare_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsFileServicesShareStatus? Status { get; set; }
 }

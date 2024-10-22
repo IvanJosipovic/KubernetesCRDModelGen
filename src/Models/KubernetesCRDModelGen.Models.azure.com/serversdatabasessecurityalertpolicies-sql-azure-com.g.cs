@@ -34,7 +34,7 @@ public partial class V1api20211101storageServersDatabasesSecurityAlertPolicySpec
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Databases_SecurityAlertPolicy_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersDatabasesSecurityAlertPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesSecurityAlertPolicySpec
 {
@@ -145,7 +145,7 @@ public partial class V1api20211101storageServersDatabasesSecurityAlertPolicyStat
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_Databases_SecurityAlertPolicy_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersDatabasesSecurityAlertPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesSecurityAlertPolicyStatus
 {
@@ -223,11 +223,11 @@ public partial class V1api20211101storageServersDatabasesSecurityAlertPolicy : I
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Databases_SecurityAlertPolicy_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersDatabasesSecurityAlertPolicy_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersDatabasesSecurityAlertPolicySpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_Databases_SecurityAlertPolicy_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersDatabasesSecurityAlertPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersDatabasesSecurityAlertPolicyStatus? Status { get; set; }
 }

@@ -490,7 +490,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolSpecVnetSubnetR
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusters_AgentPool_Spec</summary>
+/// <summary>Storage version of v1api20231001.ManagedClustersAgentPool_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231001storageManagedClustersAgentPoolSpec
 {
@@ -1005,7 +1005,7 @@ public partial class V1api20231001storageManagedClustersAgentPoolStatusUpgradeSe
     public string? MaxSurge { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusters_AgentPool_STATUS</summary>
+/// <summary>Storage version of v1api20231001.ManagedClustersAgentPool_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231001storageManagedClustersAgentPoolStatus
 {
@@ -1223,11 +1223,11 @@ public partial class V1api20231001storageManagedClustersAgentPool : IKubernetesO
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusters_AgentPool_Spec</summary>
+    /// <summary>Storage version of v1api20231001.ManagedClustersAgentPool_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231001storageManagedClustersAgentPoolSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusters_AgentPool_STATUS</summary>
+    /// <summary>Storage version of v1api20231001.ManagedClustersAgentPool_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231001storageManagedClustersAgentPoolStatus? Status { get; set; }
 }

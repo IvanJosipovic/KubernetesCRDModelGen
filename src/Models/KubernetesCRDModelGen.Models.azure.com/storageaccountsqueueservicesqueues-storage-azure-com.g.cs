@@ -21,7 +21,7 @@ public partial class V1api20230101storageStorageAccountsQueueServicesQueueSpecOw
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_QueueServices_Queue_Spec</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsQueueServicesQueue_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsQueueServicesQueueSpec
 {
@@ -79,7 +79,7 @@ public partial class V1api20230101storageStorageAccountsQueueServicesQueueStatus
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_QueueServices_Queue_STATUS</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsQueueServicesQueue_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsQueueServicesQueueStatus
 {
@@ -133,11 +133,11 @@ public partial class V1api20230101storageStorageAccountsQueueServicesQueue : IKu
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_QueueServices_Queue_Spec</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsQueueServicesQueue_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230101storageStorageAccountsQueueServicesQueueSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_QueueServices_Queue_STATUS</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsQueueServicesQueue_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsQueueServicesQueueStatus? Status { get; set; }
 }

@@ -81,7 +81,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpecPro
     public V1api20220301storageVirtualMachineScaleSetsExtensionSpecProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
-/// <summary>Storage version of v1api20220301.VirtualMachineScaleSets_Extension_Spec</summary>
+/// <summary>Storage version of v1api20220301.VirtualMachineScaleSetsExtension_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionSpec
 {
@@ -209,7 +209,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatusP
     public V1api20220301storageVirtualMachineScaleSetsExtensionStatusProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
-/// <summary>Storage version of v1api20220301.VirtualMachineScaleSets_Extension_STATUS</summary>
+/// <summary>Storage version of v1api20220301.VirtualMachineScaleSetsExtension_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetsExtensionStatus
 {
@@ -299,11 +299,11 @@ public partial class V1api20220301storageVirtualMachineScaleSetsExtension : IKub
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220301.VirtualMachineScaleSets_Extension_Spec</summary>
+    /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetsExtension_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220301storageVirtualMachineScaleSetsExtensionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220301.VirtualMachineScaleSets_Extension_STATUS</summary>
+    /// <summary>Storage version of v1api20220301.VirtualMachineScaleSetsExtension_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220301storageVirtualMachineScaleSetsExtensionStatus? Status { get; set; }
 }

@@ -233,7 +233,7 @@ public partial class V1api20180501storageDnsZonesMXRecordSpecTargetResource
     public V1api20180501storageDnsZonesMXRecordSpecTargetResourceReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20180501.DnsZones_MX_Spec</summary>
+/// <summary>Storage version of v1api20180501.DnsZonesMXRecord_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpec
 {
@@ -530,7 +530,7 @@ public partial class V1api20180501storageDnsZonesMXRecordStatusTargetResource
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20180501.DnsZones_MX_STATUS</summary>
+/// <summary>Storage version of v1api20180501.DnsZonesMXRecord_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordStatus
 {
@@ -640,11 +640,11 @@ public partial class V1api20180501storageDnsZonesMXRecord : IKubernetesObject<V1
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20180501.DnsZones_MX_Spec</summary>
+    /// <summary>Storage version of v1api20180501.DnsZonesMXRecord_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20180501storageDnsZonesMXRecordSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20180501.DnsZones_MX_STATUS</summary>
+    /// <summary>Storage version of v1api20180501.DnsZonesMXRecord_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20180501storageDnsZonesMXRecordStatus? Status { get; set; }
 }

@@ -106,7 +106,7 @@ public partial class V1api20211101storageServersFailoverGroupSpecReadWriteEndpoi
     public int? FailoverWithDataLossGracePeriodMinutes { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_FailoverGroup_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersFailoverGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupSpec
 {
@@ -231,7 +231,7 @@ public partial class V1api20211101storageServersFailoverGroupStatusReadWriteEndp
     public int? FailoverWithDataLossGracePeriodMinutes { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_FailoverGroup_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersFailoverGroup_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersFailoverGroupStatus
 {
@@ -309,11 +309,11 @@ public partial class V1api20211101storageServersFailoverGroup : IKubernetesObjec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_FailoverGroup_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersFailoverGroup_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersFailoverGroupSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_FailoverGroup_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersFailoverGroup_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersFailoverGroupStatus? Status { get; set; }
 }

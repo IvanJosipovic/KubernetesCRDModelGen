@@ -525,7 +525,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicySpecPoli
     public IList<V1api20230101storageStorageAccountsManagementPolicySpecPolicyRules>? Rules { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_ManagementPolicy_Spec</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicySpec
 {
@@ -1083,7 +1083,7 @@ public partial class V1api20230101storageStorageAccountsManagementPolicyStatusPo
     public IList<V1api20230101storageStorageAccountsManagementPolicyStatusPolicyRules>? Rules { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_ManagementPolicy_STATUS</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsManagementPolicyStatus
 {
@@ -1137,11 +1137,11 @@ public partial class V1api20230101storageStorageAccountsManagementPolicy : IKube
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_ManagementPolicy_Spec</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230101storageStorageAccountsManagementPolicySpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_ManagementPolicy_STATUS</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsManagementPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsManagementPolicyStatus? Status { get; set; }
 }

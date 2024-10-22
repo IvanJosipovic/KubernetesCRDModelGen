@@ -161,7 +161,7 @@ public partial class V1api20230501storageRouteSpecRuleSets
     public V1api20230501storageRouteSpecRuleSetsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_AfdEndpoints_Route_Spec</summary>
+/// <summary>Storage version of v1api20230501.Route_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageRouteSpec
 {
@@ -369,7 +369,7 @@ public partial class V1api20230501storageRouteStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_AfdEndpoints_Route_STATUS</summary>
+/// <summary>Storage version of v1api20230501.Route_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageRouteStatus
 {
@@ -475,11 +475,11 @@ public partial class V1api20230501storageRoute : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_AfdEndpoints_Route_Spec</summary>
+    /// <summary>Storage version of v1api20230501.Route_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230501storageRouteSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_AfdEndpoints_Route_STATUS</summary>
+    /// <summary>Storage version of v1api20230501.Route_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230501storageRouteStatus? Status { get; set; }
 }

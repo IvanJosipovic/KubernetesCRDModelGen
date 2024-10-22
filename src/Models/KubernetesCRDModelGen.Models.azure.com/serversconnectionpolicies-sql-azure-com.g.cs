@@ -21,7 +21,7 @@ public partial class V1api20211101storageServersConnectionPolicySpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_ConnectionPolicy_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersConnectionPolicy_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersConnectionPolicySpec
 {
@@ -75,7 +75,7 @@ public partial class V1api20211101storageServersConnectionPolicyStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_ConnectionPolicy_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersConnectionPolicy_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersConnectionPolicyStatus
 {
@@ -133,11 +133,11 @@ public partial class V1api20211101storageServersConnectionPolicy : IKubernetesOb
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_ConnectionPolicy_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersConnectionPolicy_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersConnectionPolicySpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_ConnectionPolicy_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersConnectionPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersConnectionPolicyStatus? Status { get; set; }
 }

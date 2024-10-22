@@ -81,7 +81,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpe
     public V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpecRemoteVirtualNetworkReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_Spec</summary>
+/// <summary>Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeering_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpec
 {
@@ -214,7 +214,7 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringSta
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS</summary>
+/// <summary>Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeering_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatus
 {
@@ -308,11 +308,11 @@ public partial class V1api20201101storageVirtualNetworksVirtualNetworkPeering : 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_Spec</summary>
+    /// <summary>Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeering_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20201101storageVirtualNetworksVirtualNetworkPeeringSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS</summary>
+    /// <summary>Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeering_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20201101storageVirtualNetworksVirtualNetworkPeeringStatus? Status { get; set; }
 }

@@ -198,7 +198,7 @@ public partial class V1api20230501storageSecretSpecParameters
     public V1api20230501storageSecretSpecParametersUrlSigningKey? UrlSigningKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_Secret_Spec</summary>
+/// <summary>Storage version of v1api20230501.Secret_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecretSpec
 {
@@ -481,7 +481,7 @@ public partial class V1api20230501storageSecretStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_Secret_STATUS</summary>
+/// <summary>Storage version of v1api20230501.Secret_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageSecretStatus
 {
@@ -547,11 +547,11 @@ public partial class V1api20230501storageSecret : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_Secret_Spec</summary>
+    /// <summary>Storage version of v1api20230501.Secret_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230501storageSecretSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_Secret_STATUS</summary>
+    /// <summary>Storage version of v1api20230501.Secret_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230501storageSecretStatus? Status { get; set; }
 }

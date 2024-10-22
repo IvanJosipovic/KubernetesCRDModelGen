@@ -80,7 +80,7 @@ public partial class V1api20220401storageTrafficManagerProfilesExternalEndpointS
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_ExternalEndpoint_Spec</summary>
+/// <summary>Storage version of v1api20220401.TrafficManagerProfilesExternalEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesExternalEndpointSpec
 {
@@ -232,7 +232,7 @@ public partial class V1api20220401storageTrafficManagerProfilesExternalEndpointS
     public int? Scope { get; set; }
 }
 
-/// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_ExternalEndpoint_STATUS</summary>
+/// <summary>Storage version of v1api20220401.TrafficManagerProfilesExternalEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesExternalEndpointStatus
 {
@@ -334,11 +334,11 @@ public partial class V1api20220401storageTrafficManagerProfilesExternalEndpoint 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_ExternalEndpoint_Spec</summary>
+    /// <summary>Storage version of v1api20220401.TrafficManagerProfilesExternalEndpoint_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220401storageTrafficManagerProfilesExternalEndpointSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220401.Trafficmanagerprofiles_ExternalEndpoint_STATUS</summary>
+    /// <summary>Storage version of v1api20220401.TrafficManagerProfilesExternalEndpoint_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220401storageTrafficManagerProfilesExternalEndpointStatus? Status { get; set; }
 }

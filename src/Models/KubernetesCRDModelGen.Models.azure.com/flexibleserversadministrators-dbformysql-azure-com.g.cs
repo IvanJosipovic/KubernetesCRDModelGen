@@ -68,7 +68,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecTenantI
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230630.FlexibleServers_Administrator_Spec</summary>
+/// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230630storageFlexibleServersAdministratorSpec
 {
@@ -179,7 +179,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230630.FlexibleServers_Administrator_STATUS</summary>
+/// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230630storageFlexibleServersAdministratorStatus
 {
@@ -249,11 +249,11 @@ public partial class V1api20230630storageFlexibleServersAdministrator : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230630.FlexibleServers_Administrator_Spec</summary>
+    /// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230630storageFlexibleServersAdministratorSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230630.FlexibleServers_Administrator_STATUS</summary>
+    /// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230630storageFlexibleServersAdministratorStatus? Status { get; set; }
 }

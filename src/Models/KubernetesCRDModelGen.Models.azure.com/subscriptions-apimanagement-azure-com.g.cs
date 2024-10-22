@@ -8,28 +8,28 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageSubscriptionSpecOperatorSpecSecretsPrimaryKey
 {
-    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageSubscriptionSpecOperatorSpecSecretsSecondaryKey
 {
-    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
@@ -42,11 +42,11 @@ public partial class V1api20220801storageSubscriptionSpecOperatorSpecSecrets
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryKey")]
     public V1api20220801storageSubscriptionSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
 
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryKey")]
     public V1api20220801storageSubscriptionSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 }
@@ -124,7 +124,7 @@ public partial class V1api20220801storageSubscriptionSpecSecondaryKey
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_Subscription_Spec</summary>
+/// <summary>Storage version of v1api20220801.Subscription_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageSubscriptionSpec
 {
@@ -210,7 +210,7 @@ public partial class V1api20220801storageSubscriptionStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220801.Service_Subscription_STATUS</summary>
+/// <summary>Storage version of v1api20220801.Subscription_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageSubscriptionStatus
 {
@@ -300,11 +300,11 @@ public partial class V1api20220801storageSubscription : IKubernetesObject<V1Obje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_Subscription_Spec</summary>
+    /// <summary>Storage version of v1api20220801.Subscription_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220801storageSubscriptionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220801.Service_Subscription_STATUS</summary>
+    /// <summary>Storage version of v1api20220801.Subscription_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageSubscriptionStatus? Status { get; set; }
 }

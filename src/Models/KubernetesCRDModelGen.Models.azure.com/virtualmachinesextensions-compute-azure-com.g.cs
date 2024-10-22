@@ -168,7 +168,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionSpecProtectedSe
     public V1api20220301storageVirtualMachinesExtensionSpecProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
-/// <summary>Storage version of v1api20220301.VirtualMachines_Extension_Spec</summary>
+/// <summary>Storage version of v1api20220301.VirtualMachinesExtension_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionSpec
 {
@@ -391,7 +391,7 @@ public partial class V1api20220301storageVirtualMachinesExtensionStatusProtected
     public V1api20220301storageVirtualMachinesExtensionStatusProtectedSettingsFromKeyVaultSourceVault? SourceVault { get; set; }
 }
 
-/// <summary>Storage version of v1api20220301.VirtualMachines_Extension_STATUS</summary>
+/// <summary>Storage version of v1api20220301.VirtualMachinesExtension_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachinesExtensionStatus
 {
@@ -489,11 +489,11 @@ public partial class V1api20220301storageVirtualMachinesExtension : IKubernetesO
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220301.VirtualMachines_Extension_Spec</summary>
+    /// <summary>Storage version of v1api20220301.VirtualMachinesExtension_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220301storageVirtualMachinesExtensionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220301.VirtualMachines_Extension_STATUS</summary>
+    /// <summary>Storage version of v1api20220301.VirtualMachinesExtension_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220301storageVirtualMachinesExtensionStatus? Status { get; set; }
 }

@@ -55,7 +55,7 @@ public partial class V1api20220701storageDnsResolversOutboundEndpointSpecSubnet
     public V1api20220701storageDnsResolversOutboundEndpointSpecSubnetReference Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.DnsResolvers_OutboundEndpoint_Spec</summary>
+/// <summary>Storage version of v1api20220701.DnsResolversOutboundEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsResolversOutboundEndpointSpec
 {
@@ -167,7 +167,7 @@ public partial class V1api20220701storageDnsResolversOutboundEndpointStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.DnsResolvers_OutboundEndpoint_STATUS</summary>
+/// <summary>Storage version of v1api20220701.DnsResolversOutboundEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsResolversOutboundEndpointStatus
 {
@@ -241,11 +241,11 @@ public partial class V1api20220701storageDnsResolversOutboundEndpoint : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.DnsResolvers_OutboundEndpoint_Spec</summary>
+    /// <summary>Storage version of v1api20220701.DnsResolversOutboundEndpoint_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20220701storageDnsResolversOutboundEndpointSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.DnsResolvers_OutboundEndpoint_STATUS</summary>
+    /// <summary>Storage version of v1api20220701.DnsResolversOutboundEndpoint_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220701storageDnsResolversOutboundEndpointStatus? Status { get; set; }
 }

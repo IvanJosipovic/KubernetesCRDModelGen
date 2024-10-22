@@ -21,7 +21,7 @@ public partial class V1api20230501storageAfdEndpointSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_AfdEndpoint_Spec</summary>
+/// <summary>Storage version of v1api20230501.AfdEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdEndpointSpec
 {
@@ -124,7 +124,7 @@ public partial class V1api20230501storageAfdEndpointStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_AfdEndpoint_STATUS</summary>
+/// <summary>Storage version of v1api20230501.AfdEndpoint_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdEndpointStatus
 {
@@ -206,11 +206,11 @@ public partial class V1api20230501storageAfdEndpoint : IKubernetesObject<V1Objec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_AfdEndpoint_Spec</summary>
+    /// <summary>Storage version of v1api20230501.AfdEndpoint_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230501storageAfdEndpointSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_AfdEndpoint_STATUS</summary>
+    /// <summary>Storage version of v1api20230501.AfdEndpoint_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230501storageAfdEndpointStatus? Status { get; set; }
 }

@@ -42,7 +42,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscription_Spec</summary>
+/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionSpec
 {
@@ -231,7 +231,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscription_STATUS</summary>
+/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageNamespacesTopicsSubscriptionStatus
 {
@@ -361,11 +361,11 @@ public partial class V1api20211101storageNamespacesTopicsSubscription : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscription_Spec</summary>
+    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageNamespacesTopicsSubscriptionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespaces_Topics_Subscription_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageNamespacesTopicsSubscriptionStatus? Status { get; set; }
 }

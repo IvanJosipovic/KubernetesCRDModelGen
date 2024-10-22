@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.9.0
+    app.kubernetes.io/version: v2.10.0
   name: sqldatabasethroughputsettings.documentdb.azure.com
 spec:
   conversion:
@@ -318,7 +318,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20210515.DatabaseAccounts_SqlDatabases_ThroughputSetting_Spec
+            description: Storage version of v1api20210515.SqlDatabaseThroughputSetting_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -423,7 +423,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20210515.DatabaseAccounts_SqlDatabases_ThroughputSetting_STATUS
+            description: Storage version of v1api20210515.SqlDatabaseThroughputSetting_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -875,7 +875,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_ThroughputSetting_Spec
+            description: Storage version of v1api20231115.SqlDatabaseThroughputSetting_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -980,7 +980,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_ThroughputSetting_STATUS
+            description: Storage version of v1api20231115.SqlDatabaseThroughputSetting_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

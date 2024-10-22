@@ -1538,7 +1538,7 @@ public partial class V1api20230501storageRuleSpecRuleconditions
     public V1api20230501storageRuleSpecRuleconditionsUrlPath? UrlPath { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_RuleSets_Rule_Spec</summary>
+/// <summary>Storage version of v1api20230501.Rule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageRuleSpec
 {
@@ -3116,7 +3116,7 @@ public partial class V1api20230501storageRuleStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Profiles_RuleSets_Rule_STATUS</summary>
+/// <summary>Storage version of v1api20230501.Rule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageRuleStatus
 {
@@ -3194,11 +3194,11 @@ public partial class V1api20230501storageRule : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_RuleSets_Rule_Spec</summary>
+    /// <summary>Storage version of v1api20230501.Rule_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230501storageRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Profiles_RuleSets_Rule_STATUS</summary>
+    /// <summary>Storage version of v1api20230501.Rule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230501storageRuleStatus? Status { get; set; }
 }

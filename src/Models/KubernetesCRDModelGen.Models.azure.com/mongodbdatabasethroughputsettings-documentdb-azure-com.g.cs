@@ -85,7 +85,7 @@ public partial class V1api20231115storageMongodbDatabaseThroughputSettingSpecRes
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_ThroughputSetting_Spec</summary>
+/// <summary>Storage version of v1api20231115.MongodbDatabaseThroughputSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageMongodbDatabaseThroughputSettingSpec
 {
@@ -243,7 +243,7 @@ public partial class V1api20231115storageMongodbDatabaseThroughputSettingStatusR
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_ThroughputSetting_STATUS</summary>
+/// <summary>Storage version of v1api20231115.MongodbDatabaseThroughputSetting_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageMongodbDatabaseThroughputSettingStatus
 {
@@ -301,11 +301,11 @@ public partial class V1api20231115storageMongodbDatabaseThroughputSetting : IKub
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_ThroughputSetting_Spec</summary>
+    /// <summary>Storage version of v1api20231115.MongodbDatabaseThroughputSetting_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageMongodbDatabaseThroughputSettingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_ThroughputSetting_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.MongodbDatabaseThroughputSetting_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageMongodbDatabaseThroughputSettingStatus? Status { get; set; }
 }

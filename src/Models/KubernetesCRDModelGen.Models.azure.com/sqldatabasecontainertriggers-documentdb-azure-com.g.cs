@@ -76,7 +76,7 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecResource
     public string? TriggerType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_Trigger_Spec</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerTriggerSpec
 {
@@ -183,7 +183,7 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerStatusResour
     public string? TriggerType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_Trigger_STATUS</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerTriggerStatus
 {
@@ -241,11 +241,11 @@ public partial class V1api20231115storageSqlDatabaseContainerTrigger : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_Trigger_Spec</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageSqlDatabaseContainerTriggerSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Containers_Trigger_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageSqlDatabaseContainerTriggerStatus? Status { get; set; }
 }

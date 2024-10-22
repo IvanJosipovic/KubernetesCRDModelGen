@@ -21,7 +21,7 @@ public partial class V1api20180601storageDatabaseSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20180601.Servers_Database_Spec</summary>
+/// <summary>Storage version of v1api20180601.Database_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageDatabaseSpec
 {
@@ -83,7 +83,7 @@ public partial class V1api20180601storageDatabaseStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20180601.Servers_Database_STATUS</summary>
+/// <summary>Storage version of v1api20180601.Database_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180601storageDatabaseStatus
 {
@@ -137,11 +137,11 @@ public partial class V1api20180601storageDatabase : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20180601.Servers_Database_Spec</summary>
+    /// <summary>Storage version of v1api20180601.Database_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20180601storageDatabaseSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20180601.Servers_Database_STATUS</summary>
+    /// <summary>Storage version of v1api20180601.Database_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20180601storageDatabaseStatus? Status { get; set; }
 }

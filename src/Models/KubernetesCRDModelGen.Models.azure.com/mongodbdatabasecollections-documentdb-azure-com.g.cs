@@ -148,7 +148,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResource
     public IDictionary<string, string>? ShardKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_Collection_Spec</summary>
+/// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageMongodbDatabaseCollectionSpec
 {
@@ -357,7 +357,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public IDictionary<string, string>? ShardKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_Collection_STATUS</summary>
+/// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageMongodbDatabaseCollectionStatus
 {
@@ -419,11 +419,11 @@ public partial class V1api20231115storageMongodbDatabaseCollection : IKubernetes
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_Collection_Spec</summary>
+    /// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageMongodbDatabaseCollectionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_MongodbDatabases_Collection_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageMongodbDatabaseCollectionStatus? Status { get; set; }
 }

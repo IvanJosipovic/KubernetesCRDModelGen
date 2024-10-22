@@ -34,7 +34,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_BlobServices_Container_Spec</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerSpec
 {
@@ -278,7 +278,7 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainerSta
     public IList<V1api20230101storageStorageAccountsBlobServicesContainerStatusLegalHoldTags>? Tags { get; set; }
 }
 
-/// <summary>Storage version of v1api20230101.StorageAccounts_BlobServices_Container_STATUS</summary>
+/// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountsBlobServicesContainerStatus
 {
@@ -404,11 +404,11 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainer : 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_BlobServices_Container_Spec</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20230101storageStorageAccountsBlobServicesContainerSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230101.StorageAccounts_BlobServices_Container_STATUS</summary>
+    /// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsBlobServicesContainerStatus? Status { get; set; }
 }

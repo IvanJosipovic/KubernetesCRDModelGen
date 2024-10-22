@@ -21,7 +21,7 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServers_FirewallRule_Spec</summary>
+/// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServersFirewallRuleSpec
 {
@@ -116,7 +116,7 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleStatusSystem
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServers_FirewallRule_STATUS</summary>
+/// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20221201storageFlexibleServersFirewallRuleStatus
 {
@@ -174,11 +174,11 @@ public partial class V1api20221201storageFlexibleServersFirewallRule : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServers_FirewallRule_Spec</summary>
+    /// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20221201storageFlexibleServersFirewallRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServers_FirewallRule_STATUS</summary>
+    /// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20221201storageFlexibleServersFirewallRuleStatus? Status { get; set; }
 }

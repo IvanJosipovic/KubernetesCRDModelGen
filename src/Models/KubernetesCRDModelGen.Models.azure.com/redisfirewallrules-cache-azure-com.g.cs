@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisFirewallRuleSpecOwner
+public partial class V1api20230801storageRedisFirewallRuleSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -21,9 +21,9 @@ public partial class V1api20230401storageRedisFirewallRuleSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_FirewallRule_Spec</summary>
+/// <summary>Storage version of v1api20230801.RedisFirewallRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisFirewallRuleSpec
+public partial class V1api20230801storageRedisFirewallRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -43,7 +43,7 @@ public partial class V1api20230401storageRedisFirewallRuleSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20230401storageRedisFirewallRuleSpecOwner Owner { get; set; }
+    public V1api20230801storageRedisFirewallRuleSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("startIP")]
@@ -52,7 +52,7 @@ public partial class V1api20230401storageRedisFirewallRuleSpec
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisFirewallRuleStatusConditions
+public partial class V1api20230801storageRedisFirewallRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -83,9 +83,9 @@ public partial class V1api20230401storageRedisFirewallRuleStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_FirewallRule_STATUS</summary>
+/// <summary>Storage version of v1api20230801.RedisFirewallRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisFirewallRuleStatus
+public partial class V1api20230801storageRedisFirewallRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -93,7 +93,7 @@ public partial class V1api20230401storageRedisFirewallRuleStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20230401storageRedisFirewallRuleStatusConditions>? Conditions { get; set; }
+    public IList<V1api20230801storageRedisFirewallRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("endIP")]
@@ -116,12 +116,12 @@ public partial class V1api20230401storageRedisFirewallRuleStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisFirewallRule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{cacheName}/firewallRules/{ruleName}</summary>
+/// <summary>Storage version of v1api20230801.RedisFirewallRule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{cacheName}/firewallRules/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230401storageRedisFirewallRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230401storageRedisFirewallRuleSpec>, IStatus<V1api20230401storageRedisFirewallRuleStatus>
+public partial class V1api20230801storageRedisFirewallRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230801storageRedisFirewallRuleSpec>, IStatus<V1api20230801storageRedisFirewallRuleStatus>
 {
-    public const string KubeApiVersion = "v1api20230401storage";
+    public const string KubeApiVersion = "v1api20230801storage";
     public const string KubeKind = "RedisFirewallRule";
     public const string KubeGroup = "cache.azure.com";
     public const string KubePluralName = "redisfirewallrules";
@@ -137,11 +137,11 @@ public partial class V1api20230401storageRedisFirewallRule : IKubernetesObject<V
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_FirewallRule_Spec</summary>
+    /// <summary>Storage version of v1api20230801.RedisFirewallRule_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20230401storageRedisFirewallRuleSpec? Spec { get; set; }
+    public V1api20230801storageRedisFirewallRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_FirewallRule_STATUS</summary>
+    /// <summary>Storage version of v1api20230801.RedisFirewallRule_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20230401storageRedisFirewallRuleStatus? Status { get; set; }
+    public V1api20230801storageRedisFirewallRuleStatus? Status { get; set; }
 }

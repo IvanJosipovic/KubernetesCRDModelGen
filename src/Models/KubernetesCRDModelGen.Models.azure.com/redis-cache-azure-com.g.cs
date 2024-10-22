@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentitiesReference
+public partial class V1api20230801storageRedisSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,9 @@ public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentities
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+/// <summary>Storage version of v1api20230801.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentities
+public partial class V1api20230801storageRedisSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -39,12 +39,12 @@ public partial class V1api20230401storageRedisSpecIdentityUserAssignedIdentities
 
     /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
-    public V1api20230401storageRedisSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
+    public V1api20230801storageRedisSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
+/// <summary>Storage version of v1api20230801.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecIdentity
+public partial class V1api20230801storageRedisSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -56,119 +56,119 @@ public partial class V1api20230401storageRedisSpecIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IList<V1api20230401storageRedisSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IList<V1api20230801storageRedisSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOperatorSpecSecretsHostName
+public partial class V1api20230801storageRedisSpecOperatorSpecSecretsHostName
 {
-    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOperatorSpecSecretsPort
+public partial class V1api20230801storageRedisSpecOperatorSpecSecretsPort
 {
-    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOperatorSpecSecretsPrimaryKey
+public partial class V1api20230801storageRedisSpecOperatorSpecSecretsPrimaryKey
 {
-    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOperatorSpecSecretsSecondaryKey
+public partial class V1api20230801storageRedisSpecOperatorSpecSecretsSecondaryKey
 {
-    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOperatorSpecSecretsSslPort
+public partial class V1api20230801storageRedisSpecOperatorSpecSecretsSslPort
 {
-    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisOperatorSecrets</summary>
+/// <summary>Storage version of v1api20230801.RedisOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOperatorSpecSecrets
+public partial class V1api20230801storageRedisSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("hostName")]
-    public V1api20230401storageRedisSpecOperatorSpecSecretsHostName? HostName { get; set; }
+    public V1api20230801storageRedisSpecOperatorSpecSecretsHostName? HostName { get; set; }
 
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("port")]
-    public V1api20230401storageRedisSpecOperatorSpecSecretsPort? Port { get; set; }
+    public V1api20230801storageRedisSpecOperatorSpecSecretsPort? Port { get; set; }
 
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryKey")]
-    public V1api20230401storageRedisSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
+    public V1api20230801storageRedisSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
 
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryKey")]
-    public V1api20230401storageRedisSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
+    public V1api20230801storageRedisSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.</summary>
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("sslPort")]
-    public V1api20230401storageRedisSpecOperatorSpecSecretsSslPort? SslPort { get; set; }
+    public V1api20230801storageRedisSpecOperatorSpecSecretsSslPort? SslPort { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20230801.RedisOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOperatorSpec
+public partial class V1api20230801storageRedisSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230401.RedisOperatorSecrets</summary>
+    /// <summary>Storage version of v1api20230801.RedisOperatorSecrets</summary>
     [JsonPropertyName("secrets")]
-    public V1api20230401storageRedisSpecOperatorSpecSecrets? Secrets { get; set; }
+    public V1api20230801storageRedisSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecOwner
+public partial class V1api20230801storageRedisSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -179,13 +179,17 @@ public partial class V1api20230401storageRedisSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisCreateProperties_RedisConfiguration</summary>
+/// <summary>Storage version of v1api20230801.RedisCreateProperties_RedisConfiguration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecRedisConfiguration
+public partial class V1api20230801storageRedisSpecRedisConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("aad-enabled")]
+    public string? AadEnabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("aof-backup-enabled")]
@@ -220,6 +224,10 @@ public partial class V1api20230401storageRedisSpecRedisConfiguration
     public string? MaxmemoryReserved { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("notify-keyspace-events")]
+    public string? NotifyKeyspaceEvents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("preferred-data-persistence-auth-method")]
     public string? PreferredDataPersistenceAuthMethod { get; set; }
 
@@ -244,9 +252,9 @@ public partial class V1api20230401storageRedisSpecRedisConfiguration
     public string? StorageSubscriptionId { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Sku SKU parameters supplied to the create Redis operation.</summary>
+/// <summary>Storage version of v1api20230801.Sku SKU parameters supplied to the create Redis operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecSku
+public partial class V1api20230801storageRedisSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -267,7 +275,7 @@ public partial class V1api20230401storageRedisSpecSku
 
 /// <summary>SubnetReference: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpecSubnetReference
+public partial class V1api20230801storageRedisSpecSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -286,9 +294,9 @@ public partial class V1api20230401storageRedisSpecSubnetReference
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_Spec</summary>
+/// <summary>Storage version of v1api20230801.Redis_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisSpec
+public partial class V1api20230801storageRedisSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -302,9 +310,9 @@ public partial class V1api20230401storageRedisSpec
     [JsonPropertyName("enableNonSslPort")]
     public bool? EnableNonSslPort { get; set; }
 
-    /// <summary>Storage version of v1api20230401.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
+    /// <summary>Storage version of v1api20230801.ManagedServiceIdentity Managed service identity (system assigned and/or user assigned identities)</summary>
     [JsonPropertyName("identity")]
-    public V1api20230401storageRedisSpecIdentity? Identity { get; set; }
+    public V1api20230801storageRedisSpecIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -314,9 +322,9 @@ public partial class V1api20230401storageRedisSpec
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
-    /// <summary>Storage version of v1api20230401.RedisOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20230801.RedisOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20230401storageRedisSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20230801storageRedisSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -324,15 +332,15 @@ public partial class V1api20230401storageRedisSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20230401storageRedisSpecOwner Owner { get; set; }
+    public V1api20230801storageRedisSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("publicNetworkAccess")]
     public string? PublicNetworkAccess { get; set; }
 
-    /// <summary>Storage version of v1api20230401.RedisCreateProperties_RedisConfiguration</summary>
+    /// <summary>Storage version of v1api20230801.RedisCreateProperties_RedisConfiguration</summary>
     [JsonPropertyName("redisConfiguration")]
-    public V1api20230401storageRedisSpecRedisConfiguration? RedisConfiguration { get; set; }
+    public V1api20230801storageRedisSpecRedisConfiguration? RedisConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("redisVersion")]
@@ -350,9 +358,9 @@ public partial class V1api20230401storageRedisSpec
     [JsonPropertyName("shardCount")]
     public int? ShardCount { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Sku SKU parameters supplied to the create Redis operation.</summary>
+    /// <summary>Storage version of v1api20230801.Sku SKU parameters supplied to the create Redis operation.</summary>
     [JsonPropertyName("sku")]
-    public V1api20230401storageRedisSpecSku? Sku { get; set; }
+    public V1api20230801storageRedisSpecSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("staticIP")]
@@ -360,7 +368,7 @@ public partial class V1api20230401storageRedisSpec
 
     /// <summary>SubnetReference: The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1</summary>
     [JsonPropertyName("subnetReference")]
-    public V1api20230401storageRedisSpecSubnetReference? SubnetReference { get; set; }
+    public V1api20230801storageRedisSpecSubnetReference? SubnetReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -371,13 +379,17 @@ public partial class V1api20230401storageRedisSpec
     public IDictionary<string, string>? TenantSettings { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("updateChannel")]
+    public string? UpdateChannel { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusConditions
+public partial class V1api20230801storageRedisStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -408,9 +420,9 @@ public partial class V1api20230401storageRedisStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.UserAssignedIdentity_STATUS User assigned identity properties</summary>
+/// <summary>Storage version of v1api20230801.UserAssignedIdentity_STATUS User assigned identity properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusIdentityUserAssignedIdentities
+public partial class V1api20230801storageRedisStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -425,9 +437,9 @@ public partial class V1api20230401storageRedisStatusIdentityUserAssignedIdentiti
     public string? PrincipalId { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
+/// <summary>Storage version of v1api20230801.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusIdentity
+public partial class V1api20230801storageRedisStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -447,12 +459,12 @@ public partial class V1api20230401storageRedisStatusIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IDictionary<string, V1api20230401storageRedisStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IDictionary<string, V1api20230801storageRedisStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisInstanceDetails_STATUS Details of single instance of redis.</summary>
+/// <summary>Storage version of v1api20230801.RedisInstanceDetails_STATUS Details of single instance of redis.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusInstances
+public partial class V1api20230801storageRedisStatusInstances
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -483,9 +495,9 @@ public partial class V1api20230401storageRedisStatusInstances
     public string? Zone { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisLinkedServer_STATUS Linked server Id</summary>
+/// <summary>Storage version of v1api20230801.RedisLinkedServer_STATUS Linked server Id</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusLinkedServers
+public partial class V1api20230801storageRedisStatusLinkedServers
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -496,9 +508,9 @@ public partial class V1api20230401storageRedisStatusLinkedServers
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.PrivateEndpointConnection_STATUS The Private Endpoint Connection resource.</summary>
+/// <summary>Storage version of v1api20230801.PrivateEndpointConnection_STATUS The Private Endpoint Connection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusPrivateEndpointConnections
+public partial class V1api20230801storageRedisStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -509,13 +521,17 @@ public partial class V1api20230401storageRedisStatusPrivateEndpointConnections
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.RedisProperties_RedisConfiguration_STATUS</summary>
+/// <summary>Storage version of v1api20230801.RedisProperties_RedisConfiguration_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusRedisConfiguration
+public partial class V1api20230801storageRedisStatusRedisConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("aad-enabled")]
+    public string? AadEnabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("aof-backup-enabled")]
@@ -554,6 +570,10 @@ public partial class V1api20230401storageRedisStatusRedisConfiguration
     public string? MaxmemoryReserved { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("notify-keyspace-events")]
+    public string? NotifyKeyspaceEvents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("preferred-data-archive-auth-method")]
     public string? PreferredDataArchiveAuthMethod { get; set; }
 
@@ -586,9 +606,9 @@ public partial class V1api20230401storageRedisStatusRedisConfiguration
     public string? ZonalConfiguration { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Sku_STATUS SKU parameters supplied to the create Redis operation.</summary>
+/// <summary>Storage version of v1api20230801.Sku_STATUS SKU parameters supplied to the create Redis operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatusSku
+public partial class V1api20230801storageRedisStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -607,9 +627,9 @@ public partial class V1api20230401storageRedisStatusSku
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis_STATUS</summary>
+/// <summary>Storage version of v1api20230801.Redis_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230401storageRedisStatus
+public partial class V1api20230801storageRedisStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -617,7 +637,7 @@ public partial class V1api20230401storageRedisStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20230401storageRedisStatusConditions>? Conditions { get; set; }
+    public IList<V1api20230801storageRedisStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableNonSslPort")]
@@ -631,17 +651,17 @@ public partial class V1api20230401storageRedisStatus
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20230401.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
+    /// <summary>Storage version of v1api20230801.ManagedServiceIdentity_STATUS Managed service identity (system assigned and/or user assigned identities)</summary>
     [JsonPropertyName("identity")]
-    public V1api20230401storageRedisStatusIdentity? Identity { get; set; }
+    public V1api20230801storageRedisStatusIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("instances")]
-    public IList<V1api20230401storageRedisStatusInstances>? Instances { get; set; }
+    public IList<V1api20230801storageRedisStatusInstances>? Instances { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("linkedServers")]
-    public IList<V1api20230401storageRedisStatusLinkedServers>? LinkedServers { get; set; }
+    public IList<V1api20230801storageRedisStatusLinkedServers>? LinkedServers { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -661,7 +681,7 @@ public partial class V1api20230401storageRedisStatus
 
     /// <summary></summary>
     [JsonPropertyName("privateEndpointConnections")]
-    public IList<V1api20230401storageRedisStatusPrivateEndpointConnections>? PrivateEndpointConnections { get; set; }
+    public IList<V1api20230801storageRedisStatusPrivateEndpointConnections>? PrivateEndpointConnections { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -671,9 +691,9 @@ public partial class V1api20230401storageRedisStatus
     [JsonPropertyName("publicNetworkAccess")]
     public string? PublicNetworkAccess { get; set; }
 
-    /// <summary>Storage version of v1api20230401.RedisProperties_RedisConfiguration_STATUS</summary>
+    /// <summary>Storage version of v1api20230801.RedisProperties_RedisConfiguration_STATUS</summary>
     [JsonPropertyName("redisConfiguration")]
-    public V1api20230401storageRedisStatusRedisConfiguration? RedisConfiguration { get; set; }
+    public V1api20230801storageRedisStatusRedisConfiguration? RedisConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("redisVersion")]
@@ -691,9 +711,9 @@ public partial class V1api20230401storageRedisStatus
     [JsonPropertyName("shardCount")]
     public int? ShardCount { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Sku_STATUS SKU parameters supplied to the create Redis operation.</summary>
+    /// <summary>Storage version of v1api20230801.Sku_STATUS SKU parameters supplied to the create Redis operation.</summary>
     [JsonPropertyName("sku")]
-    public V1api20230401storageRedisStatusSku? Sku { get; set; }
+    public V1api20230801storageRedisStatusSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sslPort")]
@@ -720,16 +740,20 @@ public partial class V1api20230401storageRedisStatus
     public string? Type { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("updateChannel")]
+    public string? UpdateChannel { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
 
-/// <summary>Storage version of v1api20230401.Redis Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-04-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}</summary>
+/// <summary>Storage version of v1api20230801.Redis Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230401storageRedis : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230401storageRedisSpec>, IStatus<V1api20230401storageRedisStatus>
+public partial class V1api20230801storageRedis : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230801storageRedisSpec>, IStatus<V1api20230801storageRedisStatus>
 {
-    public const string KubeApiVersion = "v1api20230401storage";
+    public const string KubeApiVersion = "v1api20230801storage";
     public const string KubeKind = "Redis";
     public const string KubeGroup = "cache.azure.com";
     public const string KubePluralName = "redis";
@@ -745,11 +769,11 @@ public partial class V1api20230401storageRedis : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_Spec</summary>
+    /// <summary>Storage version of v1api20230801.Redis_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20230401storageRedisSpec? Spec { get; set; }
+    public V1api20230801storageRedisSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230401.Redis_STATUS</summary>
+    /// <summary>Storage version of v1api20230801.Redis_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20230401storageRedisStatus? Status { get; set; }
+    public V1api20230801storageRedisStatus? Status { get; set; }
 }

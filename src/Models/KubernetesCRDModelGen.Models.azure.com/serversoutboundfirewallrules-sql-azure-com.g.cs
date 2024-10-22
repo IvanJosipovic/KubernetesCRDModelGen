@@ -21,7 +21,7 @@ public partial class V1api20211101storageServersOutboundFirewallRuleSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_OutboundFirewallRule_Spec</summary>
+/// <summary>Storage version of v1api20211101.ServersOutboundFirewallRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersOutboundFirewallRuleSpec
 {
@@ -75,7 +75,7 @@ public partial class V1api20211101storageServersOutboundFirewallRuleStatusCondit
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Servers_OutboundFirewallRule_STATUS</summary>
+/// <summary>Storage version of v1api20211101.ServersOutboundFirewallRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersOutboundFirewallRuleStatus
 {
@@ -125,11 +125,11 @@ public partial class V1api20211101storageServersOutboundFirewallRule : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_OutboundFirewallRule_Spec</summary>
+    /// <summary>Storage version of v1api20211101.ServersOutboundFirewallRule_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20211101storageServersOutboundFirewallRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Servers_OutboundFirewallRule_STATUS</summary>
+    /// <summary>Storage version of v1api20211101.ServersOutboundFirewallRule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersOutboundFirewallRuleStatus? Status { get; set; }
 }

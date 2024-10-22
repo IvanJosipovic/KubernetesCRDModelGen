@@ -366,7 +366,7 @@ public partial class V1api20231115storageSqlDatabaseContainerSpecResource
     public V1api20231115storageSqlDatabaseContainerSpecResourceUniqueKeyPolicy? UniqueKeyPolicy { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Container_Spec</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainer_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerSpec
 {
@@ -797,7 +797,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStatusResource
     public V1api20231115storageSqlDatabaseContainerStatusResourceUniqueKeyPolicy? UniqueKeyPolicy { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Container_STATUS</summary>
+/// <summary>Storage version of v1api20231115.SqlDatabaseContainer_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231115storageSqlDatabaseContainerStatus
 {
@@ -859,11 +859,11 @@ public partial class V1api20231115storageSqlDatabaseContainer : IKubernetesObjec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Container_Spec</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainer_Spec</summary>
     [JsonPropertyName("spec")]
     public V1api20231115storageSqlDatabaseContainerSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.DatabaseAccounts_SqlDatabases_Container_STATUS</summary>
+    /// <summary>Storage version of v1api20231115.SqlDatabaseContainer_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20231115storageSqlDatabaseContainerStatus? Status { get; set; }
 }
