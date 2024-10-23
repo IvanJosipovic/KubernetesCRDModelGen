@@ -52,6 +52,7 @@ We publish the following premade packages
 | postgresql.cnpg.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.postgresql.cnpg.io/) |
 | projectcalico.org | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.projectcalico.org/) |
 | secrets-store.csi.x-k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.secrets-store.csi.x-k8s.io) |
+| storage.k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.storage.k8s.io) |
 | tf.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.tf.upbound.io/) |
 | traefik.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.traefik.io/) |
 
