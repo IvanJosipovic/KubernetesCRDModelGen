@@ -1421,6 +1421,62 @@ public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigMasterGlob
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPrivateClusterConfig
@@ -1444,6 +1500,14 @@ public partial class V1beta1ClusterSpecForProviderPrivateClusterConfig
     /// <summary>Subnetwork in cluster's network where master's endpoint will be provisioned.</summary>
     [JsonPropertyName("privateEndpointSubnetwork")]
     public string? PrivateEndpointSubnetwork { get; set; }
+
+    /// <summary>Reference to a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+    [JsonPropertyName("privateEndpointSubnetworkRef")]
+    public V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkRef? PrivateEndpointSubnetworkRef { get; set; }
+
+    /// <summary>Selector for a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+    [JsonPropertyName("privateEndpointSubnetworkSelector")]
+    public V1beta1ClusterSpecForProviderPrivateClusterConfigPrivateEndpointSubnetworkSelector? PrivateEndpointSubnetworkSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -3251,6 +3315,62 @@ public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigMasterGlo
     public bool? Enabled { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfig
@@ -3274,6 +3394,14 @@ public partial class V1beta1ClusterSpecInitProviderPrivateClusterConfig
     /// <summary>Subnetwork in cluster's network where master's endpoint will be provisioned.</summary>
     [JsonPropertyName("privateEndpointSubnetwork")]
     public string? PrivateEndpointSubnetwork { get; set; }
+
+    /// <summary>Reference to a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+    [JsonPropertyName("privateEndpointSubnetworkRef")]
+    public V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkRef? PrivateEndpointSubnetworkRef { get; set; }
+
+    /// <summary>Selector for a Subnetwork in compute to populate privateEndpointSubnetwork.</summary>
+    [JsonPropertyName("privateEndpointSubnetworkSelector")]
+    public V1beta1ClusterSpecInitProviderPrivateClusterConfigPrivateEndpointSubnetworkSelector? PrivateEndpointSubnetworkSelector { get; set; }
 }
 
 /// <summary></summary>
