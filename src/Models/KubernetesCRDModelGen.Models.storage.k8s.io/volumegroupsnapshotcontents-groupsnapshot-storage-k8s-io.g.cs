@@ -136,6 +136,19 @@ public partial class V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotCon
     public V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotContentListVolumeSnapshotContentRef? VolumeSnapshotContentRef { get; set; }
 }
 
+/// <summary>VolumeSnapshotHandlePair defines a pair of a source volume handle and a snapshot handle</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1VolumeGroupSnapshotContentStatusVolumeSnapshotHandlePairList
+{
+    /// <summary>SnapshotHandle is a unique id returned by the CSI driver to identify a volume snapshot on the storage system</summary>
+    [JsonPropertyName("snapshotHandle")]
+    public string SnapshotHandle { get; set; }
+
+    /// <summary>VolumeHandle is a unique id returned by the CSI driver to identify a volume on the storage system</summary>
+    [JsonPropertyName("volumeHandle")]
+    public string VolumeHandle { get; set; }
+}
+
 /// <summary>status represents the current information of a group snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VolumeGroupSnapshotContentStatus
@@ -159,6 +172,10 @@ public partial class V1alpha1VolumeGroupSnapshotContentStatus
     /// <summary>VolumeGroupSnapshotHandle is a unique id returned by the CSI driver to identify the VolumeGroupSnapshot on the storage system. If a storage system does not provide such an id, the CSI driver can choose to return the VolumeGroupSnapshot name.</summary>
     [JsonPropertyName("volumeGroupSnapshotHandle")]
     public string? VolumeGroupSnapshotHandle { get; set; }
+
+    /// <summary>VolumeSnapshotHandlePairList is a list of CSI "volume_id" and "snapshot_id" pair returned by the CSI driver to identify snapshots and their source volumes on the storage system.</summary>
+    [JsonPropertyName("volumeSnapshotHandlePairList")]
+    public IList<V1alpha1VolumeGroupSnapshotContentStatusVolumeSnapshotHandlePairList>? VolumeSnapshotHandlePairList { get; set; }
 }
 
 /// <summary>VolumeGroupSnapshotContent represents the actual "on-disk" group snapshot object in the underlying storage system</summary>
