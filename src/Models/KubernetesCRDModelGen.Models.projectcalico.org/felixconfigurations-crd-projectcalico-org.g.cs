@@ -661,6 +661,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("wireguardRoutingRulePriority")]
     public int? WireguardRoutingRulePriority { get; set; }
 
+    /// <summary>WireguardThreadingEnabled controls whether Wireguard has NAPI threading enabled. [Default: false]</summary>
+    [JsonPropertyName("wireguardThreadingEnabled")]
+    public bool? WireguardThreadingEnabled { get; set; }
+
     /// <summary>WorkloadSourceSpoofing controls whether pods can use the allowedSourcePrefixes annotation to send traffic with a source IP address that is not theirs. This is disabled by default. When set to "Any", pods can request any prefix.</summary>
     [JsonPropertyName("workloadSourceSpoofing")]
     public string? WorkloadSourceSpoofing { get; set; }
