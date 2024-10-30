@@ -23,7 +23,7 @@ spec:
 
           The default@internal serversTransport is created from the static configuration.
 
-          More info: https://doc.traefik.io/traefik/v3.1/routing/services/#serverstransport_1
+          More info: https://doc.traefik.io/traefik/v3.2/routing/services/#serverstransport_1
         properties:
           apiVersion:
             description: >-
