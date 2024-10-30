@@ -23,7 +23,7 @@ spec:
 
           The default@internal tcpServersTransport can be configured in the static configuration.
 
-          More info: https://doc.traefik.io/traefik/v3.1/routing/services/#serverstransport_3
+          More info: https://doc.traefik.io/traefik/v3.2/routing/services/#serverstransport_3
         properties:
           apiVersion:
             description: >-

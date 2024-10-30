@@ -25,11 +25,11 @@ public partial class V1alpha1TLSOptionSpecClientAuth
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpec
 {
-    /// <summary>ALPNProtocols defines the list of supported application level protocols for the TLS handshake, in order of preference. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#alpn-protocols</summary>
+    /// <summary>ALPNProtocols defines the list of supported application level protocols for the TLS handshake, in order of preference. More info: https://doc.traefik.io/traefik/v3.2/https/tls/#alpn-protocols</summary>
     [JsonPropertyName("alpnProtocols")]
     public IList<string>? AlpnProtocols { get; set; }
 
-    /// <summary>CipherSuites defines the list of supported cipher suites for TLS versions up to TLS 1.2. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#cipher-suites</summary>
+    /// <summary>CipherSuites defines the list of supported cipher suites for TLS versions up to TLS 1.2. More info: https://doc.traefik.io/traefik/v3.2/https/tls/#cipher-suites</summary>
     [JsonPropertyName("cipherSuites")]
     public IList<string>? CipherSuites { get; set; }
 
@@ -37,7 +37,7 @@ public partial class V1alpha1TLSOptionSpec
     [JsonPropertyName("clientAuth")]
     public V1alpha1TLSOptionSpecClientAuth? ClientAuth { get; set; }
 
-    /// <summary>CurvePreferences defines the preferred elliptic curves in a specific order. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#curve-preferences</summary>
+    /// <summary>CurvePreferences defines the preferred elliptic curves in a specific order. More info: https://doc.traefik.io/traefik/v3.2/https/tls/#curve-preferences</summary>
     [JsonPropertyName("curvePreferences")]
     public IList<string>? CurvePreferences { get; set; }
 
@@ -58,7 +58,7 @@ public partial class V1alpha1TLSOptionSpec
     public bool? SniStrict { get; set; }
 }
 
-/// <summary>TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection. More info: https://doc.traefik.io/traefik/v3.1/https/tls/#tls-options</summary>
+/// <summary>TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection. More info: https://doc.traefik.io/traefik/v3.2/https/tls/#tls-options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TLSOption : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TLSOptionSpec>
