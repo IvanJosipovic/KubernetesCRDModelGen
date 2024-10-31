@@ -50,10 +50,48 @@ public partial class V1beta1LockPackages
     public string Version { get; set; }
 }
 
+/// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LockStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+/// <summary>Status of the Lock.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LockStatus
+{
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1LockStatusConditions>? Conditions { get; set; }
+}
+
 /// <summary>Lock is the CRD type that tracks package dependencies.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1Lock : IKubernetesObject<V1ObjectMeta>
+public partial class V1beta1Lock : IKubernetesObject<V1ObjectMeta>, IStatus<V1beta1LockStatus>
 {
     public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "Lock";
@@ -74,4 +112,8 @@ public partial class V1beta1Lock : IKubernetesObject<V1ObjectMeta>
     /// <summary></summary>
     [JsonPropertyName("packages")]
     public IList<V1beta1LockPackages>? Packages { get; set; }
+
+    /// <summary>Status of the Lock.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1LockStatus? Status { get; set; }
 }
