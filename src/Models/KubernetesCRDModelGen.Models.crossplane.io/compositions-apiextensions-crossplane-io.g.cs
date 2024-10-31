@@ -86,7 +86,7 @@ public partial class V1CompositionSpecPatchSetsPatchesPolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPatchSetsPatchesTransformsConvert
 {
-    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
+    /// <summary>The expected input format.  * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.  If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -111,7 +111,7 @@ public partial class V1CompositionSpecPatchSetsPatchesTransformsMatchPatterns
     [JsonPropertyName("result")]
     public JsonNode Result { get; set; }
 
-    /// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
+    /// <summary>Type specifies how the pattern matches the input.  * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.  * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
@@ -340,7 +340,7 @@ public partial class V1CompositionSpecPipeline
     public string Step { get; set; }
 }
 
-/// <summary>PublishConnectionDetailsWithStoreConfig specifies the secret store config with which the connection details of composite resources dynamically provisioned using this composition will be published.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
+/// <summary>PublishConnectionDetailsWithStoreConfig specifies the secret store config with which the connection details of composite resources dynamically provisioned using this composition will be published.  THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPublishConnectionDetailsWithStoreConfigRef
 {
@@ -439,7 +439,7 @@ public partial class V1CompositionSpecResourcesPatchesPolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecResourcesPatchesTransformsConvert
 {
-    /// <summary>The expected input format.   * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.   If this property is null, the default conversion is applied.</summary>
+    /// <summary>The expected input format.  * `quantity` - parses the input as a K8s [`resource.Quantity`](https://pkg.go.dev/k8s.io/apimachinery/pkg/api/resource#Quantity). Only used during `string -&gt; float64` conversions. * `json` - parses the input as a JSON string. Only used during `string -&gt; object` or `string -&gt; list` conversions.  If this property is null, the default conversion is applied.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -464,7 +464,7 @@ public partial class V1CompositionSpecResourcesPatchesTransformsMatchPatterns
     [JsonPropertyName("result")]
     public JsonNode Result { get; set; }
 
-    /// <summary>Type specifies how the pattern matches the input.   * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.   * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
+    /// <summary>Type specifies how the pattern matches the input.  * `literal` - the pattern value has to exactly match (case sensitive) the input string. This is the default.  * `regexp` - the pattern treated as a regular expression against which the input string is tested. Crossplane will throw an error if the key is not a valid regexp.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
@@ -691,23 +691,23 @@ public partial class V1CompositionSpec
     [JsonPropertyName("compositeTypeRef")]
     public V1CompositionSpecCompositeTypeRef CompositeTypeRef { get; set; }
 
-    /// <summary>Mode controls what type or "mode" of Composition will be used.   "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.   "Resources" indicates that a Composition uses what is commonly referred to as "Patch &amp; Transform" or P&amp;T composition. This mode of Composition uses an array of resources, each a template for a composed resource.   All Compositions should use Pipeline mode. Resources mode is deprecated. Resources mode won't be removed in Crossplane 1.x, and will remain the default to avoid breaking legacy Compositions. However, it's no longer accepting new features, and only accepting security related bug fixes.</summary>
+    /// <summary>Mode controls what type or "mode" of Composition will be used.  "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.  "Resources" indicates that a Composition uses what is commonly referred to as "Patch &amp; Transform" or P&amp;T composition. This mode of Composition uses an array of resources, each a template for a composed resource.  All Compositions should use Pipeline mode. Resources mode is deprecated. Resources mode won't be removed in Crossplane 1.x, and will remain the default to avoid breaking legacy Compositions. However, it's no longer accepting new features, and only accepting security related bug fixes.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>PatchSets define a named set of patches that may be included by any resource in this Composition. PatchSets cannot themselves refer to other PatchSets.   PatchSets are only used by the "Resources" mode of Composition. They are ignored by other modes.   Deprecated: Use Composition Functions instead.</summary>
+    /// <summary>PatchSets define a named set of patches that may be included by any resource in this Composition. PatchSets cannot themselves refer to other PatchSets.  PatchSets are only used by the "Resources" mode of Composition. They are ignored by other modes.  Deprecated: Use Composition Functions instead.</summary>
     [JsonPropertyName("patchSets")]
     public IList<V1CompositionSpecPatchSets>? PatchSets { get; set; }
 
-    /// <summary>Pipeline is a list of composition function steps that will be used when a composite resource referring to this composition is created. One of resources and pipeline must be specified - you cannot specify both.   The Pipeline is only used by the "Pipeline" mode of Composition. It is ignored by other modes.</summary>
+    /// <summary>Pipeline is a list of composition function steps that will be used when a composite resource referring to this composition is created. One of resources and pipeline must be specified - you cannot specify both.  The Pipeline is only used by the "Pipeline" mode of Composition. It is ignored by other modes.</summary>
     [JsonPropertyName("pipeline")]
     public IList<V1CompositionSpecPipeline>? Pipeline { get; set; }
 
-    /// <summary>PublishConnectionDetailsWithStoreConfig specifies the secret store config with which the connection details of composite resources dynamically provisioned using this composition will be published.   THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
+    /// <summary>PublishConnectionDetailsWithStoreConfig specifies the secret store config with which the connection details of composite resources dynamically provisioned using this composition will be published.  THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice.</summary>
     [JsonPropertyName("publishConnectionDetailsWithStoreConfigRef")]
     public V1CompositionSpecPublishConnectionDetailsWithStoreConfigRef? PublishConnectionDetailsWithStoreConfigRef { get; set; }
 
-    /// <summary>Resources is a list of resource templates that will be used when a composite resource referring to this composition is created.   Resources are only used by the "Resources" mode of Composition. They are ignored by other modes.   Deprecated: Use Composition Functions instead.</summary>
+    /// <summary>Resources is a list of resource templates that will be used when a composite resource referring to this composition is created.  Resources are only used by the "Resources" mode of Composition. They are ignored by other modes.  Deprecated: Use Composition Functions instead.</summary>
     [JsonPropertyName("resources")]
     public IList<V1CompositionSpecResources>? Resources { get; set; }
 
@@ -716,7 +716,7 @@ public partial class V1CompositionSpec
     public string? WriteConnectionSecretsToNamespace { get; set; }
 }
 
-/// <summary>A Composition defines a collection of managed resources or functions that Crossplane uses to create and manage new composite resources.   Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).</summary>
+/// <summary>A Composition defines a collection of managed resources or functions that Crossplane uses to create and manage new composite resources.  Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Composition : IKubernetesObject<V1ObjectMeta>, ISpec<V1CompositionSpec>
