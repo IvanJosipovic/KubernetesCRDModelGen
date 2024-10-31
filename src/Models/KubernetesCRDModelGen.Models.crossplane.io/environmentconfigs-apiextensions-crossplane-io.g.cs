@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
-/// <summary>An EnvironmentConfig contains user-defined unstructured values for use in a Composition.   Read the Crossplane documentation for [more information about EnvironmentConfigs](https://docs.crossplane.io/latest/concepts/environment-configs).</summary>
+/// <summary>An EnvironmentConfig contains user-defined unstructured values for use in a Composition.  Read the Crossplane documentation for [more information about EnvironmentConfigs](https://docs.crossplane.io/latest/concepts/environment-configs).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EnvironmentConfig : IKubernetesObject<V1ObjectMeta>

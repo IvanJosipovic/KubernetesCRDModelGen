@@ -153,7 +153,7 @@ public partial class V1alpha1UsageStatus
     public IList<V1alpha1UsageStatusConditions>? Conditions { get; set; }
 }
 
-/// <summary>A Usage defines a deletion blocking relationship between two resources.   Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.   Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).</summary>
+/// <summary>A Usage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1Usage : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1UsageSpec>, IStatus<V1alpha1UsageStatus>

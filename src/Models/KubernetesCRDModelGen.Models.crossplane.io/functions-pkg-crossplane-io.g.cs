@@ -21,7 +21,7 @@ public partial class V1FunctionSpecControllerConfigRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionSpecPackagePullSecrets
 {
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -134,7 +134,7 @@ public partial class V1FunctionStatus
     public string? CurrentRevision { get; set; }
 }
 
-/// <summary>A Function installs an OCI compatible Crossplane package, extending Crossplane with support for a new kind of composition function.   Read the Crossplane documentation for [more information about Functions](https://docs.crossplane.io/latest/concepts/composition-functions).</summary>
+/// <summary>A Function installs an OCI compatible Crossplane package, extending Crossplane with support for a new kind of composition function.  Read the Crossplane documentation for [more information about Functions](https://docs.crossplane.io/latest/concepts/composition-functions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1FunctionSpec>, IStatus<V1FunctionStatus>
