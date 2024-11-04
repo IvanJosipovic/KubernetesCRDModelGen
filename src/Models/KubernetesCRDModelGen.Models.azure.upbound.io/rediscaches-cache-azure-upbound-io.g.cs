@@ -109,6 +109,10 @@ public partial class V1beta1RedisCacheSpecForProviderRedisConfiguration
     [JsonPropertyName("aofStorageConnectionString1SecretRef")]
     public V1beta1RedisCacheSpecForProviderRedisConfigurationAofStorageConnectionString1SecretRef? AofStorageConnectionString1SecretRef { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("authenticationEnabled")]
+    public bool? AuthenticationEnabled { get; set; }
+
     /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.</summary>
     [JsonPropertyName("dataPersistenceAuthenticationMethod")]
     public string? DataPersistenceAuthenticationMethod { get; set; }
@@ -298,6 +302,10 @@ public partial class V1beta1RedisCacheSpecForProvider
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("nonSslPortEnabled")]
+    public bool? NonSslPortEnabled { get; set; }
+
     /// <summary>A list of patch_schedule blocks as defined below.</summary>
     [JsonPropertyName("patchSchedule")]
     public IList<V1beta1RedisCacheSpecForProviderPatchSchedule>? PatchSchedule { get; set; }
@@ -401,6 +409,57 @@ public partial class V1beta1RedisCacheSpecInitProviderPatchSchedule
     public double? StartHourUtc { get; set; }
 }
 
+/// <summary>First Storage Account connection string for AOF persistence.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RedisCacheSpecInitProviderRedisConfigurationAofStorageConnectionString0SecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Second Storage Account connection string for AOF persistence.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RedisCacheSpecInitProviderRedisConfigurationAofStorageConnectionString1SecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The Connection String to the Storage Account. Only supported for Premium SKUs. In the format: DefaultEndpointsProtocol=https;BlobEndpoint=${azurerm_storage_account.example.primary_blob_endpoint};AccountName=${azurerm_storage_account.example.name};AccountKey=${azurerm_storage_account.example.primary_access_key}.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RedisCacheSpecInitProviderRedisConfigurationRdbStorageConnectionStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProviderRedisConfiguration
@@ -412,6 +471,18 @@ public partial class V1beta1RedisCacheSpecInitProviderRedisConfiguration
     /// <summary>Enable or disable AOF persistence for this Redis Cache. Defaults to false.</summary>
     [JsonPropertyName("aofBackupEnabled")]
     public bool? AofBackupEnabled { get; set; }
+
+    /// <summary>First Storage Account connection string for AOF persistence.</summary>
+    [JsonPropertyName("aofStorageConnectionString0SecretRef")]
+    public V1beta1RedisCacheSpecInitProviderRedisConfigurationAofStorageConnectionString0SecretRef? AofStorageConnectionString0SecretRef { get; set; }
+
+    /// <summary>Second Storage Account connection string for AOF persistence.</summary>
+    [JsonPropertyName("aofStorageConnectionString1SecretRef")]
+    public V1beta1RedisCacheSpecInitProviderRedisConfigurationAofStorageConnectionString1SecretRef? AofStorageConnectionString1SecretRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("authenticationEnabled")]
+    public bool? AuthenticationEnabled { get; set; }
 
     /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.</summary>
     [JsonPropertyName("dataPersistenceAuthenticationMethod")]
@@ -452,6 +523,10 @@ public partial class V1beta1RedisCacheSpecInitProviderRedisConfiguration
     /// <summary>The maximum number of snapshots to create as a backup. Only supported for Premium SKUs.</summary>
     [JsonPropertyName("rdbBackupMaxSnapshotCount")]
     public double? RdbBackupMaxSnapshotCount { get; set; }
+
+    /// <summary>The Connection String to the Storage Account. Only supported for Premium SKUs. In the format: DefaultEndpointsProtocol=https;BlobEndpoint=${azurerm_storage_account.example.primary_blob_endpoint};AccountName=${azurerm_storage_account.example.name};AccountKey=${azurerm_storage_account.example.primary_access_key}.</summary>
+    [JsonPropertyName("rdbStorageConnectionStringSecretRef")]
+    public V1beta1RedisCacheSpecInitProviderRedisConfigurationRdbStorageConnectionStringSecretRef? RdbStorageConnectionStringSecretRef { get; set; }
 
     /// <summary>The ID of the Subscription containing the Storage Account.</summary>
     [JsonPropertyName("storageAccountSubscriptionId")]
@@ -541,6 +616,10 @@ public partial class V1beta1RedisCacheSpecInitProvider
     /// <summary>The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("nonSslPortEnabled")]
+    public bool? NonSslPortEnabled { get; set; }
 
     /// <summary>A list of patch_schedule blocks as defined below.</summary>
     [JsonPropertyName("patchSchedule")]
@@ -785,6 +864,10 @@ public partial class V1beta1RedisCacheStatusAtProviderRedisConfiguration
     [JsonPropertyName("aofBackupEnabled")]
     public bool? AofBackupEnabled { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("authenticationEnabled")]
+    public bool? AuthenticationEnabled { get; set; }
+
     /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.</summary>
     [JsonPropertyName("dataPersistenceAuthenticationMethod")]
     public string? DataPersistenceAuthenticationMethod { get; set; }
@@ -869,6 +952,10 @@ public partial class V1beta1RedisCacheStatusAtProvider
     /// <summary>The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("nonSslPortEnabled")]
+    public bool? NonSslPortEnabled { get; set; }
 
     /// <summary>A list of patch_schedule blocks as defined below.</summary>
     [JsonPropertyName("patchSchedule")]

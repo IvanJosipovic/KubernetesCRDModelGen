@@ -6878,7 +6878,7 @@ spec:
                             description: The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.
                             type: string
                           phpVersion:
-                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.
+                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.
                             type: string
                           pythonVersion:
                             description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.
@@ -8710,7 +8710,7 @@ spec:
                             description: The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.
                             type: string
                           phpVersion:
-                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.
+                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.
                             type: string
                           pythonVersion:
                             description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.
@@ -10535,7 +10535,7 @@ spec:
                             description: The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.
                             type: string
                           phpVersion:
-                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.
+                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.
                             type: string
                           pythonVersion:
                             description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.

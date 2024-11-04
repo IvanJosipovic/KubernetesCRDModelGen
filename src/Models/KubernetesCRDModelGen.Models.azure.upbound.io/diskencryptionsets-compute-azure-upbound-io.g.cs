@@ -169,6 +169,10 @@ public partial class V1beta1DiskEncryptionSetSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>Key ID of a key in a managed HSM.  Exactly one of managed_hsm_key_id, key_vault_key_id must be specified.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
+
     /// <summary>Specifies the name of the Resource Group where the Disk Encryption Set should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
@@ -290,6 +294,10 @@ public partial class V1beta1DiskEncryptionSetSpecInitProvider
     /// <summary>Specifies the Azure Region where the Disk Encryption Set exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Key ID of a key in a managed HSM.  Exactly one of managed_hsm_key_id, key_vault_key_id must be specified.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 
     /// <summary>A mapping of tags to assign to the Disk Encryption Set.</summary>
     [JsonPropertyName("tags")]
@@ -484,6 +492,10 @@ public partial class V1beta1DiskEncryptionSetStatusAtProvider
     /// <summary>Specifies the Azure Region where the Disk Encryption Set exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Key ID of a key in a managed HSM.  Exactly one of managed_hsm_key_id, key_vault_key_id must be specified.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 
     /// <summary>Specifies the name of the Resource Group where the Disk Encryption Set should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

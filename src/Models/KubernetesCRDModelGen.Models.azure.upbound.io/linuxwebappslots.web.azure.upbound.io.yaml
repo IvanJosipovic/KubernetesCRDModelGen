@@ -6676,7 +6676,7 @@ spec:
                             description: The version of Node to run. Possible values are 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.
                             type: string
                           phpVersion:
-                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.
+                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.
                             type: string
                           pythonVersion:
                             description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.
@@ -6999,7 +6999,7 @@ spec:
                         description: Should Remote Debugging be enabled? Defaults to false.
                         type: boolean
                       remoteDebuggingVersion:
-                        description: The Remote Debugging Version. Possible values include VS2017 and VS2019
+                        description: The Remote Debugging Version. Possible values include VS2017, VS2019 and VS2022
                         type: string
                       scmIpRestriction:
                         description: One or more scm_ip_restriction blocks as defined above.
@@ -8500,7 +8500,7 @@ spec:
                             description: The version of Node to run. Possible values are 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.
                             type: string
                           phpVersion:
-                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.
+                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.
                             type: string
                           pythonVersion:
                             description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.
@@ -8823,7 +8823,7 @@ spec:
                         description: Should Remote Debugging be enabled? Defaults to false.
                         type: boolean
                       remoteDebuggingVersion:
-                        description: The Remote Debugging Version. Possible values include VS2017 and VS2019
+                        description: The Remote Debugging Version. Possible values include VS2017, VS2019 and VS2022
                         type: string
                       scmIpRestriction:
                         description: One or more scm_ip_restriction blocks as defined above.
@@ -10320,7 +10320,7 @@ spec:
                             description: The version of Node to run. Possible values are 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.
                             type: string
                           phpVersion:
-                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.
+                            description: The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.
                             type: string
                           pythonVersion:
                             description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.
@@ -10562,7 +10562,7 @@ spec:
                         description: Should Remote Debugging be enabled? Defaults to false.
                         type: boolean
                       remoteDebuggingVersion:
-                        description: The Remote Debugging Version. Possible values include VS2017 and VS2019
+                        description: The Remote Debugging Version. Possible values include VS2017, VS2019 and VS2022
                         type: string
                       scmIpRestriction:
                         description: One or more scm_ip_restriction blocks as defined above.

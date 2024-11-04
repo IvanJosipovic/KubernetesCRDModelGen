@@ -248,6 +248,10 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySet
     [JsonPropertyName("fileUploadLimitInMb")]
     public double? FileUploadLimitInMb { get; set; }
 
+    /// <summary>Specifies the JavaScript challenge cookie validity lifetime in minutes. The user is challenged after the lifetime expires. Accepted values are in the range 5 to 1440. Defaults to 30.</summary>
+    [JsonPropertyName("jsChallengeCookieExpirationInMinutes")]
+    public double? JsChallengeCookieExpirationInMinutes { get; set; }
+
     /// <summary>One log_scrubbing block as defined below.</summary>
     [JsonPropertyName("logScrubbing")]
     public IList<V1beta1WebApplicationFirewallPolicySpecForProviderPolicySettingsLogScrubbing>? LogScrubbing { get; set; }
@@ -601,6 +605,10 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySe
     /// <summary>The File Upload Limit in MB. Accepted values are in the range 1 to 4000. Defaults to 100.</summary>
     [JsonPropertyName("fileUploadLimitInMb")]
     public double? FileUploadLimitInMb { get; set; }
+
+    /// <summary>Specifies the JavaScript challenge cookie validity lifetime in minutes. The user is challenged after the lifetime expires. Accepted values are in the range 5 to 1440. Defaults to 30.</summary>
+    [JsonPropertyName("jsChallengeCookieExpirationInMinutes")]
+    public double? JsChallengeCookieExpirationInMinutes { get; set; }
 
     /// <summary>One log_scrubbing block as defined below.</summary>
     [JsonPropertyName("logScrubbing")]
@@ -1019,6 +1027,10 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySe
     /// <summary>The File Upload Limit in MB. Accepted values are in the range 1 to 4000. Defaults to 100.</summary>
     [JsonPropertyName("fileUploadLimitInMb")]
     public double? FileUploadLimitInMb { get; set; }
+
+    /// <summary>Specifies the JavaScript challenge cookie validity lifetime in minutes. The user is challenged after the lifetime expires. Accepted values are in the range 5 to 1440. Defaults to 30.</summary>
+    [JsonPropertyName("jsChallengeCookieExpirationInMinutes")]
+    public double? JsChallengeCookieExpirationInMinutes { get; set; }
 
     /// <summary>One log_scrubbing block as defined below.</summary>
     [JsonPropertyName("logScrubbing")]

@@ -381,7 +381,7 @@ public partial class V1beta1WorkspaceSQLAADAdminStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>WorkspaceSQLAADAdmin is the Schema for the WorkspaceSQLAADAdmins API. Manages Synapse Workspace AAD Admin</summary>
+/// <summary>WorkspaceSQLAADAdmin is the Schema for the WorkspaceSQLAADAdmins API. Manages Synapse Workspace SQL AAD Admin</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1WorkspaceSQLAADAdmin : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkspaceSQLAADAdminSpec>, IStatus<V1beta1WorkspaceSQLAADAdminStatus>

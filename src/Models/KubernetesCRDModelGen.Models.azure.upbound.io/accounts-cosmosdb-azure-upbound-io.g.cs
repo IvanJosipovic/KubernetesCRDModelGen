@@ -340,6 +340,10 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("backup")]
     public IList<V1beta1AccountSpecForProviderBackup>? Backup { get; set; }
 
+    /// <summary>Enable burst capacity for this Cosmos DB account. Defaults to false.</summary>
+    [JsonPropertyName("burstCapacityEnabled")]
+    public bool? BurstCapacityEnabled { get; set; }
+
     /// <summary>The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.</summary>
     [JsonPropertyName("capabilities")]
     public IList<V1beta1AccountSpecForProviderCapabilities>? Capabilities { get; set; }
@@ -744,6 +748,10 @@ public partial class V1beta1AccountSpecInitProvider
     /// <summary>A backup block as defined below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1AccountSpecInitProviderBackup>? Backup { get; set; }
+
+    /// <summary>Enable burst capacity for this Cosmos DB account. Defaults to false.</summary>
+    [JsonPropertyName("burstCapacityEnabled")]
+    public bool? BurstCapacityEnabled { get; set; }
 
     /// <summary>The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.</summary>
     [JsonPropertyName("capabilities")]
@@ -1217,6 +1225,10 @@ public partial class V1beta1AccountStatusAtProvider
     /// <summary>A backup block as defined below.</summary>
     [JsonPropertyName("backup")]
     public IList<V1beta1AccountStatusAtProviderBackup>? Backup { get; set; }
+
+    /// <summary>Enable burst capacity for this Cosmos DB account. Defaults to false.</summary>
+    [JsonPropertyName("burstCapacityEnabled")]
+    public bool? BurstCapacityEnabled { get; set; }
 
     /// <summary>The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.</summary>
     [JsonPropertyName("capabilities")]

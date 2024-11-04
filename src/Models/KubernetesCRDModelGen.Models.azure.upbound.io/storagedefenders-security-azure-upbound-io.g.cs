@@ -80,6 +80,10 @@ public partial class V1beta1StorageDefenderSpecForProvider
     [JsonPropertyName("overrideSubscriptionSettingsEnabled")]
     public bool? OverrideSubscriptionSettingsEnabled { get; set; }
 
+    /// <summary>The Event Grid Topic where every scan result will be sent to. When you set an Event Grid custom topic, you must set override_subscription_settings_enabled to true to override the subscription-level settings.</summary>
+    [JsonPropertyName("scanResultsEventGridTopicId")]
+    public string? ScanResultsEventGridTopicId { get; set; }
+
     /// <summary>Whether Sensitive Data Discovery should be enabled. Defaults to false.</summary>
     [JsonPropertyName("sensitiveDataDiscoveryEnabled")]
     public bool? SensitiveDataDiscoveryEnabled { get; set; }
@@ -168,6 +172,10 @@ public partial class V1beta1StorageDefenderSpecInitProvider
     /// <summary>Whether the settings defined for this storage account should override the settings defined for the subscription. Defaults to false.</summary>
     [JsonPropertyName("overrideSubscriptionSettingsEnabled")]
     public bool? OverrideSubscriptionSettingsEnabled { get; set; }
+
+    /// <summary>The Event Grid Topic where every scan result will be sent to. When you set an Event Grid custom topic, you must set override_subscription_settings_enabled to true to override the subscription-level settings.</summary>
+    [JsonPropertyName("scanResultsEventGridTopicId")]
+    public string? ScanResultsEventGridTopicId { get; set; }
 
     /// <summary>Whether Sensitive Data Discovery should be enabled. Defaults to false.</summary>
     [JsonPropertyName("sensitiveDataDiscoveryEnabled")]
@@ -337,6 +345,10 @@ public partial class V1beta1StorageDefenderStatusAtProvider
     /// <summary>Whether the settings defined for this storage account should override the settings defined for the subscription. Defaults to false.</summary>
     [JsonPropertyName("overrideSubscriptionSettingsEnabled")]
     public bool? OverrideSubscriptionSettingsEnabled { get; set; }
+
+    /// <summary>The Event Grid Topic where every scan result will be sent to. When you set an Event Grid custom topic, you must set override_subscription_settings_enabled to true to override the subscription-level settings.</summary>
+    [JsonPropertyName("scanResultsEventGridTopicId")]
+    public string? ScanResultsEventGridTopicId { get; set; }
 
     /// <summary>Whether Sensitive Data Discovery should be enabled. Defaults to false.</summary>
     [JsonPropertyName("sensitiveDataDiscoveryEnabled")]

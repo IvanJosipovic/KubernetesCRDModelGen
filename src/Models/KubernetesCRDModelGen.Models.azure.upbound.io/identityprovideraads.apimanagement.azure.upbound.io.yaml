@@ -181,6 +181,9 @@ spec:
                   clientId:
                     description: Client Id of the Application in the AAD Identity Provider.
                     type: string
+                  clientLibrary:
+                    description: The client library to be used in the AAD Identity Provider.
+                    type: string
                   clientSecretSecretRef:
                     description: Client secret of the Application in the AAD Identity Provider.
                     properties:
@@ -288,7 +291,7 @@ spec:
                         type: object
                     type: object
                   signinTenant:
-                    description: The AAD Tenant to use instead of Common when logging into Active Directory
+                    description: The AAD Tenant to use instead of Common when logging into Active Directory.
                     type: string
                 type: object
               initProvider:
@@ -321,6 +324,9 @@ spec:
                   clientId:
                     description: Client Id of the Application in the AAD Identity Provider.
                     type: string
+                  clientLibrary:
+                    description: The client library to be used in the AAD Identity Provider.
+                    type: string
                   clientSecretSecretRef:
                     description: Client secret of the Application in the AAD Identity Provider.
                     properties:
@@ -339,7 +345,7 @@ spec:
                     - namespace
                     type: object
                   signinTenant:
-                    description: The AAD Tenant to use instead of Common when logging into Active Directory
+                    description: The AAD Tenant to use instead of Common when logging into Active Directory.
                     type: string
                 required:
                 - clientSecretSecretRef
@@ -575,6 +581,9 @@ spec:
                   clientId:
                     description: Client Id of the Application in the AAD Identity Provider.
                     type: string
+                  clientLibrary:
+                    description: The client library to be used in the AAD Identity Provider.
+                    type: string
                   id:
                     description: The ID of the API Management AAD Identity Provider.
                     type: string
@@ -582,7 +591,7 @@ spec:
                     description: The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
                     type: string
                   signinTenant:
-                    description: The AAD Tenant to use instead of Common when logging into Active Directory
+                    description: The AAD Tenant to use instead of Common when logging into Active Directory.
                     type: string
                 type: object
               conditions:

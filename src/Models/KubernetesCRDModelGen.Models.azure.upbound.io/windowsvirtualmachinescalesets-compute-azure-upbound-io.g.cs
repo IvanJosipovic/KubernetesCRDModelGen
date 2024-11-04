@@ -68,6 +68,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdminPas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAutomaticInstanceRepair
 {
+    /// <summary>The repair action that will be used for repairing unhealthy virtual machines in the scale set. Possible values include Replace, Restart, Reimage.</summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -1006,6 +1010,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAutomaticInstanceRepair
 {
+    /// <summary>The repair action that will be used for repairing unhealthy virtual machines in the scale set. Possible values include Replace, Restart, Reimage.</summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -2004,6 +2012,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAdditio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAutomaticInstanceRepair
 {
+    /// <summary>The repair action that will be used for repairing unhealthy virtual machines in the scale set. Possible values include Replace, Restart, Reimage.</summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
     /// <summary>Should the automatic instance repair be enabled on this Virtual Machine Scale Set?</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }

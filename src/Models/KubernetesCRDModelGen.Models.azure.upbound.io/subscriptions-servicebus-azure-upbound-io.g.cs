@@ -85,6 +85,10 @@ public partial class V1beta1SubscriptionSpecForProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
+
     /// <summary>A client_scoped_subscription block as defined below.</summary>
     [JsonPropertyName("clientScopedSubscription")]
     public IList<V1beta1SubscriptionSpecForProviderClientScopedSubscription>? ClientScopedSubscription { get; set; }
@@ -166,6 +170,10 @@ public partial class V1beta1SubscriptionSpecInitProvider
     /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
 
     /// <summary>A client_scoped_subscription block as defined below.</summary>
     [JsonPropertyName("clientScopedSubscription")]
@@ -372,6 +380,10 @@ public partial class V1beta1SubscriptionStatusAtProvider
     /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
 
     /// <summary>A client_scoped_subscription block as defined below.</summary>
     [JsonPropertyName("clientScopedSubscription")]

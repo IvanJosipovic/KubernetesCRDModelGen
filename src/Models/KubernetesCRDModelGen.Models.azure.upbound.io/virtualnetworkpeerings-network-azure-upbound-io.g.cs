@@ -188,7 +188,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecForProvider
     [JsonPropertyName("allowGatewayTransit")]
     public bool? AllowGatewayTransit { get; set; }
 
-    /// <summary>Controls if the VMs in the remote virtual network can access VMs in the local virtual network. Defaults to true.</summary>
+    /// <summary>Controls if the traffic from the local virtual network can reach the remote virtual network. Defaults to true.</summary>
     [JsonPropertyName("allowVirtualNetworkAccess")]
     public bool? AllowVirtualNetworkAccess { get; set; }
 
@@ -321,7 +321,7 @@ public partial class V1beta1VirtualNetworkPeeringSpecInitProvider
     [JsonPropertyName("allowGatewayTransit")]
     public bool? AllowGatewayTransit { get; set; }
 
-    /// <summary>Controls if the VMs in the remote virtual network can access VMs in the local virtual network. Defaults to true.</summary>
+    /// <summary>Controls if the traffic from the local virtual network can reach the remote virtual network. Defaults to true.</summary>
     [JsonPropertyName("allowVirtualNetworkAccess")]
     public bool? AllowVirtualNetworkAccess { get; set; }
 
@@ -506,7 +506,7 @@ public partial class V1beta1VirtualNetworkPeeringStatusAtProvider
     [JsonPropertyName("allowGatewayTransit")]
     public bool? AllowGatewayTransit { get; set; }
 
-    /// <summary>Controls if the VMs in the remote virtual network can access VMs in the local virtual network. Defaults to true.</summary>
+    /// <summary>Controls if the traffic from the local virtual network can reach the remote virtual network. Defaults to true.</summary>
     [JsonPropertyName("allowVirtualNetworkAccess")]
     public bool? AllowVirtualNetworkAccess { get; set; }
 

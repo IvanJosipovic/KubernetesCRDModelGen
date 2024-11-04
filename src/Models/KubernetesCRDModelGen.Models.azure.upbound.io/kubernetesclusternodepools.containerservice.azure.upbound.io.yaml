@@ -1867,7 +1867,6 @@ spec:
                     description: Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.
                     type: string
                   customCaTrustEnabled:
-                    description: Specifies whether to trust a Custom CA.
                     type: boolean
                   enableAutoScaling:
                     description: Whether to enable auto-scaler.
@@ -2130,7 +2129,6 @@ spec:
                     description: The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
                     type: number
                   messageOfTheDay:
-                    description: A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.
                     type: string
                   minCount:
                     description: The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count.
@@ -2195,7 +2193,7 @@ spec:
                     description: The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this forces a new resource to be created.
                     type: string
                   osSku:
-                    description: Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this forces a new resource to be created.
+                    description: Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise it forces a new resource to be created.
                     type: string
                   osType:
                     description: The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are Linux and Windows. Defaults to Linux.
@@ -2426,7 +2424,7 @@ spec:
                         type: boolean
                     type: object
                   workloadRuntime:
-                    description: Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.
+                    description: Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.
                     type: string
                   zones:
                     description: Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.
@@ -2461,7 +2459,6 @@ spec:
                     description: Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.
                     type: string
                   customCaTrustEnabled:
-                    description: Specifies whether to trust a Custom CA.
                     type: boolean
                   enableAutoScaling:
                     description: Whether to enable auto-scaler.
@@ -2635,7 +2632,6 @@ spec:
                     description: The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
                     type: number
                   messageOfTheDay:
-                    description: A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.
                     type: string
                   minCount:
                     description: The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count.
@@ -2700,7 +2696,7 @@ spec:
                     description: The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this forces a new resource to be created.
                     type: string
                   osSku:
-                    description: Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this forces a new resource to be created.
+                    description: Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise it forces a new resource to be created.
                     type: string
                   osType:
                     description: The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are Linux and Windows. Defaults to Linux.
@@ -2931,7 +2927,7 @@ spec:
                         type: boolean
                     type: object
                   workloadRuntime:
-                    description: Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.
+                    description: Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.
                     type: string
                   zones:
                     description: Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.
@@ -3160,7 +3156,6 @@ spec:
                     description: Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.
                     type: string
                   customCaTrustEnabled:
-                    description: Specifies whether to trust a Custom CA.
                     type: boolean
                   enableAutoScaling:
                     description: Whether to enable auto-scaler.
@@ -3340,7 +3335,6 @@ spec:
                     description: The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.
                     type: number
                   messageOfTheDay:
-                    description: A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.
                     type: string
                   minCount:
                     description: The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count.
@@ -3405,7 +3399,7 @@ spec:
                     description: The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this forces a new resource to be created.
                     type: string
                   osSku:
-                    description: Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this forces a new resource to be created.
+                    description: Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise it forces a new resource to be created.
                     type: string
                   osType:
                     description: The Operating System which should be used for this Node Pool. Changing this forces a new resource to be created. Possible values are Linux and Windows. Defaults to Linux.
@@ -3464,7 +3458,7 @@ spec:
                         type: boolean
                     type: object
                   workloadRuntime:
-                    description: Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.
+                    description: Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.
                     type: string
                   zones:
                     description: Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.

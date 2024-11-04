@@ -421,6 +421,23 @@ spec:
                   customQuestionAnsweringSearchServiceId:
                     description: If kind is TextAnalytics this specifies the ID of the Search service.
                     type: string
+                  customQuestionAnsweringSearchServiceKeySecretRef:
+                    description: If kind is TextAnalytics this specifies the key of the Search service.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   customSubdomainName:
                     description: The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.
                     type: string
@@ -1133,7 +1150,7 @@ spec:
                     - namespace
                     type: object
                   customSubdomainName:
-                    description: The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.
+                    description: The subdomain name used for token-based authentication. This property is required when network_acls is specified. This property is also required when using the OpenAI service with libraries which assume the Azure OpenAI endpoint is a subdomain on https://openai.azure.com/, eg. https://<custom_subdomain_name>.openai.azure.com/.  Changing this forces a new resource to be created.
                     type: string
                   customerManagedKey:
                     description: A customer_managed_key block as documented below.
@@ -1461,7 +1478,7 @@ spec:
                     - namespace
                     type: object
                   customSubdomainName:
-                    description: The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.
+                    description: The subdomain name used for token-based authentication. This property is required when network_acls is specified. This property is also required when using the OpenAI service with libraries which assume the Azure OpenAI endpoint is a subdomain on https://openai.azure.com/, eg. https://<custom_subdomain_name>.openai.azure.com/.  Changing this forces a new resource to be created.
                     type: string
                   customerManagedKey:
                     description: A customer_managed_key block as documented below.
@@ -1881,7 +1898,7 @@ spec:
                     description: If kind is TextAnalytics this specifies the ID of the Search service.
                     type: string
                   customSubdomainName:
-                    description: The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.
+                    description: The subdomain name used for token-based authentication. This property is required when network_acls is specified. This property is also required when using the OpenAI service with libraries which assume the Azure OpenAI endpoint is a subdomain on https://openai.azure.com/, eg. https://<custom_subdomain_name>.openai.azure.com/.  Changing this forces a new resource to be created.
                     type: string
                   customerManagedKey:
                     description: A customer_managed_key block as documented below.

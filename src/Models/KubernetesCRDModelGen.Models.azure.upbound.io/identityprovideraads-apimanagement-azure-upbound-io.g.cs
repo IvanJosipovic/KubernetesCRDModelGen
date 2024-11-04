@@ -161,6 +161,10 @@ public partial class V1beta1IdentityProviderAADSpecForProvider
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The client library to be used in the AAD Identity Provider.</summary>
+    [JsonPropertyName("clientLibrary")]
+    public string? ClientLibrary { get; set; }
+
     /// <summary>Client secret of the Application in the AAD Identity Provider.</summary>
     [JsonPropertyName("clientSecretSecretRef")]
     public V1beta1IdentityProviderAADSpecForProviderClientSecretSecretRef? ClientSecretSecretRef { get; set; }
@@ -177,7 +181,7 @@ public partial class V1beta1IdentityProviderAADSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1IdentityProviderAADSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The AAD Tenant to use instead of Common when logging into Active Directory</summary>
+    /// <summary>The AAD Tenant to use instead of Common when logging into Active Directory.</summary>
     [JsonPropertyName("signinTenant")]
     public string? SigninTenant { get; set; }
 }
@@ -211,11 +215,15 @@ public partial class V1beta1IdentityProviderAADSpecInitProvider
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The client library to be used in the AAD Identity Provider.</summary>
+    [JsonPropertyName("clientLibrary")]
+    public string? ClientLibrary { get; set; }
+
     /// <summary>Client secret of the Application in the AAD Identity Provider.</summary>
     [JsonPropertyName("clientSecretSecretRef")]
     public V1beta1IdentityProviderAADSpecInitProviderClientSecretSecretRef ClientSecretSecretRef { get; set; }
 
-    /// <summary>The AAD Tenant to use instead of Common when logging into Active Directory</summary>
+    /// <summary>The AAD Tenant to use instead of Common when logging into Active Directory.</summary>
     [JsonPropertyName("signinTenant")]
     public string? SigninTenant { get; set; }
 }
@@ -368,6 +376,10 @@ public partial class V1beta1IdentityProviderAADStatusAtProvider
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
+    /// <summary>The client library to be used in the AAD Identity Provider.</summary>
+    [JsonPropertyName("clientLibrary")]
+    public string? ClientLibrary { get; set; }
+
     /// <summary>The ID of the API Management AAD Identity Provider.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -376,7 +388,7 @@ public partial class V1beta1IdentityProviderAADStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>The AAD Tenant to use instead of Common when logging into Active Directory</summary>
+    /// <summary>The AAD Tenant to use instead of Common when logging into Active Directory.</summary>
     [JsonPropertyName("signinTenant")]
     public string? SigninTenant { get; set; }
 }

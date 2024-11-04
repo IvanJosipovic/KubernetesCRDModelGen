@@ -84,6 +84,8 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  bgpRoutePropagationEnabled:
+                    type: boolean
                   disableBgpRoutePropagation:
                     description: Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.
                     type: boolean
@@ -226,6 +228,8 @@ spec:
 
                   autoscaler.
                 properties:
+                  bgpRoutePropagationEnabled:
+                    type: boolean
                   disableBgpRoutePropagation:
                     description: Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.
                     type: boolean
@@ -473,6 +477,8 @@ spec:
             properties:
               atProvider:
                 properties:
+                  bgpRoutePropagationEnabled:
+                    type: boolean
                   disableBgpRoutePropagation:
                     description: Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.
                     type: boolean

@@ -81,7 +81,7 @@ public partial class V1beta1AccountNetworkRulesSpecForProviderStorageAccountIdSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecForProvider
 {
-    /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.</summary>
+    /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None. Defaults to ["AzureServices"].</summary>
     [JsonPropertyName("bypass")]
     public IList<string>? Bypass { get; set; }
 
@@ -187,7 +187,7 @@ public partial class V1beta1AccountNetworkRulesSpecInitProviderStorageAccountIdS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesSpecInitProvider
 {
-    /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.</summary>
+    /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None. Defaults to ["AzureServices"].</summary>
     [JsonPropertyName("bypass")]
     public IList<string>? Bypass { get; set; }
 
@@ -369,7 +369,7 @@ public partial class V1beta1AccountNetworkRulesStatusAtProviderPrivateLinkAccess
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountNetworkRulesStatusAtProvider
 {
-    /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.</summary>
+    /// <summary>Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None. Defaults to ["AzureServices"].</summary>
     [JsonPropertyName("bypass")]
     public IList<string>? Bypass { get; set; }
 
