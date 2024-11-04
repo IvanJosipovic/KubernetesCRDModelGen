@@ -198,6 +198,23 @@ public partial class V1beta1ApplicationSpecForProviderOptionalClaims
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecForProviderPassword
+{
+    /// <summary>A display name for the password. Changing this field forces a new resource to be created. A display name for the password</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>The end date until which the password is valid, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). Changing this field forces a new resource to be created. The end date until which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`)</summary>
+    [JsonPropertyName("endDate")]
+    public string? EndDate { get; set; }
+
+    /// <summary>The start date from which the password is valid, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created. The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used</summary>
+    [JsonPropertyName("startDate")]
+    public string? StartDate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderPublicClient
 {
     /// <summary>A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid https or ms-appx-web URL. The URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent</summary>
@@ -337,6 +354,10 @@ public partial class V1beta1ApplicationSpecForProvider
     /// <summary>A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned. A list of object IDs of principals that will be granted ownership of the application</summary>
     [JsonPropertyName("owners")]
     public IList<string>? Owners { get; set; }
+
+    /// <summary>A single password block as documented below. The password is generated during creation. By default, no password is generated. App password definition</summary>
+    [JsonPropertyName("password")]
+    public IList<V1beta1ApplicationSpecForProviderPassword>? Password { get; set; }
 
     /// <summary>If true, will return an error if an existing application is found with the same name. Defaults to false. If `true`, will return an error if an existing application is found with the same name</summary>
     [JsonPropertyName("preventDuplicateNames")]
@@ -577,6 +598,23 @@ public partial class V1beta1ApplicationSpecInitProviderOptionalClaims
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecInitProviderPassword
+{
+    /// <summary>A display name for the password. Changing this field forces a new resource to be created. A display name for the password</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>The end date until which the password is valid, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). Changing this field forces a new resource to be created. The end date until which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`)</summary>
+    [JsonPropertyName("endDate")]
+    public string? EndDate { get; set; }
+
+    /// <summary>The start date from which the password is valid, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created. The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used</summary>
+    [JsonPropertyName("startDate")]
+    public string? StartDate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderPublicClient
 {
     /// <summary>A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid https or ms-appx-web URL. The URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent</summary>
@@ -716,6 +754,10 @@ public partial class V1beta1ApplicationSpecInitProvider
     /// <summary>A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned. A list of object IDs of principals that will be granted ownership of the application</summary>
     [JsonPropertyName("owners")]
     public IList<string>? Owners { get; set; }
+
+    /// <summary>A single password block as documented below. The password is generated during creation. By default, no password is generated. App password definition</summary>
+    [JsonPropertyName("password")]
+    public IList<V1beta1ApplicationSpecInitProviderPassword>? Password { get; set; }
 
     /// <summary>If true, will return an error if an existing application is found with the same name. Defaults to false. If `true`, will return an error if an existing application is found with the same name</summary>
     [JsonPropertyName("preventDuplicateNames")]
@@ -1088,6 +1130,27 @@ public partial class V1beta1ApplicationStatusAtProviderOptionalClaims
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationStatusAtProviderPassword
+{
+    /// <summary>A display name for the password. Changing this field forces a new resource to be created. A display name for the password</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>The end date until which the password is valid, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). Changing this field forces a new resource to be created. The end date until which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`)</summary>
+    [JsonPropertyName("endDate")]
+    public string? EndDate { get; set; }
+
+    /// <summary>The unique key ID for the generated password. A UUID used to uniquely identify this password credential</summary>
+    [JsonPropertyName("keyId")]
+    public string? KeyId { get; set; }
+
+    /// <summary>The start date from which the password is valid, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created. The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used</summary>
+    [JsonPropertyName("startDate")]
+    public string? StartDate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderPublicClient
 {
     /// <summary>A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid https or ms-appx-web URL. The URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent</summary>
@@ -1259,6 +1322,10 @@ public partial class V1beta1ApplicationStatusAtProvider
     /// <summary>A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned. A list of object IDs of principals that will be granted ownership of the application</summary>
     [JsonPropertyName("owners")]
     public IList<string>? Owners { get; set; }
+
+    /// <summary>A single password block as documented below. The password is generated during creation. By default, no password is generated. App password definition</summary>
+    [JsonPropertyName("password")]
+    public IList<V1beta1ApplicationStatusAtProviderPassword>? Password { get; set; }
 
     /// <summary>If true, will return an error if an existing application is found with the same name. Defaults to false. If `true`, will return an error if an existing application is found with the same name</summary>
     [JsonPropertyName("preventDuplicateNames")]
