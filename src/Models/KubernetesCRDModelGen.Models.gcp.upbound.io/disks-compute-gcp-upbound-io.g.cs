@@ -183,6 +183,10 @@ public partial class V1beta1DiskSpecForProviderSourceSnapshotEncryptionKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecForProvider
 {
+    /// <summary>The accessMode of the disk. For example:</summary>
+    [JsonPropertyName("accessMode")]
+    public string? AccessMode { get; set; }
+
     /// <summary>A nested object resource Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1DiskSpecForProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
@@ -439,6 +443,10 @@ public partial class V1beta1DiskSpecInitProviderSourceSnapshotEncryptionKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecInitProvider
 {
+    /// <summary>The accessMode of the disk. For example:</summary>
+    [JsonPropertyName("accessMode")]
+    public string? AccessMode { get; set; }
+
     /// <summary>A nested object resource Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1DiskSpecInitProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
@@ -729,6 +737,10 @@ public partial class V1beta1DiskStatusAtProviderSourceSnapshotEncryptionKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskStatusAtProvider
 {
+    /// <summary>The accessMode of the disk. For example:</summary>
+    [JsonPropertyName("accessMode")]
+    public string? AccessMode { get; set; }
+
     /// <summary>A nested object resource Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1DiskStatusAtProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }

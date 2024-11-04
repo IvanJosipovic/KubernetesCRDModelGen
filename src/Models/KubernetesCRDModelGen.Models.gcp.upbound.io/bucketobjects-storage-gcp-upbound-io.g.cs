@@ -549,6 +549,10 @@ public partial class V1beta1BucketObjectStatusAtProvider
     [JsonPropertyName("eventBasedHold")]
     public bool? EventBasedHold { get; set; }
 
+    /// <summary>(Computed) The content generation of this object. Used for object versioning and soft delete.</summary>
+    [JsonPropertyName("generation")]
+    public double? Generation { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

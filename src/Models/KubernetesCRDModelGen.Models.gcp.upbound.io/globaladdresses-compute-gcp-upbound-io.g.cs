@@ -382,6 +382,10 @@ public partial class V1beta1GlobalAddressStatusAtProvider
     [JsonPropertyName("ipVersion")]
     public string? IpVersion { get; set; }
 
+    /// <summary>The fingerprint used for optimistic locking of this resource.  Used internally during updates.</summary>
+    [JsonPropertyName("labelFingerprint")]
+    public string? LabelFingerprint { get; set; }
+
     /// <summary>Labels to apply to this address.  A list of key-&gt;value pairs.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }

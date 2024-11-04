@@ -155,6 +155,10 @@ public partial class V1beta1ConnectionSpecForProvider
     /// <summary>Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.</summary>
     [JsonPropertyName("service")]
     public string? Service { get; set; }
+
+    /// <summary>When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.</summary>
+    [JsonPropertyName("updateOnCreationFail")]
+    public bool? UpdateOnCreationFail { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -304,6 +308,10 @@ public partial class V1beta1ConnectionSpecInitProvider
     /// <summary>Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.</summary>
     [JsonPropertyName("service")]
     public string? Service { get; set; }
+
+    /// <summary>When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.</summary>
+    [JsonPropertyName("updateOnCreationFail")]
+    public bool? UpdateOnCreationFail { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -465,6 +473,10 @@ public partial class V1beta1ConnectionStatusAtProvider
     /// <summary>Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.</summary>
     [JsonPropertyName("service")]
     public string? Service { get; set; }
+
+    /// <summary>When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.</summary>
+    [JsonPropertyName("updateOnCreationFail")]
+    public bool? UpdateOnCreationFail { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

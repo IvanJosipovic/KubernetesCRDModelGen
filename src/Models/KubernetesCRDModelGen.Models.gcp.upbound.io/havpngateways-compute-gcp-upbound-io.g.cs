@@ -149,6 +149,10 @@ public partial class V1beta1HaVPNGatewaySpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used. Default value is IPV4. Possible values are: IPV4, IPV6.</summary>
+    [JsonPropertyName("gatewayIpVersion")]
+    public string? GatewayIpVersion { get; set; }
+
     /// <summary>The network this VPN gateway is accepting traffic for.</summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
@@ -169,7 +173,7 @@ public partial class V1beta1HaVPNGatewaySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used. Default value is IPV4_ONLY. Possible values are: IPV4_ONLY, IPV4_IPV6.</summary>
+    /// <summary>The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used. Default value is IPV4_ONLY. Possible values are: IPV4_ONLY, IPV4_IPV6, IPV6_ONLY.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
 
@@ -319,6 +323,10 @@ public partial class V1beta1HaVPNGatewaySpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used. Default value is IPV4. Possible values are: IPV4, IPV6.</summary>
+    [JsonPropertyName("gatewayIpVersion")]
+    public string? GatewayIpVersion { get; set; }
+
     /// <summary>The network this VPN gateway is accepting traffic for.</summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
@@ -335,7 +343,7 @@ public partial class V1beta1HaVPNGatewaySpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary>The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used. Default value is IPV4_ONLY. Possible values are: IPV4_ONLY, IPV4_IPV6.</summary>
+    /// <summary>The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used. Default value is IPV4_ONLY. Possible values are: IPV4_ONLY, IPV4_IPV6, IPV6_ONLY.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
 
@@ -501,6 +509,10 @@ public partial class V1beta1HaVPNGatewayStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used. Default value is IPV4. Possible values are: IPV4, IPV6.</summary>
+    [JsonPropertyName("gatewayIpVersion")]
+    public string? GatewayIpVersion { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -521,7 +533,7 @@ public partial class V1beta1HaVPNGatewayStatusAtProvider
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 
-    /// <summary>The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used. Default value is IPV4_ONLY. Possible values are: IPV4_ONLY, IPV4_IPV6.</summary>
+    /// <summary>The stack type for this VPN gateway to identify the IP protocols that are enabled. If not specified, IPV4_ONLY will be used. Default value is IPV4_ONLY. Possible values are: IPV4_ONLY, IPV4_IPV6, IPV6_ONLY.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
 

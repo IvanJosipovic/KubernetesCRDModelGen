@@ -104,6 +104,36 @@ public partial class V1beta1NodePoolSpecForProviderManagement
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecForProviderNetworkConfigAdditionalNodeNetworkConfigs
+{
+    /// <summary>Name of the VPC where the additional interface belongs.</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Name of the subnetwork where the additional pod network belongs.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecForProviderNetworkConfigAdditionalPodNetworkConfigs
+{
+    /// <summary>The maximum number of pods per node in this node pool. Note that this does not work on node pools which are "route-based" - that is, node pools belonging to clusters that do not have IP Aliasing enabled. See the official documentation for more information.</summary>
+    [JsonPropertyName("maxPodsPerNode")]
+    public double? MaxPodsPerNode { get; set; }
+
+    /// <summary>The name of the secondary range on the subnet which provides IP address for this pod range.</summary>
+    [JsonPropertyName("secondaryPodRange")]
+    public string? SecondaryPodRange { get; set; }
+
+    /// <summary>Name of the subnetwork where the additional pod network belongs.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNetworkConfigNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -124,6 +154,14 @@ public partial class V1beta1NodePoolSpecForProviderNetworkConfigPodCidrOverprovi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNetworkConfig
 {
+    /// <summary>We specify the additional node networks for this node pool using this list. Each node network corresponds to an additional interface. Structure is documented below</summary>
+    [JsonPropertyName("additionalNodeNetworkConfigs")]
+    public IList<V1beta1NodePoolSpecForProviderNetworkConfigAdditionalNodeNetworkConfigs>? AdditionalNodeNetworkConfigs { get; set; }
+
+    /// <summary>We specify the additional pod networks for this node pool using this list. Each pod network corresponds to an additional alias IP range for the node. Structure is documented below</summary>
+    [JsonPropertyName("additionalPodNetworkConfigs")]
+    public IList<V1beta1NodePoolSpecForProviderNetworkConfigAdditionalPodNetworkConfigs>? AdditionalPodNetworkConfigs { get; set; }
+
     /// <summary>Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.</summary>
     [JsonPropertyName("createPodRange")]
     public bool? CreatePodRange { get; set; }
@@ -322,6 +360,10 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigKubeletConfig
     /// <summary></summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("podPidsLimit")]
@@ -856,6 +898,36 @@ public partial class V1beta1NodePoolSpecInitProviderManagement
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecInitProviderNetworkConfigAdditionalNodeNetworkConfigs
+{
+    /// <summary>Name of the VPC where the additional interface belongs.</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Name of the subnetwork where the additional pod network belongs.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecInitProviderNetworkConfigAdditionalPodNetworkConfigs
+{
+    /// <summary>The maximum number of pods per node in this node pool. Note that this does not work on node pools which are "route-based" - that is, node pools belonging to clusters that do not have IP Aliasing enabled. See the official documentation for more information.</summary>
+    [JsonPropertyName("maxPodsPerNode")]
+    public double? MaxPodsPerNode { get; set; }
+
+    /// <summary>The name of the secondary range on the subnet which provides IP address for this pod range.</summary>
+    [JsonPropertyName("secondaryPodRange")]
+    public string? SecondaryPodRange { get; set; }
+
+    /// <summary>Name of the subnetwork where the additional pod network belongs.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNetworkConfigNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -876,6 +948,14 @@ public partial class V1beta1NodePoolSpecInitProviderNetworkConfigPodCidrOverprov
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNetworkConfig
 {
+    /// <summary>We specify the additional node networks for this node pool using this list. Each node network corresponds to an additional interface. Structure is documented below</summary>
+    [JsonPropertyName("additionalNodeNetworkConfigs")]
+    public IList<V1beta1NodePoolSpecInitProviderNetworkConfigAdditionalNodeNetworkConfigs>? AdditionalNodeNetworkConfigs { get; set; }
+
+    /// <summary>We specify the additional pod networks for this node pool using this list. Each pod network corresponds to an additional alias IP range for the node. Structure is documented below</summary>
+    [JsonPropertyName("additionalPodNetworkConfigs")]
+    public IList<V1beta1NodePoolSpecInitProviderNetworkConfigAdditionalPodNetworkConfigs>? AdditionalPodNetworkConfigs { get; set; }
+
     /// <summary>Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.</summary>
     [JsonPropertyName("createPodRange")]
     public bool? CreatePodRange { get; set; }
@@ -1074,6 +1154,10 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigKubeletConfig
     /// <summary></summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("podPidsLimit")]
@@ -1724,6 +1808,36 @@ public partial class V1beta1NodePoolStatusAtProviderManagement
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolStatusAtProviderNetworkConfigAdditionalNodeNetworkConfigs
+{
+    /// <summary>Name of the VPC where the additional interface belongs.</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Name of the subnetwork where the additional pod network belongs.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolStatusAtProviderNetworkConfigAdditionalPodNetworkConfigs
+{
+    /// <summary>The maximum number of pods per node in this node pool. Note that this does not work on node pools which are "route-based" - that is, node pools belonging to clusters that do not have IP Aliasing enabled. See the official documentation for more information.</summary>
+    [JsonPropertyName("maxPodsPerNode")]
+    public double? MaxPodsPerNode { get; set; }
+
+    /// <summary>The name of the secondary range on the subnet which provides IP address for this pod range.</summary>
+    [JsonPropertyName("secondaryPodRange")]
+    public string? SecondaryPodRange { get; set; }
+
+    /// <summary>Name of the subnetwork where the additional pod network belongs.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNetworkConfigNetworkPerformanceConfig
 {
     /// <summary></summary>
@@ -1744,6 +1858,14 @@ public partial class V1beta1NodePoolStatusAtProviderNetworkConfigPodCidrOverprov
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNetworkConfig
 {
+    /// <summary>We specify the additional node networks for this node pool using this list. Each node network corresponds to an additional interface. Structure is documented below</summary>
+    [JsonPropertyName("additionalNodeNetworkConfigs")]
+    public IList<V1beta1NodePoolStatusAtProviderNetworkConfigAdditionalNodeNetworkConfigs>? AdditionalNodeNetworkConfigs { get; set; }
+
+    /// <summary>We specify the additional pod networks for this node pool using this list. Each pod network corresponds to an additional alias IP range for the node. Structure is documented below</summary>
+    [JsonPropertyName("additionalPodNetworkConfigs")]
+    public IList<V1beta1NodePoolStatusAtProviderNetworkConfigAdditionalPodNetworkConfigs>? AdditionalPodNetworkConfigs { get; set; }
+
     /// <summary>Whether to create a new range for pod IPs in this node pool. Defaults are provided for pod_range and pod_ipv4_cidr_block if they are not specified.</summary>
     [JsonPropertyName("createPodRange")]
     public bool? CreatePodRange { get; set; }
@@ -1959,6 +2081,10 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigKubeletConfig
     /// <summary></summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("podPidsLimit")]

@@ -635,6 +635,12 @@ spec:
 
                       Possible values are: IPV4, IPV6.
                     type: string
+                  labelFingerprint:
+                    description: >-
+                      The fingerprint used for optimistic locking of this resource.  Used
+
+                      internally during updates.
+                    type: string
                   labels:
                     additionalProperties:
                       type: string

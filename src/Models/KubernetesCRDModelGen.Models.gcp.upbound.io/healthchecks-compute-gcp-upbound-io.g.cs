@@ -235,6 +235,10 @@ public partial class V1beta1HealthCheckSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>The list of cloud regions from which health checks are performed. If any regions are specified, then exactly 3 regions should be specified. The region names must be valid names of Google Cloud regions. This can only be set for global health check. If this list is non-empty, then there are restrictions on what other health check fields are supported and what other resources can use this health check:</summary>
+    [JsonPropertyName("sourceRegions")]
+    public IList<string>? SourceRegions { get; set; }
+
     /// <summary>A nested object resource Structure is documented below.</summary>
     [JsonPropertyName("sslHealthCheck")]
     public IList<V1beta1HealthCheckSpecForProviderSslHealthCheck>? SslHealthCheck { get; set; }
@@ -478,6 +482,10 @@ public partial class V1beta1HealthCheckSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The list of cloud regions from which health checks are performed. If any regions are specified, then exactly 3 regions should be specified. The region names must be valid names of Google Cloud regions. This can only be set for global health check. If this list is non-empty, then there are restrictions on what other health check fields are supported and what other resources can use this health check:</summary>
+    [JsonPropertyName("sourceRegions")]
+    public IList<string>? SourceRegions { get; set; }
 
     /// <summary>A nested object resource Structure is documented below.</summary>
     [JsonPropertyName("sslHealthCheck")]
@@ -866,6 +874,10 @@ public partial class V1beta1HealthCheckStatusAtProvider
     /// <summary>The URI of the created resource.</summary>
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
+
+    /// <summary>The list of cloud regions from which health checks are performed. If any regions are specified, then exactly 3 regions should be specified. The region names must be valid names of Google Cloud regions. This can only be set for global health check. If this list is non-empty, then there are restrictions on what other health check fields are supported and what other resources can use this health check:</summary>
+    [JsonPropertyName("sourceRegions")]
+    public IList<string>? SourceRegions { get; set; }
 
     /// <summary>A nested object resource Structure is documented below.</summary>
     [JsonPropertyName("sslHealthCheck")]

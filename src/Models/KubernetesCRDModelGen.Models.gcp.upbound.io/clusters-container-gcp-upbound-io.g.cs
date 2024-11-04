@@ -368,6 +368,10 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscaling
     [JsonPropertyName("autoProvisioningDefaults")]
     public IList<V1beta1ClusterSpecForProviderClusterAutoscalingAutoProvisioningDefaults>? AutoProvisioningDefaults { get; set; }
 
+    /// <summary>The list of Google Compute Engine zones in which the NodePool's nodes can be created by NAP.</summary>
+    [JsonPropertyName("autoProvisioningLocations")]
+    public IList<string>? AutoProvisioningLocations { get; set; }
+
     /// <summary>Configuration options for the Autoscaling profile feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability when deciding to remove nodes from a cluster. Can be BALANCED or OPTIMIZE_UTILIZATION. Defaults to BALANCED.</summary>
     [JsonPropertyName("autoscalingProfile")]
     public string? AutoscalingProfile { get; set; }
@@ -946,6 +950,10 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
+    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
+
     /// <summary>Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.</summary>
     [JsonPropertyName("podPidsLimit")]
     public double? PodPidsLimit { get; set; }
@@ -1300,11 +1308,24 @@ public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigNetworkTags
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigNodeKubeletConfig
+{
+    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
     [JsonPropertyName("networkTags")]
     public IList<V1beta1ClusterSpecForProviderNodePoolAutoConfigNetworkTags>? NetworkTags { get; set; }
+
+    /// <summary>Kubelet configuration for Autopilot clusters. Currently, only insecure_kubelet_readonly_port_enabled is supported here. Structure is documented below.</summary>
+    [JsonPropertyName("nodeKubeletConfig")]
+    public IList<V1beta1ClusterSpecForProviderNodePoolAutoConfigNodeKubeletConfig>? NodeKubeletConfig { get; set; }
 
     /// <summary>A map of resource manager tag keys and values to be attached to the nodes for managing Compute Engine firewalls using Network Firewall Policies. Tags must be according to specifications found here. A maximum of 5 tag key-value pairs can be specified. Existing tags will be replaced with new values. Tags must be in one of the following formats ([KEY]=[VALUE]) 1. tagKeys/{tag_key_id}=tagValues/{tag_value_id} 2. {org_id}/{tag_key_name}={tag_value_name} 3. {project_id}/{tag_key_name}={tag_value_name}.</summary>
     [JsonPropertyName("resourceManagerTags")]
@@ -1362,6 +1383,10 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
     [JsonPropertyName("containerdConfig")]
     public IList<V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig>? ContainerdConfig { get; set; }
+
+    /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
     /// <summary>The type of logging agent that is deployed by default for newly created node pools in the cluster. Valid values include DEFAULT and MAX_THROUGHPUT. See Increasing logging agent throughput for more information.</summary>
     [JsonPropertyName("loggingVariant")]
@@ -1732,6 +1757,10 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM. Defaults to false</summary>
     [JsonPropertyName("enableLegacyAbac")]
     public bool? EnableLegacyAbac { get; set; }
+
+    /// <summary>Whether multi-networking is enabled for this cluster.</summary>
+    [JsonPropertyName("enableMultiNetworking")]
+    public bool? EnableMultiNetworking { get; set; }
 
     /// <summary>Enable Shielded Nodes features on all nodes in this cluster.  Defaults to true.</summary>
     [JsonPropertyName("enableShieldedNodes")]
@@ -2261,6 +2290,10 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscaling
     /// <summary>Contains defaults for a node pool created by NAP. A subset of fields also apply to GKE Autopilot clusters. Structure is documented below.</summary>
     [JsonPropertyName("autoProvisioningDefaults")]
     public IList<V1beta1ClusterSpecInitProviderClusterAutoscalingAutoProvisioningDefaults>? AutoProvisioningDefaults { get; set; }
+
+    /// <summary>The list of Google Compute Engine zones in which the NodePool's nodes can be created by NAP.</summary>
+    [JsonPropertyName("autoProvisioningLocations")]
+    public IList<string>? AutoProvisioningLocations { get; set; }
 
     /// <summary>Configuration options for the Autoscaling profile feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability when deciding to remove nodes from a cluster. Can be BALANCED or OPTIMIZE_UTILIZATION. Defaults to BALANCED.</summary>
     [JsonPropertyName("autoscalingProfile")]
@@ -2840,6 +2873,10 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
+    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
+
     /// <summary>Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.</summary>
     [JsonPropertyName("podPidsLimit")]
     public double? PodPidsLimit { get; set; }
@@ -3194,11 +3231,24 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigNetworkTags
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigNodeKubeletConfig
+{
+    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
     [JsonPropertyName("networkTags")]
     public IList<V1beta1ClusterSpecInitProviderNodePoolAutoConfigNetworkTags>? NetworkTags { get; set; }
+
+    /// <summary>Kubelet configuration for Autopilot clusters. Currently, only insecure_kubelet_readonly_port_enabled is supported here. Structure is documented below.</summary>
+    [JsonPropertyName("nodeKubeletConfig")]
+    public IList<V1beta1ClusterSpecInitProviderNodePoolAutoConfigNodeKubeletConfig>? NodeKubeletConfig { get; set; }
 
     /// <summary>A map of resource manager tag keys and values to be attached to the nodes for managing Compute Engine firewalls using Network Firewall Policies. Tags must be according to specifications found here. A maximum of 5 tag key-value pairs can be specified. Existing tags will be replaced with new values. Tags must be in one of the following formats ([KEY]=[VALUE]) 1. tagKeys/{tag_key_id}=tagValues/{tag_value_id} 2. {org_id}/{tag_key_name}={tag_value_name} 3. {project_id}/{tag_key_name}={tag_value_name}.</summary>
     [JsonPropertyName("resourceManagerTags")]
@@ -3256,6 +3306,10 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
     [JsonPropertyName("containerdConfig")]
     public IList<V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig>? ContainerdConfig { get; set; }
+
+    /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
     /// <summary>The type of logging agent that is deployed by default for newly created node pools in the cluster. Valid values include DEFAULT and MAX_THROUGHPUT. See Increasing logging agent throughput for more information.</summary>
     [JsonPropertyName("loggingVariant")]
@@ -3626,6 +3680,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM. Defaults to false</summary>
     [JsonPropertyName("enableLegacyAbac")]
     public bool? EnableLegacyAbac { get; set; }
+
+    /// <summary>Whether multi-networking is enabled for this cluster.</summary>
+    [JsonPropertyName("enableMultiNetworking")]
+    public bool? EnableMultiNetworking { get; set; }
 
     /// <summary>Enable Shielded Nodes features on all nodes in this cluster.  Defaults to true.</summary>
     [JsonPropertyName("enableShieldedNodes")]
@@ -4301,6 +4359,10 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscaling
     [JsonPropertyName("autoProvisioningDefaults")]
     public IList<V1beta1ClusterStatusAtProviderClusterAutoscalingAutoProvisioningDefaults>? AutoProvisioningDefaults { get; set; }
 
+    /// <summary>The list of Google Compute Engine zones in which the NodePool's nodes can be created by NAP.</summary>
+    [JsonPropertyName("autoProvisioningLocations")]
+    public IList<string>? AutoProvisioningLocations { get; set; }
+
     /// <summary>Configuration options for the Autoscaling profile feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability when deciding to remove nodes from a cluster. Can be BALANCED or OPTIMIZE_UTILIZATION. Defaults to BALANCED.</summary>
     [JsonPropertyName("autoscalingProfile")]
     public string? AutoscalingProfile { get; set; }
@@ -4868,6 +4930,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
+    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
+
     /// <summary>Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.</summary>
     [JsonPropertyName("podPidsLimit")]
     public double? PodPidsLimit { get; set; }
@@ -5191,6 +5257,36 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolManagement
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigAdditionalNodeNetworkConfigs
+{
+    /// <summary>The name or self_link of the Google Compute Engine network to which the cluster is connected. For Shared VPC, set this to the self link of the shared network.</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>The name or self_link of the Google Compute Engine subnetwork in which the cluster's instances are launched.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigAdditionalPodNetworkConfigs
+{
+    /// <summary></summary>
+    [JsonPropertyName("maxPodsPerNode")]
+    public double? MaxPodsPerNode { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secondaryPodRange")]
+    public string? SecondaryPodRange { get; set; }
+
+    /// <summary>The name or self_link of the Google Compute Engine subnetwork in which the cluster's instances are launched.</summary>
+    [JsonPropertyName("subnetwork")]
+    public string? Subnetwork { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigNetworkPerformanceConfig
 {
     /// <summary>Specifies the total network bandwidth tier for the NodePool.</summary>
@@ -5211,6 +5307,14 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigPodCidrO
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfig
 {
+    /// <summary></summary>
+    [JsonPropertyName("additionalNodeNetworkConfigs")]
+    public IList<V1beta1ClusterStatusAtProviderNodePoolNetworkConfigAdditionalNodeNetworkConfigs>? AdditionalNodeNetworkConfigs { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("additionalPodNetworkConfigs")]
+    public IList<V1beta1ClusterStatusAtProviderNodePoolNetworkConfigAdditionalPodNetworkConfigs>? AdditionalPodNetworkConfigs { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("createPodRange")]
     public bool? CreatePodRange { get; set; }
@@ -5426,6 +5530,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConf
     /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". Defaults to none when kubelet_config is unset.</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
+
+    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
     /// <summary>Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.</summary>
     [JsonPropertyName("podPidsLimit")]
@@ -5863,11 +5971,24 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNodeKubeletConfig
+{
+    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfig
 {
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
     [JsonPropertyName("networkTags")]
     public IList<V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags>? NetworkTags { get; set; }
+
+    /// <summary>Kubelet configuration for Autopilot clusters. Currently, only insecure_kubelet_readonly_port_enabled is supported here. Structure is documented below.</summary>
+    [JsonPropertyName("nodeKubeletConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNodePoolAutoConfigNodeKubeletConfig>? NodeKubeletConfig { get; set; }
 
     /// <summary>A map of resource manager tag keys and values to be attached to the nodes for managing Compute Engine firewalls using Network Firewall Policies. Tags must be according to specifications found here. A maximum of 5 tag key-value pairs can be specified. Existing tags will be replaced with new values. Tags must be in one of the following formats ([KEY]=[VALUE]) 1. tagKeys/{tag_key_id}=tagValues/{tag_value_id} 2. {org_id}/{tag_key_name}={tag_value_name} 3. {project_id}/{tag_key_name}={tag_value_name}.</summary>
     [JsonPropertyName("resourceManagerTags")]
@@ -5925,6 +6046,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
     [JsonPropertyName("containerdConfig")]
     public IList<V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig>? ContainerdConfig { get; set; }
+
+    /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
+    public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
     /// <summary>The type of logging agent that is deployed by default for newly created node pools in the cluster. Valid values include DEFAULT and MAX_THROUGHPUT. See Increasing logging agent throughput for more information.</summary>
     [JsonPropertyName("loggingVariant")]
@@ -6187,6 +6312,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM. Defaults to false</summary>
     [JsonPropertyName("enableLegacyAbac")]
     public bool? EnableLegacyAbac { get; set; }
+
+    /// <summary>Whether multi-networking is enabled for this cluster.</summary>
+    [JsonPropertyName("enableMultiNetworking")]
+    public bool? EnableMultiNetworking { get; set; }
 
     /// <summary>Enable Shielded Nodes features on all nodes in this cluster.  Defaults to true.</summary>
     [JsonPropertyName("enableShieldedNodes")]

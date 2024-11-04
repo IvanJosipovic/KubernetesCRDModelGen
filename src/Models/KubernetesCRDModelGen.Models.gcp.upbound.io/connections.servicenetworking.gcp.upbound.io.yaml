@@ -283,6 +283,9 @@ spec:
 
                       'servicenetworking.googleapis.com'.
                     type: string
+                  updateOnCreationFail:
+                    description: When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.
+                    type: boolean
                 type: object
               initProvider:
                 description: >-
@@ -505,6 +508,9 @@ spec:
 
                       'servicenetworking.googleapis.com'.
                     type: string
+                  updateOnCreationFail:
+                    description: When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.
+                    type: boolean
                 type: object
               managementPolicies:
                 default:
@@ -751,6 +757,9 @@ spec:
 
                       'servicenetworking.googleapis.com'.
                     type: string
+                  updateOnCreationFail:
+                    description: When set to true, enforce an update of the reserved peering ranges on the existing service networking connection in case of a new connection creation failure.
+                    type: boolean
                 type: object
               conditions:
                 description: Conditions of the resource.

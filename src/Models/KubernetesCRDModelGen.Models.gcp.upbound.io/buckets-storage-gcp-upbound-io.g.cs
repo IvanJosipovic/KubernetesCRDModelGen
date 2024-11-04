@@ -121,6 +121,10 @@ public partial class V1beta1BucketSpecForProviderLifecycleRuleCondition
     [JsonPropertyName("numNewerVersions")]
     public double? NumNewerVersions { get; set; }
 
+    /// <summary>While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.</summary>
+    [JsonPropertyName("sendAgeIfZero")]
+    public bool? SendAgeIfZero { get; set; }
+
     /// <summary>While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.</summary>
     [JsonPropertyName("sendDaysSinceCustomTimeIfZero")]
     public bool? SendDaysSinceCustomTimeIfZero { get; set; }
@@ -409,6 +413,10 @@ public partial class V1beta1BucketSpecInitProviderLifecycleRuleCondition
     /// <summary>Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.</summary>
     [JsonPropertyName("numNewerVersions")]
     public double? NumNewerVersions { get; set; }
+
+    /// <summary>While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.</summary>
+    [JsonPropertyName("sendAgeIfZero")]
+    public bool? SendAgeIfZero { get; set; }
 
     /// <summary>While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.</summary>
     [JsonPropertyName("sendDaysSinceCustomTimeIfZero")]
@@ -830,6 +838,10 @@ public partial class V1beta1BucketStatusAtProviderLifecycleRuleCondition
     /// <summary>Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.</summary>
     [JsonPropertyName("numNewerVersions")]
     public double? NumNewerVersions { get; set; }
+
+    /// <summary>While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.</summary>
+    [JsonPropertyName("sendAgeIfZero")]
+    public bool? SendAgeIfZero { get; set; }
 
     /// <summary>While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.</summary>
     [JsonPropertyName("sendDaysSinceCustomTimeIfZero")]
