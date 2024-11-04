@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  approximateCreationDateTimePrecision:
+                    description: 'Toggle for the precision of Kinesis data stream timestamp. Valid values: MILLISECOND and MICROSECOND.'
+                    type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -177,10 +180,7 @@ spec:
                         type: object
                     type: object
                   tableName:
-                    description: >-
-                      The name of the DynamoDB table. There
-
-                      can only be one Kinesis streaming destination for a given DynamoDB table.
+                    description: The name of the DynamoDB table. There can only be one Kinesis streaming destination for a given DynamoDB table.
                     type: string
                   tableNameRef:
                     description: Reference to a Table in dynamodb to populate tableName.
@@ -293,6 +293,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  approximateCreationDateTimePrecision:
+                    description: 'Toggle for the precision of Kinesis data stream timestamp. Valid values: MILLISECOND and MICROSECOND.'
+                    type: string
                   streamArn:
                     description: The ARN for a Kinesis data stream. This must exist in the same account and region as the DynamoDB table.
                     type: string
@@ -383,10 +386,7 @@ spec:
                         type: object
                     type: object
                   tableName:
-                    description: >-
-                      The name of the DynamoDB table. There
-
-                      can only be one Kinesis streaming destination for a given DynamoDB table.
+                    description: The name of the DynamoDB table. There can only be one Kinesis streaming destination for a given DynamoDB table.
                     type: string
                   tableNameRef:
                     description: Reference to a Table in dynamodb to populate tableName.
@@ -688,6 +688,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  approximateCreationDateTimePrecision:
+                    description: 'Toggle for the precision of Kinesis data stream timestamp. Valid values: MILLISECOND and MICROSECOND.'
+                    type: string
                   id:
                     description: The table_name and stream_arn separated by a comma (,).
                     type: string
@@ -695,10 +698,7 @@ spec:
                     description: The ARN for a Kinesis data stream. This must exist in the same account and region as the DynamoDB table.
                     type: string
                   tableName:
-                    description: >-
-                      The name of the DynamoDB table. There
-
-                      can only be one Kinesis streaming destination for a given DynamoDB table.
+                    description: The name of the DynamoDB table. There can only be one Kinesis streaming destination for a given DynamoDB table.
                     type: string
                 type: object
               conditions:

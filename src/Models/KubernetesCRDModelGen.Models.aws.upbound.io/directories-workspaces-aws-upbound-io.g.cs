@@ -66,6 +66,23 @@ public partial class V1beta1DirectorySpecForProviderDirectoryIdSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecForProviderSamlProperties
+{
+    /// <summary>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). Default RelayState.</summary>
+    [JsonPropertyName("relayStateParameterName")]
+    public string? RelayStateParameterName { get; set; }
+
+    /// <summary>Status of SAML 2.0 authentication. Default DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>The SAML 2.0 identity provider (IdP) user access URL.</summary>
+    [JsonPropertyName("userAccessUrl")]
+    public string? UserAccessUrl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecForProviderSelfServicePermissions
 {
     /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
@@ -295,6 +312,10 @@ public partial class V1beta1DirectorySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary>–  Configuration of SAML authentication integration. Defined below.</summary>
+    [JsonPropertyName("samlProperties")]
+    public IList<V1beta1DirectorySpecForProviderSamlProperties>? SamlProperties { get; set; }
+
     /// <summary>service capabilities. Defined below.</summary>
     [JsonPropertyName("selfServicePermissions")]
     public IList<V1beta1DirectorySpecForProviderSelfServicePermissions>? SelfServicePermissions { get; set; }
@@ -378,6 +399,23 @@ public partial class V1beta1DirectorySpecInitProviderDirectoryIdSelector
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1DirectorySpecInitProviderDirectoryIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecInitProviderSamlProperties
+{
+    /// <summary>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). Default RelayState.</summary>
+    [JsonPropertyName("relayStateParameterName")]
+    public string? RelayStateParameterName { get; set; }
+
+    /// <summary>Status of SAML 2.0 authentication. Default DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>The SAML 2.0 identity provider (IdP) user access URL.</summary>
+    [JsonPropertyName("userAccessUrl")]
+    public string? UserAccessUrl { get; set; }
 }
 
 /// <summary></summary>
@@ -607,6 +645,10 @@ public partial class V1beta1DirectorySpecInitProvider
     [JsonPropertyName("ipGroupIds")]
     public IList<string>? IpGroupIds { get; set; }
 
+    /// <summary>–  Configuration of SAML authentication integration. Defined below.</summary>
+    [JsonPropertyName("samlProperties")]
+    public IList<V1beta1DirectorySpecInitProviderSamlProperties>? SamlProperties { get; set; }
+
     /// <summary>service capabilities. Defined below.</summary>
     [JsonPropertyName("selfServicePermissions")]
     public IList<V1beta1DirectorySpecInitProviderSelfServicePermissions>? SelfServicePermissions { get; set; }
@@ -770,6 +812,23 @@ public partial class V1beta1DirectorySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectoryStatusAtProviderSamlProperties
+{
+    /// <summary>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). Default RelayState.</summary>
+    [JsonPropertyName("relayStateParameterName")]
+    public string? RelayStateParameterName { get; set; }
+
+    /// <summary>Status of SAML 2.0 authentication. Default DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>The SAML 2.0 identity provider (IdP) user access URL.</summary>
+    [JsonPropertyName("userAccessUrl")]
+    public string? UserAccessUrl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryStatusAtProviderSelfServicePermissions
 {
     /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
@@ -898,6 +957,10 @@ public partial class V1beta1DirectoryStatusAtProvider
     /// <summary>The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.</summary>
     [JsonPropertyName("registrationCode")]
     public string? RegistrationCode { get; set; }
+
+    /// <summary>–  Configuration of SAML authentication integration. Defined below.</summary>
+    [JsonPropertyName("samlProperties")]
+    public IList<V1beta1DirectoryStatusAtProviderSamlProperties>? SamlProperties { get; set; }
 
     /// <summary>service capabilities. Defined below.</summary>
     [JsonPropertyName("selfServicePermissions")]

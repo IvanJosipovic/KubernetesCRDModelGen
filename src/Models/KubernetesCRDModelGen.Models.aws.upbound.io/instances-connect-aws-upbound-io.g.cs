@@ -119,6 +119,10 @@ public partial class V1beta1InstanceSpecForProvider
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -228,6 +232,10 @@ public partial class V1beta1InstanceSpecInitProvider
     /// <summary>Specifies whether outbound calls are enabled.</summary>
     [JsonPropertyName("outboundCallsEnabled")]
     public bool? OutboundCallsEnabled { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -425,6 +433,14 @@ public partial class V1beta1InstanceStatusAtProvider
     /// <summary>The state of the instance.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -90,6 +90,9 @@ spec:
                   description:
                     description: A description for the IPAM.
                     type: string
+                  enablePrivateGua:
+                    description: 'Enable this option to use your own GUA ranges as private IPv6 addresses. Default: false.'
+                    type: boolean
                   operatingRegions:
                     description: Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You must set your provider block region as an operating_region.
                     items:
@@ -142,6 +145,9 @@ spec:
                   description:
                     description: A description for the IPAM.
                     type: string
+                  enablePrivateGua:
+                    description: 'Enable this option to use your own GUA ranges as private IPv6 addresses. Default: false.'
+                    type: boolean
                   operatingRegions:
                     description: Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You must set your provider block region as an operating_region.
                     items:
@@ -392,6 +398,9 @@ spec:
                   description:
                     description: A description for the IPAM.
                     type: string
+                  enablePrivateGua:
+                    description: 'Enable this option to use your own GUA ranges as private IPv6 addresses. Default: false.'
+                    type: boolean
                   id:
                     description: The ID of the IPAM
                     type: string

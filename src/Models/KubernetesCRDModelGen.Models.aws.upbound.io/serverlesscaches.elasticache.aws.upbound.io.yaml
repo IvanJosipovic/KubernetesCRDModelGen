@@ -85,11 +85,11 @@ spec:
               forProvider:
                 properties:
                   cacheUsageLimits:
-                    description: Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.
+                    description: Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See cache_usage_limits Block for details.
                     items:
                       properties:
                         dataStorage:
-                          description: The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.
+                          description: The maximum data storage limit in the cache, expressed in Gigabytes. See data_storage Block for details.
                           items:
                             properties:
                               maximum:
@@ -104,27 +104,27 @@ spec:
                             type: object
                           type: array
                         ecpuPerSecond:
-                          description: The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second.See config block for more details.
+                          description: The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second. See ecpu_per_second Block for details.
                           items:
                             properties:
                               maximum:
-                                description: The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.
+                                description: The maximum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.
                                 type: number
                               minimum:
-                                description: The lower limit for data storage the cache is set to use. Must be between 1 and 5,000.
+                                description: The minimum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.
                                 type: number
                             type: object
                           type: array
                       type: object
                     type: array
                   dailySnapshotTime:
-                    description: The daily time that snapshots will be created from the new serverless cache. Only supported for engine type "redis". Defaults to 0.
+                    description: The daily time that snapshots will be created from the new serverless cache. Only supported for engine types "redis" or "valkey". Defaults to 0.
                     type: string
                   description:
                     description: User-provided description for the serverless cache. The default is NULL.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
+                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.
                     type: string
                   kmsKeyId:
                     description: ARN of the customer managed key for encrypting the data at rest. If no KMS key is provided, a default service key is used.
@@ -457,11 +457,11 @@ spec:
                   autoscaler.
                 properties:
                   cacheUsageLimits:
-                    description: Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.
+                    description: Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See cache_usage_limits Block for details.
                     items:
                       properties:
                         dataStorage:
-                          description: The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.
+                          description: The maximum data storage limit in the cache, expressed in Gigabytes. See data_storage Block for details.
                           items:
                             properties:
                               maximum:
@@ -476,27 +476,27 @@ spec:
                             type: object
                           type: array
                         ecpuPerSecond:
-                          description: The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second.See config block for more details.
+                          description: The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second. See ecpu_per_second Block for details.
                           items:
                             properties:
                               maximum:
-                                description: The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.
+                                description: The maximum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.
                                 type: number
                               minimum:
-                                description: The lower limit for data storage the cache is set to use. Must be between 1 and 5,000.
+                                description: The minimum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.
                                 type: number
                             type: object
                           type: array
                       type: object
                     type: array
                   dailySnapshotTime:
-                    description: The daily time that snapshots will be created from the new serverless cache. Only supported for engine type "redis". Defaults to 0.
+                    description: The daily time that snapshots will be created from the new serverless cache. Only supported for engine types "redis" or "valkey". Defaults to 0.
                     type: string
                   description:
                     description: User-provided description for the serverless cache. The default is NULL.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
+                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.
                     type: string
                   kmsKeyId:
                     description: ARN of the customer managed key for encrypting the data at rest. If no KMS key is provided, a default service key is used.
@@ -1021,11 +1021,11 @@ spec:
                     description: The Amazon Resource Name (ARN) of the serverless cache.
                     type: string
                   cacheUsageLimits:
-                    description: Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.
+                    description: Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See cache_usage_limits Block for details.
                     items:
                       properties:
                         dataStorage:
-                          description: The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.
+                          description: The maximum data storage limit in the cache, expressed in Gigabytes. See data_storage Block for details.
                           items:
                             properties:
                               maximum:
@@ -1040,14 +1040,14 @@ spec:
                             type: object
                           type: array
                         ecpuPerSecond:
-                          description: The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second.See config block for more details.
+                          description: The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second. See ecpu_per_second Block for details.
                           items:
                             properties:
                               maximum:
-                                description: The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.
+                                description: The maximum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.
                                 type: number
                               minimum:
-                                description: The lower limit for data storage the cache is set to use. Must be between 1 and 5,000.
+                                description: The minimum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.
                                 type: number
                             type: object
                           type: array
@@ -1057,13 +1057,13 @@ spec:
                     description: Timestamp of when the serverless cache was created.
                     type: string
                   dailySnapshotTime:
-                    description: The daily time that snapshots will be created from the new serverless cache. Only supported for engine type "redis". Defaults to 0.
+                    description: The daily time that snapshots will be created from the new serverless cache. Only supported for engine types "redis" or "valkey". Defaults to 0.
                     type: string
                   description:
                     description: User-provided description for the serverless cache. The default is NULL.
                     type: string
                   endpoint:
-                    description: Represents the information required for client programs to connect to a cache node. See config below for details.
+                    description: Represents the information required for client programs to connect to a cache node. See endpoint Block for details.
                     items:
                       properties:
                         address:
@@ -1075,7 +1075,7 @@ spec:
                       type: object
                     type: array
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
+                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.
                     type: string
                   fullEngineVersion:
                     description: The name and version number of the engine the serverless cache is compatible with.
@@ -1092,7 +1092,7 @@ spec:
                       See Describe Cache Engine Versions in the AWS Documentation for supported versions.
                     type: string
                   readerEndpoint:
-                    description: Represents the information required for client programs to connect to a cache node. See config below for details.
+                    description: Represents the information required for client programs to connect to a cache node. See reader_endpoint Block for details.
                     items:
                       properties:
                         address:

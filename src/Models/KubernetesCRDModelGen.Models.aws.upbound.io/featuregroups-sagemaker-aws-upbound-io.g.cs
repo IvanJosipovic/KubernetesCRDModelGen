@@ -10,8 +10,34 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfigVectorConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("dimension")]
+    public double? Dimension { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("vectorConfig")]
+    public IList<V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfigVectorConfig>? VectorConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinition
 {
+    /// <summary></summary>
+    [JsonPropertyName("collectionConfig")]
+    public IList<V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfig>? CollectionConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("collectionType")]
+    public string? CollectionType { get; set; }
+
     /// <summary>The name of a feature. feature_name cannot be any of the following: is_deleted, write_time, api_invocation_time.</summary>
     [JsonPropertyName("featureName")]
     public string? FeatureName { get; set; }
@@ -177,6 +203,23 @@ public partial class V1beta1FeatureGroupSpecForProviderRoleArnSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupSpecForProviderThroughputConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("provisionedReadCapacityUnits")]
+    public double? ProvisionedReadCapacityUnits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("provisionedWriteCapacityUnits")]
+    public double? ProvisionedWriteCapacityUnits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("throughputMode")]
+    public string? ThroughputMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProvider
 {
     /// <summary>A free-form description of a Feature Group.</summary>
@@ -222,12 +265,42 @@ public partial class V1beta1FeatureGroupSpecForProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("throughputConfig")]
+    public IList<V1beta1FeatureGroupSpecForProviderThroughputConfig>? ThroughputConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollectionConfigVectorConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("dimension")]
+    public double? Dimension { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollectionConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("vectorConfig")]
+    public IList<V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollectionConfigVectorConfig>? VectorConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProviderFeatureDefinition
 {
+    /// <summary></summary>
+    [JsonPropertyName("collectionConfig")]
+    public IList<V1beta1FeatureGroupSpecInitProviderFeatureDefinitionCollectionConfig>? CollectionConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("collectionType")]
+    public string? CollectionType { get; set; }
+
     /// <summary>The name of a feature. feature_name cannot be any of the following: is_deleted, write_time, api_invocation_time.</summary>
     [JsonPropertyName("featureName")]
     public string? FeatureName { get; set; }
@@ -391,6 +464,23 @@ public partial class V1beta1FeatureGroupSpecInitProviderRoleArnSelector
     public V1beta1FeatureGroupSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupSpecInitProviderThroughputConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("provisionedReadCapacityUnits")]
+    public double? ProvisionedReadCapacityUnits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("provisionedWriteCapacityUnits")]
+    public double? ProvisionedWriteCapacityUnits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("throughputMode")]
+    public string? ThroughputMode { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecInitProvider
@@ -434,6 +524,10 @@ public partial class V1beta1FeatureGroupSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("throughputConfig")]
+    public IList<V1beta1FeatureGroupSpecInitProviderThroughputConfig>? ThroughputConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -570,8 +664,34 @@ public partial class V1beta1FeatureGroupSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollectionConfigVectorConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("dimension")]
+    public double? Dimension { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollectionConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("vectorConfig")]
+    public IList<V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollectionConfigVectorConfig>? VectorConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProviderFeatureDefinition
 {
+    /// <summary></summary>
+    [JsonPropertyName("collectionConfig")]
+    public IList<V1beta1FeatureGroupStatusAtProviderFeatureDefinitionCollectionConfig>? CollectionConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("collectionType")]
+    public string? CollectionType { get; set; }
+
     /// <summary>The name of a feature. feature_name cannot be any of the following: is_deleted, write_time, api_invocation_time.</summary>
     [JsonPropertyName("featureName")]
     public string? FeatureName { get; set; }
@@ -681,6 +801,23 @@ public partial class V1beta1FeatureGroupStatusAtProviderOnlineStoreConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FeatureGroupStatusAtProviderThroughputConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("provisionedReadCapacityUnits")]
+    public double? ProvisionedReadCapacityUnits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("provisionedWriteCapacityUnits")]
+    public double? ProvisionedWriteCapacityUnits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("throughputMode")]
+    public string? ThroughputMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this feature_group.</summary>
@@ -726,6 +863,10 @@ public partial class V1beta1FeatureGroupStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("throughputConfig")]
+    public IList<V1beta1FeatureGroupStatusAtProviderThroughputConfig>? ThroughputConfig { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

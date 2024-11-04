@@ -75,6 +75,24 @@ public partial class V1beta1SpaceSpecForProviderOwnershipSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. See idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -102,6 +120,10 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettings
 {
+    /// <summary>Settings that are used to configure and manage the lifecycle of JupyterLab applications in a space. See app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
@@ -123,6 +145,24 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem
     /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. See idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -163,6 +203,10 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettings
 {
+    /// <summary>Settings that are used to configure and manage the lifecycle of JupyterLab applications in a space. See app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
@@ -454,6 +498,24 @@ public partial class V1beta1SpaceSpecInitProviderOwnershipSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. See idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -481,6 +543,10 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettings
 {
+    /// <summary>Settings that are used to configure and manage the lifecycle of JupyterLab applications in a space. See app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
@@ -502,6 +568,24 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem
     /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. See idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -542,6 +626,10 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettings
 {
+    /// <summary>Settings that are used to configure and manage the lifecycle of JupyterLab applications in a space. See app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
@@ -905,6 +993,24 @@ public partial class V1beta1SpaceStatusAtProviderOwnershipSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. See idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec
 {
     /// <summary>The instance type.</summary>
@@ -932,6 +1038,10 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettings
 {
+    /// <summary>Settings that are used to configure and manage the lifecycle of JupyterLab applications in a space. See app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
@@ -953,6 +1063,24 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem
     /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. See idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -993,6 +1121,10 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettings
 {
+    /// <summary>Settings that are used to configure and manage the lifecycle of JupyterLab applications in a space. See app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }

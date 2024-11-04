@@ -72,11 +72,15 @@ public partial class V1beta1RuleSpecForProviderTargetIp
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
-    /// <summary>The port at ip that you want to forward DNS queries to. Default value is 53.</summary>
+    /// <summary>One IPv6 address that you want to forward DNS queries to.</summary>
+    [JsonPropertyName("ipv6")]
+    public string? Ipv6 { get; set; }
+
+    /// <summary>Port at ip that you want to forward DNS queries to. Default value is 53.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The protocol for the resolver endpoint. Valid values can be found in the AWS documentation. Default value is Do53.</summary>
+    /// <summary>Protocol for the resolver endpoint. Valid values can be found in the AWS documentation. Default value is Do53.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
@@ -89,7 +93,7 @@ public partial class V1beta1RuleSpecForProvider
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.</summary>
+    /// <summary>Friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -97,7 +101,7 @@ public partial class V1beta1RuleSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using target_ip. This argument should only be specified for FORWARD type rules.</summary>
+    /// <summary>ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using target_ip. This argument should only be specified for FORWARD type rules.</summary>
     [JsonPropertyName("resolverEndpointId")]
     public string? ResolverEndpointId { get; set; }
 
@@ -109,7 +113,7 @@ public partial class V1beta1RuleSpecForProvider
     [JsonPropertyName("resolverEndpointIdSelector")]
     public V1beta1RuleSpecForProviderResolverEndpointIdSelector? ResolverEndpointIdSelector { get; set; }
 
-    /// <summary>The rule type. Valid values are FORWARD, SYSTEM and RECURSIVE.</summary>
+    /// <summary>Rule type. Valid values are FORWARD, SYSTEM and RECURSIVE.</summary>
     [JsonPropertyName("ruleType")]
     public string? RuleType { get; set; }
 
@@ -186,11 +190,15 @@ public partial class V1beta1RuleSpecInitProviderTargetIp
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
-    /// <summary>The port at ip that you want to forward DNS queries to. Default value is 53.</summary>
+    /// <summary>One IPv6 address that you want to forward DNS queries to.</summary>
+    [JsonPropertyName("ipv6")]
+    public string? Ipv6 { get; set; }
+
+    /// <summary>Port at ip that you want to forward DNS queries to. Default value is 53.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The protocol for the resolver endpoint. Valid values can be found in the AWS documentation. Default value is Do53.</summary>
+    /// <summary>Protocol for the resolver endpoint. Valid values can be found in the AWS documentation. Default value is Do53.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
@@ -203,11 +211,11 @@ public partial class V1beta1RuleSpecInitProvider
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.</summary>
+    /// <summary>Friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using target_ip. This argument should only be specified for FORWARD type rules.</summary>
+    /// <summary>ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using target_ip. This argument should only be specified for FORWARD type rules.</summary>
     [JsonPropertyName("resolverEndpointId")]
     public string? ResolverEndpointId { get; set; }
 
@@ -219,7 +227,7 @@ public partial class V1beta1RuleSpecInitProvider
     [JsonPropertyName("resolverEndpointIdSelector")]
     public V1beta1RuleSpecInitProviderResolverEndpointIdSelector? ResolverEndpointIdSelector { get; set; }
 
-    /// <summary>The rule type. Valid values are FORWARD, SYSTEM and RECURSIVE.</summary>
+    /// <summary>Rule type. Valid values are FORWARD, SYSTEM and RECURSIVE.</summary>
     [JsonPropertyName("ruleType")]
     public string? RuleType { get; set; }
 
@@ -372,11 +380,15 @@ public partial class V1beta1RuleStatusAtProviderTargetIp
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
-    /// <summary>The port at ip that you want to forward DNS queries to. Default value is 53.</summary>
+    /// <summary>One IPv6 address that you want to forward DNS queries to.</summary>
+    [JsonPropertyName("ipv6")]
+    public string? Ipv6 { get; set; }
+
+    /// <summary>Port at ip that you want to forward DNS queries to. Default value is 53.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The protocol for the resolver endpoint. Valid values can be found in the AWS documentation. Default value is Do53.</summary>
+    /// <summary>Protocol for the resolver endpoint. Valid values can be found in the AWS documentation. Default value is Do53.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
@@ -385,7 +397,7 @@ public partial class V1beta1RuleStatusAtProviderTargetIp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleStatusAtProvider
 {
-    /// <summary>The ARN (Amazon Resource Name) for the resolver rule.</summary>
+    /// <summary>ARN (Amazon Resource Name) for the resolver rule.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -393,11 +405,11 @@ public partial class V1beta1RuleStatusAtProvider
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>The ID of the resolver rule.</summary>
+    /// <summary>ID of the resolver rule.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.</summary>
+    /// <summary>Friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -405,11 +417,11 @@ public partial class V1beta1RuleStatusAtProvider
     [JsonPropertyName("ownerId")]
     public string? OwnerId { get; set; }
 
-    /// <summary>The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using target_ip. This argument should only be specified for FORWARD type rules.</summary>
+    /// <summary>ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using target_ip. This argument should only be specified for FORWARD type rules.</summary>
     [JsonPropertyName("resolverEndpointId")]
     public string? ResolverEndpointId { get; set; }
 
-    /// <summary>The rule type. Valid values are FORWARD, SYSTEM and RECURSIVE.</summary>
+    /// <summary>Rule type. Valid values are FORWARD, SYSTEM and RECURSIVE.</summary>
     [JsonPropertyName("ruleType")]
     public string? RuleType { get; set; }
 
@@ -421,7 +433,7 @@ public partial class V1beta1RuleStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 

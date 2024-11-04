@@ -578,6 +578,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  tcpIdleTimeoutSeconds:
+                    description: 'TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.'
+                    type: number
                 required:
                 - region
                 type: object
@@ -1096,6 +1099,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  tcpIdleTimeoutSeconds:
+                    description: 'TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.'
+                    type: number
                 type: object
               managementPolicies:
                 default:
@@ -1541,6 +1547,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  tcpIdleTimeoutSeconds:
+                    description: 'TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.'
+                    type: number
                 type: object
               conditions:
                 description: Conditions of the resource.
@@ -1682,16 +1691,16 @@ spec:
                     description: ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the aws_lb_listener_certificate resource.
                     type: string
                   defaultAction:
-                    description: Configuration block for default actions. Detailed below.
+                    description: Configuration block for default actions. See below.
                     items:
                       properties:
                         authenticateCognito:
-                          description: Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.
+                          description: Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. See below.
                           properties:
                             authenticationRequestExtraParams:
                               additionalProperties:
                                 type: string
-                              description: 'Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.'
+                              description: 'Query parameters to include in the redirect request to the authorization endpoint. Max: 10. See below.'
                               type: object
                               x-kubernetes-map-type: granular
                             onUnauthenticatedRequest:
@@ -1717,7 +1726,7 @@ spec:
                               type: string
                           type: object
                         authenticateOidc:
-                          description: Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. Detailed below.
+                          description: Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. See below.
                           properties:
                             authenticationRequestExtraParams:
                               additionalProperties:
@@ -1784,17 +1793,10 @@ spec:
                               type: string
                           type: object
                         forward:
-                          description: >-
-                            Configuration block for creating an action that distributes requests among one or more target groups.
-
-                            Specify only if type is forward.
-
-                            Cannot be specified with target_group_arn.
-
-                            Detailed below.
+                          description: Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. See below.
                           properties:
                             stickiness:
-                              description: Configuration block for target group stickiness for the rule. Detailed below.
+                              description: Configuration block for target group stickiness for the rule. See below.
                               properties:
                                 duration:
                                   description: Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
@@ -1804,7 +1806,7 @@ spec:
                                   type: boolean
                               type: object
                             targetGroup:
-                              description: Set of 1-5 target group blocks. Detailed below.
+                              description: Set of 1-5 target group blocks. See below.
                               items:
                                 properties:
                                   arn:
@@ -1903,17 +1905,10 @@ spec:
                               type: array
                           type: object
                         order:
-                          description: >-
-                            Order for the action.
-
-                            The action with the lowest value for order is performed first.
-
-                            Valid values are between 1 and 50000.
-
-                            Defaults to the position in the list of actions.
+                          description: Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.
                           type: number
                         redirect:
-                          description: Configuration block for creating a redirect action. Required if type is redirect. Detailed below.
+                          description: Configuration block for creating a redirect action. Required if type is redirect. See below.
                           properties:
                             host:
                               description: 'Hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.'
@@ -1935,14 +1930,7 @@ spec:
                               type: string
                           type: object
                         targetGroupArn:
-                          description: >-
-                            ARN of the Target Group to which to route traffic.
-
-                            Specify only if type is forward and you want to route to a single target group.
-
-                            To route to one or more target groups, use a forward block instead.
-
-                            Cannot be specified with forward.
+                          description: ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Can be specified with forward but ARNs must match.
                           type: string
                         targetGroupArnRef:
                           description: Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.
@@ -2125,7 +2113,7 @@ spec:
                         type: object
                     type: object
                   mutualAuthentication:
-                    description: The mutual authentication configuration information. Detailed below.
+                    description: The mutual authentication configuration information. See below.
                     properties:
                       ignoreClientCertificateExpiry:
                         description: Whether client certificate expiry is ignored. Default is false.
@@ -2155,6 +2143,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  tcpIdleTimeoutSeconds:
+                    description: 'TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.'
+                    type: number
                 required:
                 - region
                 type: object
@@ -2187,16 +2178,16 @@ spec:
                     description: ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the aws_lb_listener_certificate resource.
                     type: string
                   defaultAction:
-                    description: Configuration block for default actions. Detailed below.
+                    description: Configuration block for default actions. See below.
                     items:
                       properties:
                         authenticateCognito:
-                          description: Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.
+                          description: Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. See below.
                           properties:
                             authenticationRequestExtraParams:
                               additionalProperties:
                                 type: string
-                              description: 'Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.'
+                              description: 'Query parameters to include in the redirect request to the authorization endpoint. Max: 10. See below.'
                               type: object
                               x-kubernetes-map-type: granular
                             onUnauthenticatedRequest:
@@ -2222,7 +2213,7 @@ spec:
                               type: string
                           type: object
                         authenticateOidc:
-                          description: Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. Detailed below.
+                          description: Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. See below.
                           properties:
                             authenticationRequestExtraParams:
                               additionalProperties:
@@ -2291,17 +2282,10 @@ spec:
                               type: string
                           type: object
                         forward:
-                          description: >-
-                            Configuration block for creating an action that distributes requests among one or more target groups.
-
-                            Specify only if type is forward.
-
-                            Cannot be specified with target_group_arn.
-
-                            Detailed below.
+                          description: Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. See below.
                           properties:
                             stickiness:
-                              description: Configuration block for target group stickiness for the rule. Detailed below.
+                              description: Configuration block for target group stickiness for the rule. See below.
                               properties:
                                 duration:
                                   description: Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
@@ -2311,7 +2295,7 @@ spec:
                                   type: boolean
                               type: object
                             targetGroup:
-                              description: Set of 1-5 target group blocks. Detailed below.
+                              description: Set of 1-5 target group blocks. See below.
                               items:
                                 properties:
                                   arn:
@@ -2410,17 +2394,10 @@ spec:
                               type: array
                           type: object
                         order:
-                          description: >-
-                            Order for the action.
-
-                            The action with the lowest value for order is performed first.
-
-                            Valid values are between 1 and 50000.
-
-                            Defaults to the position in the list of actions.
+                          description: Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.
                           type: number
                         redirect:
-                          description: Configuration block for creating a redirect action. Required if type is redirect. Detailed below.
+                          description: Configuration block for creating a redirect action. Required if type is redirect. See below.
                           properties:
                             host:
                               description: 'Hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.'
@@ -2442,14 +2419,7 @@ spec:
                               type: string
                           type: object
                         targetGroupArn:
-                          description: >-
-                            ARN of the Target Group to which to route traffic.
-
-                            Specify only if type is forward and you want to route to a single target group.
-
-                            To route to one or more target groups, use a forward block instead.
-
-                            Cannot be specified with forward.
+                          description: ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Can be specified with forward but ARNs must match.
                           type: string
                         targetGroupArnRef:
                           description: Reference to a LBTargetGroup in elbv2 to populate targetGroupArn.
@@ -2632,7 +2602,7 @@ spec:
                         type: object
                     type: object
                   mutualAuthentication:
-                    description: The mutual authentication configuration information. Detailed below.
+                    description: The mutual authentication configuration information. See below.
                     properties:
                       ignoreClientCertificateExpiry:
                         description: Whether client certificate expiry is ignored. Default is false.
@@ -2659,6 +2629,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  tcpIdleTimeoutSeconds:
+                    description: 'TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.'
+                    type: number
                 type: object
               managementPolicies:
                 default:
@@ -2886,16 +2859,16 @@ spec:
                     description: ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the aws_lb_listener_certificate resource.
                     type: string
                   defaultAction:
-                    description: Configuration block for default actions. Detailed below.
+                    description: Configuration block for default actions. See below.
                     items:
                       properties:
                         authenticateCognito:
-                          description: Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.
+                          description: Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. See below.
                           properties:
                             authenticationRequestExtraParams:
                               additionalProperties:
                                 type: string
-                              description: 'Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.'
+                              description: 'Query parameters to include in the redirect request to the authorization endpoint. Max: 10. See below.'
                               type: object
                               x-kubernetes-map-type: granular
                             onUnauthenticatedRequest:
@@ -2921,7 +2894,7 @@ spec:
                               type: string
                           type: object
                         authenticateOidc:
-                          description: Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. Detailed below.
+                          description: Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. See below.
                           properties:
                             authenticationRequestExtraParams:
                               additionalProperties:
@@ -2971,17 +2944,10 @@ spec:
                               type: string
                           type: object
                         forward:
-                          description: >-
-                            Configuration block for creating an action that distributes requests among one or more target groups.
-
-                            Specify only if type is forward.
-
-                            Cannot be specified with target_group_arn.
-
-                            Detailed below.
+                          description: Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. See below.
                           properties:
                             stickiness:
-                              description: Configuration block for target group stickiness for the rule. Detailed below.
+                              description: Configuration block for target group stickiness for the rule. See below.
                               properties:
                                 duration:
                                   description: Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
@@ -2991,7 +2957,7 @@ spec:
                                   type: boolean
                               type: object
                             targetGroup:
-                              description: Set of 1-5 target group blocks. Detailed below.
+                              description: Set of 1-5 target group blocks. See below.
                               items:
                                 properties:
                                   arn:
@@ -3004,17 +2970,10 @@ spec:
                               type: array
                           type: object
                         order:
-                          description: >-
-                            Order for the action.
-
-                            The action with the lowest value for order is performed first.
-
-                            Valid values are between 1 and 50000.
-
-                            Defaults to the position in the list of actions.
+                          description: Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.
                           type: number
                         redirect:
-                          description: Configuration block for creating a redirect action. Required if type is redirect. Detailed below.
+                          description: Configuration block for creating a redirect action. Required if type is redirect. See below.
                           properties:
                             host:
                               description: 'Hostname. This component is not percent-encoded. The hostname can contain #{host}. Defaults to #{host}.'
@@ -3036,14 +2995,7 @@ spec:
                               type: string
                           type: object
                         targetGroupArn:
-                          description: >-
-                            ARN of the Target Group to which to route traffic.
-
-                            Specify only if type is forward and you want to route to a single target group.
-
-                            To route to one or more target groups, use a forward block instead.
-
-                            Cannot be specified with forward.
+                          description: ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Can be specified with forward but ARNs must match.
                           type: string
                         type:
                           description: Type of routing action. Valid values are forward, redirect, fixed-response, authenticate-cognito and authenticate-oidc.
@@ -3057,7 +3009,7 @@ spec:
                     description: ARN of the load balancer.
                     type: string
                   mutualAuthentication:
-                    description: The mutual authentication configuration information. Detailed below.
+                    description: The mutual authentication configuration information. See below.
                     properties:
                       ignoreClientCertificateExpiry:
                         description: Whether client certificate expiry is ignored. Default is false.
@@ -3090,6 +3042,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  tcpIdleTimeoutSeconds:
+                    description: 'TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.'
+                    type: number
                 type: object
               conditions:
                 description: Conditions of the resource.

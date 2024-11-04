@@ -166,6 +166,9 @@ spec:
                         schedule:
                           description: A CRON expression specifying when AWS Backup initiates a backup job.
                           type: string
+                        scheduleExpressionTimezone:
+                          description: 'The timezone in which the schedule expression is set. Default value: "Etc/UTC".'
+                          type: string
                         startWindow:
                           description: The amount of time in minutes before beginning a backup.
                           type: number
@@ -369,6 +372,9 @@ spec:
                           type: string
                         schedule:
                           description: A CRON expression specifying when AWS Backup initiates a backup job.
+                          type: string
+                        scheduleExpressionTimezone:
+                          description: 'The timezone in which the schedule expression is set. Default value: "Etc/UTC".'
                           type: string
                         startWindow:
                           description: The amount of time in minutes before beginning a backup.
@@ -773,6 +779,9 @@ spec:
                           type: string
                         schedule:
                           description: A CRON expression specifying when AWS Backup initiates a backup job.
+                          type: string
+                        scheduleExpressionTimezone:
+                          description: 'The timezone in which the schedule expression is set. Default value: "Etc/UTC".'
                           type: string
                         startWindow:
                           description: The amount of time in minutes before beginning a backup.
@@ -1009,6 +1018,9 @@ spec:
                         schedule:
                           description: A CRON expression specifying when AWS Backup initiates a backup job.
                           type: string
+                        scheduleExpressionTimezone:
+                          description: 'The timezone in which the schedule expression is set. Default value: "Etc/UTC".'
+                          type: string
                         startWindow:
                           description: The amount of time in minutes before beginning a backup.
                           type: number
@@ -1208,6 +1220,9 @@ spec:
                           type: string
                         schedule:
                           description: A CRON expression specifying when AWS Backup initiates a backup job.
+                          type: string
+                        scheduleExpressionTimezone:
+                          description: 'The timezone in which the schedule expression is set. Default value: "Etc/UTC".'
                           type: string
                         startWindow:
                           description: The amount of time in minutes before beginning a backup.
@@ -1608,6 +1623,9 @@ spec:
                           type: string
                         schedule:
                           description: A CRON expression specifying when AWS Backup initiates a backup job.
+                          type: string
+                        scheduleExpressionTimezone:
+                          description: 'The timezone in which the schedule expression is set. Default value: "Etc/UTC".'
                           type: string
                         startWindow:
                           description: The amount of time in minutes before beginning a backup.

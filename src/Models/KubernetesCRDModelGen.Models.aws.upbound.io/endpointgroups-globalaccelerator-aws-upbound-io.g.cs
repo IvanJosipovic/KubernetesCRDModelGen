@@ -12,6 +12,10 @@ namespace KubernetesCRDModelGen.Models.globalaccelerator.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecForProviderEndpointConfiguration
 {
+    /// <summary>An ARN of an exposed cross-account attachment. See the AWS documentation for more details.</summary>
+    [JsonPropertyName("attachmentArn")]
+    public string? AttachmentArn { get; set; }
+
     /// <summary>Indicates whether client IP address preservation is enabled for an Application Load Balancer endpoint. See the AWS documentation for more details. The default value is false.</summary>
     [JsonPropertyName("clientIpPreservationEnabled")]
     public bool? ClientIpPreservationEnabled { get; set; }
@@ -155,6 +159,10 @@ public partial class V1beta1EndpointGroupSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupSpecInitProviderEndpointConfiguration
 {
+    /// <summary>An ARN of an exposed cross-account attachment. See the AWS documentation for more details.</summary>
+    [JsonPropertyName("attachmentArn")]
+    public string? AttachmentArn { get; set; }
+
     /// <summary>Indicates whether client IP address preservation is enabled for an Application Load Balancer endpoint. See the AWS documentation for more details. The default value is false.</summary>
     [JsonPropertyName("clientIpPreservationEnabled")]
     public bool? ClientIpPreservationEnabled { get; set; }
@@ -426,6 +434,10 @@ public partial class V1beta1EndpointGroupSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointGroupStatusAtProviderEndpointConfiguration
 {
+    /// <summary>An ARN of an exposed cross-account attachment. See the AWS documentation for more details.</summary>
+    [JsonPropertyName("attachmentArn")]
+    public string? AttachmentArn { get; set; }
+
     /// <summary>Indicates whether client IP address preservation is enabled for an Application Load Balancer endpoint. See the AWS documentation for more details. The default value is false.</summary>
     [JsonPropertyName("clientIpPreservationEnabled")]
     public bool? ClientIpPreservationEnabled { get; set; }

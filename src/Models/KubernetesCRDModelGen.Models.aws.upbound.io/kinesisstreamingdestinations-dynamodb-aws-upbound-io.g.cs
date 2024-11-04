@@ -124,6 +124,10 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProviderTableNameS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecForProvider
 {
+    /// <summary>Toggle for the precision of Kinesis data stream timestamp. Valid values: MILLISECOND and MICROSECOND.</summary>
+    [JsonPropertyName("approximateCreationDateTimePrecision")]
+    public string? ApproximateCreationDateTimePrecision { get; set; }
+
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
@@ -269,6 +273,10 @@ public partial class V1beta1KinesisStreamingDestinationSpecInitProviderTableName
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationSpecInitProvider
 {
+    /// <summary>Toggle for the precision of Kinesis data stream timestamp. Valid values: MILLISECOND and MICROSECOND.</summary>
+    [JsonPropertyName("approximateCreationDateTimePrecision")]
+    public string? ApproximateCreationDateTimePrecision { get; set; }
+
     /// <summary>The ARN for a Kinesis data stream. This must exist in the same account and region as the DynamoDB table.</summary>
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
@@ -430,6 +438,10 @@ public partial class V1beta1KinesisStreamingDestinationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KinesisStreamingDestinationStatusAtProvider
 {
+    /// <summary>Toggle for the precision of Kinesis data stream timestamp. Valid values: MILLISECOND and MICROSECOND.</summary>
+    [JsonPropertyName("approximateCreationDateTimePrecision")]
+    public string? ApproximateCreationDateTimePrecision { get; set; }
+
     /// <summary>The table_name and stream_arn separated by a comma (,).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

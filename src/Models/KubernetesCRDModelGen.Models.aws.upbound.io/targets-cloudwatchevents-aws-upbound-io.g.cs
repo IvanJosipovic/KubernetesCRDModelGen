@@ -10,6 +10,15 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cloudwatchevents.aws.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TargetSpecForProviderAppsyncTarget
+{
+    /// <summary>Contains the GraphQL mutation to be parsed and executed.</summary>
+    [JsonPropertyName("graphqlOperation")]
+    public string? GraphqlOperation { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderBatchTarget
 {
     /// <summary>The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</summary>
@@ -516,6 +525,10 @@ public partial class V1beta1TargetSpecForProviderSqsTarget
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProvider
 {
+    /// <summary>Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.</summary>
+    [JsonPropertyName("appsyncTarget")]
+    public IList<V1beta1TargetSpecForProviderAppsyncTarget>? AppsyncTarget { get; set; }
+
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
@@ -619,6 +632,15 @@ public partial class V1beta1TargetSpecForProvider
     /// <summary>The unique target assignment ID. If missing, will generate a random, unique id.</summary>
     [JsonPropertyName("targetId")]
     public string? TargetId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TargetSpecInitProviderAppsyncTarget
+{
+    /// <summary>Contains the GraphQL mutation to be parsed and executed.</summary>
+    [JsonPropertyName("graphqlOperation")]
+    public string? GraphqlOperation { get; set; }
 }
 
 /// <summary></summary>
@@ -1129,6 +1151,10 @@ public partial class V1beta1TargetSpecInitProviderSqsTarget
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProvider
 {
+    /// <summary>Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.</summary>
+    [JsonPropertyName("appsyncTarget")]
+    public IList<V1beta1TargetSpecInitProviderAppsyncTarget>? AppsyncTarget { get; set; }
+
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
@@ -1360,6 +1386,15 @@ public partial class V1beta1TargetSpec
     /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1TargetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TargetStatusAtProviderAppsyncTarget
+{
+    /// <summary>Contains the GraphQL mutation to be parsed and executed.</summary>
+    [JsonPropertyName("graphqlOperation")]
+    public string? GraphqlOperation { get; set; }
 }
 
 /// <summary></summary>
@@ -1638,6 +1673,10 @@ public partial class V1beta1TargetStatusAtProviderSqsTarget
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProvider
 {
+    /// <summary>Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.</summary>
+    [JsonPropertyName("appsyncTarget")]
+    public IList<V1beta1TargetStatusAtProviderAppsyncTarget>? AppsyncTarget { get; set; }
+
     /// <summary>The Amazon Resource Name (ARN) of the target.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }

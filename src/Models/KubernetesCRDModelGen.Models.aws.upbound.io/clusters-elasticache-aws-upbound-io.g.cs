@@ -273,7 +273,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("azMode")]
     public string? AzMode { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.</summary>
+    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -671,7 +671,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("azMode")]
     public string? AzMode { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.</summary>
+    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -1014,7 +1014,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("configurationEndpoint")]
     public string? ConfigurationEndpoint { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.</summary>
+    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 

@@ -294,7 +294,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("autoGenerateAuthToken")]
     public bool? AutoGenerateAuthToken { get; set; }
 
-    /// <summary>Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Only supported for engine type "redis" and if the engine version is 6 or higher. Defaults to true.</summary>
+    /// <summary>Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Only supported for engine types "redis" and "valkey" and if the engine version is 6 or higher. Defaults to true.</summary>
     [JsonPropertyName("autoMinorVersionUpgrade")]
     public string? AutoMinorVersionUpgrade { get; set; }
 
@@ -314,7 +314,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the cache engine to be used for the clusters in this replication group. The only valid value is redis.</summary>
+    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -354,7 +354,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta2ReplicationGroupSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Specifies the destination and format of Redis SLOWLOG or Redis Engine Log. See the documentation on Amazon ElastiCache. See Log Delivery Configuration below for more details.</summary>
+    /// <summary>Specifies the destination and format of Redis OSS/Valkey SLOWLOG or Redis OSS/Valkey Engine Log. See the documentation on Amazon ElastiCache. See Log Delivery Configuration below for more details.</summary>
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta2ReplicationGroupSpecForProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
@@ -749,7 +749,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("authTokenUpdateStrategy")]
     public string? AuthTokenUpdateStrategy { get; set; }
 
-    /// <summary>Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Only supported for engine type "redis" and if the engine version is 6 or higher. Defaults to true.</summary>
+    /// <summary>Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Only supported for engine types "redis" and "valkey" and if the engine version is 6 or higher. Defaults to true.</summary>
     [JsonPropertyName("autoMinorVersionUpgrade")]
     public string? AutoMinorVersionUpgrade { get; set; }
 
@@ -769,7 +769,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the cache engine to be used for the clusters in this replication group. The only valid value is redis.</summary>
+    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -809,7 +809,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta2ReplicationGroupSpecInitProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Specifies the destination and format of Redis SLOWLOG or Redis Engine Log. See the documentation on Amazon ElastiCache. See Log Delivery Configuration below for more details.</summary>
+    /// <summary>Specifies the destination and format of Redis OSS/Valkey SLOWLOG or Redis OSS/Valkey Engine Log. See the documentation on Amazon ElastiCache. See Log Delivery Configuration below for more details.</summary>
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta2ReplicationGroupSpecInitProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
@@ -1091,7 +1091,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("authTokenUpdateStrategy")]
     public string? AuthTokenUpdateStrategy { get; set; }
 
-    /// <summary>Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Only supported for engine type "redis" and if the engine version is 6 or higher. Defaults to true.</summary>
+    /// <summary>Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Only supported for engine types "redis" and "valkey" and if the engine version is 6 or higher. Defaults to true.</summary>
     [JsonPropertyName("autoMinorVersionUpgrade")]
     public string? AutoMinorVersionUpgrade { get; set; }
 
@@ -1119,7 +1119,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the cache engine to be used for the clusters in this replication group. The only valid value is redis.</summary>
+    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -1151,7 +1151,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Specifies the destination and format of Redis SLOWLOG or Redis Engine Log. See the documentation on Amazon ElastiCache. See Log Delivery Configuration below for more details.</summary>
+    /// <summary>Specifies the destination and format of Redis OSS/Valkey SLOWLOG or Redis OSS/Valkey Engine Log. See the documentation on Amazon ElastiCache. See Log Delivery Configuration below for more details.</summary>
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta2ReplicationGroupStatusAtProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 

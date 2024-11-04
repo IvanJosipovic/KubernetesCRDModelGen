@@ -29,6 +29,10 @@ public partial class V1beta1VPCIpamSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Enable this option to use your own GUA ranges as private IPv6 addresses. Default: false.</summary>
+    [JsonPropertyName("enablePrivateGua")]
+    public bool? EnablePrivateGua { get; set; }
+
     /// <summary>Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You must set your provider block region as an operating_region.</summary>
     [JsonPropertyName("operatingRegions")]
     public IList<V1beta1VPCIpamSpecForProviderOperatingRegions>? OperatingRegions { get; set; }
@@ -66,6 +70,10 @@ public partial class V1beta1VPCIpamSpecInitProvider
     /// <summary>A description for the IPAM.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Enable this option to use your own GUA ranges as private IPv6 addresses. Default: false.</summary>
+    [JsonPropertyName("enablePrivateGua")]
+    public bool? EnablePrivateGua { get; set; }
 
     /// <summary>Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You must set your provider block region as an operating_region.</summary>
     [JsonPropertyName("operatingRegions")]
@@ -244,6 +252,10 @@ public partial class V1beta1VPCIpamStatusAtProvider
     /// <summary>A description for the IPAM.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Enable this option to use your own GUA ranges as private IPv6 addresses. Default: false.</summary>
+    [JsonPropertyName("enablePrivateGua")]
+    public bool? EnablePrivateGua { get; set; }
 
     /// <summary>The ID of the IPAM</summary>
     [JsonPropertyName("id")]

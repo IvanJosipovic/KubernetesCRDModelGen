@@ -29,11 +29,11 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsDataSt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPerSecond
 {
-    /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
+    /// <summary>The maximum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.</summary>
     [JsonPropertyName("maximum")]
     public double? Maximum { get; set; }
 
-    /// <summary>The lower limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
+    /// <summary>The minimum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.</summary>
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
@@ -42,11 +42,11 @@ public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProviderCacheUsageLimits
 {
-    /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.</summary>
+    /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See data_storage Block for details.</summary>
     [JsonPropertyName("dataStorage")]
     public IList<V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsDataStorage>? DataStorage { get; set; }
 
-    /// <summary>The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second.See config block for more details.</summary>
+    /// <summary>The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second. See ecpu_per_second Block for details.</summary>
     [JsonPropertyName("ecpuPerSecond")]
     public IList<V1beta1ServerlessCacheSpecForProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
@@ -223,11 +223,11 @@ public partial class V1beta1ServerlessCacheSpecForProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecForProvider
 {
-    /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.</summary>
+    /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See cache_usage_limits Block for details.</summary>
     [JsonPropertyName("cacheUsageLimits")]
     public IList<V1beta1ServerlessCacheSpecForProviderCacheUsageLimits>? CacheUsageLimits { get; set; }
 
-    /// <summary>The daily time that snapshots will be created from the new serverless cache. Only supported for engine type "redis". Defaults to 0.</summary>
+    /// <summary>The daily time that snapshots will be created from the new serverless cache. Only supported for engine types "redis" or "valkey". Defaults to 0.</summary>
     [JsonPropertyName("dailySnapshotTime")]
     public string? DailySnapshotTime { get; set; }
 
@@ -235,7 +235,7 @@ public partial class V1beta1ServerlessCacheSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.</summary>
+    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -321,11 +321,11 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsDataS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuPerSecond
 {
-    /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
+    /// <summary>The maximum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.</summary>
     [JsonPropertyName("maximum")]
     public double? Maximum { get; set; }
 
-    /// <summary>The lower limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
+    /// <summary>The minimum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.</summary>
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
@@ -334,11 +334,11 @@ public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProviderCacheUsageLimits
 {
-    /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.</summary>
+    /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See data_storage Block for details.</summary>
     [JsonPropertyName("dataStorage")]
     public IList<V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsDataStorage>? DataStorage { get; set; }
 
-    /// <summary>The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second.See config block for more details.</summary>
+    /// <summary>The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second. See ecpu_per_second Block for details.</summary>
     [JsonPropertyName("ecpuPerSecond")]
     public IList<V1beta1ServerlessCacheSpecInitProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
@@ -515,11 +515,11 @@ public partial class V1beta1ServerlessCacheSpecInitProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheSpecInitProvider
 {
-    /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.</summary>
+    /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See cache_usage_limits Block for details.</summary>
     [JsonPropertyName("cacheUsageLimits")]
     public IList<V1beta1ServerlessCacheSpecInitProviderCacheUsageLimits>? CacheUsageLimits { get; set; }
 
-    /// <summary>The daily time that snapshots will be created from the new serverless cache. Only supported for engine type "redis". Defaults to 0.</summary>
+    /// <summary>The daily time that snapshots will be created from the new serverless cache. Only supported for engine types "redis" or "valkey". Defaults to 0.</summary>
     [JsonPropertyName("dailySnapshotTime")]
     public string? DailySnapshotTime { get; set; }
 
@@ -527,7 +527,7 @@ public partial class V1beta1ServerlessCacheSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.</summary>
+    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -741,11 +741,11 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsDataS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuPerSecond
 {
-    /// <summary>The upper limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
+    /// <summary>The maximum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.</summary>
     [JsonPropertyName("maximum")]
     public double? Maximum { get; set; }
 
-    /// <summary>The lower limit for data storage the cache is set to use. Must be between 1 and 5,000.</summary>
+    /// <summary>The minimum number of ECPUs the cache can consume per second. Must be between 1,000 and 15,000,000.</summary>
     [JsonPropertyName("minimum")]
     public double? Minimum { get; set; }
 }
@@ -754,11 +754,11 @@ public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessCacheStatusAtProviderCacheUsageLimits
 {
-    /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See Data Storage config for more details.</summary>
+    /// <summary>The maximum data storage limit in the cache, expressed in Gigabytes. See data_storage Block for details.</summary>
     [JsonPropertyName("dataStorage")]
     public IList<V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsDataStorage>? DataStorage { get; set; }
 
-    /// <summary>The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second.See config block for more details.</summary>
+    /// <summary>The configuration for the number of ElastiCache Processing Units (ECPU) the cache can consume per second. See ecpu_per_second Block for details.</summary>
     [JsonPropertyName("ecpuPerSecond")]
     public IList<V1beta1ServerlessCacheStatusAtProviderCacheUsageLimitsEcpuPerSecond>? EcpuPerSecond { get; set; }
 }
@@ -797,7 +797,7 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See configuration below.</summary>
+    /// <summary>Sets the cache usage limits for storage and ElastiCache Processing Units for the cache. See cache_usage_limits Block for details.</summary>
     [JsonPropertyName("cacheUsageLimits")]
     public IList<V1beta1ServerlessCacheStatusAtProviderCacheUsageLimits>? CacheUsageLimits { get; set; }
 
@@ -805,7 +805,7 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
-    /// <summary>The daily time that snapshots will be created from the new serverless cache. Only supported for engine type "redis". Defaults to 0.</summary>
+    /// <summary>The daily time that snapshots will be created from the new serverless cache. Only supported for engine types "redis" or "valkey". Defaults to 0.</summary>
     [JsonPropertyName("dailySnapshotTime")]
     public string? DailySnapshotTime { get; set; }
 
@@ -813,11 +813,11 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Represents the information required for client programs to connect to a cache node. See config below for details.</summary>
+    /// <summary>Represents the information required for client programs to connect to a cache node. See endpoint Block for details.</summary>
     [JsonPropertyName("endpoint")]
     public IList<V1beta1ServerlessCacheStatusAtProviderEndpoint>? Endpoint { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.</summary>
+    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -837,7 +837,7 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("majorEngineVersion")]
     public string? MajorEngineVersion { get; set; }
 
-    /// <summary>Represents the information required for client programs to connect to a cache node. See config below for details.</summary>
+    /// <summary>Represents the information required for client programs to connect to a cache node. See reader_endpoint Block for details.</summary>
     [JsonPropertyName("readerEndpoint")]
     public IList<V1beta1ServerlessCacheStatusAtProviderReaderEndpoint>? ReaderEndpoint { get; set; }
 

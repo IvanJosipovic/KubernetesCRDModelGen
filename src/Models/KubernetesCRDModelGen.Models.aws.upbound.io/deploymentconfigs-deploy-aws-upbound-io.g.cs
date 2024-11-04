@@ -66,6 +66,36 @@ public partial class V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentConfigSpecForProviderZonalConfigMinimumHealthyHostsPerZone
+{
+    /// <summary>The type can either be FLEET_PERCENT or HOST_COUNT.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>The value when the type is FLEET_PERCENT represents the minimum number of healthy instances as a percentage of the total number of instances in the Availability Zone during a deployment. If you specify FLEET_PERCENT, at the start of the deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances. When the type is HOST_COUNT, the value represents the minimum number of healthy instances in the Availability Zone as an absolute value.</summary>
+    [JsonPropertyName("value")]
+    public double? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentConfigSpecForProviderZonalConfig
+{
+    /// <summary>The period of time, in seconds, that CodeDeploy must wait after completing a deployment to the first Availability Zone. CodeDeploy will wait this amount of time before starting a deployment to the second Availability Zone. If you don't specify a value for first_zone_monitor_duration_in_seconds, then CodeDeploy uses the monitor_duration_in_seconds value for the first Availability Zone.</summary>
+    [JsonPropertyName("firstZoneMonitorDurationInSeconds")]
+    public double? FirstZoneMonitorDurationInSeconds { get; set; }
+
+    /// <summary>The number or percentage of instances that must remain available per Availability Zone during a deployment. If you don't specify a value under minimum_healthy_hosts_per_zone, then CodeDeploy uses a default value of 0 percent. This block is more documented below.</summary>
+    [JsonPropertyName("minimumHealthyHostsPerZone")]
+    public IList<V1beta1DeploymentConfigSpecForProviderZonalConfigMinimumHealthyHostsPerZone>? MinimumHealthyHostsPerZone { get; set; }
+
+    /// <summary>The period of time, in seconds, that CodeDeploy must wait after completing a deployment to an Availability Zone. CodeDeploy will wait this amount of time before starting a deployment to the next Availability Zone. If you don't specify a monitor_duration_in_seconds, CodeDeploy starts deploying to the next Availability Zone immediately.</summary>
+    [JsonPropertyName("monitorDurationInSeconds")]
+    public double? MonitorDurationInSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProvider
 {
     /// <summary>The compute platform can be Server, Lambda, or ECS. Default is Server.</summary>
@@ -83,6 +113,10 @@ public partial class V1beta1DeploymentConfigSpecForProvider
     /// <summary>A traffic_routing_config block. Traffic Routing Config is documented below.</summary>
     [JsonPropertyName("trafficRoutingConfig")]
     public IList<V1beta1DeploymentConfigSpecForProviderTrafficRoutingConfig>? TrafficRoutingConfig { get; set; }
+
+    /// <summary>A zonal_config block. Zonal Config is documented below.</summary>
+    [JsonPropertyName("zonalConfig")]
+    public IList<V1beta1DeploymentConfigSpecForProviderZonalConfig>? ZonalConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -141,6 +175,36 @@ public partial class V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfig
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentConfigSpecInitProviderZonalConfigMinimumHealthyHostsPerZone
+{
+    /// <summary>The type can either be FLEET_PERCENT or HOST_COUNT.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>The value when the type is FLEET_PERCENT represents the minimum number of healthy instances as a percentage of the total number of instances in the Availability Zone during a deployment. If you specify FLEET_PERCENT, at the start of the deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances. When the type is HOST_COUNT, the value represents the minimum number of healthy instances in the Availability Zone as an absolute value.</summary>
+    [JsonPropertyName("value")]
+    public double? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentConfigSpecInitProviderZonalConfig
+{
+    /// <summary>The period of time, in seconds, that CodeDeploy must wait after completing a deployment to the first Availability Zone. CodeDeploy will wait this amount of time before starting a deployment to the second Availability Zone. If you don't specify a value for first_zone_monitor_duration_in_seconds, then CodeDeploy uses the monitor_duration_in_seconds value for the first Availability Zone.</summary>
+    [JsonPropertyName("firstZoneMonitorDurationInSeconds")]
+    public double? FirstZoneMonitorDurationInSeconds { get; set; }
+
+    /// <summary>The number or percentage of instances that must remain available per Availability Zone during a deployment. If you don't specify a value under minimum_healthy_hosts_per_zone, then CodeDeploy uses a default value of 0 percent. This block is more documented below.</summary>
+    [JsonPropertyName("minimumHealthyHostsPerZone")]
+    public IList<V1beta1DeploymentConfigSpecInitProviderZonalConfigMinimumHealthyHostsPerZone>? MinimumHealthyHostsPerZone { get; set; }
+
+    /// <summary>The period of time, in seconds, that CodeDeploy must wait after completing a deployment to an Availability Zone. CodeDeploy will wait this amount of time before starting a deployment to the next Availability Zone. If you don't specify a monitor_duration_in_seconds, CodeDeploy starts deploying to the next Availability Zone immediately.</summary>
+    [JsonPropertyName("monitorDurationInSeconds")]
+    public double? MonitorDurationInSeconds { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecInitProvider
@@ -156,6 +220,10 @@ public partial class V1beta1DeploymentConfigSpecInitProvider
     /// <summary>A traffic_routing_config block. Traffic Routing Config is documented below.</summary>
     [JsonPropertyName("trafficRoutingConfig")]
     public IList<V1beta1DeploymentConfigSpecInitProviderTrafficRoutingConfig>? TrafficRoutingConfig { get; set; }
+
+    /// <summary>A zonal_config block. Zonal Config is documented below.</summary>
+    [JsonPropertyName("zonalConfig")]
+    public IList<V1beta1DeploymentConfigSpecInitProviderZonalConfig>? ZonalConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -348,6 +416,36 @@ public partial class V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentConfigStatusAtProviderZonalConfigMinimumHealthyHostsPerZone
+{
+    /// <summary>The type can either be FLEET_PERCENT or HOST_COUNT.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>The value when the type is FLEET_PERCENT represents the minimum number of healthy instances as a percentage of the total number of instances in the Availability Zone during a deployment. If you specify FLEET_PERCENT, at the start of the deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances. When the type is HOST_COUNT, the value represents the minimum number of healthy instances in the Availability Zone as an absolute value.</summary>
+    [JsonPropertyName("value")]
+    public double? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentConfigStatusAtProviderZonalConfig
+{
+    /// <summary>The period of time, in seconds, that CodeDeploy must wait after completing a deployment to the first Availability Zone. CodeDeploy will wait this amount of time before starting a deployment to the second Availability Zone. If you don't specify a value for first_zone_monitor_duration_in_seconds, then CodeDeploy uses the monitor_duration_in_seconds value for the first Availability Zone.</summary>
+    [JsonPropertyName("firstZoneMonitorDurationInSeconds")]
+    public double? FirstZoneMonitorDurationInSeconds { get; set; }
+
+    /// <summary>The number or percentage of instances that must remain available per Availability Zone during a deployment. If you don't specify a value under minimum_healthy_hosts_per_zone, then CodeDeploy uses a default value of 0 percent. This block is more documented below.</summary>
+    [JsonPropertyName("minimumHealthyHostsPerZone")]
+    public IList<V1beta1DeploymentConfigStatusAtProviderZonalConfigMinimumHealthyHostsPerZone>? MinimumHealthyHostsPerZone { get; set; }
+
+    /// <summary>The period of time, in seconds, that CodeDeploy must wait after completing a deployment to an Availability Zone. CodeDeploy will wait this amount of time before starting a deployment to the next Availability Zone. If you don't specify a monitor_duration_in_seconds, CodeDeploy starts deploying to the next Availability Zone immediately.</summary>
+    [JsonPropertyName("monitorDurationInSeconds")]
+    public double? MonitorDurationInSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigStatusAtProvider
 {
     /// <summary>The ARN of the deployment config.</summary>
@@ -373,6 +471,10 @@ public partial class V1beta1DeploymentConfigStatusAtProvider
     /// <summary>A traffic_routing_config block. Traffic Routing Config is documented below.</summary>
     [JsonPropertyName("trafficRoutingConfig")]
     public IList<V1beta1DeploymentConfigStatusAtProviderTrafficRoutingConfig>? TrafficRoutingConfig { get; set; }
+
+    /// <summary>A zonal_config block. Zonal Config is documented below.</summary>
+    [JsonPropertyName("zonalConfig")]
+    public IList<V1beta1DeploymentConfigStatusAtProviderZonalConfig>? ZonalConfig { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -70,6 +70,10 @@ public partial class V1beta1DataLakeSettingsSpecForProvider
     [JsonPropertyName("externalDataFilteringAllowList")]
     public IList<string>? ExternalDataFilteringAllowList { get; set; }
 
+    /// <summary>Key-value map of additional configuration. Valid values for the CROSS_ACCOUNT_VERSION key are "1", "2", "3", or "4". SET_CONTEXT is also returned with a value of TRUE. In a fresh account, prior to configuring, CROSS_ACCOUNT_VERSION is "1". Destroying this resource sets the CROSS_ACCOUNT_VERSION to "1".</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+
     /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
     [JsonPropertyName("readOnlyAdmins")]
     public IList<string>? ReadOnlyAdmins { get; set; }
@@ -144,6 +148,10 @@ public partial class V1beta1DataLakeSettingsSpecInitProvider
     /// <summary>A list of the account IDs of Amazon Web Services accounts with Amazon EMR clusters that are to perform data filtering.</summary>
     [JsonPropertyName("externalDataFilteringAllowList")]
     public IList<string>? ExternalDataFilteringAllowList { get; set; }
+
+    /// <summary>Key-value map of additional configuration. Valid values for the CROSS_ACCOUNT_VERSION key are "1", "2", "3", or "4". SET_CONTEXT is also returned with a value of TRUE. In a fresh account, prior to configuring, CROSS_ACCOUNT_VERSION is "1". Destroying this resource sets the CROSS_ACCOUNT_VERSION to "1".</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
 
     /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
     [JsonPropertyName("readOnlyAdmins")]
@@ -351,6 +359,10 @@ public partial class V1beta1DataLakeSettingsStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Key-value map of additional configuration. Valid values for the CROSS_ACCOUNT_VERSION key are "1", "2", "3", or "4". SET_CONTEXT is also returned with a value of TRUE. In a fresh account, prior to configuring, CROSS_ACCOUNT_VERSION is "1". Destroying this resource sets the CROSS_ACCOUNT_VERSION to "1".</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
 
     /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
     [JsonPropertyName("readOnlyAdmins")]

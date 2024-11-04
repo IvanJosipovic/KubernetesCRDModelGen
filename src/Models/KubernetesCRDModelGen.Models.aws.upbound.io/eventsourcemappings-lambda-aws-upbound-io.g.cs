@@ -334,6 +334,10 @@ public partial class V1beta1EventSourceMappingSpecForProvider
     [JsonPropertyName("startingPositionTimestamp")]
     public string? StartingPositionTimestamp { get; set; }
 
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
     /// <summary>The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
     [JsonPropertyName("topics")]
     public IList<string>? Topics { get; set; }
@@ -665,6 +669,10 @@ public partial class V1beta1EventSourceMappingSpecInitProvider
     [JsonPropertyName("startingPositionTimestamp")]
     public string? StartingPositionTimestamp { get; set; }
 
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
     /// <summary>The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
     [JsonPropertyName("topics")]
     public IList<string>? Topics { get; set; }
@@ -916,6 +924,10 @@ public partial class V1beta1EventSourceMappingStatusAtProvider
     [JsonPropertyName("amazonManagedKafkaEventSourceConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderAmazonManagedKafkaEventSourceConfig>? AmazonManagedKafkaEventSourceConfig { get; set; }
 
+    /// <summary>The event source mapping ARN.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.</summary>
     [JsonPropertyName("batchSize")]
     public double? BatchSize { get; set; }
@@ -1023,6 +1035,14 @@ public partial class V1beta1EventSourceMappingStatusAtProvider
     /// <summary>The reason the event source mapping is in its current state.</summary>
     [JsonPropertyName("stateTransitionReason")]
     public string? StateTransitionReason { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
 
     /// <summary>The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
     [JsonPropertyName("topics")]
