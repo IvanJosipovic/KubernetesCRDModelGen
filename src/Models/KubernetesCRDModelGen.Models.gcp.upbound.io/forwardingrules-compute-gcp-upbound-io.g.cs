@@ -1053,6 +1053,10 @@ public partial class V1beta1ForwardingRuleStatusAtProvider
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
 
+    /// <summary>The unique identifier number for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("forwardingRuleId")]
+    public double? ForwardingRuleId { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/regions/{{region}}/forwardingRules/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

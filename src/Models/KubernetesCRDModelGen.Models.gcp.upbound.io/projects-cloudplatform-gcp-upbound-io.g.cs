@@ -76,6 +76,10 @@ public partial class V1beta1ProjectSpecForProvider
     [JsonPropertyName("billingAccount")]
     public string? BillingAccount { get; set; }
 
+    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is DELETE.</summary>
+    [JsonPropertyName("deletionPolicy")]
+    public string? DeletionPolicy { get; set; }
+
     /// <summary>The numeric ID of the folder this project should be created under. Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.</summary>
     [JsonPropertyName("folderId")]
     public string? FolderId { get; set; }
@@ -104,7 +108,7 @@ public partial class V1beta1ProjectSpecForProvider
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
-    /// <summary></summary>
+    /// <summary>skip_delete is deprecated and will be removed in 6.0.0. Please use deletion_policy instead. A skip_delete value of false can be changed to a deletion_policy value of DELETE and a skip_delete value of true to a deletion_policy value of ABANDON for equivalent behavior.</summary>
     [JsonPropertyName("skipDelete")]
     public bool? SkipDelete { get; set; }
 }
@@ -177,6 +181,10 @@ public partial class V1beta1ProjectSpecInitProvider
     [JsonPropertyName("billingAccount")]
     public string? BillingAccount { get; set; }
 
+    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is DELETE.</summary>
+    [JsonPropertyName("deletionPolicy")]
+    public string? DeletionPolicy { get; set; }
+
     /// <summary>The numeric ID of the folder this project should be created under. Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.</summary>
     [JsonPropertyName("folderId")]
     public string? FolderId { get; set; }
@@ -205,7 +213,7 @@ public partial class V1beta1ProjectSpecInitProvider
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
-    /// <summary></summary>
+    /// <summary>skip_delete is deprecated and will be removed in 6.0.0. Please use deletion_policy instead. A skip_delete value of false can be changed to a deletion_policy value of DELETE and a skip_delete value of true to a deletion_policy value of ABANDON for equivalent behavior.</summary>
     [JsonPropertyName("skipDelete")]
     public bool? SkipDelete { get; set; }
 }
@@ -354,6 +362,10 @@ public partial class V1beta1ProjectStatusAtProvider
     [JsonPropertyName("billingAccount")]
     public string? BillingAccount { get; set; }
 
+    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is DELETE.</summary>
+    [JsonPropertyName("deletionPolicy")]
+    public string? DeletionPolicy { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
@@ -386,7 +398,7 @@ public partial class V1beta1ProjectStatusAtProvider
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
-    /// <summary></summary>
+    /// <summary>skip_delete is deprecated and will be removed in 6.0.0. Please use deletion_policy instead. A skip_delete value of false can be changed to a deletion_policy value of DELETE and a skip_delete value of true to a deletion_policy value of ABANDON for equivalent behavior.</summary>
     [JsonPropertyName("skipDelete")]
     public bool? SkipDelete { get; set; }
 

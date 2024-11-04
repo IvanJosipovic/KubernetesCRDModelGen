@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.accesscontextmanager.gcp.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProvider
 {
-    /// <summary>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</summary>
+    /// <summary>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: 'organizations/{{organization_id}}'</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
-    /// <summary>Folder or project on which this policy is applicable. Format: folders/{{folder_id}} or projects/{{project_id}}</summary>
+    /// <summary>Folder or project on which this policy is applicable. Format: 'folders/{{folder_id}}' or 'projects/{{project_number}}'</summary>
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 
@@ -29,11 +29,11 @@ public partial class V1beta1AccessPolicySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProvider
 {
-    /// <summary>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</summary>
+    /// <summary>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: 'organizations/{{organization_id}}'</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
-    /// <summary>Folder or project on which this policy is applicable. Format: folders/{{folder_id}} or projects/{{project_id}}</summary>
+    /// <summary>Folder or project on which this policy is applicable. Format: 'folders/{{folder_id}}' or 'projects/{{project_number}}'</summary>
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 
@@ -186,15 +186,15 @@ public partial class V1beta1AccessPolicyStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Resource name of the AccessPolicy. Format: {policy_id}</summary>
+    /// <summary>Resource name of the AccessPolicy. Format: '{{policy_id}}'</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: organizations/{organization_id}</summary>
+    /// <summary>The parent of this AccessPolicy in the Cloud Resource Hierarchy. Format: 'organizations/{{organization_id}}'</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
-    /// <summary>Folder or project on which this policy is applicable. Format: folders/{{folder_id}} or projects/{{project_id}}</summary>
+    /// <summary>Folder or project on which this policy is applicable. Format: 'folders/{{folder_id}}' or 'projects/{{project_number}}'</summary>
     [JsonPropertyName("scopes")]
     public IList<string>? Scopes { get; set; }
 

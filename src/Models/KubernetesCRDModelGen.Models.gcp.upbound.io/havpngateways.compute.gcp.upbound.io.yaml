@@ -87,6 +87,14 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  gatewayIpVersion:
+                    description: >-
+                      The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used.
+
+                      Default value is IPV4.
+
+                      Possible values are: IPV4, IPV6.
+                    type: string
                   network:
                     description: The network this VPN gateway is accepting traffic for.
                     type: string
@@ -193,7 +201,7 @@ spec:
 
                       Default value is IPV4_ONLY.
 
-                      Possible values are: IPV4_ONLY, IPV4_IPV6.
+                      Possible values are: IPV4_ONLY, IPV4_IPV6, IPV6_ONLY.
                     type: string
                   vpnInterfaces:
                     description: >-
@@ -335,6 +343,14 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  gatewayIpVersion:
+                    description: >-
+                      The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used.
+
+                      Default value is IPV4.
+
+                      Possible values are: IPV4, IPV6.
+                    type: string
                   network:
                     description: The network this VPN gateway is accepting traffic for.
                     type: string
@@ -438,7 +454,7 @@ spec:
 
                       Default value is IPV4_ONLY.
 
-                      Possible values are: IPV4_ONLY, IPV4_IPV6.
+                      Possible values are: IPV4_ONLY, IPV4_IPV6, IPV6_ONLY.
                     type: string
                   vpnInterfaces:
                     description: >-
@@ -769,6 +785,14 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  gatewayIpVersion:
+                    description: >-
+                      The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used.
+
+                      Default value is IPV4.
+
+                      Possible values are: IPV4, IPV6.
+                    type: string
                   id:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}
                     type: string
@@ -795,7 +819,7 @@ spec:
 
                       Default value is IPV4_ONLY.
 
-                      Possible values are: IPV4_ONLY, IPV4_IPV6.
+                      Possible values are: IPV4_ONLY, IPV4_IPV6, IPV6_ONLY.
                     type: string
                   vpnInterfaces:
                     description: >-

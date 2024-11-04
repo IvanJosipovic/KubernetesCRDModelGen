@@ -166,6 +166,10 @@ public partial class V1beta1SubnetworkSpecForProvider
     [JsonPropertyName("secondaryIpRange")]
     public IList<V1beta1SubnetworkSpecForProviderSecondaryIpRange>? SecondaryIpRange { get; set; }
 
+    /// <summary>Controls the removal behavior of secondary_ip_range. When false, removing secondary_ip_range from config will not produce a diff as the provider will default to the API's value. When true, the provider will treat removing secondary_ip_range as sending an empty list of secondary IP ranges to the API. Defaults to false.</summary>
+    [JsonPropertyName("sendSecondaryIpRangeIfEmpty")]
+    public bool? SendSecondaryIpRangeIfEmpty { get; set; }
+
     /// <summary>The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. Possible values are: IPV4_ONLY, IPV4_IPV6.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
@@ -324,6 +328,10 @@ public partial class V1beta1SubnetworkSpecInitProvider
     /// <summary>An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary ranges. Note: This field uses attr-as-block mode to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following syntax: example=[] For more details about this behavior, see this section. Structure is documented below.</summary>
     [JsonPropertyName("secondaryIpRange")]
     public IList<V1beta1SubnetworkSpecInitProviderSecondaryIpRange>? SecondaryIpRange { get; set; }
+
+    /// <summary>Controls the removal behavior of secondary_ip_range. When false, removing secondary_ip_range from config will not produce a diff as the provider will default to the API's value. When true, the provider will treat removing secondary_ip_range as sending an empty list of secondary IP ranges to the API. Defaults to false.</summary>
+    [JsonPropertyName("sendSecondaryIpRangeIfEmpty")]
+    public bool? SendSecondaryIpRangeIfEmpty { get; set; }
 
     /// <summary>The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. Possible values are: IPV4_ONLY, IPV4_IPV6.</summary>
     [JsonPropertyName("stackType")]
@@ -583,6 +591,10 @@ public partial class V1beta1SubnetworkStatusAtProvider
     /// <summary>The URI of the created resource.</summary>
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
+
+    /// <summary>Controls the removal behavior of secondary_ip_range. When false, removing secondary_ip_range from config will not produce a diff as the provider will default to the API's value. When true, the provider will treat removing secondary_ip_range as sending an empty list of secondary IP ranges to the API. Defaults to false.</summary>
+    [JsonPropertyName("sendSecondaryIpRangeIfEmpty")]
+    public bool? SendSecondaryIpRangeIfEmpty { get; set; }
 
     /// <summary>The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. Possible values are: IPV4_ONLY, IPV4_IPV6.</summary>
     [JsonPropertyName("stackType")]

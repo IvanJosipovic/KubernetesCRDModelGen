@@ -223,6 +223,9 @@ spec:
                               numNewerVersions:
                                 description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
                                 type: number
+                              sendAgeIfZero:
+                                description: While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.
+                                type: boolean
                               sendDaysSinceCustomTimeIfZero:
                                 description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
                                 type: boolean
@@ -488,6 +491,9 @@ spec:
                               numNewerVersions:
                                 description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
                                 type: number
+                              sendAgeIfZero:
+                                description: While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.
+                                type: boolean
                               sendDaysSinceCustomTimeIfZero:
                                 description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
                                 type: boolean
@@ -955,6 +961,9 @@ spec:
                               numNewerVersions:
                                 description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
                                 type: number
+                              sendAgeIfZero:
+                                description: While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.
+                                type: boolean
                               sendDaysSinceCustomTimeIfZero:
                                 description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
                                 type: boolean
@@ -1331,7 +1340,7 @@ spec:
                                 type: string
                               type: array
                             noAge:
-                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket.
+                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket. no_age is deprecated and will be removed in a future major release. Use send_age_if_zero instead.
                               type: boolean
                             noncurrentTimeBefore:
                               description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
@@ -1339,6 +1348,9 @@ spec:
                             numNewerVersions:
                               description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. When set to 0 it will be ignored and your state will treat it as though you supplied no num_newer_versions condition.
                               type: number
+                            sendAgeIfZero:
+                              description: While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.
+                              type: boolean
                             sendDaysSinceCustomTimeIfZero:
                               description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
                               type: boolean
@@ -1576,7 +1588,7 @@ spec:
                                 type: string
                               type: array
                             noAge:
-                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket.
+                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket. no_age is deprecated and will be removed in a future major release. Use send_age_if_zero instead.
                               type: boolean
                             noncurrentTimeBefore:
                               description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
@@ -1584,6 +1596,9 @@ spec:
                             numNewerVersions:
                               description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. When set to 0 it will be ignored and your state will treat it as though you supplied no num_newer_versions condition.
                               type: number
+                            sendAgeIfZero:
+                              description: While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.
+                              type: boolean
                             sendDaysSinceCustomTimeIfZero:
                               description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
                               type: boolean
@@ -2023,7 +2038,7 @@ spec:
                                 type: string
                               type: array
                             noAge:
-                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket.
+                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket. no_age is deprecated and will be removed in a future major release. Use send_age_if_zero instead.
                               type: boolean
                             noncurrentTimeBefore:
                               description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
@@ -2031,6 +2046,9 @@ spec:
                             numNewerVersions:
                               description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. When set to 0 it will be ignored and your state will treat it as though you supplied no num_newer_versions condition.
                               type: number
+                            sendAgeIfZero:
+                              description: While set true, age value will be sent in the request even for zero value of the field. This field is only useful and required for setting 0 value to the age field. It can be used alone or together with age attribute. NOTE age attibute with 0 value will be ommitted from the API request if send_age_if_zero field is having false value.
+                              type: boolean
                             sendDaysSinceCustomTimeIfZero:
                               description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
                               type: boolean

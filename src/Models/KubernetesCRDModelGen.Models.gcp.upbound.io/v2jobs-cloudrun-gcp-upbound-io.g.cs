@@ -16,6 +16,10 @@ public partial class V1beta1V2JobSpecForProviderBinaryAuthorization
     [JsonPropertyName("breakglassJustification")]
     public string? BreakglassJustification { get; set; }
 
+    /// <summary>The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}</summary>
+    [JsonPropertyName("policy")]
+    public string? Policy { get; set; }
+
     /// <summary>If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.</summary>
     [JsonPropertyName("useDefault")]
     public bool? UseDefault { get; set; }
@@ -532,6 +536,10 @@ public partial class V1beta1V2JobSpecInitProviderBinaryAuthorization
     /// <summary>If present, indicates to use Breakglass using this justification. If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass</summary>
     [JsonPropertyName("breakglassJustification")]
     public string? BreakglassJustification { get; set; }
+
+    /// <summary>The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}</summary>
+    [JsonPropertyName("policy")]
+    public string? Policy { get; set; }
 
     /// <summary>If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.</summary>
     [JsonPropertyName("useDefault")]
@@ -1177,6 +1185,10 @@ public partial class V1beta1V2JobStatusAtProviderBinaryAuthorization
     /// <summary>If present, indicates to use Breakglass using this justification. If useDefault is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass</summary>
     [JsonPropertyName("breakglassJustification")]
     public string? BreakglassJustification { get; set; }
+
+    /// <summary>The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun/{policy-name}</summary>
+    [JsonPropertyName("policy")]
+    public string? Policy { get; set; }
 
     /// <summary>If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.</summary>
     [JsonPropertyName("useDefault")]

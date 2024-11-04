@@ -387,6 +387,10 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("requireSsl")]
     public bool? RequireSsl { get; set; }
 
+    /// <summary>Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.</summary>
+    [JsonPropertyName("serverCaMode")]
+    public string? ServerCaMode { get; set; }
+
     /// <summary>Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.</summary>
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
@@ -539,6 +543,10 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettings
     /// <summary>The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
+
+    /// <summary>Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.</summary>
+    [JsonPropertyName("enableDataplexIntegration")]
+    public bool? EnableDataplexIntegration { get; set; }
 
     /// <summary>Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.</summary>
     [JsonPropertyName("enableGoogleMlIntegration")]
@@ -1017,6 +1025,10 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("requireSsl")]
     public bool? RequireSsl { get; set; }
 
+    /// <summary>Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.</summary>
+    [JsonPropertyName("serverCaMode")]
+    public string? ServerCaMode { get; set; }
+
     /// <summary>Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.</summary>
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
@@ -1169,6 +1181,10 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettings
     /// <summary>The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
+
+    /// <summary>Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.</summary>
+    [JsonPropertyName("enableDataplexIntegration")]
+    public bool? EnableDataplexIntegration { get; set; }
 
     /// <summary>Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.</summary>
     [JsonPropertyName("enableGoogleMlIntegration")]
@@ -1694,6 +1710,10 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     [JsonPropertyName("requireSsl")]
     public bool? RequireSsl { get; set; }
 
+    /// <summary>Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.</summary>
+    [JsonPropertyName("serverCaMode")]
+    public string? ServerCaMode { get; set; }
+
     /// <summary>Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.</summary>
     [JsonPropertyName("sslMode")]
     public string? SslMode { get; set; }
@@ -1846,6 +1866,10 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettings
     /// <summary>The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
+
+    /// <summary>Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.</summary>
+    [JsonPropertyName("enableDataplexIntegration")]
+    public bool? EnableDataplexIntegration { get; set; }
 
     /// <summary>Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.</summary>
     [JsonPropertyName("enableGoogleMlIntegration")]

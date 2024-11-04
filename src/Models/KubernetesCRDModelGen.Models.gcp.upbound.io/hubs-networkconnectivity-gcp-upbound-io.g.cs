@@ -16,6 +16,10 @@ public partial class V1beta1HubSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Whether Private Service Connect transitivity is enabled for the hub. If true, Private Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC spokes attached to the hub. The default value is false.</summary>
+    [JsonPropertyName("exportPsc")]
+    public bool? ExportPsc { get; set; }
+
     /// <summary>Optional labels in key:value format. For more information about labels, see Requirements for labels. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
@@ -36,6 +40,10 @@ public partial class V1beta1HubSpecInitProvider
     /// <summary>An optional description of the hub.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Whether Private Service Connect transitivity is enabled for the hub. If true, Private Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC spokes attached to the hub. The default value is false.</summary>
+    [JsonPropertyName("exportPsc")]
+    public bool? ExportPsc { get; set; }
 
     /// <summary>Optional labels in key:value format. For more information about labels, see Requirements for labels. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
     [JsonPropertyName("labels")]
@@ -206,6 +214,10 @@ public partial class V1beta1HubStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
+
+    /// <summary>Whether Private Service Connect transitivity is enabled for the hub. If true, Private Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC spokes attached to the hub. The default value is false.</summary>
+    [JsonPropertyName("exportPsc")]
+    public bool? ExportPsc { get; set; }
 
     /// <summary>an identifier for the resource with format projects/{{project}}/locations/global/hubs/{{name}}</summary>
     [JsonPropertyName("id")]

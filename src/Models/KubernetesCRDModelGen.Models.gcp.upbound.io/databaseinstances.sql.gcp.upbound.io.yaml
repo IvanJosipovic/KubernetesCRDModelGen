@@ -448,6 +448,9 @@ spec:
                         edition:
                           description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                           type: string
+                        enableDataplexIntegration:
+                          description: Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.
+                          type: boolean
                         enableGoogleMlIntegration:
                           description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
                           type: boolean
@@ -625,6 +628,9 @@ spec:
                               requireSsl:
                                 description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.
                                 type: boolean
+                              serverCaMode:
+                                description: Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.
+                                type: string
                               sslMode:
                                 description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
                                 type: string
@@ -1113,6 +1119,9 @@ spec:
                         edition:
                           description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                           type: string
+                        enableDataplexIntegration:
+                          description: Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.
+                          type: boolean
                         enableGoogleMlIntegration:
                           description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
                           type: boolean
@@ -1290,6 +1299,9 @@ spec:
                               requireSsl:
                                 description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.
                                 type: boolean
+                              serverCaMode:
+                                description: Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.
+                                type: string
                               sslMode:
                                 description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
                                 type: string
@@ -1999,6 +2011,9 @@ spec:
                         edition:
                           description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                           type: string
+                        enableDataplexIntegration:
+                          description: Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.
+                          type: boolean
                         enableGoogleMlIntegration:
                           description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
                           type: boolean
@@ -2090,6 +2105,9 @@ spec:
                               requireSsl:
                                 description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.
                                 type: boolean
+                              serverCaMode:
+                                description: Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.
+                                type: string
                               sslMode:
                                 description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
                                 type: string
@@ -2622,7 +2640,7 @@ spec:
                         description: The name of server instance collation.
                         type: string
                       connectorEnforcement:
-                        description: Specifies if connections must use Cloud SQL connectors.
+                        description: Enables the enforcement of Cloud SQL Auth Proxy or Cloud SQL connectors for all the connections. If enabled, all the direct connections are rejected.
                         type: string
                       dataCacheConfig:
                         properties:
@@ -2652,23 +2670,23 @@ spec:
                       denyMaintenancePeriod:
                         properties:
                           endDate:
-                            description: '"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01'
+                            description: '"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-m-dd (the month is without leading zeros)i.e., 2020-1-01, or 2020-11-01, or mm-dd, i.e., 11-01'
                             type: string
                           startDate:
-                            description: '"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01'
+                            description: '"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-m-dd (the month is without leading zeros)i.e., 2020-1-01, or 2020-11-01, or mm-dd, i.e., 11-01'
                             type: string
                           time:
                             description: 'Time in UTC when the "deny maintenance period" starts on startDate and ends on endDate. The time is in format: HH:mm:SS, i.e., 00:00:00'
                             type: string
                         type: object
                       diskAutoresize:
-                        description: Enables auto-resizing of the storage size. Defaults to true.
+                        description: Enables auto-resizing of the storage size. Defaults to true. To avoid this, ensure that lifecycle.ignore_changes is applied to disk_size.
                         type: boolean
                       diskAutoresizeLimit:
                         description: The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
                         type: number
                       diskSize:
-                        description: The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB.
+                        description: The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB. Note that this value will override the resizing from disk_autoresize if that feature is enabled. To avoid this, set lifecycle.ignore_changes on this field.
                         type: number
                       diskType:
                         description: 'The type of data disk: PD_SSD or PD_HDD. Defaults to PD_SSD.'
@@ -2676,6 +2694,9 @@ spec:
                       edition:
                         description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                         type: string
+                      enableDataplexIntegration:
+                        description: Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.
+                        type: boolean
                       enableGoogleMlIntegration:
                         description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
                         type: boolean
@@ -2850,8 +2871,11 @@ spec:
                           requireSsl:
                             description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode. It will be fully deprecated in a future major release. For now, please use ssl_mode with a compatible require_ssl value instead.
                             type: boolean
+                          serverCaMode:
+                            description: Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.
+                            type: string
                           sslMode:
-                            description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
+                            description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcement options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
                             type: string
                         type: object
                       locationPreference:
@@ -3252,7 +3276,7 @@ spec:
                         description: The name of server instance collation.
                         type: string
                       connectorEnforcement:
-                        description: Specifies if connections must use Cloud SQL connectors.
+                        description: Enables the enforcement of Cloud SQL Auth Proxy or Cloud SQL connectors for all the connections. If enabled, all the direct connections are rejected.
                         type: string
                       dataCacheConfig:
                         properties:
@@ -3282,23 +3306,23 @@ spec:
                       denyMaintenancePeriod:
                         properties:
                           endDate:
-                            description: '"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01'
+                            description: '"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-m-dd (the month is without leading zeros)i.e., 2020-1-01, or 2020-11-01, or mm-dd, i.e., 11-01'
                             type: string
                           startDate:
-                            description: '"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01'
+                            description: '"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-m-dd (the month is without leading zeros)i.e., 2020-1-01, or 2020-11-01, or mm-dd, i.e., 11-01'
                             type: string
                           time:
                             description: 'Time in UTC when the "deny maintenance period" starts on startDate and ends on endDate. The time is in format: HH:mm:SS, i.e., 00:00:00'
                             type: string
                         type: object
                       diskAutoresize:
-                        description: Enables auto-resizing of the storage size. Defaults to true.
+                        description: Enables auto-resizing of the storage size. Defaults to true. To avoid this, ensure that lifecycle.ignore_changes is applied to disk_size.
                         type: boolean
                       diskAutoresizeLimit:
                         description: The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
                         type: number
                       diskSize:
-                        description: The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB.
+                        description: The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB. Note that this value will override the resizing from disk_autoresize if that feature is enabled. To avoid this, set lifecycle.ignore_changes on this field.
                         type: number
                       diskType:
                         description: 'The type of data disk: PD_SSD or PD_HDD. Defaults to PD_SSD.'
@@ -3306,6 +3330,9 @@ spec:
                       edition:
                         description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                         type: string
+                      enableDataplexIntegration:
+                        description: Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.
+                        type: boolean
                       enableGoogleMlIntegration:
                         description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
                         type: boolean
@@ -3480,8 +3507,11 @@ spec:
                           requireSsl:
                             description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode. It will be fully deprecated in a future major release. For now, please use ssl_mode with a compatible require_ssl value instead.
                             type: boolean
+                          serverCaMode:
+                            description: Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.
+                            type: string
                           sslMode:
-                            description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
+                            description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcement options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
                             type: string
                         type: object
                       locationPreference:
@@ -4103,7 +4133,7 @@ spec:
                         description: The name of server instance collation.
                         type: string
                       connectorEnforcement:
-                        description: Specifies if connections must use Cloud SQL connectors.
+                        description: Enables the enforcement of Cloud SQL Auth Proxy or Cloud SQL connectors for all the connections. If enabled, all the direct connections are rejected.
                         type: string
                       dataCacheConfig:
                         properties:
@@ -4133,23 +4163,23 @@ spec:
                       denyMaintenancePeriod:
                         properties:
                           endDate:
-                            description: '"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01'
+                            description: '"deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-m-dd (the month is without leading zeros)i.e., 2020-1-01, or 2020-11-01, or mm-dd, i.e., 11-01'
                             type: string
                           startDate:
-                            description: '"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01'
+                            description: '"deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-m-dd (the month is without leading zeros)i.e., 2020-1-01, or 2020-11-01, or mm-dd, i.e., 11-01'
                             type: string
                           time:
                             description: 'Time in UTC when the "deny maintenance period" starts on startDate and ends on endDate. The time is in format: HH:mm:SS, i.e., 00:00:00'
                             type: string
                         type: object
                       diskAutoresize:
-                        description: Enables auto-resizing of the storage size. Defaults to true.
+                        description: Enables auto-resizing of the storage size. Defaults to true. To avoid this, ensure that lifecycle.ignore_changes is applied to disk_size.
                         type: boolean
                       diskAutoresizeLimit:
                         description: The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
                         type: number
                       diskSize:
-                        description: The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB.
+                        description: The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB. Note that this value will override the resizing from disk_autoresize if that feature is enabled. To avoid this, set lifecycle.ignore_changes on this field.
                         type: number
                       diskType:
                         description: 'The type of data disk: PD_SSD or PD_HDD. Defaults to PD_SSD.'
@@ -4157,6 +4187,9 @@ spec:
                       edition:
                         description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                         type: string
+                      enableDataplexIntegration:
+                        description: Enables Cloud SQL instance integration with Dataplex. MySQL, Postgres and SQL Server instances are supported for this feature. Defaults to false.
+                        type: boolean
                       enableGoogleMlIntegration:
                         description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
                         type: boolean
@@ -4245,8 +4278,11 @@ spec:
                           requireSsl:
                             description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode. It will be fully deprecated in a future major release. For now, please use ssl_mode with a compatible require_ssl value instead.
                             type: boolean
+                          serverCaMode:
+                            description: Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.
+                            type: string
                           sslMode:
-                            description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
+                            description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcement options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
                             type: string
                         type: object
                       locationPreference:

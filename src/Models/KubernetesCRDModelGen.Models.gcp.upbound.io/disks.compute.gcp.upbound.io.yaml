@@ -84,6 +84,12 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  accessMode:
+                    description: >-
+                      The accessMode of the disk.
+
+                      For example:
+                    type: string
                   asyncPrimaryDisk:
                     description: >-
                       A nested object resource
@@ -513,6 +519,12 @@ spec:
 
                   autoscaler.
                 properties:
+                  accessMode:
+                    description: >-
+                      The accessMode of the disk.
+
+                      For example:
+                    type: string
                   asyncPrimaryDisk:
                     description: >-
                       A nested object resource
@@ -1128,6 +1140,12 @@ spec:
             properties:
               atProvider:
                 properties:
+                  accessMode:
+                    description: >-
+                      The accessMode of the disk.
+
+                      For example:
+                    type: string
                   asyncPrimaryDisk:
                     description: >-
                       A nested object resource
@@ -1639,6 +1657,12 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  accessMode:
+                    description: >-
+                      The accessMode of the disk.
+
+                      For example:
+                    type: string
                   asyncPrimaryDisk:
                     description: >-
                       A nested object resource
@@ -2057,6 +2081,12 @@ spec:
 
                   autoscaler.
                 properties:
+                  accessMode:
+                    description: >-
+                      The accessMode of the disk.
+
+                      For example:
+                    type: string
                   asyncPrimaryDisk:
                     description: >-
                       A nested object resource
@@ -2661,6 +2691,12 @@ spec:
             properties:
               atProvider:
                 properties:
+                  accessMode:
+                    description: >-
+                      The accessMode of the disk.
+
+                      For example:
+                    type: string
                   asyncPrimaryDisk:
                     description: >-
                       A nested object resource

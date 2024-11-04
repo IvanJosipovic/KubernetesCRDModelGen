@@ -335,6 +335,22 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  sourceRegions:
+                    description: >-
+                      The list of cloud regions from which health checks are performed. If
+
+                      any regions are specified, then exactly 3 regions should be specified.
+
+                      The region names must be valid names of Google Cloud regions. This can
+
+                      only be set for global health check. If this list is non-empty, then
+
+                      there are restrictions on what other health check fields are supported
+
+                      and what other resources can use this health check:
+                    items:
+                      type: string
+                    type: array
                   sslHealthCheck:
                     description: >-
                       A nested object resource
@@ -733,6 +749,22 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  sourceRegions:
+                    description: >-
+                      The list of cloud regions from which health checks are performed. If
+
+                      any regions are specified, then exactly 3 regions should be specified.
+
+                      The region names must be valid names of Google Cloud regions. This can
+
+                      only be set for global health check. If this list is non-empty, then
+
+                      there are restrictions on what other health check fields are supported
+
+                      and what other resources can use this health check:
+                    items:
+                      type: string
+                    type: array
                   sslHealthCheck:
                     description: >-
                       A nested object resource
@@ -1331,6 +1363,22 @@ spec:
                   selfLink:
                     description: The URI of the created resource.
                     type: string
+                  sourceRegions:
+                    description: >-
+                      The list of cloud regions from which health checks are performed. If
+
+                      any regions are specified, then exactly 3 regions should be specified.
+
+                      The region names must be valid names of Google Cloud regions. This can
+
+                      only be set for global health check. If this list is non-empty, then
+
+                      there are restrictions on what other health check fields are supported
+
+                      and what other resources can use this health check:
+                    items:
+                      type: string
+                    type: array
                   sslHealthCheck:
                     description: >-
                       A nested object resource
@@ -1833,6 +1881,22 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  sourceRegions:
+                    description: >-
+                      The list of cloud regions from which health checks are performed. If
+
+                      any regions are specified, then exactly 3 regions should be specified.
+
+                      The region names must be valid names of Google Cloud regions. This can
+
+                      only be set for global health check. If this list is non-empty, then
+
+                      there are restrictions on what other health check fields are supported
+
+                      and what other resources can use this health check:
+                    items:
+                      type: string
+                    type: array
                   sslHealthCheck:
                     description: >-
                       A nested object resource
@@ -2217,6 +2281,22 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  sourceRegions:
+                    description: >-
+                      The list of cloud regions from which health checks are performed. If
+
+                      any regions are specified, then exactly 3 regions should be specified.
+
+                      The region names must be valid names of Google Cloud regions. This can
+
+                      only be set for global health check. If this list is non-empty, then
+
+                      there are restrictions on what other health check fields are supported
+
+                      and what other resources can use this health check:
+                    items:
+                      type: string
+                    type: array
                   sslHealthCheck:
                     description: >-
                       A nested object resource
@@ -2801,6 +2881,22 @@ spec:
                   selfLink:
                     description: The URI of the created resource.
                     type: string
+                  sourceRegions:
+                    description: >-
+                      The list of cloud regions from which health checks are performed. If
+
+                      any regions are specified, then exactly 3 regions should be specified.
+
+                      The region names must be valid names of Google Cloud regions. This can
+
+                      only be set for global health check. If this list is non-empty, then
+
+                      there are restrictions on what other health check fields are supported
+
+                      and what other resources can use this health check:
+                    items:
+                      type: string
+                    type: array
                   sslHealthCheck:
                     description: >-
                       A nested object resource
