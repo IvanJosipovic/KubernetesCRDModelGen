@@ -359,6 +359,10 @@ public partial class V1beta1LBSpecForProvider
     [JsonPropertyName("enableXffClientPort")]
     public bool? EnableXffClientPort { get; set; }
 
+    /// <summary>Whether zonal shift is enabled. Defaults to false.</summary>
+    [JsonPropertyName("enableZonalShift")]
+    public bool? EnableZonalShift { get; set; }
+
     /// <summary>Whether inbound security group rules are enforced for traffic originating from a PrivateLink. Only valid for Load Balancers of type network. The possible values are on and off.</summary>
     [JsonPropertyName("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")]
     public string? EnforceSecurityGroupInboundRulesOnPrivateLinkTraffic { get; set; }
@@ -779,6 +783,10 @@ public partial class V1beta1LBSpecInitProvider
     [JsonPropertyName("enableXffClientPort")]
     public bool? EnableXffClientPort { get; set; }
 
+    /// <summary>Whether zonal shift is enabled. Defaults to false.</summary>
+    [JsonPropertyName("enableZonalShift")]
+    public bool? EnableZonalShift { get; set; }
+
     /// <summary>Whether inbound security group rules are enforced for traffic originating from a PrivateLink. Only valid for Load Balancers of type network. The possible values are on and off.</summary>
     [JsonPropertyName("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")]
     public string? EnforceSecurityGroupInboundRulesOnPrivateLinkTraffic { get; set; }
@@ -1102,6 +1110,10 @@ public partial class V1beta1LBStatusAtProvider
     /// <summary>Whether the X-Forwarded-For header should preserve the source port that the client used to connect to the load balancer in application load balancers. Defaults to false.</summary>
     [JsonPropertyName("enableXffClientPort")]
     public bool? EnableXffClientPort { get; set; }
+
+    /// <summary>Whether zonal shift is enabled. Defaults to false.</summary>
+    [JsonPropertyName("enableZonalShift")]
+    public bool? EnableZonalShift { get; set; }
 
     /// <summary>Whether inbound security group rules are enforced for traffic originating from a PrivateLink. Only valid for Load Balancers of type network. The possible values are on and off.</summary>
     [JsonPropertyName("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")]

@@ -196,6 +196,10 @@ public partial class V1beta1TransitGatewayVPCAttachmentSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable.</summary>
+    [JsonPropertyName("securityGroupReferencingSupport")]
+    public string? SecurityGroupReferencingSupport { get; set; }
+
     /// <summary>References to Subnet in ec2 to populate subnetIds.</summary>
     [JsonPropertyName("subnetIdRefs")]
     public IList<V1beta1TransitGatewayVPCAttachmentSpecForProviderSubnetIdRefs>? SubnetIdRefs { get; set; }
@@ -429,6 +433,10 @@ public partial class V1beta1TransitGatewayVPCAttachmentSpecInitProvider
     [JsonPropertyName("ipv6Support")]
     public string? Ipv6Support { get; set; }
 
+    /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable.</summary>
+    [JsonPropertyName("securityGroupReferencingSupport")]
+    public string? SecurityGroupReferencingSupport { get; set; }
+
     /// <summary>References to Subnet in ec2 to populate subnetIds.</summary>
     [JsonPropertyName("subnetIdRefs")]
     public IList<V1beta1TransitGatewayVPCAttachmentSpecInitProviderSubnetIdRefs>? SubnetIdRefs { get; set; }
@@ -629,6 +637,10 @@ public partial class V1beta1TransitGatewayVPCAttachmentStatusAtProvider
     /// <summary>Whether IPv6 support is enabled. Valid values: disable, enable. Default value: disable.</summary>
     [JsonPropertyName("ipv6Support")]
     public string? Ipv6Support { get; set; }
+
+    /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable.</summary>
+    [JsonPropertyName("securityGroupReferencingSupport")]
+    public string? SecurityGroupReferencingSupport { get; set; }
 
     /// <summary>Identifiers of EC2 Subnets.</summary>
     [JsonPropertyName("subnetIds")]

@@ -1591,6 +1591,506 @@ public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurati
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationCloudwatchLoggingOptions
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The CloudWatch group name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The CloudWatch log stream name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logStreamName")]
+    public string? LogStreamName { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CatalogTable in glue to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CatalogTable in glue to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfiguration
+{
+    /// <summary>Specifies the name of the AWS Glue database that contains the schema for the output data.</summary>
+    [JsonPropertyName("databaseName")]
+    public string? DatabaseName { get; set; }
+
+    /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
+    [JsonPropertyName("databaseNameRef")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRef? DatabaseNameRef { get; set; }
+
+    /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
+    [JsonPropertyName("databaseNameSelector")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelector? DatabaseNameSelector { get; set; }
+
+    /// <summary>The table specific S3 error output prefix. All the errors that occurred while delivering to this table will be prefixed with this value in S3 destination.</summary>
+    [JsonPropertyName("s3ErrorOutputPrefix")]
+    public string? S3ErrorOutputPrefix { get; set; }
+
+    /// <summary>Specifies the AWS Glue table that contains the column information that constitutes your data schema.</summary>
+    [JsonPropertyName("tableName")]
+    public string? TableName { get; set; }
+
+    /// <summary>Reference to a CatalogTable in glue to populate tableName.</summary>
+    [JsonPropertyName("tableNameRef")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameRef? TableNameRef { get; set; }
+
+    /// <summary>Selector for a CatalogTable in glue to populate tableName.</summary>
+    [JsonPropertyName("tableNameSelector")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfigurationTableNameSelector? TableNameSelector { get; set; }
+
+    /// <summary>A list of unique keys for a given Apache Iceberg table. Firehose will use these for running Create, Update, or Delete operations on the given Iceberg table.</summary>
+    [JsonPropertyName("uniqueKeys")]
+    public IList<string>? UniqueKeys { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationProcessingConfigurationProcessorsParameters
+{
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
+    [JsonPropertyName("parameterName")]
+    public string? ParameterName { get; set; }
+
+    /// <summary>Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.</summary>
+    [JsonPropertyName("parameterValue")]
+    public string? ParameterValue { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationProcessingConfigurationProcessors
+{
+    /// <summary>Specifies the processor parameters as multiple blocks. See parameters block below for details.</summary>
+    [JsonPropertyName("parameters")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
+
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationProcessingConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Specifies the data processors as multiple blocks. See processors block below for details.</summary>
+    [JsonPropertyName("processors")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfigurationProcessingConfigurationProcessors>? Processors { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The CloudWatch group name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The CloudWatch log stream name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logStreamName")]
+    public string? LogStreamName { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3Configuration
+{
+    /// <summary>The ARN of the S3 bucket</summary>
+    [JsonPropertyName("bucketArn")]
+    public string? BucketArn { get; set; }
+
+    /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
+    [JsonPropertyName("bucketArnRef")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnRef? BucketArnRef { get; set; }
+
+    /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
+    [JsonPropertyName("bucketArnSelector")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationBucketArnSelector? BucketArnSelector { get; set; }
+
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 60, before delivering it to the destination.  The default value is 60s.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 to 5, before delivering it to the destination.  The default value is 5MB.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
+    /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
+    [JsonPropertyName("cloudwatchLoggingOptions")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
+
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
+    [JsonPropertyName("compressionFormat")]
+    public string? CompressionFormat { get; set; }
+
+    /// <summary>Prefix added to failed records before writing them to S3. Not currently supported for redshift destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see Custom Prefixes for Amazon S3 Objects.</summary>
+    [JsonPropertyName("errorOutputPrefix")]
+    public string? ErrorOutputPrefix { get; set; }
+
+    /// <summary>Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will be used.</summary>
+    [JsonPropertyName("kmsKeyArn")]
+    public string? KmsKeyArn { get; set; }
+
+    /// <summary>The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</summary>
+    [JsonPropertyName("prefix")]
+    public string? Prefix { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnRef")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnRef? RoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnSelector")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3ConfigurationRoleArnSelector? RoleArnSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecForProviderIcebergConfiguration
+{
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 and 900, before delivering it to the destination. The default value is 300.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 and 128, before delivering it to the destination. The default value is 5.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
+    /// <summary>Glue catalog ARN identifier of the destination Apache Iceberg Tables. You must specify the ARN in the format arn:aws:glue:region:account-id:catalog</summary>
+    [JsonPropertyName("catalogArn")]
+    public string? CatalogArn { get; set; }
+
+    /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
+    [JsonPropertyName("cloudwatchLoggingOptions")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
+
+    /// <summary>Destination table configurations which Firehose uses to deliver data to Apache Iceberg Tables. Firehose will write data with insert if table specific configuration is not provided. See destination_table_configuration block below for details.</summary>
+    [JsonPropertyName("destinationTableConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfigurationDestinationTableConfiguration>? DestinationTableConfiguration { get; set; }
+
+    /// <summary>The data processing configuration.  See processing_configuration block below for details.</summary>
+    [JsonPropertyName("processingConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfigurationProcessingConfiguration>? ProcessingConfiguration { get; set; }
+
+    /// <summary>The period of time, in seconds between 0 to 7200, during which Firehose retries to deliver data to the specified destination.</summary>
+    [JsonPropertyName("retryDuration")]
+    public double? RetryDuration { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling Apache Iceberg Tables.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnRef")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnRef? RoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnSelector")]
+    public V1beta1DeliveryStreamSpecForProviderIcebergConfigurationRoleArnSelector? RoleArnSelector { get; set; }
+
+    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.</summary>
+    [JsonPropertyName("s3BackupMode")]
+    public string? S3BackupMode { get; set; }
+
+    /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
+    [JsonPropertyName("s3Configuration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfigurationS3Configuration>? S3Configuration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderKinesisSourceConfiguration
 {
     /// <summary>The kinesis stream used as the source of the firehose delivery stream.</summary>
@@ -4018,6 +4518,10 @@ public partial class V1beta1DeliveryStreamSpecForProvider
     [JsonPropertyName("httpEndpointConfiguration")]
     public IList<V1beta1DeliveryStreamSpecForProviderHttpEndpointConfiguration>? HttpEndpointConfiguration { get; set; }
 
+    /// <summary>Configuration options when destination is iceberg. See iceberg_configuration block below for details.</summary>
+    [JsonPropertyName("icebergConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecForProviderIcebergConfiguration>? IcebergConfiguration { get; set; }
+
     /// <summary>The stream and role Amazon Resource Names (ARNs) for a Kinesis data stream used as the source for a delivery stream. See kinesis_source_configuration block below for details.</summary>
     [JsonPropertyName("kinesisSourceConfiguration")]
     public IList<V1beta1DeliveryStreamSpecForProviderKinesisSourceConfiguration>? KinesisSourceConfiguration { get; set; }
@@ -5642,6 +6146,506 @@ public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurat
     /// <summary>The HTTP endpoint URL to which Kinesis Firehose sends your data.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationCloudwatchLoggingOptions
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The CloudWatch group name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The CloudWatch log stream name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logStreamName")]
+    public string? LogStreamName { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CatalogTable in glue to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CatalogTable in glue to populate tableName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfiguration
+{
+    /// <summary>Specifies the name of the AWS Glue database that contains the schema for the output data.</summary>
+    [JsonPropertyName("databaseName")]
+    public string? DatabaseName { get; set; }
+
+    /// <summary>Reference to a CatalogDatabase in glue to populate databaseName.</summary>
+    [JsonPropertyName("databaseNameRef")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameRef? DatabaseNameRef { get; set; }
+
+    /// <summary>Selector for a CatalogDatabase in glue to populate databaseName.</summary>
+    [JsonPropertyName("databaseNameSelector")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationDatabaseNameSelector? DatabaseNameSelector { get; set; }
+
+    /// <summary>The table specific S3 error output prefix. All the errors that occurred while delivering to this table will be prefixed with this value in S3 destination.</summary>
+    [JsonPropertyName("s3ErrorOutputPrefix")]
+    public string? S3ErrorOutputPrefix { get; set; }
+
+    /// <summary>Specifies the AWS Glue table that contains the column information that constitutes your data schema.</summary>
+    [JsonPropertyName("tableName")]
+    public string? TableName { get; set; }
+
+    /// <summary>Reference to a CatalogTable in glue to populate tableName.</summary>
+    [JsonPropertyName("tableNameRef")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameRef? TableNameRef { get; set; }
+
+    /// <summary>Selector for a CatalogTable in glue to populate tableName.</summary>
+    [JsonPropertyName("tableNameSelector")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfigurationTableNameSelector? TableNameSelector { get; set; }
+
+    /// <summary>A list of unique keys for a given Apache Iceberg table. Firehose will use these for running Create, Update, or Delete operations on the given Iceberg table.</summary>
+    [JsonPropertyName("uniqueKeys")]
+    public IList<string>? UniqueKeys { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationProcessingConfigurationProcessorsParameters
+{
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
+    [JsonPropertyName("parameterName")]
+    public string? ParameterName { get; set; }
+
+    /// <summary>Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.</summary>
+    [JsonPropertyName("parameterValue")]
+    public string? ParameterValue { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationProcessingConfigurationProcessors
+{
+    /// <summary>Specifies the processor parameters as multiple blocks. See parameters block below for details.</summary>
+    [JsonPropertyName("parameters")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
+
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationProcessingConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Specifies the data processors as multiple blocks. See processors block below for details.</summary>
+    [JsonPropertyName("processors")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationProcessingConfigurationProcessors>? Processors { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The CloudWatch group name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The CloudWatch log stream name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logStreamName")]
+    public string? LogStreamName { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3Configuration
+{
+    /// <summary>The ARN of the S3 bucket</summary>
+    [JsonPropertyName("bucketArn")]
+    public string? BucketArn { get; set; }
+
+    /// <summary>Reference to a Bucket in s3 to populate bucketArn.</summary>
+    [JsonPropertyName("bucketArnRef")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnRef? BucketArnRef { get; set; }
+
+    /// <summary>Selector for a Bucket in s3 to populate bucketArn.</summary>
+    [JsonPropertyName("bucketArnSelector")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationBucketArnSelector? BucketArnSelector { get; set; }
+
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 60, before delivering it to the destination.  The default value is 60s.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 to 5, before delivering it to the destination.  The default value is 5MB.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
+    /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
+    [JsonPropertyName("cloudwatchLoggingOptions")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
+
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
+    [JsonPropertyName("compressionFormat")]
+    public string? CompressionFormat { get; set; }
+
+    /// <summary>Prefix added to failed records before writing them to S3. Not currently supported for redshift destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see Custom Prefixes for Amazon S3 Objects.</summary>
+    [JsonPropertyName("errorOutputPrefix")]
+    public string? ErrorOutputPrefix { get; set; }
+
+    /// <summary>Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will be used.</summary>
+    [JsonPropertyName("kmsKeyArn")]
+    public string? KmsKeyArn { get; set; }
+
+    /// <summary>The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</summary>
+    [JsonPropertyName("prefix")]
+    public string? Prefix { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnRef")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnRef? RoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnSelector")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3ConfigurationRoleArnSelector? RoleArnSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamSpecInitProviderIcebergConfiguration
+{
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 and 900, before delivering it to the destination. The default value is 300.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 and 128, before delivering it to the destination. The default value is 5.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
+    /// <summary>Glue catalog ARN identifier of the destination Apache Iceberg Tables. You must specify the ARN in the format arn:aws:glue:region:account-id:catalog</summary>
+    [JsonPropertyName("catalogArn")]
+    public string? CatalogArn { get; set; }
+
+    /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
+    [JsonPropertyName("cloudwatchLoggingOptions")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
+
+    /// <summary>Destination table configurations which Firehose uses to deliver data to Apache Iceberg Tables. Firehose will write data with insert if table specific configuration is not provided. See destination_table_configuration block below for details.</summary>
+    [JsonPropertyName("destinationTableConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationDestinationTableConfiguration>? DestinationTableConfiguration { get; set; }
+
+    /// <summary>The data processing configuration.  See processing_configuration block below for details.</summary>
+    [JsonPropertyName("processingConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationProcessingConfiguration>? ProcessingConfiguration { get; set; }
+
+    /// <summary>The period of time, in seconds between 0 to 7200, during which Firehose retries to deliver data to the specified destination.</summary>
+    [JsonPropertyName("retryDuration")]
+    public double? RetryDuration { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling Apache Iceberg Tables.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnRef")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnRef? RoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnSelector")]
+    public V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationRoleArnSelector? RoleArnSelector { get; set; }
+
+    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.</summary>
+    [JsonPropertyName("s3BackupMode")]
+    public string? S3BackupMode { get; set; }
+
+    /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
+    [JsonPropertyName("s3Configuration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfigurationS3Configuration>? S3Configuration { get; set; }
 }
 
 /// <summary></summary>
@@ -8073,6 +9077,10 @@ public partial class V1beta1DeliveryStreamSpecInitProvider
     [JsonPropertyName("httpEndpointConfiguration")]
     public IList<V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfiguration>? HttpEndpointConfiguration { get; set; }
 
+    /// <summary>Configuration options when destination is iceberg. See iceberg_configuration block below for details.</summary>
+    [JsonPropertyName("icebergConfiguration")]
+    public IList<V1beta1DeliveryStreamSpecInitProviderIcebergConfiguration>? IcebergConfiguration { get; set; }
+
     /// <summary>The stream and role Amazon Resource Names (ARNs) for a Kinesis data stream used as the source for a delivery stream. See kinesis_source_configuration block below for details.</summary>
     [JsonPropertyName("kinesisSourceConfiguration")]
     public IList<V1beta1DeliveryStreamSpecInitProviderKinesisSourceConfiguration>? KinesisSourceConfiguration { get; set; }
@@ -9044,6 +10052,186 @@ public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurat
     /// <summary>The HTTP endpoint URL to which Kinesis Firehose sends your data.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationCloudwatchLoggingOptions
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The CloudWatch group name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The CloudWatch log stream name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logStreamName")]
+    public string? LogStreamName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationDestinationTableConfiguration
+{
+    /// <summary>Specifies the name of the AWS Glue database that contains the schema for the output data.</summary>
+    [JsonPropertyName("databaseName")]
+    public string? DatabaseName { get; set; }
+
+    /// <summary>The table specific S3 error output prefix. All the errors that occurred while delivering to this table will be prefixed with this value in S3 destination.</summary>
+    [JsonPropertyName("s3ErrorOutputPrefix")]
+    public string? S3ErrorOutputPrefix { get; set; }
+
+    /// <summary>Specifies the AWS Glue table that contains the column information that constitutes your data schema.</summary>
+    [JsonPropertyName("tableName")]
+    public string? TableName { get; set; }
+
+    /// <summary>A list of unique keys for a given Apache Iceberg table. Firehose will use these for running Create, Update, or Delete operations on the given Iceberg table.</summary>
+    [JsonPropertyName("uniqueKeys")]
+    public IList<string>? UniqueKeys { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationProcessingConfigurationProcessorsParameters
+{
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
+    [JsonPropertyName("parameterName")]
+    public string? ParameterName { get; set; }
+
+    /// <summary>Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.</summary>
+    [JsonPropertyName("parameterValue")]
+    public string? ParameterValue { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationProcessingConfigurationProcessors
+{
+    /// <summary>Specifies the processor parameters as multiple blocks. See parameters block below for details.</summary>
+    [JsonPropertyName("parameters")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
+
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationProcessingConfiguration
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Specifies the data processors as multiple blocks. See processors block below for details.</summary>
+    [JsonPropertyName("processors")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationProcessingConfigurationProcessors>? Processors { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions
+{
+    /// <summary>Enables or disables the logging. Defaults to false.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The CloudWatch group name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logGroupName")]
+    public string? LogGroupName { get; set; }
+
+    /// <summary>The CloudWatch log stream name for logging. This value is required if enabled is true.</summary>
+    [JsonPropertyName("logStreamName")]
+    public string? LogStreamName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationS3Configuration
+{
+    /// <summary>The ARN of the S3 bucket</summary>
+    [JsonPropertyName("bucketArn")]
+    public string? BucketArn { get; set; }
+
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 to 60, before delivering it to the destination.  The default value is 60s.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 to 5, before delivering it to the destination.  The default value is 5MB.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
+    /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
+    [JsonPropertyName("cloudwatchLoggingOptions")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
+
+    /// <summary>The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP, Snappy, &amp; HADOOP_SNAPPY.</summary>
+    [JsonPropertyName("compressionFormat")]
+    public string? CompressionFormat { get; set; }
+
+    /// <summary>Prefix added to failed records before writing them to S3. Not currently supported for redshift destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see Custom Prefixes for Amazon S3 Objects.</summary>
+    [JsonPropertyName("errorOutputPrefix")]
+    public string? ErrorOutputPrefix { get; set; }
+
+    /// <summary>Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will be used.</summary>
+    [JsonPropertyName("kmsKeyArn")]
+    public string? KmsKeyArn { get; set; }
+
+    /// <summary>The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</summary>
+    [JsonPropertyName("prefix")]
+    public string? Prefix { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary IAM permissions</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeliveryStreamStatusAtProviderIcebergConfiguration
+{
+    /// <summary>Buffer incoming data for the specified period of time, in seconds between 0 and 900, before delivering it to the destination. The default value is 300.</summary>
+    [JsonPropertyName("bufferingInterval")]
+    public double? BufferingInterval { get; set; }
+
+    /// <summary>Buffer incoming data to the specified size, in MBs between 1 and 128, before delivering it to the destination. The default value is 5.</summary>
+    [JsonPropertyName("bufferingSize")]
+    public double? BufferingSize { get; set; }
+
+    /// <summary>Glue catalog ARN identifier of the destination Apache Iceberg Tables. You must specify the ARN in the format arn:aws:glue:region:account-id:catalog</summary>
+    [JsonPropertyName("catalogArn")]
+    public string? CatalogArn { get; set; }
+
+    /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
+    [JsonPropertyName("cloudwatchLoggingOptions")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationCloudwatchLoggingOptions>? CloudwatchLoggingOptions { get; set; }
+
+    /// <summary>Destination table configurations which Firehose uses to deliver data to Apache Iceberg Tables. Firehose will write data with insert if table specific configuration is not provided. See destination_table_configuration block below for details.</summary>
+    [JsonPropertyName("destinationTableConfiguration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationDestinationTableConfiguration>? DestinationTableConfiguration { get; set; }
+
+    /// <summary>The data processing configuration.  See processing_configuration block below for details.</summary>
+    [JsonPropertyName("processingConfiguration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationProcessingConfiguration>? ProcessingConfiguration { get; set; }
+
+    /// <summary>The period of time, in seconds between 0 to 7200, during which Firehose retries to deliver data to the specified destination.</summary>
+    [JsonPropertyName("retryDuration")]
+    public double? RetryDuration { get; set; }
+
+    /// <summary>The ARN of the IAM role to be assumed by Firehose for calling Apache Iceberg Tables.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.</summary>
+    [JsonPropertyName("s3BackupMode")]
+    public string? S3BackupMode { get; set; }
+
+    /// <summary>The S3 Configuration. See s3_configuration block below for details.</summary>
+    [JsonPropertyName("s3Configuration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfigurationS3Configuration>? S3Configuration { get; set; }
 }
 
 /// <summary></summary>
@@ -10186,6 +11374,10 @@ public partial class V1beta1DeliveryStreamStatusAtProvider
     /// <summary>Configuration options when destination is http_endpoint. Requires the user to also specify an s3_configuration block.  See http_endpoint_configuration block below for details.</summary>
     [JsonPropertyName("httpEndpointConfiguration")]
     public IList<V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfiguration>? HttpEndpointConfiguration { get; set; }
+
+    /// <summary>Configuration options when destination is iceberg. See iceberg_configuration block below for details.</summary>
+    [JsonPropertyName("icebergConfiguration")]
+    public IList<V1beta1DeliveryStreamStatusAtProviderIcebergConfiguration>? IcebergConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]

@@ -75,6 +75,19 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsEmrServerlessSettings
+{
+    /// <summary>The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.</summary>
+    [JsonPropertyName("executionRoleArn")]
+    public string? ExecutionRoleArn { get; set; }
+
+    /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The user profile Amazon Resource Name (ARN).</summary>
@@ -155,6 +168,10 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     [JsonPropertyName("directDeploySettings")]
     public IList<V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsDirectDeploySettings>? DirectDeploySettings { get; set; }
 
+    /// <summary>The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.</summary>
+    [JsonPropertyName("emrServerlessSettings")]
+    public IList<V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsEmrServerlessSettings>? EmrServerlessSettings { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("generativeAiSettings")]
     public V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsGenerativeAiSettings? GenerativeAiSettings { get; set; }
@@ -178,6 +195,36 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSetti
     /// <summary>The workspace settings for the SageMaker Canvas application. See Workspace Settings below.</summary>
     [JsonPropertyName("workspaceSettings")]
     public IList<V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+
+    /// <summary>Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("lifecycleManagement")]
+    public string? LifecycleManagement { get; set; }
+
+    /// <summary>The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("maxIdleTimeoutInMinutes")]
+    public double? MaxIdleTimeoutInMinutes { get; set; }
+
+    /// <summary>The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("minIdleTimeoutInMinutes")]
+    public double? MinIdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. see idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -226,6 +273,14 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettings
 {
+    /// <summary>Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
+    /// <summary>The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.</summary>
+    [JsonPropertyName("builtInLifecycleConfigArn")]
+    public string? BuiltInLifecycleConfigArn { get; set; }
+
     /// <summary>A list of custom SageMaker images that are configured to run as a CodeEditor app. see Custom Image below.</summary>
     [JsonPropertyName("customImage")]
     public IList<V1beta1UserProfileSpecForProviderUserSettingsCodeEditorAppSettingsCustomImage>? CustomImage { get; set; }
@@ -272,6 +327,36 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsCustomPosixUse
     /// <summary>The POSIX user ID.</summary>
     [JsonPropertyName("uid")]
     public double? Uid { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+
+    /// <summary>Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("lifecycleManagement")]
+    public string? LifecycleManagement { get; set; }
+
+    /// <summary>The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("maxIdleTimeoutInMinutes")]
+    public double? MaxIdleTimeoutInMinutes { get; set; }
+
+    /// <summary>The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("minIdleTimeoutInMinutes")]
+    public double? MinIdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. see idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -327,8 +412,29 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsEmrSettings
+{
+    /// <summary>An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.</summary>
+    [JsonPropertyName("assumableRoleArns")]
+    public IList<string>? AssumableRoleArns { get; set; }
+
+    /// <summary>An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.</summary>
+    [JsonPropertyName("executionRoleArns")]
+    public IList<string>? ExecutionRoleArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettings
 {
+    /// <summary>Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
+    /// <summary>The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.</summary>
+    [JsonPropertyName("builtInLifecycleConfigArn")]
+    public string? BuiltInLifecycleConfigArn { get; set; }
+
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
@@ -340,6 +446,10 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppS
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
+
+    /// <summary>The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.</summary>
+    [JsonPropertyName("emrSettings")]
+    public IList<V1beta1UserProfileSpecForProviderUserSettingsJupyterLabAppSettingsEmrSettings>? EmrSettings { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configurations.</summary>
     [JsonPropertyName("lifecycleConfigArns")]
@@ -571,6 +681,10 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsStudioWebPorta
     [JsonPropertyName("hiddenAppTypes")]
     public IList<string>? HiddenAppTypes { get; set; }
 
+    /// <summary>The instance types you are hiding from the Studio user interface.</summary>
+    [JsonPropertyName("hiddenInstanceTypes")]
+    public IList<string>? HiddenInstanceTypes { get; set; }
+
     /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
     [JsonPropertyName("hiddenMlTools")]
     public IList<string>? HiddenMlTools { get; set; }
@@ -614,6 +728,10 @@ public partial class V1beta1UserProfileSpecForProviderUserSettingsTensorBoardApp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecForProviderUserSettings
 {
+    /// <summary>Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.</summary>
+    [JsonPropertyName("autoMountHomeEfs")]
+    public string? AutoMountHomeEfs { get; set; }
+
     /// <summary>The Canvas app settings. See Canvas App Settings below.</summary>
     [JsonPropertyName("canvasAppSettings")]
     public IList<V1beta1UserProfileSpecForProviderUserSettingsCanvasAppSettings>? CanvasAppSettings { get; set; }
@@ -791,6 +909,19 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsEmrServerlessSettings
+{
+    /// <summary>The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.</summary>
+    [JsonPropertyName("executionRoleArn")]
+    public string? ExecutionRoleArn { get; set; }
+
+    /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The user profile Amazon Resource Name (ARN).</summary>
@@ -871,6 +1002,10 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     [JsonPropertyName("directDeploySettings")]
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsDirectDeploySettings>? DirectDeploySettings { get; set; }
 
+    /// <summary>The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.</summary>
+    [JsonPropertyName("emrServerlessSettings")]
+    public IList<V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsEmrServerlessSettings>? EmrServerlessSettings { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("generativeAiSettings")]
     public V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsGenerativeAiSettings? GenerativeAiSettings { get; set; }
@@ -894,6 +1029,36 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSett
     /// <summary>The workspace settings for the SageMaker Canvas application. See Workspace Settings below.</summary>
     [JsonPropertyName("workspaceSettings")]
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+
+    /// <summary>Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("lifecycleManagement")]
+    public string? LifecycleManagement { get; set; }
+
+    /// <summary>The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("maxIdleTimeoutInMinutes")]
+    public double? MaxIdleTimeoutInMinutes { get; set; }
+
+    /// <summary>The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("minIdleTimeoutInMinutes")]
+    public double? MinIdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. see idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -942,6 +1107,14 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorApp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettings
 {
+    /// <summary>Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
+    /// <summary>The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.</summary>
+    [JsonPropertyName("builtInLifecycleConfigArn")]
+    public string? BuiltInLifecycleConfigArn { get; set; }
+
     /// <summary>A list of custom SageMaker images that are configured to run as a CodeEditor app. see Custom Image below.</summary>
     [JsonPropertyName("customImage")]
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsCodeEditorAppSettingsCustomImage>? CustomImage { get; set; }
@@ -988,6 +1161,36 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsCustomPosixUs
     /// <summary>The POSIX user ID.</summary>
     [JsonPropertyName("uid")]
     public double? Uid { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+
+    /// <summary>Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("lifecycleManagement")]
+    public string? LifecycleManagement { get; set; }
+
+    /// <summary>The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("maxIdleTimeoutInMinutes")]
+    public double? MaxIdleTimeoutInMinutes { get; set; }
+
+    /// <summary>The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("minIdleTimeoutInMinutes")]
+    public double? MinIdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. see idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -1043,8 +1246,29 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabApp
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsEmrSettings
+{
+    /// <summary>An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.</summary>
+    [JsonPropertyName("assumableRoleArns")]
+    public IList<string>? AssumableRoleArns { get; set; }
+
+    /// <summary>An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.</summary>
+    [JsonPropertyName("executionRoleArns")]
+    public IList<string>? ExecutionRoleArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettings
 {
+    /// <summary>Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
+    /// <summary>The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.</summary>
+    [JsonPropertyName("builtInLifecycleConfigArn")]
+    public string? BuiltInLifecycleConfigArn { get; set; }
+
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
@@ -1056,6 +1280,10 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabApp
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
+
+    /// <summary>The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.</summary>
+    [JsonPropertyName("emrSettings")]
+    public IList<V1beta1UserProfileSpecInitProviderUserSettingsJupyterLabAppSettingsEmrSettings>? EmrSettings { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configurations.</summary>
     [JsonPropertyName("lifecycleConfigArns")]
@@ -1287,6 +1515,10 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsStudioWebPort
     [JsonPropertyName("hiddenAppTypes")]
     public IList<string>? HiddenAppTypes { get; set; }
 
+    /// <summary>The instance types you are hiding from the Studio user interface.</summary>
+    [JsonPropertyName("hiddenInstanceTypes")]
+    public IList<string>? HiddenInstanceTypes { get; set; }
+
     /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
     [JsonPropertyName("hiddenMlTools")]
     public IList<string>? HiddenMlTools { get; set; }
@@ -1330,6 +1562,10 @@ public partial class V1beta1UserProfileSpecInitProviderUserSettingsTensorBoardAp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileSpecInitProviderUserSettings
 {
+    /// <summary>Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.</summary>
+    [JsonPropertyName("autoMountHomeEfs")]
+    public string? AutoMountHomeEfs { get; set; }
+
     /// <summary>The Canvas app settings. See Canvas App Settings below.</summary>
     [JsonPropertyName("canvasAppSettings")]
     public IList<V1beta1UserProfileSpecInitProviderUserSettingsCanvasAppSettings>? CanvasAppSettings { get; set; }
@@ -1579,6 +1815,19 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsEmrServerlessSettings
+{
+    /// <summary>The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.</summary>
+    [JsonPropertyName("executionRoleArn")]
+    public string? ExecutionRoleArn { get; set; }
+
+    /// <summary>Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsGenerativeAiSettings
 {
     /// <summary>The user profile Amazon Resource Name (ARN).</summary>
@@ -1659,6 +1908,10 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     [JsonPropertyName("directDeploySettings")]
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsDirectDeploySettings>? DirectDeploySettings { get; set; }
 
+    /// <summary>The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.</summary>
+    [JsonPropertyName("emrServerlessSettings")]
+    public IList<V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsEmrServerlessSettings>? EmrServerlessSettings { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("generativeAiSettings")]
     public V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsGenerativeAiSettings? GenerativeAiSettings { get; set; }
@@ -1682,6 +1935,36 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSett
     /// <summary>The workspace settings for the SageMaker Canvas application. See Workspace Settings below.</summary>
     [JsonPropertyName("workspaceSettings")]
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettingsWorkspaceSettings>? WorkspaceSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+
+    /// <summary>Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("lifecycleManagement")]
+    public string? LifecycleManagement { get; set; }
+
+    /// <summary>The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("maxIdleTimeoutInMinutes")]
+    public double? MaxIdleTimeoutInMinutes { get; set; }
+
+    /// <summary>The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("minIdleTimeoutInMinutes")]
+    public double? MinIdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. see idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -1730,6 +2013,14 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorApp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettings
 {
+    /// <summary>Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
+    /// <summary>The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.</summary>
+    [JsonPropertyName("builtInLifecycleConfigArn")]
+    public string? BuiltInLifecycleConfigArn { get; set; }
+
     /// <summary>A list of custom SageMaker images that are configured to run as a CodeEditor app. see Custom Image below.</summary>
     [JsonPropertyName("customImage")]
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsCodeEditorAppSettingsCustomImage>? CustomImage { get; set; }
@@ -1776,6 +2067,36 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsCustomPosixUs
     /// <summary>The POSIX user ID.</summary>
     [JsonPropertyName("uid")]
     public double? Uid { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
+{
+    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("idleTimeoutInMinutes")]
+    public double? IdleTimeoutInMinutes { get; set; }
+
+    /// <summary>Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.</summary>
+    [JsonPropertyName("lifecycleManagement")]
+    public string? LifecycleManagement { get; set; }
+
+    /// <summary>The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("maxIdleTimeoutInMinutes")]
+    public double? MaxIdleTimeoutInMinutes { get; set; }
+
+    /// <summary>The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.</summary>
+    [JsonPropertyName("minIdleTimeoutInMinutes")]
+    public double? MinIdleTimeoutInMinutes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagement
+{
+    /// <summary>Settings related to idle shutdown of Studio applications. see idle_settings Block below.</summary>
+    [JsonPropertyName("idleSettings")]
+    public IList<V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings>? IdleSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -1831,8 +2152,29 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabApp
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsEmrSettings
+{
+    /// <summary>An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.</summary>
+    [JsonPropertyName("assumableRoleArns")]
+    public IList<string>? AssumableRoleArns { get; set; }
+
+    /// <summary>An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.</summary>
+    [JsonPropertyName("executionRoleArns")]
+    public IList<string>? ExecutionRoleArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettings
 {
+    /// <summary>Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.</summary>
+    [JsonPropertyName("appLifecycleManagement")]
+    public IList<V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
+
+    /// <summary>The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.</summary>
+    [JsonPropertyName("builtInLifecycleConfigArn")]
+    public string? BuiltInLifecycleConfigArn { get; set; }
+
     /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
@@ -1844,6 +2186,10 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabApp
     /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
+
+    /// <summary>The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.</summary>
+    [JsonPropertyName("emrSettings")]
+    public IList<V1beta1UserProfileStatusAtProviderUserSettingsJupyterLabAppSettingsEmrSettings>? EmrSettings { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the Lifecycle Configurations.</summary>
     [JsonPropertyName("lifecycleConfigArns")]
@@ -2075,6 +2421,10 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsStudioWebPort
     [JsonPropertyName("hiddenAppTypes")]
     public IList<string>? HiddenAppTypes { get; set; }
 
+    /// <summary>The instance types you are hiding from the Studio user interface.</summary>
+    [JsonPropertyName("hiddenInstanceTypes")]
+    public IList<string>? HiddenInstanceTypes { get; set; }
+
     /// <summary>The machine learning tools that are hidden from the Studio left navigation pane.</summary>
     [JsonPropertyName("hiddenMlTools")]
     public IList<string>? HiddenMlTools { get; set; }
@@ -2118,6 +2468,10 @@ public partial class V1beta1UserProfileStatusAtProviderUserSettingsTensorBoardAp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserProfileStatusAtProviderUserSettings
 {
+    /// <summary>Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.</summary>
+    [JsonPropertyName("autoMountHomeEfs")]
+    public string? AutoMountHomeEfs { get; set; }
+
     /// <summary>The Canvas app settings. See Canvas App Settings below.</summary>
     [JsonPropertyName("canvasAppSettings")]
     public IList<V1beta1UserProfileStatusAtProviderUserSettingsCanvasAppSettings>? CanvasAppSettings { get; set; }

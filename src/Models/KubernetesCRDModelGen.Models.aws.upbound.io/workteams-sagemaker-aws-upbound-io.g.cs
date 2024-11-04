@@ -363,7 +363,7 @@ public partial class V1beta1WorkteamSpecForProvider
     [JsonPropertyName("workerAccessConfiguration")]
     public V1beta1WorkteamSpecForProviderWorkerAccessConfiguration? WorkerAccessConfiguration { get; set; }
 
-    /// <summary>The name of the Workteam (must be unique).</summary>
+    /// <summary>The name of the workforce.</summary>
     [JsonPropertyName("workforceName")]
     public string? WorkforceName { get; set; }
 
@@ -727,7 +727,7 @@ public partial class V1beta1WorkteamSpecInitProvider
     [JsonPropertyName("workerAccessConfiguration")]
     public V1beta1WorkteamSpecInitProviderWorkerAccessConfiguration? WorkerAccessConfiguration { get; set; }
 
-    /// <summary>The name of the Workteam (must be unique).</summary>
+    /// <summary>The name of the workforce.</summary>
     [JsonPropertyName("workforceName")]
     public string? WorkforceName { get; set; }
 
@@ -991,7 +991,7 @@ public partial class V1beta1WorkteamStatusAtProvider
     [JsonPropertyName("workerAccessConfiguration")]
     public V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration? WorkerAccessConfiguration { get; set; }
 
-    /// <summary>The name of the Workteam (must be unique).</summary>
+    /// <summary>The name of the workforce.</summary>
     [JsonPropertyName("workforceName")]
     public string? WorkforceName { get; set; }
 }

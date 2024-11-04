@@ -102,7 +102,7 @@ spec:
                     description: Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are single-az or cross-az, default is single-az. If you want to choose cross-az, num_cache_nodes must be greater than 1.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
+                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.
                     type: string
                   engineVersion:
                     description: >-
@@ -609,7 +609,7 @@ spec:
                     description: Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are single-az or cross-az, default is single-az. If you want to choose cross-az, num_cache_nodes must be greater than 1.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
+                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.
                     type: string
                   engineVersion:
                     description: >-
@@ -1330,7 +1330,7 @@ spec:
                     description: (Memcached only) Configuration endpoint to allow host discovery.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
+                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.
                     type: string
                   engineVersion:
                     description: >-

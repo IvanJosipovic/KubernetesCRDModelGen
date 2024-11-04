@@ -264,6 +264,10 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProvider
     /// <summary>List of configuration blocks describing the rules managing the replication. See below.</summary>
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketLifecycleConfigurationSpecForProviderRule>? Rule { get; set; }
+
+    /// <summary>The default minimum object size behavior applied to the lifecycle configuration. Valid values: all_storage_classes_128K (default), varies_by_storage_class. To customize the minimum object size for any transition you can add a filter that specifies a custom object_size_greater_than or object_size_less_than value. Custom filters always take precedence over the default transition behavior.</summary>
+    [JsonPropertyName("transitionDefaultMinimumObjectSize")]
+    public string? TransitionDefaultMinimumObjectSize { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -518,6 +522,10 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProvider
     /// <summary>List of configuration blocks describing the rules managing the replication. See below.</summary>
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketLifecycleConfigurationSpecInitProviderRule>? Rule { get; set; }
+
+    /// <summary>The default minimum object size behavior applied to the lifecycle configuration. Valid values: all_storage_classes_128K (default), varies_by_storage_class. To customize the minimum object size for any transition you can add a filter that specifies a custom object_size_greater_than or object_size_less_than value. Custom filters always take precedence over the default transition behavior.</summary>
+    [JsonPropertyName("transitionDefaultMinimumObjectSize")]
+    public string? TransitionDefaultMinimumObjectSize { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -844,6 +852,10 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProvider
     /// <summary>List of configuration blocks describing the rules managing the replication. See below.</summary>
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketLifecycleConfigurationStatusAtProviderRule>? Rule { get; set; }
+
+    /// <summary>The default minimum object size behavior applied to the lifecycle configuration. Valid values: all_storage_classes_128K (default), varies_by_storage_class. To customize the minimum object size for any transition you can add a filter that specifies a custom object_size_greater_than or object_size_less_than value. Custom filters always take precedence over the default transition behavior.</summary>
+    [JsonPropertyName("transitionDefaultMinimumObjectSize")]
+    public string? TransitionDefaultMinimumObjectSize { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

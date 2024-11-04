@@ -485,6 +485,10 @@ public partial class V1beta1LBListenerSpecForProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.</summary>
+    [JsonPropertyName("tcpIdleTimeoutSeconds")]
+    public double? TcpIdleTimeoutSeconds { get; set; }
 }
 
 /// <summary></summary>
@@ -960,6 +964,10 @@ public partial class V1beta1LBListenerSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.</summary>
+    [JsonPropertyName("tcpIdleTimeoutSeconds")]
+    public double? TcpIdleTimeoutSeconds { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1366,6 +1374,10 @@ public partial class V1beta1LBListenerStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>TCP idle timeout value in seconds. Can only be set if protocol is TCP on Network Load Balancer, or with a Gateway Load Balancer. Not supported for Application Load Balancers. Valid values are between 60 and 6000 inclusive. Default: 350.</summary>
+    [JsonPropertyName("tcpIdleTimeoutSeconds")]
+    public double? TcpIdleTimeoutSeconds { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -84,6 +84,15 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  appsyncTarget:
+                    description: Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.
+                    items:
+                      properties:
+                        graphqlOperation:
+                          description: Contains the GraphQL mutation to be parsed and executed.
+                          type: string
+                      type: object
+                    type: array
                   arn:
                     description: The Amazon Resource Name (ARN) of the target.
                     type: string
@@ -730,6 +739,15 @@ spec:
 
                   autoscaler.
                 properties:
+                  appsyncTarget:
+                    description: Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.
+                    items:
+                      properties:
+                        graphqlOperation:
+                          description: Contains the GraphQL mutation to be parsed and executed.
+                          type: string
+                      type: object
+                    type: array
                   arn:
                     description: The Amazon Resource Name (ARN) of the target.
                     type: string
@@ -1565,6 +1583,15 @@ spec:
             properties:
               atProvider:
                 properties:
+                  appsyncTarget:
+                    description: Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.
+                    items:
+                      properties:
+                        graphqlOperation:
+                          description: Contains the GraphQL mutation to be parsed and executed.
+                          type: string
+                      type: object
+                    type: array
                   arn:
                     description: The Amazon Resource Name (ARN) of the target.
                     type: string
@@ -1975,6 +2002,13 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  appsyncTarget:
+                    description: Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.
+                    properties:
+                      graphqlOperation:
+                        description: Contains the GraphQL mutation to be parsed and executed.
+                        type: string
+                    type: object
                   arn:
                     description: The Amazon Resource Name (ARN) of the target.
                     type: string
@@ -2599,6 +2633,13 @@ spec:
 
                   autoscaler.
                 properties:
+                  appsyncTarget:
+                    description: Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.
+                    properties:
+                      graphqlOperation:
+                        description: Contains the GraphQL mutation to be parsed and executed.
+                        type: string
+                    type: object
                   arn:
                     description: The Amazon Resource Name (ARN) of the target.
                     type: string
@@ -3412,6 +3453,13 @@ spec:
             properties:
               atProvider:
                 properties:
+                  appsyncTarget:
+                    description: Parameters used when you are using the rule to invoke an AppSync GraphQL API mutation. Documented below. A maximum of 1 are allowed.
+                    properties:
+                      graphqlOperation:
+                        description: Contains the GraphQL mutation to be parsed and executed.
+                        type: string
+                    type: object
                   arn:
                     description: The Amazon Resource Name (ARN) of the target.
                     type: string

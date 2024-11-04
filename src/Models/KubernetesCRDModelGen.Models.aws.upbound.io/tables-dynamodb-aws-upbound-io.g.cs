@@ -23,6 +23,19 @@ public partial class V1beta1TableSpecForProviderAttribute
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecForProviderGlobalSecondaryIndexOnDemandThroughput
+{
+    /// <summary>Maximum number of read request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxReadRequestUnits")]
+    public double? MaxReadRequestUnits { get; set; }
+
+    /// <summary>Maximum number of write request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxWriteRequestUnits")]
+    public double? MaxWriteRequestUnits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderGlobalSecondaryIndex
 {
     /// <summary>Name of the hash key in the index; must be defined as an attribute in the resource.</summary>
@@ -36,6 +49,10 @@ public partial class V1beta1TableSpecForProviderGlobalSecondaryIndex
     /// <summary>Only required with INCLUDE as a projection type; a list of attributes to project into the index. These do not need to be defined as attributes on the table.</summary>
     [JsonPropertyName("nonKeyAttributes")]
     public IList<string>? NonKeyAttributes { get; set; }
+
+    /// <summary>Sets the maximum number of read and write units for the specified on-demand table. See below.</summary>
+    [JsonPropertyName("onDemandThroughput")]
+    public IList<V1beta1TableSpecForProviderGlobalSecondaryIndexOnDemandThroughput>? OnDemandThroughput { get; set; }
 
     /// <summary>One of ALL, INCLUDE or KEYS_ONLY where ALL projects every attribute into the index, KEYS_ONLY projects  into the index only the table and index hash_key and sort_key attributes ,  INCLUDE projects into the index all of the attributes that are defined in non_key_attributes in addition to the attributes that thatKEYS_ONLY project.</summary>
     [JsonPropertyName("projectionType")]
@@ -137,6 +154,19 @@ public partial class V1beta1TableSpecForProviderLocalSecondaryIndex
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecForProviderOnDemandThroughput
+{
+    /// <summary>Maximum number of read request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxReadRequestUnits")]
+    public double? MaxReadRequestUnits { get; set; }
+
+    /// <summary>Maximum number of write request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxWriteRequestUnits")]
+    public double? MaxWriteRequestUnits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderPointInTimeRecovery
 {
     /// <summary>Whether to enable point-in-time recovery. It can take 10 minutes to enable for new tables. If the point_in_time_recovery block is not provided, this defaults to false.</summary>
@@ -223,6 +253,10 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("localSecondaryIndex")]
     public IList<V1beta1TableSpecForProviderLocalSecondaryIndex>? LocalSecondaryIndex { get; set; }
 
+    /// <summary>Sets the maximum number of read and write units for the specified on-demand table. See below.</summary>
+    [JsonPropertyName("onDemandThroughput")]
+    public IList<V1beta1TableSpecForProviderOnDemandThroughput>? OnDemandThroughput { get; set; }
+
     /// <summary>Enable point-in-time recovery options. See below.</summary>
     [JsonPropertyName("pointInTimeRecovery")]
     public IList<V1beta1TableSpecForProviderPointInTimeRecovery>? PointInTimeRecovery { get; set; }
@@ -303,6 +337,19 @@ public partial class V1beta1TableSpecInitProviderAttribute
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecInitProviderGlobalSecondaryIndexOnDemandThroughput
+{
+    /// <summary>Maximum number of read request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxReadRequestUnits")]
+    public double? MaxReadRequestUnits { get; set; }
+
+    /// <summary>Maximum number of write request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxWriteRequestUnits")]
+    public double? MaxWriteRequestUnits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderGlobalSecondaryIndex
 {
     /// <summary>Name of the hash key in the index; must be defined as an attribute in the resource.</summary>
@@ -316,6 +363,10 @@ public partial class V1beta1TableSpecInitProviderGlobalSecondaryIndex
     /// <summary>Only required with INCLUDE as a projection type; a list of attributes to project into the index. These do not need to be defined as attributes on the table.</summary>
     [JsonPropertyName("nonKeyAttributes")]
     public IList<string>? NonKeyAttributes { get; set; }
+
+    /// <summary>Sets the maximum number of read and write units for the specified on-demand table. See below.</summary>
+    [JsonPropertyName("onDemandThroughput")]
+    public IList<V1beta1TableSpecInitProviderGlobalSecondaryIndexOnDemandThroughput>? OnDemandThroughput { get; set; }
 
     /// <summary>One of ALL, INCLUDE or KEYS_ONLY where ALL projects every attribute into the index, KEYS_ONLY projects  into the index only the table and index hash_key and sort_key attributes ,  INCLUDE projects into the index all of the attributes that are defined in non_key_attributes in addition to the attributes that thatKEYS_ONLY project.</summary>
     [JsonPropertyName("projectionType")]
@@ -417,6 +468,19 @@ public partial class V1beta1TableSpecInitProviderLocalSecondaryIndex
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecInitProviderOnDemandThroughput
+{
+    /// <summary>Maximum number of read request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxReadRequestUnits")]
+    public double? MaxReadRequestUnits { get; set; }
+
+    /// <summary>Maximum number of write request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxWriteRequestUnits")]
+    public double? MaxWriteRequestUnits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderPointInTimeRecovery
 {
     /// <summary>Whether to enable point-in-time recovery. It can take 10 minutes to enable for new tables. If the point_in_time_recovery block is not provided, this defaults to false.</summary>
@@ -502,6 +566,10 @@ public partial class V1beta1TableSpecInitProvider
     /// <summary>Describe an LSI on the table; these can only be allocated at creation so you cannot change this definition after you have created the resource. See below.</summary>
     [JsonPropertyName("localSecondaryIndex")]
     public IList<V1beta1TableSpecInitProviderLocalSecondaryIndex>? LocalSecondaryIndex { get; set; }
+
+    /// <summary>Sets the maximum number of read and write units for the specified on-demand table. See below.</summary>
+    [JsonPropertyName("onDemandThroughput")]
+    public IList<V1beta1TableSpecInitProviderOnDemandThroughput>? OnDemandThroughput { get; set; }
 
     /// <summary>Enable point-in-time recovery options. See below.</summary>
     [JsonPropertyName("pointInTimeRecovery")]
@@ -711,6 +779,19 @@ public partial class V1beta1TableStatusAtProviderAttribute
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableStatusAtProviderGlobalSecondaryIndexOnDemandThroughput
+{
+    /// <summary>Maximum number of read request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxReadRequestUnits")]
+    public double? MaxReadRequestUnits { get; set; }
+
+    /// <summary>Maximum number of write request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxWriteRequestUnits")]
+    public double? MaxWriteRequestUnits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderGlobalSecondaryIndex
 {
     /// <summary>Name of the hash key in the index; must be defined as an attribute in the resource.</summary>
@@ -724,6 +805,10 @@ public partial class V1beta1TableStatusAtProviderGlobalSecondaryIndex
     /// <summary>Only required with INCLUDE as a projection type; a list of attributes to project into the index. These do not need to be defined as attributes on the table.</summary>
     [JsonPropertyName("nonKeyAttributes")]
     public IList<string>? NonKeyAttributes { get; set; }
+
+    /// <summary>Sets the maximum number of read and write units for the specified on-demand table. See below.</summary>
+    [JsonPropertyName("onDemandThroughput")]
+    public IList<V1beta1TableStatusAtProviderGlobalSecondaryIndexOnDemandThroughput>? OnDemandThroughput { get; set; }
 
     /// <summary>One of ALL, INCLUDE or KEYS_ONLY where ALL projects every attribute into the index, KEYS_ONLY projects  into the index only the table and index hash_key and sort_key attributes ,  INCLUDE projects into the index all of the attributes that are defined in non_key_attributes in addition to the attributes that thatKEYS_ONLY project.</summary>
     [JsonPropertyName("projectionType")]
@@ -821,6 +906,19 @@ public partial class V1beta1TableStatusAtProviderLocalSecondaryIndex
     /// <summary>Name of the range key.</summary>
     [JsonPropertyName("rangeKey")]
     public string? RangeKey { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableStatusAtProviderOnDemandThroughput
+{
+    /// <summary>Maximum number of read request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxReadRequestUnits")]
+    public double? MaxReadRequestUnits { get; set; }
+
+    /// <summary>Maximum number of write request units for the specified table. To specify set the value greater than or equal to 1. To remove set the value to -1.</summary>
+    [JsonPropertyName("maxWriteRequestUnits")]
+    public double? MaxWriteRequestUnits { get; set; }
 }
 
 /// <summary></summary>
@@ -930,6 +1028,10 @@ public partial class V1beta1TableStatusAtProvider
     /// <summary>Describe an LSI on the table; these can only be allocated at creation so you cannot change this definition after you have created the resource. See below.</summary>
     [JsonPropertyName("localSecondaryIndex")]
     public IList<V1beta1TableStatusAtProviderLocalSecondaryIndex>? LocalSecondaryIndex { get; set; }
+
+    /// <summary>Sets the maximum number of read and write units for the specified on-demand table. See below.</summary>
+    [JsonPropertyName("onDemandThroughput")]
+    public IList<V1beta1TableStatusAtProviderOnDemandThroughput>? OnDemandThroughput { get; set; }
 
     /// <summary>Enable point-in-time recovery options. See below.</summary>
     [JsonPropertyName("pointInTimeRecovery")]

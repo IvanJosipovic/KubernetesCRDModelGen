@@ -68,11 +68,15 @@ public partial class V1beta1EndpointSpecForProviderIpAddressSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderIpAddress
 {
-    /// <summary>The IP address in the subnet that you want to use for DNS queries.</summary>
+    /// <summary>IPv4 address in the subnet that you want to use for DNS queries.</summary>
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
-    /// <summary>The ID of the subnet that contains the IP address.</summary>
+    /// <summary>IPv6 address in the subnet that you want to use for DNS queries.</summary>
+    [JsonPropertyName("ipv6")]
+    public string? Ipv6 { get; set; }
+
+    /// <summary>ID of the subnet that contains the IP address.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -145,19 +149,19 @@ public partial class V1beta1EndpointSpecForProviderSecurityGroupIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProvider
 {
-    /// <summary>The direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
+    /// <summary>Direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
     [JsonPropertyName("direction")]
     public string? Direction { get; set; }
 
-    /// <summary>The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
+    /// <summary>Subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1EndpointSpecForProviderIpAddress>? IpAddress { get; set; }
 
-    /// <summary>The friendly name of the Route 53 Resolver endpoint.</summary>
+    /// <summary>Friendly name of the Route 53 Resolver endpoint.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
@@ -165,7 +169,7 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The Route 53 Resolver endpoint IP address type. Valid values: IPV4, IPV6, DUALSTACK.</summary>
+    /// <summary>Endpoint IP type. This endpoint type is applied to all IP addresses. Valid values are IPV6,IPV4 or DUALSTACK (both IPv4 and IPv6).</summary>
     [JsonPropertyName("resolverEndpointType")]
     public string? ResolverEndpointType { get; set; }
 
@@ -177,7 +181,7 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1EndpointSpecForProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>The ID of one or more security groups that you want to use to control access to this VPC.</summary>
+    /// <summary>ID of one or more security groups that you want to use to control access to this VPC.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -246,11 +250,15 @@ public partial class V1beta1EndpointSpecInitProviderIpAddressSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderIpAddress
 {
-    /// <summary>The IP address in the subnet that you want to use for DNS queries.</summary>
+    /// <summary>IPv4 address in the subnet that you want to use for DNS queries.</summary>
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
-    /// <summary>The ID of the subnet that contains the IP address.</summary>
+    /// <summary>IPv6 address in the subnet that you want to use for DNS queries.</summary>
+    [JsonPropertyName("ipv6")]
+    public string? Ipv6 { get; set; }
+
+    /// <summary>ID of the subnet that contains the IP address.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -323,23 +331,23 @@ public partial class V1beta1EndpointSpecInitProviderSecurityGroupIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProvider
 {
-    /// <summary>The direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
+    /// <summary>Direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
     [JsonPropertyName("direction")]
     public string? Direction { get; set; }
 
-    /// <summary>The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
+    /// <summary>Subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1EndpointSpecInitProviderIpAddress>? IpAddress { get; set; }
 
-    /// <summary>The friendly name of the Route 53 Resolver endpoint.</summary>
+    /// <summary>Friendly name of the Route 53 Resolver endpoint.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
-    /// <summary>The Route 53 Resolver endpoint IP address type. Valid values: IPV4, IPV6, DUALSTACK.</summary>
+    /// <summary>Endpoint IP type. This endpoint type is applied to all IP addresses. Valid values are IPV6,IPV4 or DUALSTACK (both IPv4 and IPv6).</summary>
     [JsonPropertyName("resolverEndpointType")]
     public string? ResolverEndpointType { get; set; }
 
@@ -351,7 +359,7 @@ public partial class V1beta1EndpointSpecInitProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1EndpointSpecInitProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>The ID of one or more security groups that you want to use to control access to this VPC.</summary>
+    /// <summary>ID of one or more security groups that you want to use to control access to this VPC.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -496,15 +504,19 @@ public partial class V1beta1EndpointSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderIpAddress
 {
-    /// <summary>The IP address in the subnet that you want to use for DNS queries.</summary>
+    /// <summary>IPv4 address in the subnet that you want to use for DNS queries.</summary>
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
-    /// <summary>The ID of the Route 53 Resolver endpoint.</summary>
+    /// <summary>ID of the Route 53 Resolver endpoint.</summary>
     [JsonPropertyName("ipId")]
     public string? IpId { get; set; }
 
-    /// <summary>The ID of the subnet that contains the IP address.</summary>
+    /// <summary>IPv6 address in the subnet that you want to use for DNS queries.</summary>
+    [JsonPropertyName("ipv6")]
+    public string? Ipv6 { get; set; }
+
+    /// <summary>ID of the subnet that contains the IP address.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
@@ -513,39 +525,39 @@ public partial class V1beta1EndpointStatusAtProviderIpAddress
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProvider
 {
-    /// <summary>The ARN of the Route 53 Resolver endpoint.</summary>
+    /// <summary>ARN of the Route 53 Resolver endpoint.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
+    /// <summary>Direction of DNS queries to or from the Route 53 Resolver endpoint. Valid values are INBOUND (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC) or OUTBOUND (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</summary>
     [JsonPropertyName("direction")]
     public string? Direction { get; set; }
 
-    /// <summary>The ID of the VPC that you want to create the resolver endpoint in.</summary>
+    /// <summary>ID of the VPC that you want to create the resolver endpoint in.</summary>
     [JsonPropertyName("hostVpcId")]
     public string? HostVpcId { get; set; }
 
-    /// <summary>The ID of the Route 53 Resolver endpoint.</summary>
+    /// <summary>ID of the Route 53 Resolver endpoint.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
+    /// <summary>Subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</summary>
     [JsonPropertyName("ipAddress")]
     public IList<V1beta1EndpointStatusAtProviderIpAddress>? IpAddress { get; set; }
 
-    /// <summary>The friendly name of the Route 53 Resolver endpoint.</summary>
+    /// <summary>Friendly name of the Route 53 Resolver endpoint.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
-    /// <summary>The Route 53 Resolver endpoint IP address type. Valid values: IPV4, IPV6, DUALSTACK.</summary>
+    /// <summary>Endpoint IP type. This endpoint type is applied to all IP addresses. Valid values are IPV6,IPV4 or DUALSTACK (both IPv4 and IPv6).</summary>
     [JsonPropertyName("resolverEndpointType")]
     public string? ResolverEndpointType { get; set; }
 
-    /// <summary>The ID of one or more security groups that you want to use to control access to this VPC.</summary>
+    /// <summary>ID of one or more security groups that you want to use to control access to this VPC.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -553,7 +565,7 @@ public partial class V1beta1EndpointStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }

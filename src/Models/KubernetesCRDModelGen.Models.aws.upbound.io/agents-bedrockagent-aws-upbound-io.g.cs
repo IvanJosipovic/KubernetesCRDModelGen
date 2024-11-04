@@ -66,6 +66,19 @@ public partial class V1beta1AgentSpecForProviderAgentResourceRoleArnSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecForProviderGuardrailConfiguration
+{
+    /// <summary>Unique identifier of the guardrail.</summary>
+    [JsonPropertyName("guardrailIdentifier")]
+    public string? GuardrailIdentifier { get; set; }
+
+    /// <summary>Version of the guardrail.</summary>
+    [JsonPropertyName("guardrailVersion")]
+    public string? GuardrailVersion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderPromptOverrideConfigurationPromptConfigurationsInferenceConfiguration
 {
     /// <summary>Maximum number of tokens to allow in the generated response.</summary>
@@ -163,6 +176,10 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("foundationModel")]
     public string? FoundationModel { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("guardrailConfiguration")]
+    public IList<V1beta1AgentSpecForProviderGuardrailConfiguration>? GuardrailConfiguration { get; set; }
+
     /// <summary>Number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent. A user interaction remains active for the amount of time specified. If no conversation occurs during this time, the session expires and Amazon Bedrock deletes any data provided before the timeout.</summary>
     [JsonPropertyName("idleSessionTtlInSeconds")]
     public double? IdleSessionTtlInSeconds { get; set; }
@@ -246,6 +263,19 @@ public partial class V1beta1AgentSpecInitProviderAgentResourceRoleArnSelector
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1AgentSpecInitProviderAgentResourceRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecInitProviderGuardrailConfiguration
+{
+    /// <summary>Unique identifier of the guardrail.</summary>
+    [JsonPropertyName("guardrailIdentifier")]
+    public string? GuardrailIdentifier { get; set; }
+
+    /// <summary>Version of the guardrail.</summary>
+    [JsonPropertyName("guardrailVersion")]
+    public string? GuardrailVersion { get; set; }
 }
 
 /// <summary></summary>
@@ -346,6 +376,10 @@ public partial class V1beta1AgentSpecInitProvider
     /// <summary>Foundation model used for orchestration by the agent.</summary>
     [JsonPropertyName("foundationModel")]
     public string? FoundationModel { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("guardrailConfiguration")]
+    public IList<V1beta1AgentSpecInitProviderGuardrailConfiguration>? GuardrailConfiguration { get; set; }
 
     /// <summary>Number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent. A user interaction remains active for the amount of time specified. If no conversation occurs during this time, the session expires and Amazon Bedrock deletes any data provided before the timeout.</summary>
     [JsonPropertyName("idleSessionTtlInSeconds")]
@@ -506,6 +540,19 @@ public partial class V1beta1AgentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentStatusAtProviderGuardrailConfiguration
+{
+    /// <summary>Unique identifier of the guardrail.</summary>
+    [JsonPropertyName("guardrailIdentifier")]
+    public string? GuardrailIdentifier { get; set; }
+
+    /// <summary>Version of the guardrail.</summary>
+    [JsonPropertyName("guardrailVersion")]
+    public string? GuardrailVersion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderPromptOverrideConfigurationPromptConfigurationsInferenceConfiguration
 {
     /// <summary>Maximum number of tokens to allow in the generated response.</summary>
@@ -606,6 +653,10 @@ public partial class V1beta1AgentStatusAtProvider
     /// <summary>Foundation model used for orchestration by the agent.</summary>
     [JsonPropertyName("foundationModel")]
     public string? FoundationModel { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("guardrailConfiguration")]
+    public IList<V1beta1AgentStatusAtProviderGuardrailConfiguration>? GuardrailConfiguration { get; set; }
 
     /// <summary>Unique identifier of the agent.</summary>
     [JsonPropertyName("id")]

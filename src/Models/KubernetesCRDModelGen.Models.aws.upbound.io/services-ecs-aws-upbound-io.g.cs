@@ -641,6 +641,23 @@ public partial class V1beta1ServiceSpecForProviderTaskDefinitionSelector
     public V1beta1ServiceSpecForProviderTaskDefinitionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolumeTagSpecifications
+{
+    /// <summary>Determines whether to propagate the tags from the task definition to the Amazon EBS volume.</summary>
+    [JsonPropertyName("propagateTags")]
+    public string? PropagateTags { get; set; }
+
+    /// <summary>The type of volume resource. Valid values, volume.</summary>
+    [JsonPropertyName("resourceType")]
+    public string? ResourceType { get; set; }
+
+    /// <summary>The tags applied to this Amazon EBS volume. AmazonECSCreated and AmazonECSManaged are reserved tags that can't be used.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
 /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolume
@@ -672,6 +689,10 @@ public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsV
     /// <summary>Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.</summary>
     [JsonPropertyName("snapshotId")]
     public string? SnapshotId { get; set; }
+
+    /// <summary>The tags to apply to the volume. See below.</summary>
+    [JsonPropertyName("tagSpecifications")]
+    public IList<V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolumeTagSpecifications>? TagSpecifications { get; set; }
 
     /// <summary>Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.</summary>
     [JsonPropertyName("throughput")]
@@ -1477,6 +1498,23 @@ public partial class V1beta1ServiceSpecInitProviderTaskDefinitionSelector
     public V1beta1ServiceSpecInitProviderTaskDefinitionSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolumeTagSpecifications
+{
+    /// <summary>Determines whether to propagate the tags from the task definition to the Amazon EBS volume.</summary>
+    [JsonPropertyName("propagateTags")]
+    public string? PropagateTags { get; set; }
+
+    /// <summary>The type of volume resource. Valid values, volume.</summary>
+    [JsonPropertyName("resourceType")]
+    public string? ResourceType { get; set; }
+
+    /// <summary>The tags applied to this Amazon EBS volume. AmazonECSCreated and AmazonECSManaged are reserved tags that can't be used.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
 /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolume
@@ -1508,6 +1546,10 @@ public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbs
     /// <summary>Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.</summary>
     [JsonPropertyName("snapshotId")]
     public string? SnapshotId { get; set; }
+
+    /// <summary>The tags to apply to the volume. See below.</summary>
+    [JsonPropertyName("tagSpecifications")]
+    public IList<V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolumeTagSpecifications>? TagSpecifications { get; set; }
 
     /// <summary>Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.</summary>
     [JsonPropertyName("throughput")]
@@ -2081,6 +2123,23 @@ public partial class V1beta1ServiceStatusAtProviderServiceRegistries
     public string? RegistryArn { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolumeTagSpecifications
+{
+    /// <summary>Determines whether to propagate the tags from the task definition to the Amazon EBS volume.</summary>
+    [JsonPropertyName("propagateTags")]
+    public string? PropagateTags { get; set; }
+
+    /// <summary>The type of volume resource. Valid values, volume.</summary>
+    [JsonPropertyName("resourceType")]
+    public string? ResourceType { get; set; }
+
+    /// <summary>The tags applied to this Amazon EBS volume. AmazonECSCreated and AmazonECSManaged are reserved tags that can't be used.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
 /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolume
@@ -2112,6 +2171,10 @@ public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbs
     /// <summary>Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.</summary>
     [JsonPropertyName("snapshotId")]
     public string? SnapshotId { get; set; }
+
+    /// <summary>The tags to apply to the volume. See below.</summary>
+    [JsonPropertyName("tagSpecifications")]
+    public IList<V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolumeTagSpecifications>? TagSpecifications { get; set; }
 
     /// <summary>Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.</summary>
     [JsonPropertyName("throughput")]

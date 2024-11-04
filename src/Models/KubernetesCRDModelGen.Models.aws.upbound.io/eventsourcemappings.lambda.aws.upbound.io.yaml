@@ -402,6 +402,12 @@ spec:
                   startingPositionTimestamp:
                     description: A timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
                   topics:
                     description: The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
                     items:
@@ -751,6 +757,12 @@ spec:
                   startingPositionTimestamp:
                     description: A timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
                   topics:
                     description: The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
                     items:
@@ -983,6 +995,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  arn:
+                    description: The event source mapping ARN.
+                    type: string
                   batchSize:
                     description: The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.
                     type: number
@@ -1134,6 +1149,18 @@ spec:
                   stateTransitionReason:
                     description: The reason the event source mapping is in its current state.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
+                    x-kubernetes-map-type: granular
                   topics:
                     description: The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
                     items:
@@ -1582,6 +1609,12 @@ spec:
                   startingPositionTimestamp:
                     description: A timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
                   topics:
                     description: The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
                     items:
@@ -1915,6 +1948,12 @@ spec:
                   startingPositionTimestamp:
                     description: A timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
                   topics:
                     description: The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
                     items:
@@ -2145,6 +2184,9 @@ spec:
                         description: A Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See AmazonManagedKafkaEventSourceConfig Syntax.
                         type: string
                     type: object
+                  arn:
+                    description: The event source mapping ARN.
+                    type: string
                   batchSize:
                     description: The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.
                     type: number
@@ -2195,7 +2237,7 @@ spec:
                         type: array
                     type: object
                   functionArn:
-                    description: 'The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from function_name above.)'
+                    description: 'The ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from function_name above.)'
                     type: string
                   functionName:
                     description: The name or the ARN of the Lambda function that will be subscribing to events.
@@ -2282,6 +2324,18 @@ spec:
                   stateTransitionReason:
                     description: The reason the event source mapping is in its current state.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
+                    x-kubernetes-map-type: granular
                   topics:
                     description: The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
                     items:

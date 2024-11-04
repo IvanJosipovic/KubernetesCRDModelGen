@@ -44,6 +44,10 @@ public partial class V1beta1TransitGatewaySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable. Default value: disable.</summary>
+    [JsonPropertyName("securityGroupReferencingSupport")]
+    public string? SecurityGroupReferencingSupport { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -88,6 +92,10 @@ public partial class V1beta1TransitGatewaySpecInitProvider
     /// <summary>Whether Multicast support is enabled. Required to use ec2_transit_gateway_multicast_domain. Valid values: disable, enable. Default value: disable.</summary>
     [JsonPropertyName("multicastSupport")]
     public string? MulticastSupport { get; set; }
+
+    /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable. Default value: disable.</summary>
+    [JsonPropertyName("securityGroupReferencingSupport")]
+    public string? SecurityGroupReferencingSupport { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -285,6 +293,10 @@ public partial class V1beta1TransitGatewayStatusAtProvider
     /// <summary>Identifier of the default propagation route table</summary>
     [JsonPropertyName("propagationDefaultRouteTableId")]
     public string? PropagationDefaultRouteTableId { get; set; }
+
+    /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable. Default value: disable.</summary>
+    [JsonPropertyName("securityGroupReferencingSupport")]
+    public string? SecurityGroupReferencingSupport { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -847,11 +847,37 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSapoDataPaginationConfig
+{
+    /// <summary>he maximum number of records that Amazon AppFlow receives in each page of the response from your SAP application.</summary>
+    [JsonPropertyName("maxPageSize")]
+    public double? MaxPageSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSapoDataParallelismConfig
+{
+    /// <summary>he maximum number of records that Amazon AppFlow receives in each page of the response from your SAP application.</summary>
+    [JsonPropertyName("maxPageSize")]
+    public double? MaxPageSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSapoData
 {
     /// <summary>Object path specified in the SAPOData flow destination.</summary>
     [JsonPropertyName("objectPath")]
     public string? ObjectPath { get; set; }
+
+    /// <summary>Sets the page size for each concurrent process that transfers OData records from your SAP instance.</summary>
+    [JsonPropertyName("paginationConfig")]
+    public IList<V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSapoDataPaginationConfig>? PaginationConfig { get; set; }
+
+    /// <summary>Sets the number of concurrent processes that transfers OData records from your SAP instance.</summary>
+    [JsonPropertyName("parallelismConfig")]
+    public IList<V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSapoDataParallelismConfig>? ParallelismConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -2047,11 +2073,37 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSapoDataPaginationConfig
+{
+    /// <summary>he maximum number of records that Amazon AppFlow receives in each page of the response from your SAP application.</summary>
+    [JsonPropertyName("maxPageSize")]
+    public double? MaxPageSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSapoDataParallelismConfig
+{
+    /// <summary>he maximum number of records that Amazon AppFlow receives in each page of the response from your SAP application.</summary>
+    [JsonPropertyName("maxPageSize")]
+    public double? MaxPageSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSapoData
 {
     /// <summary>Object path specified in the SAPOData flow destination.</summary>
     [JsonPropertyName("objectPath")]
     public string? ObjectPath { get; set; }
+
+    /// <summary>Sets the page size for each concurrent process that transfers OData records from your SAP instance.</summary>
+    [JsonPropertyName("paginationConfig")]
+    public IList<V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSapoDataPaginationConfig>? PaginationConfig { get; set; }
+
+    /// <summary>Sets the number of concurrent processes that transfers OData records from your SAP instance.</summary>
+    [JsonPropertyName("parallelismConfig")]
+    public IList<V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSapoDataParallelismConfig>? ParallelismConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -3247,11 +3299,37 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSapoDataPaginationConfig
+{
+    /// <summary>he maximum number of records that Amazon AppFlow receives in each page of the response from your SAP application.</summary>
+    [JsonPropertyName("maxPageSize")]
+    public double? MaxPageSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSapoDataParallelismConfig
+{
+    /// <summary>he maximum number of records that Amazon AppFlow receives in each page of the response from your SAP application.</summary>
+    [JsonPropertyName("maxPageSize")]
+    public double? MaxPageSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSapoData
 {
     /// <summary>Object path specified in the SAPOData flow destination.</summary>
     [JsonPropertyName("objectPath")]
     public string? ObjectPath { get; set; }
+
+    /// <summary>Sets the page size for each concurrent process that transfers OData records from your SAP instance.</summary>
+    [JsonPropertyName("paginationConfig")]
+    public IList<V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSapoDataPaginationConfig>? PaginationConfig { get; set; }
+
+    /// <summary>Sets the number of concurrent processes that transfers OData records from your SAP instance.</summary>
+    [JsonPropertyName("parallelismConfig")]
+    public IList<V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSapoDataParallelismConfig>? ParallelismConfig { get; set; }
 }
 
 /// <summary></summary>

@@ -134,6 +134,33 @@ spec:
                           description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               codeRepository:
                                 description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                                 items:
@@ -177,6 +204,24 @@ spec:
                                     sagemakerImageVersionArn:
                                       description: The ARN of the image version created on the instance.
                                       type: string
+                                  type: object
+                                type: array
+                              emrSettings:
+                                description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                                items:
+                                  properties:
+                                    assumableRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
+                                    executionRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               lifecycleConfigArns:
@@ -307,6 +352,9 @@ spec:
                     description: The default user settings. See default_user_settings Block below.
                     items:
                       properties:
+                        autoMountHomeEfs:
+                          description: 'Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.'
+                          type: string
                         canvasAppSettings:
                           description: The Canvas app settings. See canvas_app_settings Block below.
                           items:
@@ -315,6 +363,18 @@ spec:
                                 description: The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.
                                 items:
                                   properties:
+                                    status:
+                                      description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
+                                      type: string
+                                  type: object
+                                type: array
+                              emrServerlessSettings:
+                                description: The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.
+                                items:
+                                  properties:
+                                    executionRoleArn:
+                                      description: The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.
+                                      type: string
                                     status:
                                       description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                       type: string
@@ -392,6 +452,33 @@ spec:
                           description: The Code Editor application settings. See code_editor_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               customImage:
                                 description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
                                 items:
@@ -562,6 +649,33 @@ spec:
                           description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               codeRepository:
                                 description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                                 items:
@@ -605,6 +719,24 @@ spec:
                                     sagemakerImageVersionArn:
                                       description: The ARN of the image version created on the instance.
                                       type: string
+                                  type: object
+                                type: array
+                              emrSettings:
+                                description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                                items:
+                                  properties:
+                                    assumableRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
+                                    executionRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               lifecycleConfigArns:
@@ -979,6 +1111,12 @@ spec:
                             properties:
                               hiddenAppTypes:
                                 description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              hiddenInstanceTypes:
+                                description: The instance types you are hiding from the Studio user interface.
                                 items:
                                   type: string
                                 type: array
@@ -1285,6 +1423,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  tagPropagation:
+                    description: 'Indicates whether custom tag propagation is supported for the domain. Defaults to DISABLED. Valid values are: ENABLED and DISABLED.'
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -1455,6 +1596,33 @@ spec:
                           description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               codeRepository:
                                 description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                                 items:
@@ -1498,6 +1666,24 @@ spec:
                                     sagemakerImageVersionArn:
                                       description: The ARN of the image version created on the instance.
                                       type: string
+                                  type: object
+                                type: array
+                              emrSettings:
+                                description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                                items:
+                                  properties:
+                                    assumableRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
+                                    executionRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               lifecycleConfigArns:
@@ -1628,6 +1814,9 @@ spec:
                     description: The default user settings. See default_user_settings Block below.
                     items:
                       properties:
+                        autoMountHomeEfs:
+                          description: 'Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.'
+                          type: string
                         canvasAppSettings:
                           description: The Canvas app settings. See canvas_app_settings Block below.
                           items:
@@ -1636,6 +1825,18 @@ spec:
                                 description: The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.
                                 items:
                                   properties:
+                                    status:
+                                      description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
+                                      type: string
+                                  type: object
+                                type: array
+                              emrServerlessSettings:
+                                description: The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.
+                                items:
+                                  properties:
+                                    executionRoleArn:
+                                      description: The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.
+                                      type: string
                                     status:
                                       description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                       type: string
@@ -1713,6 +1914,33 @@ spec:
                           description: The Code Editor application settings. See code_editor_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               customImage:
                                 description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
                                 items:
@@ -1883,6 +2111,33 @@ spec:
                           description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               codeRepository:
                                 description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                                 items:
@@ -1926,6 +2181,24 @@ spec:
                                     sagemakerImageVersionArn:
                                       description: The ARN of the image version created on the instance.
                                       type: string
+                                  type: object
+                                type: array
+                              emrSettings:
+                                description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                                items:
+                                  properties:
+                                    assumableRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
+                                    executionRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               lifecycleConfigArns:
@@ -2304,6 +2577,12 @@ spec:
                                   type: string
                                 type: array
                                 x-kubernetes-list-type: set
+                              hiddenInstanceTypes:
+                                description: The instance types you are hiding from the Studio user interface.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                               hiddenMlTools:
                                 description: The machine learning tools that are hidden from the Studio left navigation pane.
                                 items:
@@ -2603,6 +2882,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  tagPropagation:
+                    description: 'Indicates whether custom tag propagation is supported for the domain. Defaults to DISABLED. Valid values are: ENABLED and DISABLED.'
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -2972,6 +3254,33 @@ spec:
                           description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               codeRepository:
                                 description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                                 items:
@@ -3015,6 +3324,24 @@ spec:
                                     sagemakerImageVersionArn:
                                       description: The ARN of the image version created on the instance.
                                       type: string
+                                  type: object
+                                type: array
+                              emrSettings:
+                                description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                                items:
+                                  properties:
+                                    assumableRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
+                                    executionRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               lifecycleConfigArns:
@@ -3145,6 +3472,9 @@ spec:
                     description: The default user settings. See default_user_settings Block below.
                     items:
                       properties:
+                        autoMountHomeEfs:
+                          description: 'Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.'
+                          type: string
                         canvasAppSettings:
                           description: The Canvas app settings. See canvas_app_settings Block below.
                           items:
@@ -3153,6 +3483,18 @@ spec:
                                 description: The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.
                                 items:
                                   properties:
+                                    status:
+                                      description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
+                                      type: string
+                                  type: object
+                                type: array
+                              emrServerlessSettings:
+                                description: The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.
+                                items:
+                                  properties:
+                                    executionRoleArn:
+                                      description: The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.
+                                      type: string
                                     status:
                                       description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                       type: string
@@ -3230,6 +3572,33 @@ spec:
                           description: The Code Editor application settings. See code_editor_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               customImage:
                                 description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
                                 items:
@@ -3314,6 +3683,33 @@ spec:
                           description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                           items:
                             properties:
+                              appLifecycleManagement:
+                                description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                                items:
+                                  properties:
+                                    idleSettings:
+                                      description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                      items:
+                                        properties:
+                                          idleTimeoutInMinutes:
+                                            description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                            type: number
+                                          lifecycleManagement:
+                                            description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                            type: string
+                                          maxIdleTimeoutInMinutes:
+                                            description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                          minIdleTimeoutInMinutes:
+                                            description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              builtInLifecycleConfigArn:
+                                description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                                type: string
                               codeRepository:
                                 description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                                 items:
@@ -3357,6 +3753,24 @@ spec:
                                     sagemakerImageVersionArn:
                                       description: The ARN of the image version created on the instance.
                                       type: string
+                                  type: object
+                                type: array
+                              emrSettings:
+                                description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                                items:
+                                  properties:
+                                    assumableRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
+                                    executionRoleArns:
+                                      description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                      items:
+                                        type: string
+                                      type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               lifecycleConfigArns:
@@ -3563,6 +3977,12 @@ spec:
                                   type: string
                                 type: array
                                 x-kubernetes-list-type: set
+                              hiddenInstanceTypes:
+                                description: The instance types you are hiding from the Studio user interface.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                               hiddenMlTools:
                                 description: The machine learning tools that are hidden from the Studio left navigation pane.
                                 items:
@@ -3702,6 +4122,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  tagPropagation:
+                    description: 'Indicates whether custom tag propagation is supported for the domain. Defaults to DISABLED. Valid values are: ENABLED and DISABLED.'
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -3898,6 +4321,29 @@ spec:
                       jupyterLabAppSettings:
                         description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           codeRepository:
                             description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                             items:
@@ -3940,6 +4386,22 @@ spec:
                               sagemakerImageVersionArn:
                                 description: The ARN of the image version created on the instance.
                                 type: string
+                            type: object
+                          emrSettings:
+                            description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                            properties:
+                              assumableRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              executionRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                             type: object
                           lifecycleConfigArns:
                             description: The Amazon Resource Name (ARN) of the Lifecycle Configurations.
@@ -4054,12 +4516,25 @@ spec:
                   defaultUserSettings:
                     description: The default user settings. See default_user_settings Block below.
                     properties:
+                      autoMountHomeEfs:
+                        description: 'Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.'
+                        type: string
                       canvasAppSettings:
                         description: The Canvas app settings. See canvas_app_settings Block below.
                         properties:
                           directDeploySettings:
                             description: The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.
                             properties:
+                              status:
+                                description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
+                                type: string
+                            type: object
+                          emrServerlessSettings:
+                            description: The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.
+                            properties:
+                              executionRoleArn:
+                                description: The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.
+                                type: string
                               status:
                                 description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                 type: string
@@ -4126,6 +4601,29 @@ spec:
                       codeEditorAppSettings:
                         description: The Code Editor application settings. See code_editor_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           customImage:
                             description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
                             items:
@@ -4288,6 +4786,29 @@ spec:
                       jupyterLabAppSettings:
                         description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           codeRepository:
                             description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                             items:
@@ -4330,6 +4851,22 @@ spec:
                               sagemakerImageVersionArn:
                                 description: The ARN of the image version created on the instance.
                                 type: string
+                            type: object
+                          emrSettings:
+                            description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                            properties:
+                              assumableRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              executionRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                             type: object
                           lifecycleConfigArns:
                             description: The Amazon Resource Name (ARN) of the Lifecycle Configurations.
@@ -4681,6 +5218,12 @@ spec:
                         properties:
                           hiddenAppTypes:
                             description: The Applications supported in Studio that are hidden from the Studio left navigation pane.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
+                          hiddenInstanceTypes:
+                            description: The instance types you are hiding from the Studio user interface.
                             items:
                               type: string
                             type: array
@@ -4971,6 +5514,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  tagPropagation:
+                    description: 'Indicates whether custom tag propagation is supported for the domain. Defaults to DISABLED. Valid values are: ENABLED and DISABLED.'
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -5135,6 +5681,29 @@ spec:
                       jupyterLabAppSettings:
                         description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           codeRepository:
                             description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                             items:
@@ -5177,6 +5746,22 @@ spec:
                               sagemakerImageVersionArn:
                                 description: The ARN of the image version created on the instance.
                                 type: string
+                            type: object
+                          emrSettings:
+                            description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                            properties:
+                              assumableRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              executionRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                             type: object
                           lifecycleConfigArns:
                             description: The Amazon Resource Name (ARN) of the Lifecycle Configurations.
@@ -5291,12 +5876,25 @@ spec:
                   defaultUserSettings:
                     description: The default user settings. See default_user_settings Block below.
                     properties:
+                      autoMountHomeEfs:
+                        description: 'Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.'
+                        type: string
                       canvasAppSettings:
                         description: The Canvas app settings. See canvas_app_settings Block below.
                         properties:
                           directDeploySettings:
                             description: The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.
                             properties:
+                              status:
+                                description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
+                                type: string
+                            type: object
+                          emrServerlessSettings:
+                            description: The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.
+                            properties:
+                              executionRoleArn:
+                                description: The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.
+                                type: string
                               status:
                                 description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                 type: string
@@ -5363,6 +5961,29 @@ spec:
                       codeEditorAppSettings:
                         description: The Code Editor application settings. See code_editor_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           customImage:
                             description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
                             items:
@@ -5525,6 +6146,29 @@ spec:
                       jupyterLabAppSettings:
                         description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           codeRepository:
                             description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                             items:
@@ -5567,6 +6211,22 @@ spec:
                               sagemakerImageVersionArn:
                                 description: The ARN of the image version created on the instance.
                                 type: string
+                            type: object
+                          emrSettings:
+                            description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                            properties:
+                              assumableRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              executionRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                             type: object
                           lifecycleConfigArns:
                             description: The Amazon Resource Name (ARN) of the Lifecycle Configurations.
@@ -5922,6 +6582,12 @@ spec:
                               type: string
                             type: array
                             x-kubernetes-list-type: set
+                          hiddenInstanceTypes:
+                            description: The instance types you are hiding from the Studio user interface.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
                           hiddenMlTools:
                             description: The machine learning tools that are hidden from the Studio left navigation pane.
                             items:
@@ -6205,6 +6871,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  tagPropagation:
+                    description: 'Indicates whether custom tag propagation is supported for the domain. Defaults to DISABLED. Valid values are: ENABLED and DISABLED.'
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -6568,6 +7237,29 @@ spec:
                       jupyterLabAppSettings:
                         description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           codeRepository:
                             description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                             items:
@@ -6610,6 +7302,22 @@ spec:
                               sagemakerImageVersionArn:
                                 description: The ARN of the image version created on the instance.
                                 type: string
+                            type: object
+                          emrSettings:
+                            description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                            properties:
+                              assumableRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              executionRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                             type: object
                           lifecycleConfigArns:
                             description: The Amazon Resource Name (ARN) of the Lifecycle Configurations.
@@ -6724,12 +7432,25 @@ spec:
                   defaultUserSettings:
                     description: The default user settings. See default_user_settings Block below.
                     properties:
+                      autoMountHomeEfs:
+                        description: 'Indicates whether auto-mounting of an EFS volume is supported for the user profile. The DefaultAsDomain value is only supported for user profiles. Do not use the DefaultAsDomain value when setting this parameter for a domain. Valid values are: Enabled, Disabled, and DefaultAsDomain.'
+                        type: string
                       canvasAppSettings:
                         description: The Canvas app settings. See canvas_app_settings Block below.
                         properties:
                           directDeploySettings:
                             description: The model deployment settings for the SageMaker Canvas application. See direct_deploy_settings Block below.
                             properties:
+                              status:
+                                description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
+                                type: string
+                            type: object
+                          emrServerlessSettings:
+                            description: The settings for running Amazon EMR Serverless jobs in SageMaker Canvas. See emr_serverless_settings Block below.
+                            properties:
+                              executionRoleArn:
+                                description: The Amazon Resource Name (ARN) of the AWS IAM role that is assumed for running Amazon EMR Serverless jobs in SageMaker Canvas. This role should have the necessary permissions to read and write data attached and a trust relationship with EMR Serverless.
+                                type: string
                               status:
                                 description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                 type: string
@@ -6796,6 +7517,29 @@ spec:
                       codeEditorAppSettings:
                         description: The Code Editor application settings. See code_editor_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           customImage:
                             description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
                             items:
@@ -6872,6 +7616,29 @@ spec:
                       jupyterLabAppSettings:
                         description: The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.
                         properties:
+                          appLifecycleManagement:
+                            description: Indicates whether idle shutdown is activated for JupyterLab applications. see app_lifecycle_management Block below.
+                            properties:
+                              idleSettings:
+                                description: Settings related to idle shutdown of Studio applications. see idle_settings Block below.
+                                properties:
+                                  idleTimeoutInMinutes:
+                                    description: The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.
+                                    type: number
+                                  lifecycleManagement:
+                                    description: Indicates whether idle shutdown is activated for the application type. Valid values are ENABLED and DISABLED.
+                                    type: string
+                                  maxIdleTimeoutInMinutes:
+                                    description: The maximum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                  minIdleTimeoutInMinutes:
+                                    description: The minimum value in minutes that custom idle shutdown can be set to by the user. Valid values are between 60 and 525600.
+                                    type: number
+                                type: object
+                            type: object
+                          builtInLifecycleConfigArn:
+                            description: The lifecycle configuration that runs before the default lifecycle configuration. It can override changes made in the default lifecycle configuration.
+                            type: string
                           codeRepository:
                             description: A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see code_repository Block below.
                             items:
@@ -6914,6 +7681,22 @@ spec:
                               sagemakerImageVersionArn:
                                 description: The ARN of the image version created on the instance.
                                 type: string
+                            type: object
+                          emrSettings:
+                            description: The configuration parameters that specify the IAM roles assumed by the execution role of SageMaker (assumable roles) and the cluster instances or job execution environments (execution roles or runtime roles) to manage and access resources required for running Amazon EMR clusters or Amazon EMR Serverless applications. see emr_settings Block below.
+                            properties:
+                              assumableRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles that the execution role of SageMaker can assume for performing operations or tasks related to Amazon EMR clusters or Amazon EMR Serverless applications. These roles define the permissions and access policies required when performing Amazon EMR-related operations, such as listing, connecting to, or terminating Amazon EMR clusters or Amazon EMR Serverless applications. They are typically used in cross-account access scenarios, where the Amazon EMR resources (clusters or serverless applications) are located in a different AWS account than the SageMaker domain.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
+                              executionRoleArns:
+                                description: An array of Amazon Resource Names (ARNs) of the IAM roles used by the Amazon EMR cluster instances or job execution environments to access other AWS services and resources needed during the runtime of your Amazon EMR or Amazon EMR Serverless workloads, such as Amazon S3 for data access, Amazon CloudWatch for logging, or other AWS services based on the particular workload requirements.
+                                items:
+                                  type: string
+                                type: array
+                                x-kubernetes-list-type: set
                             type: object
                           lifecycleConfigArns:
                             description: The Amazon Resource Name (ARN) of the Lifecycle Configurations.
@@ -7097,6 +7880,12 @@ spec:
                               type: string
                             type: array
                             x-kubernetes-list-type: set
+                          hiddenInstanceTypes:
+                            description: The instance types you are hiding from the Studio user interface.
+                            items:
+                              type: string
+                            type: array
+                            x-kubernetes-list-type: set
                           hiddenMlTools:
                             description: The machine learning tools that are hidden from the Studio left navigation pane.
                             items:
@@ -7220,6 +8009,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  tagPropagation:
+                    description: 'Indicates whether custom tag propagation is supported for the domain. Defaults to DISABLED. Valid values are: ENABLED and DISABLED.'
+                    type: string
                   tags:
                     additionalProperties:
                       type: string

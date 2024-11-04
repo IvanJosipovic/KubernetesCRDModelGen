@@ -109,6 +109,10 @@ public partial class V1beta1CodeSigningConfigSpecForProvider
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -208,6 +212,10 @@ public partial class V1beta1CodeSigningConfigSpecInitProvider
     /// <summary>A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.</summary>
     [JsonPropertyName("policies")]
     public IList<V1beta1CodeSigningConfigSpecInitProviderPolicies>? Policies { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -391,6 +399,14 @@ public partial class V1beta1CodeSigningConfigStatusAtProvider
     /// <summary>A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.</summary>
     [JsonPropertyName("policies")]
     public IList<V1beta1CodeSigningConfigStatusAtProviderPolicies>? Policies { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -334,6 +334,10 @@ public partial class V1beta1TransitGatewayVPCAttachmentAccepterStatusAtProvider
     [JsonPropertyName("ipv6Support")]
     public string? Ipv6Support { get; set; }
 
+    /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable.</summary>
+    [JsonPropertyName("securityGroupReferencingSupport")]
+    public string? SecurityGroupReferencingSupport { get; set; }
+
     /// <summary>Identifiers of EC2 Subnets.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }

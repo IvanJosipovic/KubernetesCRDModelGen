@@ -152,6 +152,10 @@ public partial class V1beta1EIPSpecForProvider
     [JsonPropertyName("instanceSelector")]
     public V1beta1EIPSpecForProviderInstanceSelector? InstanceSelector { get; set; }
 
+    /// <summary>The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to it.</summary>
+    [JsonPropertyName("ipamPoolId")]
+    public string? IpamPoolId { get; set; }
+
     /// <summary>Location from which the IP address is advertised. Use this parameter to limit the address to this location.</summary>
     [JsonPropertyName("networkBorderGroup")]
     public string? NetworkBorderGroup { get; set; }
@@ -328,6 +332,10 @@ public partial class V1beta1EIPSpecInitProvider
     /// <summary>Selector for a Instance in ec2 to populate instance.</summary>
     [JsonPropertyName("instanceSelector")]
     public V1beta1EIPSpecInitProviderInstanceSelector? InstanceSelector { get; set; }
+
+    /// <summary>The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to it.</summary>
+    [JsonPropertyName("ipamPoolId")]
+    public string? IpamPoolId { get; set; }
 
     /// <summary>Location from which the IP address is advertised. Use this parameter to limit the address to this location.</summary>
     [JsonPropertyName("networkBorderGroup")]
@@ -537,6 +545,10 @@ public partial class V1beta1EIPStatusAtProvider
     /// <summary>EC2 instance ID.</summary>
     [JsonPropertyName("instance")]
     public string? Instance { get; set; }
+
+    /// <summary>The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to it.</summary>
+    [JsonPropertyName("ipamPoolId")]
+    public string? IpamPoolId { get; set; }
 
     /// <summary>Location from which the IP address is advertised. Use this parameter to limit the address to this location.</summary>
     [JsonPropertyName("networkBorderGroup")]

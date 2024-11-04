@@ -156,6 +156,10 @@ public partial class V1beta1PlanSpecForProviderRule
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 
+    /// <summary>The timezone in which the schedule expression is set. Default value: "Etc/UTC".</summary>
+    [JsonPropertyName("scheduleExpressionTimezone")]
+    public string? ScheduleExpressionTimezone { get; set; }
+
     /// <summary>The amount of time in minutes before beginning a backup.</summary>
     [JsonPropertyName("startWindow")]
     public double? StartWindow { get; set; }
@@ -345,6 +349,10 @@ public partial class V1beta1PlanSpecInitProviderRule
     /// <summary>A CRON expression specifying when AWS Backup initiates a backup job.</summary>
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
+
+    /// <summary>The timezone in which the schedule expression is set. Default value: "Etc/UTC".</summary>
+    [JsonPropertyName("scheduleExpressionTimezone")]
+    public string? ScheduleExpressionTimezone { get; set; }
 
     /// <summary>The amount of time in minutes before beginning a backup.</summary>
     [JsonPropertyName("startWindow")]
@@ -607,6 +615,10 @@ public partial class V1beta1PlanStatusAtProviderRule
     /// <summary>A CRON expression specifying when AWS Backup initiates a backup job.</summary>
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
+
+    /// <summary>The timezone in which the schedule expression is set. Default value: "Etc/UTC".</summary>
+    [JsonPropertyName("scheduleExpressionTimezone")]
+    public string? ScheduleExpressionTimezone { get; set; }
 
     /// <summary>The amount of time in minutes before beginning a backup.</summary>
     [JsonPropertyName("startWindow")]
