@@ -1169,7 +1169,7 @@ spec:
                     description: The default time to live of Analytical Storage for this SQL container. If present and the value is set to -1, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number n – items will expire n seconds after their last modified time.
                     type: number
                   autoscaleSettings:
-                    description: An autoscale_settings block as defined below. Requires partition_key_path to be set.
+                    description: An autoscale_settings block as defined below.
                     properties:
                       maxThroughput:
                         description: The maximum throughput of the SQL container (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.
@@ -1476,7 +1476,7 @@ spec:
                     description: The default time to live of Analytical Storage for this SQL container. If present and the value is set to -1, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number n – items will expire n seconds after their last modified time.
                     type: number
                   autoscaleSettings:
-                    description: An autoscale_settings block as defined below. Requires partition_key_path to be set.
+                    description: An autoscale_settings block as defined below.
                     properties:
                       maxThroughput:
                         description: The maximum throughput of the SQL container (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.
@@ -1799,7 +1799,7 @@ spec:
                     description: The default time to live of Analytical Storage for this SQL container. If present and the value is set to -1, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number n – items will expire n seconds after their last modified time.
                     type: number
                   autoscaleSettings:
-                    description: An autoscale_settings block as defined below. Requires partition_key_path to be set.
+                    description: An autoscale_settings block as defined below.
                     properties:
                       maxThroughput:
                         description: The maximum throughput of the SQL container (RU/s). Must be between 1,000 and 1,000,000. Must be set in increments of 1,000. Conflicts with throughput.

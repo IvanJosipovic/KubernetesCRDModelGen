@@ -130,6 +130,9 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        defaultShareLevelPermission:
+                          description: Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.
+                          type: string
                         directoryType:
                           description: Specifies the directory service used. Possible values are AADDS, AD and AADKERB.
                           type: string
@@ -258,6 +261,9 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
                   enableHttpsTrafficOnly:
+                    description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
+                    type: boolean
+                  httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
                   identity:
@@ -743,6 +749,9 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        defaultShareLevelPermission:
+                          description: Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.
+                          type: string
                         directoryType:
                           description: Specifies the directory service used. Possible values are AADDS, AD and AADKERB.
                           type: string
@@ -871,6 +880,9 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
                   enableHttpsTrafficOnly:
+                    description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
+                    type: boolean
+                  httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
                   identity:
@@ -1465,6 +1477,9 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        defaultShareLevelPermission:
+                          description: Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.
+                          type: string
                         directoryType:
                           description: Specifies the directory service used. Possible values are AADDS, AD and AADKERB.
                           type: string
@@ -1593,6 +1608,9 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
                   enableHttpsTrafficOnly:
+                    description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
+                    type: boolean
+                  httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
                   id:
@@ -2307,6 +2325,9 @@ spec:
                             description: Specifies the security identifier (SID) for Azure Storage. This is required when directory_type is set to AD.
                             type: string
                         type: object
+                      defaultShareLevelPermission:
+                        description: Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.
+                        type: string
                       directoryType:
                         description: Specifies the directory service used. Possible values are AADDS, AD and AADKERB.
                         type: string
@@ -2422,6 +2443,8 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
                   enableHttpsTrafficOnly:
+                    type: boolean
+                  httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
                   identity:
@@ -2457,7 +2480,7 @@ spec:
                     description: Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (see here for more information). Changing this forces a new resource to be created.
                     type: boolean
                   largeFileShareEnabled:
-                    description: Is Large File Share Enabled?
+                    description: Are Large File Shares Enabled? Defaults to false.
                     type: boolean
                   localUserEnabled:
                     description: Is Local User Enabled? Defaults to true.
@@ -2878,6 +2901,9 @@ spec:
                             description: Specifies the security identifier (SID) for Azure Storage. This is required when directory_type is set to AD.
                             type: string
                         type: object
+                      defaultShareLevelPermission:
+                        description: Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.
+                        type: string
                       directoryType:
                         description: Specifies the directory service used. Possible values are AADDS, AD and AADKERB.
                         type: string
@@ -2993,6 +3019,8 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
                   enableHttpsTrafficOnly:
+                    type: boolean
+                  httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
                   identity:
@@ -3028,7 +3056,7 @@ spec:
                     description: Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (see here for more information). Changing this forces a new resource to be created.
                     type: boolean
                   largeFileShareEnabled:
-                    description: Is Large File Share Enabled?
+                    description: Are Large File Shares Enabled? Defaults to false.
                     type: boolean
                   localUserEnabled:
                     description: Is Local User Enabled? Defaults to true.
@@ -3558,6 +3586,9 @@ spec:
                             description: Specifies the security identifier (SID) for Azure Storage. This is required when directory_type is set to AD.
                             type: string
                         type: object
+                      defaultShareLevelPermission:
+                        description: Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.
+                        type: string
                       directoryType:
                         description: Specifies the directory service used. Possible values are AADDS, AD and AADKERB.
                         type: string
@@ -3673,6 +3704,8 @@ spec:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
                   enableHttpsTrafficOnly:
+                    type: boolean
+                  httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
                   id:
@@ -3717,7 +3750,7 @@ spec:
                     description: Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (see here for more information). Changing this forces a new resource to be created.
                     type: boolean
                   largeFileShareEnabled:
-                    description: Is Large File Share Enabled?
+                    description: Are Large File Shares Enabled? Defaults to false.
                     type: boolean
                   localUserEnabled:
                     description: Is Local User Enabled? Defaults to true.

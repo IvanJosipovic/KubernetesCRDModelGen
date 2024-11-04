@@ -45,6 +45,10 @@ public partial class V1beta1AccountSpecForProviderAzureFilesAuthentication
     [JsonPropertyName("activeDirectory")]
     public IList<V1beta1AccountSpecForProviderAzureFilesAuthenticationActiveDirectory>? ActiveDirectory { get; set; }
 
+    /// <summary>Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.</summary>
+    [JsonPropertyName("defaultShareLevelPermission")]
+    public string? DefaultShareLevelPermission { get; set; }
+
     /// <summary>Specifies the directory service used. Possible values are AADDS, AD and AADKERB.</summary>
     [JsonPropertyName("directoryType")]
     public string? DirectoryType { get; set; }
@@ -597,6 +601,10 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("enableHttpsTrafficOnly")]
     public bool? EnableHttpsTrafficOnly { get; set; }
 
+    /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
+    [JsonPropertyName("httpsTrafficOnlyEnabled")]
+    public bool? HttpsTrafficOnlyEnabled { get; set; }
+
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1AccountSpecForProviderIdentity>? Identity { get; set; }
@@ -730,6 +738,10 @@ public partial class V1beta1AccountSpecInitProviderAzureFilesAuthentication
     /// <summary>A active_directory block as defined below. Required when directory_type is AD.</summary>
     [JsonPropertyName("activeDirectory")]
     public IList<V1beta1AccountSpecInitProviderAzureFilesAuthenticationActiveDirectory>? ActiveDirectory { get; set; }
+
+    /// <summary>Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.</summary>
+    [JsonPropertyName("defaultShareLevelPermission")]
+    public string? DefaultShareLevelPermission { get; set; }
 
     /// <summary>Specifies the directory service used. Possible values are AADDS, AD and AADKERB.</summary>
     [JsonPropertyName("directoryType")]
@@ -1227,6 +1239,10 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("enableHttpsTrafficOnly")]
     public bool? EnableHttpsTrafficOnly { get; set; }
 
+    /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
+    [JsonPropertyName("httpsTrafficOnlyEnabled")]
+    public bool? HttpsTrafficOnlyEnabled { get; set; }
+
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1AccountSpecInitProviderIdentity>? Identity { get; set; }
@@ -1480,6 +1496,10 @@ public partial class V1beta1AccountStatusAtProviderAzureFilesAuthentication
     /// <summary>A active_directory block as defined below. Required when directory_type is AD.</summary>
     [JsonPropertyName("activeDirectory")]
     public IList<V1beta1AccountStatusAtProviderAzureFilesAuthenticationActiveDirectory>? ActiveDirectory { get; set; }
+
+    /// <summary>Specifies the default share level permissions applied to all users. Possible values are StorageFileDataSmbShareReader, StorageFileDataSmbShareContributor, StorageFileDataSmbShareElevatedContributor, or None.</summary>
+    [JsonPropertyName("defaultShareLevelPermission")]
+    public string? DefaultShareLevelPermission { get; set; }
 
     /// <summary>Specifies the directory service used. Possible values are AADDS, AD and AADKERB.</summary>
     [JsonPropertyName("directoryType")]
@@ -1984,6 +2004,10 @@ public partial class V1beta1AccountStatusAtProvider
     /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
     [JsonPropertyName("enableHttpsTrafficOnly")]
     public bool? EnableHttpsTrafficOnly { get; set; }
+
+    /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
+    [JsonPropertyName("httpsTrafficOnlyEnabled")]
+    public bool? HttpsTrafficOnlyEnabled { get; set; }
 
     /// <summary>The ID of the Storage Account.</summary>
     [JsonPropertyName("id")]

@@ -164,7 +164,7 @@ public partial class V1beta1PoolSpecForProvider
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 500.</summary>
+    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 2048.</summary>
     [JsonPropertyName("sizeInTb")]
     public double? SizeInTb { get; set; }
 
@@ -193,7 +193,7 @@ public partial class V1beta1PoolSpecInitProvider
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 500.</summary>
+    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 2048.</summary>
     [JsonPropertyName("sizeInTb")]
     public double? SizeInTb { get; set; }
 
@@ -366,7 +366,7 @@ public partial class V1beta1PoolStatusAtProvider
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 500.</summary>
+    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 2048.</summary>
     [JsonPropertyName("sizeInTb")]
     public double? SizeInTb { get; set; }
 

@@ -66,6 +66,62 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -128,7 +184,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
     [JsonPropertyName("customerManagedKeyEnabled")]
     public bool? CustomerManagedKeyEnabled { get; set; }
 
-    /// <summary>Specifies the name of the Resource Group where the Security Insights Sentinel Onboarding States should exist. Changing this forces the Log Analytics Workspace off the board and onboard again.</summary>
+    /// <summary></summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -140,11 +196,19 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProvid
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The ID of the Security Insights Sentinel Onboarding States.</summary>
+    /// <summary>Specifies the Workspace Id. Changing this forces the Log Analytics Workspace off the board and onboard again. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 
-    /// <summary>Specifies the Workspace Name. Changing this forces the Log Analytics Workspace off the board and onboard again. Changing this forces a new resource to be created.</summary>
+    /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdRef")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdRef? WorkspaceIdRef { get; set; }
+
+    /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdSelector")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 
@@ -215,6 +279,62 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -277,7 +397,7 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
     [JsonPropertyName("customerManagedKeyEnabled")]
     public bool? CustomerManagedKeyEnabled { get; set; }
 
-    /// <summary>Specifies the name of the Resource Group where the Security Insights Sentinel Onboarding States should exist. Changing this forces the Log Analytics Workspace off the board and onboard again.</summary>
+    /// <summary></summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -289,11 +409,19 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProvi
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The ID of the Security Insights Sentinel Onboarding States.</summary>
+    /// <summary>Specifies the Workspace Id. Changing this forces the Log Analytics Workspace off the board and onboard again. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 
-    /// <summary>Specifies the Workspace Name. Changing this forces the Log Analytics Workspace off the board and onboard again. Changing this forces a new resource to be created.</summary>
+    /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdRef")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdRef? WorkspaceIdRef { get; set; }
+
+    /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdSelector")]
+    public V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecInitProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 
@@ -450,15 +578,15 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatusAtProvi
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Specifies the name of the Resource Group where the Security Insights Sentinel Onboarding States should exist. Changing this forces the Log Analytics Workspace off the board and onboard again.</summary>
+    /// <summary></summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>The ID of the Security Insights Sentinel Onboarding States.</summary>
+    /// <summary>Specifies the Workspace Id. Changing this forces the Log Analytics Workspace off the board and onboard again. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 
-    /// <summary>Specifies the Workspace Name. Changing this forces the Log Analytics Workspace off the board and onboard again. Changing this forces a new resource to be created.</summary>
+    /// <summary></summary>
     [JsonPropertyName("workspaceName")]
     public string? WorkspaceName { get; set; }
 }

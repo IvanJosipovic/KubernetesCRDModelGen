@@ -72,6 +72,10 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
+
     /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
@@ -92,6 +96,10 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("enablePartitioning")]
     public bool? EnablePartitioning { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("expressEnabled")]
+    public bool? ExpressEnabled { get; set; }
+
     /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document.</summary>
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
@@ -111,6 +119,10 @@ public partial class V1beta1TopicSpecForProvider
     /// <summary>Selector for a ServiceBusNamespace in servicebus to populate namespaceId.</summary>
     [JsonPropertyName("namespaceIdSelector")]
     public V1beta1TopicSpecForProviderNamespaceIdSelector? NamespaceIdSelector { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("partitioningEnabled")]
+    public bool? PartitioningEnabled { get; set; }
 
     /// <summary>Boolean flag which controls whether the Topic requires duplicate detection. Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("requiresDuplicateDetection")]
@@ -133,6 +145,10 @@ public partial class V1beta1TopicSpecInitProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
+
     /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
@@ -153,6 +169,10 @@ public partial class V1beta1TopicSpecInitProvider
     [JsonPropertyName("enablePartitioning")]
     public bool? EnablePartitioning { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("expressEnabled")]
+    public bool? ExpressEnabled { get; set; }
+
     /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document.</summary>
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
@@ -160,6 +180,10 @@ public partial class V1beta1TopicSpecInitProvider
     /// <summary>Integer value which controls the size of memory allocated for the topic. For supported values see the "Queue/topic size" section of this document.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("partitioningEnabled")]
+    public bool? PartitioningEnabled { get; set; }
 
     /// <summary>Boolean flag which controls whether the Topic requires duplicate detection. Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("requiresDuplicateDetection")]
@@ -314,6 +338,10 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
+
     /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
@@ -334,6 +362,10 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("enablePartitioning")]
     public bool? EnablePartitioning { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("expressEnabled")]
+    public bool? ExpressEnabled { get; set; }
+
     /// <summary>The ServiceBus Topic ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -349,6 +381,10 @@ public partial class V1beta1TopicStatusAtProvider
     /// <summary>The ID of the ServiceBus Namespace to create this topic in. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("namespaceId")]
     public string? NamespaceId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("partitioningEnabled")]
+    public bool? PartitioningEnabled { get; set; }
 
     /// <summary>Boolean flag which controls whether the Topic requires duplicate detection. Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("requiresDuplicateDetection")]

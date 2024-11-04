@@ -122,8 +122,34 @@ public partial class V1beta1VirtualNetworkSpecForProviderResourceGroupNameSelect
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkSpecForProviderSubnetSharedPublicIpAddressAllowedPorts
+{
+    /// <summary>The port on the Virtual Machine that the traffic will be sent to.</summary>
+    [JsonPropertyName("backendPort")]
+    public double? BackendPort { get; set; }
+
+    /// <summary>The transport protocol that the traffic will use. Possible values are TCP and UDP.</summary>
+    [JsonPropertyName("transportProtocol")]
+    public string? TransportProtocol { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkSpecForProviderSubnetSharedPublicIpAddress
+{
+    /// <summary>A list of allowed_ports blocks as defined below.</summary>
+    [JsonPropertyName("allowedPorts")]
+    public IList<V1beta1VirtualNetworkSpecForProviderSubnetSharedPublicIpAddressAllowedPorts>? AllowedPorts { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkSpecForProviderSubnet
 {
+    /// <summary>A shared_public_ip_address block as defined below.</summary>
+    [JsonPropertyName("sharedPublicIpAddress")]
+    public IList<V1beta1VirtualNetworkSpecForProviderSubnetSharedPublicIpAddress>? SharedPublicIpAddress { get; set; }
+
     /// <summary>Can this subnet be used for creating Virtual Machines? Possible values are Allow, Default and Deny. Defaults to Allow.</summary>
     [JsonPropertyName("useInVirtualMachineCreation")]
     public string? UseInVirtualMachineCreation { get; set; }
@@ -292,8 +318,34 @@ public partial class V1beta1VirtualNetworkSpecInitProviderResourceGroupNameSelec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkSpecInitProviderSubnetSharedPublicIpAddressAllowedPorts
+{
+    /// <summary>The port on the Virtual Machine that the traffic will be sent to.</summary>
+    [JsonPropertyName("backendPort")]
+    public double? BackendPort { get; set; }
+
+    /// <summary>The transport protocol that the traffic will use. Possible values are TCP and UDP.</summary>
+    [JsonPropertyName("transportProtocol")]
+    public string? TransportProtocol { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkSpecInitProviderSubnetSharedPublicIpAddress
+{
+    /// <summary>A list of allowed_ports blocks as defined below.</summary>
+    [JsonPropertyName("allowedPorts")]
+    public IList<V1beta1VirtualNetworkSpecInitProviderSubnetSharedPublicIpAddressAllowedPorts>? AllowedPorts { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkSpecInitProviderSubnet
 {
+    /// <summary>A shared_public_ip_address block as defined below.</summary>
+    [JsonPropertyName("sharedPublicIpAddress")]
+    public IList<V1beta1VirtualNetworkSpecInitProviderSubnetSharedPublicIpAddress>? SharedPublicIpAddress { get; set; }
+
     /// <summary>Can this subnet be used for creating Virtual Machines? Possible values are Allow, Default and Deny. Defaults to Allow.</summary>
     [JsonPropertyName("useInVirtualMachineCreation")]
     public string? UseInVirtualMachineCreation { get; set; }
@@ -482,11 +534,37 @@ public partial class V1beta1VirtualNetworkSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkStatusAtProviderSubnetSharedPublicIpAddressAllowedPorts
+{
+    /// <summary>The port on the Virtual Machine that the traffic will be sent to.</summary>
+    [JsonPropertyName("backendPort")]
+    public double? BackendPort { get; set; }
+
+    /// <summary>The transport protocol that the traffic will use. Possible values are TCP and UDP.</summary>
+    [JsonPropertyName("transportProtocol")]
+    public string? TransportProtocol { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkStatusAtProviderSubnetSharedPublicIpAddress
+{
+    /// <summary>A list of allowed_ports blocks as defined below.</summary>
+    [JsonPropertyName("allowedPorts")]
+    public IList<V1beta1VirtualNetworkStatusAtProviderSubnetSharedPublicIpAddressAllowedPorts>? AllowedPorts { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkStatusAtProviderSubnet
 {
     /// <summary>The name of the Subnet for this Virtual Network.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>A shared_public_ip_address block as defined below.</summary>
+    [JsonPropertyName("sharedPublicIpAddress")]
+    public IList<V1beta1VirtualNetworkStatusAtProviderSubnetSharedPublicIpAddress>? SharedPublicIpAddress { get; set; }
 
     /// <summary>Can this subnet be used for creating Virtual Machines? Possible values are Allow, Default and Deny. Defaults to Allow.</summary>
     [JsonPropertyName("useInVirtualMachineCreation")]

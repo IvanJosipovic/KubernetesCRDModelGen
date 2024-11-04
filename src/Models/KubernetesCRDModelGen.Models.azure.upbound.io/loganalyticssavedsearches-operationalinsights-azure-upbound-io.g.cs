@@ -80,7 +80,7 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecForProvider
     [JsonPropertyName("functionAlias")]
     public string? FunctionAlias { get; set; }
 
-    /// <summary>The function parameters if the query serves as a function. Changing this forces a new resource to be created.</summary>
+    /// <summary>The function parameters if the query serves as a function. Changing this forces a new resource to be created. For more examples and proper syntax please refer to this document.</summary>
     [JsonPropertyName("functionParameters")]
     public IList<string>? FunctionParameters { get; set; }
 
@@ -121,7 +121,7 @@ public partial class V1beta1LogAnalyticsSavedSearchSpecInitProvider
     [JsonPropertyName("functionAlias")]
     public string? FunctionAlias { get; set; }
 
-    /// <summary>The function parameters if the query serves as a function. Changing this forces a new resource to be created.</summary>
+    /// <summary>The function parameters if the query serves as a function. Changing this forces a new resource to be created. For more examples and proper syntax please refer to this document.</summary>
     [JsonPropertyName("functionParameters")]
     public IList<string>? FunctionParameters { get; set; }
 
@@ -282,7 +282,7 @@ public partial class V1beta1LogAnalyticsSavedSearchStatusAtProvider
     [JsonPropertyName("functionAlias")]
     public string? FunctionAlias { get; set; }
 
-    /// <summary>The function parameters if the query serves as a function. Changing this forces a new resource to be created.</summary>
+    /// <summary>The function parameters if the query serves as a function. Changing this forces a new resource to be created. For more examples and proper syntax please refer to this document.</summary>
     [JsonPropertyName("functionParameters")]
     public IList<string>? FunctionParameters { get; set; }
 

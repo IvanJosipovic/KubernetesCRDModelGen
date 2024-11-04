@@ -114,6 +114,8 @@ spec:
                   minimumTlsVersion:
                     description: The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.
                     type: string
+                  nonSslPortEnabled:
+                    type: boolean
                   patchSchedule:
                     description: A list of patch_schedule blocks as defined below.
                     items:
@@ -179,6 +181,8 @@ spec:
                           - name
                           - namespace
                           type: object
+                        authenticationEnabled:
+                          type: boolean
                         dataPersistenceAuthenticationMethod:
                           description: Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.
                           type: string
@@ -495,6 +499,8 @@ spec:
                   minimumTlsVersion:
                     description: The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.
                     type: string
+                  nonSslPortEnabled:
+                    type: boolean
                   patchSchedule:
                     description: A list of patch_schedule blocks as defined below.
                     items:
@@ -526,6 +532,42 @@ spec:
                         aofBackupEnabled:
                           description: Enable or disable AOF persistence for this Redis Cache. Defaults to false.
                           type: boolean
+                        aofStorageConnectionString0SecretRef:
+                          description: First Storage Account connection string for AOF persistence.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                        aofStorageConnectionString1SecretRef:
+                          description: Second Storage Account connection string for AOF persistence.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                        authenticationEnabled:
+                          type: boolean
                         dataPersistenceAuthenticationMethod:
                           description: Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.
                           type: string
@@ -556,6 +598,23 @@ spec:
                         rdbBackupMaxSnapshotCount:
                           description: The maximum number of snapshots to create as a backup. Only supported for Premium SKUs.
                           type: number
+                        rdbStorageConnectionStringSecretRef:
+                          description: 'The Connection String to the Storage Account. Only supported for Premium SKUs. In the format: DefaultEndpointsProtocol=https;BlobEndpoint=${azurerm_storage_account.example.primary_blob_endpoint};AccountName=${azurerm_storage_account.example.name};AccountKey=${azurerm_storage_account.example.primary_access_key}.'
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         storageAccountSubscriptionId:
                           description: The ID of the Subscription containing the Storage Account.
                           type: string
@@ -950,6 +1009,8 @@ spec:
                   minimumTlsVersion:
                     description: The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.
                     type: string
+                  nonSslPortEnabled:
+                    type: boolean
                   patchSchedule:
                     description: A list of patch_schedule blocks as defined below.
                     items:
@@ -983,6 +1044,8 @@ spec:
                           type: boolean
                         aofBackupEnabled:
                           description: Enable or disable AOF persistence for this Redis Cache. Defaults to false.
+                          type: boolean
+                        authenticationEnabled:
                           type: boolean
                         dataPersistenceAuthenticationMethod:
                           description: Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.
@@ -1226,6 +1289,8 @@ spec:
                   minimumTlsVersion:
                     description: The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.
                     type: string
+                  nonSslPortEnabled:
+                    type: boolean
                   patchSchedule:
                     description: A list of patch_schedule blocks as defined below.
                     items:
@@ -1290,6 +1355,8 @@ spec:
                         - name
                         - namespace
                         type: object
+                      authenticationEnabled:
+                        type: boolean
                       dataPersistenceAuthenticationMethod:
                         description: Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.
                         type: string
@@ -1603,6 +1670,8 @@ spec:
                   minimumTlsVersion:
                     description: The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.
                     type: string
+                  nonSslPortEnabled:
+                    type: boolean
                   patchSchedule:
                     description: A list of patch_schedule blocks as defined below.
                     items:
@@ -1667,6 +1736,8 @@ spec:
                         - name
                         - namespace
                         type: object
+                      authenticationEnabled:
+                        type: boolean
                       dataPersistenceAuthenticationMethod:
                         description: Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.
                         type: string
@@ -2105,6 +2176,8 @@ spec:
                   minimumTlsVersion:
                     description: The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0.
                     type: string
+                  nonSslPortEnabled:
+                    type: boolean
                   patchSchedule:
                     description: A list of patch_schedule blocks as defined below.
                     items:
@@ -2137,6 +2210,8 @@ spec:
                         type: boolean
                       aofBackupEnabled:
                         description: Enable or disable AOF persistence for this Redis Cache. Defaults to false.
+                        type: boolean
+                      authenticationEnabled:
                         type: boolean
                       dataPersistenceAuthenticationMethod:
                         description: Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.

@@ -315,6 +315,23 @@ public partial class V1beta1AccountSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>If kind is TextAnalytics this specifies the key of the Search service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderCustomQuestionAnsweringSearchServiceKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderCustomerManagedKey
@@ -455,6 +472,10 @@ public partial class V1beta1AccountSpecInitProvider
     /// <summary>If kind is TextAnalytics this specifies the ID of the Search service.</summary>
     [JsonPropertyName("customQuestionAnsweringSearchServiceId")]
     public string? CustomQuestionAnsweringSearchServiceId { get; set; }
+
+    /// <summary>If kind is TextAnalytics this specifies the key of the Search service.</summary>
+    [JsonPropertyName("customQuestionAnsweringSearchServiceKeySecretRef")]
+    public V1beta1AccountSpecInitProviderCustomQuestionAnsweringSearchServiceKeySecretRef? CustomQuestionAnsweringSearchServiceKeySecretRef { get; set; }
 
     /// <summary>The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("customSubdomainName")]

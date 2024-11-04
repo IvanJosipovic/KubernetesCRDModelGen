@@ -123,6 +123,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  burstCapacityEnabled:
+                    description: Enable burst capacity for this Cosmos DB account. Defaults to false.
+                    type: boolean
                   capabilities:
                     description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.
                     items:
@@ -578,6 +581,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  burstCapacityEnabled:
+                    description: Enable burst capacity for this Cosmos DB account. Defaults to false.
+                    type: boolean
                   capabilities:
                     description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.
                     items:
@@ -1144,6 +1150,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  burstCapacityEnabled:
+                    description: Enable burst capacity for this Cosmos DB account. Defaults to false.
+                    type: boolean
                   capabilities:
                     description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.
                     items:
@@ -1559,6 +1568,9 @@ spec:
                         description: The type of the backup. Possible values are Continuous and Periodic.
                         type: string
                     type: object
+                  burstCapacityEnabled:
+                    description: Enable burst capacity for this Cosmos DB account. Defaults to false.
+                    type: boolean
                   capabilities:
                     description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.
                     items:
@@ -1997,6 +2009,9 @@ spec:
                         description: The type of the backup. Possible values are Continuous and Periodic.
                         type: string
                     type: object
+                  burstCapacityEnabled:
+                    description: Enable burst capacity for this Cosmos DB account. Defaults to false.
+                    type: boolean
                   capabilities:
                     description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.
                     items:
@@ -2546,6 +2561,9 @@ spec:
                         description: The type of the backup. Possible values are Continuous and Periodic.
                         type: string
                     type: object
+                  burstCapacityEnabled:
+                    description: Enable burst capacity for this Cosmos DB account. Defaults to false.
+                    type: boolean
                   capabilities:
                     description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.
                     items:

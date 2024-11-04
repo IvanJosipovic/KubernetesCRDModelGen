@@ -72,6 +72,10 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
+
     /// <summary>Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to false.</summary>
     [JsonPropertyName("deadLetteringOnMessageExpiration")]
     public bool? DeadLetteringOnMessageExpiration { get; set; }
@@ -95,6 +99,10 @@ public partial class V1beta1QueueSpecForProvider
     /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
     [JsonPropertyName("enablePartitioning")]
     public bool? EnablePartitioning { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("expressEnabled")]
+    public bool? ExpressEnabled { get; set; }
 
     /// <summary>The name of a Queue or Topic to automatically forward dead lettered messages to.</summary>
     [JsonPropertyName("forwardDeadLetteredMessagesTo")]
@@ -132,6 +140,10 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("namespaceIdSelector")]
     public V1beta1QueueSpecForProviderNamespaceIdSelector? NamespaceIdSelector { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("partitioningEnabled")]
+    public bool? PartitioningEnabled { get; set; }
+
     /// <summary>Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to false.</summary>
     [JsonPropertyName("requiresDuplicateDetection")]
     public bool? RequiresDuplicateDetection { get; set; }
@@ -152,6 +164,10 @@ public partial class V1beta1QueueSpecInitProvider
     /// <summary>The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
 
     /// <summary>Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to false.</summary>
     [JsonPropertyName("deadLetteringOnMessageExpiration")]
@@ -177,6 +193,10 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("enablePartitioning")]
     public bool? EnablePartitioning { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("expressEnabled")]
+    public bool? ExpressEnabled { get; set; }
+
     /// <summary>The name of a Queue or Topic to automatically forward dead lettered messages to.</summary>
     [JsonPropertyName("forwardDeadLetteredMessagesTo")]
     public string? ForwardDeadLetteredMessagesTo { get; set; }
@@ -200,6 +220,10 @@ public partial class V1beta1QueueSpecInitProvider
     /// <summary>Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of Service Bus Quotas. Defaults to 1024.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("partitioningEnabled")]
+    public bool? PartitioningEnabled { get; set; }
 
     /// <summary>Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to false.</summary>
     [JsonPropertyName("requiresDuplicateDetection")]
@@ -354,6 +378,10 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("batchedOperationsEnabled")]
+    public bool? BatchedOperationsEnabled { get; set; }
+
     /// <summary>Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to false.</summary>
     [JsonPropertyName("deadLetteringOnMessageExpiration")]
     public bool? DeadLetteringOnMessageExpiration { get; set; }
@@ -377,6 +405,10 @@ public partial class V1beta1QueueStatusAtProvider
     /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
     [JsonPropertyName("enablePartitioning")]
     public bool? EnablePartitioning { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("expressEnabled")]
+    public bool? ExpressEnabled { get; set; }
 
     /// <summary>The name of a Queue or Topic to automatically forward dead lettered messages to.</summary>
     [JsonPropertyName("forwardDeadLetteredMessagesTo")]
@@ -409,6 +441,10 @@ public partial class V1beta1QueueStatusAtProvider
     /// <summary>The ID of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("namespaceId")]
     public string? NamespaceId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("partitioningEnabled")]
+    public bool? PartitioningEnabled { get; set; }
 
     /// <summary>Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to false.</summary>
     [JsonPropertyName("requiresDuplicateDetection")]

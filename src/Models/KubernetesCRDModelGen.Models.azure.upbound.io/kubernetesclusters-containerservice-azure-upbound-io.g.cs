@@ -1513,8 +1513,37 @@ public partial class V1beta1KubernetesClusterSpecForProviderResourceGroupNameSel
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecForProviderServiceMeshProfileCertificateAuthority
+{
+    /// <summary>The certificate chain object name in Azure Key Vault.</summary>
+    [JsonPropertyName("certChainObjectName")]
+    public string? CertChainObjectName { get; set; }
+
+    /// <summary>The intermediate certificate object name in Azure Key Vault.</summary>
+    [JsonPropertyName("certObjectName")]
+    public string? CertObjectName { get; set; }
+
+    /// <summary>The intermediate certificate private key object name in Azure Key Vault.</summary>
+    [JsonPropertyName("keyObjectName")]
+    public string? KeyObjectName { get; set; }
+
+    /// <summary>The resource ID of the Key Vault.</summary>
+    [JsonPropertyName("keyVaultId")]
+    public string? KeyVaultId { get; set; }
+
+    /// <summary>The root certificate object name in Azure Key Vault.</summary>
+    [JsonPropertyName("rootCertObjectName")]
+    public string? RootCertObjectName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderServiceMeshProfile
 {
+    /// <summary>A certificate_authority block as defined below. When this property is specified, key_vault_secrets_provider is also required to be set. This configuration allows you to bring your own root certificate and keys for Istio CA in the Istio-based service mesh add-on for Azure Kubernetes Service.</summary>
+    [JsonPropertyName("certificateAuthority")]
+    public IList<V1beta1KubernetesClusterSpecForProviderServiceMeshProfileCertificateAuthority>? CertificateAuthority { get; set; }
+
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
     [JsonPropertyName("externalIngressGatewayEnabled")]
     public bool? ExternalIngressGatewayEnabled { get; set; }
@@ -3358,8 +3387,37 @@ public partial class V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSel
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderServiceMeshProfileCertificateAuthority
+{
+    /// <summary>The certificate chain object name in Azure Key Vault.</summary>
+    [JsonPropertyName("certChainObjectName")]
+    public string? CertChainObjectName { get; set; }
+
+    /// <summary>The intermediate certificate object name in Azure Key Vault.</summary>
+    [JsonPropertyName("certObjectName")]
+    public string? CertObjectName { get; set; }
+
+    /// <summary>The intermediate certificate private key object name in Azure Key Vault.</summary>
+    [JsonPropertyName("keyObjectName")]
+    public string? KeyObjectName { get; set; }
+
+    /// <summary>The resource ID of the Key Vault.</summary>
+    [JsonPropertyName("keyVaultId")]
+    public string? KeyVaultId { get; set; }
+
+    /// <summary>The root certificate object name in Azure Key Vault.</summary>
+    [JsonPropertyName("rootCertObjectName")]
+    public string? RootCertObjectName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderServiceMeshProfile
 {
+    /// <summary>A certificate_authority block as defined below. When this property is specified, key_vault_secrets_provider is also required to be set. This configuration allows you to bring your own root certificate and keys for Istio CA in the Istio-based service mesh add-on for Azure Kubernetes Service.</summary>
+    [JsonPropertyName("certificateAuthority")]
+    public IList<V1beta1KubernetesClusterSpecInitProviderServiceMeshProfileCertificateAuthority>? CertificateAuthority { get; set; }
+
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
     [JsonPropertyName("externalIngressGatewayEnabled")]
     public bool? ExternalIngressGatewayEnabled { get; set; }
@@ -4924,8 +4982,37 @@ public partial class V1beta1KubernetesClusterStatusAtProviderOmsAgent
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterStatusAtProviderServiceMeshProfileCertificateAuthority
+{
+    /// <summary>The certificate chain object name in Azure Key Vault.</summary>
+    [JsonPropertyName("certChainObjectName")]
+    public string? CertChainObjectName { get; set; }
+
+    /// <summary>The intermediate certificate object name in Azure Key Vault.</summary>
+    [JsonPropertyName("certObjectName")]
+    public string? CertObjectName { get; set; }
+
+    /// <summary>The intermediate certificate private key object name in Azure Key Vault.</summary>
+    [JsonPropertyName("keyObjectName")]
+    public string? KeyObjectName { get; set; }
+
+    /// <summary>The resource ID of the Key Vault.</summary>
+    [JsonPropertyName("keyVaultId")]
+    public string? KeyVaultId { get; set; }
+
+    /// <summary>The root certificate object name in Azure Key Vault.</summary>
+    [JsonPropertyName("rootCertObjectName")]
+    public string? RootCertObjectName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderServiceMeshProfile
 {
+    /// <summary>A certificate_authority block as defined below. When this property is specified, key_vault_secrets_provider is also required to be set. This configuration allows you to bring your own root certificate and keys for Istio CA in the Istio-based service mesh add-on for Azure Kubernetes Service.</summary>
+    [JsonPropertyName("certificateAuthority")]
+    public IList<V1beta1KubernetesClusterStatusAtProviderServiceMeshProfileCertificateAuthority>? CertificateAuthority { get; set; }
+
     /// <summary>Is Istio External Ingress Gateway enabled?</summary>
     [JsonPropertyName("externalIngressGatewayEnabled")]
     public bool? ExternalIngressGatewayEnabled { get; set; }

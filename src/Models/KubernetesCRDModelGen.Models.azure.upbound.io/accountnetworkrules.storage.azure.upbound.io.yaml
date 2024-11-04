@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   bypass:
-                    description: Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.
+                    description: Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None. Defaults to ["AzureServices"].
                     items:
                       type: string
                     type: array
@@ -230,7 +230,7 @@ spec:
                   autoscaler.
                 properties:
                   bypass:
-                    description: Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.
+                    description: Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None. Defaults to ["AzureServices"].
                     items:
                       type: string
                     type: array
@@ -569,7 +569,7 @@ spec:
               atProvider:
                 properties:
                   bypass:
-                    description: Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None.
+                    description: Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of Logging, Metrics, AzureServices, or None. Defaults to ["AzureServices"].
                     items:
                       type: string
                     type: array

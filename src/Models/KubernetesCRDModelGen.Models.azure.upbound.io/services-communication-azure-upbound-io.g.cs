@@ -246,25 +246,9 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The primary connection string of the Communication Service.</summary>
-    [JsonPropertyName("primaryConnectionString")]
-    public string? PrimaryConnectionString { get; set; }
-
-    /// <summary>The primary key of the Communication Service.</summary>
-    [JsonPropertyName("primaryKey")]
-    public string? PrimaryKey { get; set; }
-
     /// <summary>The name of the Resource Group where the Communication Service should exist. Changing this forces a new Communication Service to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
-
-    /// <summary>The secondary connection string of the Communication Service.</summary>
-    [JsonPropertyName("secondaryConnectionString")]
-    public string? SecondaryConnectionString { get; set; }
-
-    /// <summary>The secondary key of the Communication Service.</summary>
-    [JsonPropertyName("secondaryKey")]
-    public string? SecondaryKey { get; set; }
 
     /// <summary>A mapping of tags which should be assigned to the Communication Service.</summary>
     [JsonPropertyName("tags")]
