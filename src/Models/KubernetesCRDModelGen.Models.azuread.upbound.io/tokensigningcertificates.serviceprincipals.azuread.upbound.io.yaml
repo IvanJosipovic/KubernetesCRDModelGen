@@ -86,9 +86,7 @@ spec:
                 properties:
                   displayName:
                     description: >-
-                      Specifies a friendly name for the certificate.
-
-                      Must start with CN=. Changing this field forces a new resource to be created.
+                      Specifies a friendly name for the certificate. Must start with CN=. Changing this field forces a new resource to be created.
 
                       A friendly name for the certificate
                     type: string
@@ -215,9 +213,7 @@ spec:
                 properties:
                   displayName:
                     description: >-
-                      Specifies a friendly name for the certificate.
-
-                      Must start with CN=. Changing this field forces a new resource to be created.
+                      Specifies a friendly name for the certificate. Must start with CN=. Changing this field forces a new resource to be created.
 
                       A friendly name for the certificate
                     type: string
@@ -535,9 +531,7 @@ spec:
                 properties:
                   displayName:
                     description: >-
-                      Specifies a friendly name for the certificate.
-
-                      Must start with CN=. Changing this field forces a new resource to be created.
+                      Specifies a friendly name for the certificate. Must start with CN=. Changing this field forces a new resource to be created.
 
                       A friendly name for the certificate
                     type: string
