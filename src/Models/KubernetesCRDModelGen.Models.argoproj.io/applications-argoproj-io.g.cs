@@ -191,6 +191,10 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelmParameters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationOperationSyncSourceHelmFileParameters>? FileParameters { get; set; }
@@ -198,6 +202,14 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -303,6 +315,10 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomizeReplicas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourceKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -330,6 +346,10 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -558,6 +578,10 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelmParameters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationOperationSyncSourcesHelmFileParameters>? FileParameters { get; set; }
@@ -565,6 +589,14 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -670,6 +702,10 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomizeReplicas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -697,6 +733,10 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1085,6 +1125,10 @@ public partial class V1alpha1ApplicationSpecSourceHelmParameters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSpecSourceHelmFileParameters>? FileParameters { get; set; }
@@ -1092,6 +1136,14 @@ public partial class V1alpha1ApplicationSpecSourceHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -1197,6 +1249,10 @@ public partial class V1alpha1ApplicationSpecSourceKustomizeReplicas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourceKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -1224,6 +1280,10 @@ public partial class V1alpha1ApplicationSpecSourceKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1452,6 +1512,10 @@ public partial class V1alpha1ApplicationSpecSourcesHelmParameters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSpecSourcesHelmFileParameters>? FileParameters { get; set; }
@@ -1459,6 +1523,14 @@ public partial class V1alpha1ApplicationSpecSourcesHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -1564,6 +1636,10 @@ public partial class V1alpha1ApplicationSpecSourcesKustomizeReplicas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSpecSourcesKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -1591,6 +1667,10 @@ public partial class V1alpha1ApplicationSpecSourcesKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1980,6 +2060,10 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelmParameters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusHistorySourceHelmFileParameters>? FileParameters { get; set; }
@@ -1987,6 +2071,14 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -2092,6 +2184,10 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomizeReplicas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourceKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -2119,6 +2215,10 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -2347,6 +2447,10 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelmParameters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusHistorySourcesHelmFileParameters>? FileParameters { get; set; }
@@ -2354,6 +2458,14 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -2459,6 +2571,10 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomizeReplicas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -2486,6 +2602,10 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -2828,6 +2948,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusOperationStateOperationSyncSourceHelmFileParameters>? FileParameters { get; set; }
@@ -2835,6 +2959,14 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -2940,6 +3072,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -2967,6 +3103,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3195,6 +3335,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusOperationStateOperationSyncSourcesHelmFileParameters>? FileParameters { get; set; }
@@ -3202,6 +3346,14 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -3307,6 +3459,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -3334,6 +3490,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3717,6 +3877,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusOperationStateSyncResultSourceHelmFileParameters>? FileParameters { get; set; }
@@ -3724,6 +3888,14 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -3829,6 +4001,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -3856,6 +4032,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4084,6 +4264,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusOperationStateSyncResultSourcesHelmFileParameters>? FileParameters { get; set; }
@@ -4091,6 +4275,14 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -4196,6 +4388,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -4223,6 +4419,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4634,6 +4834,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelmParameters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusSyncComparedToSourceHelmFileParameters>? FileParameters { get; set; }
@@ -4641,6 +4845,14 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -4746,6 +4958,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomizeRepli
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -4773,6 +4989,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -5001,6 +5221,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelmParameter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelm
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>FileParameters are file parameters to the helm template</summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationStatusSyncComparedToSourcesHelmFileParameters>? FileParameters { get; set; }
@@ -5008,6 +5232,14 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelm
     /// <summary>IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values</summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary>Namespace is an optional namespace to template with. If left empty, defaults to the app's destination namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary>Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation</summary>
     [JsonPropertyName("parameters")]
@@ -5113,6 +5345,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomizeRepl
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
 {
+    /// <summary>APIVersions specifies the Kubernetes resource API versions to pass to Helm when templating manifests. By default, Argo CD uses the API versions of the target cluster. The format is [group/]version/kind.</summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
     /// <summary>CommonAnnotations is a list of additional annotations to add to rendered manifests</summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
@@ -5140,6 +5376,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]

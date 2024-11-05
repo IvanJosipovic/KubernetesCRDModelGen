@@ -233,12 +233,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -345,6 +357,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -371,6 +387,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -600,12 +620,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -712,6 +744,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -738,6 +774,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1245,12 +1285,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -1357,6 +1409,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -1383,6 +1439,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1612,12 +1672,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -1724,6 +1796,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
 public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -1750,6 +1826,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -2237,12 +2317,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHe
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -2349,6 +2441,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -2375,6 +2471,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -2604,12 +2704,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesH
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -2716,6 +2828,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -2742,6 +2858,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3227,12 +3347,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceH
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -3339,6 +3471,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -3365,6 +3501,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3594,12 +3734,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -3706,6 +3858,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
 public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -3732,6 +3888,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4227,12 +4387,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -4339,6 +4511,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -4365,6 +4541,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4594,12 +4774,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -4706,6 +4898,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -4732,6 +4928,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -5239,12 +5439,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -5351,6 +5563,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -5377,6 +5593,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -5606,12 +5826,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -5718,6 +5950,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -5744,6 +5980,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -6231,12 +6471,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -6343,6 +6595,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -6369,6 +6625,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -6598,12 +6858,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -6710,6 +6982,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -6736,6 +7012,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -7221,12 +7501,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -7333,6 +7625,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -7359,6 +7655,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -7588,12 +7888,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -7700,6 +8012,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -7726,6 +8042,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -8209,12 +8529,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -8321,6 +8653,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -8347,6 +8683,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -8576,12 +8916,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -8688,6 +9040,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -8714,6 +9070,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -9135,6 +9495,41 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerBearerTokenTokenRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerBearerToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("tokenRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerBearerTokenTokenRef TokenRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServer
 {
     /// <summary></summary>
@@ -9144,6 +9539,18 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("basicAuth")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerBasicAuth? BasicAuth { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("bearerToken")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerBearerToken? BearerToken { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestBitbucketServerCaRef? CaRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("project")]
@@ -9249,6 +9656,19 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGitlabCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGitlabTokenRef
 {
     /// <summary></summary>
@@ -9267,6 +9687,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("api")]
     public string? Api { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestGitlabCaRef? CaRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("insecure")]
@@ -9484,12 +9908,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -9596,6 +10032,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -9622,6 +10062,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -9851,12 +10295,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -9963,6 +10419,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -9989,6 +10449,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -10417,6 +10881,41 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerBearerTokenTokenRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerBearerToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("tokenRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerBearerTokenTokenRef TokenRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServer
 {
     /// <summary></summary>
@@ -10430,6 +10929,18 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("basicAuth")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerBasicAuth? BasicAuth { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("bearerToken")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerBearerToken? BearerToken { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderBitbucketServerCaRef? CaRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("project")]
@@ -10539,6 +11050,19 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGitlabCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGitlabTokenRef
 {
     /// <summary></summary>
@@ -10561,6 +11085,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("api")]
     public string? Api { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderGitlabCaRef? CaRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("group")]
@@ -10782,12 +11310,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -10894,6 +11434,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -10920,6 +11464,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -11149,12 +11697,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -11261,6 +11821,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -11287,6 +11851,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -11863,12 +12431,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -11975,6 +12555,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -12001,6 +12585,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -12230,12 +12818,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -12342,6 +12942,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -12368,6 +12972,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -12859,12 +13467,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -12971,6 +13591,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -12997,6 +13621,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -13226,12 +13854,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -13338,6 +13978,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -13364,6 +14008,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -13871,12 +14519,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -13983,6 +14643,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -14009,6 +14673,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -14238,12 +14906,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -14350,6 +15030,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -14376,6 +15060,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -14863,12 +15551,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -14975,6 +15675,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -15001,6 +15705,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -15230,12 +15938,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -15342,6 +16062,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -15368,6 +16092,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -15853,12 +16581,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -15965,6 +16705,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -15991,6 +16735,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -16220,12 +16968,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -16332,6 +17092,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -16358,6 +17122,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -16841,12 +17609,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -16953,6 +17733,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -16979,6 +17763,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -17208,12 +17996,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -17320,6 +18120,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -17346,6 +18150,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -17767,6 +18575,41 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerBearerTokenTokenRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerBearerToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("tokenRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerBearerTokenTokenRef TokenRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServer
 {
     /// <summary></summary>
@@ -17776,6 +18619,18 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("basicAuth")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerBasicAuth? BasicAuth { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("bearerToken")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerBearerToken? BearerToken { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestBitbucketServerCaRef? CaRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("project")]
@@ -17881,6 +18736,19 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGitlabCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGitlabTokenRef
 {
     /// <summary></summary>
@@ -17899,6 +18767,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("api")]
     public string? Api { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestGitlabCaRef? CaRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("insecure")]
@@ -18116,12 +18988,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -18228,6 +19112,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -18254,6 +19142,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -18483,12 +19375,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -18595,6 +19499,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -18621,6 +19529,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -19049,6 +19961,41 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerBearerTokenTokenRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerBearerToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("tokenRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerBearerTokenTokenRef TokenRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServer
 {
     /// <summary></summary>
@@ -19062,6 +20009,18 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("basicAuth")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerBasicAuth? BasicAuth { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("bearerToken")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerBearerToken? BearerToken { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderBitbucketServerCaRef? CaRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("project")]
@@ -19171,6 +20130,19 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGitlabCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGitlabTokenRef
 {
     /// <summary></summary>
@@ -19193,6 +20165,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("api")]
     public string? Api { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderGitlabCaRef? CaRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("group")]
@@ -19414,12 +20390,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -19526,6 +20514,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -19552,6 +20544,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -19781,12 +20777,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -19893,6 +20901,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -19919,6 +20931,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -20495,12 +21511,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -20607,6 +21635,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -20633,6 +21665,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -20862,12 +21898,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -20974,6 +22022,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -21000,6 +22052,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -21483,12 +22539,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -21595,6 +22663,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -21621,6 +22693,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -21850,12 +22926,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -21962,6 +23050,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
 public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -21988,6 +23080,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -22409,6 +23505,41 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketSer
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerBearerTokenTokenRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerBearerToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("tokenRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerBearerTokenTokenRef TokenRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServer
 {
     /// <summary></summary>
@@ -22418,6 +23549,18 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketSer
     /// <summary></summary>
     [JsonPropertyName("basicAuth")]
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerBasicAuth? BasicAuth { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("bearerToken")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerBearerToken? BearerToken { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestBitbucketServerCaRef? CaRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("project")]
@@ -22523,6 +23666,19 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGithub
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlabCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlabTokenRef
 {
     /// <summary></summary>
@@ -22541,6 +23697,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlab
     /// <summary></summary>
     [JsonPropertyName("api")]
     public string? Api { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestGitlabCaRef? CaRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("insecure")]
@@ -22758,12 +23918,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -22870,6 +24042,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -22896,6 +24072,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -23125,12 +24305,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -23237,6 +24429,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -23263,6 +24459,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -23691,6 +24891,41 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketSer
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerBearerTokenTokenRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerBearerToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("tokenRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerBearerTokenTokenRef TokenRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServer
 {
     /// <summary></summary>
@@ -23704,6 +24939,18 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketSer
     /// <summary></summary>
     [JsonPropertyName("basicAuth")]
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerBasicAuth? BasicAuth { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("bearerToken")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerBearerToken? BearerToken { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderBitbucketServerCaRef? CaRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("project")]
@@ -23813,6 +25060,19 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGithub
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlabCaRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("configMapName")]
+    public string ConfigMapName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlabTokenRef
 {
     /// <summary></summary>
@@ -23835,6 +25095,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlab
     /// <summary></summary>
     [JsonPropertyName("api")]
     public string? Api { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("caRef")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderGitlabCaRef? CaRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("group")]
@@ -24056,12 +25320,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -24168,6 +25444,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -24194,6 +25474,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -24423,12 +25707,24 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -24535,6 +25831,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
 public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -24561,6 +25861,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -25232,12 +26536,24 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelmParameters
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecTemplateSpecSourceHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -25344,6 +26660,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomizeReplic
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -25370,6 +26690,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomize
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -25599,12 +26923,24 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelmParameters
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelm
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fileParameters")]
     public IList<V1alpha1ApplicationSetSpecTemplateSpecSourcesHelmFileParameters>? FileParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ignoreMissingValueFiles")]
     public bool? IgnoreMissingValueFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("parameters")]
@@ -25711,6 +27047,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomizeRepli
 public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomize
 {
     /// <summary></summary>
+    [JsonPropertyName("apiVersions")]
+    public IList<string>? ApiVersions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("commonAnnotations")]
     public IDictionary<string, string>? CommonAnnotations { get; set; }
 
@@ -25737,6 +27077,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomize
     /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kubeVersion")]
+    public string? KubeVersion { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
