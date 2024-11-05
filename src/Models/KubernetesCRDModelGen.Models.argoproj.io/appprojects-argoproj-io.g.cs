@@ -34,6 +34,23 @@ public partial class V1alpha1AppProjectSpecClusterResourceWhitelist
     public string Kind { get; set; }
 }
 
+/// <summary>ApplicationDestinationServiceAccount holds information about the service account to be impersonated for the application sync operation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AppProjectSpecDestinationServiceAccounts
+{
+    /// <summary>DefaultServiceAccount to be used for impersonation during the sync operation</summary>
+    [JsonPropertyName("defaultServiceAccount")]
+    public string DefaultServiceAccount { get; set; }
+
+    /// <summary>Namespace specifies the target namespace for the application's resources.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Server specifies the URL of the target cluster's Kubernetes control plane API.</summary>
+    [JsonPropertyName("server")]
+    public string Server { get; set; }
+}
+
 /// <summary>ApplicationDestination holds information about the application's destination</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecDestinations
@@ -210,6 +227,10 @@ public partial class V1alpha1AppProjectSpec
     /// <summary>Description contains optional project description</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>DestinationServiceAccounts holds information about the service accounts to be impersonated for the application sync operation for each destination.</summary>
+    [JsonPropertyName("destinationServiceAccounts")]
+    public IList<V1alpha1AppProjectSpecDestinationServiceAccounts>? DestinationServiceAccounts { get; set; }
 
     /// <summary>Destinations contains list of destinations available for deployment</summary>
     [JsonPropertyName("destinations")]
