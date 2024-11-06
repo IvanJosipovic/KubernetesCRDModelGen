@@ -109,6 +109,14 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfConnectTimeLoadBalancingEnabled")]
     public bool? BpfConnectTimeLoadBalancingEnabled { get; set; }
 
+    /// <summary>BPFConntrackLogLevel controls the log level of the BPF conntrack cleanup program, which runs periodically to clean up expired BPF conntrack entries. [Default: Off].</summary>
+    [JsonPropertyName("bpfConntrackLogLevel")]
+    public string? BpfConntrackLogLevel { get; set; }
+
+    /// <summary>BPFConntrackCleanupMode controls how BPF conntrack entries are cleaned up.  `Auto` will use a BPF program if supported, falling back to userspace if not.  `Userspace` will always use the userspace cleanup code.  `BPFProgram` will always use the BPF program (failing if not supported). [Default: Auto]</summary>
+    [JsonPropertyName("bpfConntrackMode")]
+    public string? BpfConntrackMode { get; set; }
+
     /// <summary>BPFDSROptoutCIDRs is a list of CIDRs which are excluded from DSR. That is, clients in those CIDRs will access service node ports as if BPFExternalServiceMode was set to Tunnel.</summary>
     [JsonPropertyName("bpfDSROptoutCIDRs")]
     public IList<string>? BpfDSROptoutCIDRs { get; set; }
@@ -184,6 +192,10 @@ public partial class V1FelixConfigurationSpec
     /// <summary>BPFMapSizeConntrack sets the size for the conntrack map.  This map must be large enough to hold an entry for each active connection.  Warning: changing the size of the conntrack map can cause disruption.</summary>
     [JsonPropertyName("bpfMapSizeConntrack")]
     public int? BpfMapSizeConntrack { get; set; }
+
+    /// <summary>BPFMapSizeConntrackCleanupQueue sets the size for the map used to hold NAT conntrack entries that are queued for cleanup.  This should be big enough to hold all the NAT entries that expire within one cleanup interval.</summary>
+    [JsonPropertyName("bpfMapSizeConntrackCleanupQueue")]
+    public int? BpfMapSizeConntrackCleanupQueue { get; set; }
 
     /// <summary>BPFMapSizeIPSets sets the size for ipsets map.  The IP sets map must be large enough to hold an entry for each endpoint matched by every selector in the source/destination matches in network policy.  Selectors such as "all()" can result in large numbers of entries (one entry per endpoint in that case).</summary>
     [JsonPropertyName("bpfMapSizeIPSets")]
