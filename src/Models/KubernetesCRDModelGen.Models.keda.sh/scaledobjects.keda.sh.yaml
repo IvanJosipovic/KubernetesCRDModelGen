@@ -5,11 +5,11 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: keda-operator
-    helm.sh/chart: keda-2.15.2
+    helm.sh/chart: keda-2.16.0
     app.kubernetes.io/component: operator
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: keda-operator
-    app.kubernetes.io/version: 2.15.1
+    app.kubernetes.io/version: 2.16.0
   name: scaledobjects.keda.sh
 spec:
   group: keda.sh
@@ -35,12 +35,6 @@ spec:
     - jsonPath: .spec.maxReplicaCount
       name: Max
       type: integer
-    - jsonPath: .spec.triggers[*].type
-      name: Triggers
-      type: string
-    - jsonPath: .spec.triggers[*].authenticationRef.name
-      name: Authentication
-      type: string
     - jsonPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
       type: string
@@ -52,6 +46,12 @@ spec:
       type: string
     - jsonPath: .status.conditions[?(@.type=="Paused")].status
       name: Paused
+      type: string
+    - jsonPath: .status.triggersTypes
+      name: Triggers
+      type: string
+    - jsonPath: .status.authenticationsTypes
+      name: Authentications
       type: string
     - jsonPath: .metadata.creationTimestamp
       name: Age
