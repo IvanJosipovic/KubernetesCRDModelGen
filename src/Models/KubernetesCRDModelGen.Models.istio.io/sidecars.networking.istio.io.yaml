@@ -4,10 +4,11 @@ metadata:
   annotations:
     helm.sh/resource-policy: keep
   labels:
-    app: istio-pilot
-    chart: istio
-    heritage: Tiller
-    release: istio
+    app.kubernetes.io/instance: release-name
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 1.24.0
+    helm.sh/chart: base-1.24.0
   name: sidecars.networking.istio.io
 spec:
   group: networking.istio.io
@@ -391,7 +392,7 @@ spec:
                   type: object
                 type: array
               outboundTrafficPolicy:
-                description: Configuration for the outbound traffic policy.
+                description: Set the default behavior of the sidecar for handling outbound traffic from the application.
                 properties:
                   egressProxy:
                     properties:
@@ -427,12 +428,80 @@ spec:
                 properties:
                   labels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard is not supported in selector
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.
+                    maxProperties: 256
                     type: object
                 type: object
             type: object
           status:
+            properties:
+              conditions:
+                description: Current service state of the resource.
+                items:
+                  properties:
+                    lastProbeTime:
+                      description: Last time we probed the condition.
+                      format: date-time
+                      type: string
+                    lastTransitionTime:
+                      description: Last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Human-readable message indicating details about last transition.
+                      type: string
+                    reason:
+                      description: Unique, one-word, CamelCase reason for the condition's last transition.
+                      type: string
+                    status:
+                      description: Status is the status of the condition.
+                      type: string
+                    type:
+                      description: Type is the type of the condition.
+                      type: string
+                  type: object
+                type: array
+              observedGeneration:
+                anyOf:
+                - type: integer
+                - type: string
+                description: Resource Generation to which the Reconciled Condition refers.
+                x-kubernetes-int-or-string: true
+              validationMessages:
+                description: Includes any errors or warnings detected by Istio's analyzers.
+                items:
+                  properties:
+                    documentationUrl:
+                      description: A url pointing to the Istio documentation for this specific error type.
+                      type: string
+                    level:
+                      description: >-
+                        Represents how severe a message is.
+
+
+                        Valid Options: UNKNOWN, ERROR, WARNING, INFO
+                      enum:
+                      - UNKNOWN
+                      - ERROR
+                      - WARNING
+                      - INFO
+                      type: string
+                    type:
+                      properties:
+                        code:
+                          description: A 7 character code matching `^IST[0-9]{4}$` intended to uniquely identify the message type.
+                          type: string
+                        name:
+                          description: A human-readable name for the message type.
+                          type: string
+                      type: object
+                  type: object
+                type: array
             type: object
             x-kubernetes-preserve-unknown-fields: true
         type: object
@@ -810,7 +879,7 @@ spec:
                   type: object
                 type: array
               outboundTrafficPolicy:
-                description: Configuration for the outbound traffic policy.
+                description: Set the default behavior of the sidecar for handling outbound traffic from the application.
                 properties:
                   egressProxy:
                     properties:
@@ -846,12 +915,80 @@ spec:
                 properties:
                   labels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard is not supported in selector
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.
+                    maxProperties: 256
                     type: object
                 type: object
             type: object
           status:
+            properties:
+              conditions:
+                description: Current service state of the resource.
+                items:
+                  properties:
+                    lastProbeTime:
+                      description: Last time we probed the condition.
+                      format: date-time
+                      type: string
+                    lastTransitionTime:
+                      description: Last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Human-readable message indicating details about last transition.
+                      type: string
+                    reason:
+                      description: Unique, one-word, CamelCase reason for the condition's last transition.
+                      type: string
+                    status:
+                      description: Status is the status of the condition.
+                      type: string
+                    type:
+                      description: Type is the type of the condition.
+                      type: string
+                  type: object
+                type: array
+              observedGeneration:
+                anyOf:
+                - type: integer
+                - type: string
+                description: Resource Generation to which the Reconciled Condition refers.
+                x-kubernetes-int-or-string: true
+              validationMessages:
+                description: Includes any errors or warnings detected by Istio's analyzers.
+                items:
+                  properties:
+                    documentationUrl:
+                      description: A url pointing to the Istio documentation for this specific error type.
+                      type: string
+                    level:
+                      description: >-
+                        Represents how severe a message is.
+
+
+                        Valid Options: UNKNOWN, ERROR, WARNING, INFO
+                      enum:
+                      - UNKNOWN
+                      - ERROR
+                      - WARNING
+                      - INFO
+                      type: string
+                    type:
+                      properties:
+                        code:
+                          description: A 7 character code matching `^IST[0-9]{4}$` intended to uniquely identify the message type.
+                          type: string
+                        name:
+                          description: A human-readable name for the message type.
+                          type: string
+                      type: object
+                  type: object
+                type: array
             type: object
             x-kubernetes-preserve-unknown-fields: true
         type: object
@@ -1229,7 +1366,7 @@ spec:
                   type: object
                 type: array
               outboundTrafficPolicy:
-                description: Configuration for the outbound traffic policy.
+                description: Set the default behavior of the sidecar for handling outbound traffic from the application.
                 properties:
                   egressProxy:
                     properties:
@@ -1265,12 +1402,80 @@ spec:
                 properties:
                   labels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard is not supported in selector
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.
+                    maxProperties: 256
                     type: object
                 type: object
             type: object
           status:
+            properties:
+              conditions:
+                description: Current service state of the resource.
+                items:
+                  properties:
+                    lastProbeTime:
+                      description: Last time we probed the condition.
+                      format: date-time
+                      type: string
+                    lastTransitionTime:
+                      description: Last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Human-readable message indicating details about last transition.
+                      type: string
+                    reason:
+                      description: Unique, one-word, CamelCase reason for the condition's last transition.
+                      type: string
+                    status:
+                      description: Status is the status of the condition.
+                      type: string
+                    type:
+                      description: Type is the type of the condition.
+                      type: string
+                  type: object
+                type: array
+              observedGeneration:
+                anyOf:
+                - type: integer
+                - type: string
+                description: Resource Generation to which the Reconciled Condition refers.
+                x-kubernetes-int-or-string: true
+              validationMessages:
+                description: Includes any errors or warnings detected by Istio's analyzers.
+                items:
+                  properties:
+                    documentationUrl:
+                      description: A url pointing to the Istio documentation for this specific error type.
+                      type: string
+                    level:
+                      description: >-
+                        Represents how severe a message is.
+
+
+                        Valid Options: UNKNOWN, ERROR, WARNING, INFO
+                      enum:
+                      - UNKNOWN
+                      - ERROR
+                      - WARNING
+                      - INFO
+                      type: string
+                    type:
+                      properties:
+                        code:
+                          description: A 7 character code matching `^IST[0-9]{4}$` intended to uniquely identify the message type.
+                          type: string
+                        name:
+                          description: A human-readable name for the message type.
+                          type: string
+                      type: object
+                  type: object
+                type: array
             type: object
             x-kubernetes-preserve-unknown-fields: true
         type: object

@@ -215,6 +215,23 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>Represents the warmup configuration of Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerWarmup
+{
+    /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
+    [JsonPropertyName("aggression")]
+    public double? Aggression { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("duration")]
+    public string Duration { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("minimumPercent")]
+    public double? MinimumPercent { get; set; }
+}
+
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
@@ -231,7 +248,11 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
     [JsonPropertyName("simple")]
     public string? Simple { get; set; }
 
-    /// <summary>Represents the warmup duration of Service.</summary>
+    /// <summary>Represents the warmup configuration of Service.</summary>
+    [JsonPropertyName("warmup")]
+    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerWarmup? Warmup { get; set; }
+
+    /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
     public string? WarmupDurationSecs { get; set; }
 }
@@ -484,6 +505,23 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>Represents the warmup configuration of Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerWarmup
+{
+    /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
+    [JsonPropertyName("aggression")]
+    public double? Aggression { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("duration")]
+    public string Duration { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("minimumPercent")]
+    public double? MinimumPercent { get; set; }
+}
+
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancer
@@ -500,7 +538,11 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     [JsonPropertyName("simple")]
     public string? Simple { get; set; }
 
-    /// <summary>Represents the warmup duration of Service.</summary>
+    /// <summary>Represents the warmup configuration of Service.</summary>
+    [JsonPropertyName("warmup")]
+    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerWarmup? Warmup { get; set; }
+
+    /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
     public string? WarmupDurationSecs { get; set; }
 }
@@ -945,6 +987,23 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>Represents the warmup configuration of Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerWarmup
+{
+    /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
+    [JsonPropertyName("aggression")]
+    public double? Aggression { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("duration")]
+    public string Duration { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("minimumPercent")]
+    public double? MinimumPercent { get; set; }
+}
+
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
@@ -961,7 +1020,11 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
     [JsonPropertyName("simple")]
     public string? Simple { get; set; }
 
-    /// <summary>Represents the warmup duration of Service.</summary>
+    /// <summary>Represents the warmup configuration of Service.</summary>
+    [JsonPropertyName("warmup")]
+    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerWarmup? Warmup { get; set; }
+
+    /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
     public string? WarmupDurationSecs { get; set; }
 }
@@ -1214,6 +1277,23 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     public IList<string>? FailoverPriority { get; set; }
 }
 
+/// <summary>Represents the warmup configuration of Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerWarmup
+{
+    /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
+    [JsonPropertyName("aggression")]
+    public double? Aggression { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("duration")]
+    public string Duration { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("minimumPercent")]
+    public double? MinimumPercent { get; set; }
+}
+
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer
@@ -1230,7 +1310,11 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     [JsonPropertyName("simple")]
     public string? Simple { get; set; }
 
-    /// <summary>Represents the warmup duration of Service.</summary>
+    /// <summary>Represents the warmup configuration of Service.</summary>
+    [JsonPropertyName("warmup")]
+    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerWarmup? Warmup { get; set; }
+
+    /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
     public string? WarmupDurationSecs { get; set; }
 }
