@@ -27,7 +27,7 @@ public partial class V1beta1WorkloadGroupSpecProbeExec
 {
     /// <summary>Command to run.</summary>
     [JsonPropertyName("command")]
-    public IList<string>? Command { get; set; }
+    public IList<string> Command { get; set; }
 }
 
 /// <summary></summary>
@@ -191,7 +191,7 @@ public partial class V1beta1WorkloadGroup : IKubernetesObject<V1ObjectMeta>, ISp
 
     /// <summary>Describes a collection of workload instances. See more details at: https://istio.io/docs/reference/config/networking/workload-group.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1WorkloadGroupSpec? Spec { get; set; }
+    public V1beta1WorkloadGroupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]

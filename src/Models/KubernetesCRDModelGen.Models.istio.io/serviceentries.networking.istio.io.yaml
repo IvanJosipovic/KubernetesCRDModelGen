@@ -4,10 +4,11 @@ metadata:
   annotations:
     helm.sh/resource-policy: keep
   labels:
-    app: istio-pilot
-    chart: istio
-    heritage: Tiller
-    release: istio
+    app.kubernetes.io/instance: release-name
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 1.24.0
+    helm.sh/chart: base-1.24.0
   name: serviceentries.networking.istio.io
 spec:
   group: networking.istio.io
@@ -50,7 +51,9 @@ spec:
               addresses:
                 description: The virtual IP addresses associated with the service.
                 items:
+                  maxLength: 64
                   type: string
+                maxItems: 256
                 type: array
               endpoints:
                 description: One or more endpoints associated with the service.
@@ -119,6 +122,11 @@ spec:
                 description: The hosts associated with the ServiceEntry.
                 items:
                   type: string
+                  x-kubernetes-validations:
+                  - message: hostname cannot be wildcard
+                    rule: self != '*'
+                maxItems: 256
+                minItems: 1
                 type: array
               location:
                 description: >-
@@ -136,25 +144,40 @@ spec:
                   properties:
                     name:
                       description: Label assigned to the port.
+                      maxLength: 256
                       type: string
                     number:
                       description: A valid non-negative integer port number.
                       maximum: 4294967295
                       minimum: 0
                       type: integer
+                      x-kubernetes-validations:
+                      - message: port must be between 1-65535
+                        rule: 0 < self && self <= 65535
                     protocol:
                       description: The protocol exposed on the port.
+                      maxLength: 256
                       type: string
                     targetPort:
                       description: The port number on the endpoint where the traffic will be received.
                       maximum: 4294967295
                       minimum: 0
                       type: integer
+                      x-kubernetes-validations:
+                      - message: port must be between 1-65535
+                        rule: 0 < self && self <= 65535
                   required:
                   - number
                   - name
                   type: object
+                maxItems: 256
                 type: array
+                x-kubernetes-list-map-keys:
+                - name
+                x-kubernetes-list-type: map
+                x-kubernetes-validations:
+                - message: port number cannot be duplicated
+                  rule: self.all(l1, self.exists_one(l2, l1.number == l2.number))
               resolution:
                 description: >-
                   Service resolution mode for the hosts.
@@ -177,16 +200,95 @@ spec:
                 properties:
                   labels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard is not supported in selector
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.
+                    maxProperties: 256
                     type: object
                 type: object
             required:
             - hosts
             type: object
+            x-kubernetes-validations:
+            - message: only one of WorkloadSelector or Endpoints can be set
+              rule: (has(self.workloadSelector)?1:0)+(has(self.endpoints)?1:0)<=1
+            - message: CIDR addresses are allowed only for NONE/STATIC resolution types
+              rule: "!(has(self.addresses) && self.addresses.exists(k, k.contains('/')) && (has(self.resolution) && self.resolution != 'STATIC' && self.resolution != 'NONE'))"
+            - message: NONE mode cannot set endpoints
+              rule: "(!has(self.resolution) || self.resolution == 'NONE') ? !has(self.endpoints) : true"
+            - message: DNS_ROUND_ROBIN mode cannot have multiple endpoints
+              rule: "(has(self.resolution) && self.resolution == 'DNS_ROUND_ROBIN') ? (!has(self.endpoints) || size(self.endpoints) == 1) : true"
           status:
+            properties:
+              conditions:
+                description: Current service state of the resource.
+                items:
+                  properties:
+                    lastProbeTime:
+                      description: Last time we probed the condition.
+                      format: date-time
+                      type: string
+                    lastTransitionTime:
+                      description: Last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Human-readable message indicating details about last transition.
+                      type: string
+                    reason:
+                      description: Unique, one-word, CamelCase reason for the condition's last transition.
+                      type: string
+                    status:
+                      description: Status is the status of the condition.
+                      type: string
+                    type:
+                      description: Type is the type of the condition.
+                      type: string
+                  type: object
+                type: array
+              observedGeneration:
+                anyOf:
+                - type: integer
+                - type: string
+                description: Resource Generation to which the Reconciled Condition refers.
+                x-kubernetes-int-or-string: true
+              validationMessages:
+                description: Includes any errors or warnings detected by Istio's analyzers.
+                items:
+                  properties:
+                    documentationUrl:
+                      description: A url pointing to the Istio documentation for this specific error type.
+                      type: string
+                    level:
+                      description: >-
+                        Represents how severe a message is.
+
+
+                        Valid Options: UNKNOWN, ERROR, WARNING, INFO
+                      enum:
+                      - UNKNOWN
+                      - ERROR
+                      - WARNING
+                      - INFO
+                      type: string
+                    type:
+                      properties:
+                        code:
+                          description: A 7 character code matching `^IST[0-9]{4}$` intended to uniquely identify the message type.
+                          type: string
+                        name:
+                          description: A human-readable name for the message type.
+                          type: string
+                      type: object
+                  type: object
+                type: array
             type: object
             x-kubernetes-preserve-unknown-fields: true
+        required:
+        - spec
         type: object
     served: true
     storage: false
@@ -219,7 +321,9 @@ spec:
               addresses:
                 description: The virtual IP addresses associated with the service.
                 items:
+                  maxLength: 64
                   type: string
+                maxItems: 256
                 type: array
               endpoints:
                 description: One or more endpoints associated with the service.
@@ -288,6 +392,11 @@ spec:
                 description: The hosts associated with the ServiceEntry.
                 items:
                   type: string
+                  x-kubernetes-validations:
+                  - message: hostname cannot be wildcard
+                    rule: self != '*'
+                maxItems: 256
+                minItems: 1
                 type: array
               location:
                 description: >-
@@ -305,25 +414,40 @@ spec:
                   properties:
                     name:
                       description: Label assigned to the port.
+                      maxLength: 256
                       type: string
                     number:
                       description: A valid non-negative integer port number.
                       maximum: 4294967295
                       minimum: 0
                       type: integer
+                      x-kubernetes-validations:
+                      - message: port must be between 1-65535
+                        rule: 0 < self && self <= 65535
                     protocol:
                       description: The protocol exposed on the port.
+                      maxLength: 256
                       type: string
                     targetPort:
                       description: The port number on the endpoint where the traffic will be received.
                       maximum: 4294967295
                       minimum: 0
                       type: integer
+                      x-kubernetes-validations:
+                      - message: port must be between 1-65535
+                        rule: 0 < self && self <= 65535
                   required:
                   - number
                   - name
                   type: object
+                maxItems: 256
                 type: array
+                x-kubernetes-list-map-keys:
+                - name
+                x-kubernetes-list-type: map
+                x-kubernetes-validations:
+                - message: port number cannot be duplicated
+                  rule: self.all(l1, self.exists_one(l2, l1.number == l2.number))
               resolution:
                 description: >-
                   Service resolution mode for the hosts.
@@ -346,16 +470,95 @@ spec:
                 properties:
                   labels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard is not supported in selector
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.
+                    maxProperties: 256
                     type: object
                 type: object
             required:
             - hosts
             type: object
+            x-kubernetes-validations:
+            - message: only one of WorkloadSelector or Endpoints can be set
+              rule: (has(self.workloadSelector)?1:0)+(has(self.endpoints)?1:0)<=1
+            - message: CIDR addresses are allowed only for NONE/STATIC resolution types
+              rule: "!(has(self.addresses) && self.addresses.exists(k, k.contains('/')) && (has(self.resolution) && self.resolution != 'STATIC' && self.resolution != 'NONE'))"
+            - message: NONE mode cannot set endpoints
+              rule: "(!has(self.resolution) || self.resolution == 'NONE') ? !has(self.endpoints) : true"
+            - message: DNS_ROUND_ROBIN mode cannot have multiple endpoints
+              rule: "(has(self.resolution) && self.resolution == 'DNS_ROUND_ROBIN') ? (!has(self.endpoints) || size(self.endpoints) == 1) : true"
           status:
+            properties:
+              conditions:
+                description: Current service state of the resource.
+                items:
+                  properties:
+                    lastProbeTime:
+                      description: Last time we probed the condition.
+                      format: date-time
+                      type: string
+                    lastTransitionTime:
+                      description: Last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Human-readable message indicating details about last transition.
+                      type: string
+                    reason:
+                      description: Unique, one-word, CamelCase reason for the condition's last transition.
+                      type: string
+                    status:
+                      description: Status is the status of the condition.
+                      type: string
+                    type:
+                      description: Type is the type of the condition.
+                      type: string
+                  type: object
+                type: array
+              observedGeneration:
+                anyOf:
+                - type: integer
+                - type: string
+                description: Resource Generation to which the Reconciled Condition refers.
+                x-kubernetes-int-or-string: true
+              validationMessages:
+                description: Includes any errors or warnings detected by Istio's analyzers.
+                items:
+                  properties:
+                    documentationUrl:
+                      description: A url pointing to the Istio documentation for this specific error type.
+                      type: string
+                    level:
+                      description: >-
+                        Represents how severe a message is.
+
+
+                        Valid Options: UNKNOWN, ERROR, WARNING, INFO
+                      enum:
+                      - UNKNOWN
+                      - ERROR
+                      - WARNING
+                      - INFO
+                      type: string
+                    type:
+                      properties:
+                        code:
+                          description: A 7 character code matching `^IST[0-9]{4}$` intended to uniquely identify the message type.
+                          type: string
+                        name:
+                          description: A human-readable name for the message type.
+                          type: string
+                      type: object
+                  type: object
+                type: array
             type: object
             x-kubernetes-preserve-unknown-fields: true
+        required:
+        - spec
         type: object
     served: true
     storage: false
@@ -388,7 +591,9 @@ spec:
               addresses:
                 description: The virtual IP addresses associated with the service.
                 items:
+                  maxLength: 64
                   type: string
+                maxItems: 256
                 type: array
               endpoints:
                 description: One or more endpoints associated with the service.
@@ -457,6 +662,11 @@ spec:
                 description: The hosts associated with the ServiceEntry.
                 items:
                   type: string
+                  x-kubernetes-validations:
+                  - message: hostname cannot be wildcard
+                    rule: self != '*'
+                maxItems: 256
+                minItems: 1
                 type: array
               location:
                 description: >-
@@ -474,25 +684,40 @@ spec:
                   properties:
                     name:
                       description: Label assigned to the port.
+                      maxLength: 256
                       type: string
                     number:
                       description: A valid non-negative integer port number.
                       maximum: 4294967295
                       minimum: 0
                       type: integer
+                      x-kubernetes-validations:
+                      - message: port must be between 1-65535
+                        rule: 0 < self && self <= 65535
                     protocol:
                       description: The protocol exposed on the port.
+                      maxLength: 256
                       type: string
                     targetPort:
                       description: The port number on the endpoint where the traffic will be received.
                       maximum: 4294967295
                       minimum: 0
                       type: integer
+                      x-kubernetes-validations:
+                      - message: port must be between 1-65535
+                        rule: 0 < self && self <= 65535
                   required:
                   - number
                   - name
                   type: object
+                maxItems: 256
                 type: array
+                x-kubernetes-list-map-keys:
+                - name
+                x-kubernetes-list-type: map
+                x-kubernetes-validations:
+                - message: port number cannot be duplicated
+                  rule: self.all(l1, self.exists_one(l2, l1.number == l2.number))
               resolution:
                 description: >-
                   Service resolution mode for the hosts.
@@ -515,16 +740,95 @@ spec:
                 properties:
                   labels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard is not supported in selector
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.
+                    maxProperties: 256
                     type: object
                 type: object
             required:
             - hosts
             type: object
+            x-kubernetes-validations:
+            - message: only one of WorkloadSelector or Endpoints can be set
+              rule: (has(self.workloadSelector)?1:0)+(has(self.endpoints)?1:0)<=1
+            - message: CIDR addresses are allowed only for NONE/STATIC resolution types
+              rule: "!(has(self.addresses) && self.addresses.exists(k, k.contains('/')) && (has(self.resolution) && self.resolution != 'STATIC' && self.resolution != 'NONE'))"
+            - message: NONE mode cannot set endpoints
+              rule: "(!has(self.resolution) || self.resolution == 'NONE') ? !has(self.endpoints) : true"
+            - message: DNS_ROUND_ROBIN mode cannot have multiple endpoints
+              rule: "(has(self.resolution) && self.resolution == 'DNS_ROUND_ROBIN') ? (!has(self.endpoints) || size(self.endpoints) == 1) : true"
           status:
+            properties:
+              conditions:
+                description: Current service state of the resource.
+                items:
+                  properties:
+                    lastProbeTime:
+                      description: Last time we probed the condition.
+                      format: date-time
+                      type: string
+                    lastTransitionTime:
+                      description: Last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Human-readable message indicating details about last transition.
+                      type: string
+                    reason:
+                      description: Unique, one-word, CamelCase reason for the condition's last transition.
+                      type: string
+                    status:
+                      description: Status is the status of the condition.
+                      type: string
+                    type:
+                      description: Type is the type of the condition.
+                      type: string
+                  type: object
+                type: array
+              observedGeneration:
+                anyOf:
+                - type: integer
+                - type: string
+                description: Resource Generation to which the Reconciled Condition refers.
+                x-kubernetes-int-or-string: true
+              validationMessages:
+                description: Includes any errors or warnings detected by Istio's analyzers.
+                items:
+                  properties:
+                    documentationUrl:
+                      description: A url pointing to the Istio documentation for this specific error type.
+                      type: string
+                    level:
+                      description: >-
+                        Represents how severe a message is.
+
+
+                        Valid Options: UNKNOWN, ERROR, WARNING, INFO
+                      enum:
+                      - UNKNOWN
+                      - ERROR
+                      - WARNING
+                      - INFO
+                      type: string
+                    type:
+                      properties:
+                        code:
+                          description: A 7 character code matching `^IST[0-9]{4}$` intended to uniquely identify the message type.
+                          type: string
+                        name:
+                          description: A human-readable name for the message type.
+                          type: string
+                      type: object
+                  type: object
+                type: array
             type: object
             x-kubernetes-preserve-unknown-fields: true
+        required:
+        - spec
         type: object
     served: true
     storage: true

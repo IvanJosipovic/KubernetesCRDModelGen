@@ -135,7 +135,7 @@ public partial class V1beta1ServiceEntry : IKubernetesObject<V1ObjectMeta>, ISpe
 
     /// <summary>Configuration affecting service registry. See more details at: https://istio.io/docs/reference/config/networking/service-entry.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1ServiceEntrySpec? Spec { get; set; }
+    public V1beta1ServiceEntrySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]

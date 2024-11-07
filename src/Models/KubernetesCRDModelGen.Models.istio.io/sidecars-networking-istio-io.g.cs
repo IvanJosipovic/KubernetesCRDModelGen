@@ -367,7 +367,7 @@ public partial class V1beta1SidecarSpecOutboundTrafficPolicyEgressProxy
     public string? Subset { get; set; }
 }
 
-/// <summary>Configuration for the outbound traffic policy.</summary>
+/// <summary>Set the default behavior of the sidecar for handling outbound traffic from the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecOutboundTrafficPolicy
 {
@@ -405,7 +405,7 @@ public partial class V1beta1SidecarSpec
     [JsonPropertyName("ingress")]
     public IList<V1beta1SidecarSpecIngress>? Ingress { get; set; }
 
-    /// <summary>Configuration for the outbound traffic policy.</summary>
+    /// <summary>Set the default behavior of the sidecar for handling outbound traffic from the application.</summary>
     [JsonPropertyName("outboundTrafficPolicy")]
     public V1beta1SidecarSpecOutboundTrafficPolicy? OutboundTrafficPolicy { get; set; }
 
