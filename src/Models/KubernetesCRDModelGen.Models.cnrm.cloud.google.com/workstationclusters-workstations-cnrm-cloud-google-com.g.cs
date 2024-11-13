@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.workstations.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpecAnnotations
+public partial class V1beta1WorkstationClusterSpecAnnotations
 {
     /// <summary>Key for the annotation.</summary>
     [JsonPropertyName("key")]
@@ -23,7 +23,7 @@ public partial class V1alpha1WorkstationClusterSpecAnnotations
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpecLabels
+public partial class V1beta1WorkstationClusterSpecLabels
 {
     /// <summary>Key for the annotation.</summary>
     [JsonPropertyName("key")]
@@ -36,7 +36,7 @@ public partial class V1alpha1WorkstationClusterSpecLabels
 
 /// <summary>Immutable. Reference to the Compute Engine network in which instances associated with this workstation cluster will be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpecNetworkRef
+public partial class V1beta1WorkstationClusterSpecNetworkRef
 {
     /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
     [JsonPropertyName("external")]
@@ -53,7 +53,7 @@ public partial class V1alpha1WorkstationClusterSpecNetworkRef
 
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpecPrivateClusterConfigAllowedProjects
+public partial class V1beta1WorkstationClusterSpecPrivateClusterConfigAllowedProjects
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -74,11 +74,11 @@ public partial class V1alpha1WorkstationClusterSpecPrivateClusterConfigAllowedPr
 
 /// <summary>Optional. Configuration for private workstation cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpecPrivateClusterConfig
+public partial class V1beta1WorkstationClusterSpecPrivateClusterConfig
 {
     /// <summary>Optional. Additional projects that are allowed to attach to the workstation cluster's service attachment. By default, the workstation cluster's project and the VPC host project (if different) are allowed.</summary>
     [JsonPropertyName("allowedProjects")]
-    public IList<V1alpha1WorkstationClusterSpecPrivateClusterConfigAllowedProjects>? AllowedProjects { get; set; }
+    public IList<V1beta1WorkstationClusterSpecPrivateClusterConfigAllowedProjects>? AllowedProjects { get; set; }
 
     /// <summary>Immutable. Whether Workstations endpoint is private.</summary>
     [JsonPropertyName("enablePrivateEndpoint")]
@@ -87,7 +87,7 @@ public partial class V1alpha1WorkstationClusterSpecPrivateClusterConfig
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpecProjectRef
+public partial class V1beta1WorkstationClusterSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -108,7 +108,7 @@ public partial class V1alpha1WorkstationClusterSpecProjectRef
 
 /// <summary>Immutable. Reference to the Compute Engine subnetwork in which instances associated with this workstation cluster will be created. Must be part of the subnetwork specified for this workstation cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpecSubnetworkRef
+public partial class V1beta1WorkstationClusterSpecSubnetworkRef
 {
     /// <summary>The ComputeSubnetwork selflink of form "projects/{{project}}/regions/{{region}}/subnetworks/{{name}}", when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -125,11 +125,11 @@ public partial class V1alpha1WorkstationClusterSpecSubnetworkRef
 
 /// <summary>WorkstationClusterSpec defines the desired state of WorkstationCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterSpec
+public partial class V1beta1WorkstationClusterSpec
 {
     /// <summary>Optional. Client-specified annotations.</summary>
     [JsonPropertyName("annotations")]
-    public IList<V1alpha1WorkstationClusterSpecAnnotations>? Annotations { get; set; }
+    public IList<V1beta1WorkstationClusterSpecAnnotations>? Annotations { get; set; }
 
     /// <summary>Optional. Human-readable name for this workstation cluster.</summary>
     [JsonPropertyName("displayName")]
@@ -137,7 +137,7 @@ public partial class V1alpha1WorkstationClusterSpec
 
     /// <summary>Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied to the workstation cluster and that are also propagated to the underlying Compute Engine resources.</summary>
     [JsonPropertyName("labels")]
-    public IList<V1alpha1WorkstationClusterSpecLabels>? Labels { get; set; }
+    public IList<V1beta1WorkstationClusterSpecLabels>? Labels { get; set; }
 
     /// <summary>The location of the cluster.</summary>
     [JsonPropertyName("location")]
@@ -145,15 +145,15 @@ public partial class V1alpha1WorkstationClusterSpec
 
     /// <summary>Immutable. Reference to the Compute Engine network in which instances associated with this workstation cluster will be created.</summary>
     [JsonPropertyName("networkRef")]
-    public V1alpha1WorkstationClusterSpecNetworkRef NetworkRef { get; set; }
+    public V1beta1WorkstationClusterSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>Optional. Configuration for private workstation cluster.</summary>
     [JsonPropertyName("privateClusterConfig")]
-    public V1alpha1WorkstationClusterSpecPrivateClusterConfig? PrivateClusterConfig { get; set; }
+    public V1beta1WorkstationClusterSpecPrivateClusterConfig? PrivateClusterConfig { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1WorkstationClusterSpecProjectRef ProjectRef { get; set; }
+    public V1beta1WorkstationClusterSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The WorkstationCluster name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
@@ -161,12 +161,12 @@ public partial class V1alpha1WorkstationClusterSpec
 
     /// <summary>Immutable. Reference to the Compute Engine subnetwork in which instances associated with this workstation cluster will be created. Must be part of the subnetwork specified for this workstation cluster.</summary>
     [JsonPropertyName("subnetworkRef")]
-    public V1alpha1WorkstationClusterSpecSubnetworkRef SubnetworkRef { get; set; }
+    public V1beta1WorkstationClusterSpecSubnetworkRef SubnetworkRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterStatusConditions
+public partial class V1beta1WorkstationClusterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -191,7 +191,7 @@ public partial class V1alpha1WorkstationClusterStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterStatusObservedStateGcpConditions
+public partial class V1beta1WorkstationClusterStatusObservedStateGcpConditions
 {
     /// <summary>The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].</summary>
     [JsonPropertyName("code")]
@@ -204,7 +204,7 @@ public partial class V1alpha1WorkstationClusterStatusObservedStateGcpConditions
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterStatusObservedState
+public partial class V1beta1WorkstationClusterStatusObservedState
 {
     /// <summary>Output only. Hostname for the workstation cluster. This field will be populated only when private endpoint is enabled. To access workstations in the workstation cluster, create a new DNS zone mapping this domain name to an internal IP address and a forwarding rule mapping that address to the service attachment.</summary>
     [JsonPropertyName("clusterHostname")]
@@ -232,7 +232,7 @@ public partial class V1alpha1WorkstationClusterStatusObservedState
 
     /// <summary>Output only. Status conditions describing the workstation cluster's current state.</summary>
     [JsonPropertyName("gcpConditions")]
-    public IList<V1alpha1WorkstationClusterStatusObservedStateGcpConditions>? GcpConditions { get; set; }
+    public IList<V1beta1WorkstationClusterStatusObservedStateGcpConditions>? GcpConditions { get; set; }
 
     /// <summary>Output only. Indicates whether this workstation cluster is currently being updated to match its intended state.</summary>
     [JsonPropertyName("reconciling")]
@@ -253,11 +253,11 @@ public partial class V1alpha1WorkstationClusterStatusObservedState
 
 /// <summary>WorkstationClusterStatus defines the config connector machine state of WorkstationCluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkstationClusterStatus
+public partial class V1beta1WorkstationClusterStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1WorkstationClusterStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1WorkstationClusterStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the WorkstationCluster resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -269,15 +269,15 @@ public partial class V1alpha1WorkstationClusterStatus
 
     /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
     [JsonPropertyName("observedState")]
-    public V1alpha1WorkstationClusterStatusObservedState? ObservedState { get; set; }
+    public V1beta1WorkstationClusterStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary>WorkstationCluster is the Schema for the WorkstationCluster API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1WorkstationCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1WorkstationClusterSpec>, IStatus<V1alpha1WorkstationClusterStatus>
+public partial class V1beta1WorkstationCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkstationClusterSpec>, IStatus<V1beta1WorkstationClusterStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "WorkstationCluster";
     public const string KubeGroup = "workstations.cnrm.cloud.google.com";
     public const string KubePluralName = "workstationclusters";
@@ -295,9 +295,9 @@ public partial class V1alpha1WorkstationCluster : IKubernetesObject<V1ObjectMeta
 
     /// <summary>WorkstationClusterSpec defines the desired state of WorkstationCluster</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1WorkstationClusterSpec? Spec { get; set; }
+    public V1beta1WorkstationClusterSpec? Spec { get; set; }
 
     /// <summary>WorkstationClusterStatus defines the config connector machine state of WorkstationCluster</summary>
     [JsonPropertyName("status")]
-    public V1alpha1WorkstationClusterStatus? Status { get; set; }
+    public V1beta1WorkstationClusterStatus? Status { get; set; }
 }

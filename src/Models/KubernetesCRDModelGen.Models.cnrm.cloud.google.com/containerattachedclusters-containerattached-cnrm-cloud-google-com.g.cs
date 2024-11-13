@@ -105,7 +105,7 @@ public partial class V1beta1ContainerAttachedClusterSpecOidcConfig
     public string? Jwks { get; set; }
 }
 
-/// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
+/// <summary>The ID of the project in which the resource belongs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecProjectRef
 {
@@ -178,9 +178,9 @@ public partial class V1beta1ContainerAttachedClusterSpec
     [JsonPropertyName("platformVersion")]
     public string PlatformVersion { get; set; }
 
-    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
+    /// <summary>The ID of the project in which the resource belongs.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1ContainerAttachedClusterSpecProjectRef? ProjectRef { get; set; }
+    public V1beta1ContainerAttachedClusterSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable, Optional. The ContainerAttachedCluster name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]

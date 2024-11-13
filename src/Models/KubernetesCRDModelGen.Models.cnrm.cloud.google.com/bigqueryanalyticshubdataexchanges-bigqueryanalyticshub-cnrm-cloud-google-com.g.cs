@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigqueryanalyticshub.cnrm.cloud.google.com;
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpecProjectRef
+public partial class V1beta1BigQueryAnalyticsHubDataExchangeSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -31,7 +31,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpecProjectRef
 
 /// <summary>BigQueryAnalyticsHubDataExchangeSpec defines the desired state of BigQueryAnalyticsHubDataExchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpec
+public partial class V1beta1BigQueryAnalyticsHubDataExchangeSpec
 {
     /// <summary>Optional. Description of the data exchange. The description must not contain Unicode non-characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). Default value is an empty string. Max length: 2000 bytes.</summary>
     [JsonPropertyName("description")]
@@ -59,7 +59,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1BigQueryAnalyticsHubDataExchangeSpecProjectRef ProjectRef { get; set; }
+    public V1beta1BigQueryAnalyticsHubDataExchangeSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The BigQueryAnalyticsHubDataExchange name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
@@ -68,7 +68,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusConditions
+public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -93,7 +93,7 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusConditions
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusObservedState
+public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatusObservedState
 {
     /// <summary>Number of listings contained in the data exchange.</summary>
     [JsonPropertyName("listingCount")]
@@ -102,11 +102,11 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatusObservedState
 
 /// <summary>BigQueryAnalyticsHubDataExchangeStatus defines the config connector machine state of BigQueryAnalyticsHubDataExchange</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatus
+public partial class V1beta1BigQueryAnalyticsHubDataExchangeStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1BigQueryAnalyticsHubDataExchangeStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1BigQueryAnalyticsHubDataExchangeStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the BigQueryAnalyticsHubDataExchange resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -118,15 +118,15 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchangeStatus
 
     /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
     [JsonPropertyName("observedState")]
-    public V1alpha1BigQueryAnalyticsHubDataExchangeStatusObservedState? ObservedState { get; set; }
+    public V1beta1BigQueryAnalyticsHubDataExchangeStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary>BigQueryAnalyticsHubDataExchange is the Schema for the BigQueryAnalyticsHubDataExchange API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BigQueryAnalyticsHubDataExchange : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryAnalyticsHubDataExchangeSpec>, IStatus<V1alpha1BigQueryAnalyticsHubDataExchangeStatus>
+public partial class V1beta1BigQueryAnalyticsHubDataExchange : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryAnalyticsHubDataExchangeSpec>, IStatus<V1beta1BigQueryAnalyticsHubDataExchangeStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "BigQueryAnalyticsHubDataExchange";
     public const string KubeGroup = "bigqueryanalyticshub.cnrm.cloud.google.com";
     public const string KubePluralName = "bigqueryanalyticshubdataexchanges";
@@ -144,9 +144,9 @@ public partial class V1alpha1BigQueryAnalyticsHubDataExchange : IKubernetesObjec
 
     /// <summary>BigQueryAnalyticsHubDataExchangeSpec defines the desired state of BigQueryAnalyticsHubDataExchange</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1BigQueryAnalyticsHubDataExchangeSpec Spec { get; set; }
+    public V1beta1BigQueryAnalyticsHubDataExchangeSpec Spec { get; set; }
 
     /// <summary>BigQueryAnalyticsHubDataExchangeStatus defines the config connector machine state of BigQueryAnalyticsHubDataExchange</summary>
     [JsonPropertyName("status")]
-    public V1alpha1BigQueryAnalyticsHubDataExchangeStatus? Status { get; set; }
+    public V1beta1BigQueryAnalyticsHubDataExchangeStatus? Status { get; set; }
 }
