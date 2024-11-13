@@ -210,6 +210,15 @@ public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelect
     public IDictionary<string, string>? MatchLabels { get; set; }
 }
 
+/// <summary>CommonInstancetypesDeployment controls the deployment of common-instancetypes resources</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1KubeVirtSpecConfigurationCommonInstancetypesDeployment
+{
+    /// <summary>Enabled controls the deployment of common-instancetypes resources, defaults to True.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiterTokenBucketRateLimiter
@@ -373,6 +382,15 @@ public partial class V1KubeVirtSpecConfigurationHandlerConfiguration
     public V1KubeVirtSpecConfigurationHandlerConfigurationRestClient? RestClient { get; set; }
 }
 
+/// <summary>Instancetype configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1KubeVirtSpecConfigurationInstancetype
+{
+    /// <summary>ReferencePolicy defines how an instance type or preference should be referenced by the VM after submission, supported values are: reference (default) - Where a copy of the original object is stashed in a ControllerRevision and referenced by the VM. expand - Where the instance type or preference are expanded into the VM if no revisionNames have been populated. expandAll - Where the instance type or preference are expanded into the VM regardless of revisionNames previously being populated.</summary>
+    [JsonPropertyName("referencePolicy")]
+    public string? ReferencePolicy { get; set; }
+}
+
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelectorMatchExpressions
@@ -416,7 +434,7 @@ public partial class V1KubeVirtSpecConfigurationKsmConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationLiveUpdateConfiguration
 {
-    /// <summary>MaxCpuSockets holds the maximum amount of sockets that can be hotplugged</summary>
+    /// <summary>MaxCpuSockets provides a MaxSockets value for VMs that do not provide their own. For VMs with more sockets than maximum the MaxSockets will be set to equal number of sockets.</summary>
     [JsonPropertyName("maxCpuSockets")]
     public int? MaxCpuSockets { get; set; }
 
@@ -479,7 +497,7 @@ public partial class V1KubeVirtSpecConfigurationMigrations
     [JsonPropertyName("bandwidthPerMigration")]
     public IntstrIntOrString? BandwidthPerMigration { get; set; }
 
-    /// <summary>CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 800</summary>
+    /// <summary>CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 150</summary>
     [JsonPropertyName("completionTimeoutPerGiB")]
     public long? CompletionTimeoutPerGiB { get; set; }
 
@@ -516,23 +534,10 @@ public partial class V1KubeVirtSpecConfigurationMigrations
     public bool? UnsafeMigrationOverride { get; set; }
 }
 
-/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverheadClaims
-{
-    /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
 /// <summary>ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverhead
 {
-    /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
-    [JsonPropertyName("claims")]
-    public IList<V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverheadClaims>? Claims { get; set; }
-
     /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
     [JsonPropertyName("limits")]
     public IDictionary<string, IntstrIntOrString>? Limits { get; set; }
@@ -559,7 +564,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBinding
     [JsonPropertyName("computeResourceOverhead")]
     public V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverhead? ComputeResourceOverhead { get; set; }
 
-    /// <summary>DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: "tap". The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1</summary>
+    /// <summary>DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: "tap", "managedTap" (since v1.4). The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1</summary>
     [JsonPropertyName("domainAttachmentType")]
     public string? DomainAttachmentType { get; set; }
 
@@ -738,23 +743,10 @@ public partial class V1KubeVirtSpecConfigurationSmbios
     public string? Version { get; set; }
 }
 
-/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResourcesClaims
-{
-    /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>ResourceRequirements describes the compute resource requirements.</summary>
+/// <summary>ResourceRequirementsWithoutClaims describes the compute resource requirements. This struct was taken from the k8s.ResourceRequirements and cleaned up the 'Claims' field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResources
 {
-    /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
-    [JsonPropertyName("claims")]
-    public IList<V1KubeVirtSpecConfigurationSupportContainerResourcesResourcesClaims>? Claims { get; set; }
-
     /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
     [JsonPropertyName("limits")]
     public IDictionary<string, IntstrIntOrString>? Limits { get; set; }
@@ -768,7 +760,7 @@ public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResourc
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecConfigurationSupportContainerResources
 {
-    /// <summary>ResourceRequirements describes the compute resource requirements.</summary>
+    /// <summary>ResourceRequirementsWithoutClaims describes the compute resource requirements. This struct was taken from the k8s.ResourceRequirements and cleaned up the 'Claims' field.</summary>
     [JsonPropertyName("resources")]
     public V1KubeVirtSpecConfigurationSupportContainerResourcesResources Resources { get; set; }
 
@@ -785,7 +777,7 @@ public partial class V1KubeVirtSpecConfigurationTlsConfiguration
     [JsonPropertyName("ciphers")]
     public IList<string>? Ciphers { get; set; }
 
-    /// <summary>MinTLSVersion is a way to specify the minimum protocol version that is acceptable for TLS connections. Protocol versions are based on the following most common TLS configurations:     https://ssl-config.mozilla.org/   Note that SSLv3.0 is not a supported protocol version due to well known vulnerabilities such as POODLE: https://en.wikipedia.org/wiki/POODLE</summary>
+    /// <summary>MinTLSVersion is a way to specify the minimum protocol version that is acceptable for TLS connections. Protocol versions are based on the following most common TLS configurations:    https://ssl-config.mozilla.org/  Note that SSLv3.0 is not a supported protocol version due to well known vulnerabilities such as POODLE: https://en.wikipedia.org/wiki/POODLE</summary>
     [JsonPropertyName("minTLSVersion")]
     public string? MinTLSVersion { get; set; }
 }
@@ -875,6 +867,10 @@ public partial class V1KubeVirtSpecConfiguration
     [JsonPropertyName("autoCPULimitNamespaceLabelSelector")]
     public V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelector? AutoCPULimitNamespaceLabelSelector { get; set; }
 
+    /// <summary>CommonInstancetypesDeployment controls the deployment of common-instancetypes resources</summary>
+    [JsonPropertyName("commonInstancetypesDeployment")]
+    public V1KubeVirtSpecConfigurationCommonInstancetypesDeployment? CommonInstancetypesDeployment { get; set; }
+
     /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
     [JsonPropertyName("controllerConfiguration")]
     public V1KubeVirtSpecConfigurationControllerConfiguration? ControllerConfiguration { get; set; }
@@ -910,6 +906,10 @@ public partial class V1KubeVirtSpecConfiguration
     /// <summary>PullPolicy describes a policy for if/when to pull a container image</summary>
     [JsonPropertyName("imagePullPolicy")]
     public string? ImagePullPolicy { get; set; }
+
+    /// <summary>Instancetype configuration</summary>
+    [JsonPropertyName("instancetype")]
+    public V1KubeVirtSpecConfigurationInstancetype? Instancetype { get; set; }
 
     /// <summary>KSMConfiguration holds the information regarding the enabling the KSM in the nodes (if available).</summary>
     [JsonPropertyName("ksmConfiguration")]
@@ -1055,7 +1055,7 @@ public partial class V1KubeVirtSpecCustomizeComponents
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecImagePullSecrets
 {
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -1257,11 +1257,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -1359,11 +1359,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -1461,11 +1461,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -1563,11 +1563,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -1673,15 +1673,15 @@ public partial class V1KubeVirtSpecInfra
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeVirtSpecWorkloadUpdateStrategy
 {
-    /// <summary>BatchEvictionInterval Represents the interval to wait before issuing the next batch of shutdowns   Defaults to 1 minute</summary>
+    /// <summary>BatchEvictionInterval Represents the interval to wait before issuing the next batch of shutdowns  Defaults to 1 minute</summary>
     [JsonPropertyName("batchEvictionInterval")]
     public string? BatchEvictionInterval { get; set; }
 
-    /// <summary>BatchEvictionSize Represents the number of VMIs that can be forced updated per the BatchShutdownInteral interval   Defaults to 10</summary>
+    /// <summary>BatchEvictionSize Represents the number of VMIs that can be forced updated per the BatchShutdownInteral interval  Defaults to 10</summary>
     [JsonPropertyName("batchEvictionSize")]
     public int? BatchEvictionSize { get; set; }
 
-    /// <summary>WorkloadUpdateMethods defines the methods that can be used to disrupt workloads during automated workload updates. When multiple methods are present, the least disruptive method takes precedence over more disruptive methods. For example if both LiveMigrate and Shutdown methods are listed, only VMs which are not live migratable will be restarted/shutdown   An empty list defaults to no automated workload updating</summary>
+    /// <summary>WorkloadUpdateMethods defines the methods that can be used to disrupt workloads during automated workload updates. When multiple methods are present, the least disruptive method takes precedence over more disruptive methods. For example if both LiveMigrate and Shutdown methods are listed, only VMs which are not live migratable will be restarted/shutdown  An empty list defaults to no automated workload updating</summary>
     [JsonPropertyName("workloadUpdateMethods")]
     public IList<string>? WorkloadUpdateMethods { get; set; }
 }
@@ -1883,11 +1883,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -1985,11 +1985,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -2087,11 +2087,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -2189,11 +2189,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
     [JsonPropertyName("labelSelector")]
     public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate.</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key notin (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
