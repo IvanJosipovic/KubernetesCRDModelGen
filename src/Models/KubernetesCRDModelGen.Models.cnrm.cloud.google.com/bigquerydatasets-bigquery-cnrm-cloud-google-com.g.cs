@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessDatasetDataset
 {
-    /// <summary>Required. A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.</summary>
+    /// <summary>A unique Id for this dataset, without the project name. The Id must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.</summary>
     [JsonPropertyName("datasetId")]
     public string DatasetId { get; set; }
 
-    /// <summary>Required. The ID of the project containing this dataset.</summary>
+    /// <summary>The ID of the project containing this dataset.</summary>
     [JsonPropertyName("projectId")]
     public string ProjectId { get; set; }
 }
@@ -38,15 +38,15 @@ public partial class V1beta1BigQueryDatasetSpecAccessDataset
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessRoutine
 {
-    /// <summary>Required. The ID of the dataset containing this routine.</summary>
+    /// <summary>The ID of the dataset containing this routine.</summary>
     [JsonPropertyName("datasetId")]
     public string DatasetId { get; set; }
 
-    /// <summary>Required. The ID of the project containing this routine.</summary>
+    /// <summary>The ID of the project containing this routine.</summary>
     [JsonPropertyName("projectId")]
     public string ProjectId { get; set; }
 
-    /// <summary>Required. The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.</summary>
+    /// <summary>The Id of the routine. The Id must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.</summary>
     [JsonPropertyName("routineId")]
     public string RoutineId { get; set; }
 }
@@ -55,15 +55,15 @@ public partial class V1beta1BigQueryDatasetSpecAccessRoutine
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessView
 {
-    /// <summary>Required. The ID of the dataset containing this table.</summary>
+    /// <summary>The ID of the dataset containing this table.</summary>
     [JsonPropertyName("datasetId")]
     public string DatasetId { get; set; }
 
-    /// <summary>Required. The ID of the project containing this table.</summary>
+    /// <summary>The ID of the project containing this table.</summary>
     [JsonPropertyName("projectId")]
     public string ProjectId { get; set; }
 
-    /// <summary>Required. The ID of the table. The ID can contain Unicode characters in category L (letter), M (mark), N (number), Pc (connector, including underscore), Pd (dash), and Zs (space). For more information, see [General Category](https://wikipedia.org/wiki/Unicode_character_property#General_Category). The maximum length is 1,024 characters.  Certain operations allow suffixing of the table ID with a partition decorator, such as `sample_table$20190123`.</summary>
+    /// <summary>The Id of the table. The Id can contain Unicode characters in category L (letter), M (mark), N (number), Pc (connector, including underscore), Pd (dash), and Zs (space). For more information, see [General Category](https://wikipedia.org/wiki/Unicode_character_property#General_Category). The maximum length is 1,024 characters.  Certain operations allow suffixing of the table Id with a partition decorator, such as `sample_table$20190123`.</summary>
     [JsonPropertyName("tableId")]
     public string TableId { get; set; }
 }
@@ -135,7 +135,7 @@ public partial class V1beta1BigQueryDatasetSpecDefaultEncryptionConfiguration
     public V1beta1BigQueryDatasetSpecDefaultEncryptionConfigurationKmsKeyRef? KmsKeyRef { get; set; }
 }
 
-/// <summary>The project that this resource belongs to. optional.</summary>
+/// <summary> Optional. The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecProjectRef
 {
@@ -192,7 +192,7 @@ public partial class V1beta1BigQueryDatasetSpec
     [JsonPropertyName("isCaseInsensitive")]
     public bool? IsCaseInsensitive { get; set; }
 
-    /// <summary>The geographic location where the dataset should reside. See https://cloud.google.com/bigquery/docs/locations for supported locations.</summary>
+    /// <summary>Optional. The geographic location where the dataset should reside. See https://cloud.google.com/bigquery/docs/locations for supported locations.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
@@ -200,7 +200,7 @@ public partial class V1beta1BigQueryDatasetSpec
     [JsonPropertyName("maxTimeTravelHours")]
     public string? MaxTimeTravelHours { get; set; }
 
-    /// <summary>The project that this resource belongs to. optional.</summary>
+    /// <summary> Optional. The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
     public V1beta1BigQueryDatasetSpecProjectRef? ProjectRef { get; set; }
 
@@ -238,6 +238,15 @@ public partial class V1beta1BigQueryDatasetStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryDatasetStatusObservedState
+{
+    /// <summary>Optional. If the location is not specified in the spec, the GCP server defaults to a location and will be captured here.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+}
+
 /// <summary>BigQueryDatasetStatus defines the config connector machine state of BigQueryDataset</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetStatus
@@ -254,6 +263,10 @@ public partial class V1beta1BigQueryDatasetStatus
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
+    /// <summary>A unique specifier for the BigQueryAnalyticsHubDataExchangeListing resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
+
     /// <summary>Output only. The date when this dataset was last modified, in milliseconds since the epoch.</summary>
     [JsonPropertyName("lastModifiedTime")]
     public long? LastModifiedTime { get; set; }
@@ -261,6 +274,10 @@ public partial class V1beta1BigQueryDatasetStatus
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1beta1BigQueryDatasetStatusObservedState? ObservedState { get; set; }
 
     /// <summary>Output only. A URL that can be used to access the resource again. You can use this URL in Get or Update requests to the resource.</summary>
     [JsonPropertyName("selfLink")]

@@ -633,7 +633,7 @@ public partial class V1beta1ComputeBackendServiceSpecSecurityPolicyRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeBackendServiceSpecSecuritySettingsClientTLSPolicyRef
 {
-    /// <summary>Allowed value: The `name` field of a `NetworkSecurityClientTLSPolicy` resource.</summary>
+    /// <summary>Allowed value: string of the format `//networksecurity.googleapis.com/projects/{{project}}/locations/{{location}}/clientTlsPolicies/{{value}}`, where {{value}} is the `name` field of a `NetworkSecurityClientTLSPolicy` resource.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 

@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>SpannerInstanceSpec defines the desired state of SpannerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceSpec
 {
@@ -22,13 +22,13 @@ public partial class V1beta1SpannerInstanceSpec
 
     /// <summary></summary>
     [JsonPropertyName("numNodes")]
-    public int? NumNodes { get; set; }
+    public long? NumNodes { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("processingUnits")]
-    public int? ProcessingUnits { get; set; }
+    public long? ProcessingUnits { get; set; }
 
-    /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>Immutable. The SpannerInstance name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
@@ -58,24 +58,28 @@ public partial class V1beta1SpannerInstanceStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>SpannerInstanceStatus defines the config connector machine state of SpannerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceStatus
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the SpannerInstance's current state.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1beta1SpannerInstanceStatusConditions>? Conditions { get; set; }
 
+    /// <summary>A unique specifier for the SpannerInstance resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
+
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
 
     /// <summary>Instance status: 'CREATING' or 'READY'.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>SpannerInstance is the Schema for the SpannerInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1SpannerInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpannerInstanceSpec>, IStatus<V1beta1SpannerInstanceStatus>
@@ -96,11 +100,11 @@ public partial class V1beta1SpannerInstance : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SpannerInstanceSpec defines the desired state of SpannerInstance</summary>
     [JsonPropertyName("spec")]
     public V1beta1SpannerInstanceSpec Spec { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SpannerInstanceStatus defines the config connector machine state of SpannerInstance</summary>
     [JsonPropertyName("status")]
     public V1beta1SpannerInstanceStatus? Status { get; set; }
 }
