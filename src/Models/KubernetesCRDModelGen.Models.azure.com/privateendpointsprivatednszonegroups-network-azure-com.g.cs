@@ -8,9 +8,60 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.PrivateEndpointsPrivateDnsZoneGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+}
+
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/PrivateEndpoint resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpecOwner
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -23,7 +74,7 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec
 
 /// <summary>PrivateDnsZoneReference: The resource id of the private dns zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigsPrivateDnsZoneReference
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigsPrivateDnsZoneReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -42,9 +93,9 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateDnsZoneConfig PrivateDnsZoneConfig resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateDnsZoneConfig PrivateDnsZoneConfig resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigs
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -56,12 +107,12 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec
 
     /// <summary>PrivateDnsZoneReference: The resource id of the private dns zone.</summary>
     [JsonPropertyName("privateDnsZoneReference")]
-    public V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigsPrivateDnsZoneReference? PrivateDnsZoneReference { get; set; }
+    public V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigsPrivateDnsZoneReference? PrivateDnsZoneReference { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_Spec</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpointsPrivateDnsZoneGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -71,22 +122,26 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
+    /// <summary>Storage version of v1api20240301.PrivateEndpointsPrivateDnsZoneGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOperatorSpec? OperatorSpec { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
     public string? OriginalVersion { get; set; }
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/PrivateEndpoint resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpecOwner Owner { get; set; }
+    public V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateDnsZoneConfigs")]
-    public IList<V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigs>? PrivateDnsZoneConfigs { get; set; }
+    public IList<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpecPrivateDnsZoneConfigs>? PrivateDnsZoneConfigs { get; set; }
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatusConditions
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -117,9 +172,9 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStat
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.RecordSet_STATUS A collective group of information about the record set information.</summary>
+/// <summary>Storage version of v1api20240301.RecordSet_STATUS A collective group of information about the record set information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigsRecordSets
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigsRecordSets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -150,9 +205,9 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStat
     public int? Ttl { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateDnsZoneConfig_STATUS PrivateDnsZoneConfig resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateDnsZoneConfig_STATUS PrivateDnsZoneConfig resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigs
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -168,12 +223,12 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStat
 
     /// <summary></summary>
     [JsonPropertyName("recordSets")]
-    public IList<V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigsRecordSets>? RecordSets { get; set; }
+    public IList<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigsRecordSets>? RecordSets { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_STATUS</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpointsPrivateDnsZoneGroup_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatus
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -181,7 +236,7 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStat
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("etag")]
@@ -197,19 +252,19 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStat
 
     /// <summary></summary>
     [JsonPropertyName("privateDnsZoneConfigs")]
-    public IList<V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigs>? PrivateDnsZoneConfigs { get; set; }
+    public IList<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatusPrivateDnsZoneConfigs>? PrivateDnsZoneConfigs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/privateEndpoint.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpointsPrivateDnsZoneGroup Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/privateEndpoint.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}/privateDnsZoneGroups/{privateDnsZoneGroupName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec>, IStatus<V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatus>
+public partial class V1api20240301storagePrivateEndpointsPrivateDnsZoneGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpec>, IStatus<V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatus>
 {
-    public const string KubeApiVersion = "v1api20220701storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "PrivateEndpointsPrivateDnsZoneGroup";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "privateendpointsprivatednszonegroups";
@@ -225,11 +280,11 @@ public partial class V1api20220701storagePrivateEndpointsPrivateDnsZoneGroup : I
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_Spec</summary>
+    /// <summary>Storage version of v1api20240301.PrivateEndpointsPrivateDnsZoneGroup_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupSpec? Spec { get; set; }
+    public V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpointsPrivateDnsZoneGroup_STATUS</summary>
+    /// <summary>Storage version of v1api20240301.PrivateEndpointsPrivateDnsZoneGroup_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20220701storagePrivateEndpointsPrivateDnsZoneGroupStatus? Status { get; set; }
+    public V1api20240301storagePrivateEndpointsPrivateDnsZoneGroupStatus? Status { get; set; }
 }

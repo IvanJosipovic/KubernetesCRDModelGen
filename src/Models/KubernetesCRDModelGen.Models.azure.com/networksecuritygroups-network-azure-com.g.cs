@@ -8,9 +8,60 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageNetworkSecurityGroupSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageNetworkSecurityGroupSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.NetworkSecurityGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageNetworkSecurityGroupSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storageNetworkSecurityGroupSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storageNetworkSecurityGroupSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+}
+
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupSpecOwner
+public partial class V1api20240301storageNetworkSecurityGroupSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -21,9 +72,9 @@ public partial class V1api20201101storageNetworkSecurityGroupSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkSecurityGroup_Spec</summary>
+/// <summary>Storage version of v1api20240301.NetworkSecurityGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupSpec
+public partial class V1api20240301storageNetworkSecurityGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -34,8 +85,16 @@ public partial class V1api20201101storageNetworkSecurityGroupSpec
     public string? AzureName { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("flushConnection")]
+    public bool? FlushConnection { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Storage version of v1api20240301.NetworkSecurityGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storageNetworkSecurityGroupSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -43,7 +102,7 @@ public partial class V1api20201101storageNetworkSecurityGroupSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20201101storageNetworkSecurityGroupSpecOwner Owner { get; set; }
+    public V1api20240301storageNetworkSecurityGroupSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -52,7 +111,7 @@ public partial class V1api20201101storageNetworkSecurityGroupSpec
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupStatusConditions
+public partial class V1api20240301storageNetworkSecurityGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -83,9 +142,9 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SecurityRule_STATUS Network security rule.</summary>
+/// <summary>Storage version of v1api20240301.SecurityRule_STATUS Network security rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupStatusDefaultSecurityRules
+public partial class V1api20240301storageNetworkSecurityGroupStatusDefaultSecurityRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -96,9 +155,9 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusDefaultSecuri
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.FlowLog_STATUS A flow log resource.</summary>
+/// <summary>Storage version of v1api20240301.NetworkInterface_STATUS_NetworkSecurityGroup_SubResourceEmbedded A network interface in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupStatusFlowLogs
+public partial class V1api20240301storageNetworkSecurityGroupStatusNetworkInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -109,9 +168,9 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusFlowLogs
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkInterface_STATUS_NetworkSecurityGroup_SubResourceEmbedded A network interface in a resource group.</summary>
+/// <summary>Storage version of v1api20240301.Subnet_STATUS_NetworkSecurityGroup_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupStatusNetworkInterfaces
+public partial class V1api20240301storageNetworkSecurityGroupStatusSubnets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -122,22 +181,9 @@ public partial class V1api20201101storageNetworkSecurityGroupStatusNetworkInterf
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.Subnet_STATUS_NetworkSecurityGroup_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+/// <summary>Storage version of v1api20240301.NetworkSecurityGroup_STATUS_NetworkSecurityGroup_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupStatusSubnets
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("id")]
-    public string? Id { get; set; }
-}
-
-/// <summary>Storage version of v1api20201101.NetworkSecurityGroup_STATUS_NetworkSecurityGroup_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageNetworkSecurityGroupStatus
+public partial class V1api20240301storageNetworkSecurityGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -145,19 +191,19 @@ public partial class V1api20201101storageNetworkSecurityGroupStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20201101storageNetworkSecurityGroupStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storageNetworkSecurityGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("defaultSecurityRules")]
-    public IList<V1api20201101storageNetworkSecurityGroupStatusDefaultSecurityRules>? DefaultSecurityRules { get; set; }
+    public IList<V1api20240301storageNetworkSecurityGroupStatusDefaultSecurityRules>? DefaultSecurityRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("flowLogs")]
-    public IList<V1api20201101storageNetworkSecurityGroupStatusFlowLogs>? FlowLogs { get; set; }
+    [JsonPropertyName("flushConnection")]
+    public bool? FlushConnection { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -173,7 +219,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatus
 
     /// <summary></summary>
     [JsonPropertyName("networkInterfaces")]
-    public IList<V1api20201101storageNetworkSecurityGroupStatusNetworkInterfaces>? NetworkInterfaces { get; set; }
+    public IList<V1api20240301storageNetworkSecurityGroupStatusNetworkInterfaces>? NetworkInterfaces { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -185,7 +231,7 @@ public partial class V1api20201101storageNetworkSecurityGroupStatus
 
     /// <summary></summary>
     [JsonPropertyName("subnets")]
-    public IList<V1api20201101storageNetworkSecurityGroupStatusSubnets>? Subnets { get; set; }
+    public IList<V1api20240301storageNetworkSecurityGroupStatusSubnets>? Subnets { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -196,12 +242,12 @@ public partial class V1api20201101storageNetworkSecurityGroupStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkSecurityGroup Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}</summary>
+/// <summary>Storage version of v1api20240301.NetworkSecurityGroup Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20201101storageNetworkSecurityGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageNetworkSecurityGroupSpec>, IStatus<V1api20201101storageNetworkSecurityGroupStatus>
+public partial class V1api20240301storageNetworkSecurityGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storageNetworkSecurityGroupSpec>, IStatus<V1api20240301storageNetworkSecurityGroupStatus>
 {
-    public const string KubeApiVersion = "v1api20201101storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "NetworkSecurityGroup";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "networksecuritygroups";
@@ -217,11 +263,11 @@ public partial class V1api20201101storageNetworkSecurityGroup : IKubernetesObjec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.NetworkSecurityGroup_Spec</summary>
+    /// <summary>Storage version of v1api20240301.NetworkSecurityGroup_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20201101storageNetworkSecurityGroupSpec? Spec { get; set; }
+    public V1api20240301storageNetworkSecurityGroupSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.NetworkSecurityGroup_STATUS_NetworkSecurityGroup_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
+    /// <summary>Storage version of v1api20240301.NetworkSecurityGroup_STATUS_NetworkSecurityGroup_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
     [JsonPropertyName("status")]
-    public V1api20201101storageNetworkSecurityGroupStatus? Status { get; set; }
+    public V1api20240301storageNetworkSecurityGroupStatus? Status { get; set; }
 }

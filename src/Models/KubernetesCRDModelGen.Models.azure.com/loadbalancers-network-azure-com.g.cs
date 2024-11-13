@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,9 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -39,12 +39,12 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfigurationReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -63,9 +63,9 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnet
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -73,12 +73,12 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnetReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -97,9 +97,9 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -107,58 +107,141 @@ public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoad
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetworkReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancerBackendAddress Load balancer backend addresses.</summary>
+/// <summary>Storage version of v1api20240301.LoadBalancerBackendAddress Load balancer backend addresses.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddresses
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("adminState")]
+    public string? AdminState { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("loadBalancerFrontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration? LoadBalancerFrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration? LoadBalancerFrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("subnet")]
-    public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnet? Subnet { get; set; }
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesSubnet? Subnet { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("virtualNetwork")]
-    public V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
+/// <summary>Storage version of v1api20240301.GatewayLoadBalancerTunnelInterface Gateway load balancer tunnel interface of a load balancer backend address pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecBackendAddressPools
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsTunnelInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("loadBalancerBackendAddresses")]
-    public IList<V1api20201101storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddresses>? LoadBalancerBackendAddresses { get; set; }
+    [JsonPropertyName("identifier")]
+    public int? Identifier { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("port")]
+    public int? Port { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetworkReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecExtendedLocation
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetwork
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetworkReference? Reference { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.BackendAddressPool_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecBackendAddressPools
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("drainPeriodInSeconds")]
+    public int? DrainPeriodInSeconds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("loadBalancerBackendAddresses")]
+    public IList<V1api20240301storageLoadBalancerSpecBackendAddressPoolsLoadBalancerBackendAddresses>? LoadBalancerBackendAddresses { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncMode")]
+    public string? SyncMode { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tunnelInterfaces")]
+    public IList<V1api20240301storageLoadBalancerSpecBackendAddressPoolsTunnelInterfaces>? TunnelInterfaces { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+    [JsonPropertyName("virtualNetwork")]
+    public V1api20240301storageLoadBalancerSpecBackendAddressPoolsVirtualNetwork? VirtualNetwork { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -175,7 +258,7 @@ public partial class V1api20201101storageLoadBalancerSpecExtendedLocation
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsGatewayLoadBalancerReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -194,9 +277,9 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddress
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsGatewayLoadBalancer
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -204,12 +287,12 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsGatewayLoadBalancerReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -228,9 +311,9 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefix
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -238,12 +321,12 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -262,9 +345,9 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnet
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -272,16 +355,54 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefixReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+/// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfigurations
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsSubnetReference? Reference { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecFrontendIPConfigurations
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+    [JsonPropertyName("gatewayLoadBalancer")]
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsGatewayLoadBalancer? GatewayLoadBalancer { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -299,17 +420,17 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
     [JsonPropertyName("privateIPAllocationMethod")]
     public string? PrivateIPAllocationMethod { get; set; }
 
-    /// <summary>Storage version of v1api20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
+    /// <summary>Storage version of v1api20240301.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
     [JsonPropertyName("publicIPAddress")]
-    public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddress? PublicIPAddress { get; set; }
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPAddress? PublicIPAddress { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("publicIPPrefix")]
-    public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefix? PublicIPPrefix { get; set; }
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsPublicIPPrefix? PublicIPPrefix { get; set; }
 
-    /// <summary>Storage version of v1api20201101.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+    /// <summary>Storage version of v1api20240301.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
     [JsonPropertyName("subnet")]
-    public V1api20201101storageLoadBalancerSpecFrontendIPConfigurationsSubnet? Subnet { get; set; }
+    public V1api20240301storageLoadBalancerSpecFrontendIPConfigurationsSubnet? Subnet { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("zones")]
@@ -318,7 +439,7 @@ public partial class V1api20201101storageLoadBalancerSpecFrontendIPConfiguration
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference
+public partial class V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -337,9 +458,9 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontend
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -347,12 +468,12 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontend
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontendIPConfigurationReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.InboundNatPool Inbound NAT pool of the load balancer.</summary>
+/// <summary>Storage version of v1api20240301.InboundNatPool Inbound NAT pool of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecInboundNatPools
+public partial class V1api20240301storageLoadBalancerSpecInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -370,9 +491,9 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPools
     [JsonPropertyName("enableTcpReset")]
     public bool? EnableTcpReset { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("frontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerSpecInboundNatPoolsFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerSpecInboundNatPoolsFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendPortRangeEnd")]
@@ -397,7 +518,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatPools
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference
+public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -416,9 +537,9 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontend
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -426,16 +547,54 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRulesFrontend
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecInboundNatRulesBackendAddressPoolReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
+/// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecInboundNatRules
+public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecInboundNatRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20240301storageLoadBalancerSpecInboundNatRulesFrontendIPConfigurationReference? Reference { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.InboundNatRule_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecInboundNatRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+    [JsonPropertyName("backendAddressPool")]
+    public V1api20240301storageLoadBalancerSpecInboundNatRulesBackendAddressPool? BackendAddressPool { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendPort")]
@@ -449,13 +608,21 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRules
     [JsonPropertyName("enableTcpReset")]
     public bool? EnableTcpReset { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("frontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerSpecInboundNatRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerSpecInboundNatRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendPort")]
     public int? FrontendPort { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("frontendPortRangeEnd")]
+    public int? FrontendPortRangeEnd { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("frontendPortRangeStart")]
+    public int? FrontendPortRangeStart { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
@@ -472,7 +639,7 @@ public partial class V1api20201101storageLoadBalancerSpecInboundNatRules
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -491,9 +658,9 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBacke
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPool
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -501,12 +668,12 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesBacke
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -525,9 +692,9 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFront
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -535,12 +702,12 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesFront
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPoolsReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbeReference
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -559,9 +726,9 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -569,20 +736,58 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbeReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfigurationReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancingRule A load balancing rule for a load balancer.</summary>
+/// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRules
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbeReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbeReference? Reference { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.LoadBalancingRule A load balancing rule for a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecLoadBalancingRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("backendAddressPool")]
-    public V1api20201101storageLoadBalancerSpecLoadBalancingRulesBackendAddressPool? BackendAddressPool { get; set; }
+    public V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPool? BackendAddressPool { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("backendAddressPools")]
+    public IList<V1api20240301storageLoadBalancerSpecLoadBalancingRulesBackendAddressPools>? BackendAddressPools { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendPort")]
@@ -600,9 +805,9 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRules
     [JsonPropertyName("enableTcpReset")]
     public bool? EnableTcpReset { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("frontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerSpecLoadBalancingRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendPort")]
@@ -620,18 +825,69 @@ public partial class V1api20201101storageLoadBalancerSpecLoadBalancingRules
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("probe")]
-    public V1api20201101storageLoadBalancerSpecLoadBalancingRulesProbe? Probe { get; set; }
+    public V1api20240301storageLoadBalancerSpecLoadBalancingRulesProbe? Probe { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
 
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.LoadBalancerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storageLoadBalancerSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storageLoadBalancerSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+}
+
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference
+public partial class V1api20240301storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -650,9 +906,9 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAdd
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPool
+public partial class V1api20240301storageLoadBalancerSpecOutboundRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -660,12 +916,12 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesBackendAdd
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecOutboundRulesBackendAddressPoolReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference
+public partial class V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -684,9 +940,9 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIP
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurations
+public partial class V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -694,12 +950,12 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIP
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference? Reference { get; set; }
+    public V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIPConfigurationsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.OutboundRule Outbound rule of the load balancer.</summary>
+/// <summary>Storage version of v1api20240301.OutboundRule Outbound rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecOutboundRules
+public partial class V1api20240301storageLoadBalancerSpecOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -709,9 +965,9 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRules
     [JsonPropertyName("allocatedOutboundPorts")]
     public int? AllocatedOutboundPorts { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("backendAddressPool")]
-    public V1api20201101storageLoadBalancerSpecOutboundRulesBackendAddressPool? BackendAddressPool { get; set; }
+    public V1api20240301storageLoadBalancerSpecOutboundRulesBackendAddressPool? BackendAddressPool { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableTcpReset")]
@@ -719,7 +975,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRules
 
     /// <summary></summary>
     [JsonPropertyName("frontendIPConfigurations")]
-    public IList<V1api20201101storageLoadBalancerSpecOutboundRulesFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecOutboundRulesFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
@@ -736,7 +992,7 @@ public partial class V1api20201101storageLoadBalancerSpecOutboundRules
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecOwner
+public partial class V1api20240301storageLoadBalancerSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -747,9 +1003,9 @@ public partial class V1api20201101storageLoadBalancerSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.Probe A load balancer probe.</summary>
+/// <summary>Storage version of v1api20240301.Probe A load balancer probe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecProbes
+public partial class V1api20240301storageLoadBalancerSpecProbes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -764,12 +1020,20 @@ public partial class V1api20201101storageLoadBalancerSpecProbes
     public string? Name { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("noHealthyBackendsBehavior")]
+    public string? NoHealthyBackendsBehavior { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("numberOfProbes")]
     public int? NumberOfProbes { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("port")]
     public int? Port { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("probeThreshold")]
+    public int? ProbeThreshold { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("protocol")]
@@ -780,9 +1044,9 @@ public partial class V1api20201101storageLoadBalancerSpecProbes
     public string? RequestPath { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancerSku SKU of a load balancer.</summary>
+/// <summary>Storage version of v1api20240301.LoadBalancerSku SKU of a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpecSku
+public partial class V1api20240301storageLoadBalancerSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -797,9 +1061,9 @@ public partial class V1api20201101storageLoadBalancerSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancer_Spec</summary>
+/// <summary>Storage version of v1api20240301.LoadBalancer_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerSpec
+public partial class V1api20240301storageLoadBalancerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -811,31 +1075,35 @@ public partial class V1api20201101storageLoadBalancerSpec
 
     /// <summary></summary>
     [JsonPropertyName("backendAddressPools")]
-    public IList<V1api20201101storageLoadBalancerSpecBackendAddressPools>? BackendAddressPools { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecBackendAddressPools>? BackendAddressPools { get; set; }
 
-    /// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20201101storageLoadBalancerSpecExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storageLoadBalancerSpecExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendIPConfigurations")]
-    public IList<V1api20201101storageLoadBalancerSpecFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("inboundNatPools")]
-    public IList<V1api20201101storageLoadBalancerSpecInboundNatPools>? InboundNatPools { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecInboundNatPools>? InboundNatPools { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("inboundNatRules")]
-    public IList<V1api20201101storageLoadBalancerSpecInboundNatRules>? InboundNatRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecInboundNatRules>? InboundNatRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("loadBalancingRules")]
-    public IList<V1api20201101storageLoadBalancerSpecLoadBalancingRules>? LoadBalancingRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecLoadBalancingRules>? LoadBalancingRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Storage version of v1api20240301.LoadBalancerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storageLoadBalancerSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -843,28 +1111,28 @@ public partial class V1api20201101storageLoadBalancerSpec
 
     /// <summary></summary>
     [JsonPropertyName("outboundRules")]
-    public IList<V1api20201101storageLoadBalancerSpecOutboundRules>? OutboundRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecOutboundRules>? OutboundRules { get; set; }
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20201101storageLoadBalancerSpecOwner Owner { get; set; }
+    public V1api20240301storageLoadBalancerSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("probes")]
-    public IList<V1api20201101storageLoadBalancerSpecProbes>? Probes { get; set; }
+    public IList<V1api20240301storageLoadBalancerSpecProbes>? Probes { get; set; }
 
-    /// <summary>Storage version of v1api20201101.LoadBalancerSku SKU of a load balancer.</summary>
+    /// <summary>Storage version of v1api20240301.LoadBalancerSku SKU of a load balancer.</summary>
     [JsonPropertyName("sku")]
-    public V1api20201101storageLoadBalancerSpecSku? Sku { get; set; }
+    public V1api20240301storageLoadBalancerSpecSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
+/// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsBackendIPConfigurations
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsBackendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -875,9 +1143,9 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsBa
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -888,9 +1156,30 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.NatRulePortMapping_STATUS Individual port mappings for inbound NAT rule created for backend pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesNetworkInterfaceIPConfiguration
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesInboundNatRulesPortMapping
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("backendPort")]
+    public int? BackendPort { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("frontendPort")]
+    public int? FrontendPort { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("inboundNatRuleName")]
+    public string? InboundNatRuleName { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -901,9 +1190,9 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesSubnet
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesNetworkInterfaceIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -914,9 +1203,9 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -927,42 +1216,63 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancerBackendAddress_STATUS Load balancer backend addresses.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddresses
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.LoadBalancerBackendAddress_STATUS Load balancer backend addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddresses
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("adminState")]
+    public string? AdminState { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("inboundNatRulesPortMapping")]
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesInboundNatRulesPortMapping>? InboundNatRulesPortMapping { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("loadBalancerFrontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration? LoadBalancerFrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesLoadBalancerFrontendIPConfiguration? LoadBalancerFrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("networkInterfaceIPConfiguration")]
-    public V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesNetworkInterfaceIPConfiguration? NetworkInterfaceIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesNetworkInterfaceIPConfiguration? NetworkInterfaceIPConfiguration { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("subnet")]
-    public V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesSubnet? Subnet { get; set; }
+    public V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesSubnet? Subnet { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("virtualNetwork")]
-    public V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
+    public V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddressesVirtualNetwork? VirtualNetwork { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancingRules
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -973,9 +1283,9 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsLo
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRule
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsOutboundRule
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -986,9 +1296,9 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOu
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRules
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -999,9 +1309,47 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPoolsOu
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
+/// <summary>Storage version of v1api20240301.GatewayLoadBalancerTunnelInterface_STATUS Gateway load balancer tunnel interface of a load balancer backend address pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusBackendAddressPools
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsTunnelInterfaces
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("identifier")]
+    public int? Identifier { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("port")]
+    public int? Port { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPoolsVirtualNetwork
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerStatusBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1009,7 +1357,11 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPools
 
     /// <summary></summary>
     [JsonPropertyName("backendIPConfigurations")]
-    public IList<V1api20201101storageLoadBalancerStatusBackendAddressPoolsBackendIPConfigurations>? BackendIPConfigurations { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPoolsBackendIPConfigurations>? BackendIPConfigurations { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("drainPeriodInSeconds")]
+    public int? DrainPeriodInSeconds { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("etag")]
@@ -1020,37 +1372,57 @@ public partial class V1api20201101storageLoadBalancerStatusBackendAddressPools
     public string? Id { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("inboundNatRules")]
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPoolsInboundNatRules>? InboundNatRules { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("loadBalancerBackendAddresses")]
-    public IList<V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddresses>? LoadBalancerBackendAddresses { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancerBackendAddresses>? LoadBalancerBackendAddresses { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("loadBalancingRules")]
-    public IList<V1api20201101storageLoadBalancerStatusBackendAddressPoolsLoadBalancingRules>? LoadBalancingRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPoolsLoadBalancingRules>? LoadBalancingRules { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("outboundRule")]
-    public V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRule? OutboundRule { get; set; }
+    public V1api20240301storageLoadBalancerStatusBackendAddressPoolsOutboundRule? OutboundRule { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("outboundRules")]
-    public IList<V1api20201101storageLoadBalancerStatusBackendAddressPoolsOutboundRules>? OutboundRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPoolsOutboundRules>? OutboundRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("syncMode")]
+    public string? SyncMode { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tunnelInterfaces")]
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPoolsTunnelInterfaces>? TunnelInterfaces { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
+    [JsonPropertyName("virtualNetwork")]
+    public V1api20240301storageLoadBalancerStatusBackendAddressPoolsVirtualNetwork? VirtualNetwork { get; set; }
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusConditions
+public partial class V1api20240301storageLoadBalancerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -1081,9 +1453,9 @@ public partial class V1api20201101storageLoadBalancerStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusExtendedLocation
+public partial class V1api20240301storageLoadBalancerStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1098,9 +1470,9 @@ public partial class V1api20201101storageLoadBalancerStatusExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatPools
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsGatewayLoadBalancer
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1111,9 +1483,9 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatRules
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1124,9 +1496,9 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsLoadBalancingRules
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsInboundNatRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1137,9 +1509,9 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsOutboundRules
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1150,9 +1522,9 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPAddress
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1163,9 +1535,9 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPPrefix
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1176,9 +1548,9 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsSubnet
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsPublicIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1189,9 +1561,22 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+/// <summary>Storage version of v1api20240301.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurations
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsSubnet
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerStatusFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1201,21 +1586,25 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
+    [JsonPropertyName("gatewayLoadBalancer")]
+    public V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsGatewayLoadBalancer? GatewayLoadBalancer { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("inboundNatPools")]
-    public IList<V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatPools>? InboundNatPools { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsInboundNatPools>? InboundNatPools { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("inboundNatRules")]
-    public IList<V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsInboundNatRules>? InboundNatRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsInboundNatRules>? InboundNatRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("loadBalancingRules")]
-    public IList<V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsLoadBalancingRules>? LoadBalancingRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsLoadBalancingRules>? LoadBalancingRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -1223,7 +1612,7 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
 
     /// <summary></summary>
     [JsonPropertyName("outboundRules")]
-    public IList<V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsOutboundRules>? OutboundRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsOutboundRules>? OutboundRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateIPAddress")]
@@ -1241,17 +1630,17 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 
-    /// <summary>Storage version of v1api20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
+    /// <summary>Storage version of v1api20240301.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.</summary>
     [JsonPropertyName("publicIPAddress")]
-    public V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPAddress? PublicIPAddress { get; set; }
+    public V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsPublicIPAddress? PublicIPAddress { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("publicIPPrefix")]
-    public V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsPublicIPPrefix? PublicIPPrefix { get; set; }
+    public V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsPublicIPPrefix? PublicIPPrefix { get; set; }
 
-    /// <summary>Storage version of v1api20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+    /// <summary>Storage version of v1api20240301.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.</summary>
     [JsonPropertyName("subnet")]
-    public V1api20201101storageLoadBalancerStatusFrontendIPConfigurationsSubnet? Subnet { get; set; }
+    public V1api20240301storageLoadBalancerStatusFrontendIPConfigurationsSubnet? Subnet { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -1262,9 +1651,9 @@ public partial class V1api20201101storageLoadBalancerStatusFrontendIPConfigurati
     public IList<string>? Zones { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusInboundNatPoolsFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerStatusInboundNatPoolsFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1275,9 +1664,9 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatPoolsFronte
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.InboundNatPool_STATUS Inbound NAT pool of the load balancer.</summary>
+/// <summary>Storage version of v1api20240301.InboundNatPool_STATUS Inbound NAT pool of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusInboundNatPools
+public partial class V1api20240301storageLoadBalancerStatusInboundNatPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1299,9 +1688,9 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatPools
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("frontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerStatusInboundNatPoolsFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerStatusInboundNatPoolsFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendPortRangeEnd")]
@@ -1336,9 +1725,9 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatPools
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesBackendIPConfiguration
+public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1349,9 +1738,9 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesBacken
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesBackendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1362,17 +1751,34 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRulesFronte
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusInboundNatRules
+public partial class V1api20240301storageLoadBalancerStatusInboundNatRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerStatusInboundNatRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
+    [JsonPropertyName("backendAddressPool")]
+    public V1api20240301storageLoadBalancerStatusInboundNatRulesBackendAddressPool? BackendAddressPool { get; set; }
+
+    /// <summary>Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.</summary>
     [JsonPropertyName("backendIPConfiguration")]
-    public V1api20201101storageLoadBalancerStatusInboundNatRulesBackendIPConfiguration? BackendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerStatusInboundNatRulesBackendIPConfiguration? BackendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendPort")]
@@ -1390,13 +1796,21 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRules
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("frontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerStatusInboundNatRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerStatusInboundNatRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendPort")]
     public int? FrontendPort { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("frontendPortRangeEnd")]
+    public int? FrontendPortRangeEnd { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("frontendPortRangeStart")]
+    public int? FrontendPortRangeStart { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -1423,9 +1837,9 @@ public partial class V1api20201101storageLoadBalancerStatusInboundNatRules
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesBackendAddressPool
+public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1436,9 +1850,9 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesBac
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesFrontendIPConfiguration
+public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesBackendAddressPools
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1449,9 +1863,9 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesFro
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesProbe
+public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesFrontendIPConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1462,17 +1876,34 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRulesPro
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancingRule_STATUS A load balancing rule for a load balancer.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
+public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRulesProbe
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.LoadBalancingRule_STATUS A load balancing rule for a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageLoadBalancerStatusLoadBalancingRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("backendAddressPool")]
-    public V1api20201101storageLoadBalancerStatusLoadBalancingRulesBackendAddressPool? BackendAddressPool { get; set; }
+    public V1api20240301storageLoadBalancerStatusLoadBalancingRulesBackendAddressPool? BackendAddressPool { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("backendAddressPools")]
+    public IList<V1api20240301storageLoadBalancerStatusLoadBalancingRulesBackendAddressPools>? BackendAddressPools { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendPort")]
@@ -1494,9 +1925,9 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("frontendIPConfiguration")]
-    public V1api20201101storageLoadBalancerStatusLoadBalancingRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
+    public V1api20240301storageLoadBalancerStatusLoadBalancingRulesFrontendIPConfiguration? FrontendIPConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendPort")]
@@ -1518,9 +1949,9 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("probe")]
-    public V1api20201101storageLoadBalancerStatusLoadBalancingRulesProbe? Probe { get; set; }
+    public V1api20240301storageLoadBalancerStatusLoadBalancingRulesProbe? Probe { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("protocol")]
@@ -1535,9 +1966,9 @@ public partial class V1api20201101storageLoadBalancerStatusLoadBalancingRules
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusOutboundRulesBackendAddressPool
+public partial class V1api20240301storageLoadBalancerStatusOutboundRulesBackendAddressPool
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1548,9 +1979,9 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRulesBackendA
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusOutboundRulesFrontendIPConfigurations
+public partial class V1api20240301storageLoadBalancerStatusOutboundRulesFrontendIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1561,9 +1992,9 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRulesFrontend
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.OutboundRule_STATUS Outbound rule of the load balancer.</summary>
+/// <summary>Storage version of v1api20240301.OutboundRule_STATUS Outbound rule of the load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusOutboundRules
+public partial class V1api20240301storageLoadBalancerStatusOutboundRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1573,9 +2004,9 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRules
     [JsonPropertyName("allocatedOutboundPorts")]
     public int? AllocatedOutboundPorts { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("backendAddressPool")]
-    public V1api20201101storageLoadBalancerStatusOutboundRulesBackendAddressPool? BackendAddressPool { get; set; }
+    public V1api20240301storageLoadBalancerStatusOutboundRulesBackendAddressPool? BackendAddressPool { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableTcpReset")]
@@ -1587,7 +2018,7 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRules
 
     /// <summary></summary>
     [JsonPropertyName("frontendIPConfigurations")]
-    public IList<V1api20201101storageLoadBalancerStatusOutboundRulesFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusOutboundRulesFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -1614,9 +2045,9 @@ public partial class V1api20201101storageLoadBalancerStatusOutboundRules
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusProbesLoadBalancingRules
+public partial class V1api20240301storageLoadBalancerStatusProbesLoadBalancingRules
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1627,9 +2058,9 @@ public partial class V1api20201101storageLoadBalancerStatusProbesLoadBalancingRu
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.Probe_STATUS A load balancer probe.</summary>
+/// <summary>Storage version of v1api20240301.Probe_STATUS A load balancer probe.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusProbes
+public partial class V1api20240301storageLoadBalancerStatusProbes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1649,11 +2080,15 @@ public partial class V1api20201101storageLoadBalancerStatusProbes
 
     /// <summary></summary>
     [JsonPropertyName("loadBalancingRules")]
-    public IList<V1api20201101storageLoadBalancerStatusProbesLoadBalancingRules>? LoadBalancingRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusProbesLoadBalancingRules>? LoadBalancingRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("noHealthyBackendsBehavior")]
+    public string? NoHealthyBackendsBehavior { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("numberOfProbes")]
@@ -1662,6 +2097,10 @@ public partial class V1api20201101storageLoadBalancerStatusProbes
     /// <summary></summary>
     [JsonPropertyName("port")]
     public int? Port { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("probeThreshold")]
+    public int? ProbeThreshold { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("protocol")]
@@ -1680,9 +2119,9 @@ public partial class V1api20201101storageLoadBalancerStatusProbes
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancerSku_STATUS SKU of a load balancer.</summary>
+/// <summary>Storage version of v1api20240301.LoadBalancerSku_STATUS SKU of a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatusSku
+public partial class V1api20240301storageLoadBalancerStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1697,9 +2136,9 @@ public partial class V1api20201101storageLoadBalancerStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancer_STATUS LoadBalancer resource.</summary>
+/// <summary>Storage version of v1api20240301.LoadBalancer_STATUS LoadBalancer resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageLoadBalancerStatus
+public partial class V1api20240301storageLoadBalancerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1707,23 +2146,23 @@ public partial class V1api20201101storageLoadBalancerStatus
 
     /// <summary></summary>
     [JsonPropertyName("backendAddressPools")]
-    public IList<V1api20201101storageLoadBalancerStatusBackendAddressPools>? BackendAddressPools { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusBackendAddressPools>? BackendAddressPools { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20201101storageLoadBalancerStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20201101storageLoadBalancerStatusExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storageLoadBalancerStatusExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("frontendIPConfigurations")]
-    public IList<V1api20201101storageLoadBalancerStatusFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusFrontendIPConfigurations>? FrontendIPConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -1731,15 +2170,15 @@ public partial class V1api20201101storageLoadBalancerStatus
 
     /// <summary></summary>
     [JsonPropertyName("inboundNatPools")]
-    public IList<V1api20201101storageLoadBalancerStatusInboundNatPools>? InboundNatPools { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusInboundNatPools>? InboundNatPools { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("inboundNatRules")]
-    public IList<V1api20201101storageLoadBalancerStatusInboundNatRules>? InboundNatRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusInboundNatRules>? InboundNatRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("loadBalancingRules")]
-    public IList<V1api20201101storageLoadBalancerStatusLoadBalancingRules>? LoadBalancingRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusLoadBalancingRules>? LoadBalancingRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -1751,11 +2190,11 @@ public partial class V1api20201101storageLoadBalancerStatus
 
     /// <summary></summary>
     [JsonPropertyName("outboundRules")]
-    public IList<V1api20201101storageLoadBalancerStatusOutboundRules>? OutboundRules { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusOutboundRules>? OutboundRules { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("probes")]
-    public IList<V1api20201101storageLoadBalancerStatusProbes>? Probes { get; set; }
+    public IList<V1api20240301storageLoadBalancerStatusProbes>? Probes { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -1765,9 +2204,9 @@ public partial class V1api20201101storageLoadBalancerStatus
     [JsonPropertyName("resourceGuid")]
     public string? ResourceGuid { get; set; }
 
-    /// <summary>Storage version of v1api20201101.LoadBalancerSku_STATUS SKU of a load balancer.</summary>
+    /// <summary>Storage version of v1api20240301.LoadBalancerSku_STATUS SKU of a load balancer.</summary>
     [JsonPropertyName("sku")]
-    public V1api20201101storageLoadBalancerStatusSku? Sku { get; set; }
+    public V1api20240301storageLoadBalancerStatusSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -1778,12 +2217,12 @@ public partial class V1api20201101storageLoadBalancerStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}</summary>
+/// <summary>Storage version of v1api20240301.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20201101storageLoadBalancer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageLoadBalancerSpec>, IStatus<V1api20201101storageLoadBalancerStatus>
+public partial class V1api20240301storageLoadBalancer : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storageLoadBalancerSpec>, IStatus<V1api20240301storageLoadBalancerStatus>
 {
-    public const string KubeApiVersion = "v1api20201101storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "LoadBalancer";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "loadbalancers";
@@ -1799,11 +2238,11 @@ public partial class V1api20201101storageLoadBalancer : IKubernetesObject<V1Obje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.LoadBalancer_Spec</summary>
+    /// <summary>Storage version of v1api20240301.LoadBalancer_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20201101storageLoadBalancerSpec? Spec { get; set; }
+    public V1api20240301storageLoadBalancerSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.LoadBalancer_STATUS LoadBalancer resource.</summary>
+    /// <summary>Storage version of v1api20240301.LoadBalancer_STATUS LoadBalancer resource.</summary>
     [JsonPropertyName("status")]
-    public V1api20201101storageLoadBalancerStatus? Status { get; set; }
+    public V1api20240301storageLoadBalancerStatus? Status { get; set; }
 }

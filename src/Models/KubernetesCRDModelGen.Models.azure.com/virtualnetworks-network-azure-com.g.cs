@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
-/// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+/// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecAddressSpace
+public partial class V1api20240301storageVirtualNetworkSpecAddressSpace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -21,9 +21,9 @@ public partial class V1api20201101storageVirtualNetworkSpecAddressSpace
     public IList<string>? AddressPrefixes { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecBgpCommunities
+public partial class V1api20240301storageVirtualNetworkSpecBgpCommunities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -36,7 +36,7 @@ public partial class V1api20201101storageVirtualNetworkSpecBgpCommunities
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlanReference
+public partial class V1api20240301storageVirtualNetworkSpecDdosProtectionPlanReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -55,9 +55,9 @@ public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlanRef
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlan
+public partial class V1api20240301storageVirtualNetworkSpecDdosProtectionPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -65,12 +65,12 @@ public partial class V1api20201101storageVirtualNetworkSpecDdosProtectionPlan
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworkSpecDdosProtectionPlanReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworkSpecDdosProtectionPlanReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.DhcpOptions DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
+/// <summary>Storage version of v1api20240301.DhcpOptions DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecDhcpOptions
+public partial class V1api20240301storageVirtualNetworkSpecDhcpOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -81,9 +81,26 @@ public partial class V1api20201101storageVirtualNetworkSpecDhcpOptions
     public IList<string>? DnsServers { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetworkEncryption Indicates if encryption is enabled on virtual network and if VM without encryption is allowed in encrypted VNet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecExtendedLocation
+public partial class V1api20240301storageVirtualNetworkSpecEncryption
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enforcement")]
+    public string? Enforcement { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworkSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -100,7 +117,7 @@ public partial class V1api20201101storageVirtualNetworkSpecExtendedLocation
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecIpAllocationsReference
+public partial class V1api20240301storageVirtualNetworkSpecIpAllocationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -119,9 +136,9 @@ public partial class V1api20201101storageVirtualNetworkSpecIpAllocationsReferenc
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecIpAllocations
+public partial class V1api20240301storageVirtualNetworkSpecIpAllocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -129,12 +146,63 @@ public partial class V1api20201101storageVirtualNetworkSpecIpAllocations
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworkSpecIpAllocationsReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworkSpecIpAllocationsReference? Reference { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworkSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworkSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.VirtualNetworkOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworkSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storageVirtualNetworkSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storageVirtualNetworkSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpecOwner
+public partial class V1api20240301storageVirtualNetworkSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -145,33 +213,33 @@ public partial class V1api20201101storageVirtualNetworkSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetwork_Spec</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetwork_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkSpec
+public partial class V1api20240301storageVirtualNetworkSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+    /// <summary>Storage version of v1api20240301.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
     [JsonPropertyName("addressSpace")]
-    public V1api20201101storageVirtualNetworkSpecAddressSpace? AddressSpace { get; set; }
+    public V1api20240301storageVirtualNetworkSpecAddressSpace? AddressSpace { get; set; }
 
     /// <summary>AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be.</summary>
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
+    /// <summary>Storage version of v1api20240301.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
     [JsonPropertyName("bgpCommunities")]
-    public V1api20201101storageVirtualNetworkSpecBgpCommunities? BgpCommunities { get; set; }
+    public V1api20240301storageVirtualNetworkSpecBgpCommunities? BgpCommunities { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("ddosProtectionPlan")]
-    public V1api20201101storageVirtualNetworkSpecDdosProtectionPlan? DdosProtectionPlan { get; set; }
+    public V1api20240301storageVirtualNetworkSpecDdosProtectionPlan? DdosProtectionPlan { get; set; }
 
-    /// <summary>Storage version of v1api20201101.DhcpOptions DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
+    /// <summary>Storage version of v1api20240301.DhcpOptions DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
     [JsonPropertyName("dhcpOptions")]
-    public V1api20201101storageVirtualNetworkSpecDhcpOptions? DhcpOptions { get; set; }
+    public V1api20240301storageVirtualNetworkSpecDhcpOptions? DhcpOptions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableDdosProtection")]
@@ -181,17 +249,29 @@ public partial class V1api20201101storageVirtualNetworkSpec
     [JsonPropertyName("enableVmProtection")]
     public bool? EnableVmProtection { get; set; }
 
-    /// <summary>Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.VirtualNetworkEncryption Indicates if encryption is enabled on virtual network and if VM without encryption is allowed in encrypted VNet.</summary>
+    [JsonPropertyName("encryption")]
+    public V1api20240301storageVirtualNetworkSpecEncryption? Encryption { get; set; }
+
+    /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20201101storageVirtualNetworkSpecExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storageVirtualNetworkSpecExtendedLocation? ExtendedLocation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("flowTimeoutInMinutes")]
+    public int? FlowTimeoutInMinutes { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipAllocations")]
-    public IList<V1api20201101storageVirtualNetworkSpecIpAllocations>? IpAllocations { get; set; }
+    public IList<V1api20240301storageVirtualNetworkSpecIpAllocations>? IpAllocations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Storage version of v1api20240301.VirtualNetworkOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storageVirtualNetworkSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -199,16 +279,20 @@ public partial class V1api20201101storageVirtualNetworkSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20201101storageVirtualNetworkSpecOwner Owner { get; set; }
+    public V1api20240301storageVirtualNetworkSpecOwner Owner { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("privateEndpointVNetPolicies")]
+    public string? PrivateEndpointVNetPolicies { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+/// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatusAddressSpace
+public partial class V1api20240301storageVirtualNetworkStatusAddressSpace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -219,9 +303,9 @@ public partial class V1api20201101storageVirtualNetworkStatusAddressSpace
     public IList<string>? AddressPrefixes { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatusBgpCommunities
+public partial class V1api20240301storageVirtualNetworkStatusBgpCommunities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -238,7 +322,7 @@ public partial class V1api20201101storageVirtualNetworkStatusBgpCommunities
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatusConditions
+public partial class V1api20240301storageVirtualNetworkStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -269,9 +353,9 @@ public partial class V1api20201101storageVirtualNetworkStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatusDdosProtectionPlan
+public partial class V1api20240301storageVirtualNetworkStatusDdosProtectionPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -282,9 +366,9 @@ public partial class V1api20201101storageVirtualNetworkStatusDdosProtectionPlan
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.DhcpOptions_STATUS DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
+/// <summary>Storage version of v1api20240301.DhcpOptions_STATUS DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatusDhcpOptions
+public partial class V1api20240301storageVirtualNetworkStatusDhcpOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -295,9 +379,26 @@ public partial class V1api20201101storageVirtualNetworkStatusDhcpOptions
     public IList<string>? DnsServers { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetworkEncryption_STATUS Indicates if encryption is enabled on virtual network and if VM without encryption is allowed in encrypted VNet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatusExtendedLocation
+public partial class V1api20240301storageVirtualNetworkStatusEncryption
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enforcement")]
+    public string? Enforcement { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworkStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -312,9 +413,9 @@ public partial class V1api20201101storageVirtualNetworkStatusExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.FlowLog_STATUS_SubResourceEmbedded A flow log resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatusIpAllocations
+public partial class V1api20240301storageVirtualNetworkStatusFlowLogs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -325,33 +426,46 @@ public partial class V1api20201101storageVirtualNetworkStatusIpAllocations
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetwork_STATUS Virtual Network resource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworkStatus
+public partial class V1api20240301storageVirtualNetworkStatusIpAllocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
-    [JsonPropertyName("addressSpace")]
-    public V1api20201101storageVirtualNetworkStatusAddressSpace? AddressSpace { get; set; }
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetwork_STATUS Virtual Network resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworkStatus
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240301.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.</summary>
+    [JsonPropertyName("addressSpace")]
+    public V1api20240301storageVirtualNetworkStatusAddressSpace? AddressSpace { get; set; }
+
+    /// <summary>Storage version of v1api20240301.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.</summary>
     [JsonPropertyName("bgpCommunities")]
-    public V1api20201101storageVirtualNetworkStatusBgpCommunities? BgpCommunities { get; set; }
+    public V1api20240301storageVirtualNetworkStatusBgpCommunities? BgpCommunities { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20201101storageVirtualNetworkStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storageVirtualNetworkStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("ddosProtectionPlan")]
-    public V1api20201101storageVirtualNetworkStatusDdosProtectionPlan? DdosProtectionPlan { get; set; }
+    public V1api20240301storageVirtualNetworkStatusDdosProtectionPlan? DdosProtectionPlan { get; set; }
 
-    /// <summary>Storage version of v1api20201101.DhcpOptions_STATUS DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
+    /// <summary>Storage version of v1api20240301.DhcpOptions_STATUS DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.</summary>
     [JsonPropertyName("dhcpOptions")]
-    public V1api20201101storageVirtualNetworkStatusDhcpOptions? DhcpOptions { get; set; }
+    public V1api20240301storageVirtualNetworkStatusDhcpOptions? DhcpOptions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableDdosProtection")]
@@ -361,13 +475,25 @@ public partial class V1api20201101storageVirtualNetworkStatus
     [JsonPropertyName("enableVmProtection")]
     public bool? EnableVmProtection { get; set; }
 
+    /// <summary>Storage version of v1api20240301.VirtualNetworkEncryption_STATUS Indicates if encryption is enabled on virtual network and if VM without encryption is allowed in encrypted VNet.</summary>
+    [JsonPropertyName("encryption")]
+    public V1api20240301storageVirtualNetworkStatusEncryption? Encryption { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20201101storageVirtualNetworkStatusExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storageVirtualNetworkStatusExtendedLocation? ExtendedLocation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("flowLogs")]
+    public IList<V1api20240301storageVirtualNetworkStatusFlowLogs>? FlowLogs { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("flowTimeoutInMinutes")]
+    public int? FlowTimeoutInMinutes { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -375,7 +501,7 @@ public partial class V1api20201101storageVirtualNetworkStatus
 
     /// <summary></summary>
     [JsonPropertyName("ipAllocations")]
-    public IList<V1api20201101storageVirtualNetworkStatusIpAllocations>? IpAllocations { get; set; }
+    public IList<V1api20240301storageVirtualNetworkStatusIpAllocations>? IpAllocations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -384,6 +510,10 @@ public partial class V1api20201101storageVirtualNetworkStatus
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("privateEndpointVNetPolicies")]
+    public string? PrivateEndpointVNetPolicies { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -402,12 +532,12 @@ public partial class V1api20201101storageVirtualNetworkStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetwork Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetwork Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20201101storageVirtualNetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageVirtualNetworkSpec>, IStatus<V1api20201101storageVirtualNetworkStatus>
+public partial class V1api20240301storageVirtualNetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storageVirtualNetworkSpec>, IStatus<V1api20240301storageVirtualNetworkStatus>
 {
-    public const string KubeApiVersion = "v1api20201101storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "VirtualNetwork";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "virtualnetworks";
@@ -423,11 +553,11 @@ public partial class V1api20201101storageVirtualNetwork : IKubernetesObject<V1Ob
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetwork_Spec</summary>
+    /// <summary>Storage version of v1api20240301.VirtualNetwork_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20201101storageVirtualNetworkSpec? Spec { get; set; }
+    public V1api20240301storageVirtualNetworkSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetwork_STATUS Virtual Network resource.</summary>
+    /// <summary>Storage version of v1api20240301.VirtualNetwork_STATUS Virtual Network resource.</summary>
     [JsonPropertyName("status")]
-    public V1api20201101storageVirtualNetworkStatus? Status { get; set; }
+    public V1api20240301storageVirtualNetworkStatus? Status { get; set; }
 }

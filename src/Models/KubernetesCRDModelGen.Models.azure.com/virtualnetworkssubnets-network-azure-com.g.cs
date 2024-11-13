@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecApplicationGatewayIpConfigurationsReference
+public partial class V1api20240301storageVirtualNetworksSubnetSpecApplicationGatewayIPConfigurationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecApplicationGat
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ApplicationGatewayIPConfiguration_VirtualNetworks_Subnet_SubResourceEmbedded IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.</summary>
+/// <summary>Storage version of v1api20240301.ApplicationGatewayIPConfiguration_VirtualNetworks_Subnet_SubResourceEmbedded IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecApplicationGatewayIpConfigurations
+public partial class V1api20240301storageVirtualNetworksSubnetSpecApplicationGatewayIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -39,12 +39,12 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecApplicationGat
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworksSubnetSpecApplicationGatewayIpConfigurationsReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecApplicationGatewayIPConfigurationsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.Delegation Details the service to which the subnet is delegated.</summary>
+/// <summary>Storage version of v1api20240301.Delegation Details the service to which the subnet is delegated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecDelegations
+public partial class V1api20240301storageVirtualNetworksSubnetSpecDelegations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -61,7 +61,7 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecDelegations
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecIpAllocationsReference
+public partial class V1api20240301storageVirtualNetworksSubnetSpecIpAllocationsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -80,9 +80,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecIpAllocationsR
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecIpAllocations
+public partial class V1api20240301storageVirtualNetworksSubnetSpecIpAllocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -90,12 +90,12 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecIpAllocations
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworksSubnetSpecIpAllocationsReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecIpAllocationsReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecNatGatewayReference
+public partial class V1api20240301storageVirtualNetworksSubnetSpecNatGatewayReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -114,9 +114,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecNatGatewayRefe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecNatGateway
+public partial class V1api20240301storageVirtualNetworksSubnetSpecNatGateway
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -124,12 +124,12 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecNatGateway
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworksSubnetSpecNatGatewayReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecNatGatewayReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecNetworkSecurityGroupReference
+public partial class V1api20240301storageVirtualNetworksSubnetSpecNetworkSecurityGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -148,9 +148,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecNetworkSecurit
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkSecurityGroupSpec_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
+/// <summary>Storage version of v1api20240301.NetworkSecurityGroupSpec_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecNetworkSecurityGroup
+public partial class V1api20240301storageVirtualNetworksSubnetSpecNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -158,12 +158,63 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecNetworkSecurit
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworksSubnetSpecNetworkSecurityGroupReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecNetworkSecurityGroupReference? Reference { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworksSubnetSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworksSubnetSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.VirtualNetworksSubnetOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworksSubnetSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storageVirtualNetworksSubnetSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storageVirtualNetworksSubnetSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecOwner
+public partial class V1api20240301storageVirtualNetworksSubnetSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -176,7 +227,7 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecOwner
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecRouteTableReference
+public partial class V1api20240301storageVirtualNetworksSubnetSpecRouteTableReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -195,9 +246,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecRouteTableRefe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.RouteTableSpec_VirtualNetworks_Subnet_SubResourceEmbedded Route table resource.</summary>
+/// <summary>Storage version of v1api20240301.RouteTableSpec_VirtualNetworks_Subnet_SubResourceEmbedded Route table resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecRouteTable
+public partial class V1api20240301storageVirtualNetworksSubnetSpecRouteTable
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -205,12 +256,12 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecRouteTable
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworksSubnetSpecRouteTableReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecRouteTableReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecServiceEndpointPoliciesReference
+public partial class V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointPoliciesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -229,9 +280,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecServiceEndpoin
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ServiceEndpointPolicySpec_VirtualNetworks_Subnet_SubResourceEmbedded Service End point policy resource.</summary>
+/// <summary>Storage version of v1api20240301.ServiceEndpointPolicySpec_VirtualNetworks_Subnet_SubResourceEmbedded Service End point policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecServiceEndpointPolicies
+public partial class V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -239,12 +290,46 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecServiceEndpoin
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20201101storageVirtualNetworksSubnetSpecServiceEndpointPoliciesReference? Reference { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointPoliciesReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ServiceEndpointPropertiesFormat The service endpoint properties.</summary>
+/// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpecServiceEndpoints
+public partial class V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointsNetworkIdentifierReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointsNetworkIdentifier
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointsNetworkIdentifierReference? Reference { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ServiceEndpointPropertiesFormat The service endpoint properties.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworksSubnetSpecServiceEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -254,14 +339,18 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpecServiceEndpoin
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
 
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+    [JsonPropertyName("networkIdentifier")]
+    public V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointsNetworkIdentifier? NetworkIdentifier { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_Spec</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetworksSubnet_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetSpec
+public partial class V1api20240301storageVirtualNetworksSubnetSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -276,28 +365,36 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpec
     public IList<string>? AddressPrefixes { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("applicationGatewayIpConfigurations")]
-    public IList<V1api20201101storageVirtualNetworksSubnetSpecApplicationGatewayIpConfigurations>? ApplicationGatewayIpConfigurations { get; set; }
+    [JsonPropertyName("applicationGatewayIPConfigurations")]
+    public IList<V1api20240301storageVirtualNetworksSubnetSpecApplicationGatewayIPConfigurations>? ApplicationGatewayIPConfigurations { get; set; }
 
     /// <summary>AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be.</summary>
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("defaultOutboundAccess")]
+    public bool? DefaultOutboundAccess { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("delegations")]
-    public IList<V1api20201101storageVirtualNetworksSubnetSpecDelegations>? Delegations { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetSpecDelegations>? Delegations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipAllocations")]
-    public IList<V1api20201101storageVirtualNetworksSubnetSpecIpAllocations>? IpAllocations { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetSpecIpAllocations>? IpAllocations { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("natGateway")]
-    public V1api20201101storageVirtualNetworksSubnetSpecNatGateway? NatGateway { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecNatGateway? NatGateway { get; set; }
 
-    /// <summary>Storage version of v1api20201101.NetworkSecurityGroupSpec_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
+    /// <summary>Storage version of v1api20240301.NetworkSecurityGroupSpec_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
     [JsonPropertyName("networkSecurityGroup")]
-    public V1api20201101storageVirtualNetworksSubnetSpecNetworkSecurityGroup? NetworkSecurityGroup { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecNetworkSecurityGroup? NetworkSecurityGroup { get; set; }
+
+    /// <summary>Storage version of v1api20240301.VirtualNetworksSubnetOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storageVirtualNetworksSubnetSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -305,7 +402,7 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20201101storageVirtualNetworksSubnetSpecOwner Owner { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateEndpointNetworkPolicies")]
@@ -315,22 +412,26 @@ public partial class V1api20201101storageVirtualNetworksSubnetSpec
     [JsonPropertyName("privateLinkServiceNetworkPolicies")]
     public string? PrivateLinkServiceNetworkPolicies { get; set; }
 
-    /// <summary>Storage version of v1api20201101.RouteTableSpec_VirtualNetworks_Subnet_SubResourceEmbedded Route table resource.</summary>
+    /// <summary>Storage version of v1api20240301.RouteTableSpec_VirtualNetworks_Subnet_SubResourceEmbedded Route table resource.</summary>
     [JsonPropertyName("routeTable")]
-    public V1api20201101storageVirtualNetworksSubnetSpecRouteTable? RouteTable { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpecRouteTable? RouteTable { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("serviceEndpointPolicies")]
-    public IList<V1api20201101storageVirtualNetworksSubnetSpecServiceEndpointPolicies>? ServiceEndpointPolicies { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetSpecServiceEndpointPolicies>? ServiceEndpointPolicies { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("serviceEndpoints")]
-    public IList<V1api20201101storageVirtualNetworksSubnetSpecServiceEndpoints>? ServiceEndpoints { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetSpecServiceEndpoints>? ServiceEndpoints { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sharingScope")]
+    public string? SharingScope { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ApplicationGatewayIPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.</summary>
+/// <summary>Storage version of v1api20240301.ApplicationGatewayIPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusApplicationGatewayIpConfigurations
+public partial class V1api20240301storageVirtualNetworksSubnetStatusApplicationGatewayIPConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -343,7 +444,7 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusApplicationG
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusConditions
+public partial class V1api20240301storageVirtualNetworksSubnetStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -374,9 +475,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.Delegation_STATUS Details the service to which the subnet is delegated.</summary>
+/// <summary>Storage version of v1api20240301.Delegation_STATUS Details the service to which the subnet is delegated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusDelegations
+public partial class V1api20240301storageVirtualNetworksSubnetStatusDelegations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -411,9 +512,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusDelegations
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusIpAllocations
+public partial class V1api20240301storageVirtualNetworksSubnetStatusIpAllocations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -424,9 +525,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusIpAllocation
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.IPConfigurationProfile_STATUS IP configuration profile child resource.</summary>
+/// <summary>Storage version of v1api20240301.IPConfigurationProfile_STATUS IP configuration profile child resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusIpConfigurationProfiles
+public partial class V1api20240301storageVirtualNetworksSubnetStatusIpConfigurationProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -437,9 +538,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusIpConfigurat
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded IP configuration.</summary>
+/// <summary>Storage version of v1api20240301.IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded IP configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusIpConfigurations
+public partial class V1api20240301storageVirtualNetworksSubnetStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -450,9 +551,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusIpConfigurat
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusNatGateway
+public partial class V1api20240301storageVirtualNetworksSubnetStatusNatGateway
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -463,9 +564,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusNatGateway
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
+/// <summary>Storage version of v1api20240301.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusNetworkSecurityGroup
+public partial class V1api20240301storageVirtualNetworksSubnetStatusNetworkSecurityGroup
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -476,9 +577,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusNetworkSecur
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Private endpoint resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Private endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusPrivateEndpoints
+public partial class V1api20240301storageVirtualNetworksSubnetStatusPrivateEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -489,9 +590,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusPrivateEndpo
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ResourceNavigationLink_STATUS ResourceNavigationLink resource.</summary>
+/// <summary>Storage version of v1api20240301.ResourceNavigationLink_STATUS ResourceNavigationLink resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusResourceNavigationLinks
+public partial class V1api20240301storageVirtualNetworksSubnetStatusResourceNavigationLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -502,9 +603,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusResourceNavi
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.RouteTable_STATUS_SubResourceEmbedded Route table resource.</summary>
+/// <summary>Storage version of v1api20240301.RouteTable_STATUS_SubResourceEmbedded Route table resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusRouteTable
+public partial class V1api20240301storageVirtualNetworksSubnetStatusRouteTable
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -515,9 +616,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusRouteTable
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ServiceAssociationLink_STATUS ServiceAssociationLink resource.</summary>
+/// <summary>Storage version of v1api20240301.ServiceAssociationLink_STATUS ServiceAssociationLink resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceAssociationLinks
+public partial class V1api20240301storageVirtualNetworksSubnetStatusServiceAssociationLinks
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -528,9 +629,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceAssoc
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Service End point policy resource.</summary>
+/// <summary>Storage version of v1api20240301.ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Service End point policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceEndpointPolicies
+public partial class V1api20240301storageVirtualNetworksSubnetStatusServiceEndpointPolicies
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -541,9 +642,22 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceEndpo
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.ServiceEndpointPropertiesFormat_STATUS The service endpoint properties.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceEndpoints
+public partial class V1api20240301storageVirtualNetworksSubnetStatusServiceEndpointsNetworkIdentifier
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ServiceEndpointPropertiesFormat_STATUS The service endpoint properties.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageVirtualNetworksSubnetStatusServiceEndpoints
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -552,6 +666,10 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceEndpo
     /// <summary></summary>
     [JsonPropertyName("locations")]
     public IList<string>? Locations { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
+    [JsonPropertyName("networkIdentifier")]
+    public V1api20240301storageVirtualNetworksSubnetStatusServiceEndpointsNetworkIdentifier? NetworkIdentifier { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -562,9 +680,9 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatusServiceEndpo
     public string? Service { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_STATUS</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetworksSubnet_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageVirtualNetworksSubnetStatus
+public partial class V1api20240301storageVirtualNetworksSubnetStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -579,16 +697,20 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatus
     public IList<string>? AddressPrefixes { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("applicationGatewayIpConfigurations")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusApplicationGatewayIpConfigurations>? ApplicationGatewayIpConfigurations { get; set; }
+    [JsonPropertyName("applicationGatewayIPConfigurations")]
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusApplicationGatewayIPConfigurations>? ApplicationGatewayIPConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusConditions>? Conditions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("defaultOutboundAccess")]
+    public bool? DefaultOutboundAccess { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("delegations")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusDelegations>? Delegations { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusDelegations>? Delegations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("etag")]
@@ -600,27 +722,27 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatus
 
     /// <summary></summary>
     [JsonPropertyName("ipAllocations")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusIpAllocations>? IpAllocations { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusIpAllocations>? IpAllocations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipConfigurationProfiles")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusIpConfigurationProfiles>? IpConfigurationProfiles { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusIpConfigurationProfiles>? IpConfigurationProfiles { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusIpConfigurations>? IpConfigurations { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusIpConfigurations>? IpConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("natGateway")]
-    public V1api20201101storageVirtualNetworksSubnetStatusNatGateway? NatGateway { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetStatusNatGateway? NatGateway { get; set; }
 
-    /// <summary>Storage version of v1api20201101.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
+    /// <summary>Storage version of v1api20240301.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded NetworkSecurityGroup resource.</summary>
     [JsonPropertyName("networkSecurityGroup")]
-    public V1api20201101storageVirtualNetworksSubnetStatusNetworkSecurityGroup? NetworkSecurityGroup { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetStatusNetworkSecurityGroup? NetworkSecurityGroup { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateEndpointNetworkPolicies")]
@@ -628,7 +750,7 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatus
 
     /// <summary></summary>
     [JsonPropertyName("privateEndpoints")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusPrivateEndpoints>? PrivateEndpoints { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusPrivateEndpoints>? PrivateEndpoints { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateLinkServiceNetworkPolicies")]
@@ -644,35 +766,39 @@ public partial class V1api20201101storageVirtualNetworksSubnetStatus
 
     /// <summary></summary>
     [JsonPropertyName("resourceNavigationLinks")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusResourceNavigationLinks>? ResourceNavigationLinks { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusResourceNavigationLinks>? ResourceNavigationLinks { get; set; }
 
-    /// <summary>Storage version of v1api20201101.RouteTable_STATUS_SubResourceEmbedded Route table resource.</summary>
+    /// <summary>Storage version of v1api20240301.RouteTable_STATUS_SubResourceEmbedded Route table resource.</summary>
     [JsonPropertyName("routeTable")]
-    public V1api20201101storageVirtualNetworksSubnetStatusRouteTable? RouteTable { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetStatusRouteTable? RouteTable { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("serviceAssociationLinks")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusServiceAssociationLinks>? ServiceAssociationLinks { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusServiceAssociationLinks>? ServiceAssociationLinks { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("serviceEndpointPolicies")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusServiceEndpointPolicies>? ServiceEndpointPolicies { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusServiceEndpointPolicies>? ServiceEndpointPolicies { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("serviceEndpoints")]
-    public IList<V1api20201101storageVirtualNetworksSubnetStatusServiceEndpoints>? ServiceEndpoints { get; set; }
+    public IList<V1api20240301storageVirtualNetworksSubnetStatusServiceEndpoints>? ServiceEndpoints { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sharingScope")]
+    public string? SharingScope { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.VirtualNetworksSubnet Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
+/// <summary>Storage version of v1api20240301.VirtualNetworksSubnet Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20201101storageVirtualNetworksSubnet : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageVirtualNetworksSubnetSpec>, IStatus<V1api20201101storageVirtualNetworksSubnetStatus>
+public partial class V1api20240301storageVirtualNetworksSubnet : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storageVirtualNetworksSubnetSpec>, IStatus<V1api20240301storageVirtualNetworksSubnetStatus>
 {
-    public const string KubeApiVersion = "v1api20201101storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "VirtualNetworksSubnet";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "virtualnetworkssubnets";
@@ -688,11 +814,11 @@ public partial class V1api20201101storageVirtualNetworksSubnet : IKubernetesObje
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_Spec</summary>
+    /// <summary>Storage version of v1api20240301.VirtualNetworksSubnet_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20201101storageVirtualNetworksSubnetSpec? Spec { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.VirtualNetworksSubnet_STATUS</summary>
+    /// <summary>Storage version of v1api20240301.VirtualNetworksSubnet_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20201101storageVirtualNetworksSubnetStatus? Status { get; set; }
+    public V1api20240301storageVirtualNetworksSubnetStatus? Status { get; set; }
 }
