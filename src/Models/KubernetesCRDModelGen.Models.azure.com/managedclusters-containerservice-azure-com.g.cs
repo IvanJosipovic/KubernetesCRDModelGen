@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
-/// <summary>Storage version of v1api20231001.ManagedClusterAADProfile For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAADProfile For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAadProfile
+public partial class V1api20240901storageManagedClusterSpecAadProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -45,9 +45,9 @@ public partial class V1api20231001storageManagedClusterSpecAadProfile
     public string? TenantID { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAddonProfile A Kubernetes add-on profile for a managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAddonProfile A Kubernetes add-on profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAddonProfiles
+public partial class V1api20240901storageManagedClusterSpecAddonProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -64,7 +64,7 @@ public partial class V1api20231001storageManagedClusterSpecAddonProfiles
 
 /// <summary>CapacityReservationGroupReference: AKS will associate the specified agent pool with the Capacity Reservation Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCapacityReservationGroupReference
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesCapacityReservationGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -85,7 +85,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCapa
 
 /// <summary>SourceResourceReference: This is the ARM ID of the source object to be used to create the target object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCreationDataSourceResourceReference
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesCreationDataSourceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -104,9 +104,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCrea
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.CreationData Data used when creating a target resource from a source resource.</summary>
+/// <summary>Storage version of v1api20240901.CreationData Data used when creating a target resource from a source resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCreationData
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -114,12 +114,12 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesCrea
 
     /// <summary>SourceResourceReference: This is the ARM ID of the source object to be used to create the target object.</summary>
     [JsonPropertyName("sourceResourceReference")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesCreationDataSourceResourceReference? SourceResourceReference { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesCreationDataSourceResourceReference? SourceResourceReference { get; set; }
 }
 
 /// <summary>HostGroupReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}. For more information see [Azure dedicated hosts](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesHostGroupReference
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesHostGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -138,9 +138,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesHost
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+/// <summary>Storage version of v1api20240901.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesKubeletConfig
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesKubeletConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -191,9 +191,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesKube
     public string? TopologyManagerPolicy { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.SysctlConfig Sysctl settings for Linux agent nodes.</summary>
+/// <summary>Storage version of v1api20240901.SysctlConfig Sysctl settings for Linux agent nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinuxOSConfigSysctls
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesLinuxOSConfigSysctls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -312,9 +312,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinu
     public int? VmVfsCachePressure { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+/// <summary>Storage version of v1api20240901.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinuxOSConfig
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesLinuxOSConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -324,9 +324,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinu
     [JsonPropertyName("swapFileSizeMB")]
     public int? SwapFileSizeMB { get; set; }
 
-    /// <summary>Storage version of v1api20231001.SysctlConfig Sysctl settings for Linux agent nodes.</summary>
+    /// <summary>Storage version of v1api20240901.SysctlConfig Sysctl settings for Linux agent nodes.</summary>
     [JsonPropertyName("sysctls")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesLinuxOSConfigSysctls? Sysctls { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesLinuxOSConfigSysctls? Sysctls { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("transparentHugePageDefrag")]
@@ -337,9 +337,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesLinu
     public string? TransparentHugePageEnabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.PortRange The port range.</summary>
+/// <summary>Storage version of v1api20240901.PortRange The port range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileAllowedHostPorts
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfileAllowedHostPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -360,7 +360,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileApplicationSecurityGroupsReferences
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfileApplicationSecurityGroupsReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -379,9 +379,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IPTag Contains the IPTag associated with the object.</summary>
+/// <summary>Storage version of v1api20240901.IPTag Contains the IPTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileNodePublicIPTags
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfileNodePublicIPTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -396,9 +396,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
     public string? Tag { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile Network settings of an agent pool.</summary>
+/// <summary>Storage version of v1api20240901.AgentPoolNetworkProfile Network settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfile
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -406,20 +406,20 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNetw
 
     /// <summary></summary>
     [JsonPropertyName("allowedHostPorts")]
-    public IList<V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileAllowedHostPorts>? AllowedHostPorts { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfileAllowedHostPorts>? AllowedHostPorts { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("applicationSecurityGroupsReferences")]
-    public IList<V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileApplicationSecurityGroupsReferences>? ApplicationSecurityGroupsReferences { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfileApplicationSecurityGroupsReferences>? ApplicationSecurityGroupsReferences { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("nodePublicIPTags")]
-    public IList<V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
 
 /// <summary>NodePublicIPPrefixReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNodePublicIPPrefixReference
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesNodePublicIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -440,7 +440,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesNode
 
 /// <summary>PodSubnetReference: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPodSubnetReference
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesPodSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -459,9 +459,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPodS
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.PowerState Describes the Power State of the cluster</summary>
+/// <summary>Storage version of v1api20240901.PowerState Describes the Power State of the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPowerState
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -474,7 +474,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesPowe
 
 /// <summary>ProximityPlacementGroupReference: The ID for Proximity Placement Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesProximityPlacementGroupReference
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesProximityPlacementGroupReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -493,9 +493,26 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesProx
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings Settings for upgrading an agentpool</summary>
+/// <summary>Storage version of v1api20240901.AgentPoolSecurityProfile The security settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesUpgradeSettings
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesSecurityProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enableSecureBoot")]
+    public bool? EnableSecureBoot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enableVTPM")]
+    public bool? EnableVTPM { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AgentPoolUpgradeSettings Settings for upgrading an agentpool</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -508,11 +525,15 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesUpgr
     /// <summary></summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public int? NodeSoakDurationInMinutes { get; set; }
 }
 
 /// <summary>VnetSubnetReference: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesVnetSubnetReference
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesVnetSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -531,9 +552,22 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfilesVnet
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAgentPoolProfile Profile for the container service agent pool.</summary>
+/// <summary>Storage version of v1api20240901.AgentPoolWindowsProfile The Windows agent pool's specific profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesWindowsProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("disableOutboundNat")]
+    public bool? DisableOutboundNat { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterAgentPoolProfile Profile for the container service agent pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecAgentPoolProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -545,15 +579,15 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
 
     /// <summary>CapacityReservationGroupReference: AKS will associate the specified agent pool with the Capacity Reservation Group.</summary>
     [JsonPropertyName("capacityReservationGroupReference")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesCapacityReservationGroupReference? CapacityReservationGroupReference { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesCapacityReservationGroupReference? CapacityReservationGroupReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("count")]
     public int? Count { get; set; }
 
-    /// <summary>Storage version of v1api20231001.CreationData Data used when creating a target resource from a source resource.</summary>
+    /// <summary>Storage version of v1api20240901.CreationData Data used when creating a target resource from a source resource.</summary>
     [JsonPropertyName("creationData")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesCreationData? CreationData { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesCreationData? CreationData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableAutoScaling")]
@@ -581,19 +615,19 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
 
     /// <summary>HostGroupReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/hostGroups/{hostGroupName}. For more information see [Azure dedicated hosts](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts).</summary>
     [JsonPropertyName("hostGroupReference")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesHostGroupReference? HostGroupReference { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesHostGroupReference? HostGroupReference { get; set; }
 
-    /// <summary>Storage version of v1api20231001.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+    /// <summary>Storage version of v1api20240901.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
     [JsonPropertyName("kubeletConfig")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesKubeletConfig? KubeletConfig { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesKubeletConfig? KubeletConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
-    /// <summary>Storage version of v1api20231001.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+    /// <summary>Storage version of v1api20240901.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
     [JsonPropertyName("linuxOSConfig")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesLinuxOSConfig? LinuxOSConfig { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesLinuxOSConfig? LinuxOSConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("maxCount")]
@@ -615,9 +649,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile Network settings of an agent pool.</summary>
+    /// <summary>Storage version of v1api20240901.AgentPoolNetworkProfile Network settings of an agent pool.</summary>
     [JsonPropertyName("networkProfile")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesNetworkProfile? NetworkProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfile? NetworkProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("nodeLabels")]
@@ -625,7 +659,7 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
 
     /// <summary>NodePublicIPPrefixReference: This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIPPrefixName}</summary>
     [JsonPropertyName("nodePublicIPPrefixReference")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesNodePublicIPPrefixReference? NodePublicIPPrefixReference { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesNodePublicIPPrefixReference? NodePublicIPPrefixReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("nodeTaints")]
@@ -653,15 +687,15 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
 
     /// <summary>PodSubnetReference: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
     [JsonPropertyName("podSubnetReference")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesPodSubnetReference? PodSubnetReference { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesPodSubnetReference? PodSubnetReference { get; set; }
 
-    /// <summary>Storage version of v1api20231001.PowerState Describes the Power State of the cluster</summary>
+    /// <summary>Storage version of v1api20240901.PowerState Describes the Power State of the cluster</summary>
     [JsonPropertyName("powerState")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesPowerState? PowerState { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesPowerState? PowerState { get; set; }
 
     /// <summary>ProximityPlacementGroupReference: The ID for Proximity Placement Group.</summary>
     [JsonPropertyName("proximityPlacementGroupReference")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesProximityPlacementGroupReference? ProximityPlacementGroupReference { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesProximityPlacementGroupReference? ProximityPlacementGroupReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scaleDownMode")]
@@ -675,6 +709,10 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
     [JsonPropertyName("scaleSetPriority")]
     public string? ScaleSetPriority { get; set; }
 
+    /// <summary>Storage version of v1api20240901.AgentPoolSecurityProfile The security settings of an agent pool.</summary>
+    [JsonPropertyName("securityProfile")]
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesSecurityProfile? SecurityProfile { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("spotMaxPrice")]
     public double? SpotMaxPrice { get; set; }
@@ -687,9 +725,9 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings Settings for upgrading an agentpool</summary>
+    /// <summary>Storage version of v1api20240901.AgentPoolUpgradeSettings Settings for upgrading an agentpool</summary>
     [JsonPropertyName("upgradeSettings")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesUpgradeSettings? UpgradeSettings { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesUpgradeSettings? UpgradeSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("vmSize")]
@@ -697,16 +735,20 @@ public partial class V1api20231001storageManagedClusterSpecAgentPoolProfiles
 
     /// <summary>VnetSubnetReference: If this is not specified, a VNET and subnet will be generated and used. If no podSubnetID is specified, this applies to nodes and pods, otherwise it applies to just nodes. This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
     [JsonPropertyName("vnetSubnetReference")]
-    public V1api20231001storageManagedClusterSpecAgentPoolProfilesVnetSubnetReference? VnetSubnetReference { get; set; }
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesVnetSubnetReference? VnetSubnetReference { get; set; }
+
+    /// <summary>Storage version of v1api20240901.AgentPoolWindowsProfile The Windows agent pool's specific profile.</summary>
+    [JsonPropertyName("windowsProfile")]
+    public V1api20240901storageManagedClusterSpecAgentPoolProfilesWindowsProfile? WindowsProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAPIServerAccessProfile Access profile for managed cluster API server.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAPIServerAccessProfile Access profile for managed cluster API server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecApiServerAccessProfile
+public partial class V1api20240901storageManagedClusterSpecApiServerAccessProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -733,9 +775,9 @@ public partial class V1api20231001storageManagedClusterSpecApiServerAccessProfil
     public string? PrivateDNSZone { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterProperties_AutoScalerProfile</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterProperties_AutoScalerProfile</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAutoScalerProfile
+public partial class V1api20240901storageManagedClusterSpecAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -746,8 +788,20 @@ public partial class V1api20231001storageManagedClusterSpecAutoScalerProfile
     public string? BalanceSimilarNodeGroups { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("daemonset-eviction-for-empty-nodes")]
+    public bool? DaemonsetEvictionForEmptyNodes { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("daemonset-eviction-for-occupied-nodes")]
+    public bool? DaemonsetEvictionForOccupiedNodes { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("expander")]
     public string? Expander { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ignore-daemonsets-utilization")]
+    public bool? IgnoreDaemonsetsUtilization { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("max-empty-bulk-delete")]
@@ -810,9 +864,9 @@ public partial class V1api20231001storageManagedClusterSpecAutoScalerProfile
     public string? SkipNodesWithSystemPods { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAutoUpgradeProfile Auto upgrade profile for a managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAutoUpgradeProfile Auto upgrade profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAutoUpgradeProfile
+public partial class V1api20240901storageManagedClusterSpecAutoUpgradeProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -827,9 +881,9 @@ public partial class V1api20231001storageManagedClusterSpecAutoUpgradeProfile
     public string? UpgradeChannel { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileKubeStateMetrics Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileKubeStateMetrics Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMetricsKubeStateMetrics
+public partial class V1api20240901storageManagedClusterSpecAzureMonitorProfileMetricsKubeStateMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -844,9 +898,9 @@ public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMe
     public string? MetricLabelsAllowlist { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileMetrics Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileMetrics Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMetrics
+public partial class V1api20240901storageManagedClusterSpecAzureMonitorProfileMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -856,27 +910,27 @@ public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfileMe
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileKubeStateMetrics Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileKubeStateMetrics Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
     [JsonPropertyName("kubeStateMetrics")]
-    public V1api20231001storageManagedClusterSpecAzureMonitorProfileMetricsKubeStateMetrics? KubeStateMetrics { get; set; }
+    public V1api20240901storageManagedClusterSpecAzureMonitorProfileMetricsKubeStateMetrics? KubeStateMetrics { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfile Azure Monitor addon profiles for monitoring the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfile Azure Monitor addon profiles for monitoring the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecAzureMonitorProfile
+public partial class V1api20240901storageManagedClusterSpecAzureMonitorProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileMetrics Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileMetrics Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
     [JsonPropertyName("metrics")]
-    public V1api20231001storageManagedClusterSpecAzureMonitorProfileMetrics? Metrics { get; set; }
+    public V1api20240901storageManagedClusterSpecAzureMonitorProfileMetrics? Metrics { get; set; }
 }
 
 /// <summary>DiskEncryptionSetReference: This is of the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{encryptionSetName}'</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecDiskEncryptionSetReference
+public partial class V1api20240901storageManagedClusterSpecDiskEncryptionSetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -895,9 +949,9 @@ public partial class V1api20231001storageManagedClusterSpecDiskEncryptionSetRefe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ExtendedLocation The complex type of the extended location.</summary>
+/// <summary>Storage version of v1api20240901.ExtendedLocation The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecExtendedLocation
+public partial class V1api20240901storageManagedClusterSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -912,9 +966,9 @@ public partial class V1api20231001storageManagedClusterSpecExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterHTTPProxyConfig Cluster HTTP proxy configuration.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterHTTPProxyConfig Cluster HTTP proxy configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecHttpProxyConfig
+public partial class V1api20240901storageManagedClusterSpecHttpProxyConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -939,7 +993,7 @@ public partial class V1api20231001storageManagedClusterSpecHttpProxyConfig
 
 /// <summary>ResourceReference: The ARM resource id of the delegated resource - internal use only.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedResourcesResourceReference
+public partial class V1api20240901storageManagedClusterSpecIdentityDelegatedResourcesResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -958,9 +1012,9 @@ public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedReso
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.DelegatedResource Delegated resource properties - internal use only.</summary>
+/// <summary>Storage version of v1api20240901.DelegatedResource Delegated resource properties - internal use only.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedResources
+public partial class V1api20240901storageManagedClusterSpecIdentityDelegatedResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -976,7 +1030,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedReso
 
     /// <summary>ResourceReference: The ARM resource id of the delegated resource - internal use only.</summary>
     [JsonPropertyName("resourceReference")]
-    public V1api20231001storageManagedClusterSpecIdentityDelegatedResourcesResourceReference? ResourceReference { get; set; }
+    public V1api20240901storageManagedClusterSpecIdentityDelegatedResourcesResourceReference? ResourceReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tenantId")]
@@ -985,7 +1039,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentityDelegatedReso
 
 /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentitiesReference
+public partial class V1api20240901storageManagedClusterSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1004,9 +1058,9 @@ public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedI
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+/// <summary>Storage version of v1api20240901.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentities
+public partial class V1api20240901storageManagedClusterSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1014,12 +1068,12 @@ public partial class V1api20231001storageManagedClusterSpecIdentityUserAssignedI
 
     /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
-    public V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
+    public V1api20240901storageManagedClusterSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterIdentity Identity for the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterIdentity Identity for the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecIdentity
+public partial class V1api20240901storageManagedClusterSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1027,7 +1081,7 @@ public partial class V1api20231001storageManagedClusterSpecIdentity
 
     /// <summary></summary>
     [JsonPropertyName("delegatedResources")]
-    public IDictionary<string, V1api20231001storageManagedClusterSpecIdentityDelegatedResources>? DelegatedResources { get; set; }
+    public IDictionary<string, V1api20240901storageManagedClusterSpecIdentityDelegatedResources>? DelegatedResources { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -1035,12 +1089,12 @@ public partial class V1api20231001storageManagedClusterSpecIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IList<V1api20231001storageManagedClusterSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
 /// <summary>ResourceReference: The resource ID of the user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecIdentityProfileResourceReference
+public partial class V1api20240901storageManagedClusterSpecIdentityProfileResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1059,9 +1113,9 @@ public partial class V1api20231001storageManagedClusterSpecIdentityProfileResour
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UserAssignedIdentity Details about a user assigned identity.</summary>
+/// <summary>Storage version of v1api20240901.UserAssignedIdentity Details about a user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecIdentityProfile
+public partial class V1api20240901storageManagedClusterSpecIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1077,55 +1131,12 @@ public partial class V1api20231001storageManagedClusterSpecIdentityProfile
 
     /// <summary>ResourceReference: The resource ID of the user assigned identity.</summary>
     [JsonPropertyName("resourceReference")]
-    public V1api20231001storageManagedClusterSpecIdentityProfileResourceReference? ResourceReference { get; set; }
+    public V1api20240901storageManagedClusterSpecIdentityProfileResourceReference? ResourceReference { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ContainerServiceSshPublicKey Contains information about SSH certificate public key data.</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecLinuxProfileSshPublicKeys
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("keyData")]
-    public string? KeyData { get; set; }
-}
-
-/// <summary>Storage version of v1api20231001.ContainerServiceSshConfiguration SSH configuration for Linux-based VMs running on Azure.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecLinuxProfileSsh
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("publicKeys")]
-    public IList<V1api20231001storageManagedClusterSpecLinuxProfileSshPublicKeys>? PublicKeys { get; set; }
-}
-
-/// <summary>Storage version of v1api20231001.ContainerServiceLinuxProfile Profile for Linux VMs in the container service cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecLinuxProfile
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("adminUsername")]
-    public string? AdminUsername { get; set; }
-
-    /// <summary>Storage version of v1api20231001.ContainerServiceSshConfiguration SSH configuration for Linux-based VMs running on Azure.</summary>
-    [JsonPropertyName("ssh")]
-    public V1api20231001storageManagedClusterSpecLinuxProfileSsh? Ssh { get; set; }
-}
-
-/// <summary>Reference: The fully qualified Azure resource id.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPsReference
+public partial class V1api20240901storageManagedClusterSpecIngressProfileWebAppRoutingDnsZoneResourceReferences
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1144,9 +1155,176 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterIngressProfileWebAppRouting Application Routing add-on settings for the ingress profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPs
+public partial class V1api20240901storageManagedClusterSpecIngressProfileWebAppRouting
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("dnsZoneResourceReferences")]
+    public IList<V1api20240901storageManagedClusterSpecIngressProfileWebAppRoutingDnsZoneResourceReferences>? DnsZoneResourceReferences { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterIngressProfile Ingress profile for the container service cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecIngressProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterIngressProfileWebAppRouting Application Routing add-on settings for the ingress profile.</summary>
+    [JsonPropertyName("webAppRouting")]
+    public V1api20240901storageManagedClusterSpecIngressProfileWebAppRouting? WebAppRouting { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ContainerServiceSshPublicKey Contains information about SSH certificate public key data.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecLinuxProfileSshPublicKeys
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("keyData")]
+    public string? KeyData { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ContainerServiceSshConfiguration SSH configuration for Linux-based VMs running on Azure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecLinuxProfileSsh
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("publicKeys")]
+    public IList<V1api20240901storageManagedClusterSpecLinuxProfileSshPublicKeys>? PublicKeys { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ContainerServiceLinuxProfile Profile for Linux VMs in the container service cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecLinuxProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("adminUsername")]
+    public string? AdminUsername { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ContainerServiceSshConfiguration SSH configuration for Linux-based VMs running on Azure.</summary>
+    [JsonPropertyName("ssh")]
+    public V1api20240901storageManagedClusterSpecLinuxProfileSsh? Ssh { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterCostAnalysis The cost analysis configuration for the cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecMetricsProfileCostAnalysis
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterMetricsProfile The metrics profile for the ManagedCluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecMetricsProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterCostAnalysis The cost analysis configuration for the cluster</summary>
+    [JsonPropertyName("costAnalysis")]
+    public V1api20240901storageManagedClusterSpecMetricsProfileCostAnalysis? CostAnalysis { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AdvancedNetworkingObservability Observability profile to enable advanced network metrics and flow logs with historical contexts.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileAdvancedNetworkingObservability
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AdvancedNetworkingSecurity Security profile to enable security features on cilium based cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileAdvancedNetworkingSecurity
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AdvancedNetworking Advanced Networking profile for enabling observability and security feature suite on a cluster. For more information see aka.ms/aksadvancednetworking.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileAdvancedNetworking
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Storage version of v1api20240901.AdvancedNetworkingObservability Observability profile to enable advanced network metrics and flow logs with historical contexts.</summary>
+    [JsonPropertyName("observability")]
+    public V1api20240901storageManagedClusterSpecNetworkProfileAdvancedNetworkingObservability? Observability { get; set; }
+
+    /// <summary>Storage version of v1api20240901.AdvancedNetworkingSecurity Security profile to enable security features on cilium based cluster.</summary>
+    [JsonPropertyName("security")]
+    public V1api20240901storageManagedClusterSpecNetworkProfileAdvancedNetworkingSecurity? Security { get; set; }
+}
+
+/// <summary>Reference: The fully qualified Azure resource id.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPsReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ResourceReference A reference to an Azure resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1154,12 +1332,12 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
 
     /// <summary>Reference: The fully qualified Azure resource id.</summary>
     [JsonPropertyName("reference")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPsReference? Reference { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIPs
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1176,7 +1354,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
 
 /// <summary>Reference: The fully qualified Azure resource id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixesReference
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1195,9 +1373,9 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ResourceReference A reference to an Azure resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1205,12 +1383,12 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
 
     /// <summary>Reference: The fully qualified Azure resource id.</summary>
     [JsonPropertyName("reference")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixesReference? Reference { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixesReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixes
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1218,12 +1396,12 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
 
     /// <summary></summary>
     [JsonPropertyName("publicIPPrefixes")]
-    public IList<V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes>? PublicIPPrefixes { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes>? PublicIPPrefixes { get; set; }
 }
 
 /// <summary>Reference: The fully qualified Azure resource id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPsReference
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1242,9 +1420,9 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ResourceReference A reference to an Azure resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1252,12 +1430,12 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
 
     /// <summary>Reference: The fully qualified Azure resource id.</summary>
     [JsonPropertyName("reference")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPsReference? Reference { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPs</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPs
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1265,12 +1443,12 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
 
     /// <summary></summary>
     [JsonPropertyName("publicIPs")]
-    public IList<V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs>? PublicIPs { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs>? PublicIPs { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile Profile of the managed cluster load balancer.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile Profile of the managed cluster load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfile
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1286,7 +1464,7 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
 
     /// <summary></summary>
     [JsonPropertyName("effectiveOutboundIPs")]
-    public IList<V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableMultipleStandardLoadBalancers")]
@@ -1296,22 +1474,22 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileLoadBal
     [JsonPropertyName("idleTimeoutInMinutes")]
     public int? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs</summary>
     [JsonPropertyName("managedOutboundIPs")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIPs? ManagedOutboundIPs { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileManagedOutboundIPs? ManagedOutboundIPs { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes</summary>
     [JsonPropertyName("outboundIPPrefixes")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixes? OutboundIPPrefixes { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPPrefixes? OutboundIPPrefixes { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPs</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPs</summary>
     [JsonPropertyName("outboundIPs")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPs? OutboundIPs { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfileOutboundIPs? OutboundIPs { get; set; }
 }
 
 /// <summary>Reference: The fully qualified Azure resource id.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPsReference
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1330,9 +1508,9 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ResourceReference A reference to an Azure resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPs
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1340,12 +1518,12 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
 
     /// <summary>Reference: The fully qualified Azure resource id.</summary>
     [JsonPropertyName("reference")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPsReference? Reference { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterManagedOutboundIPProfile Profile of the managed outbound IP resources of the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterManagedOutboundIPProfile Profile of the managed outbound IP resources of the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileManagedOutboundIPProfile
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfileManagedOutboundIPProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1356,9 +1534,9 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
     public int? Count { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterNATGatewayProfile Profile of the managed cluster NAT gateway.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterNATGatewayProfile Profile of the managed cluster NAT gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfile
+public partial class V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1366,24 +1544,28 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfileNatGate
 
     /// <summary></summary>
     [JsonPropertyName("effectiveOutboundIPs")]
-    public IList<V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public int? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterManagedOutboundIPProfile Profile of the managed outbound IP resources of the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterManagedOutboundIPProfile Profile of the managed outbound IP resources of the managed cluster.</summary>
     [JsonPropertyName("managedOutboundIPProfile")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfileManagedOutboundIPProfile? ManagedOutboundIPProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfileManagedOutboundIPProfile? ManagedOutboundIPProfile { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ContainerServiceNetworkProfile Profile of network configuration.</summary>
+/// <summary>Storage version of v1api20240901.ContainerServiceNetworkProfile Profile of network configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecNetworkProfile
+public partial class V1api20240901storageManagedClusterSpecNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240901.AdvancedNetworking Advanced Networking profile for enabling observability and security feature suite on a cluster. For more information see aka.ms/aksadvancednetworking.</summary>
+    [JsonPropertyName("advancedNetworking")]
+    public V1api20240901storageManagedClusterSpecNetworkProfileAdvancedNetworking? AdvancedNetworking { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("dnsServiceIP")]
@@ -1393,17 +1575,17 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfile
     [JsonPropertyName("ipFamilies")]
     public IList<string>? IpFamilies { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile Profile of the managed cluster load balancer.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile Profile of the managed cluster load balancer.</summary>
     [JsonPropertyName("loadBalancerProfile")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileLoadBalancerProfile? LoadBalancerProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileLoadBalancerProfile? LoadBalancerProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("loadBalancerSku")]
     public string? LoadBalancerSku { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterNATGatewayProfile Profile of the managed cluster NAT gateway.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterNATGatewayProfile Profile of the managed cluster NAT gateway.</summary>
     [JsonPropertyName("natGatewayProfile")]
-    public V1api20231001storageManagedClusterSpecNetworkProfileNatGatewayProfile? NatGatewayProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfileNatGatewayProfile? NatGatewayProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("networkDataplane")]
@@ -1446,9 +1628,22 @@ public partial class V1api20231001storageManagedClusterSpecNetworkProfile
     public IList<string>? ServiceCidrs { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterOIDCIssuerProfile The OIDC issuer profile of the Managed Cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterNodeResourceGroupProfile Node resource group lockdown profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOidcIssuerProfile
+public partial class V1api20240901storageManagedClusterSpecNodeResourceGroupProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("restrictionLevel")]
+    public string? RestrictionLevel { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterOIDCIssuerProfile The OIDC issuer profile of the Managed Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecOidcIssuerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1459,9 +1654,26 @@ public partial class V1api20231001storageManagedClusterSpecOidcIssuerProfile
     public bool? Enabled { get; set; }
 }
 
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMapsOidcIssuerProfile
+public partial class V1api20240901storageManagedClusterSpecOperatorSpecConfigMapsOidcIssuerProfile
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
     [JsonPropertyName("key")]
@@ -1472,22 +1684,9 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMap
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMapsPrincipalId
-{
-    /// <summary>Key is the key in the ConfigMap being referenced</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name is the name of the Kubernetes ConfigMap to write to. The ConfigMap will be created in the same namespace as the resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Storage version of v1api20231001.ManagedClusterOperatorConfigMaps</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMaps
+public partial class V1api20240901storageManagedClusterSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1495,16 +1694,29 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecConfigMap
 
     /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("oidcIssuerProfile")]
-    public V1api20231001storageManagedClusterSpecOperatorSpecConfigMapsOidcIssuerProfile? OidcIssuerProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecOperatorSpecConfigMapsOidcIssuerProfile? OidcIssuerProfile { get; set; }
+}
 
-    /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
-    [JsonPropertyName("principalId")]
-    public V1api20231001storageManagedClusterSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
 }
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsAdminCredentials
+public partial class V1api20240901storageManagedClusterSpecOperatorSpecSecretsAdminCredentials
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -1517,7 +1729,7 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsAd
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsUserCredentials
+public partial class V1api20240901storageManagedClusterSpecOperatorSpecSecretsUserCredentials
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -1528,9 +1740,9 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecretsUs
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterOperatorSecrets</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecrets
+public partial class V1api20240901storageManagedClusterSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1538,33 +1750,41 @@ public partial class V1api20231001storageManagedClusterSpecOperatorSpecSecrets
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("adminCredentials")]
-    public V1api20231001storageManagedClusterSpecOperatorSpecSecretsAdminCredentials? AdminCredentials { get; set; }
+    public V1api20240901storageManagedClusterSpecOperatorSpecSecretsAdminCredentials? AdminCredentials { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("userCredentials")]
-    public V1api20231001storageManagedClusterSpecOperatorSpecSecretsUserCredentials? UserCredentials { get; set; }
+    public V1api20240901storageManagedClusterSpecOperatorSpecSecretsUserCredentials? UserCredentials { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOperatorSpec
+public partial class V1api20240901storageManagedClusterSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterOperatorConfigMaps</summary>
-    [JsonPropertyName("configMaps")]
-    public V1api20231001storageManagedClusterSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240901storageManagedClusterSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterOperatorSecrets</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterOperatorConfigMaps</summary>
+    [JsonPropertyName("configMaps")]
+    public V1api20240901storageManagedClusterSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240901storageManagedClusterSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterOperatorSecrets</summary>
     [JsonPropertyName("secrets")]
-    public V1api20231001storageManagedClusterSpecOperatorSpecSecrets? Secrets { get; set; }
+    public V1api20240901storageManagedClusterSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecOwner
+public partial class V1api20240901storageManagedClusterSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -1577,7 +1797,7 @@ public partial class V1api20231001storageManagedClusterSpecOwner
 
 /// <summary>ResourceReference: The resource ID of the user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentityResourceReference
+public partial class V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentityResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1596,9 +1816,9 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UserAssignedIdentity Details about a user assigned identity.</summary>
+/// <summary>Storage version of v1api20240901.UserAssignedIdentity Details about a user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentity
+public partial class V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1614,12 +1834,12 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
 
     /// <summary>ResourceReference: The resource ID of the user assigned identity.</summary>
     [JsonPropertyName("resourceReference")]
-    public V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentityResourceReference? ResourceReference { get; set; }
+    public V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentityResourceReference? ResourceReference { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentity Details about the pod identity assigned to the Managed Cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentity Details about the pod identity assigned to the Managed Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentities
+public partial class V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1629,9 +1849,9 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     [JsonPropertyName("bindingSelector")]
     public string? BindingSelector { get; set; }
 
-    /// <summary>Storage version of v1api20231001.UserAssignedIdentity Details about a user assigned identity.</summary>
+    /// <summary>Storage version of v1api20240901.UserAssignedIdentity Details about a user assigned identity.</summary>
     [JsonPropertyName("identity")]
-    public V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentity? Identity { get; set; }
+    public V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentitiesIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -1642,9 +1862,9 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     public string? Namespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityException See [disable AAD Pod Identity for a specific Pod/Application](https://azure.github.io/aad-pod-identity/docs/configure/application_exception/) for more details.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityException See [disable AAD Pod Identity for a specific Pod/Application](https://azure.github.io/aad-pod-identity/docs/configure/application_exception/) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentityExceptions
+public partial class V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentityExceptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1663,9 +1883,9 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfileUse
     public IDictionary<string, string>? PodLabels { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProfile See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProfile See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecPodIdentityProfile
+public partial class V1api20240901storageManagedClusterSpecPodIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1681,16 +1901,16 @@ public partial class V1api20231001storageManagedClusterSpecPodIdentityProfile
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IList<V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentityExceptions")]
-    public IList<V1api20231001storageManagedClusterSpecPodIdentityProfileUserAssignedIdentityExceptions>? UserAssignedIdentityExceptions { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecPodIdentityProfileUserAssignedIdentityExceptions>? UserAssignedIdentityExceptions { get; set; }
 }
 
 /// <summary>Reference: The ID of the private link resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecPrivateLinkResourcesReference
+public partial class V1api20240901storageManagedClusterSpecPrivateLinkResourcesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1709,9 +1929,9 @@ public partial class V1api20231001storageManagedClusterSpecPrivateLinkResourcesR
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.PrivateLinkResource A private link resource</summary>
+/// <summary>Storage version of v1api20240901.PrivateLinkResource A private link resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecPrivateLinkResources
+public partial class V1api20240901storageManagedClusterSpecPrivateLinkResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1727,7 +1947,7 @@ public partial class V1api20231001storageManagedClusterSpecPrivateLinkResources
 
     /// <summary>Reference: The ID of the private link resource.</summary>
     [JsonPropertyName("reference")]
-    public V1api20231001storageManagedClusterSpecPrivateLinkResourcesReference? Reference { get; set; }
+    public V1api20240901storageManagedClusterSpecPrivateLinkResourcesReference? Reference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requiredMembers")]
@@ -1740,7 +1960,7 @@ public partial class V1api20231001storageManagedClusterSpecPrivateLinkResources
 
 /// <summary>KeyVaultResourceReference: Resource ID of key vault. When keyVaultNetworkAccess is `Private`, this field is required and must be a valid resource ID. When keyVaultNetworkAccess is `Public`, leave the field empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureKeyVaultKmsKeyVaultResourceReference
+public partial class V1api20240901storageManagedClusterSpecSecurityProfileAzureKeyVaultKmsKeyVaultResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1759,9 +1979,9 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureK
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.AzureKeyVaultKms Azure Key Vault key management service settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.AzureKeyVaultKms Azure Key Vault key management service settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureKeyVaultKms
+public partial class V1api20240901storageManagedClusterSpecSecurityProfileAzureKeyVaultKms
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1781,12 +2001,12 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileAzureK
 
     /// <summary>KeyVaultResourceReference: Resource ID of key vault. When keyVaultNetworkAccess is `Private`, this field is required and must be a valid resource ID. When keyVaultNetworkAccess is `Public`, leave the field empty.</summary>
     [JsonPropertyName("keyVaultResourceReference")]
-    public V1api20231001storageManagedClusterSpecSecurityProfileAzureKeyVaultKmsKeyVaultResourceReference? KeyVaultResourceReference { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfileAzureKeyVaultKmsKeyVaultResourceReference? KeyVaultResourceReference { get; set; }
 }
 
 /// <summary>LogAnalyticsWorkspaceResourceReference: Resource ID of the Log Analytics workspace to be associated with Microsoft Defender. When Microsoft Defender is enabled, this field is required and must be a valid workspace resource ID. When Microsoft Defender is disabled, leave the field empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefenderLogAnalyticsWorkspaceResourceReference
+public partial class V1api20240901storageManagedClusterSpecSecurityProfileDefenderLogAnalyticsWorkspaceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1805,9 +2025,9 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefend
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefenderSecurityMonitoring Microsoft Defender settings for the security profile threat detection.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefenderSecurityMonitoring Microsoft Defender settings for the security profile threat detection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefenderSecurityMonitoring
+public partial class V1api20240901storageManagedClusterSpecSecurityProfileDefenderSecurityMonitoring
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1818,9 +2038,9 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefend
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefender Microsoft Defender settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefender Microsoft Defender settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefender
+public partial class V1api20240901storageManagedClusterSpecSecurityProfileDefender
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1828,16 +2048,16 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileDefend
 
     /// <summary>LogAnalyticsWorkspaceResourceReference: Resource ID of the Log Analytics workspace to be associated with Microsoft Defender. When Microsoft Defender is enabled, this field is required and must be a valid workspace resource ID. When Microsoft Defender is disabled, leave the field empty.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceResourceReference")]
-    public V1api20231001storageManagedClusterSpecSecurityProfileDefenderLogAnalyticsWorkspaceResourceReference? LogAnalyticsWorkspaceResourceReference { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfileDefenderLogAnalyticsWorkspaceResourceReference? LogAnalyticsWorkspaceResourceReference { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefenderSecurityMonitoring Microsoft Defender settings for the security profile threat detection.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefenderSecurityMonitoring Microsoft Defender settings for the security profile threat detection.</summary>
     [JsonPropertyName("securityMonitoring")]
-    public V1api20231001storageManagedClusterSpecSecurityProfileDefenderSecurityMonitoring? SecurityMonitoring { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfileDefenderSecurityMonitoring? SecurityMonitoring { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileImageCleaner Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileImageCleaner Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfileImageCleaner
+public partial class V1api20240901storageManagedClusterSpecSecurityProfileImageCleaner
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1852,9 +2072,9 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileImageC
     public int? IntervalHours { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileWorkloadIdentity Workload identity settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileWorkloadIdentity Workload identity settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfileWorkloadIdentity
+public partial class V1api20240901storageManagedClusterSpecSecurityProfileWorkloadIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1865,34 +2085,34 @@ public partial class V1api20231001storageManagedClusterSpecSecurityProfileWorklo
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfile Security profile for the container service cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfile Security profile for the container service cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSecurityProfile
+public partial class V1api20240901storageManagedClusterSpecSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.AzureKeyVaultKms Azure Key Vault key management service settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.AzureKeyVaultKms Azure Key Vault key management service settings for the security profile.</summary>
     [JsonPropertyName("azureKeyVaultKms")]
-    public V1api20231001storageManagedClusterSpecSecurityProfileAzureKeyVaultKms? AzureKeyVaultKms { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfileAzureKeyVaultKms? AzureKeyVaultKms { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefender Microsoft Defender settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefender Microsoft Defender settings for the security profile.</summary>
     [JsonPropertyName("defender")]
-    public V1api20231001storageManagedClusterSpecSecurityProfileDefender? Defender { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfileDefender? Defender { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileImageCleaner Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileImageCleaner Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
     [JsonPropertyName("imageCleaner")]
-    public V1api20231001storageManagedClusterSpecSecurityProfileImageCleaner? ImageCleaner { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfileImageCleaner? ImageCleaner { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileWorkloadIdentity Workload identity settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileWorkloadIdentity Workload identity settings for the security profile.</summary>
     [JsonPropertyName("workloadIdentity")]
-    public V1api20231001storageManagedClusterSpecSecurityProfileWorkloadIdentity? WorkloadIdentity { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfileWorkloadIdentity? WorkloadIdentity { get; set; }
 }
 
 /// <summary>KeyVaultReference: The resource ID of the Key Vault.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPluginKeyVaultReference
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPluginKeyVaultReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -1911,9 +2131,9 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioPluginCertificateAuthority Plugin certificates information for Service Mesh.</summary>
+/// <summary>Storage version of v1api20240901.IstioPluginCertificateAuthority Plugin certificates information for Service Mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPlugin
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPlugin
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1933,29 +2153,29 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
 
     /// <summary>KeyVaultReference: The resource ID of the Key Vault.</summary>
     [JsonPropertyName("keyVaultReference")]
-    public V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPluginKeyVaultReference? KeyVaultReference { get; set; }
+    public V1api20240901storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPluginKeyVaultReference? KeyVaultReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("rootCertObjectName")]
     public string? RootCertObjectName { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioCertificateAuthority Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
+/// <summary>Storage version of v1api20240901.IstioCertificateAuthority Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthority
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthority
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioPluginCertificateAuthority Plugin certificates information for Service Mesh.</summary>
+    /// <summary>Storage version of v1api20240901.IstioPluginCertificateAuthority Plugin certificates information for Service Mesh.</summary>
     [JsonPropertyName("plugin")]
-    public V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPlugin? Plugin { get; set; }
+    public V1api20240901storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthorityPlugin? Plugin { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioEgressGateway Istio egress gateway configuration.</summary>
+/// <summary>Storage version of v1api20240901.IstioEgressGateway Istio egress gateway configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponentsEgressGateways
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfileIstioComponentsEgressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1964,15 +2184,11 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("nodeSelector")]
-    public IDictionary<string, string>? NodeSelector { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioIngressGateway Istio ingress gateway configuration. For now, we support up to one external ingress gateway named `aks-istio-ingressgateway-external` and one internal ingress gateway named `aks-istio-ingressgateway-internal`.</summary>
+/// <summary>Storage version of v1api20240901.IstioIngressGateway Istio ingress gateway configuration. For now, we support up to one external ingress gateway named `aks-istio-ingressgateway-external` and one internal ingress gateway named `aks-istio-ingressgateway-internal`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponentsIngressGateways
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfileIstioComponentsIngressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1987,9 +2203,9 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
     public string? Mode { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioComponents Istio components configuration.</summary>
+/// <summary>Storage version of v1api20240901.IstioComponents Istio components configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponents
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfileIstioComponents
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -1997,45 +2213,45 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIst
 
     /// <summary></summary>
     [JsonPropertyName("egressGateways")]
-    public IList<V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponentsEgressGateways>? EgressGateways { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecServiceMeshProfileIstioComponentsEgressGateways>? EgressGateways { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ingressGateways")]
-    public IList<V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponentsIngressGateways>? IngressGateways { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecServiceMeshProfileIstioComponentsIngressGateways>? IngressGateways { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioServiceMesh Istio service mesh configuration.</summary>
+/// <summary>Storage version of v1api20240901.IstioServiceMesh Istio service mesh configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfileIstio
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfileIstio
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioCertificateAuthority Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
+    /// <summary>Storage version of v1api20240901.IstioCertificateAuthority Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
     [JsonPropertyName("certificateAuthority")]
-    public V1api20231001storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthority? CertificateAuthority { get; set; }
+    public V1api20240901storageManagedClusterSpecServiceMeshProfileIstioCertificateAuthority? CertificateAuthority { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioComponents Istio components configuration.</summary>
+    /// <summary>Storage version of v1api20240901.IstioComponents Istio components configuration.</summary>
     [JsonPropertyName("components")]
-    public V1api20231001storageManagedClusterSpecServiceMeshProfileIstioComponents? Components { get; set; }
+    public V1api20240901storageManagedClusterSpecServiceMeshProfileIstioComponents? Components { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("revisions")]
     public IList<string>? Revisions { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ServiceMeshProfile Service mesh profile for a managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ServiceMeshProfile Service mesh profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServiceMeshProfile
+public partial class V1api20240901storageManagedClusterSpecServiceMeshProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioServiceMesh Istio service mesh configuration.</summary>
+    /// <summary>Storage version of v1api20240901.IstioServiceMesh Istio service mesh configuration.</summary>
     [JsonPropertyName("istio")]
-    public V1api20231001storageManagedClusterSpecServiceMeshProfileIstio? Istio { get; set; }
+    public V1api20240901storageManagedClusterSpecServiceMeshProfileIstio? Istio { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("mode")]
@@ -2044,7 +2260,7 @@ public partial class V1api20231001storageManagedClusterSpecServiceMeshProfile
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfileSecret
+public partial class V1api20240901storageManagedClusterSpecServicePrincipalProfileSecret
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -2055,9 +2271,9 @@ public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfi
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterServicePrincipalProfile Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterServicePrincipalProfile Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfile
+public partial class V1api20240901storageManagedClusterSpecServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2069,12 +2285,12 @@ public partial class V1api20231001storageManagedClusterSpecServicePrincipalProfi
 
     /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("secret")]
-    public V1api20231001storageManagedClusterSpecServicePrincipalProfileSecret? Secret { get; set; }
+    public V1api20240901storageManagedClusterSpecServicePrincipalProfileSecret? Secret { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSKU The SKU of a Managed Cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSKU The SKU of a Managed Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecSku
+public partial class V1api20240901storageManagedClusterSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2089,9 +2305,9 @@ public partial class V1api20231001storageManagedClusterSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileBlobCSIDriver AzureBlob CSI Driver settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileBlobCSIDriver AzureBlob CSI Driver settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecStorageProfileBlobCSIDriver
+public partial class V1api20240901storageManagedClusterSpecStorageProfileBlobCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2102,9 +2318,9 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileBlobCSI
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileDiskCSIDriver AzureDisk CSI Driver settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileDiskCSIDriver AzureDisk CSI Driver settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecStorageProfileDiskCSIDriver
+public partial class V1api20240901storageManagedClusterSpecStorageProfileDiskCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2115,9 +2331,9 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileDiskCSI
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileFileCSIDriver AzureFile CSI Driver settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileFileCSIDriver AzureFile CSI Driver settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecStorageProfileFileCSIDriver
+public partial class V1api20240901storageManagedClusterSpecStorageProfileFileCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2128,9 +2344,9 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileFileCSI
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileSnapshotController Snapshot Controller settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileSnapshotController Snapshot Controller settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecStorageProfileSnapshotController
+public partial class V1api20240901storageManagedClusterSpecStorageProfileSnapshotController
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2141,34 +2357,34 @@ public partial class V1api20231001storageManagedClusterSpecStorageProfileSnapsho
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfile Storage profile for the container service cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfile Storage profile for the container service cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecStorageProfile
+public partial class V1api20240901storageManagedClusterSpecStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileBlobCSIDriver AzureBlob CSI Driver settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileBlobCSIDriver AzureBlob CSI Driver settings for the storage profile.</summary>
     [JsonPropertyName("blobCSIDriver")]
-    public V1api20231001storageManagedClusterSpecStorageProfileBlobCSIDriver? BlobCSIDriver { get; set; }
+    public V1api20240901storageManagedClusterSpecStorageProfileBlobCSIDriver? BlobCSIDriver { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileDiskCSIDriver AzureDisk CSI Driver settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileDiskCSIDriver AzureDisk CSI Driver settings for the storage profile.</summary>
     [JsonPropertyName("diskCSIDriver")]
-    public V1api20231001storageManagedClusterSpecStorageProfileDiskCSIDriver? DiskCSIDriver { get; set; }
+    public V1api20240901storageManagedClusterSpecStorageProfileDiskCSIDriver? DiskCSIDriver { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileFileCSIDriver AzureFile CSI Driver settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileFileCSIDriver AzureFile CSI Driver settings for the storage profile.</summary>
     [JsonPropertyName("fileCSIDriver")]
-    public V1api20231001storageManagedClusterSpecStorageProfileFileCSIDriver? FileCSIDriver { get; set; }
+    public V1api20240901storageManagedClusterSpecStorageProfileFileCSIDriver? FileCSIDriver { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileSnapshotController Snapshot Controller settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileSnapshotController Snapshot Controller settings for the storage profile.</summary>
     [JsonPropertyName("snapshotController")]
-    public V1api20231001storageManagedClusterSpecStorageProfileSnapshotController? SnapshotController { get; set; }
+    public V1api20240901storageManagedClusterSpecStorageProfileSnapshotController? SnapshotController { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UpgradeOverrideSettings Settings for overrides when upgrading a cluster.</summary>
+/// <summary>Storage version of v1api20240901.UpgradeOverrideSettings Settings for overrides when upgrading a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecUpgradeSettingsOverrideSettings
+public partial class V1api20240901storageManagedClusterSpecUpgradeSettingsOverrideSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2183,22 +2399,22 @@ public partial class V1api20231001storageManagedClusterSpecUpgradeSettingsOverri
     public string? Until { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ClusterUpgradeSettings Settings for upgrading a cluster.</summary>
+/// <summary>Storage version of v1api20240901.ClusterUpgradeSettings Settings for upgrading a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecUpgradeSettings
+public partial class V1api20240901storageManagedClusterSpecUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.UpgradeOverrideSettings Settings for overrides when upgrading a cluster.</summary>
+    /// <summary>Storage version of v1api20240901.UpgradeOverrideSettings Settings for overrides when upgrading a cluster.</summary>
     [JsonPropertyName("overrideSettings")]
-    public V1api20231001storageManagedClusterSpecUpgradeSettingsOverrideSettings? OverrideSettings { get; set; }
+    public V1api20240901storageManagedClusterSpecUpgradeSettingsOverrideSettings? OverrideSettings { get; set; }
 }
 
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecWindowsProfileAdminPassword
+public partial class V1api20240901storageManagedClusterSpecWindowsProfileAdminPassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -2209,9 +2425,9 @@ public partial class V1api20231001storageManagedClusterSpecWindowsProfileAdminPa
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.WindowsGmsaProfile Windows gMSA Profile in the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.WindowsGmsaProfile Windows gMSA Profile in the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecWindowsProfileGmsaProfile
+public partial class V1api20240901storageManagedClusterSpecWindowsProfileGmsaProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2230,9 +2446,9 @@ public partial class V1api20231001storageManagedClusterSpecWindowsProfileGmsaPro
     public string? RootDomainName { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWindowsProfile Profile for Windows VMs in the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWindowsProfile Profile for Windows VMs in the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecWindowsProfile
+public partial class V1api20240901storageManagedClusterSpecWindowsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2240,7 +2456,7 @@ public partial class V1api20231001storageManagedClusterSpecWindowsProfile
 
     /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("adminPassword")]
-    public V1api20231001storageManagedClusterSpecWindowsProfileAdminPassword? AdminPassword { get; set; }
+    public V1api20240901storageManagedClusterSpecWindowsProfileAdminPassword? AdminPassword { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("adminUsername")]
@@ -2250,18 +2466,18 @@ public partial class V1api20231001storageManagedClusterSpecWindowsProfile
     [JsonPropertyName("enableCSIProxy")]
     public bool? EnableCSIProxy { get; set; }
 
-    /// <summary>Storage version of v1api20231001.WindowsGmsaProfile Windows gMSA Profile in the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.WindowsGmsaProfile Windows gMSA Profile in the managed cluster.</summary>
     [JsonPropertyName("gmsaProfile")]
-    public V1api20231001storageManagedClusterSpecWindowsProfileGmsaProfile? GmsaProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecWindowsProfileGmsaProfile? GmsaProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileKeda KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileKeda KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfileKeda
+public partial class V1api20240901storageManagedClusterSpecWorkloadAutoScalerProfileKeda
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2272,9 +2488,9 @@ public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerPro
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfileVerticalPodAutoscaler
+public partial class V1api20240901storageManagedClusterSpecWorkloadAutoScalerProfileVerticalPodAutoscaler
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2285,58 +2501,58 @@ public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerPro
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfile Workload Auto-scaler profile for the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfile Workload Auto-scaler profile for the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfile
+public partial class V1api20240901storageManagedClusterSpecWorkloadAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileKeda KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileKeda KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
     [JsonPropertyName("keda")]
-    public V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfileKeda? Keda { get; set; }
+    public V1api20240901storageManagedClusterSpecWorkloadAutoScalerProfileKeda? Keda { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
     [JsonPropertyName("verticalPodAutoscaler")]
-    public V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfileVerticalPodAutoscaler? VerticalPodAutoscaler { get; set; }
+    public V1api20240901storageManagedClusterSpecWorkloadAutoScalerProfileVerticalPodAutoscaler? VerticalPodAutoscaler { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedCluster_Spec</summary>
+/// <summary>Storage version of v1api20240901.ManagedCluster_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterSpec
+public partial class V1api20240901storageManagedClusterSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAADProfile For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAADProfile For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
     [JsonPropertyName("aadProfile")]
-    public V1api20231001storageManagedClusterSpecAadProfile? AadProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecAadProfile? AadProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("addonProfiles")]
-    public IDictionary<string, V1api20231001storageManagedClusterSpecAddonProfiles>? AddonProfiles { get; set; }
+    public IDictionary<string, V1api20240901storageManagedClusterSpecAddonProfiles>? AddonProfiles { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("agentPoolProfiles")]
-    public IList<V1api20231001storageManagedClusterSpecAgentPoolProfiles>? AgentPoolProfiles { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecAgentPoolProfiles>? AgentPoolProfiles { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAPIServerAccessProfile Access profile for managed cluster API server.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAPIServerAccessProfile Access profile for managed cluster API server.</summary>
     [JsonPropertyName("apiServerAccessProfile")]
-    public V1api20231001storageManagedClusterSpecApiServerAccessProfile? ApiServerAccessProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecApiServerAccessProfile? ApiServerAccessProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterProperties_AutoScalerProfile</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterProperties_AutoScalerProfile</summary>
     [JsonPropertyName("autoScalerProfile")]
-    public V1api20231001storageManagedClusterSpecAutoScalerProfile? AutoScalerProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecAutoScalerProfile? AutoScalerProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAutoUpgradeProfile Auto upgrade profile for a managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAutoUpgradeProfile Auto upgrade profile for a managed cluster.</summary>
     [JsonPropertyName("autoUpgradeProfile")]
-    public V1api20231001storageManagedClusterSpecAutoUpgradeProfile? AutoUpgradeProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecAutoUpgradeProfile? AutoUpgradeProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfile Azure Monitor addon profiles for monitoring the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfile Azure Monitor addon profiles for monitoring the managed cluster.</summary>
     [JsonPropertyName("azureMonitorProfile")]
-    public V1api20231001storageManagedClusterSpecAzureMonitorProfile? AzureMonitorProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecAzureMonitorProfile? AzureMonitorProfile { get; set; }
 
     /// <summary>AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be.</summary>
     [JsonPropertyName("azureName")]
@@ -2348,7 +2564,7 @@ public partial class V1api20231001storageManagedClusterSpec
 
     /// <summary>DiskEncryptionSetReference: This is of the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{encryptionSetName}'</summary>
     [JsonPropertyName("diskEncryptionSetReference")]
-    public V1api20231001storageManagedClusterSpecDiskEncryptionSetReference? DiskEncryptionSetReference { get; set; }
+    public V1api20240901storageManagedClusterSpecDiskEncryptionSetReference? DiskEncryptionSetReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("dnsPrefix")]
@@ -2362,53 +2578,65 @@ public partial class V1api20231001storageManagedClusterSpec
     [JsonPropertyName("enableRBAC")]
     public bool? EnableRBAC { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ExtendedLocation The complex type of the extended location.</summary>
+    /// <summary>Storage version of v1api20240901.ExtendedLocation The complex type of the extended location.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20231001storageManagedClusterSpecExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240901storageManagedClusterSpecExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("fqdnSubdomain")]
     public string? FqdnSubdomain { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterHTTPProxyConfig Cluster HTTP proxy configuration.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterHTTPProxyConfig Cluster HTTP proxy configuration.</summary>
     [JsonPropertyName("httpProxyConfig")]
-    public V1api20231001storageManagedClusterSpecHttpProxyConfig? HttpProxyConfig { get; set; }
+    public V1api20240901storageManagedClusterSpecHttpProxyConfig? HttpProxyConfig { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterIdentity Identity for the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterIdentity Identity for the managed cluster.</summary>
     [JsonPropertyName("identity")]
-    public V1api20231001storageManagedClusterSpecIdentity? Identity { get; set; }
+    public V1api20240901storageManagedClusterSpecIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("identityProfile")]
-    public IDictionary<string, V1api20231001storageManagedClusterSpecIdentityProfile>? IdentityProfile { get; set; }
+    public IDictionary<string, V1api20240901storageManagedClusterSpecIdentityProfile>? IdentityProfile { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterIngressProfile Ingress profile for the container service cluster.</summary>
+    [JsonPropertyName("ingressProfile")]
+    public V1api20240901storageManagedClusterSpecIngressProfile? IngressProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubernetesVersion")]
     public string? KubernetesVersion { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ContainerServiceLinuxProfile Profile for Linux VMs in the container service cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ContainerServiceLinuxProfile Profile for Linux VMs in the container service cluster.</summary>
     [JsonPropertyName("linuxProfile")]
-    public V1api20231001storageManagedClusterSpecLinuxProfile? LinuxProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecLinuxProfile? LinuxProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ContainerServiceNetworkProfile Profile of network configuration.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterMetricsProfile The metrics profile for the ManagedCluster.</summary>
+    [JsonPropertyName("metricsProfile")]
+    public V1api20240901storageManagedClusterSpecMetricsProfile? MetricsProfile { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ContainerServiceNetworkProfile Profile of network configuration.</summary>
     [JsonPropertyName("networkProfile")]
-    public V1api20231001storageManagedClusterSpecNetworkProfile? NetworkProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecNetworkProfile? NetworkProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("nodeResourceGroup")]
     public string? NodeResourceGroup { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterOIDCIssuerProfile The OIDC issuer profile of the Managed Cluster.</summary>
-    [JsonPropertyName("oidcIssuerProfile")]
-    public V1api20231001storageManagedClusterSpecOidcIssuerProfile? OidcIssuerProfile { get; set; }
+    /// <summary>Storage version of v1api20240901.ManagedClusterNodeResourceGroupProfile Node resource group lockdown profile for a managed cluster.</summary>
+    [JsonPropertyName("nodeResourceGroupProfile")]
+    public V1api20240901storageManagedClusterSpecNodeResourceGroupProfile? NodeResourceGroupProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterOIDCIssuerProfile The OIDC issuer profile of the Managed Cluster.</summary>
+    [JsonPropertyName("oidcIssuerProfile")]
+    public V1api20240901storageManagedClusterSpecOidcIssuerProfile? OidcIssuerProfile { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20231001storageManagedClusterSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240901storageManagedClusterSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -2416,39 +2644,39 @@ public partial class V1api20231001storageManagedClusterSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231001storageManagedClusterSpecOwner Owner { get; set; }
+    public V1api20240901storageManagedClusterSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProfile See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProfile See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
     [JsonPropertyName("podIdentityProfile")]
-    public V1api20231001storageManagedClusterSpecPodIdentityProfile? PodIdentityProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecPodIdentityProfile? PodIdentityProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateLinkResources")]
-    public IList<V1api20231001storageManagedClusterSpecPrivateLinkResources>? PrivateLinkResources { get; set; }
+    public IList<V1api20240901storageManagedClusterSpecPrivateLinkResources>? PrivateLinkResources { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("publicNetworkAccess")]
     public string? PublicNetworkAccess { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfile Security profile for the container service cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfile Security profile for the container service cluster.</summary>
     [JsonPropertyName("securityProfile")]
-    public V1api20231001storageManagedClusterSpecSecurityProfile? SecurityProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecSecurityProfile? SecurityProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ServiceMeshProfile Service mesh profile for a managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ServiceMeshProfile Service mesh profile for a managed cluster.</summary>
     [JsonPropertyName("serviceMeshProfile")]
-    public V1api20231001storageManagedClusterSpecServiceMeshProfile? ServiceMeshProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecServiceMeshProfile? ServiceMeshProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterServicePrincipalProfile Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterServicePrincipalProfile Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
     [JsonPropertyName("servicePrincipalProfile")]
-    public V1api20231001storageManagedClusterSpecServicePrincipalProfile? ServicePrincipalProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecServicePrincipalProfile? ServicePrincipalProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSKU The SKU of a Managed Cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSKU The SKU of a Managed Cluster.</summary>
     [JsonPropertyName("sku")]
-    public V1api20231001storageManagedClusterSpecSku? Sku { get; set; }
+    public V1api20240901storageManagedClusterSpecSku? Sku { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfile Storage profile for the container service cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfile Storage profile for the container service cluster.</summary>
     [JsonPropertyName("storageProfile")]
-    public V1api20231001storageManagedClusterSpecStorageProfile? StorageProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecStorageProfile? StorageProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("supportPlan")]
@@ -2458,22 +2686,22 @@ public partial class V1api20231001storageManagedClusterSpec
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ClusterUpgradeSettings Settings for upgrading a cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ClusterUpgradeSettings Settings for upgrading a cluster.</summary>
     [JsonPropertyName("upgradeSettings")]
-    public V1api20231001storageManagedClusterSpecUpgradeSettings? UpgradeSettings { get; set; }
+    public V1api20240901storageManagedClusterSpecUpgradeSettings? UpgradeSettings { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWindowsProfile Profile for Windows VMs in the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWindowsProfile Profile for Windows VMs in the managed cluster.</summary>
     [JsonPropertyName("windowsProfile")]
-    public V1api20231001storageManagedClusterSpecWindowsProfile? WindowsProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecWindowsProfile? WindowsProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfile Workload Auto-scaler profile for the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfile Workload Auto-scaler profile for the managed cluster.</summary>
     [JsonPropertyName("workloadAutoScalerProfile")]
-    public V1api20231001storageManagedClusterSpecWorkloadAutoScalerProfile? WorkloadAutoScalerProfile { get; set; }
+    public V1api20240901storageManagedClusterSpecWorkloadAutoScalerProfile? WorkloadAutoScalerProfile { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAADProfile_STATUS For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAADProfile_STATUS For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAadProfile
+public partial class V1api20240901storageManagedClusterStatusAadProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2508,9 +2736,9 @@ public partial class V1api20231001storageManagedClusterStatusAadProfile
     public string? TenantID { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
+/// <summary>Storage version of v1api20240901.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAddonProfilesIdentity
+public partial class V1api20240901storageManagedClusterStatusAddonProfilesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2529,9 +2757,9 @@ public partial class V1api20231001storageManagedClusterStatusAddonProfilesIdenti
     public string? ResourceId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAddonProfile_STATUS A Kubernetes add-on profile for a managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAddonProfile_STATUS A Kubernetes add-on profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAddonProfiles
+public partial class V1api20240901storageManagedClusterStatusAddonProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2545,14 +2773,14 @@ public partial class V1api20231001storageManagedClusterStatusAddonProfiles
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
+    /// <summary>Storage version of v1api20240901.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
     [JsonPropertyName("identity")]
-    public V1api20231001storageManagedClusterStatusAddonProfilesIdentity? Identity { get; set; }
+    public V1api20240901storageManagedClusterStatusAddonProfilesIdentity? Identity { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.CreationData_STATUS Data used when creating a target resource from a source resource.</summary>
+/// <summary>Storage version of v1api20240901.CreationData_STATUS Data used when creating a target resource from a source resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesCreationData
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesCreationData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2563,9 +2791,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesCr
     public string? SourceResourceId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+/// <summary>Storage version of v1api20240901.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesKubeletConfig
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesKubeletConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2616,9 +2844,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesKu
     public string? TopologyManagerPolicy { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.</summary>
+/// <summary>Storage version of v1api20240901.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLinuxOSConfigSysctls
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesLinuxOSConfigSysctls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2737,9 +2965,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLi
     public int? VmVfsCachePressure { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+/// <summary>Storage version of v1api20240901.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLinuxOSConfig
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesLinuxOSConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2749,9 +2977,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLi
     [JsonPropertyName("swapFileSizeMB")]
     public int? SwapFileSizeMB { get; set; }
 
-    /// <summary>Storage version of v1api20231001.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.</summary>
+    /// <summary>Storage version of v1api20240901.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.</summary>
     [JsonPropertyName("sysctls")]
-    public V1api20231001storageManagedClusterStatusAgentPoolProfilesLinuxOSConfigSysctls? Sysctls { get; set; }
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesLinuxOSConfigSysctls? Sysctls { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("transparentHugePageDefrag")]
@@ -2762,9 +2990,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesLi
     public string? TransparentHugePageEnabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.PortRange_STATUS The port range.</summary>
+/// <summary>Storage version of v1api20240901.PortRange_STATUS The port range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfileAllowedHostPorts
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesNetworkProfileAllowedHostPorts
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2783,9 +3011,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNe
     public string? Protocol { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IPTag_STATUS Contains the IPTag associated with the object.</summary>
+/// <summary>Storage version of v1api20240901.IPTag_STATUS Contains the IPTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfileNodePublicIPTags
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesNetworkProfileNodePublicIPTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2800,9 +3028,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNe
     public string? Tag { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile_STATUS Network settings of an agent pool.</summary>
+/// <summary>Storage version of v1api20240901.AgentPoolNetworkProfile_STATUS Network settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfile
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2810,7 +3038,7 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNe
 
     /// <summary></summary>
     [JsonPropertyName("allowedHostPorts")]
-    public IList<V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfileAllowedHostPorts>? AllowedHostPorts { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusAgentPoolProfilesNetworkProfileAllowedHostPorts>? AllowedHostPorts { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("applicationSecurityGroups")]
@@ -2818,12 +3046,12 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesNe
 
     /// <summary></summary>
     [JsonPropertyName("nodePublicIPTags")]
-    public IList<V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusAgentPoolProfilesNetworkProfileNodePublicIPTags>? NodePublicIPTags { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.PowerState_STATUS Describes the Power State of the cluster</summary>
+/// <summary>Storage version of v1api20240901.PowerState_STATUS Describes the Power State of the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesPowerState
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2834,9 +3062,26 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesPo
     public string? Code { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool</summary>
+/// <summary>Storage version of v1api20240901.AgentPoolSecurityProfile_STATUS The security settings of an agent pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesUpgradeSettings
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesSecurityProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enableSecureBoot")]
+    public bool? EnableSecureBoot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enableVTPM")]
+    public bool? EnableVTPM { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2849,11 +3094,28 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfilesUp
     /// <summary></summary>
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("nodeSoakDurationInMinutes")]
+    public int? NodeSoakDurationInMinutes { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAgentPoolProfile_STATUS Profile for the container service agent pool.</summary>
+/// <summary>Storage version of v1api20240901.AgentPoolWindowsProfile_STATUS The Windows agent pool's specific profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfilesWindowsProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("disableOutboundNat")]
+    public bool? DisableOutboundNat { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterAgentPoolProfile_STATUS Profile for the container service agent pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusAgentPoolProfiles
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -2871,13 +3133,17 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     [JsonPropertyName("count")]
     public int? Count { get; set; }
 
-    /// <summary>Storage version of v1api20231001.CreationData_STATUS Data used when creating a target resource from a source resource.</summary>
+    /// <summary>Storage version of v1api20240901.CreationData_STATUS Data used when creating a target resource from a source resource.</summary>
     [JsonPropertyName("creationData")]
-    public V1api20231001storageManagedClusterStatusAgentPoolProfilesCreationData? CreationData { get; set; }
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesCreationData? CreationData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("currentOrchestratorVersion")]
     public string? CurrentOrchestratorVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("eTag")]
+    public string? ETag { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableAutoScaling")]
@@ -2907,17 +3173,17 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     [JsonPropertyName("hostGroupID")]
     public string? HostGroupID { get; set; }
 
-    /// <summary>Storage version of v1api20231001.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+    /// <summary>Storage version of v1api20240901.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
     [JsonPropertyName("kubeletConfig")]
-    public V1api20231001storageManagedClusterStatusAgentPoolProfilesKubeletConfig? KubeletConfig { get; set; }
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesKubeletConfig? KubeletConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
-    /// <summary>Storage version of v1api20231001.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
+    /// <summary>Storage version of v1api20240901.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.</summary>
     [JsonPropertyName("linuxOSConfig")]
-    public V1api20231001storageManagedClusterStatusAgentPoolProfilesLinuxOSConfig? LinuxOSConfig { get; set; }
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesLinuxOSConfig? LinuxOSConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("maxCount")]
@@ -2939,9 +3205,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231001.AgentPoolNetworkProfile_STATUS Network settings of an agent pool.</summary>
+    /// <summary>Storage version of v1api20240901.AgentPoolNetworkProfile_STATUS Network settings of an agent pool.</summary>
     [JsonPropertyName("networkProfile")]
-    public V1api20231001storageManagedClusterStatusAgentPoolProfilesNetworkProfile? NetworkProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesNetworkProfile? NetworkProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("nodeImageVersion")]
@@ -2983,9 +3249,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     [JsonPropertyName("podSubnetID")]
     public string? PodSubnetID { get; set; }
 
-    /// <summary>Storage version of v1api20231001.PowerState_STATUS Describes the Power State of the cluster</summary>
+    /// <summary>Storage version of v1api20240901.PowerState_STATUS Describes the Power State of the cluster</summary>
     [JsonPropertyName("powerState")]
-    public V1api20231001storageManagedClusterStatusAgentPoolProfilesPowerState? PowerState { get; set; }
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesPowerState? PowerState { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -3007,6 +3273,10 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     [JsonPropertyName("scaleSetPriority")]
     public string? ScaleSetPriority { get; set; }
 
+    /// <summary>Storage version of v1api20240901.AgentPoolSecurityProfile_STATUS The security settings of an agent pool.</summary>
+    [JsonPropertyName("securityProfile")]
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesSecurityProfile? SecurityProfile { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("spotMaxPrice")]
     public double? SpotMaxPrice { get; set; }
@@ -3019,9 +3289,9 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Storage version of v1api20231001.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool</summary>
+    /// <summary>Storage version of v1api20240901.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool</summary>
     [JsonPropertyName("upgradeSettings")]
-    public V1api20231001storageManagedClusterStatusAgentPoolProfilesUpgradeSettings? UpgradeSettings { get; set; }
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesUpgradeSettings? UpgradeSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("vmSize")]
@@ -3031,14 +3301,18 @@ public partial class V1api20231001storageManagedClusterStatusAgentPoolProfiles
     [JsonPropertyName("vnetSubnetID")]
     public string? VnetSubnetID { get; set; }
 
+    /// <summary>Storage version of v1api20240901.AgentPoolWindowsProfile_STATUS The Windows agent pool's specific profile.</summary>
+    [JsonPropertyName("windowsProfile")]
+    public V1api20240901storageManagedClusterStatusAgentPoolProfilesWindowsProfile? WindowsProfile { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAPIServerAccessProfile_STATUS Access profile for managed cluster API server.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAPIServerAccessProfile_STATUS Access profile for managed cluster API server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusApiServerAccessProfile
+public partial class V1api20240901storageManagedClusterStatusApiServerAccessProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3065,9 +3339,9 @@ public partial class V1api20231001storageManagedClusterStatusApiServerAccessProf
     public string? PrivateDNSZone { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterProperties_AutoScalerProfile_STATUS</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterProperties_AutoScalerProfile_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAutoScalerProfile
+public partial class V1api20240901storageManagedClusterStatusAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3078,8 +3352,20 @@ public partial class V1api20231001storageManagedClusterStatusAutoScalerProfile
     public string? BalanceSimilarNodeGroups { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("daemonset-eviction-for-empty-nodes")]
+    public bool? DaemonsetEvictionForEmptyNodes { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("daemonset-eviction-for-occupied-nodes")]
+    public bool? DaemonsetEvictionForOccupiedNodes { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("expander")]
     public string? Expander { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ignore-daemonsets-utilization")]
+    public bool? IgnoreDaemonsetsUtilization { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("max-empty-bulk-delete")]
@@ -3142,9 +3428,9 @@ public partial class V1api20231001storageManagedClusterStatusAutoScalerProfile
     public string? SkipNodesWithSystemPods { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAutoUpgradeProfile_STATUS Auto upgrade profile for a managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAutoUpgradeProfile_STATUS Auto upgrade profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAutoUpgradeProfile
+public partial class V1api20240901storageManagedClusterStatusAutoUpgradeProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3159,9 +3445,9 @@ public partial class V1api20231001storageManagedClusterStatusAutoUpgradeProfile
     public string? UpgradeChannel { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileKubeStateMetrics_STATUS Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileKubeStateMetrics_STATUS Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfileMetricsKubeStateMetrics
+public partial class V1api20240901storageManagedClusterStatusAzureMonitorProfileMetricsKubeStateMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3176,9 +3462,9 @@ public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfile
     public string? MetricLabelsAllowlist { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileMetrics_STATUS Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileMetrics_STATUS Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfileMetrics
+public partial class V1api20240901storageManagedClusterStatusAzureMonitorProfileMetrics
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3188,27 +3474,27 @@ public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfile
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileKubeStateMetrics_STATUS Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileKubeStateMetrics_STATUS Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details.</summary>
     [JsonPropertyName("kubeStateMetrics")]
-    public V1api20231001storageManagedClusterStatusAzureMonitorProfileMetricsKubeStateMetrics? KubeStateMetrics { get; set; }
+    public V1api20240901storageManagedClusterStatusAzureMonitorProfileMetricsKubeStateMetrics? KubeStateMetrics { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfile_STATUS Azure Monitor addon profiles for monitoring the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfile_STATUS Azure Monitor addon profiles for monitoring the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusAzureMonitorProfile
+public partial class V1api20240901storageManagedClusterStatusAzureMonitorProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfileMetrics_STATUS Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfileMetrics_STATUS Metrics profile for the Azure Monitor managed service for Prometheus addon. Collect out-of-the-box Kubernetes infrastructure metrics to send to an Azure Monitor Workspace and configure additional scraping for custom targets. See aka.ms/AzureManagedPrometheus for an overview.</summary>
     [JsonPropertyName("metrics")]
-    public V1api20231001storageManagedClusterStatusAzureMonitorProfileMetrics? Metrics { get; set; }
+    public V1api20240901storageManagedClusterStatusAzureMonitorProfileMetrics? Metrics { get; set; }
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusConditions
+public partial class V1api20240901storageManagedClusterStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -3239,9 +3525,9 @@ public partial class V1api20231001storageManagedClusterStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ExtendedLocation_STATUS The complex type of the extended location.</summary>
+/// <summary>Storage version of v1api20240901.ExtendedLocation_STATUS The complex type of the extended location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusExtendedLocation
+public partial class V1api20240901storageManagedClusterStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3256,9 +3542,9 @@ public partial class V1api20231001storageManagedClusterStatusExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterHTTPProxyConfig_STATUS Cluster HTTP proxy configuration.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterHTTPProxyConfig_STATUS Cluster HTTP proxy configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusHttpProxyConfig
+public partial class V1api20240901storageManagedClusterStatusHttpProxyConfig
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3281,9 +3567,9 @@ public partial class V1api20231001storageManagedClusterStatusHttpProxyConfig
     public string? TrustedCa { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.DelegatedResource_STATUS Delegated resource properties - internal use only.</summary>
+/// <summary>Storage version of v1api20240901.DelegatedResource_STATUS Delegated resource properties - internal use only.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusIdentityDelegatedResources
+public partial class V1api20240901storageManagedClusterStatusIdentityDelegatedResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3306,9 +3592,9 @@ public partial class V1api20231001storageManagedClusterStatusIdentityDelegatedRe
     public string? TenantId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterIdentity_UserAssignedIdentities_STATUS</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterIdentity_UserAssignedIdentities_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusIdentityUserAssignedIdentities
+public partial class V1api20240901storageManagedClusterStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3323,9 +3609,9 @@ public partial class V1api20231001storageManagedClusterStatusIdentityUserAssigne
     public string? PrincipalId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterIdentity_STATUS Identity for the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterIdentity_STATUS Identity for the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusIdentity
+public partial class V1api20240901storageManagedClusterStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3333,7 +3619,7 @@ public partial class V1api20231001storageManagedClusterStatusIdentity
 
     /// <summary></summary>
     [JsonPropertyName("delegatedResources")]
-    public IDictionary<string, V1api20231001storageManagedClusterStatusIdentityDelegatedResources>? DelegatedResources { get; set; }
+    public IDictionary<string, V1api20240901storageManagedClusterStatusIdentityDelegatedResources>? DelegatedResources { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("principalId")]
@@ -3349,12 +3635,12 @@ public partial class V1api20231001storageManagedClusterStatusIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IDictionary<string, V1api20231001storageManagedClusterStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IDictionary<string, V1api20240901storageManagedClusterStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
+/// <summary>Storage version of v1api20240901.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusIdentityProfile
+public partial class V1api20240901storageManagedClusterStatusIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3373,9 +3659,64 @@ public partial class V1api20231001storageManagedClusterStatusIdentityProfile
     public string? ResourceId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ContainerServiceSshPublicKey_STATUS Contains information about SSH certificate public key data.</summary>
+/// <summary>Storage version of v1api20240901.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusLinuxProfileSshPublicKeys
+public partial class V1api20240901storageManagedClusterStatusIngressProfileWebAppRoutingIdentity
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("clientId")]
+    public string? ClientId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("objectId")]
+    public string? ObjectId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("resourceId")]
+    public string? ResourceId { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterIngressProfileWebAppRouting_STATUS Application Routing add-on settings for the ingress profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusIngressProfileWebAppRouting
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("dnsZoneResourceIds")]
+    public IList<string>? DnsZoneResourceIds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Storage version of v1api20240901.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
+    [JsonPropertyName("identity")]
+    public V1api20240901storageManagedClusterStatusIngressProfileWebAppRoutingIdentity? Identity { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterIngressProfile_STATUS Ingress profile for the container service cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusIngressProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterIngressProfileWebAppRouting_STATUS Application Routing add-on settings for the ingress profile.</summary>
+    [JsonPropertyName("webAppRouting")]
+    public V1api20240901storageManagedClusterStatusIngressProfileWebAppRouting? WebAppRouting { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ContainerServiceSshPublicKey_STATUS Contains information about SSH certificate public key data.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusLinuxProfileSshPublicKeys
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3386,9 +3727,9 @@ public partial class V1api20231001storageManagedClusterStatusLinuxProfileSshPubl
     public string? KeyData { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ContainerServiceSshConfiguration_STATUS SSH configuration for Linux-based VMs running on Azure.</summary>
+/// <summary>Storage version of v1api20240901.ContainerServiceSshConfiguration_STATUS SSH configuration for Linux-based VMs running on Azure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusLinuxProfileSsh
+public partial class V1api20240901storageManagedClusterStatusLinuxProfileSsh
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3396,12 +3737,12 @@ public partial class V1api20231001storageManagedClusterStatusLinuxProfileSsh
 
     /// <summary></summary>
     [JsonPropertyName("publicKeys")]
-    public IList<V1api20231001storageManagedClusterStatusLinuxProfileSshPublicKeys>? PublicKeys { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusLinuxProfileSshPublicKeys>? PublicKeys { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ContainerServiceLinuxProfile_STATUS Profile for Linux VMs in the container service cluster.</summary>
+/// <summary>Storage version of v1api20240901.ContainerServiceLinuxProfile_STATUS Profile for Linux VMs in the container service cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusLinuxProfile
+public partial class V1api20240901storageManagedClusterStatusLinuxProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3411,14 +3752,87 @@ public partial class V1api20231001storageManagedClusterStatusLinuxProfile
     [JsonPropertyName("adminUsername")]
     public string? AdminUsername { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ContainerServiceSshConfiguration_STATUS SSH configuration for Linux-based VMs running on Azure.</summary>
+    /// <summary>Storage version of v1api20240901.ContainerServiceSshConfiguration_STATUS SSH configuration for Linux-based VMs running on Azure.</summary>
     [JsonPropertyName("ssh")]
-    public V1api20231001storageManagedClusterStatusLinuxProfileSsh? Ssh { get; set; }
+    public V1api20240901storageManagedClusterStatusLinuxProfileSsh? Ssh { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterCostAnalysis_STATUS The cost analysis configuration for the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIPs
+public partial class V1api20240901storageManagedClusterStatusMetricsProfileCostAnalysis
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterMetricsProfile_STATUS The metrics profile for the ManagedCluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusMetricsProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterCostAnalysis_STATUS The cost analysis configuration for the cluster</summary>
+    [JsonPropertyName("costAnalysis")]
+    public V1api20240901storageManagedClusterStatusMetricsProfileCostAnalysis? CostAnalysis { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AdvancedNetworkingObservability_STATUS Observability profile to enable advanced network metrics and flow logs with historical contexts.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileAdvancedNetworkingObservability
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AdvancedNetworkingSecurity_STATUS Security profile to enable security features on cilium based cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileAdvancedNetworkingSecurity
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.AdvancedNetworking_STATUS Advanced Networking profile for enabling observability and security feature suite on a cluster. For more information see aka.ms/aksadvancednetworking.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileAdvancedNetworking
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Storage version of v1api20240901.AdvancedNetworkingObservability_STATUS Observability profile to enable advanced network metrics and flow logs with historical contexts.</summary>
+    [JsonPropertyName("observability")]
+    public V1api20240901storageManagedClusterStatusNetworkProfileAdvancedNetworkingObservability? Observability { get; set; }
+
+    /// <summary>Storage version of v1api20240901.AdvancedNetworkingSecurity_STATUS Security profile to enable security features on cilium based cluster.</summary>
+    [JsonPropertyName("security")]
+    public V1api20240901storageManagedClusterStatusNetworkProfileAdvancedNetworkingSecurity? Security { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ResourceReference_STATUS A reference to an Azure resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3429,9 +3843,9 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs_STATUS</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIPs
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3446,9 +3860,9 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public int? CountIPv6 { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ResourceReference_STATUS A reference to an Azure resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3459,9 +3873,9 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes_STATUS</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixes
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3469,12 +3883,12 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
 
     /// <summary></summary>
     [JsonPropertyName("publicIPPrefixes")]
-    public IList<V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes>? PublicIPPrefixes { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixesPublicIPPrefixes>? PublicIPPrefixes { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ResourceReference_STATUS A reference to an Azure resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3485,9 +3899,9 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPs_STATUS</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPs_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPs
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3495,12 +3909,12 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
 
     /// <summary></summary>
     [JsonPropertyName("publicIPs")]
-    public IList<V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs>? PublicIPs { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPsPublicIPs>? PublicIPs { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_STATUS Profile of the managed cluster load balancer.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_STATUS Profile of the managed cluster load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfile
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3516,7 +3930,7 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
 
     /// <summary></summary>
     [JsonPropertyName("effectiveOutboundIPs")]
-    public IList<V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableMultipleStandardLoadBalancers")]
@@ -3526,22 +3940,22 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileLoadB
     [JsonPropertyName("idleTimeoutInMinutes")]
     public int? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs_STATUS</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_ManagedOutboundIPs_STATUS</summary>
     [JsonPropertyName("managedOutboundIPs")]
-    public V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIPs? ManagedOutboundIPs { get; set; }
+    public V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileManagedOutboundIPs? ManagedOutboundIPs { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes_STATUS</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPPrefixes_STATUS</summary>
     [JsonPropertyName("outboundIPPrefixes")]
-    public V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixes? OutboundIPPrefixes { get; set; }
+    public V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPPrefixes? OutboundIPPrefixes { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_OutboundIPs_STATUS</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_OutboundIPs_STATUS</summary>
     [JsonPropertyName("outboundIPs")]
-    public V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPs? OutboundIPs { get; set; }
+    public V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfileOutboundIPs? OutboundIPs { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ResourceReference_STATUS A reference to an Azure resource.</summary>
+/// <summary>Storage version of v1api20240901.ResourceReference_STATUS A reference to an Azure resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfileEffectiveOutboundIPs
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileNatGatewayProfileEffectiveOutboundIPs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3552,9 +3966,9 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGa
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterManagedOutboundIPProfile_STATUS Profile of the managed outbound IP resources of the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterManagedOutboundIPProfile_STATUS Profile of the managed outbound IP resources of the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfileManagedOutboundIPProfile
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileNatGatewayProfileManagedOutboundIPProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3565,9 +3979,9 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGa
     public int? Count { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterNATGatewayProfile_STATUS Profile of the managed cluster NAT gateway.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterNATGatewayProfile_STATUS Profile of the managed cluster NAT gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfile
+public partial class V1api20240901storageManagedClusterStatusNetworkProfileNatGatewayProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3575,24 +3989,28 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfileNatGa
 
     /// <summary></summary>
     [JsonPropertyName("effectiveOutboundIPs")]
-    public IList<V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusNetworkProfileNatGatewayProfileEffectiveOutboundIPs>? EffectiveOutboundIPs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public int? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterManagedOutboundIPProfile_STATUS Profile of the managed outbound IP resources of the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterManagedOutboundIPProfile_STATUS Profile of the managed outbound IP resources of the managed cluster.</summary>
     [JsonPropertyName("managedOutboundIPProfile")]
-    public V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfileManagedOutboundIPProfile? ManagedOutboundIPProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusNetworkProfileNatGatewayProfileManagedOutboundIPProfile? ManagedOutboundIPProfile { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ContainerServiceNetworkProfile_STATUS Profile of network configuration.</summary>
+/// <summary>Storage version of v1api20240901.ContainerServiceNetworkProfile_STATUS Profile of network configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusNetworkProfile
+public partial class V1api20240901storageManagedClusterStatusNetworkProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Storage version of v1api20240901.AdvancedNetworking_STATUS Advanced Networking profile for enabling observability and security feature suite on a cluster. For more information see aka.ms/aksadvancednetworking.</summary>
+    [JsonPropertyName("advancedNetworking")]
+    public V1api20240901storageManagedClusterStatusNetworkProfileAdvancedNetworking? AdvancedNetworking { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("dnsServiceIP")]
@@ -3602,17 +4020,17 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfile
     [JsonPropertyName("ipFamilies")]
     public IList<string>? IpFamilies { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterLoadBalancerProfile_STATUS Profile of the managed cluster load balancer.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterLoadBalancerProfile_STATUS Profile of the managed cluster load balancer.</summary>
     [JsonPropertyName("loadBalancerProfile")]
-    public V1api20231001storageManagedClusterStatusNetworkProfileLoadBalancerProfile? LoadBalancerProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusNetworkProfileLoadBalancerProfile? LoadBalancerProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("loadBalancerSku")]
     public string? LoadBalancerSku { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterNATGatewayProfile_STATUS Profile of the managed cluster NAT gateway.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterNATGatewayProfile_STATUS Profile of the managed cluster NAT gateway.</summary>
     [JsonPropertyName("natGatewayProfile")]
-    public V1api20231001storageManagedClusterStatusNetworkProfileNatGatewayProfile? NatGatewayProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusNetworkProfileNatGatewayProfile? NatGatewayProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("networkDataplane")]
@@ -3655,9 +4073,22 @@ public partial class V1api20231001storageManagedClusterStatusNetworkProfile
     public IList<string>? ServiceCidrs { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterOIDCIssuerProfile_STATUS The OIDC issuer profile of the Managed Cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterNodeResourceGroupProfile_STATUS Node resource group lockdown profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusOidcIssuerProfile
+public partial class V1api20240901storageManagedClusterStatusNodeResourceGroupProfile
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("restrictionLevel")]
+    public string? RestrictionLevel { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.ManagedClusterOIDCIssuerProfile_STATUS The OIDC issuer profile of the Managed Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageManagedClusterStatusOidcIssuerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3672,9 +4103,9 @@ public partial class V1api20231001storageManagedClusterStatusOidcIssuerProfile
     public string? IssuerURL { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
+/// <summary>Storage version of v1api20240901.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesIdentity
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3693,9 +4124,9 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public string? ResourceId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningErrorBody_STATUS_Unrolled</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProvisioningErrorBody_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorErrorDetails
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorErrorDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3714,9 +4145,9 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public string? Target { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningErrorBody_STATUS An error response from the pod identity provisioning.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProvisioningErrorBody_STATUS An error response from the pod identity provisioning.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorError
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3728,7 +4159,7 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
 
     /// <summary></summary>
     [JsonPropertyName("details")]
-    public IList<V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorErrorDetails>? Details { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorErrorDetails>? Details { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("message")]
@@ -3739,35 +4170,35 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public string? Target { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningError_STATUS An error response from the pod identity provisioning.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProvisioningError_STATUS An error response from the pod identity provisioning.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoError
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoError
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningErrorBody_STATUS An error response from the pod identity provisioning.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProvisioningErrorBody_STATUS An error response from the pod identity provisioning.</summary>
     [JsonPropertyName("error")]
-    public V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorError? Error { get; set; }
+    public V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoErrorError? Error { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentity_ProvisioningInfo_STATUS</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentity_ProvisioningInfo_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfo
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProvisioningError_STATUS An error response from the pod identity provisioning.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProvisioningError_STATUS An error response from the pod identity provisioning.</summary>
     [JsonPropertyName("error")]
-    public V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoError? Error { get; set; }
+    public V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfoError? Error { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentity_STATUS Details about the pod identity assigned to the Managed Cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentity_STATUS Details about the pod identity assigned to the Managed Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentities
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3777,9 +4208,9 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     [JsonPropertyName("bindingSelector")]
     public string? BindingSelector { get; set; }
 
-    /// <summary>Storage version of v1api20231001.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
+    /// <summary>Storage version of v1api20240901.UserAssignedIdentity_STATUS Details about a user assigned identity.</summary>
     [JsonPropertyName("identity")]
-    public V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesIdentity? Identity { get; set; }
+    public V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -3789,18 +4220,18 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterPodIdentity_ProvisioningInfo_STATUS</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterPodIdentity_ProvisioningInfo_STATUS</summary>
     [JsonPropertyName("provisioningInfo")]
-    public V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfo? ProvisioningInfo { get; set; }
+    public V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentitiesProvisioningInfo? ProvisioningInfo { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityException_STATUS See [disable AAD Pod Identity for a specific Pod/Application](https://azure.github.io/aad-pod-identity/docs/configure/application_exception/) for more details.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityException_STATUS See [disable AAD Pod Identity for a specific Pod/Application](https://azure.github.io/aad-pod-identity/docs/configure/application_exception/) for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentityExceptions
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentityExceptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3819,9 +4250,9 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfileU
     public IDictionary<string, string>? PodLabels { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProfile_STATUS See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProfile_STATUS See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPodIdentityProfile
+public partial class V1api20240901storageManagedClusterStatusPodIdentityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3837,16 +4268,16 @@ public partial class V1api20231001storageManagedClusterStatusPodIdentityProfile
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IList<V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentityExceptions")]
-    public IList<V1api20231001storageManagedClusterStatusPodIdentityProfileUserAssignedIdentityExceptions>? UserAssignedIdentityExceptions { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusPodIdentityProfileUserAssignedIdentityExceptions>? UserAssignedIdentityExceptions { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.PowerState_STATUS Describes the Power State of the cluster</summary>
+/// <summary>Storage version of v1api20240901.PowerState_STATUS Describes the Power State of the cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPowerState
+public partial class V1api20240901storageManagedClusterStatusPowerState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3857,9 +4288,9 @@ public partial class V1api20231001storageManagedClusterStatusPowerState
     public string? Code { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.PrivateLinkResource_STATUS A private link resource</summary>
+/// <summary>Storage version of v1api20240901.PrivateLinkResource_STATUS A private link resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusPrivateLinkResources
+public partial class V1api20240901storageManagedClusterStatusPrivateLinkResources
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3890,9 +4321,9 @@ public partial class V1api20231001storageManagedClusterStatusPrivateLinkResource
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.AzureKeyVaultKms_STATUS Azure Key Vault key management service settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.AzureKeyVaultKms_STATUS Azure Key Vault key management service settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSecurityProfileAzureKeyVaultKms
+public partial class V1api20240901storageManagedClusterStatusSecurityProfileAzureKeyVaultKms
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3915,9 +4346,9 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileAzur
     public string? KeyVaultResourceId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefenderSecurityMonitoring_STATUS Microsoft Defender settings for the security profile threat detection.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefenderSecurityMonitoring_STATUS Microsoft Defender settings for the security profile threat detection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefenderSecurityMonitoring
+public partial class V1api20240901storageManagedClusterStatusSecurityProfileDefenderSecurityMonitoring
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3928,9 +4359,9 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefe
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefender_STATUS Microsoft Defender settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefender_STATUS Microsoft Defender settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefender
+public partial class V1api20240901storageManagedClusterStatusSecurityProfileDefender
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3940,14 +4371,14 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileDefe
     [JsonPropertyName("logAnalyticsWorkspaceResourceId")]
     public string? LogAnalyticsWorkspaceResourceId { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefenderSecurityMonitoring_STATUS Microsoft Defender settings for the security profile threat detection.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefenderSecurityMonitoring_STATUS Microsoft Defender settings for the security profile threat detection.</summary>
     [JsonPropertyName("securityMonitoring")]
-    public V1api20231001storageManagedClusterStatusSecurityProfileDefenderSecurityMonitoring? SecurityMonitoring { get; set; }
+    public V1api20240901storageManagedClusterStatusSecurityProfileDefenderSecurityMonitoring? SecurityMonitoring { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileImageCleaner_STATUS Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileImageCleaner_STATUS Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSecurityProfileImageCleaner
+public partial class V1api20240901storageManagedClusterStatusSecurityProfileImageCleaner
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3962,9 +4393,9 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileImag
     public int? IntervalHours { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileWorkloadIdentity_STATUS Workload identity settings for the security profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileWorkloadIdentity_STATUS Workload identity settings for the security profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSecurityProfileWorkloadIdentity
+public partial class V1api20240901storageManagedClusterStatusSecurityProfileWorkloadIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -3975,34 +4406,34 @@ public partial class V1api20231001storageManagedClusterStatusSecurityProfileWork
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfile_STATUS Security profile for the container service cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfile_STATUS Security profile for the container service cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSecurityProfile
+public partial class V1api20240901storageManagedClusterStatusSecurityProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.AzureKeyVaultKms_STATUS Azure Key Vault key management service settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.AzureKeyVaultKms_STATUS Azure Key Vault key management service settings for the security profile.</summary>
     [JsonPropertyName("azureKeyVaultKms")]
-    public V1api20231001storageManagedClusterStatusSecurityProfileAzureKeyVaultKms? AzureKeyVaultKms { get; set; }
+    public V1api20240901storageManagedClusterStatusSecurityProfileAzureKeyVaultKms? AzureKeyVaultKms { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileDefender_STATUS Microsoft Defender settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileDefender_STATUS Microsoft Defender settings for the security profile.</summary>
     [JsonPropertyName("defender")]
-    public V1api20231001storageManagedClusterStatusSecurityProfileDefender? Defender { get; set; }
+    public V1api20240901storageManagedClusterStatusSecurityProfileDefender? Defender { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileImageCleaner_STATUS Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileImageCleaner_STATUS Image Cleaner removes unused images from nodes, freeing up disk space and helping to reduce attack surface area. Here are settings for the security profile.</summary>
     [JsonPropertyName("imageCleaner")]
-    public V1api20231001storageManagedClusterStatusSecurityProfileImageCleaner? ImageCleaner { get; set; }
+    public V1api20240901storageManagedClusterStatusSecurityProfileImageCleaner? ImageCleaner { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfileWorkloadIdentity_STATUS Workload identity settings for the security profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfileWorkloadIdentity_STATUS Workload identity settings for the security profile.</summary>
     [JsonPropertyName("workloadIdentity")]
-    public V1api20231001storageManagedClusterStatusSecurityProfileWorkloadIdentity? WorkloadIdentity { get; set; }
+    public V1api20240901storageManagedClusterStatusSecurityProfileWorkloadIdentity? WorkloadIdentity { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioPluginCertificateAuthority_STATUS Plugin certificates information for Service Mesh.</summary>
+/// <summary>Storage version of v1api20240901.IstioPluginCertificateAuthority_STATUS Plugin certificates information for Service Mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthorityPlugin
+public partial class V1api20240901storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthorityPlugin
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4029,22 +4460,22 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public string? RootCertObjectName { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioCertificateAuthority_STATUS Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
+/// <summary>Storage version of v1api20240901.IstioCertificateAuthority_STATUS Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthority
+public partial class V1api20240901storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthority
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioPluginCertificateAuthority_STATUS Plugin certificates information for Service Mesh.</summary>
+    /// <summary>Storage version of v1api20240901.IstioPluginCertificateAuthority_STATUS Plugin certificates information for Service Mesh.</summary>
     [JsonPropertyName("plugin")]
-    public V1api20231001storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthorityPlugin? Plugin { get; set; }
+    public V1api20240901storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthorityPlugin? Plugin { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioEgressGateway_STATUS Istio egress gateway configuration.</summary>
+/// <summary>Storage version of v1api20240901.IstioEgressGateway_STATUS Istio egress gateway configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponentsEgressGateways
+public partial class V1api20240901storageManagedClusterStatusServiceMeshProfileIstioComponentsEgressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4053,15 +4484,11 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("nodeSelector")]
-    public IDictionary<string, string>? NodeSelector { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioIngressGateway_STATUS Istio ingress gateway configuration. For now, we support up to one external ingress gateway named `aks-istio-ingressgateway-external` and one internal ingress gateway named `aks-istio-ingressgateway-internal`.</summary>
+/// <summary>Storage version of v1api20240901.IstioIngressGateway_STATUS Istio ingress gateway configuration. For now, we support up to one external ingress gateway named `aks-istio-ingressgateway-external` and one internal ingress gateway named `aks-istio-ingressgateway-internal`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponentsIngressGateways
+public partial class V1api20240901storageManagedClusterStatusServiceMeshProfileIstioComponentsIngressGateways
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4076,9 +4503,9 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
     public string? Mode { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioComponents_STATUS Istio components configuration.</summary>
+/// <summary>Storage version of v1api20240901.IstioComponents_STATUS Istio components configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponents
+public partial class V1api20240901storageManagedClusterStatusServiceMeshProfileIstioComponents
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4086,54 +4513,54 @@ public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileI
 
     /// <summary></summary>
     [JsonPropertyName("egressGateways")]
-    public IList<V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponentsEgressGateways>? EgressGateways { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusServiceMeshProfileIstioComponentsEgressGateways>? EgressGateways { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ingressGateways")]
-    public IList<V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponentsIngressGateways>? IngressGateways { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusServiceMeshProfileIstioComponentsIngressGateways>? IngressGateways { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.IstioServiceMesh_STATUS Istio service mesh configuration.</summary>
+/// <summary>Storage version of v1api20240901.IstioServiceMesh_STATUS Istio service mesh configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServiceMeshProfileIstio
+public partial class V1api20240901storageManagedClusterStatusServiceMeshProfileIstio
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioCertificateAuthority_STATUS Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
+    /// <summary>Storage version of v1api20240901.IstioCertificateAuthority_STATUS Istio Service Mesh Certificate Authority (CA) configuration. For now, we only support plugin certificates as described here https://aka.ms/asm-plugin-ca</summary>
     [JsonPropertyName("certificateAuthority")]
-    public V1api20231001storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthority? CertificateAuthority { get; set; }
+    public V1api20240901storageManagedClusterStatusServiceMeshProfileIstioCertificateAuthority? CertificateAuthority { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioComponents_STATUS Istio components configuration.</summary>
+    /// <summary>Storage version of v1api20240901.IstioComponents_STATUS Istio components configuration.</summary>
     [JsonPropertyName("components")]
-    public V1api20231001storageManagedClusterStatusServiceMeshProfileIstioComponents? Components { get; set; }
+    public V1api20240901storageManagedClusterStatusServiceMeshProfileIstioComponents? Components { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("revisions")]
     public IList<string>? Revisions { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ServiceMeshProfile_STATUS Service mesh profile for a managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ServiceMeshProfile_STATUS Service mesh profile for a managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServiceMeshProfile
+public partial class V1api20240901storageManagedClusterStatusServiceMeshProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.IstioServiceMesh_STATUS Istio service mesh configuration.</summary>
+    /// <summary>Storage version of v1api20240901.IstioServiceMesh_STATUS Istio service mesh configuration.</summary>
     [JsonPropertyName("istio")]
-    public V1api20231001storageManagedClusterStatusServiceMeshProfileIstio? Istio { get; set; }
+    public V1api20240901storageManagedClusterStatusServiceMeshProfileIstio? Istio { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterServicePrincipalProfile_STATUS Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterServicePrincipalProfile_STATUS Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusServicePrincipalProfile
+public partial class V1api20240901storageManagedClusterStatusServicePrincipalProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4144,9 +4571,9 @@ public partial class V1api20231001storageManagedClusterStatusServicePrincipalPro
     public string? ClientId { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterSKU_STATUS The SKU of a Managed Cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterSKU_STATUS The SKU of a Managed Cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSku
+public partial class V1api20240901storageManagedClusterStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4161,9 +4588,9 @@ public partial class V1api20231001storageManagedClusterStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileBlobCSIDriver_STATUS AzureBlob CSI Driver settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileBlobCSIDriver_STATUS AzureBlob CSI Driver settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusStorageProfileBlobCSIDriver
+public partial class V1api20240901storageManagedClusterStatusStorageProfileBlobCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4174,9 +4601,9 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileBlobC
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileDiskCSIDriver_STATUS AzureDisk CSI Driver settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileDiskCSIDriver_STATUS AzureDisk CSI Driver settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusStorageProfileDiskCSIDriver
+public partial class V1api20240901storageManagedClusterStatusStorageProfileDiskCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4187,9 +4614,9 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileDiskC
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileFileCSIDriver_STATUS AzureFile CSI Driver settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileFileCSIDriver_STATUS AzureFile CSI Driver settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusStorageProfileFileCSIDriver
+public partial class V1api20240901storageManagedClusterStatusStorageProfileFileCSIDriver
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4200,9 +4627,9 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileFileC
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileSnapshotController_STATUS Snapshot Controller settings for the storage profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileSnapshotController_STATUS Snapshot Controller settings for the storage profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusStorageProfileSnapshotController
+public partial class V1api20240901storageManagedClusterStatusStorageProfileSnapshotController
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4213,34 +4640,34 @@ public partial class V1api20231001storageManagedClusterStatusStorageProfileSnaps
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterStorageProfile_STATUS Storage profile for the container service cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterStorageProfile_STATUS Storage profile for the container service cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusStorageProfile
+public partial class V1api20240901storageManagedClusterStatusStorageProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileBlobCSIDriver_STATUS AzureBlob CSI Driver settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileBlobCSIDriver_STATUS AzureBlob CSI Driver settings for the storage profile.</summary>
     [JsonPropertyName("blobCSIDriver")]
-    public V1api20231001storageManagedClusterStatusStorageProfileBlobCSIDriver? BlobCSIDriver { get; set; }
+    public V1api20240901storageManagedClusterStatusStorageProfileBlobCSIDriver? BlobCSIDriver { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileDiskCSIDriver_STATUS AzureDisk CSI Driver settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileDiskCSIDriver_STATUS AzureDisk CSI Driver settings for the storage profile.</summary>
     [JsonPropertyName("diskCSIDriver")]
-    public V1api20231001storageManagedClusterStatusStorageProfileDiskCSIDriver? DiskCSIDriver { get; set; }
+    public V1api20240901storageManagedClusterStatusStorageProfileDiskCSIDriver? DiskCSIDriver { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileFileCSIDriver_STATUS AzureFile CSI Driver settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileFileCSIDriver_STATUS AzureFile CSI Driver settings for the storage profile.</summary>
     [JsonPropertyName("fileCSIDriver")]
-    public V1api20231001storageManagedClusterStatusStorageProfileFileCSIDriver? FileCSIDriver { get; set; }
+    public V1api20240901storageManagedClusterStatusStorageProfileFileCSIDriver? FileCSIDriver { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfileSnapshotController_STATUS Snapshot Controller settings for the storage profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfileSnapshotController_STATUS Snapshot Controller settings for the storage profile.</summary>
     [JsonPropertyName("snapshotController")]
-    public V1api20231001storageManagedClusterStatusStorageProfileSnapshotController? SnapshotController { get; set; }
+    public V1api20240901storageManagedClusterStatusStorageProfileSnapshotController? SnapshotController { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusSystemData
+public partial class V1api20240901storageManagedClusterStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4271,9 +4698,9 @@ public partial class V1api20231001storageManagedClusterStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.UpgradeOverrideSettings_STATUS Settings for overrides when upgrading a cluster.</summary>
+/// <summary>Storage version of v1api20240901.UpgradeOverrideSettings_STATUS Settings for overrides when upgrading a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusUpgradeSettingsOverrideSettings
+public partial class V1api20240901storageManagedClusterStatusUpgradeSettingsOverrideSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4288,22 +4715,22 @@ public partial class V1api20231001storageManagedClusterStatusUpgradeSettingsOver
     public string? Until { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ClusterUpgradeSettings_STATUS Settings for upgrading a cluster.</summary>
+/// <summary>Storage version of v1api20240901.ClusterUpgradeSettings_STATUS Settings for upgrading a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusUpgradeSettings
+public partial class V1api20240901storageManagedClusterStatusUpgradeSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.UpgradeOverrideSettings_STATUS Settings for overrides when upgrading a cluster.</summary>
+    /// <summary>Storage version of v1api20240901.UpgradeOverrideSettings_STATUS Settings for overrides when upgrading a cluster.</summary>
     [JsonPropertyName("overrideSettings")]
-    public V1api20231001storageManagedClusterStatusUpgradeSettingsOverrideSettings? OverrideSettings { get; set; }
+    public V1api20240901storageManagedClusterStatusUpgradeSettingsOverrideSettings? OverrideSettings { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.WindowsGmsaProfile_STATUS Windows gMSA Profile in the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.WindowsGmsaProfile_STATUS Windows gMSA Profile in the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusWindowsProfileGmsaProfile
+public partial class V1api20240901storageManagedClusterStatusWindowsProfileGmsaProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4322,9 +4749,9 @@ public partial class V1api20231001storageManagedClusterStatusWindowsProfileGmsaP
     public string? RootDomainName { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWindowsProfile_STATUS Profile for Windows VMs in the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWindowsProfile_STATUS Profile for Windows VMs in the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusWindowsProfile
+public partial class V1api20240901storageManagedClusterStatusWindowsProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4338,18 +4765,18 @@ public partial class V1api20231001storageManagedClusterStatusWindowsProfile
     [JsonPropertyName("enableCSIProxy")]
     public bool? EnableCSIProxy { get; set; }
 
-    /// <summary>Storage version of v1api20231001.WindowsGmsaProfile_STATUS Windows gMSA Profile in the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.WindowsGmsaProfile_STATUS Windows gMSA Profile in the managed cluster.</summary>
     [JsonPropertyName("gmsaProfile")]
-    public V1api20231001storageManagedClusterStatusWindowsProfileGmsaProfile? GmsaProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusWindowsProfileGmsaProfile? GmsaProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileKeda_STATUS KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileKeda_STATUS KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfileKeda
+public partial class V1api20240901storageManagedClusterStatusWorkloadAutoScalerProfileKeda
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4360,9 +4787,9 @@ public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerP
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler_STATUS VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler_STATUS VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfileVerticalPodAutoscaler
+public partial class V1api20240901storageManagedClusterStatusWorkloadAutoScalerProfileVerticalPodAutoscaler
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -4373,58 +4800,58 @@ public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerP
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfile_STATUS Workload Auto-scaler profile for the managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfile_STATUS Workload Auto-scaler profile for the managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfile
+public partial class V1api20240901storageManagedClusterStatusWorkloadAutoScalerProfile
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileKeda_STATUS KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileKeda_STATUS KEDA (Kubernetes Event-driven Autoscaling) settings for the workload auto-scaler profile.</summary>
     [JsonPropertyName("keda")]
-    public V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfileKeda? Keda { get; set; }
+    public V1api20240901storageManagedClusterStatusWorkloadAutoScalerProfileKeda? Keda { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler_STATUS VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfileVerticalPodAutoscaler_STATUS VPA (Vertical Pod Autoscaler) settings for the workload auto-scaler profile.</summary>
     [JsonPropertyName("verticalPodAutoscaler")]
-    public V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfileVerticalPodAutoscaler? VerticalPodAutoscaler { get; set; }
+    public V1api20240901storageManagedClusterStatusWorkloadAutoScalerProfileVerticalPodAutoscaler? VerticalPodAutoscaler { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedCluster_STATUS Managed cluster.</summary>
+/// <summary>Storage version of v1api20240901.ManagedCluster_STATUS Managed cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageManagedClusterStatus
+public partial class V1api20240901storageManagedClusterStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAADProfile_STATUS For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAADProfile_STATUS For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
     [JsonPropertyName("aadProfile")]
-    public V1api20231001storageManagedClusterStatusAadProfile? AadProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusAadProfile? AadProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("addonProfiles")]
-    public IDictionary<string, V1api20231001storageManagedClusterStatusAddonProfiles>? AddonProfiles { get; set; }
+    public IDictionary<string, V1api20240901storageManagedClusterStatusAddonProfiles>? AddonProfiles { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("agentPoolProfiles")]
-    public IList<V1api20231001storageManagedClusterStatusAgentPoolProfiles>? AgentPoolProfiles { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusAgentPoolProfiles>? AgentPoolProfiles { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAPIServerAccessProfile_STATUS Access profile for managed cluster API server.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAPIServerAccessProfile_STATUS Access profile for managed cluster API server.</summary>
     [JsonPropertyName("apiServerAccessProfile")]
-    public V1api20231001storageManagedClusterStatusApiServerAccessProfile? ApiServerAccessProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusApiServerAccessProfile? ApiServerAccessProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterProperties_AutoScalerProfile_STATUS</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterProperties_AutoScalerProfile_STATUS</summary>
     [JsonPropertyName("autoScalerProfile")]
-    public V1api20231001storageManagedClusterStatusAutoScalerProfile? AutoScalerProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusAutoScalerProfile? AutoScalerProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAutoUpgradeProfile_STATUS Auto upgrade profile for a managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAutoUpgradeProfile_STATUS Auto upgrade profile for a managed cluster.</summary>
     [JsonPropertyName("autoUpgradeProfile")]
-    public V1api20231001storageManagedClusterStatusAutoUpgradeProfile? AutoUpgradeProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusAutoUpgradeProfile? AutoUpgradeProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterAzureMonitorProfile_STATUS Azure Monitor addon profiles for monitoring the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterAzureMonitorProfile_STATUS Azure Monitor addon profiles for monitoring the managed cluster.</summary>
     [JsonPropertyName("azureMonitorProfile")]
-    public V1api20231001storageManagedClusterStatusAzureMonitorProfile? AzureMonitorProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusAzureMonitorProfile? AzureMonitorProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("azurePortalFQDN")]
@@ -4432,7 +4859,7 @@ public partial class V1api20231001storageManagedClusterStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231001storageManagedClusterStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("currentKubernetesVersion")]
@@ -4451,6 +4878,10 @@ public partial class V1api20231001storageManagedClusterStatus
     public string? DnsPrefix { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("eTag")]
+    public string? ETag { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("enablePodSecurityPolicy")]
     public bool? EnablePodSecurityPolicy { get; set; }
 
@@ -4458,9 +4889,9 @@ public partial class V1api20231001storageManagedClusterStatus
     [JsonPropertyName("enableRBAC")]
     public bool? EnableRBAC { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ExtendedLocation_STATUS The complex type of the extended location.</summary>
+    /// <summary>Storage version of v1api20240901.ExtendedLocation_STATUS The complex type of the extended location.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20231001storageManagedClusterStatusExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240901storageManagedClusterStatusExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("fqdn")]
@@ -4470,29 +4901,33 @@ public partial class V1api20231001storageManagedClusterStatus
     [JsonPropertyName("fqdnSubdomain")]
     public string? FqdnSubdomain { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterHTTPProxyConfig_STATUS Cluster HTTP proxy configuration.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterHTTPProxyConfig_STATUS Cluster HTTP proxy configuration.</summary>
     [JsonPropertyName("httpProxyConfig")]
-    public V1api20231001storageManagedClusterStatusHttpProxyConfig? HttpProxyConfig { get; set; }
+    public V1api20240901storageManagedClusterStatusHttpProxyConfig? HttpProxyConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterIdentity_STATUS Identity for the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterIdentity_STATUS Identity for the managed cluster.</summary>
     [JsonPropertyName("identity")]
-    public V1api20231001storageManagedClusterStatusIdentity? Identity { get; set; }
+    public V1api20240901storageManagedClusterStatusIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("identityProfile")]
-    public IDictionary<string, V1api20231001storageManagedClusterStatusIdentityProfile>? IdentityProfile { get; set; }
+    public IDictionary<string, V1api20240901storageManagedClusterStatusIdentityProfile>? IdentityProfile { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterIngressProfile_STATUS Ingress profile for the container service cluster.</summary>
+    [JsonPropertyName("ingressProfile")]
+    public V1api20240901storageManagedClusterStatusIngressProfile? IngressProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubernetesVersion")]
     public string? KubernetesVersion { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ContainerServiceLinuxProfile_STATUS Profile for Linux VMs in the container service cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ContainerServiceLinuxProfile_STATUS Profile for Linux VMs in the container service cluster.</summary>
     [JsonPropertyName("linuxProfile")]
-    public V1api20231001storageManagedClusterStatusLinuxProfile? LinuxProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusLinuxProfile? LinuxProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -4502,29 +4937,37 @@ public partial class V1api20231001storageManagedClusterStatus
     [JsonPropertyName("maxAgentPools")]
     public int? MaxAgentPools { get; set; }
 
+    /// <summary>Storage version of v1api20240901.ManagedClusterMetricsProfile_STATUS The metrics profile for the ManagedCluster.</summary>
+    [JsonPropertyName("metricsProfile")]
+    public V1api20240901storageManagedClusterStatusMetricsProfile? MetricsProfile { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ContainerServiceNetworkProfile_STATUS Profile of network configuration.</summary>
+    /// <summary>Storage version of v1api20240901.ContainerServiceNetworkProfile_STATUS Profile of network configuration.</summary>
     [JsonPropertyName("networkProfile")]
-    public V1api20231001storageManagedClusterStatusNetworkProfile? NetworkProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusNetworkProfile? NetworkProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("nodeResourceGroup")]
     public string? NodeResourceGroup { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterOIDCIssuerProfile_STATUS The OIDC issuer profile of the Managed Cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterNodeResourceGroupProfile_STATUS Node resource group lockdown profile for a managed cluster.</summary>
+    [JsonPropertyName("nodeResourceGroupProfile")]
+    public V1api20240901storageManagedClusterStatusNodeResourceGroupProfile? NodeResourceGroupProfile { get; set; }
+
+    /// <summary>Storage version of v1api20240901.ManagedClusterOIDCIssuerProfile_STATUS The OIDC issuer profile of the Managed Cluster.</summary>
     [JsonPropertyName("oidcIssuerProfile")]
-    public V1api20231001storageManagedClusterStatusOidcIssuerProfile? OidcIssuerProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusOidcIssuerProfile? OidcIssuerProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterPodIdentityProfile_STATUS See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterPodIdentityProfile_STATUS See [use AAD pod identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity) for more details on pod identity integration.</summary>
     [JsonPropertyName("podIdentityProfile")]
-    public V1api20231001storageManagedClusterStatusPodIdentityProfile? PodIdentityProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusPodIdentityProfile? PodIdentityProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.PowerState_STATUS Describes the Power State of the cluster</summary>
+    /// <summary>Storage version of v1api20240901.PowerState_STATUS Describes the Power State of the cluster</summary>
     [JsonPropertyName("powerState")]
-    public V1api20231001storageManagedClusterStatusPowerState? PowerState { get; set; }
+    public V1api20240901storageManagedClusterStatusPowerState? PowerState { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateFQDN")]
@@ -4532,7 +4975,7 @@ public partial class V1api20231001storageManagedClusterStatus
 
     /// <summary></summary>
     [JsonPropertyName("privateLinkResources")]
-    public IList<V1api20231001storageManagedClusterStatusPrivateLinkResources>? PrivateLinkResources { get; set; }
+    public IList<V1api20240901storageManagedClusterStatusPrivateLinkResources>? PrivateLinkResources { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -4546,33 +4989,33 @@ public partial class V1api20231001storageManagedClusterStatus
     [JsonPropertyName("resourceUID")]
     public string? ResourceUID { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSecurityProfile_STATUS Security profile for the container service cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSecurityProfile_STATUS Security profile for the container service cluster.</summary>
     [JsonPropertyName("securityProfile")]
-    public V1api20231001storageManagedClusterStatusSecurityProfile? SecurityProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusSecurityProfile? SecurityProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ServiceMeshProfile_STATUS Service mesh profile for a managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ServiceMeshProfile_STATUS Service mesh profile for a managed cluster.</summary>
     [JsonPropertyName("serviceMeshProfile")]
-    public V1api20231001storageManagedClusterStatusServiceMeshProfile? ServiceMeshProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusServiceMeshProfile? ServiceMeshProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterServicePrincipalProfile_STATUS Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterServicePrincipalProfile_STATUS Information about a service principal identity for the cluster to use for manipulating Azure APIs.</summary>
     [JsonPropertyName("servicePrincipalProfile")]
-    public V1api20231001storageManagedClusterStatusServicePrincipalProfile? ServicePrincipalProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusServicePrincipalProfile? ServicePrincipalProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterSKU_STATUS The SKU of a Managed Cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterSKU_STATUS The SKU of a Managed Cluster.</summary>
     [JsonPropertyName("sku")]
-    public V1api20231001storageManagedClusterStatusSku? Sku { get; set; }
+    public V1api20240901storageManagedClusterStatusSku? Sku { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterStorageProfile_STATUS Storage profile for the container service cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterStorageProfile_STATUS Storage profile for the container service cluster.</summary>
     [JsonPropertyName("storageProfile")]
-    public V1api20231001storageManagedClusterStatusStorageProfile? StorageProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusStorageProfile? StorageProfile { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("supportPlan")]
     public string? SupportPlan { get; set; }
 
-    /// <summary>Storage version of v1api20231001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20231001storageManagedClusterStatusSystemData? SystemData { get; set; }
+    public V1api20240901storageManagedClusterStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -4582,25 +5025,25 @@ public partial class V1api20231001storageManagedClusterStatus
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ClusterUpgradeSettings_STATUS Settings for upgrading a cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ClusterUpgradeSettings_STATUS Settings for upgrading a cluster.</summary>
     [JsonPropertyName("upgradeSettings")]
-    public V1api20231001storageManagedClusterStatusUpgradeSettings? UpgradeSettings { get; set; }
+    public V1api20240901storageManagedClusterStatusUpgradeSettings? UpgradeSettings { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWindowsProfile_STATUS Profile for Windows VMs in the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWindowsProfile_STATUS Profile for Windows VMs in the managed cluster.</summary>
     [JsonPropertyName("windowsProfile")]
-    public V1api20231001storageManagedClusterStatusWindowsProfile? WindowsProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusWindowsProfile? WindowsProfile { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedClusterWorkloadAutoScalerProfile_STATUS Workload Auto-scaler profile for the managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedClusterWorkloadAutoScalerProfile_STATUS Workload Auto-scaler profile for the managed cluster.</summary>
     [JsonPropertyName("workloadAutoScalerProfile")]
-    public V1api20231001storageManagedClusterStatusWorkloadAutoScalerProfile? WorkloadAutoScalerProfile { get; set; }
+    public V1api20240901storageManagedClusterStatusWorkloadAutoScalerProfile? WorkloadAutoScalerProfile { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.ManagedCluster Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2023-10-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}</summary>
+/// <summary>Storage version of v1api20240901.ManagedCluster Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231001storageManagedCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231001storageManagedClusterSpec>, IStatus<V1api20231001storageManagedClusterStatus>
+public partial class V1api20240901storageManagedCluster : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240901storageManagedClusterSpec>, IStatus<V1api20240901storageManagedClusterStatus>
 {
-    public const string KubeApiVersion = "v1api20231001storage";
+    public const string KubeApiVersion = "v1api20240901storage";
     public const string KubeKind = "ManagedCluster";
     public const string KubeGroup = "containerservice.azure.com";
     public const string KubePluralName = "managedclusters";
@@ -4616,11 +5059,11 @@ public partial class V1api20231001storageManagedCluster : IKubernetesObject<V1Ob
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedCluster_Spec</summary>
+    /// <summary>Storage version of v1api20240901.ManagedCluster_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231001storageManagedClusterSpec? Spec { get; set; }
+    public V1api20240901storageManagedClusterSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231001.ManagedCluster_STATUS Managed cluster.</summary>
+    /// <summary>Storage version of v1api20240901.ManagedCluster_STATUS Managed cluster.</summary>
     [JsonPropertyName("status")]
-    public V1api20231001storageManagedClusterStatus? Status { get; set; }
+    public V1api20240901storageManagedClusterStatus? Status { get; set; }
 }

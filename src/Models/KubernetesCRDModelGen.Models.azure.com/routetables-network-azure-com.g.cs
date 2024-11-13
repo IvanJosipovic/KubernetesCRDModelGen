@@ -8,9 +8,60 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageRouteTableSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageRouteTableSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.RouteTableOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageRouteTableSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storageRouteTableSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storageRouteTableSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+}
+
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageRouteTableSpecOwner
+public partial class V1api20240301storageRouteTableSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -21,9 +72,9 @@ public partial class V1api20201101storageRouteTableSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.RouteTable_Spec</summary>
+/// <summary>Storage version of v1api20240301.RouteTable_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageRouteTableSpec
+public partial class V1api20240301storageRouteTableSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -41,13 +92,17 @@ public partial class V1api20201101storageRouteTableSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>Storage version of v1api20240301.RouteTableOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storageRouteTableSpecOperatorSpec? OperatorSpec { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
     public string? OriginalVersion { get; set; }
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20201101storageRouteTableSpecOwner Owner { get; set; }
+    public V1api20240301storageRouteTableSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -56,7 +111,7 @@ public partial class V1api20201101storageRouteTableSpec
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageRouteTableStatusConditions
+public partial class V1api20240301storageRouteTableStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -87,9 +142,9 @@ public partial class V1api20201101storageRouteTableStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.RouteTable_STATUS Route table resource.</summary>
+/// <summary>Storage version of v1api20240301.RouteTable_STATUS Route table resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20201101storageRouteTableStatus
+public partial class V1api20240301storageRouteTableStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -97,7 +152,7 @@ public partial class V1api20201101storageRouteTableStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20201101storageRouteTableStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storageRouteTableStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("disableBgpRoutePropagation")]
@@ -136,12 +191,12 @@ public partial class V1api20201101storageRouteTableStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20201101.RouteTable Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/routeTable.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}</summary>
+/// <summary>Storage version of v1api20240301.RouteTable Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/routeTable.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20201101storageRouteTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20201101storageRouteTableSpec>, IStatus<V1api20201101storageRouteTableStatus>
+public partial class V1api20240301storageRouteTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storageRouteTableSpec>, IStatus<V1api20240301storageRouteTableStatus>
 {
-    public const string KubeApiVersion = "v1api20201101storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "RouteTable";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "routetables";
@@ -157,11 +212,11 @@ public partial class V1api20201101storageRouteTable : IKubernetesObject<V1Object
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20201101.RouteTable_Spec</summary>
+    /// <summary>Storage version of v1api20240301.RouteTable_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20201101storageRouteTableSpec? Spec { get; set; }
+    public V1api20240301storageRouteTableSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20201101.RouteTable_STATUS Route table resource.</summary>
+    /// <summary>Storage version of v1api20240301.RouteTable_STATUS Route table resource.</summary>
     [JsonPropertyName("status")]
-    public V1api20201101storageRouteTableStatus? Status { get; set; }
+    public V1api20240301storageRouteTableStatus? Status { get; set; }
 }

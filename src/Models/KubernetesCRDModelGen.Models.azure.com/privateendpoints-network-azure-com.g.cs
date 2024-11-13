@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecApplicationSecurityGroupsReference
+public partial class V1api20240301storagePrivateEndpointSpecApplicationSecurityGroupsReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,9 @@ public partial class V1api20220701storagePrivateEndpointSpecApplicationSecurityG
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.ApplicationSecurityGroupSpec_PrivateEndpoint_SubResourceEmbedded An application security group in a resource group.</summary>
+/// <summary>Storage version of v1api20240301.ApplicationSecurityGroupSpec_PrivateEndpoint_SubResourceEmbedded An application security group in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecApplicationSecurityGroups
+public partial class V1api20240301storagePrivateEndpointSpecApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -39,12 +39,12 @@ public partial class V1api20220701storagePrivateEndpointSpecApplicationSecurityG
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20220701storagePrivateEndpointSpecApplicationSecurityGroupsReference? Reference { get; set; }
+    public V1api20240301storagePrivateEndpointSpecApplicationSecurityGroupsReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.ExtendedLocation ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecExtendedLocation
+public partial class V1api20240301storagePrivateEndpointSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -59,9 +59,9 @@ public partial class V1api20220701storagePrivateEndpointSpecExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpointIPConfiguration An IP Configuration of the private endpoint.</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpointIPConfiguration An IP Configuration of the private endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecIpConfigurations
+public partial class V1api20240301storagePrivateEndpointSpecIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -84,9 +84,9 @@ public partial class V1api20220701storagePrivateEndpointSpecIpConfigurations
     public string? PrivateIPAddress { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
+public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -107,7 +107,7 @@ public partial class V1api20220701storagePrivateEndpointSpecManualPrivateLinkSer
 
 /// <summary>PrivateLinkServiceReference: The resource id of private link service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceReference
+public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -126,9 +126,9 @@ public partial class V1api20220701storagePrivateEndpointSpecManualPrivateLinkSer
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnection PrivateLinkServiceConnection resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecManualPrivateLinkServiceConnections
+public partial class V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -142,22 +142,39 @@ public partial class V1api20220701storagePrivateEndpointSpecManualPrivateLinkSer
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
+    /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
     [JsonPropertyName("privateLinkServiceConnectionState")]
-    public V1api20220701storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
+    public V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
 
     /// <summary>PrivateLinkServiceReference: The resource id of private link service.</summary>
     [JsonPropertyName("privateLinkServiceReference")]
-    public V1api20220701storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceReference? PrivateLinkServiceReference { get; set; }
+    public V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnectionsPrivateLinkServiceReference? PrivateLinkServiceReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requestMessage")]
     public string? RequestMessage { get; set; }
 }
 
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecOperatorSpecConfigMapsPrimaryNicPrivateIpAddress
+public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMapsPrimaryNicPrivateIpAddress
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
     [JsonPropertyName("key")]
@@ -168,9 +185,9 @@ public partial class V1api20220701storagePrivateEndpointSpecOperatorSpecConfigMa
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpointOperatorConfigMaps</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpointOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecOperatorSpecConfigMaps
+public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -178,25 +195,50 @@ public partial class V1api20220701storagePrivateEndpointSpecOperatorSpecConfigMa
 
     /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryNicPrivateIpAddress")]
-    public V1api20220701storagePrivateEndpointSpecOperatorSpecConfigMapsPrimaryNicPrivateIpAddress? PrimaryNicPrivateIpAddress { get; set; }
+    public V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMapsPrimaryNicPrivateIpAddress? PrimaryNicPrivateIpAddress { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpointOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecOperatorSpec
+public partial class V1api20240301storagePrivateEndpointSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.PrivateEndpointOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePrivateEndpointSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpointOperatorConfigMaps</summary>
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary>Storage version of v1api20240301.PrivateEndpointOperatorConfigMaps</summary>
     [JsonPropertyName("configMaps")]
-    public V1api20220701storagePrivateEndpointSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
+    public V1api20240301storagePrivateEndpointSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storagePrivateEndpointSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecOwner
+public partial class V1api20240301storagePrivateEndpointSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -207,9 +249,9 @@ public partial class V1api20220701storagePrivateEndpointSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
+public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -230,7 +272,7 @@ public partial class V1api20220701storagePrivateEndpointSpecPrivateLinkServiceCo
 
 /// <summary>PrivateLinkServiceReference: The resource id of private link service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceReference
+public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -249,9 +291,9 @@ public partial class V1api20220701storagePrivateEndpointSpecPrivateLinkServiceCo
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnection PrivateLinkServiceConnection resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecPrivateLinkServiceConnections
+public partial class V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -265,13 +307,13 @@ public partial class V1api20220701storagePrivateEndpointSpecPrivateLinkServiceCo
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
+    /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState A collection of information about the state of the connection between service consumer and provider.</summary>
     [JsonPropertyName("privateLinkServiceConnectionState")]
-    public V1api20220701storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
+    public V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
 
     /// <summary>PrivateLinkServiceReference: The resource id of private link service.</summary>
     [JsonPropertyName("privateLinkServiceReference")]
-    public V1api20220701storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceReference? PrivateLinkServiceReference { get; set; }
+    public V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnectionsPrivateLinkServiceReference? PrivateLinkServiceReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requestMessage")]
@@ -280,7 +322,7 @@ public partial class V1api20220701storagePrivateEndpointSpecPrivateLinkServiceCo
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecSubnetReference
+public partial class V1api20240301storagePrivateEndpointSpecSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -299,9 +341,9 @@ public partial class V1api20220701storagePrivateEndpointSpecSubnetReference
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.Subnet_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+/// <summary>Storage version of v1api20240301.Subnet_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpecSubnet
+public partial class V1api20240301storagePrivateEndpointSpecSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -309,12 +351,12 @@ public partial class V1api20220701storagePrivateEndpointSpecSubnet
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20220701storagePrivateEndpointSpecSubnetReference? Reference { get; set; }
+    public V1api20240301storagePrivateEndpointSpecSubnetReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpoint_Spec</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpoint_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointSpec
+public partial class V1api20240301storagePrivateEndpointSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -322,7 +364,7 @@ public partial class V1api20220701storagePrivateEndpointSpec
 
     /// <summary></summary>
     [JsonPropertyName("applicationSecurityGroups")]
-    public IList<V1api20220701storagePrivateEndpointSpecApplicationSecurityGroups>? ApplicationSecurityGroups { get; set; }
+    public IList<V1api20240301storagePrivateEndpointSpecApplicationSecurityGroups>? ApplicationSecurityGroups { get; set; }
 
     /// <summary>AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be.</summary>
     [JsonPropertyName("azureName")]
@@ -332,13 +374,13 @@ public partial class V1api20220701storagePrivateEndpointSpec
     [JsonPropertyName("customNetworkInterfaceName")]
     public string? CustomNetworkInterfaceName { get; set; }
 
-    /// <summary>Storage version of v1api20220701.ExtendedLocation ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20220701storagePrivateEndpointSpecExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storagePrivateEndpointSpecExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1api20220701storagePrivateEndpointSpecIpConfigurations>? IpConfigurations { get; set; }
+    public IList<V1api20240301storagePrivateEndpointSpecIpConfigurations>? IpConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -346,11 +388,11 @@ public partial class V1api20220701storagePrivateEndpointSpec
 
     /// <summary></summary>
     [JsonPropertyName("manualPrivateLinkServiceConnections")]
-    public IList<V1api20220701storagePrivateEndpointSpecManualPrivateLinkServiceConnections>? ManualPrivateLinkServiceConnections { get; set; }
+    public IList<V1api20240301storagePrivateEndpointSpecManualPrivateLinkServiceConnections>? ManualPrivateLinkServiceConnections { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpointOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240301.PrivateEndpointOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20220701storagePrivateEndpointSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240301storagePrivateEndpointSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -358,24 +400,24 @@ public partial class V1api20220701storagePrivateEndpointSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20220701storagePrivateEndpointSpecOwner Owner { get; set; }
+    public V1api20240301storagePrivateEndpointSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateLinkServiceConnections")]
-    public IList<V1api20220701storagePrivateEndpointSpecPrivateLinkServiceConnections>? PrivateLinkServiceConnections { get; set; }
+    public IList<V1api20240301storagePrivateEndpointSpecPrivateLinkServiceConnections>? PrivateLinkServiceConnections { get; set; }
 
-    /// <summary>Storage version of v1api20220701.Subnet_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+    /// <summary>Storage version of v1api20240301.Subnet_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
     [JsonPropertyName("subnet")]
-    public V1api20220701storagePrivateEndpointSpecSubnet? Subnet { get; set; }
+    public V1api20240301storagePrivateEndpointSpecSubnet? Subnet { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.ApplicationSecurityGroup_STATUS_PrivateEndpoint_SubResourceEmbedded An application security group in a resource group.</summary>
+/// <summary>Storage version of v1api20240301.ApplicationSecurityGroup_STATUS_PrivateEndpoint_SubResourceEmbedded An application security group in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusApplicationSecurityGroups
+public partial class V1api20240301storagePrivateEndpointStatusApplicationSecurityGroups
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -388,7 +430,7 @@ public partial class V1api20220701storagePrivateEndpointStatusApplicationSecurit
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusConditions
+public partial class V1api20240301storagePrivateEndpointStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -419,9 +461,9 @@ public partial class V1api20220701storagePrivateEndpointStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.CustomDnsConfigPropertiesFormat_STATUS Contains custom Dns resolution configuration from customer.</summary>
+/// <summary>Storage version of v1api20240301.CustomDnsConfigPropertiesFormat_STATUS Contains custom Dns resolution configuration from customer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusCustomDnsConfigs
+public partial class V1api20240301storagePrivateEndpointStatusCustomDnsConfigs
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -436,9 +478,9 @@ public partial class V1api20220701storagePrivateEndpointStatusCustomDnsConfigs
     public IList<string>? IpAddresses { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusExtendedLocation
+public partial class V1api20240301storagePrivateEndpointStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -453,9 +495,9 @@ public partial class V1api20220701storagePrivateEndpointStatusExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpointIPConfiguration_STATUS An IP Configuration of the private endpoint.</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpointIPConfiguration_STATUS An IP Configuration of the private endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusIpConfigurations
+public partial class V1api20240301storagePrivateEndpointStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -486,9 +528,9 @@ public partial class V1api20220701storagePrivateEndpointStatusIpConfigurations
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
+public partial class V1api20240301storagePrivateEndpointStatusManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -507,9 +549,9 @@ public partial class V1api20220701storagePrivateEndpointStatusManualPrivateLinkS
     public string? Status { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnection_STATUS PrivateLinkServiceConnection resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection_STATUS PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusManualPrivateLinkServiceConnections
+public partial class V1api20240301storagePrivateEndpointStatusManualPrivateLinkServiceConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -531,9 +573,9 @@ public partial class V1api20220701storagePrivateEndpointStatusManualPrivateLinkS
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
+    /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
     [JsonPropertyName("privateLinkServiceConnectionState")]
-    public V1api20220701storagePrivateEndpointStatusManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
+    public V1api20240301storagePrivateEndpointStatusManualPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateLinkServiceId")]
@@ -552,9 +594,9 @@ public partial class V1api20220701storagePrivateEndpointStatusManualPrivateLinkS
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.NetworkInterface_STATUS_PrivateEndpoint_SubResourceEmbedded A network interface in a resource group.</summary>
+/// <summary>Storage version of v1api20240301.NetworkInterface_STATUS_PrivateEndpoint_SubResourceEmbedded A network interface in a resource group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusNetworkInterfaces
+public partial class V1api20240301storagePrivateEndpointStatusNetworkInterfaces
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -565,9 +607,9 @@ public partial class V1api20220701storagePrivateEndpointStatusNetworkInterfaces
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
+public partial class V1api20240301storagePrivateEndpointStatusPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -586,9 +628,9 @@ public partial class V1api20220701storagePrivateEndpointStatusPrivateLinkService
     public string? Status { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateLinkServiceConnection_STATUS PrivateLinkServiceConnection resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateLinkServiceConnection_STATUS PrivateLinkServiceConnection resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusPrivateLinkServiceConnections
+public partial class V1api20240301storagePrivateEndpointStatusPrivateLinkServiceConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -610,9 +652,9 @@ public partial class V1api20220701storagePrivateEndpointStatusPrivateLinkService
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
+    /// <summary>Storage version of v1api20240301.PrivateLinkServiceConnectionState_STATUS A collection of information about the state of the connection between service consumer and provider.</summary>
     [JsonPropertyName("privateLinkServiceConnectionState")]
-    public V1api20220701storagePrivateEndpointStatusPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
+    public V1api20240301storagePrivateEndpointStatusPrivateLinkServiceConnectionsPrivateLinkServiceConnectionState? PrivateLinkServiceConnectionState { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateLinkServiceId")]
@@ -631,9 +673,9 @@ public partial class V1api20220701storagePrivateEndpointStatusPrivateLinkService
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.Subnet_STATUS_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+/// <summary>Storage version of v1api20240301.Subnet_STATUS_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatusSubnet
+public partial class V1api20240301storagePrivateEndpointStatusSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -644,9 +686,9 @@ public partial class V1api20220701storagePrivateEndpointStatusSubnet
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpoint_STATUS_PrivateEndpoint_SubResourceEmbedded Private endpoint resource.</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpoint_STATUS_PrivateEndpoint_SubResourceEmbedded Private endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePrivateEndpointStatus
+public partial class V1api20240301storagePrivateEndpointStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -654,15 +696,15 @@ public partial class V1api20220701storagePrivateEndpointStatus
 
     /// <summary></summary>
     [JsonPropertyName("applicationSecurityGroups")]
-    public IList<V1api20220701storagePrivateEndpointStatusApplicationSecurityGroups>? ApplicationSecurityGroups { get; set; }
+    public IList<V1api20240301storagePrivateEndpointStatusApplicationSecurityGroups>? ApplicationSecurityGroups { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20220701storagePrivateEndpointStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storagePrivateEndpointStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("customDnsConfigs")]
-    public IList<V1api20220701storagePrivateEndpointStatusCustomDnsConfigs>? CustomDnsConfigs { get; set; }
+    public IList<V1api20240301storagePrivateEndpointStatusCustomDnsConfigs>? CustomDnsConfigs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("customNetworkInterfaceName")]
@@ -672,9 +714,9 @@ public partial class V1api20220701storagePrivateEndpointStatus
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Storage version of v1api20220701.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20220701storagePrivateEndpointStatusExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storagePrivateEndpointStatusExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -682,7 +724,7 @@ public partial class V1api20220701storagePrivateEndpointStatus
 
     /// <summary></summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1api20220701storagePrivateEndpointStatusIpConfigurations>? IpConfigurations { get; set; }
+    public IList<V1api20240301storagePrivateEndpointStatusIpConfigurations>? IpConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -690,7 +732,7 @@ public partial class V1api20220701storagePrivateEndpointStatus
 
     /// <summary></summary>
     [JsonPropertyName("manualPrivateLinkServiceConnections")]
-    public IList<V1api20220701storagePrivateEndpointStatusManualPrivateLinkServiceConnections>? ManualPrivateLinkServiceConnections { get; set; }
+    public IList<V1api20240301storagePrivateEndpointStatusManualPrivateLinkServiceConnections>? ManualPrivateLinkServiceConnections { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -698,19 +740,19 @@ public partial class V1api20220701storagePrivateEndpointStatus
 
     /// <summary></summary>
     [JsonPropertyName("networkInterfaces")]
-    public IList<V1api20220701storagePrivateEndpointStatusNetworkInterfaces>? NetworkInterfaces { get; set; }
+    public IList<V1api20240301storagePrivateEndpointStatusNetworkInterfaces>? NetworkInterfaces { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateLinkServiceConnections")]
-    public IList<V1api20220701storagePrivateEndpointStatusPrivateLinkServiceConnections>? PrivateLinkServiceConnections { get; set; }
+    public IList<V1api20240301storagePrivateEndpointStatusPrivateLinkServiceConnections>? PrivateLinkServiceConnections { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 
-    /// <summary>Storage version of v1api20220701.Subnet_STATUS_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
+    /// <summary>Storage version of v1api20240301.Subnet_STATUS_PrivateEndpoint_SubResourceEmbedded Subnet in a virtual network resource.</summary>
     [JsonPropertyName("subnet")]
-    public V1api20220701storagePrivateEndpointStatusSubnet? Subnet { get; set; }
+    public V1api20240301storagePrivateEndpointStatusSubnet? Subnet { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -721,12 +763,12 @@ public partial class V1api20220701storagePrivateEndpointStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PrivateEndpoint Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/privateEndpoint.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}</summary>
+/// <summary>Storage version of v1api20240301.PrivateEndpoint Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/privateEndpoint.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateEndpoints/{privateEndpointName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220701storagePrivateEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storagePrivateEndpointSpec>, IStatus<V1api20220701storagePrivateEndpointStatus>
+public partial class V1api20240301storagePrivateEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storagePrivateEndpointSpec>, IStatus<V1api20240301storagePrivateEndpointStatus>
 {
-    public const string KubeApiVersion = "v1api20220701storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "PrivateEndpoint";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "privateendpoints";
@@ -742,11 +784,11 @@ public partial class V1api20220701storagePrivateEndpoint : IKubernetesObject<V1O
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpoint_Spec</summary>
+    /// <summary>Storage version of v1api20240301.PrivateEndpoint_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20220701storagePrivateEndpointSpec? Spec { get; set; }
+    public V1api20240301storagePrivateEndpointSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PrivateEndpoint_STATUS_PrivateEndpoint_SubResourceEmbedded Private endpoint resource.</summary>
+    /// <summary>Storage version of v1api20240301.PrivateEndpoint_STATUS_PrivateEndpoint_SubResourceEmbedded Private endpoint resource.</summary>
     [JsonPropertyName("status")]
-    public V1api20220701storagePrivateEndpointStatus? Status { get; set; }
+    public V1api20240301storagePrivateEndpointStatus? Status { get; set; }
 }

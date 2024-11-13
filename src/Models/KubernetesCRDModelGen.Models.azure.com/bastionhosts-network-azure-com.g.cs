@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpecIpConfigurationsPublicIPAddressReference
+public partial class V1api20240301storageBastionHostSpecIpConfigurationsPublicIPAddressReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,9 @@ public partial class V1api20220701storageBastionHostSpecIpConfigurationsPublicIP
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.BastionHostSubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpecIpConfigurationsPublicIPAddress
+public partial class V1api20240301storageBastionHostSpecIpConfigurationsPublicIPAddress
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -39,12 +39,12 @@ public partial class V1api20220701storageBastionHostSpecIpConfigurationsPublicIP
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20220701storageBastionHostSpecIpConfigurationsPublicIPAddressReference? Reference { get; set; }
+    public V1api20240301storageBastionHostSpecIpConfigurationsPublicIPAddressReference? Reference { get; set; }
 }
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpecIpConfigurationsSubnetReference
+public partial class V1api20240301storageBastionHostSpecIpConfigurationsSubnetReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -63,9 +63,9 @@ public partial class V1api20220701storageBastionHostSpecIpConfigurationsSubnetRe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.BastionHostSubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpecIpConfigurationsSubnet
+public partial class V1api20240301storageBastionHostSpecIpConfigurationsSubnet
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -73,12 +73,12 @@ public partial class V1api20220701storageBastionHostSpecIpConfigurationsSubnet
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20220701storageBastionHostSpecIpConfigurationsSubnetReference? Reference { get; set; }
+    public V1api20240301storageBastionHostSpecIpConfigurationsSubnetReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.BastionHostIPConfiguration IP configuration of an Bastion Host.</summary>
+/// <summary>Storage version of v1api20240301.BastionHostIPConfiguration IP configuration of an Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpecIpConfigurations
+public partial class V1api20240301storageBastionHostSpecIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -92,18 +92,95 @@ public partial class V1api20220701storageBastionHostSpecIpConfigurations
     [JsonPropertyName("privateIPAllocationMethod")]
     public string? PrivateIPAllocationMethod { get; set; }
 
-    /// <summary>Storage version of v1api20220701.BastionHostSubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("publicIPAddress")]
-    public V1api20220701storageBastionHostSpecIpConfigurationsPublicIPAddress? PublicIPAddress { get; set; }
+    public V1api20240301storageBastionHostSpecIpConfigurationsPublicIPAddress? PublicIPAddress { get; set; }
 
-    /// <summary>Storage version of v1api20220701.BastionHostSubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("subnet")]
-    public V1api20220701storageBastionHostSpecIpConfigurationsSubnet? Subnet { get; set; }
+    public V1api20240301storageBastionHostSpecIpConfigurationsSubnet? Subnet { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.IPRule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostSpecNetworkAclsIpRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("addressPrefix")]
+    public string? AddressPrefix { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.BastionHostPropertiesFormat_NetworkAcls</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostSpecNetworkAcls
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ipRules")]
+    public IList<V1api20240301storageBastionHostSpecNetworkAclsIpRules>? IpRules { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.BastionHostOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storageBastionHostSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storageBastionHostSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpecOwner
+public partial class V1api20240301storageBastionHostSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -114,9 +191,9 @@ public partial class V1api20220701storageBastionHostSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.Sku The sku of this Bastion Host.</summary>
+/// <summary>Storage version of v1api20240301.Sku The sku of this Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpecSku
+public partial class V1api20240301storageBastionHostSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -127,9 +204,43 @@ public partial class V1api20220701storageBastionHostSpecSku
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.BastionHost_Spec</summary>
+/// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostSpec
+public partial class V1api20240301storageBastionHostSpecVirtualNetworkReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostSpecVirtualNetwork
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20240301storageBastionHostSpecVirtualNetworkReference? Reference { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.BastionHost_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -156,6 +267,14 @@ public partial class V1api20220701storageBastionHostSpec
     public bool? EnableIpConnect { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("enableKerberos")]
+    public bool? EnableKerberos { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enableSessionRecording")]
+    public bool? EnableSessionRecording { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("enableShareableLink")]
     public bool? EnableShareableLink { get; set; }
 
@@ -165,11 +284,19 @@ public partial class V1api20220701storageBastionHostSpec
 
     /// <summary></summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1api20220701storageBastionHostSpecIpConfigurations>? IpConfigurations { get; set; }
+    public IList<V1api20240301storageBastionHostSpecIpConfigurations>? IpConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Storage version of v1api20240301.BastionHostPropertiesFormat_NetworkAcls</summary>
+    [JsonPropertyName("networkAcls")]
+    public V1api20240301storageBastionHostSpecNetworkAcls? NetworkAcls { get; set; }
+
+    /// <summary>Storage version of v1api20240301.BastionHostOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storageBastionHostSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -177,24 +304,32 @@ public partial class V1api20220701storageBastionHostSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20220701storageBastionHostSpecOwner Owner { get; set; }
+    public V1api20240301storageBastionHostSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("scaleUnits")]
     public int? ScaleUnits { get; set; }
 
-    /// <summary>Storage version of v1api20220701.Sku The sku of this Bastion Host.</summary>
+    /// <summary>Storage version of v1api20240301.Sku The sku of this Bastion Host.</summary>
     [JsonPropertyName("sku")]
-    public V1api20220701storageBastionHostSpecSku? Sku { get; set; }
+    public V1api20240301storageBastionHostSpecSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
+    [JsonPropertyName("virtualNetwork")]
+    public V1api20240301storageBastionHostSpecVirtualNetwork? VirtualNetwork { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("zones")]
+    public IList<string>? Zones { get; set; }
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostStatusConditions
+public partial class V1api20240301storageBastionHostStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -225,9 +360,9 @@ public partial class V1api20220701storageBastionHostStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.BastionHostIPConfiguration_STATUS IP configuration of an Bastion Host.</summary>
+/// <summary>Storage version of v1api20240301.BastionHostIPConfiguration_STATUS IP configuration of an Bastion Host.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostStatusIpConfigurations
+public partial class V1api20240301storageBastionHostStatusIpConfigurations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -238,9 +373,35 @@ public partial class V1api20220701storageBastionHostStatusIpConfigurations
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.Sku_STATUS The sku of this Bastion Host.</summary>
+/// <summary>Storage version of v1api20240301.IPRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostStatusSku
+public partial class V1api20240301storageBastionHostStatusNetworkAclsIpRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("addressPrefix")]
+    public string? AddressPrefix { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.BastionHostPropertiesFormat_NetworkAcls_STATUS</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostStatusNetworkAcls
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ipRules")]
+    public IList<V1api20240301storageBastionHostStatusNetworkAclsIpRules>? IpRules { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.Sku_STATUS The sku of this Bastion Host.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -251,9 +412,22 @@ public partial class V1api20220701storageBastionHostStatusSku
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.BastionHost_STATUS Bastion Host resource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageBastionHostStatus
+public partial class V1api20240301storageBastionHostStatusVirtualNetwork
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.BastionHost_STATUS Bastion Host resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageBastionHostStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -261,7 +435,7 @@ public partial class V1api20220701storageBastionHostStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20220701storageBastionHostStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storageBastionHostStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("disableCopyPaste")]
@@ -278,6 +452,14 @@ public partial class V1api20220701storageBastionHostStatus
     /// <summary></summary>
     [JsonPropertyName("enableIpConnect")]
     public bool? EnableIpConnect { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enableKerberos")]
+    public bool? EnableKerberos { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enableSessionRecording")]
+    public bool? EnableSessionRecording { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enableShareableLink")]
@@ -297,7 +479,7 @@ public partial class V1api20220701storageBastionHostStatus
 
     /// <summary></summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1api20220701storageBastionHostStatusIpConfigurations>? IpConfigurations { get; set; }
+    public IList<V1api20240301storageBastionHostStatusIpConfigurations>? IpConfigurations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -307,6 +489,10 @@ public partial class V1api20220701storageBastionHostStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
+    /// <summary>Storage version of v1api20240301.BastionHostPropertiesFormat_NetworkAcls_STATUS</summary>
+    [JsonPropertyName("networkAcls")]
+    public V1api20240301storageBastionHostStatusNetworkAcls? NetworkAcls { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
@@ -315,9 +501,9 @@ public partial class V1api20220701storageBastionHostStatus
     [JsonPropertyName("scaleUnits")]
     public int? ScaleUnits { get; set; }
 
-    /// <summary>Storage version of v1api20220701.Sku_STATUS The sku of this Bastion Host.</summary>
+    /// <summary>Storage version of v1api20240301.Sku_STATUS The sku of this Bastion Host.</summary>
     [JsonPropertyName("sku")]
-    public V1api20220701storageBastionHostStatusSku? Sku { get; set; }
+    public V1api20240301storageBastionHostStatusSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -326,14 +512,22 @@ public partial class V1api20220701storageBastionHostStatus
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
+    [JsonPropertyName("virtualNetwork")]
+    public V1api20240301storageBastionHostStatusVirtualNetwork? VirtualNetwork { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("zones")]
+    public IList<string>? Zones { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.BastionHost Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/bastionHost.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}</summary>
+/// <summary>Storage version of v1api20240301.BastionHost Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/bastionHost.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/bastionHosts/{bastionHostName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220701storageBastionHost : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storageBastionHostSpec>, IStatus<V1api20220701storageBastionHostStatus>
+public partial class V1api20240301storageBastionHost : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storageBastionHostSpec>, IStatus<V1api20240301storageBastionHostStatus>
 {
-    public const string KubeApiVersion = "v1api20220701storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "BastionHost";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "bastionhosts";
@@ -349,11 +543,11 @@ public partial class V1api20220701storageBastionHost : IKubernetesObject<V1Objec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.BastionHost_Spec</summary>
+    /// <summary>Storage version of v1api20240301.BastionHost_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20220701storageBastionHostSpec? Spec { get; set; }
+    public V1api20240301storageBastionHostSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.BastionHost_STATUS Bastion Host resource.</summary>
+    /// <summary>Storage version of v1api20240301.BastionHost_STATUS Bastion Host resource.</summary>
     [JsonPropertyName("status")]
-    public V1api20220701storageBastionHostStatus? Status { get; set; }
+    public V1api20240301storageBastionHostStatus? Status { get; set; }
 }

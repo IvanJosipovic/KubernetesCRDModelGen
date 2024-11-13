@@ -34,7 +34,7 @@ public partial class V1UserSpecLocalUserServerAdminPassword
     public string Name { get; set; }
 }
 
-/// <summary>LocalUser contains details for creating a standard (non-aad) postgresql User</summary>
+/// <summary>LocalUser contains details for creating a standard (non-aad) postgresql User.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecLocalUser
 {
@@ -60,7 +60,7 @@ public partial class V1UserSpecOwner
     public string Name { get; set; }
 }
 
-/// <summary>The with options of the user role.</summary>
+/// <summary>RoleOptions defines additional attributes of the user role. You can read more about these attributes at https://www.postgresql.org/docs/current/role-attributes.html.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1UserSpecRoleOptions
 {
@@ -89,7 +89,7 @@ public partial class V1UserSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>LocalUser contains details for creating a standard (non-aad) postgresql User</summary>
+    /// <summary>LocalUser contains details for creating a standard (non-aad) postgresql User.</summary>
     [JsonPropertyName("localUser")]
     public V1UserSpecLocalUser LocalUser { get; set; }
 
@@ -97,11 +97,11 @@ public partial class V1UserSpec
     [JsonPropertyName("owner")]
     public V1UserSpecOwner Owner { get; set; }
 
-    /// <summary>The with options of the user role.</summary>
+    /// <summary>RoleOptions defines additional attributes of the user role. You can read more about these attributes at https://www.postgresql.org/docs/current/role-attributes.html.</summary>
     [JsonPropertyName("roleOptions")]
     public V1UserSpecRoleOptions? RoleOptions { get; set; }
 
-    /// <summary>The Azure Database for PostgreSQL server is created with the 3 default roles defined. azure_pg_admin azure_superuser your server admin user</summary>
+    /// <summary>Roles is the set of roles granted to the user upon creation. The Azure Database for PostgreSQL server is created with 3 default roles defined: azure_pg_admin, azure_superuser, and your server admin user (this last is a role w/ login permission, commonly called a User).</summary>
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
 }
@@ -148,7 +148,7 @@ public partial class V1UserStatus
     public IList<V1UserStatusConditions>? Conditions { get; set; }
 }
 
-/// <summary>User is a postgresql user</summary>
+/// <summary>User is a postgresql user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1User : IKubernetesObject<V1ObjectMeta>, ISpec<V1UserSpec>, IStatus<V1UserStatus>

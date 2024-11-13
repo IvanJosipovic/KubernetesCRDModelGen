@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.10.0
+    app.kubernetes.io/version: v2.11.0
   name: users.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -45,7 +45,7 @@ spec:
     name: v1
     schema:
       openAPIV3Schema:
-        description: User is a postgresql user
+        description: User is a postgresql user.
         properties:
           apiVersion:
             description: >-
@@ -80,7 +80,7 @@ spec:
                   doesn't have to be.
                 type: string
               localUser:
-                description: LocalUser contains details for creating a standard (non-aad) postgresql User
+                description: LocalUser contains details for creating a standard (non-aad) postgresql User.
                 properties:
                   password:
                     description: Password is the password to use for the user
@@ -139,7 +139,10 @@ spec:
               roleOptions:
                 default:
                   login: true
-                description: The with options of the user role.
+                description: >-
+                  RoleOptions defines additional attributes of the user role. You can read more about these attributes
+
+                  at https://www.postgresql.org/docs/current/role-attributes.html.
                 properties:
                   createDb:
                     default: false
@@ -160,13 +163,11 @@ spec:
                 type: object
               roles:
                 description: >-
-                  The Azure Database for PostgreSQL server is created with the 3 default roles defined.
+                  Roles is the set of roles granted to the user upon creation.
 
-                  azure_pg_admin
+                  The Azure Database for PostgreSQL server is created with 3 default roles defined: azure_pg_admin, azure_superuser,
 
-                  azure_superuser
-
-                  your server admin user
+                  and your server admin user (this last is a role w/ login permission, commonly called a User).
                 items:
                   type: string
                 type: array

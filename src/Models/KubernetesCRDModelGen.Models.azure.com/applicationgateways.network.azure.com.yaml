@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.10.0
+    app.kubernetes.io/version: v2.11.0
   name: applicationgateways.network.azure.com
 spec:
   conversion:
@@ -171,7 +171,7 @@ spec:
                     authenticationCertificates:
                       description: 'AuthenticationCertificates: Array of references to application gateway authentication certificates.'
                       items:
-                        description: Reference to another subresource.
+                        description: Reference to another ARM resource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -288,7 +288,7 @@ spec:
                     trustedRootCertificates:
                       description: 'TrustedRootCertificates: Array of references to application gateway trusted root certificates.'
                       items:
-                        description: Reference to another subresource.
+                        description: Reference to another ARM resource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -382,7 +382,7 @@ spec:
                     trustedRootCertificates:
                       description: 'TrustedRootCertificates: Array of references to application gateway trusted root certificates.'
                       items:
-                        description: Reference to another subresource.
+                        description: Reference to another ARM resource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -1034,6 +1034,87 @@ spec:
               location:
                 description: 'Location: Resource location.'
                 type: string
+              operatorSpec:
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
+                properties:
+                  configMapExpressions:
+                    description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                  secretExpressions:
+                    description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                type: object
               owner:
                 description: >-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
@@ -1187,7 +1268,7 @@ spec:
                     pathRules:
                       description: 'PathRules: Path rules specifying redirect configuration.'
                       items:
-                        description: Reference to another subresource.
+                        description: Reference to another ARM resource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -1224,7 +1305,7 @@ spec:
                     requestRoutingRules:
                       description: 'RequestRoutingRules: Request routing specifying redirect configuration.'
                       items:
-                        description: Reference to another subresource.
+                        description: Reference to another ARM resource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -1282,7 +1363,7 @@ spec:
                     urlPathMaps:
                       description: 'UrlPathMaps: Url path maps specifying default redirect configuration.'
                       items:
-                        description: Reference to another subresource.
+                        description: Reference to another ARM resource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -1960,7 +2041,7 @@ spec:
                     trustedClientCertificates:
                       description: 'TrustedClientCertificates: Array of references to application gateway trusted client certificates.'
                       items:
-                        description: Reference to another subresource.
+                        description: Reference to another ARM resource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -3071,9 +3152,9 @@ spec:
                     authenticationCertificates:
                       items:
                         description: >-
-                          Storage version of v1api20220701.ApplicationGatewaySubResource
+                          Storage version of v1api20220701.SubResource
 
-                          Reference to another subresource.
+                          Reference to another ARM resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3142,9 +3223,9 @@ spec:
                       type: integer
                     probe:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3186,9 +3267,9 @@ spec:
                     trustedRootCertificates:
                       items:
                         description: >-
-                          Storage version of v1api20220701.ApplicationGatewaySubResource
+                          Storage version of v1api20220701.SubResource
 
-                          Reference to another subresource.
+                          Reference to another ARM resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3249,9 +3330,9 @@ spec:
                       type: integer
                     probe:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3291,9 +3372,9 @@ spec:
                     trustedRootCertificates:
                       items:
                         description: >-
-                          Storage version of v1api20220701.ApplicationGatewaySubResource
+                          Storage version of v1api20220701.SubResource
 
-                          Reference to another subresource.
+                          Reference to another ARM resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3356,9 +3437,9 @@ spec:
                 type: boolean
               firewallPolicy:
                 description: >-
-                  Storage version of v1api20220701.ApplicationGatewaySubResource
+                  Storage version of v1api20220701.SubResource
 
-                  Reference to another subresource.
+                  Reference to another ARM resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3416,9 +3497,9 @@ spec:
                       type: string
                     privateLinkConfiguration:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3453,9 +3534,9 @@ spec:
                       type: object
                     publicIPAddress:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3490,9 +3571,9 @@ spec:
                       type: object
                     subnet:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3567,9 +3648,9 @@ spec:
                       type: string
                     subnet:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3661,9 +3742,9 @@ spec:
                       type: array
                     firewallPolicy:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3698,9 +3779,9 @@ spec:
                       type: object
                     frontendIPConfiguration:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3735,9 +3816,9 @@ spec:
                       type: object
                     frontendPort:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3784,9 +3865,9 @@ spec:
                       type: boolean
                     sslCertificate:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3821,9 +3902,9 @@ spec:
                       type: object
                     sslProfile:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3931,9 +4012,9 @@ spec:
                       type: object
                     frontendIPConfiguration:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3968,9 +4049,9 @@ spec:
                       type: object
                     frontendPort:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4009,9 +4090,9 @@ spec:
                       type: string
                     sslCertificate:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4046,9 +4127,9 @@ spec:
                       type: object
                     sslProfile:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4145,6 +4226,93 @@ spec:
                 type: array
               location:
                 type: string
+              operatorSpec:
+                description: >-
+                  Storage version of v1api20220701.ApplicationGatewayOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  configMapExpressions:
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                  secretExpressions:
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                type: object
               originalVersion:
                 type: string
               owner:
@@ -4304,9 +4472,9 @@ spec:
                     pathRules:
                       items:
                         description: >-
-                          Storage version of v1api20220701.ApplicationGatewaySubResource
+                          Storage version of v1api20220701.SubResource
 
-                          Reference to another subresource.
+                          Reference to another ARM resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4345,9 +4513,9 @@ spec:
                     requestRoutingRules:
                       items:
                         description: >-
-                          Storage version of v1api20220701.ApplicationGatewaySubResource
+                          Storage version of v1api20220701.SubResource
 
-                          Reference to another subresource.
+                          Reference to another ARM resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4383,9 +4551,9 @@ spec:
                       type: array
                     targetListener:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4423,9 +4591,9 @@ spec:
                     urlPathMaps:
                       items:
                         description: >-
-                          Storage version of v1api20220701.ApplicationGatewaySubResource
+                          Storage version of v1api20220701.SubResource
 
-                          Reference to another subresource.
+                          Reference to another ARM resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4478,9 +4646,9 @@ spec:
                       type: object
                     backendAddressPool:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4515,9 +4683,9 @@ spec:
                       type: object
                     backendHttpSettings:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4552,9 +4720,9 @@ spec:
                       type: object
                     httpListener:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4589,9 +4757,9 @@ spec:
                       type: object
                     loadDistributionPolicy:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4630,9 +4798,9 @@ spec:
                       type: integer
                     redirectConfiguration:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4667,9 +4835,9 @@ spec:
                       type: object
                     rewriteRuleSet:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4706,9 +4874,9 @@ spec:
                       type: string
                     urlPathMap:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4903,9 +5071,9 @@ spec:
                       type: object
                     backendAddressPool:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4940,9 +5108,9 @@ spec:
                       type: object
                     backendSettings:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4977,9 +5145,9 @@ spec:
                       type: object
                     listener:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -5197,9 +5365,9 @@ spec:
                     trustedClientCertificates:
                       items:
                         description: >-
-                          Storage version of v1api20220701.ApplicationGatewaySubResource
+                          Storage version of v1api20220701.SubResource
 
-                          Reference to another subresource.
+                          Reference to another ARM resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -5334,9 +5502,9 @@ spec:
                       type: object
                     defaultBackendAddressPool:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -5371,9 +5539,9 @@ spec:
                       type: object
                     defaultBackendHttpSettings:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -5408,9 +5576,9 @@ spec:
                       type: object
                     defaultLoadDistributionPolicy:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -5445,9 +5613,9 @@ spec:
                       type: object
                     defaultRedirectConfiguration:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -5482,9 +5650,9 @@ spec:
                       type: object
                     defaultRewriteRuleSet:
                       description: >-
-                        Storage version of v1api20220701.ApplicationGatewaySubResource
+                        Storage version of v1api20220701.SubResource
 
-                        Reference to another subresource.
+                        Reference to another ARM resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -5831,9 +5999,9 @@ spec:
                 type: string
               firewallPolicy:
                 description: >-
-                  Storage version of v1api20220701.ApplicationGatewaySubResource_STATUS
+                  Storage version of v1api20220701.SubResource_STATUS
 
-                  Reference to another subresource.
+                  Reference to another ARM resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

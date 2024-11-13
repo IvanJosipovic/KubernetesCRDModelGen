@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.10.0
+    app.kubernetes.io/version: v2.11.0
   name: workspaces.operationalinsights.azure.com
 spec:
   conversion:
@@ -134,6 +134,87 @@ spec:
               location:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
+              operatorSpec:
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
+                properties:
+                  configMapExpressions:
+                    description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                  secretExpressions:
+                    description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                type: object
               owner:
                 description: >-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
@@ -514,6 +595,93 @@ spec:
                 type: boolean
               location:
                 type: string
+              operatorSpec:
+                description: >-
+                  Storage version of v1api20210601.WorkspaceOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  configMapExpressions:
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                  secretExpressions:
+                    items:
+                      description: >-
+                        DestinationExpression is a CEL expression and a destination to store the result in. The destination may
+
+                        be a secret or a configmap. The value of the expression is stored at the specified location in
+
+                        the destination.
+                      properties:
+                        key:
+                          description: >-
+                            Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
+
+                            this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
+
+                            Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
+
+                            map[string]string.
+                          type: string
+                        name:
+                          description: >-
+                            Name is the name of the Kubernetes configmap or secret to write to.
+
+                            The configmap or secret will be created in the same namespace as the resource.
+                          type: string
+                        value:
+                          description: >-
+                            Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
+
+                            on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
+                          type: string
+                      required:
+                      - name
+                      - value
+                      type: object
+                    type: array
+                type: object
               originalVersion:
                 type: string
               owner:

@@ -8,9 +8,60 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageTrustedAccessRoleBindingSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageTrustedAccessRoleBindingSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240901.TrustedAccessRoleBindingOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240901storageTrustedAccessRoleBindingSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240901storageTrustedAccessRoleBindingSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240901storageTrustedAccessRoleBindingSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+}
+
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/ManagedCluster resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageTrustedAccessRoleBindingSpecOwner
+public partial class V1api20240901storageTrustedAccessRoleBindingSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -23,7 +74,7 @@ public partial class V1api20231001storageTrustedAccessRoleBindingSpecOwner
 
 /// <summary>SourceResourceReference: The ARM resource ID of source resource that trusted access is configured for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageTrustedAccessRoleBindingSpecSourceResourceReference
+public partial class V1api20240901storageTrustedAccessRoleBindingSpecSourceResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -42,9 +93,9 @@ public partial class V1api20231001storageTrustedAccessRoleBindingSpecSourceResou
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_Spec</summary>
+/// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageTrustedAccessRoleBindingSpec
+public partial class V1api20240901storageTrustedAccessRoleBindingSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -54,13 +105,17 @@ public partial class V1api20231001storageTrustedAccessRoleBindingSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
+    /// <summary>Storage version of v1api20240901.TrustedAccessRoleBindingOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240901storageTrustedAccessRoleBindingSpecOperatorSpec? OperatorSpec { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
     public string? OriginalVersion { get; set; }
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a containerservice.azure.com/ManagedCluster resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231001storageTrustedAccessRoleBindingSpecOwner Owner { get; set; }
+    public V1api20240901storageTrustedAccessRoleBindingSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("roles")]
@@ -68,12 +123,12 @@ public partial class V1api20231001storageTrustedAccessRoleBindingSpec
 
     /// <summary>SourceResourceReference: The ARM resource ID of source resource that trusted access is configured for.</summary>
     [JsonPropertyName("sourceResourceReference")]
-    public V1api20231001storageTrustedAccessRoleBindingSpecSourceResourceReference SourceResourceReference { get; set; }
+    public V1api20240901storageTrustedAccessRoleBindingSpecSourceResourceReference SourceResourceReference { get; set; }
 }
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageTrustedAccessRoleBindingStatusConditions
+public partial class V1api20240901storageTrustedAccessRoleBindingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -104,9 +159,9 @@ public partial class V1api20231001storageTrustedAccessRoleBindingStatusCondition
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageTrustedAccessRoleBindingStatusSystemData
+public partial class V1api20240901storageTrustedAccessRoleBindingStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -137,9 +192,9 @@ public partial class V1api20231001storageTrustedAccessRoleBindingStatusSystemDat
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_STATUS</summary>
+/// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231001storageTrustedAccessRoleBindingStatus
+public partial class V1api20240901storageTrustedAccessRoleBindingStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -147,7 +202,7 @@ public partial class V1api20231001storageTrustedAccessRoleBindingStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231001storageTrustedAccessRoleBindingStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240901storageTrustedAccessRoleBindingStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -169,21 +224,21 @@ public partial class V1api20231001storageTrustedAccessRoleBindingStatus
     [JsonPropertyName("sourceResourceId")]
     public string? SourceResourceId { get; set; }
 
-    /// <summary>Storage version of v1api20231001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20231001storageTrustedAccessRoleBindingStatusSystemData? SystemData { get; set; }
+    public V1api20240901storageTrustedAccessRoleBindingStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2023-10-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/trustedAccessRoleBindings/{trustedAccessRoleBindingName}</summary>
+/// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/trustedAccessRoleBindings/{trustedAccessRoleBindingName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231001storageTrustedAccessRoleBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231001storageTrustedAccessRoleBindingSpec>, IStatus<V1api20231001storageTrustedAccessRoleBindingStatus>
+public partial class V1api20240901storageTrustedAccessRoleBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240901storageTrustedAccessRoleBindingSpec>, IStatus<V1api20240901storageTrustedAccessRoleBindingStatus>
 {
-    public const string KubeApiVersion = "v1api20231001storage";
+    public const string KubeApiVersion = "v1api20240901storage";
     public const string KubeKind = "TrustedAccessRoleBinding";
     public const string KubeGroup = "containerservice.azure.com";
     public const string KubePluralName = "trustedaccessrolebindings";
@@ -199,11 +254,11 @@ public partial class V1api20231001storageTrustedAccessRoleBinding : IKubernetesO
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_Spec</summary>
+    /// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231001storageTrustedAccessRoleBindingSpec? Spec { get; set; }
+    public V1api20240901storageTrustedAccessRoleBindingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231001.TrustedAccessRoleBinding_STATUS</summary>
+    /// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20231001storageTrustedAccessRoleBindingStatus? Status { get; set; }
+    public V1api20240901storageTrustedAccessRoleBindingStatus? Status { get; set; }
 }

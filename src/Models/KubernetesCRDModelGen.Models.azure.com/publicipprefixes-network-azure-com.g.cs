@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.network.azure.com;
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecCustomIPPrefixReference
+public partial class V1api20240301storagePublicIPPrefixSpecCustomIPPrefixReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,9 @@ public partial class V1api20220701storagePublicIPPrefixSpecCustomIPPrefixReferen
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIpPrefixSubResource Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecCustomIPPrefix
+public partial class V1api20240301storagePublicIPPrefixSpecCustomIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -39,12 +39,12 @@ public partial class V1api20220701storagePublicIPPrefixSpecCustomIPPrefix
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20220701storagePublicIPPrefixSpecCustomIPPrefixReference? Reference { get; set; }
+    public V1api20240301storagePublicIPPrefixSpecCustomIPPrefixReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.ExtendedLocation ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecExtendedLocation
+public partial class V1api20240301storagePublicIPPrefixSpecExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -59,9 +59,9 @@ public partial class V1api20220701storagePublicIPPrefixSpecExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.IpTag Contains the IpTag associated with the object.</summary>
+/// <summary>Storage version of v1api20240301.IpTag Contains the IpTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecIpTags
+public partial class V1api20240301storagePublicIPPrefixSpecIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -78,7 +78,7 @@ public partial class V1api20220701storagePublicIPPrefixSpecIpTags
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecNatGatewayReference
+public partial class V1api20240301storagePublicIPPrefixSpecNatGatewayReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -97,9 +97,9 @@ public partial class V1api20220701storagePublicIPPrefixSpecNatGatewayReference
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.NatGatewaySpec_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
+/// <summary>Storage version of v1api20240301.NatGatewaySpec_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecNatGateway
+public partial class V1api20240301storagePublicIPPrefixSpecNatGateway
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -107,12 +107,63 @@ public partial class V1api20220701storagePublicIPPrefixSpecNatGateway
 
     /// <summary>Reference: Resource ID.</summary>
     [JsonPropertyName("reference")]
-    public V1api20220701storagePublicIPPrefixSpecNatGatewayReference? Reference { get; set; }
+    public V1api20240301storagePublicIPPrefixSpecNatGatewayReference? Reference { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePublicIPPrefixSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePublicIPPrefixSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.PublicIPPrefixOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storagePublicIPPrefixSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storagePublicIPPrefixSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storagePublicIPPrefixSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecOwner
+public partial class V1api20240301storagePublicIPPrefixSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -123,9 +174,9 @@ public partial class V1api20220701storagePublicIPPrefixSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIPPrefixSku SKU of a public IP prefix.</summary>
+/// <summary>Storage version of v1api20240301.PublicIPPrefixSku SKU of a public IP prefix.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpecSku
+public partial class V1api20240301storagePublicIPPrefixSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -140,9 +191,9 @@ public partial class V1api20220701storagePublicIPPrefixSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIPPrefix_Spec</summary>
+/// <summary>Storage version of v1api20240301.PublicIPPrefix_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixSpec
+public partial class V1api20240301storagePublicIPPrefixSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -152,25 +203,29 @@ public partial class V1api20220701storagePublicIPPrefixSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PublicIpPrefixSubResource Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource Reference to another subresource.</summary>
     [JsonPropertyName("customIPPrefix")]
-    public V1api20220701storagePublicIPPrefixSpecCustomIPPrefix? CustomIPPrefix { get; set; }
+    public V1api20240301storagePublicIPPrefixSpecCustomIPPrefix? CustomIPPrefix { get; set; }
 
-    /// <summary>Storage version of v1api20220701.ExtendedLocation ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.ExtendedLocation ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20220701storagePublicIPPrefixSpecExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storagePublicIPPrefixSpecExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ipTags")]
-    public IList<V1api20220701storagePublicIPPrefixSpecIpTags>? IpTags { get; set; }
+    public IList<V1api20240301storagePublicIPPrefixSpecIpTags>? IpTags { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20220701.NatGatewaySpec_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
+    /// <summary>Storage version of v1api20240301.NatGatewaySpec_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
     [JsonPropertyName("natGateway")]
-    public V1api20220701storagePublicIPPrefixSpecNatGateway? NatGateway { get; set; }
+    public V1api20240301storagePublicIPPrefixSpecNatGateway? NatGateway { get; set; }
+
+    /// <summary>Storage version of v1api20240301.PublicIPPrefixOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    [JsonPropertyName("operatorSpec")]
+    public V1api20240301storagePublicIPPrefixSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -178,7 +233,7 @@ public partial class V1api20220701storagePublicIPPrefixSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20220701storagePublicIPPrefixSpecOwner Owner { get; set; }
+    public V1api20240301storagePublicIPPrefixSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prefixLength")]
@@ -188,9 +243,9 @@ public partial class V1api20220701storagePublicIPPrefixSpec
     [JsonPropertyName("publicIPAddressVersion")]
     public string? PublicIPAddressVersion { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PublicIPPrefixSku SKU of a public IP prefix.</summary>
+    /// <summary>Storage version of v1api20240301.PublicIPPrefixSku SKU of a public IP prefix.</summary>
     [JsonPropertyName("sku")]
-    public V1api20220701storagePublicIPPrefixSpecSku? Sku { get; set; }
+    public V1api20240301storagePublicIPPrefixSpecSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -203,7 +258,7 @@ public partial class V1api20220701storagePublicIPPrefixSpec
 
 /// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusConditions
+public partial class V1api20240301storagePublicIPPrefixStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -234,9 +289,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIpPrefixSubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusCustomIPPrefix
+public partial class V1api20240301storagePublicIPPrefixStatusCustomIPPrefix
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -247,9 +302,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusCustomIPPrefix
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+/// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusExtendedLocation
+public partial class V1api20240301storagePublicIPPrefixStatusExtendedLocation
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -264,9 +319,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.IpTag_STATUS Contains the IpTag associated with the object.</summary>
+/// <summary>Storage version of v1api20240301.IpTag_STATUS Contains the IpTag associated with the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusIpTags
+public partial class V1api20240301storagePublicIPPrefixStatusIpTags
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -281,9 +336,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusIpTags
     public string? Tag { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIpPrefixSubResource_STATUS Reference to another subresource.</summary>
+/// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusLoadBalancerFrontendIpConfiguration
+public partial class V1api20240301storagePublicIPPrefixStatusLoadBalancerFrontendIpConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -294,9 +349,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusLoadBalancerFronten
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.NatGateway_STATUS_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
+/// <summary>Storage version of v1api20240301.NatGateway_STATUS_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusNatGateway
+public partial class V1api20240301storagePublicIPPrefixStatusNatGateway
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -307,9 +362,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusNatGateway
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.ReferencedPublicIpAddress_STATUS Reference to a public IP address.</summary>
+/// <summary>Storage version of v1api20240301.ReferencedPublicIpAddress_STATUS Reference to a public IP address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusPublicIPAddresses
+public partial class V1api20240301storagePublicIPPrefixStatusPublicIPAddresses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -320,9 +375,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusPublicIPAddresses
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIPPrefixSku_STATUS SKU of a public IP prefix.</summary>
+/// <summary>Storage version of v1api20240301.PublicIPPrefixSku_STATUS SKU of a public IP prefix.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatusSku
+public partial class V1api20240301storagePublicIPPrefixStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -337,9 +392,9 @@ public partial class V1api20220701storagePublicIPPrefixStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIPPrefix_STATUS Public IP prefix resource.</summary>
+/// <summary>Storage version of v1api20240301.PublicIPPrefix_STATUS Public IP prefix resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storagePublicIPPrefixStatus
+public partial class V1api20240301storagePublicIPPrefixStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -347,19 +402,19 @@ public partial class V1api20220701storagePublicIPPrefixStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20220701storagePublicIPPrefixStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storagePublicIPPrefixStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PublicIpPrefixSubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("customIPPrefix")]
-    public V1api20220701storagePublicIPPrefixStatusCustomIPPrefix? CustomIPPrefix { get; set; }
+    public V1api20240301storagePublicIPPrefixStatusCustomIPPrefix? CustomIPPrefix { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
 
-    /// <summary>Storage version of v1api20220701.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
+    /// <summary>Storage version of v1api20240301.ExtendedLocation_STATUS ExtendedLocation complex type.</summary>
     [JsonPropertyName("extendedLocation")]
-    public V1api20220701storagePublicIPPrefixStatusExtendedLocation? ExtendedLocation { get; set; }
+    public V1api20240301storagePublicIPPrefixStatusExtendedLocation? ExtendedLocation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -371,11 +426,11 @@ public partial class V1api20220701storagePublicIPPrefixStatus
 
     /// <summary></summary>
     [JsonPropertyName("ipTags")]
-    public IList<V1api20220701storagePublicIPPrefixStatusIpTags>? IpTags { get; set; }
+    public IList<V1api20240301storagePublicIPPrefixStatusIpTags>? IpTags { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PublicIpPrefixSubResource_STATUS Reference to another subresource.</summary>
+    /// <summary>Storage version of v1api20240301.SubResource_STATUS Reference to another subresource.</summary>
     [JsonPropertyName("loadBalancerFrontendIpConfiguration")]
-    public V1api20220701storagePublicIPPrefixStatusLoadBalancerFrontendIpConfiguration? LoadBalancerFrontendIpConfiguration { get; set; }
+    public V1api20240301storagePublicIPPrefixStatusLoadBalancerFrontendIpConfiguration? LoadBalancerFrontendIpConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -385,9 +440,9 @@ public partial class V1api20220701storagePublicIPPrefixStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20220701.NatGateway_STATUS_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
+    /// <summary>Storage version of v1api20240301.NatGateway_STATUS_PublicIPPrefix_SubResourceEmbedded Nat Gateway resource.</summary>
     [JsonPropertyName("natGateway")]
-    public V1api20220701storagePublicIPPrefixStatusNatGateway? NatGateway { get; set; }
+    public V1api20240301storagePublicIPPrefixStatusNatGateway? NatGateway { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prefixLength")]
@@ -403,15 +458,15 @@ public partial class V1api20220701storagePublicIPPrefixStatus
 
     /// <summary></summary>
     [JsonPropertyName("publicIPAddresses")]
-    public IList<V1api20220701storagePublicIPPrefixStatusPublicIPAddresses>? PublicIPAddresses { get; set; }
+    public IList<V1api20240301storagePublicIPPrefixStatusPublicIPAddresses>? PublicIPAddresses { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("resourceGuid")]
     public string? ResourceGuid { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PublicIPPrefixSku_STATUS SKU of a public IP prefix.</summary>
+    /// <summary>Storage version of v1api20240301.PublicIPPrefixSku_STATUS SKU of a public IP prefix.</summary>
     [JsonPropertyName("sku")]
-    public V1api20220701storagePublicIPPrefixStatusSku? Sku { get; set; }
+    public V1api20240301storagePublicIPPrefixStatusSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -426,12 +481,12 @@ public partial class V1api20220701storagePublicIPPrefixStatus
     public IList<string>? Zones { get; set; }
 }
 
-/// <summary>Storage version of v1api20220701.PublicIPPrefix Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/publicIpPrefix.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}</summary>
+/// <summary>Storage version of v1api20240301.PublicIPPrefix Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/publicIpPrefix.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPPrefixes/{publicIpPrefixName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220701storagePublicIPPrefix : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20220701storagePublicIPPrefixSpec>, IStatus<V1api20220701storagePublicIPPrefixStatus>
+public partial class V1api20240301storagePublicIPPrefix : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storagePublicIPPrefixSpec>, IStatus<V1api20240301storagePublicIPPrefixStatus>
 {
-    public const string KubeApiVersion = "v1api20220701storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "PublicIPPrefix";
     public const string KubeGroup = "network.azure.com";
     public const string KubePluralName = "publicipprefixes";
@@ -447,11 +502,11 @@ public partial class V1api20220701storagePublicIPPrefix : IKubernetesObject<V1Ob
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PublicIPPrefix_Spec</summary>
+    /// <summary>Storage version of v1api20240301.PublicIPPrefix_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20220701storagePublicIPPrefixSpec? Spec { get; set; }
+    public V1api20240301storagePublicIPPrefixSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20220701.PublicIPPrefix_STATUS Public IP prefix resource.</summary>
+    /// <summary>Storage version of v1api20240301.PublicIPPrefix_STATUS Public IP prefix resource.</summary>
     [JsonPropertyName("status")]
-    public V1api20220701storagePublicIPPrefixStatus? Status { get; set; }
+    public V1api20240301storagePublicIPPrefixStatus? Status { get; set; }
 }
