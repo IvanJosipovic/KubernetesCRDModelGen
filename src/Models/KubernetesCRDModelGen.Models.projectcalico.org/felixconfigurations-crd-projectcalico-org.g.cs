@@ -121,7 +121,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfDSROptoutCIDRs")]
     public IList<string>? BpfDSROptoutCIDRs { get; set; }
 
-    /// <summary>BPFDataIfacePattern is a regular expression that controls which interfaces Felix should attach BPF programs to in order to catch traffic to/from the network.  This needs to match the interfaces that Calico workload traffic flows over as well as any interfaces that handle incoming traffic to nodeports and services from outside the cluster.  It should not match the workload interfaces (usually named cali...).</summary>
+    /// <summary>BPFDataIfacePattern is a regular expression that controls which interfaces Felix should attach BPF programs to in order to catch traffic to/from the network.  This needs to match the interfaces that Calico workload traffic flows over as well as any interfaces that handle incoming traffic to nodeports and services from outside the cluster.  It should not match the workload interfaces (usually named cali...) or any other special device managed by Calico itself (e.g., tunnels).</summary>
     [JsonPropertyName("bpfDataIfacePattern")]
     public string? BpfDataIfacePattern { get; set; }
 
