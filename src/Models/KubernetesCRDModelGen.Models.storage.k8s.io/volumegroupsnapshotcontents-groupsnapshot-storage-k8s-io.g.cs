@@ -105,37 +105,6 @@ public partial class V1alpha1VolumeGroupSnapshotContentStatusError
     public string? Time { get; set; }
 }
 
-/// <summary>PersistentVolumeRef is a reference to the persistent volume resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotContentListPersistentVolumeRef
-{
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>VolumeSnapshotContentRef is a reference to the volume snapshot content resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotContentListVolumeSnapshotContentRef
-{
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>PVVolumeSnapshotContentPair represent a pair of PV names and VolumeSnapshotContent names</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotContentList
-{
-    /// <summary>PersistentVolumeRef is a reference to the persistent volume resource</summary>
-    [JsonPropertyName("persistentVolumeRef")]
-    public V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotContentListPersistentVolumeRef? PersistentVolumeRef { get; set; }
-
-    /// <summary>VolumeSnapshotContentRef is a reference to the volume snapshot content resource</summary>
-    [JsonPropertyName("volumeSnapshotContentRef")]
-    public V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotContentListVolumeSnapshotContentRef? VolumeSnapshotContentRef { get; set; }
-}
-
 /// <summary>VolumeSnapshotHandlePair defines a pair of a source volume handle and a snapshot handle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VolumeGroupSnapshotContentStatusVolumeSnapshotHandlePairList
@@ -160,10 +129,6 @@ public partial class V1alpha1VolumeGroupSnapshotContentStatus
     /// <summary>Error is the last observed error during group snapshot creation, if any. Upon success after retry, this error field will be cleared.</summary>
     [JsonPropertyName("error")]
     public V1alpha1VolumeGroupSnapshotContentStatusError? Error { get; set; }
-
-    /// <summary>PVVolumeSnapshotContentList is the list of pairs of PV and VolumeSnapshotContent for this group snapshot The maximum number of allowed snapshots in the group is 100.</summary>
-    [JsonPropertyName("pvVolumeSnapshotContentList")]
-    public IList<V1alpha1VolumeGroupSnapshotContentStatusPvVolumeSnapshotContentList>? PvVolumeSnapshotContentList { get; set; }
 
     /// <summary>ReadyToUse indicates if all the individual snapshots in the group are ready to be used to restore a group of volumes. ReadyToUse becomes true when ReadyToUse of all individual snapshots become true.</summary>
     [JsonPropertyName("readyToUse")]
