@@ -111,7 +111,7 @@ spec:
                           description: Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
                           type: string
                         osVersion:
-                          description: Targets VM instances with OS Inventory enabled and having the following following OS version.
+                          description: Targets VM instances with OS Inventory enabled and having the following OS version.
                           type: string
                       type: object
                     type: array
@@ -277,7 +277,7 @@ spec:
                                 type: string
                             type: object
                           id:
-                            description: Required. Id of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.
+                            description: Required. ID of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.
                             type: string
                           remote:
                             description: A generic remote artifact.
