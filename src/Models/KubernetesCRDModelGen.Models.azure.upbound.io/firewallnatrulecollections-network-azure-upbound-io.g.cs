@@ -120,6 +120,62 @@ public partial class V1beta1FirewallNATRuleCollectionSpecForProviderResourceGrou
     public V1beta1FirewallNATRuleCollectionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of PublicIP in network to populate destinationAddresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNATRuleCollectionSpecForProviderRule
@@ -131,6 +187,14 @@ public partial class V1beta1FirewallNATRuleCollectionSpecForProviderRule
     /// <summary>A list of destination IP addresses and/or IP ranges.</summary>
     [JsonPropertyName("destinationAddresses")]
     public IList<string>? DestinationAddresses { get; set; }
+
+    /// <summary>References to PublicIP in network to populate destinationAddresses.</summary>
+    [JsonPropertyName("destinationAddressesRefs")]
+    public IList<V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesRefs>? DestinationAddressesRefs { get; set; }
+
+    /// <summary>Selector for a list of PublicIP in network to populate destinationAddresses.</summary>
+    [JsonPropertyName("destinationAddressesSelector")]
+    public V1beta1FirewallNATRuleCollectionSpecForProviderRuleDestinationAddressesSelector? DestinationAddressesSelector { get; set; }
 
     /// <summary>A list of destination ports.</summary>
     [JsonPropertyName("destinationPorts")]
@@ -202,6 +266,62 @@ public partial class V1beta1FirewallNATRuleCollectionSpecForProvider
     public IList<V1beta1FirewallNATRuleCollectionSpecForProviderRule>? Rule { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of PublicIP in network to populate destinationAddresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallNATRuleCollectionSpecInitProviderRule
@@ -213,6 +333,14 @@ public partial class V1beta1FirewallNATRuleCollectionSpecInitProviderRule
     /// <summary>A list of destination IP addresses and/or IP ranges.</summary>
     [JsonPropertyName("destinationAddresses")]
     public IList<string>? DestinationAddresses { get; set; }
+
+    /// <summary>References to PublicIP in network to populate destinationAddresses.</summary>
+    [JsonPropertyName("destinationAddressesRefs")]
+    public IList<V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesRefs>? DestinationAddressesRefs { get; set; }
+
+    /// <summary>Selector for a list of PublicIP in network to populate destinationAddresses.</summary>
+    [JsonPropertyName("destinationAddressesSelector")]
+    public V1beta1FirewallNATRuleCollectionSpecInitProviderRuleDestinationAddressesSelector? DestinationAddressesSelector { get; set; }
 
     /// <summary>A list of destination ports.</summary>
     [JsonPropertyName("destinationPorts")]

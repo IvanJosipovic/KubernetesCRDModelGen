@@ -188,6 +188,62 @@ public partial class V1beta1MonitorActionRuleSuppressionSpecForProviderResourceG
     public V1beta1MonitorActionRuleSuppressionSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of ResourceGroup in azure to populate resourceIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionRuleSuppressionSpecForProviderScope
@@ -195,6 +251,14 @@ public partial class V1beta1MonitorActionRuleSuppressionSpecForProviderScope
     /// <summary>A list of resource IDs of the given scope type which will be the target of action rule.</summary>
     [JsonPropertyName("resourceIds")]
     public IList<string>? ResourceIds { get; set; }
+
+    /// <summary>References to ResourceGroup in azure to populate resourceIds.</summary>
+    [JsonPropertyName("resourceIdsRefs")]
+    public IList<V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsRefs>? ResourceIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of ResourceGroup in azure to populate resourceIds.</summary>
+    [JsonPropertyName("resourceIdsSelector")]
+    public V1beta1MonitorActionRuleSuppressionSpecForProviderScopeResourceIdsSelector? ResourceIdsSelector { get; set; }
 
     /// <summary>Specifies the type of target scope. Possible values are ResourceGroup and Resource.</summary>
     [JsonPropertyName("type")]
@@ -400,6 +464,62 @@ public partial class V1beta1MonitorActionRuleSuppressionSpecInitProviderConditio
     public IList<V1beta1MonitorActionRuleSuppressionSpecInitProviderConditionTargetResourceType>? TargetResourceType { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of ResourceGroup in azure to populate resourceIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionRuleSuppressionSpecInitProviderScope
@@ -407,6 +527,14 @@ public partial class V1beta1MonitorActionRuleSuppressionSpecInitProviderScope
     /// <summary>A list of resource IDs of the given scope type which will be the target of action rule.</summary>
     [JsonPropertyName("resourceIds")]
     public IList<string>? ResourceIds { get; set; }
+
+    /// <summary>References to ResourceGroup in azure to populate resourceIds.</summary>
+    [JsonPropertyName("resourceIdsRefs")]
+    public IList<V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsRefs>? ResourceIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of ResourceGroup in azure to populate resourceIds.</summary>
+    [JsonPropertyName("resourceIdsSelector")]
+    public V1beta1MonitorActionRuleSuppressionSpecInitProviderScopeResourceIdsSelector? ResourceIdsSelector { get; set; }
 
     /// <summary>Specifies the type of target scope. Possible values are ResourceGroup and Resource.</summary>
     [JsonPropertyName("type")]

@@ -224,6 +224,62 @@ public partial class V1beta1AccountSpecForProviderNetworkRulesPrivateLinkAccess
     public string? EndpointTenantId { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Subnet in network to populate virtualNetworkSubnetIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderNetworkRules
@@ -247,6 +303,14 @@ public partial class V1beta1AccountSpecForProviderNetworkRules
     /// <summary>A list of resource ids for subnets.</summary>
     [JsonPropertyName("virtualNetworkSubnetIds")]
     public IList<string>? VirtualNetworkSubnetIds { get; set; }
+
+    /// <summary>References to Subnet in network to populate virtualNetworkSubnetIds.</summary>
+    [JsonPropertyName("virtualNetworkSubnetIdsRefs")]
+    public IList<V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsRefs>? VirtualNetworkSubnetIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of Subnet in network to populate virtualNetworkSubnetIds.</summary>
+    [JsonPropertyName("virtualNetworkSubnetIdsSelector")]
+    public V1beta1AccountSpecForProviderNetworkRulesVirtualNetworkSubnetIdsSelector? VirtualNetworkSubnetIdsSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -918,6 +982,62 @@ public partial class V1beta1AccountSpecInitProviderNetworkRulesPrivateLinkAccess
     public string? EndpointTenantId { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Subnet in network to populate virtualNetworkSubnetIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderNetworkRules
@@ -941,6 +1061,14 @@ public partial class V1beta1AccountSpecInitProviderNetworkRules
     /// <summary>A list of resource ids for subnets.</summary>
     [JsonPropertyName("virtualNetworkSubnetIds")]
     public IList<string>? VirtualNetworkSubnetIds { get; set; }
+
+    /// <summary>References to Subnet in network to populate virtualNetworkSubnetIds.</summary>
+    [JsonPropertyName("virtualNetworkSubnetIdsRefs")]
+    public IList<V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsRefs>? VirtualNetworkSubnetIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of Subnet in network to populate virtualNetworkSubnetIds.</summary>
+    [JsonPropertyName("virtualNetworkSubnetIdsSelector")]
+    public V1beta1AccountSpecInitProviderNetworkRulesVirtualNetworkSubnetIdsSelector? VirtualNetworkSubnetIdsSelector { get; set; }
 }
 
 /// <summary></summary>

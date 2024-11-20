@@ -127,6 +127,62 @@ public partial class V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdSele
     public V1beta1ConnectionMonitorSpecForProviderNetworkWatcherIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionMonitorSpecForProviderTestConfigurationHttpConfigurationRequestHeader
@@ -302,6 +358,14 @@ public partial class V1beta1ConnectionMonitorSpecForProvider
     [JsonPropertyName("outputWorkspaceResourceIds")]
     public IList<string>? OutputWorkspaceResourceIds { get; set; }
 
+    /// <summary>References to Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
+    [JsonPropertyName("outputWorkspaceResourceIdsRefs")]
+    public IList<V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsRefs>? OutputWorkspaceResourceIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
+    [JsonPropertyName("outputWorkspaceResourceIdsSelector")]
+    public V1beta1ConnectionMonitorSpecForProviderOutputWorkspaceResourceIdsSelector? OutputWorkspaceResourceIdsSelector { get; set; }
+
     /// <summary>A mapping of tags which should be assigned to the Network Connection Monitor.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -376,6 +440,62 @@ public partial class V1beta1ConnectionMonitorSpecInitProviderEndpoint
     /// <summary>The endpoint type of the Network Connection Monitor. Possible values are AzureSubnet, AzureVM, AzureVNet, ExternalAddress, MMAWorkspaceMachine and MMAWorkspaceNetwork.</summary>
     [JsonPropertyName("targetResourceType")]
     public string? TargetResourceType { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -540,6 +660,14 @@ public partial class V1beta1ConnectionMonitorSpecInitProvider
     /// <summary>A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.</summary>
     [JsonPropertyName("outputWorkspaceResourceIds")]
     public IList<string>? OutputWorkspaceResourceIds { get; set; }
+
+    /// <summary>References to Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
+    [JsonPropertyName("outputWorkspaceResourceIdsRefs")]
+    public IList<V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsRefs>? OutputWorkspaceResourceIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of Workspace in operationalinsights to populate outputWorkspaceResourceIds.</summary>
+    [JsonPropertyName("outputWorkspaceResourceIdsSelector")]
+    public V1beta1ConnectionMonitorSpecInitProviderOutputWorkspaceResourceIdsSelector? OutputWorkspaceResourceIdsSelector { get; set; }
 
     /// <summary>A mapping of tags which should be assigned to the Network Connection Monitor.</summary>
     [JsonPropertyName("tags")]
