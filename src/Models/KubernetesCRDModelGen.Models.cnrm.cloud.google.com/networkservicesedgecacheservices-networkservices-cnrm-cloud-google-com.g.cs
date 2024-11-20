@@ -186,7 +186,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("headerMatch")]
     public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleHeaderMatch>? HeaderMatch { get; set; }
 
-    /// <summary>Specifies that prefixMatch and fullPathMatch matches are case sensitive.</summary>
+    /// <summary>Specifies that prefixMatch and fullPathMatch matches are case-sensitive.</summary>
     [JsonPropertyName("ignoreCase")]
     public bool? IgnoreCase { get; set; }
 
@@ -248,11 +248,11 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("includeProtocol")]
     public bool? IncludeProtocol { get; set; }
 
-    /// <summary>Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.  Cookie names:   - must be valid RFC 6265 "cookie-name" tokens   - are case sensitive   - cannot start with "Edge-Cache-" (case insensitive)    Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.    You may specify up to three cookie names.</summary>
+    /// <summary>Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.  Cookie names:   - must be valid RFC 6265 "cookie-name" tokens   - are case-sensitive   - cannot start with "Edge-Cache-" (case-insensitive)    Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.    You may specify up to three cookie names.</summary>
     [JsonPropertyName("includedCookieNames")]
     public IList<string>? IncludedCookieNames { get; set; }
 
-    /// <summary>Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.  - Header names must be valid HTTP RFC 7230 header field values. - Header field names are case insensitive - To include the HTTP method, use ":method"  Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.</summary>
+    /// <summary>Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.  - Header names must be valid HTTP RFC 7230 header field values. - Header field names are case-insensitive - To include the HTTP method, use ":method"  Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.</summary>
     [JsonPropertyName("includedHeaderNames")]
     public IList<string>? IncludedHeaderNames { get; set; }
 

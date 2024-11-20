@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary>URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer. Currently, you may specify up to 15 certificates. Certificate manager certificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED. sslCertificates and certificateManagerCertificates fields can not be defined together.</summary>
+/// <summary>URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer. Currently, you may specify up to 15 certificates. Certificate manager certificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED. sslCertificates and certificateManagerCertificates fields cannot be defined together.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetHTTPSProxySpecCertificateManagerCertificates
 {
@@ -25,7 +25,7 @@ public partial class V1beta1ComputeTargetHTTPSProxySpecCertificateManagerCertifi
     public string? Namespace { get; set; }
 }
 
-/// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. This field is only supported for EXTERNAL and EXTERNAL_MANAGED load balancing schemes. For INTERNAL_MANAGED, use certificateManagerCertificates instead. sslCertificates and certificateMap fields can not be defined together.</summary>
+/// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. This field is only supported for EXTERNAL and EXTERNAL_MANAGED load balancing schemes. For INTERNAL_MANAGED, use certificateManagerCertificates instead. sslCertificates and certificateMap fields cannot be defined together.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeTargetHTTPSProxySpecCertificateMapRef
 {
@@ -118,7 +118,7 @@ public partial class V1beta1ComputeTargetHTTPSProxySpec
     [JsonPropertyName("certificateManagerCertificates")]
     public IList<V1beta1ComputeTargetHTTPSProxySpecCertificateManagerCertificates>? CertificateManagerCertificates { get; set; }
 
-    /// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. This field is only supported for EXTERNAL and EXTERNAL_MANAGED load balancing schemes. For INTERNAL_MANAGED, use certificateManagerCertificates instead. sslCertificates and certificateMap fields can not be defined together.</summary>
+    /// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. This field is only supported for EXTERNAL and EXTERNAL_MANAGED load balancing schemes. For INTERNAL_MANAGED, use certificateManagerCertificates instead. sslCertificates and certificateMap fields cannot be defined together.</summary>
     [JsonPropertyName("certificateMapRef")]
     public V1beta1ComputeTargetHTTPSProxySpecCertificateMapRef? CertificateMapRef { get; set; }
 

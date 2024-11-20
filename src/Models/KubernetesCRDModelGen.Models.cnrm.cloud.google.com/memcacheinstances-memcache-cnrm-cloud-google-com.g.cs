@@ -188,7 +188,7 @@ public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
     [JsonPropertyName("endTime")]
     public string? EndTime { get; set; }
 
-    /// <summary>Output only. The deadline that the maintenance schedule start time can not go beyond, including reschedule. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
+    /// <summary>Output only. The deadline that the maintenance schedule start time cannot go beyond, including reschedule. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("scheduleDeadlineTime")]
     public string? ScheduleDeadlineTime { get; set; }
 

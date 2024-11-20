@@ -164,7 +164,7 @@ public partial class V1beta1BigQueryDatasetSpec
     [JsonPropertyName("access")]
     public IList<V1beta1BigQueryDatasetSpecAccess>? Access { get; set; }
 
-    /// <summary>Optional. Defines the default collation specification of future tables  created in the dataset. If a table is created in this dataset without  table-level default collation, then the table inherits the dataset default  collation, which is applied to the string fields that do not have explicit  collation specified. A change to this field affects only tables created  afterwards, and does not alter the existing tables.  The following values are supported:   * 'und:ci': undetermined locale, case insensitive.  * '': empty string. Default to case-sensitive behavior.</summary>
+    /// <summary>Optional. Defines the default collation specification of future tables  created in the dataset. If a table is created in this dataset without  table-level default collation, then the table inherits the dataset default  collation, which is applied to the string fields that do not have explicit  collation specified. A change to this field affects only tables created  afterwards, and does not alter the existing tables.  The following values are supported:   * 'und:ci': undetermined locale, case-insensitive.  * '': empty string. Default to case-sensitive behavior.</summary>
     [JsonPropertyName("defaultCollation")]
     public string? DefaultCollation { get; set; }
 
