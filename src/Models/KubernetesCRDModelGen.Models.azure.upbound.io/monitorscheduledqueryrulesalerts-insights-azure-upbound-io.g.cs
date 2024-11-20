@@ -91,6 +91,62 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAction
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of ApplicationInsights in insights to populate authorizedResourceIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProviderDataSourceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -251,6 +307,14 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertSpecForProvider
     [JsonPropertyName("authorizedResourceIds")]
     public IList<string>? AuthorizedResourceIds { get; set; }
 
+    /// <summary>References to ApplicationInsights in insights to populate authorizedResourceIds.</summary>
+    [JsonPropertyName("authorizedResourceIdsRefs")]
+    public IList<V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsRefs>? AuthorizedResourceIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of ApplicationInsights in insights to populate authorizedResourceIds.</summary>
+    [JsonPropertyName("authorizedResourceIdsSelector")]
+    public V1beta1MonitorScheduledQueryRulesAlertSpecForProviderAuthorizedResourceIdsSelector? AuthorizedResourceIdsSelector { get; set; }
+
     /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -&gt; NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
     [JsonPropertyName("autoMitigationEnabled")]
     public bool? AutoMitigationEnabled { get; set; }
@@ -407,6 +471,62 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderActio
     /// <summary>Custom subject override for all email ids in Azure action group.</summary>
     [JsonPropertyName("emailSubject")]
     public string? EmailSubject { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of ApplicationInsights in insights to populate authorizedResourceIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -570,6 +690,14 @@ public partial class V1beta1MonitorScheduledQueryRulesAlertSpecInitProvider
     /// <summary>List of Resource IDs referred into query.</summary>
     [JsonPropertyName("authorizedResourceIds")]
     public IList<string>? AuthorizedResourceIds { get; set; }
+
+    /// <summary>References to ApplicationInsights in insights to populate authorizedResourceIds.</summary>
+    [JsonPropertyName("authorizedResourceIdsRefs")]
+    public IList<V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsRefs>? AuthorizedResourceIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of ApplicationInsights in insights to populate authorizedResourceIds.</summary>
+    [JsonPropertyName("authorizedResourceIdsSelector")]
+    public V1beta1MonitorScheduledQueryRulesAlertSpecInitProviderAuthorizedResourceIdsSelector? AuthorizedResourceIdsSelector { get; set; }
 
     /// <summary>Should the alerts in this Metric Alert be auto resolved? Defaults to false. -&gt; NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.</summary>
     [JsonPropertyName("autoMitigationEnabled")]
