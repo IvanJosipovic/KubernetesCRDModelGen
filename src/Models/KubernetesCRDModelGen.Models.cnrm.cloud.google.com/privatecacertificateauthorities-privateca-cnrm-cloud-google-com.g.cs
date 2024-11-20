@@ -574,7 +574,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     public V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescriptionSubjectAltName? SubjectAltName { get; set; }
 }
 
-/// <summary>Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
+/// <summary>Provides a means of identifying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectKeyId
 {
@@ -780,7 +780,7 @@ public partial class V1beta1PrivateCACertificateAuthorityStatusCaCertificateDesc
     [JsonPropertyName("subjectDescription")]
     public V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectDescription? SubjectDescription { get; set; }
 
-    /// <summary>Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
+    /// <summary>Provides a means of identifying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
     [JsonPropertyName("subjectKeyId")]
     public V1beta1PrivateCACertificateAuthorityStatusCaCertificateDescriptionsSubjectKeyId? SubjectKeyId { get; set; }
 

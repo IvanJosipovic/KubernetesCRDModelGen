@@ -84,7 +84,7 @@ public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations
     [JsonPropertyName("serviceRef")]
     public V1beta1NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRef ServiceRef { get; set; }
 
-    /// <summary>Optional. Specifies the proportion of requests forwareded to the backend referenced by the service_name field. This is computed as: weight/Sum(weights in destinations) Weights in all destinations does not need to sum up to 100.</summary>
+    /// <summary>Optional. Specifies the proportion of requests forwarded to the backend referenced by the service_name field. This is computed as: weight/Sum(weights in destinations) Weights in all destinations does not need to sum up to 100.</summary>
     [JsonPropertyName("weight")]
     public long? Weight { get; set; }
 }
