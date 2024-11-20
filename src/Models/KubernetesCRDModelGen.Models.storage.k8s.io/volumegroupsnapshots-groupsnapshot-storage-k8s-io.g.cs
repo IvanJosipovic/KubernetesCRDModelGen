@@ -77,37 +77,6 @@ public partial class V1alpha1VolumeGroupSnapshotStatusError
     public string? Time { get; set; }
 }
 
-/// <summary>PersistentVolumeClaimRef is a reference to the PVC this pair is referring to</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VolumeGroupSnapshotStatusPvcVolumeSnapshotRefListPersistentVolumeClaimRef
-{
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>VolumeSnapshotRef is a reference to the VolumeSnapshot this pair is referring to</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VolumeGroupSnapshotStatusPvcVolumeSnapshotRefListVolumeSnapshotRef
-{
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>PVCVolumeSnapshotPair defines a pair of a PVC reference and a Volume Snapshot Reference</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VolumeGroupSnapshotStatusPvcVolumeSnapshotRefList
-{
-    /// <summary>PersistentVolumeClaimRef is a reference to the PVC this pair is referring to</summary>
-    [JsonPropertyName("persistentVolumeClaimRef")]
-    public V1alpha1VolumeGroupSnapshotStatusPvcVolumeSnapshotRefListPersistentVolumeClaimRef? PersistentVolumeClaimRef { get; set; }
-
-    /// <summary>VolumeSnapshotRef is a reference to the VolumeSnapshot this pair is referring to</summary>
-    [JsonPropertyName("volumeSnapshotRef")]
-    public V1alpha1VolumeGroupSnapshotStatusPvcVolumeSnapshotRefListVolumeSnapshotRef? VolumeSnapshotRef { get; set; }
-}
-
 /// <summary>Status represents the current information of a group snapshot. Consumers must verify binding between VolumeGroupSnapshot and VolumeGroupSnapshotContent objects is successful (by validating that both VolumeGroupSnapshot and VolumeGroupSnapshotContent point to each other) before using this object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VolumeGroupSnapshotStatus
@@ -123,10 +92,6 @@ public partial class V1alpha1VolumeGroupSnapshotStatus
     /// <summary>Error is the last observed error during group snapshot creation, if any. This field could be helpful to upper level controllers (i.e., application controller) to decide whether they should continue on waiting for the group snapshot to be created based on the type of error reported. The snapshot controller will keep retrying when an error occurs during the group snapshot creation. Upon success, this error field will be cleared.</summary>
     [JsonPropertyName("error")]
     public V1alpha1VolumeGroupSnapshotStatusError? Error { get; set; }
-
-    /// <summary>VolumeSnapshotRefList is the list of PVC and VolumeSnapshot pairs that is part of this group snapshot. The maximum number of allowed snapshots in the group is 100.</summary>
-    [JsonPropertyName("pvcVolumeSnapshotRefList")]
-    public IList<V1alpha1VolumeGroupSnapshotStatusPvcVolumeSnapshotRefList>? PvcVolumeSnapshotRefList { get; set; }
 
     /// <summary>ReadyToUse indicates if all the individual snapshots in the group are ready to be used to restore a group of volumes. ReadyToUse becomes true when ReadyToUse of all individual snapshots become true. If not specified, it means the readiness of a group snapshot is unknown.</summary>
     [JsonPropertyName("readyToUse")]
