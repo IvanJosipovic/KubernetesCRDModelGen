@@ -152,7 +152,7 @@ spec:
 
                   userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers,
 
-                  and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+                  and underscores; are case-insensitive; must be at least 1 character and at most 64 characters long.
                 type: string
               userSpecifiedType:
                 description: >-
@@ -164,7 +164,7 @@ spec:
 
                   userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 
-                  numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
+                  numbers, and underscores; are case-insensitive; must be at least 1 character and at most 64 characters long.
                 type: string
             required:
             - entryGroup

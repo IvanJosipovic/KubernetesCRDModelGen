@@ -316,7 +316,7 @@ public partial class V1beta1BigQueryJobSpecLoad
     [JsonPropertyName("parquetOptions")]
     public V1beta1BigQueryJobSpecLoadParquetOptions? ParquetOptions { get; set; }
 
-    /// <summary>Immutable. If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.</summary>
+    /// <summary>Immutable. If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case-sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.</summary>
     [JsonPropertyName("projectionFields")]
     public IList<string>? ProjectionFields { get; set; }
 

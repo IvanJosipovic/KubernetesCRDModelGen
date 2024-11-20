@@ -110,7 +110,7 @@ public partial class V1alpha1HealthcareFHIRStoreSpec
     [JsonPropertyName("disableReferentialIntegrity")]
     public bool? DisableReferentialIntegrity { get; set; }
 
-    /// <summary>Immutable. Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations will cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for attempts to read the historical versions.  ** Changing this property may recreate the FHIR store (removing all data) **.</summary>
+    /// <summary>Immutable. Whether to disable resource versioning for this FHIR store. This field cannot be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations will cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for attempts to read the historical versions.  ** Changing this property may recreate the FHIR store (removing all data) **.</summary>
     [JsonPropertyName("disableResourceVersioning")]
     public bool? DisableResourceVersioning { get; set; }
 

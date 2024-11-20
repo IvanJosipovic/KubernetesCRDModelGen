@@ -304,7 +304,7 @@ spec:
                                         type: object
                                       type: array
                                     ignoreCase:
-                                      description: Specifies that prefixMatch and fullPathMatch matches are case sensitive.
+                                      description: Specifies that prefixMatch and fullPathMatch matches are case-sensitive.
                                       type: boolean
                                     pathTemplateMatch:
                                       description: >-
@@ -498,8 +498,8 @@ spec:
 
                                               Cookie names:
                                                 - must be valid RFC 6265 "cookie-name" tokens
-                                                - are case sensitive
-                                                - cannot start with "Edge-Cache-" (case insensitive)
+                                                - are case-sensitive
+                                                - cannot start with "Edge-Cache-" (case-insensitive)
 
                                                 Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
 
@@ -514,7 +514,7 @@ spec:
 
                                               - Header names must be valid HTTP RFC 7230 header field values.
 
-                                              - Header field names are case insensitive
+                                              - Header field names are case-insensitive
 
                                               - To include the HTTP method, use ":method"
 

@@ -58,7 +58,7 @@ public partial class V1beta1IAMAuditConfigSpec
     [JsonPropertyName("resourceRef")]
     public V1beta1IAMAuditConfigSpecResourceRef ResourceRef { get; set; }
 
-    /// <summary>Immutable. Required. The service for which to enable Data Access audit logs. The special value 'allServices' covers all services. Note that if there are audit configs covering both 'allServices' and a specific service, then the union of the two audit configs is used for that service: the 'logTypes' specified in each 'auditLogConfig' are enabled, and the 'exemptedMembers' in each 'auditLogConfg' are exempted.</summary>
+    /// <summary>Immutable. Required. The service for which to enable Data Access audit logs. The special value 'allServices' covers all services. Note that if there are audit configs covering both 'allServices' and a specific service, then the union of the two audit configs is used for that service: the 'logTypes' specified in each 'auditLogConfig' are enabled, and the 'exemptedMembers' in each 'auditLogConfig' are exempted.</summary>
     [JsonPropertyName("service")]
     public string Service { get; set; }
 }
