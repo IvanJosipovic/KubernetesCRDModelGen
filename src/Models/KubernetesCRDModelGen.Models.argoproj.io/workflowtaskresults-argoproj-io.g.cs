@@ -279,6 +279,10 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsGit
     public bool? InsecureIgnoreHostKey { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("insecureSkipTLS")]
+    public bool? InsecureSkipTLS { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("passwordSecret")]
     public V1alpha1WorkflowTaskResultOutputsArtifactsGitPasswordSecret? PasswordSecret { get; set; }
 
@@ -361,6 +365,10 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsHdfs
     /// <summary></summary>
     [JsonPropertyName("addresses")]
     public IList<string>? Addresses { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("dataTransferProtection")]
+    public string? DataTransferProtection { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("force")]
@@ -826,6 +834,23 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3SecretKeySecret
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3SessionTokenSecret
+{
+    /// <summary></summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("optional")]
+    public bool? Optional { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3
 {
     /// <summary></summary>
@@ -871,6 +896,10 @@ public partial class V1alpha1WorkflowTaskResultOutputsArtifactsS3
     /// <summary></summary>
     [JsonPropertyName("secretKeySecret")]
     public V1alpha1WorkflowTaskResultOutputsArtifactsS3SecretKeySecret? SecretKeySecret { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sessionTokenSecret")]
+    public V1alpha1WorkflowTaskResultOutputsArtifactsS3SessionTokenSecret? SessionTokenSecret { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("useSDKCreds")]
