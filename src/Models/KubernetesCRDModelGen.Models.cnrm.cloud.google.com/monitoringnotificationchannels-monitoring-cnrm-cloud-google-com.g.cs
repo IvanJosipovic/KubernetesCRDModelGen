@@ -113,7 +113,7 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServ
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFrom? ValueFrom { get; set; }
 }
 
-/// <summary>Different notification type behaviors are configured primarily using the the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request.  Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.</summary>
+/// <summary>Different notification type behaviors are configured primarily using the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request.  Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabels
 {
@@ -154,7 +154,7 @@ public partial class V1beta1MonitoringNotificationChannelSpec
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Different notification type behaviors are configured primarily using the the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request.  Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.</summary>
+    /// <summary>Different notification type behaviors are configured primarily using the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request.  Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.</summary>
     [JsonPropertyName("sensitiveLabels")]
     public V1beta1MonitoringNotificationChannelSpecSensitiveLabels? SensitiveLabels { get; set; }
 
