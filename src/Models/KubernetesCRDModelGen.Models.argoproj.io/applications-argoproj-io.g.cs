@@ -894,6 +894,10 @@ public partial class V1alpha1ApplicationOperationSyncSyncStrategy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationOperationSync
 {
+    /// <summary>SelfHealAttemptsCount contains the number of auto-heal attempts</summary>
+    [JsonPropertyName("autoHealAttemptsCount")]
+    public long? AutoHealAttemptsCount { get; set; }
+
     /// <summary>DryRun specifies to perform a `kubectl apply --dry-run` without actually performing the sync</summary>
     [JsonPropertyName("dryRun")]
     public bool? DryRun { get; set; }
@@ -3651,6 +3655,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSyncStr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusOperationStateOperationSync
 {
+    /// <summary>SelfHealAttemptsCount contains the number of auto-heal attempts</summary>
+    [JsonPropertyName("autoHealAttemptsCount")]
+    public long? AutoHealAttemptsCount { get; set; }
+
     /// <summary>DryRun specifies to perform a `kubectl apply --dry-run` without actually performing the sync</summary>
     [JsonPropertyName("dryRun")]
     public bool? DryRun { get; set; }
