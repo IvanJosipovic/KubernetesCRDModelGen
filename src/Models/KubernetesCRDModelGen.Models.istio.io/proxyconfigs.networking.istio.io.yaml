@@ -7,8 +7,8 @@ metadata:
     app.kubernetes.io/instance: release-name
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: istio
-    app.kubernetes.io/version: 1.24.0
-    helm.sh/chart: base-1.24.0
+    app.kubernetes.io/version: 1.24.1
+    helm.sh/chart: base-1.24.1
   name: proxyconfigs.networking.istio.io
 spec:
   group: networking.istio.io
