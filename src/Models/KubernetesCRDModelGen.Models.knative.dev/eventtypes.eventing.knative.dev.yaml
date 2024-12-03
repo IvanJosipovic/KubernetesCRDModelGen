@@ -4,7 +4,7 @@ metadata:
   name: eventtypes.eventing.knative.dev
   labels:
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.16.2
+    app.kubernetes.io/version: 1.16.3
     app.kubernetes.io/name: knative-eventing
 spec:
   group: eventing.knative.dev
