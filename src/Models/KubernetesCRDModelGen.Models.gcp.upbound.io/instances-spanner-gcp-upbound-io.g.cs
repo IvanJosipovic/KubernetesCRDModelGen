@@ -67,6 +67,10 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("config")]
     public string? Config { get; set; }
 
+    /// <summary>Controls the default backup behavior for new databases within the instance. Note that AUTOMATIC is not permitted for free instances, as backups and backup schedules are not allowed for free instances. if unset or NONE, no default backup schedule will be created for new databases within the instance. Possible values are: NONE, AUTOMATIC.</summary>
+    [JsonPropertyName("defaultBackupScheduleType")]
+    public string? DefaultBackupScheduleType { get; set; }
+
     /// <summary>The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
@@ -150,6 +154,10 @@ public partial class V1beta1InstanceSpecInitProvider
     /// <summary>The name of the instance's configuration (similar but not quite the same as a region) which defines the geographic placement and replication of your databases in this instance. It determines where your data is stored. Values are typically of the form regional-europe-west1 , us-central etc. In order to obtain a valid list please consult the Configuration section of the docs.</summary>
     [JsonPropertyName("config")]
     public string? Config { get; set; }
+
+    /// <summary>Controls the default backup behavior for new databases within the instance. Note that AUTOMATIC is not permitted for free instances, as backups and backup schedules are not allowed for free instances. if unset or NONE, no default backup schedule will be created for new databases within the instance. Possible values are: NONE, AUTOMATIC.</summary>
+    [JsonPropertyName("defaultBackupScheduleType")]
+    public string? DefaultBackupScheduleType { get; set; }
 
     /// <summary>The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.</summary>
     [JsonPropertyName("displayName")]
@@ -366,6 +374,10 @@ public partial class V1beta1InstanceStatusAtProvider
     /// <summary>The name of the instance's configuration (similar but not quite the same as a region) which defines the geographic placement and replication of your databases in this instance. It determines where your data is stored. Values are typically of the form regional-europe-west1 , us-central etc. In order to obtain a valid list please consult the Configuration section of the docs.</summary>
     [JsonPropertyName("config")]
     public string? Config { get; set; }
+
+    /// <summary>Controls the default backup behavior for new databases within the instance. Note that AUTOMATIC is not permitted for free instances, as backups and backup schedules are not allowed for free instances. if unset or NONE, no default backup schedule will be created for new databases within the instance. Possible values are: NONE, AUTOMATIC.</summary>
+    [JsonPropertyName("defaultBackupScheduleType")]
+    public string? DefaultBackupScheduleType { get; set; }
 
     /// <summary>The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.</summary>
     [JsonPropertyName("displayName")]
