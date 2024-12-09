@@ -124,7 +124,7 @@ public partial class V1beta1VolumeGroupSnapshotContentStatus
 {
     /// <summary>CreationTime is the timestamp when the point-in-time group snapshot is taken by the underlying storage system. If not specified, it indicates the creation time is unknown. If not specified, it means the readiness of a group snapshot is unknown. The format of this field is a Unix nanoseconds time encoded as an int64. On Unix, the command date +%s%N returns the current time in nanoseconds since 1970-01-01 00:00:00 UTC. This field is the source for the CreationTime field in VolumeGroupSnapshotStatus</summary>
     [JsonPropertyName("creationTime")]
-    public long? CreationTime { get; set; }
+    public string? CreationTime { get; set; }
 
     /// <summary>Error is the last observed error during group snapshot creation, if any. Upon success after retry, this error field will be cleared.</summary>
     [JsonPropertyName("error")]
