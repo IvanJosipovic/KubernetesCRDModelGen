@@ -27,6 +27,10 @@ public partial class V1BlockAffinitySpec
     /// <summary></summary>
     [JsonPropertyName("state")]
     public string State { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
 }
 
 /// <summary></summary>
