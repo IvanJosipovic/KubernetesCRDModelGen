@@ -8,6 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>LoadBalancer enables and configures the LoadBalancer controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1KubeControllersConfigurationSpecControllersLoadBalancer
+{
+    /// <summary></summary>
+    [JsonPropertyName("assignIPs")]
+    public string? AssignIPs { get; set; }
+}
+
 /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNamespace
@@ -78,6 +87,10 @@ public partial class V1KubeControllersConfigurationSpecControllersWorkloadEndpoi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllers
 {
+    /// <summary>LoadBalancer enables and configures the LoadBalancer controller. Enabled by default, set to nil to disable.</summary>
+    [JsonPropertyName("loadBalancer")]
+    public V1KubeControllersConfigurationSpecControllersLoadBalancer? LoadBalancer { get; set; }
+
     /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
     [JsonPropertyName("namespace")]
     public V1KubeControllersConfigurationSpecControllersNamespace? Namespace { get; set; }
@@ -126,6 +139,15 @@ public partial class V1KubeControllersConfigurationSpec
     /// <summary>PrometheusMetricsPort is the TCP port that the Prometheus metrics server should bind to. Set to 0 to disable. [Default: 9094]</summary>
     [JsonPropertyName("prometheusMetricsPort")]
     public int? PrometheusMetricsPort { get; set; }
+}
+
+/// <summary>LoadBalancer enables and configures the LoadBalancer controller. Enabled by default, set to nil to disable.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1KubeControllersConfigurationStatusRunningConfigControllersLoadBalancer
+{
+    /// <summary></summary>
+    [JsonPropertyName("assignIPs")]
+    public string? AssignIPs { get; set; }
 }
 
 /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
@@ -198,6 +220,10 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllers
 {
+    /// <summary>LoadBalancer enables and configures the LoadBalancer controller. Enabled by default, set to nil to disable.</summary>
+    [JsonPropertyName("loadBalancer")]
+    public V1KubeControllersConfigurationStatusRunningConfigControllersLoadBalancer? LoadBalancer { get; set; }
+
     /// <summary>Namespace enables and configures the namespace controller. Enabled by default, set to nil to disable.</summary>
     [JsonPropertyName("namespace")]
     public V1KubeControllersConfigurationStatusRunningConfigControllersNamespace? Namespace { get; set; }

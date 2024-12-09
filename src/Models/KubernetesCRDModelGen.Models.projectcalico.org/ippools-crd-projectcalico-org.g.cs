@@ -29,6 +29,10 @@ public partial class V1IPPoolSpec
     [JsonPropertyName("allowedUses")]
     public IList<string>? AllowedUses { get; set; }
 
+    /// <summary>Determines the mode how IP addresses should be assigned from this pool</summary>
+    [JsonPropertyName("assignmentMode")]
+    public string? AssignmentMode { get; set; }
+
     /// <summary>The block size to use for IP address assignments from this pool. Defaults to 26 for IPv4 and 122 for IPv6.</summary>
     [JsonPropertyName("blockSize")]
     public int? BlockSize { get; set; }
