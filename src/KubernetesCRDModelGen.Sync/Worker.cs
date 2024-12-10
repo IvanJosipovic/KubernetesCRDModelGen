@@ -98,7 +98,7 @@ public class Worker : BackgroundService
             {
                 if (entry.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    if (!string.IsNullOrEmpty(filter) && !entry.Name.StartsWith(filter))
+                    if (!string.IsNullOrEmpty(filter) && !entry.Name.Contains(filter, StringComparison.OrdinalIgnoreCase))
                     {
                         continue;
                     }
