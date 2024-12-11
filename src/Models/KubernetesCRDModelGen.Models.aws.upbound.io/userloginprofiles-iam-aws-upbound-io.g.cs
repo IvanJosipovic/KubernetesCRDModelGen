@@ -326,10 +326,6 @@ public partial class V1beta1UserLoginProfileStatusAtProvider
     [JsonPropertyName("keyFingerprint")]
     public string? KeyFingerprint { get; set; }
 
-    /// <summary>The plain text password, only available when pgp_key is not provided.</summary>
-    [JsonPropertyName("password")]
-    public string? Password { get; set; }
-
     /// <summary>The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is 20.</summary>
     [JsonPropertyName("passwordLength")]
     public double? PasswordLength { get; set; }

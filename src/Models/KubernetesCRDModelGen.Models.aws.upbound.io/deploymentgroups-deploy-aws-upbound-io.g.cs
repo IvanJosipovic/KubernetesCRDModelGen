@@ -788,6 +788,10 @@ public partial class V1beta1DeploymentGroupSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.</summary>
+    [JsonPropertyName("terminationHookEnabled")]
+    public bool? TerminationHookEnabled { get; set; }
+
     /// <summary>Configuration block(s) of the triggers for the deployment group (documented below).</summary>
     [JsonPropertyName("triggerConfiguration")]
     public IList<V1beta1DeploymentGroupSpecForProviderTriggerConfiguration>? TriggerConfiguration { get; set; }
@@ -1501,6 +1505,10 @@ public partial class V1beta1DeploymentGroupSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.</summary>
+    [JsonPropertyName("terminationHookEnabled")]
+    public bool? TerminationHookEnabled { get; set; }
+
     /// <summary>Configuration block(s) of the triggers for the deployment group (documented below).</summary>
     [JsonPropertyName("triggerConfiguration")]
     public IList<V1beta1DeploymentGroupSpecInitProviderTriggerConfiguration>? TriggerConfiguration { get; set; }
@@ -1985,6 +1993,10 @@ public partial class V1beta1DeploymentGroupStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.</summary>
+    [JsonPropertyName("terminationHookEnabled")]
+    public bool? TerminationHookEnabled { get; set; }
 
     /// <summary>Configuration block(s) of the triggers for the deployment group (documented below).</summary>
     [JsonPropertyName("triggerConfiguration")]

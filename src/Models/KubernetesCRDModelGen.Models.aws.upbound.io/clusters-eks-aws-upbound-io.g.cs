@@ -306,6 +306,15 @@ public partial class V1beta1ClusterSpecForProviderVpcConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderZonalShiftConfig
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
@@ -363,6 +372,10 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see Cluster VPC Considerations and Cluster Security Group Considerations in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.</summary>
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ClusterSpecForProviderVpcConfig>? VpcConfig { get; set; }
+
+    /// <summary>Configuration block with zonal shift configuration for the cluster. Detailed below.</summary>
+    [JsonPropertyName("zonalShiftConfig")]
+    public IList<V1beta1ClusterSpecForProviderZonalShiftConfig>? ZonalShiftConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -661,6 +674,15 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfig
     public IList<string>? SubnetIds { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderZonalShiftConfig
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -716,6 +738,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see Cluster VPC Considerations and Cluster Security Group Considerations in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.</summary>
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ClusterSpecInitProviderVpcConfig>? VpcConfig { get; set; }
+
+    /// <summary>Configuration block with zonal shift configuration for the cluster. Detailed below.</summary>
+    [JsonPropertyName("zonalShiftConfig")]
+    public IList<V1beta1ClusterSpecInitProviderZonalShiftConfig>? ZonalShiftConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1003,6 +1029,15 @@ public partial class V1beta1ClusterStatusAtProviderVpcConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderZonalShiftConfig
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
@@ -1088,6 +1123,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see Cluster VPC Considerations and Cluster Security Group Considerations in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.</summary>
     [JsonPropertyName("vpcConfig")]
     public IList<V1beta1ClusterStatusAtProviderVpcConfig>? VpcConfig { get; set; }
+
+    /// <summary>Configuration block with zonal shift configuration for the cluster. Detailed below.</summary>
+    [JsonPropertyName("zonalShiftConfig")]
+    public IList<V1beta1ClusterStatusAtProviderZonalShiftConfig>? ZonalShiftConfig { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

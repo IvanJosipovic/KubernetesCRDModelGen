@@ -16,7 +16,7 @@ public partial class V1beta1OrganizationSpecForProvider
     [JsonPropertyName("awsServiceAccessPrincipals")]
     public IList<string>? AwsServiceAccessPrincipals { get; set; }
 
-    /// <summary>List of Organizations policy types to enable in the Organization Root. Organization must have feature_set set to ALL. For additional information about valid policy types (e.g., AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY, and TAG_POLICY), see the AWS Organizations API Reference.</summary>
+    /// <summary>List of Organizations policy types to enable in the Organization Root. Organization must have feature_set set to ALL. For additional information about valid policy types (e.g., AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY, SERVICE_CONTROL_POLICY, and TAG_POLICY), see the AWS Organizations API Reference.</summary>
     [JsonPropertyName("enabledPolicyTypes")]
     public IList<string>? EnabledPolicyTypes { get; set; }
 
@@ -37,7 +37,7 @@ public partial class V1beta1OrganizationSpecInitProvider
     [JsonPropertyName("awsServiceAccessPrincipals")]
     public IList<string>? AwsServiceAccessPrincipals { get; set; }
 
-    /// <summary>List of Organizations policy types to enable in the Organization Root. Organization must have feature_set set to ALL. For additional information about valid policy types (e.g., AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY, and TAG_POLICY), see the AWS Organizations API Reference.</summary>
+    /// <summary>List of Organizations policy types to enable in the Organization Root. Organization must have feature_set set to ALL. For additional information about valid policy types (e.g., AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY, SERVICE_CONTROL_POLICY, and TAG_POLICY), see the AWS Organizations API Reference.</summary>
     [JsonPropertyName("enabledPolicyTypes")]
     public IList<string>? EnabledPolicyTypes { get; set; }
 
@@ -278,7 +278,7 @@ public partial class V1beta1OrganizationStatusAtProvider
     [JsonPropertyName("awsServiceAccessPrincipals")]
     public IList<string>? AwsServiceAccessPrincipals { get; set; }
 
-    /// <summary>List of Organizations policy types to enable in the Organization Root. Organization must have feature_set set to ALL. For additional information about valid policy types (e.g., AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY, and TAG_POLICY), see the AWS Organizations API Reference.</summary>
+    /// <summary>List of Organizations policy types to enable in the Organization Root. Organization must have feature_set set to ALL. For additional information about valid policy types (e.g., AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY, SERVICE_CONTROL_POLICY, and TAG_POLICY), see the AWS Organizations API Reference.</summary>
     [JsonPropertyName("enabledPolicyTypes")]
     public IList<string>? EnabledPolicyTypes { get; set; }
 

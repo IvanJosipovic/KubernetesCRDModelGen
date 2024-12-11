@@ -837,6 +837,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  terminationHookEnabled:
+                    description: Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.
+                    type: boolean
                   triggerConfiguration:
                     description: Configuration block(s) of the triggers for the deployment group (documented below).
                     items:
@@ -1627,6 +1630,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  terminationHookEnabled:
+                    description: Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.
+                    type: boolean
                   triggerConfiguration:
                     description: Configuration block(s) of the triggers for the deployment group (documented below).
                     items:
@@ -2197,6 +2203,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  terminationHookEnabled:
+                    description: Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.
+                    type: boolean
                   triggerConfiguration:
                     description: Configuration block(s) of the triggers for the deployment group (documented below).
                     items:
@@ -2353,7 +2362,7 @@ spec:
                     description: Configuration block of alarms associated with the deployment group (documented below).
                     properties:
                       alarms:
-                        description: A list of alarms configured for the deployment group. A maximum of 10 alarms can be added to a deployment group.
+                        description: A list of alarms configured for the deployment group.
                         items:
                           type: string
                         type: array
@@ -3078,6 +3087,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  terminationHookEnabled:
+                    description: Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.
+                    type: boolean
                   triggerConfiguration:
                     description: Configuration block(s) of the triggers for the deployment group (documented below).
                     items:
@@ -3211,7 +3223,7 @@ spec:
                     description: Configuration block of alarms associated with the deployment group (documented below).
                     properties:
                       alarms:
-                        description: A list of alarms configured for the deployment group. A maximum of 10 alarms can be added to a deployment group.
+                        description: A list of alarms configured for the deployment group.
                         items:
                           type: string
                         type: array
@@ -3844,6 +3856,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  terminationHookEnabled:
+                    description: Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.
+                    type: boolean
                   triggerConfiguration:
                     description: Configuration block(s) of the triggers for the deployment group (documented below).
                     items:
@@ -4166,7 +4181,7 @@ spec:
                     description: Configuration block of alarms associated with the deployment group (documented below).
                     properties:
                       alarms:
-                        description: A list of alarms configured for the deployment group. A maximum of 10 alarms can be added to a deployment group.
+                        description: A list of alarms configured for the deployment group.
                         items:
                           type: string
                         type: array
@@ -4390,6 +4405,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  terminationHookEnabled:
+                    description: Indicates whether the deployment group was configured to have CodeDeploy install a termination hook into an Auto Scaling group.
+                    type: boolean
                   triggerConfiguration:
                     description: Configuration block(s) of the triggers for the deployment group (documented below).
                     items:

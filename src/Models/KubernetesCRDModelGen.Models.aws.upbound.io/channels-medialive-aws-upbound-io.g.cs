@@ -2977,6 +2977,18 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
+    /// <summary>Set the minimum QP.</summary>
+    [JsonPropertyName("minQp")]
+    public double? MinQp { get; set; }
+
+    /// <summary>Enables or disables motion vector over picture boundaries.</summary>
+    [JsonPropertyName("mvOverPictureBoundaries")]
+    public string? MvOverPictureBoundaries { get; set; }
+
+    /// <summary>Enables or disables the motion vector temporal predictor.</summary>
+    [JsonPropertyName("mvTemporalPredictor")]
+    public string? MvTemporalPredictor { get; set; }
+
     /// <summary>Pixel Aspect Ratio denominator.</summary>
     [JsonPropertyName("parDenominator")]
     public double? ParDenominator { get; set; }
@@ -3013,6 +3025,18 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 
+    /// <summary>Sets the height of tiles.</summary>
+    [JsonPropertyName("tileHeight")]
+    public double? TileHeight { get; set; }
+
+    /// <summary>Enables or disables padding of tiles.</summary>
+    [JsonPropertyName("tilePadding")]
+    public string? TilePadding { get; set; }
+
+    /// <summary>Sets the width of tiles.</summary>
+    [JsonPropertyName("tileWidth")]
+    public double? TileWidth { get; set; }
+
     /// <summary>Apply a burned in timecode. See H265 Timecode Burnin Settings for more details.</summary>
     [JsonPropertyName("timecodeBurninSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings>? TimecodeBurninSettings { get; set; }
@@ -3020,6 +3044,10 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     /// <summary>Determines how timecodes should be inserted into the video elementary stream.</summary>
     [JsonPropertyName("timecodeInsertion")]
     public string? TimecodeInsertion { get; set; }
+
+    /// <summary>Sets the size of the treeblock.</summary>
+    [JsonPropertyName("treeblockSize")]
+    public string? TreeblockSize { get; set; }
 }
 
 /// <summary></summary>
@@ -6776,6 +6804,18 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
+    /// <summary>Set the minimum QP.</summary>
+    [JsonPropertyName("minQp")]
+    public double? MinQp { get; set; }
+
+    /// <summary>Enables or disables motion vector over picture boundaries.</summary>
+    [JsonPropertyName("mvOverPictureBoundaries")]
+    public string? MvOverPictureBoundaries { get; set; }
+
+    /// <summary>Enables or disables the motion vector temporal predictor.</summary>
+    [JsonPropertyName("mvTemporalPredictor")]
+    public string? MvTemporalPredictor { get; set; }
+
     /// <summary>Pixel Aspect Ratio denominator.</summary>
     [JsonPropertyName("parDenominator")]
     public double? ParDenominator { get; set; }
@@ -6812,6 +6852,18 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 
+    /// <summary>Sets the height of tiles.</summary>
+    [JsonPropertyName("tileHeight")]
+    public double? TileHeight { get; set; }
+
+    /// <summary>Enables or disables padding of tiles.</summary>
+    [JsonPropertyName("tilePadding")]
+    public string? TilePadding { get; set; }
+
+    /// <summary>Sets the width of tiles.</summary>
+    [JsonPropertyName("tileWidth")]
+    public double? TileWidth { get; set; }
+
     /// <summary>Apply a burned in timecode. See H265 Timecode Burnin Settings for more details.</summary>
     [JsonPropertyName("timecodeBurninSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings>? TimecodeBurninSettings { get; set; }
@@ -6819,6 +6871,10 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     /// <summary>Determines how timecodes should be inserted into the video elementary stream.</summary>
     [JsonPropertyName("timecodeInsertion")]
     public string? TimecodeInsertion { get; set; }
+
+    /// <summary>Sets the size of the treeblock.</summary>
+    [JsonPropertyName("treeblockSize")]
+    public string? TreeblockSize { get; set; }
 }
 
 /// <summary></summary>
@@ -10703,6 +10759,18 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
+    /// <summary>Set the minimum QP.</summary>
+    [JsonPropertyName("minQp")]
+    public double? MinQp { get; set; }
+
+    /// <summary>Enables or disables motion vector over picture boundaries.</summary>
+    [JsonPropertyName("mvOverPictureBoundaries")]
+    public string? MvOverPictureBoundaries { get; set; }
+
+    /// <summary>Enables or disables the motion vector temporal predictor.</summary>
+    [JsonPropertyName("mvTemporalPredictor")]
+    public string? MvTemporalPredictor { get; set; }
+
     /// <summary>Pixel Aspect Ratio denominator.</summary>
     [JsonPropertyName("parDenominator")]
     public double? ParDenominator { get; set; }
@@ -10739,6 +10807,18 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 
+    /// <summary>Sets the height of tiles.</summary>
+    [JsonPropertyName("tileHeight")]
+    public double? TileHeight { get; set; }
+
+    /// <summary>Enables or disables padding of tiles.</summary>
+    [JsonPropertyName("tilePadding")]
+    public string? TilePadding { get; set; }
+
+    /// <summary>Sets the width of tiles.</summary>
+    [JsonPropertyName("tileWidth")]
+    public double? TileWidth { get; set; }
+
     /// <summary>Apply a burned in timecode. See H265 Timecode Burnin Settings for more details.</summary>
     [JsonPropertyName("timecodeBurninSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings>? TimecodeBurninSettings { get; set; }
@@ -10746,6 +10826,10 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     /// <summary>Determines how timecodes should be inserted into the video elementary stream.</summary>
     [JsonPropertyName("timecodeInsertion")]
     public string? TimecodeInsertion { get; set; }
+
+    /// <summary>Sets the size of the treeblock.</summary>
+    [JsonPropertyName("treeblockSize")]
+    public string? TreeblockSize { get; set; }
 }
 
 /// <summary></summary>

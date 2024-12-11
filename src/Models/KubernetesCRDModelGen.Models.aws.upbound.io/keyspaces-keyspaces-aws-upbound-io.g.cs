@@ -8,6 +8,19 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyspaces.aws.upbound.io;
+/// <summary>The replication specification of the keyspace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KeyspaceSpecForProviderReplicationSpecification
+{
+    /// <summary>Replication regions. If replication_strategy is MULTI_REGION, region_list requires the current Region and at least one additional AWS Region where the keyspace is going to be replicated in.</summary>
+    [JsonPropertyName("regionList")]
+    public IList<string>? RegionList { get; set; }
+
+    /// <summary>Replication strategy. Valid values: SINGLE_REGION and MULTI_REGION.</summary>
+    [JsonPropertyName("replicationStrategy")]
+    public string? ReplicationStrategy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyspaceSpecForProvider
@@ -16,15 +29,36 @@ public partial class V1beta1KeyspaceSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary>The replication specification of the keyspace.</summary>
+    [JsonPropertyName("replicationSpecification")]
+    public V1beta1KeyspaceSpecForProviderReplicationSpecification? ReplicationSpecification { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+}
+
+/// <summary>The replication specification of the keyspace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KeyspaceSpecInitProviderReplicationSpecification
+{
+    /// <summary>Replication regions. If replication_strategy is MULTI_REGION, region_list requires the current Region and at least one additional AWS Region where the keyspace is going to be replicated in.</summary>
+    [JsonPropertyName("regionList")]
+    public IList<string>? RegionList { get; set; }
+
+    /// <summary>Replication strategy. Valid values: SINGLE_REGION and MULTI_REGION.</summary>
+    [JsonPropertyName("replicationStrategy")]
+    public string? ReplicationStrategy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyspaceSpecInitProvider
 {
+    /// <summary>The replication specification of the keyspace.</summary>
+    [JsonPropertyName("replicationSpecification")]
+    public V1beta1KeyspaceSpecInitProviderReplicationSpecification? ReplicationSpecification { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -162,6 +196,19 @@ public partial class V1beta1KeyspaceSpec
     public V1beta1KeyspaceSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>The replication specification of the keyspace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KeyspaceStatusAtProviderReplicationSpecification
+{
+    /// <summary>Replication regions. If replication_strategy is MULTI_REGION, region_list requires the current Region and at least one additional AWS Region where the keyspace is going to be replicated in.</summary>
+    [JsonPropertyName("regionList")]
+    public IList<string>? RegionList { get; set; }
+
+    /// <summary>Replication strategy. Valid values: SINGLE_REGION and MULTI_REGION.</summary>
+    [JsonPropertyName("replicationStrategy")]
+    public string? ReplicationStrategy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyspaceStatusAtProvider
@@ -173,6 +220,10 @@ public partial class V1beta1KeyspaceStatusAtProvider
     /// <summary>The name of the keyspace.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The replication specification of the keyspace.</summary>
+    [JsonPropertyName("replicationSpecification")]
+    public V1beta1KeyspaceStatusAtProviderReplicationSpecification? ReplicationSpecification { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

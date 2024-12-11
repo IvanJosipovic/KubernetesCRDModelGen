@@ -718,11 +718,32 @@ public partial class V1beta1ServiceSpecForProviderVolumeConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecForProviderVpcLatticeConfigurations
+{
+    /// <summary>The name of the port for a target group associated with the VPC Lattice configuration.</summary>
+    [JsonPropertyName("portName")]
+    public string? PortName { get; set; }
+
+    /// <summary>The ARN of the IAM role to associate with this volume. This is the Amazon ECS infrastructure IAM role that is used to manage your AWS infrastructure.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The full ARN of the target group or groups associated with the VPC Lattice configuration.</summary>
+    [JsonPropertyName("targetGroupArn")]
+    public string? TargetGroupArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProvider
 {
     /// <summary>Information about the CloudWatch alarms. See below.</summary>
     [JsonPropertyName("alarms")]
     public IList<V1beta1ServiceSpecForProviderAlarms>? Alarms { get; set; }
+
+    /// <summary>ECS automatically redistributes tasks within a service across Availability Zones (AZs) to mitigate the risk of impaired application availability due to underlying infrastructure failures and task lifecycle activities. The valid values are ENABLED and DISABLED. Defaults to DISABLED.</summary>
+    [JsonPropertyName("availabilityZoneRebalancing")]
+    public string? AvailabilityZoneRebalancing { get; set; }
 
     /// <summary>Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if force_new_deployment = true and not changing from 0 capacity_provider_strategy blocks to greater than 0, or vice versa. See below. Conflicts with launch_type.</summary>
     [JsonPropertyName("capacityProviderStrategy")]
@@ -859,6 +880,10 @@ public partial class V1beta1ServiceSpecForProvider
     /// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
     [JsonPropertyName("volumeConfiguration")]
     public V1beta1ServiceSpecForProviderVolumeConfiguration? VolumeConfiguration { get; set; }
+
+    /// <summary>The VPC Lattice configuration for your service that allows Lattice to connect, secure, and monitor your service across multiple accounts and VPCs. See below.</summary>
+    [JsonPropertyName("vpcLatticeConfigurations")]
+    public IList<V1beta1ServiceSpecForProviderVpcLatticeConfigurations>? VpcLatticeConfigurations { get; set; }
 
     /// <summary>Default false.</summary>
     [JsonPropertyName("waitForSteadyState")]
@@ -1573,6 +1598,23 @@ public partial class V1beta1ServiceSpecInitProviderVolumeConfiguration
     public string? Name { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecInitProviderVpcLatticeConfigurations
+{
+    /// <summary>The name of the port for a target group associated with the VPC Lattice configuration.</summary>
+    [JsonPropertyName("portName")]
+    public string? PortName { get; set; }
+
+    /// <summary>The ARN of the IAM role to associate with this volume. This is the Amazon ECS infrastructure IAM role that is used to manage your AWS infrastructure.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The full ARN of the target group or groups associated with the VPC Lattice configuration.</summary>
+    [JsonPropertyName("targetGroupArn")]
+    public string? TargetGroupArn { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProvider
@@ -1580,6 +1622,10 @@ public partial class V1beta1ServiceSpecInitProvider
     /// <summary>Information about the CloudWatch alarms. See below.</summary>
     [JsonPropertyName("alarms")]
     public IList<V1beta1ServiceSpecInitProviderAlarms>? Alarms { get; set; }
+
+    /// <summary>ECS automatically redistributes tasks within a service across Availability Zones (AZs) to mitigate the risk of impaired application availability due to underlying infrastructure failures and task lifecycle activities. The valid values are ENABLED and DISABLED. Defaults to DISABLED.</summary>
+    [JsonPropertyName("availabilityZoneRebalancing")]
+    public string? AvailabilityZoneRebalancing { get; set; }
 
     /// <summary>Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if force_new_deployment = true and not changing from 0 capacity_provider_strategy blocks to greater than 0, or vice versa. See below. Conflicts with launch_type.</summary>
     [JsonPropertyName("capacityProviderStrategy")]
@@ -1712,6 +1758,10 @@ public partial class V1beta1ServiceSpecInitProvider
     /// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
     [JsonPropertyName("volumeConfiguration")]
     public V1beta1ServiceSpecInitProviderVolumeConfiguration? VolumeConfiguration { get; set; }
+
+    /// <summary>The VPC Lattice configuration for your service that allows Lattice to connect, secure, and monitor your service across multiple accounts and VPCs. See below.</summary>
+    [JsonPropertyName("vpcLatticeConfigurations")]
+    public IList<V1beta1ServiceSpecInitProviderVpcLatticeConfigurations>? VpcLatticeConfigurations { get; set; }
 
     /// <summary>Default false.</summary>
     [JsonPropertyName("waitForSteadyState")]
@@ -2200,11 +2250,32 @@ public partial class V1beta1ServiceStatusAtProviderVolumeConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceStatusAtProviderVpcLatticeConfigurations
+{
+    /// <summary>The name of the port for a target group associated with the VPC Lattice configuration.</summary>
+    [JsonPropertyName("portName")]
+    public string? PortName { get; set; }
+
+    /// <summary>The ARN of the IAM role to associate with this volume. This is the Amazon ECS infrastructure IAM role that is used to manage your AWS infrastructure.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The full ARN of the target group or groups associated with the VPC Lattice configuration.</summary>
+    [JsonPropertyName("targetGroupArn")]
+    public string? TargetGroupArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProvider
 {
     /// <summary>Information about the CloudWatch alarms. See below.</summary>
     [JsonPropertyName("alarms")]
     public IList<V1beta1ServiceStatusAtProviderAlarms>? Alarms { get; set; }
+
+    /// <summary>ECS automatically redistributes tasks within a service across Availability Zones (AZs) to mitigate the risk of impaired application availability due to underlying infrastructure failures and task lifecycle activities. The valid values are ENABLED and DISABLED. Defaults to DISABLED.</summary>
+    [JsonPropertyName("availabilityZoneRebalancing")]
+    public string? AvailabilityZoneRebalancing { get; set; }
 
     /// <summary>Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if force_new_deployment = true and not changing from 0 capacity_provider_strategy blocks to greater than 0, or vice versa. See below. Conflicts with launch_type.</summary>
     [JsonPropertyName("capacityProviderStrategy")]
@@ -2321,6 +2392,10 @@ public partial class V1beta1ServiceStatusAtProvider
     /// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
     [JsonPropertyName("volumeConfiguration")]
     public V1beta1ServiceStatusAtProviderVolumeConfiguration? VolumeConfiguration { get; set; }
+
+    /// <summary>The VPC Lattice configuration for your service that allows Lattice to connect, secure, and monitor your service across multiple accounts and VPCs. See below.</summary>
+    [JsonPropertyName("vpcLatticeConfigurations")]
+    public IList<V1beta1ServiceStatusAtProviderVpcLatticeConfigurations>? VpcLatticeConfigurations { get; set; }
 
     /// <summary>Default false.</summary>
     [JsonPropertyName("waitForSteadyState")]

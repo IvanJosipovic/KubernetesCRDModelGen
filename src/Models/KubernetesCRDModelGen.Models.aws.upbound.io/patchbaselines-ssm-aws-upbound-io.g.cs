@@ -25,7 +25,7 @@ public partial class V1beta1PatchBaselineSpecForProviderApprovalRulePatchFilter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchBaselineSpecForProviderApprovalRule
 {
-    /// <summary>Number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with approve_until_date.</summary>
+    /// <summary>Number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 360. Conflicts with approve_until_date.</summary>
     [JsonPropertyName("approveAfterDays")]
     public double? ApproveAfterDays { get; set; }
 
@@ -150,7 +150,7 @@ public partial class V1beta1PatchBaselineSpecInitProviderApprovalRulePatchFilter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchBaselineSpecInitProviderApprovalRule
 {
-    /// <summary>Number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with approve_until_date.</summary>
+    /// <summary>Number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 360. Conflicts with approve_until_date.</summary>
     [JsonPropertyName("approveAfterDays")]
     public double? ApproveAfterDays { get; set; }
 
@@ -403,7 +403,7 @@ public partial class V1beta1PatchBaselineStatusAtProviderApprovalRulePatchFilter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchBaselineStatusAtProviderApprovalRule
 {
-    /// <summary>Number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with approve_until_date.</summary>
+    /// <summary>Number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 360. Conflicts with approve_until_date.</summary>
     [JsonPropertyName("approveAfterDays")]
     public double? ApproveAfterDays { get; set; }
 

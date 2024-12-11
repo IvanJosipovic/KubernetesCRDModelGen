@@ -382,7 +382,7 @@ public partial class V1beta1EBSVolumeSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSVolumeStatusAtProvider
 {
-    /// <summary>The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).</summary>
+    /// <summary>The volume ARN (e.g., arn:aws:ec2:us-east-1:123456789012:volume/vol-59fcb34e).</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 

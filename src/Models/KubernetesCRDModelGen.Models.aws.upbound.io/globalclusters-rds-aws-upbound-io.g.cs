@@ -375,6 +375,10 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
+    /// <summary>Writer endpoint for the new global database cluster. This endpoint always points to the writer DB instance in the current primary cluster.</summary>
+    [JsonPropertyName("endpoint")]
+    public string? Endpoint { get; set; }
+
     /// <summary>Name of the database engine to be used for this DB cluster. Valid values: aurora, aurora-mysql, aurora-postgresql. Defaults to aurora. Conflicts with source_db_cluster_identifier.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
