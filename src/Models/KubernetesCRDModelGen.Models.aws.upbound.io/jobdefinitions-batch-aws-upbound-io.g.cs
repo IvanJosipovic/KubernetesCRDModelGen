@@ -128,6 +128,115 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersEnv
+{
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Value of the environment variable.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersResources
+{
+    /// <summary></summary>
+    [JsonPropertyName("limits")]
+    public IDictionary<string, string>? Limits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("requests")]
+    public IDictionary<string, string>? Requests { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersSecurityContext
+{
+    /// <summary></summary>
+    [JsonPropertyName("privileged")]
+    public bool? Privileged { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("readOnlyRootFileSystem")]
+    public bool? ReadOnlyRootFileSystem { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsGroup")]
+    public double? RunAsGroup { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsNonRoot")]
+    public bool? RunAsNonRoot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsUser")]
+    public double? RunAsUser { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersVolumeMounts
+{
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
+    [JsonPropertyName("mountPath")]
+    public string? MountPath { get; set; }
+
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainers
+{
+    /// <summary>Array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
+    [JsonPropertyName("args")]
+    public IList<string>? Args { get; set; }
+
+    /// <summary>Entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
+    [JsonPropertyName("command")]
+    public IList<string>? Command { get; set; }
+
+    /// <summary>Environment variables to pass to a container. See EKS Environment below.</summary>
+    [JsonPropertyName("env")]
+    public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersEnv>? Env { get; set; }
+
+    /// <summary>Docker image used to start the container.</summary>
+    [JsonPropertyName("image")]
+    public string? Image { get; set; }
+
+    /// <summary>Image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
+    [JsonPropertyName("imagePullPolicy")]
+    public string? ImagePullPolicy { get; set; }
+
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
+    [JsonPropertyName("resources")]
+    public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersResources>? Resources { get; set; }
+
+    /// <summary>Security context for a job.</summary>
+    [JsonPropertyName("securityContext")]
+    public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersSecurityContext>? SecurityContext { get; set; }
+
+    /// <summary>Volume mounts for the container.</summary>
+    [JsonPropertyName("volumeMounts")]
+    public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainersVolumeMounts>? VolumeMounts { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesMetadata
 {
     /// <summary></summary>
@@ -211,6 +320,10 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
     [JsonPropertyName("imagePullSecret")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesImagePullSecret>? ImagePullSecret { get; set; }
 
+    /// <summary>Containers which run before application containers, always runs to completion, and must complete successfully before the next container starts. These containers are registered with the Amazon EKS Connector agent and persists the registration information in the Kubernetes backend data store. See containers below.</summary>
+    [JsonPropertyName("initContainers")]
+    public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesInitContainers>? InitContainers { get; set; }
+
     /// <summary>Metadata about the Kubernetes pod.</summary>
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
@@ -218,6 +331,10 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
     /// <summary>The name of the service account that's used to run the pod.</summary>
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
+
+    /// <summary>Indicates if the processes in a container are shared, or visible, to other containers in the same pod.</summary>
+    [JsonPropertyName("shareProcessNamespace")]
+    public bool? ShareProcessNamespace { get; set; }
 
     /// <summary>Specifies the volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
     [JsonPropertyName("volumes")]
@@ -461,6 +578,115 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersEnv
+{
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Value of the environment variable.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersResources
+{
+    /// <summary></summary>
+    [JsonPropertyName("limits")]
+    public IDictionary<string, string>? Limits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("requests")]
+    public IDictionary<string, string>? Requests { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersSecurityContext
+{
+    /// <summary></summary>
+    [JsonPropertyName("privileged")]
+    public bool? Privileged { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("readOnlyRootFileSystem")]
+    public bool? ReadOnlyRootFileSystem { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsGroup")]
+    public double? RunAsGroup { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsNonRoot")]
+    public bool? RunAsNonRoot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsUser")]
+    public double? RunAsUser { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersVolumeMounts
+{
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
+    [JsonPropertyName("mountPath")]
+    public string? MountPath { get; set; }
+
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainers
+{
+    /// <summary>Array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
+    [JsonPropertyName("args")]
+    public IList<string>? Args { get; set; }
+
+    /// <summary>Entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
+    [JsonPropertyName("command")]
+    public IList<string>? Command { get; set; }
+
+    /// <summary>Environment variables to pass to a container. See EKS Environment below.</summary>
+    [JsonPropertyName("env")]
+    public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersEnv>? Env { get; set; }
+
+    /// <summary>Docker image used to start the container.</summary>
+    [JsonPropertyName("image")]
+    public string? Image { get; set; }
+
+    /// <summary>Image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
+    [JsonPropertyName("imagePullPolicy")]
+    public string? ImagePullPolicy { get; set; }
+
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
+    [JsonPropertyName("resources")]
+    public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersResources>? Resources { get; set; }
+
+    /// <summary>Security context for a job.</summary>
+    [JsonPropertyName("securityContext")]
+    public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersSecurityContext>? SecurityContext { get; set; }
+
+    /// <summary>Volume mounts for the container.</summary>
+    [JsonPropertyName("volumeMounts")]
+    public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainersVolumeMounts>? VolumeMounts { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesMetadata
 {
     /// <summary></summary>
@@ -544,6 +770,10 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
     [JsonPropertyName("imagePullSecret")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesImagePullSecret>? ImagePullSecret { get; set; }
 
+    /// <summary>Containers which run before application containers, always runs to completion, and must complete successfully before the next container starts. These containers are registered with the Amazon EKS Connector agent and persists the registration information in the Kubernetes backend data store. See containers below.</summary>
+    [JsonPropertyName("initContainers")]
+    public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesInitContainers>? InitContainers { get; set; }
+
     /// <summary>Metadata about the Kubernetes pod.</summary>
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
@@ -551,6 +781,10 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
     /// <summary>The name of the service account that's used to run the pod.</summary>
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
+
+    /// <summary>Indicates if the processes in a container are shared, or visible, to other containers in the same pod.</summary>
+    [JsonPropertyName("shareProcessNamespace")]
+    public bool? ShareProcessNamespace { get; set; }
 
     /// <summary>Specifies the volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
     [JsonPropertyName("volumes")]
@@ -922,6 +1156,115 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersEnv
+{
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Value of the environment variable.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersResources
+{
+    /// <summary></summary>
+    [JsonPropertyName("limits")]
+    public IDictionary<string, string>? Limits { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("requests")]
+    public IDictionary<string, string>? Requests { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersSecurityContext
+{
+    /// <summary></summary>
+    [JsonPropertyName("privileged")]
+    public bool? Privileged { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("readOnlyRootFileSystem")]
+    public bool? ReadOnlyRootFileSystem { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsGroup")]
+    public double? RunAsGroup { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsNonRoot")]
+    public bool? RunAsNonRoot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("runAsUser")]
+    public double? RunAsUser { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersVolumeMounts
+{
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
+    [JsonPropertyName("mountPath")]
+    public string? MountPath { get; set; }
+
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainers
+{
+    /// <summary>Array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
+    [JsonPropertyName("args")]
+    public IList<string>? Args { get; set; }
+
+    /// <summary>Entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
+    [JsonPropertyName("command")]
+    public IList<string>? Command { get; set; }
+
+    /// <summary>Environment variables to pass to a container. See EKS Environment below.</summary>
+    [JsonPropertyName("env")]
+    public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersEnv>? Env { get; set; }
+
+    /// <summary>Docker image used to start the container.</summary>
+    [JsonPropertyName("image")]
+    public string? Image { get; set; }
+
+    /// <summary>Image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
+    [JsonPropertyName("imagePullPolicy")]
+    public string? ImagePullPolicy { get; set; }
+
+    /// <summary>Name of the job definition.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
+    [JsonPropertyName("resources")]
+    public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersResources>? Resources { get; set; }
+
+    /// <summary>Security context for a job.</summary>
+    [JsonPropertyName("securityContext")]
+    public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersSecurityContext>? SecurityContext { get; set; }
+
+    /// <summary>Volume mounts for the container.</summary>
+    [JsonPropertyName("volumeMounts")]
+    public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainersVolumeMounts>? VolumeMounts { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesMetadata
 {
     /// <summary></summary>
@@ -1005,6 +1348,10 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
     [JsonPropertyName("imagePullSecret")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesImagePullSecret>? ImagePullSecret { get; set; }
 
+    /// <summary>Containers which run before application containers, always runs to completion, and must complete successfully before the next container starts. These containers are registered with the Amazon EKS Connector agent and persists the registration information in the Kubernetes backend data store. See containers below.</summary>
+    [JsonPropertyName("initContainers")]
+    public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesInitContainers>? InitContainers { get; set; }
+
     /// <summary>Metadata about the Kubernetes pod.</summary>
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
@@ -1012,6 +1359,10 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
     /// <summary>The name of the service account that's used to run the pod.</summary>
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
+
+    /// <summary>Indicates if the processes in a container are shared, or visible, to other containers in the same pod.</summary>
+    [JsonPropertyName("shareProcessNamespace")]
+    public bool? ShareProcessNamespace { get; set; }
 
     /// <summary>Specifies the volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
     [JsonPropertyName("volumes")]

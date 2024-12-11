@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.aws.upbound.io;
-/// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See `canary_settings below.</summary>
+/// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentSpecForProviderCanarySettings
 {
@@ -85,7 +85,7 @@ public partial class V1beta1DeploymentSpecForProviderRestApiIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentSpecForProvider
 {
-    /// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See `canary_settings below.</summary>
+    /// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.</summary>
     [JsonPropertyName("canarySettings")]
     public V1beta1DeploymentSpecForProviderCanarySettings? CanarySettings { get; set; }
 
@@ -109,7 +109,7 @@ public partial class V1beta1DeploymentSpecForProvider
     [JsonPropertyName("restApiIdSelector")]
     public V1beta1DeploymentSpecForProviderRestApiIdSelector? RestApiIdSelector { get; set; }
 
-    /// <summary>Description to set on the stage managed by the stage_name argument.</summary>
+    /// <summary>Description to set on the stage managed by the stage_name argument. Has no effect when stage_name is not set.</summary>
     [JsonPropertyName("stageDescription")]
     public string? StageDescription { get; set; }
 
@@ -126,7 +126,7 @@ public partial class V1beta1DeploymentSpecForProvider
     public IDictionary<string, string>? Variables { get; set; }
 }
 
-/// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See `canary_settings below.</summary>
+/// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentSpecInitProviderCanarySettings
 {
@@ -203,7 +203,7 @@ public partial class V1beta1DeploymentSpecInitProviderRestApiIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentSpecInitProvider
 {
-    /// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See `canary_settings below.</summary>
+    /// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.</summary>
     [JsonPropertyName("canarySettings")]
     public V1beta1DeploymentSpecInitProviderCanarySettings? CanarySettings { get; set; }
 
@@ -223,7 +223,7 @@ public partial class V1beta1DeploymentSpecInitProvider
     [JsonPropertyName("restApiIdSelector")]
     public V1beta1DeploymentSpecInitProviderRestApiIdSelector? RestApiIdSelector { get; set; }
 
-    /// <summary>Description to set on the stage managed by the stage_name argument.</summary>
+    /// <summary>Description to set on the stage managed by the stage_name argument. Has no effect when stage_name is not set.</summary>
     [JsonPropertyName("stageDescription")]
     public string? StageDescription { get; set; }
 
@@ -372,7 +372,7 @@ public partial class V1beta1DeploymentSpec
     public V1beta1DeploymentSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
-/// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See `canary_settings below.</summary>
+/// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentStatusAtProviderCanarySettings
 {
@@ -393,7 +393,7 @@ public partial class V1beta1DeploymentStatusAtProviderCanarySettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentStatusAtProvider
 {
-    /// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See `canary_settings below.</summary>
+    /// <summary>Input configuration for the canary deployment when the deployment is a canary release deployment. See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.</summary>
     [JsonPropertyName("canarySettings")]
     public V1beta1DeploymentStatusAtProviderCanarySettings? CanarySettings { get; set; }
 
@@ -421,7 +421,7 @@ public partial class V1beta1DeploymentStatusAtProvider
     [JsonPropertyName("restApiId")]
     public string? RestApiId { get; set; }
 
-    /// <summary>Description to set on the stage managed by the stage_name argument.</summary>
+    /// <summary>Description to set on the stage managed by the stage_name argument. Has no effect when stage_name is not set.</summary>
     [JsonPropertyName("stageDescription")]
     public string? StageDescription { get; set; }
 

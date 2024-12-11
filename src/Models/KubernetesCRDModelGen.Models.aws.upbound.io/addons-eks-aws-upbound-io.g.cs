@@ -64,6 +64,19 @@ public partial class V1beta1AddonSpecForProviderClusterNameSelector
     public V1beta1AddonSpecForProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AddonSpecForProviderPodIdentityAssociation
+{
+    /// <summary>The Amazon Resource Name (ARN) of the IAM role to associate with the service account. The EKS Pod Identity agent manages credentials to assume this role for applications in the containers in the pods that use this service account.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The name of the Kubernetes service account inside the cluster to associate the IAM credentials with.</summary>
+    [JsonPropertyName("serviceAccount")]
+    public string? ServiceAccount { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonSpecForProviderServiceAccountRoleArnRefPolicy
@@ -147,6 +160,10 @@ public partial class V1beta1AddonSpecForProvider
     /// <summary>custom configuration values for addons with single JSON string. This JSON string value must match the JSON schema derived from describe-addon-configuration.</summary>
     [JsonPropertyName("configurationValues")]
     public string? ConfigurationValues { get; set; }
+
+    /// <summary>Configuration block with EKS Pod Identity association settings. See pod_identity_association below for details.</summary>
+    [JsonPropertyName("podIdentityAssociation")]
+    public IList<V1beta1AddonSpecForProviderPodIdentityAssociation>? PodIdentityAssociation { get; set; }
 
     /// <summary>Indicates if you want to preserve the created resources when deleting the EKS add-on.</summary>
     [JsonPropertyName("preserve")]
@@ -241,6 +258,19 @@ public partial class V1beta1AddonSpecInitProviderClusterNameSelector
     public V1beta1AddonSpecInitProviderClusterNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AddonSpecInitProviderPodIdentityAssociation
+{
+    /// <summary>The Amazon Resource Name (ARN) of the IAM role to associate with the service account. The EKS Pod Identity agent manages credentials to assume this role for applications in the containers in the pods that use this service account.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The name of the Kubernetes service account inside the cluster to associate the IAM credentials with.</summary>
+    [JsonPropertyName("serviceAccount")]
+    public string? ServiceAccount { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonSpecInitProviderServiceAccountRoleArnRefPolicy
@@ -324,6 +354,10 @@ public partial class V1beta1AddonSpecInitProvider
     /// <summary>custom configuration values for addons with single JSON string. This JSON string value must match the JSON schema derived from describe-addon-configuration.</summary>
     [JsonPropertyName("configurationValues")]
     public string? ConfigurationValues { get; set; }
+
+    /// <summary>Configuration block with EKS Pod Identity association settings. See pod_identity_association below for details.</summary>
+    [JsonPropertyName("podIdentityAssociation")]
+    public IList<V1beta1AddonSpecInitProviderPodIdentityAssociation>? PodIdentityAssociation { get; set; }
 
     /// <summary>Indicates if you want to preserve the created resources when deleting the EKS add-on.</summary>
     [JsonPropertyName("preserve")]
@@ -492,6 +526,19 @@ public partial class V1beta1AddonSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AddonStatusAtProviderPodIdentityAssociation
+{
+    /// <summary>The Amazon Resource Name (ARN) of the IAM role to associate with the service account. The EKS Pod Identity agent manages credentials to assume this role for applications in the containers in the pods that use this service account.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>The name of the Kubernetes service account inside the cluster to associate the IAM credentials with.</summary>
+    [JsonPropertyName("serviceAccount")]
+    public string? ServiceAccount { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonStatusAtProvider
 {
     /// <summary>on. The name must match one of the names returned by describe-addon-versions.</summary>
@@ -525,6 +572,10 @@ public partial class V1beta1AddonStatusAtProvider
     /// <summary>Date and time in RFC3339 format that the EKS add-on was updated.</summary>
     [JsonPropertyName("modifiedAt")]
     public string? ModifiedAt { get; set; }
+
+    /// <summary>Configuration block with EKS Pod Identity association settings. See pod_identity_association below for details.</summary>
+    [JsonPropertyName("podIdentityAssociation")]
+    public IList<V1beta1AddonStatusAtProviderPodIdentityAssociation>? PodIdentityAssociation { get; set; }
 
     /// <summary>Indicates if you want to preserve the created resources when deleting the EKS add-on.</summary>
     [JsonPropertyName("preserve")]

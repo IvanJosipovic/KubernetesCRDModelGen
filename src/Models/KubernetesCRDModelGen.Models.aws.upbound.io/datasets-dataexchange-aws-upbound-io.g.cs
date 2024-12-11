@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.dataexchange.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetSpecForProvider
 {
-    /// <summary>The type of asset that is added to a data set. Valid values are: S3_SNAPSHOT, REDSHIFT_DATA_SHARE, and API_GATEWAY_API.</summary>
+    /// <summary>The type of asset that is added to a data set. Valid values include API_GATEWAY_API, LAKE_FORMATION_DATA_PERMISSION, REDSHIFT_DATA_SHARE, S3_DATA_ACCESS, S3_SNAPSHOT.</summary>
     [JsonPropertyName("assetType")]
     public string? AssetType { get; set; }
 
@@ -37,7 +37,7 @@ public partial class V1beta1DataSetSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetSpecInitProvider
 {
-    /// <summary>The type of asset that is added to a data set. Valid values are: S3_SNAPSHOT, REDSHIFT_DATA_SHARE, and API_GATEWAY_API.</summary>
+    /// <summary>The type of asset that is added to a data set. Valid values include API_GATEWAY_API, LAKE_FORMATION_DATA_PERMISSION, REDSHIFT_DATA_SHARE, S3_DATA_ACCESS, S3_SNAPSHOT.</summary>
     [JsonPropertyName("assetType")]
     public string? AssetType { get; set; }
 
@@ -194,7 +194,7 @@ public partial class V1beta1DataSetStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The type of asset that is added to a data set. Valid values are: S3_SNAPSHOT, REDSHIFT_DATA_SHARE, and API_GATEWAY_API.</summary>
+    /// <summary>The type of asset that is added to a data set. Valid values include API_GATEWAY_API, LAKE_FORMATION_DATA_PERMISSION, REDSHIFT_DATA_SHARE, S3_DATA_ACCESS, S3_SNAPSHOT.</summary>
     [JsonPropertyName("assetType")]
     public string? AssetType { get; set; }
 

@@ -196,7 +196,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Version number of the Redis engine to be used for the cluster. Downgrades are not supported.</summary>
+    /// <summary>The engine that will run on your nodes. Supported values are redis and valkey.</summary>
+    [JsonPropertyName("engine")]
+    public string? Engine { get; set; }
+
+    /// <summary>Version number of the engine to be used for the cluster. Downgrades are not supported.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -485,7 +489,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Version number of the Redis engine to be used for the cluster. Downgrades are not supported.</summary>
+    /// <summary>The engine that will run on your nodes. Supported values are redis and valkey.</summary>
+    [JsonPropertyName("engine")]
+    public string? Engine { get; set; }
+
+    /// <summary>Version number of the engine to be used for the cluster. Downgrades are not supported.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -810,11 +818,15 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Patch version number of the Redis engine used by the cluster.</summary>
+    /// <summary>The engine that will run on your nodes. Supported values are redis and valkey.</summary>
+    [JsonPropertyName("engine")]
+    public string? Engine { get; set; }
+
+    /// <summary>Patch version number of the engine used by the cluster.</summary>
     [JsonPropertyName("enginePatchVersion")]
     public string? EnginePatchVersion { get; set; }
 
-    /// <summary>Version number of the Redis engine to be used for the cluster. Downgrades are not supported.</summary>
+    /// <summary>Version number of the engine to be used for the cluster. Downgrades are not supported.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 

@@ -238,6 +238,24 @@ spec:
                         region:
                           description: AWS Region for the distribution.
                           type: string
+                        s3ExportConfiguration:
+                          description: Configuration block with S3 export settings. Detailed below.
+                          items:
+                            properties:
+                              diskImageFormat:
+                                description: The disk image format of the exported image (RAW, VHD, or VMDK)
+                                type: string
+                              roleName:
+                                description: The name of the IAM role to use for exporting.
+                                type: string
+                              s3Bucket:
+                                description: The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.
+                                type: string
+                              s3Prefix:
+                                description: The prefix for the exported image.
+                                type: string
+                            type: object
+                          type: array
                       required:
                       - region
                       type: object
@@ -433,6 +451,24 @@ spec:
                             type: string
                           type: array
                           x-kubernetes-list-type: set
+                        s3ExportConfiguration:
+                          description: Configuration block with S3 export settings. Detailed below.
+                          items:
+                            properties:
+                              diskImageFormat:
+                                description: The disk image format of the exported image (RAW, VHD, or VMDK)
+                                type: string
+                              roleName:
+                                description: The name of the IAM role to use for exporting.
+                                type: string
+                              s3Bucket:
+                                description: The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.
+                                type: string
+                              s3Prefix:
+                                description: The prefix for the exported image.
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   name:
@@ -826,6 +862,24 @@ spec:
                         region:
                           description: AWS Region for the distribution.
                           type: string
+                        s3ExportConfiguration:
+                          description: Configuration block with S3 export settings. Detailed below.
+                          items:
+                            properties:
+                              diskImageFormat:
+                                description: The disk image format of the exported image (RAW, VHD, or VMDK)
+                                type: string
+                              roleName:
+                                description: The name of the IAM role to use for exporting.
+                                type: string
+                              s3Bucket:
+                                description: The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.
+                                type: string
+                              s3Prefix:
+                                description: The prefix for the exported image.
+                                type: string
+                            type: object
+                          type: array
                       type: object
                     type: array
                   id:
@@ -1121,6 +1175,22 @@ spec:
                         region:
                           description: AWS Region for the distribution.
                           type: string
+                        s3ExportConfiguration:
+                          description: Configuration block with S3 export settings. Detailed below.
+                          properties:
+                            diskImageFormat:
+                              description: The disk image format of the exported image (RAW, VHD, or VMDK)
+                              type: string
+                            roleName:
+                              description: The name of the IAM role to use for exporting.
+                              type: string
+                            s3Bucket:
+                              description: The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.
+                              type: string
+                            s3Prefix:
+                              description: The prefix for the exported image.
+                              type: string
+                          type: object
                       required:
                       - region
                       type: object
@@ -1304,6 +1374,22 @@ spec:
                             type: string
                           type: array
                           x-kubernetes-list-type: set
+                        s3ExportConfiguration:
+                          description: Configuration block with S3 export settings. Detailed below.
+                          properties:
+                            diskImageFormat:
+                              description: The disk image format of the exported image (RAW, VHD, or VMDK)
+                              type: string
+                            roleName:
+                              description: The name of the IAM role to use for exporting.
+                              type: string
+                            s3Bucket:
+                              description: The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.
+                              type: string
+                            s3Prefix:
+                              description: The prefix for the exported image.
+                              type: string
+                          type: object
                       type: object
                     type: array
                   name:
@@ -1685,6 +1771,22 @@ spec:
                         region:
                           description: AWS Region for the distribution.
                           type: string
+                        s3ExportConfiguration:
+                          description: Configuration block with S3 export settings. Detailed below.
+                          properties:
+                            diskImageFormat:
+                              description: The disk image format of the exported image (RAW, VHD, or VMDK)
+                              type: string
+                            roleName:
+                              description: The name of the IAM role to use for exporting.
+                              type: string
+                            s3Bucket:
+                              description: The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.
+                              type: string
+                            s3Prefix:
+                              description: The prefix for the exported image.
+                              type: string
+                          type: object
                       type: object
                     type: array
                   id:
