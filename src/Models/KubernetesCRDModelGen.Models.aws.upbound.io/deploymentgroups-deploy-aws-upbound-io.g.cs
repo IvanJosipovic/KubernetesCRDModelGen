@@ -425,6 +425,62 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     public string? Name { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of LBListener in elbv2 to populate listenerArns.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute
@@ -432,6 +488,14 @@ public partial class V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTarget
     /// <summary>List of Amazon Resource Names (ARNs) of the load balancer listeners.</summary>
     [JsonPropertyName("listenerArns")]
     public IList<string>? ListenerArns { get; set; }
+
+    /// <summary>References to LBListener in elbv2 to populate listenerArns.</summary>
+    [JsonPropertyName("listenerArnsRefs")]
+    public IList<V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefs>? ListenerArnsRefs { get; set; }
+
+    /// <summary>Selector for a list of LBListener in elbv2 to populate listenerArns.</summary>
+    [JsonPropertyName("listenerArnsSelector")]
+    public V1beta1DeploymentGroupSpecForProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector? ListenerArnsSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1158,6 +1222,62 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     public string? Name { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of LBListener in elbv2 to populate listenerArns.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute
@@ -1165,6 +1285,14 @@ public partial class V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTarge
     /// <summary>List of Amazon Resource Names (ARNs) of the load balancer listeners.</summary>
     [JsonPropertyName("listenerArns")]
     public IList<string>? ListenerArns { get; set; }
+
+    /// <summary>References to LBListener in elbv2 to populate listenerArns.</summary>
+    [JsonPropertyName("listenerArnsRefs")]
+    public IList<V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsRefs>? ListenerArnsRefs { get; set; }
+
+    /// <summary>Selector for a list of LBListener in elbv2 to populate listenerArns.</summary>
+    [JsonPropertyName("listenerArnsSelector")]
+    public V1beta1DeploymentGroupSpecInitProviderLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteListenerArnsSelector? ListenerArnsSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>

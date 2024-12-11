@@ -79,6 +79,62 @@ public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequireme
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIdList.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -152,6 +208,14 @@ public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequireme
     /// <summary>The security group ID list used by the connection.</summary>
     [JsonPropertyName("securityGroupIdList")]
     public IList<string>? SecurityGroupIdList { get; set; }
+
+    /// <summary>References to SecurityGroup in ec2 to populate securityGroupIdList.</summary>
+    [JsonPropertyName("securityGroupIdListRefs")]
+    public IList<V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListRefs>? SecurityGroupIdListRefs { get; set; }
+
+    /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIdList.</summary>
+    [JsonPropertyName("securityGroupIdListSelector")]
+    public V1beta1ConnectionSpecForProviderPhysicalConnectionRequirementsSecurityGroupIdListSelector? SecurityGroupIdListSelector { get; set; }
 
     /// <summary>The subnet ID used by the connection.</summary>
     [JsonPropertyName("subnetId")]
@@ -261,6 +325,62 @@ public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirem
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIdList.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -334,6 +454,14 @@ public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirem
     /// <summary>The security group ID list used by the connection.</summary>
     [JsonPropertyName("securityGroupIdList")]
     public IList<string>? SecurityGroupIdList { get; set; }
+
+    /// <summary>References to SecurityGroup in ec2 to populate securityGroupIdList.</summary>
+    [JsonPropertyName("securityGroupIdListRefs")]
+    public IList<V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListRefs>? SecurityGroupIdListRefs { get; set; }
+
+    /// <summary>Selector for a list of SecurityGroup in ec2 to populate securityGroupIdList.</summary>
+    [JsonPropertyName("securityGroupIdListSelector")]
+    public V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirementsSecurityGroupIdListSelector? SecurityGroupIdListSelector { get; set; }
 
     /// <summary>The subnet ID used by the connection.</summary>
     [JsonPropertyName("subnetId")]

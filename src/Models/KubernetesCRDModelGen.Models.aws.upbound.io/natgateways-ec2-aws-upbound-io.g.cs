@@ -66,6 +66,62 @@ public partial class V1beta1NATGatewaySpecForProviderAllocationIdSelector
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of EIP in ec2 to populate secondaryAllocationIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATGatewaySpecForProviderSubnetIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -152,6 +208,14 @@ public partial class V1beta1NATGatewaySpecForProvider
     [JsonPropertyName("secondaryAllocationIds")]
     public IList<string>? SecondaryAllocationIds { get; set; }
 
+    /// <summary>References to EIP in ec2 to populate secondaryAllocationIds.</summary>
+    [JsonPropertyName("secondaryAllocationIdsRefs")]
+    public IList<V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsRefs>? SecondaryAllocationIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of EIP in ec2 to populate secondaryAllocationIds.</summary>
+    [JsonPropertyName("secondaryAllocationIdsSelector")]
+    public V1beta1NATGatewaySpecForProviderSecondaryAllocationIdsSelector? SecondaryAllocationIdsSelector { get; set; }
+
     /// <summary>[Private NAT Gateway only] The number of secondary private IPv4 addresses you want to assign to the NAT Gateway.</summary>
     [JsonPropertyName("secondaryPrivateIpAddressCount")]
     public double? SecondaryPrivateIpAddressCount { get; set; }
@@ -231,6 +295,62 @@ public partial class V1beta1NATGatewaySpecInitProviderAllocationIdSelector
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1NATGatewaySpecInitProviderAllocationIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of EIP in ec2 to populate secondaryAllocationIds.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -316,6 +436,14 @@ public partial class V1beta1NATGatewaySpecInitProvider
     /// <summary>A list of secondary allocation EIP IDs for this NAT Gateway.</summary>
     [JsonPropertyName("secondaryAllocationIds")]
     public IList<string>? SecondaryAllocationIds { get; set; }
+
+    /// <summary>References to EIP in ec2 to populate secondaryAllocationIds.</summary>
+    [JsonPropertyName("secondaryAllocationIdsRefs")]
+    public IList<V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsRefs>? SecondaryAllocationIdsRefs { get; set; }
+
+    /// <summary>Selector for a list of EIP in ec2 to populate secondaryAllocationIds.</summary>
+    [JsonPropertyName("secondaryAllocationIdsSelector")]
+    public V1beta1NATGatewaySpecInitProviderSecondaryAllocationIdsSelector? SecondaryAllocationIdsSelector { get; set; }
 
     /// <summary>[Private NAT Gateway only] The number of secondary private IPv4 addresses you want to assign to the NAT Gateway.</summary>
     [JsonPropertyName("secondaryPrivateIpAddressCount")]

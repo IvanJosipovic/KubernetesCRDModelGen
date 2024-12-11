@@ -10,6 +10,118 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderCidrBlocksRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderCidrBlocksRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecForProviderCidrBlocksRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderCidrBlocksSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of VPC in ec2 to populate cidrBlocks.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderCidrBlocksSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecForProviderCidrBlocksSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of VPC in ec2 to populate ipv6CidrBlocks.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityGroupRuleSpecForProviderPrefixListIdRefsPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -184,6 +296,14 @@ public partial class V1beta1SecurityGroupRuleSpecForProvider
     [JsonPropertyName("cidrBlocks")]
     public IList<string>? CidrBlocks { get; set; }
 
+    /// <summary>References to VPC in ec2 to populate cidrBlocks.</summary>
+    [JsonPropertyName("cidrBlocksRefs")]
+    public IList<V1beta1SecurityGroupRuleSpecForProviderCidrBlocksRefs>? CidrBlocksRefs { get; set; }
+
+    /// <summary>Selector for a list of VPC in ec2 to populate cidrBlocks.</summary>
+    [JsonPropertyName("cidrBlocksSelector")]
+    public V1beta1SecurityGroupRuleSpecForProviderCidrBlocksSelector? CidrBlocksSelector { get; set; }
+
     /// <summary>Description of the rule.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -195,6 +315,14 @@ public partial class V1beta1SecurityGroupRuleSpecForProvider
     /// <summary>List of IPv6 CIDR blocks. Cannot be specified with source_security_group_id or self.</summary>
     [JsonPropertyName("ipv6CidrBlocks")]
     public IList<string>? Ipv6CidrBlocks { get; set; }
+
+    /// <summary>References to VPC in ec2 to populate ipv6CidrBlocks.</summary>
+    [JsonPropertyName("ipv6CidrBlocksRefs")]
+    public IList<V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksRefs>? Ipv6CidrBlocksRefs { get; set; }
+
+    /// <summary>Selector for a list of VPC in ec2 to populate ipv6CidrBlocks.</summary>
+    [JsonPropertyName("ipv6CidrBlocksSelector")]
+    public V1beta1SecurityGroupRuleSpecForProviderIpv6CidrBlocksSelector? Ipv6CidrBlocksSelector { get; set; }
 
     /// <summary>References to ManagedPrefixList in ec2 to populate prefixListIds.</summary>
     [JsonPropertyName("prefixListIdRefs")]
@@ -251,6 +379,118 @@ public partial class V1beta1SecurityGroupRuleSpecForProvider
     /// <summary>Type of rule being created. Valid options are ingress (inbound) or egress (outbound).</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of VPC in ec2 to populate cidrBlocks.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of VPC in ec2 to populate ipv6CidrBlocks.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -429,6 +669,14 @@ public partial class V1beta1SecurityGroupRuleSpecInitProvider
     [JsonPropertyName("cidrBlocks")]
     public IList<string>? CidrBlocks { get; set; }
 
+    /// <summary>References to VPC in ec2 to populate cidrBlocks.</summary>
+    [JsonPropertyName("cidrBlocksRefs")]
+    public IList<V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksRefs>? CidrBlocksRefs { get; set; }
+
+    /// <summary>Selector for a list of VPC in ec2 to populate cidrBlocks.</summary>
+    [JsonPropertyName("cidrBlocksSelector")]
+    public V1beta1SecurityGroupRuleSpecInitProviderCidrBlocksSelector? CidrBlocksSelector { get; set; }
+
     /// <summary>Description of the rule.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -440,6 +688,14 @@ public partial class V1beta1SecurityGroupRuleSpecInitProvider
     /// <summary>List of IPv6 CIDR blocks. Cannot be specified with source_security_group_id or self.</summary>
     [JsonPropertyName("ipv6CidrBlocks")]
     public IList<string>? Ipv6CidrBlocks { get; set; }
+
+    /// <summary>References to VPC in ec2 to populate ipv6CidrBlocks.</summary>
+    [JsonPropertyName("ipv6CidrBlocksRefs")]
+    public IList<V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksRefs>? Ipv6CidrBlocksRefs { get; set; }
+
+    /// <summary>Selector for a list of VPC in ec2 to populate ipv6CidrBlocks.</summary>
+    [JsonPropertyName("ipv6CidrBlocksSelector")]
+    public V1beta1SecurityGroupRuleSpecInitProviderIpv6CidrBlocksSelector? Ipv6CidrBlocksSelector { get; set; }
 
     /// <summary>References to ManagedPrefixList in ec2 to populate prefixListIds.</summary>
     [JsonPropertyName("prefixListIdRefs")]

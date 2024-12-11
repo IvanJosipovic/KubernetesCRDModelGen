@@ -321,6 +321,62 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationDataExportS3BucketDestination>? S3BucketDestination { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Bucket in s3 to populate buckets.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExclude
@@ -328,6 +384,14 @@ public partial class V1beta1StorageLensConfigurationSpecForProviderStorageLensCo
     /// <summary>List of S3 bucket ARNs.</summary>
     [JsonPropertyName("buckets")]
     public IList<string>? Buckets { get; set; }
+
+    /// <summary>References to Bucket in s3 to populate buckets.</summary>
+    [JsonPropertyName("bucketsRefs")]
+    public IList<V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsRefs>? BucketsRefs { get; set; }
+
+    /// <summary>Selector for a list of Bucket in s3 to populate buckets.</summary>
+    [JsonPropertyName("bucketsSelector")]
+    public V1beta1StorageLensConfigurationSpecForProviderStorageLensConfigurationExcludeBucketsSelector? BucketsSelector { get; set; }
 
     /// <summary>List of AWS Regions.</summary>
     [JsonPropertyName("regions")]
@@ -714,6 +778,62 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationDataExportS3BucketDestination>? S3BucketDestination { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Bucket in s3 to populate buckets.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExclude
@@ -721,6 +841,14 @@ public partial class V1beta1StorageLensConfigurationSpecInitProviderStorageLensC
     /// <summary>List of S3 bucket ARNs.</summary>
     [JsonPropertyName("buckets")]
     public IList<string>? Buckets { get; set; }
+
+    /// <summary>References to Bucket in s3 to populate buckets.</summary>
+    [JsonPropertyName("bucketsRefs")]
+    public IList<V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsRefs>? BucketsRefs { get; set; }
+
+    /// <summary>Selector for a list of Bucket in s3 to populate buckets.</summary>
+    [JsonPropertyName("bucketsSelector")]
+    public V1beta1StorageLensConfigurationSpecInitProviderStorageLensConfigurationExcludeBucketsSelector? BucketsSelector { get; set; }
 
     /// <summary>List of AWS Regions.</summary>
     [JsonPropertyName("regions")]
