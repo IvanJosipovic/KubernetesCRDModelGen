@@ -26,6 +26,62 @@ public partial class V1beta1InputSpecForProviderInputDevices
     public string? Id { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecForProviderInputSecurityGroupsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecForProviderInputSecurityGroupsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InputSpecForProviderInputSecurityGroupsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecForProviderInputSecurityGroupsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of InputSecurityGroup in medialive to populate inputSecurityGroups.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecForProviderInputSecurityGroupsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InputSpecForProviderInputSecurityGroupsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InputSpecForProviderMediaConnectFlows
@@ -137,6 +193,14 @@ public partial class V1beta1InputSpecForProvider
     [JsonPropertyName("inputSecurityGroups")]
     public IList<string>? InputSecurityGroups { get; set; }
 
+    /// <summary>References to InputSecurityGroup in medialive to populate inputSecurityGroups.</summary>
+    [JsonPropertyName("inputSecurityGroupsRefs")]
+    public IList<V1beta1InputSpecForProviderInputSecurityGroupsRefs>? InputSecurityGroupsRefs { get; set; }
+
+    /// <summary>Selector for a list of InputSecurityGroup in medialive to populate inputSecurityGroups.</summary>
+    [JsonPropertyName("inputSecurityGroupsSelector")]
+    public V1beta1InputSpecForProviderInputSecurityGroupsSelector? InputSecurityGroupsSelector { get; set; }
+
     /// <summary>A list of the MediaConnect Flows. See Media Connect Flows for more details.</summary>
     [JsonPropertyName("mediaConnectFlows")]
     public IList<V1beta1InputSpecForProviderMediaConnectFlows>? MediaConnectFlows { get; set; }
@@ -194,6 +258,62 @@ public partial class V1beta1InputSpecInitProviderInputDevices
     /// <summary>The unique ID for the device.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecInitProviderInputSecurityGroupsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecInitProviderInputSecurityGroupsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InputSpecInitProviderInputSecurityGroupsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecInitProviderInputSecurityGroupsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of InputSecurityGroup in medialive to populate inputSecurityGroups.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InputSpecInitProviderInputSecurityGroupsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InputSpecInitProviderInputSecurityGroupsSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -306,6 +426,14 @@ public partial class V1beta1InputSpecInitProvider
     /// <summary>List of input security groups.</summary>
     [JsonPropertyName("inputSecurityGroups")]
     public IList<string>? InputSecurityGroups { get; set; }
+
+    /// <summary>References to InputSecurityGroup in medialive to populate inputSecurityGroups.</summary>
+    [JsonPropertyName("inputSecurityGroupsRefs")]
+    public IList<V1beta1InputSpecInitProviderInputSecurityGroupsRefs>? InputSecurityGroupsRefs { get; set; }
+
+    /// <summary>Selector for a list of InputSecurityGroup in medialive to populate inputSecurityGroups.</summary>
+    [JsonPropertyName("inputSecurityGroupsSelector")]
+    public V1beta1InputSpecInitProviderInputSecurityGroupsSelector? InputSecurityGroupsSelector { get; set; }
 
     /// <summary>A list of the MediaConnect Flows. See Media Connect Flows for more details.</summary>
     [JsonPropertyName("mediaConnectFlows")]

@@ -64,6 +64,62 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSe
     public V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargets
@@ -75,6 +131,14 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTargets
     /// <summary>The array of strings.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
+
+    /// <summary>References to Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesRefs")]
+    public IList<V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesRefs>? ValuesRefs { get; set; }
+
+    /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesSelector")]
+    public V1beta1MaintenanceWindowTaskSpecForProviderTargetsValuesSelector? ValuesSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -133,6 +197,62 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelector
     public V1beta1MaintenanceWindowTaskSpecForProviderTaskArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameter
@@ -144,6 +264,14 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationPa
     /// <summary>The array of strings.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
+
+    /// <summary>References to Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesRefs")]
+    public IList<V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesRefs>? ValuesRefs { get; set; }
+
+    /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesSelector")]
+    public V1beta1MaintenanceWindowTaskSpecForProviderTaskInvocationParametersAutomationParametersParameterValuesSelector? ValuesSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -721,6 +849,62 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnS
     public V1beta1MaintenanceWindowTaskSpecInitProviderServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargets
@@ -732,6 +916,14 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTargets
     /// <summary>The array of strings.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
+
+    /// <summary>References to Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesRefs")]
+    public IList<V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesRefs>? ValuesRefs { get; set; }
+
+    /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesSelector")]
+    public V1beta1MaintenanceWindowTaskSpecInitProviderTargetsValuesSelector? ValuesSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -790,6 +982,62 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelector
     public V1beta1MaintenanceWindowTaskSpecInitProviderTaskArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameter
@@ -801,6 +1049,14 @@ public partial class V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationP
     /// <summary>The array of strings.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
+
+    /// <summary>References to Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesRefs")]
+    public IList<V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesRefs>? ValuesRefs { get; set; }
+
+    /// <summary>Selector for a list of Instance in ec2 to populate values.</summary>
+    [JsonPropertyName("valuesSelector")]
+    public V1beta1MaintenanceWindowTaskSpecInitProviderTaskInvocationParametersAutomationParametersParameterValuesSelector? ValuesSelector { get; set; }
 }
 
 /// <summary></summary>
