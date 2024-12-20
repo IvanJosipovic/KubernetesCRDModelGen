@@ -229,6 +229,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfPolicyDebugEnabled")]
     public bool? BpfPolicyDebugEnabled { get; set; }
 
+    /// <summary>BPFProfiling controls profiling of BPF programs. At the monent, it can be Disabled or Enabled. [Default: Disabled]</summary>
+    [JsonPropertyName("bpfProfiling")]
+    public string? BpfProfiling { get; set; }
+
     /// <summary>BPFRedirectToPeer controls which whether it is allowed to forward straight to the peer side of the workload devices. It is allowed for any host L2 devices by default (L2Only), but it breaks TCP dump on the host side of workload device as it bypasses it on ingress. Value of Enabled also allows redirection from L3 host devices like IPIP tunnel or Wireguard directly to the peer side of the workload's device. This makes redirection faster, however, it breaks tools like tcpdump on the peer side. Use Enabled with caution. [Default: L2Only]</summary>
     [JsonPropertyName("bpfRedirectToPeer")]
     public string? BpfRedirectToPeer { get; set; }
