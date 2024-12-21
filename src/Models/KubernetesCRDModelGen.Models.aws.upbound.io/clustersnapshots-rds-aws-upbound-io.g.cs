@@ -88,7 +88,7 @@ public partial class V1beta1ClusterSnapshotSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
     [JsonPropertyName("sharedAccounts")]
     public IList<string>? SharedAccounts { get; set; }
 
@@ -173,7 +173,7 @@ public partial class V1beta1ClusterSnapshotSpecInitProvider
     [JsonPropertyName("dbClusterSnapshotIdentifier")]
     public string? DbClusterSnapshotIdentifier { get; set; }
 
-    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
     [JsonPropertyName("sharedAccounts")]
     public IList<string>? SharedAccounts { get; set; }
 
@@ -362,7 +362,7 @@ public partial class V1beta1ClusterSnapshotStatusAtProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
     [JsonPropertyName("sharedAccounts")]
     public IList<string>? SharedAccounts { get; set; }
 

@@ -7,10 +7,10 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
-namespace KubernetesCRDModelGen.Models.rds.aws.upbound.io;
+namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierRefPolicy
+public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -21,9 +21,9 @@ public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierRefPolicy
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierRef
+public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -31,12 +31,12 @@ public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1SnapshotSpecForProviderDbInstanceIdentifierRefPolicy? Policy { get; set; }
+    public V1beta1MlflowTrackingServerSpecForProviderRoleArnRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierSelectorPolicy
+public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -47,9 +47,9 @@ public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierSelectorP
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierSelector
+public partial class V1beta1MlflowTrackingServerSpecForProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -61,41 +61,57 @@ public partial class V1beta1SnapshotSpecForProviderDbInstanceIdentifierSelector
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1SnapshotSpecForProviderDbInstanceIdentifierSelectorPolicy? Policy { get; set; }
+    public V1beta1MlflowTrackingServerSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecForProvider
+public partial class V1beta1MlflowTrackingServerSpecForProvider
 {
-    /// <summary>The DB Instance Identifier from which to take the snapshot.</summary>
-    [JsonPropertyName("dbInstanceIdentifier")]
-    public string? DbInstanceIdentifier { get; set; }
+    /// <summary>The S3 URI for a general purpose bucket to use as the MLflow Tracking Server artifact store.</summary>
+    [JsonPropertyName("artifactStoreUri")]
+    public string? ArtifactStoreUri { get; set; }
 
-    /// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
-    [JsonPropertyName("dbInstanceIdentifierRef")]
-    public V1beta1SnapshotSpecForProviderDbInstanceIdentifierRef? DbInstanceIdentifierRef { get; set; }
+    /// <summary>A list of Member Definitions that contains objects that identify the workers that make up the work team.</summary>
+    [JsonPropertyName("automaticModelRegistration")]
+    public bool? AutomaticModelRegistration { get; set; }
 
-    /// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
-    [JsonPropertyName("dbInstanceIdentifierSelector")]
-    public V1beta1SnapshotSpecForProviderDbInstanceIdentifierSelector? DbInstanceIdentifierSelector { get; set; }
+    /// <summary>The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.</summary>
+    [JsonPropertyName("mlflowVersion")]
+    public string? MlflowVersion { get; set; }
 
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
-    [JsonPropertyName("sharedAccounts")]
-    public IList<string>? SharedAccounts { get; set; }
+    /// <summary>The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnRef")]
+    public V1beta1MlflowTrackingServerSpecForProviderRoleArnRef? RoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnSelector")]
+    public V1beta1MlflowTrackingServerSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The size of the tracking server you want to create. You can choose between "Small", "Medium", and "Large". The default MLflow Tracking Server configuration size is "Small". You can choose a size depending on the projected use of the tracking server such as the volume of data logged, number of users, and frequency of use.</summary>
+    [JsonPropertyName("trackingServerSize")]
+    public string? TrackingServerSize { get; set; }
+
+    /// <summary>The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance updates are scheduled. For example: TUE:03:30.</summary>
+    [JsonPropertyName("weeklyMaintenanceWindowStart")]
+    public string? WeeklyMaintenanceWindowStart { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierRefPolicy
+public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -106,9 +122,9 @@ public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierRefPolic
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
+/// <summary>Reference to a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierRef
+public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -116,12 +132,12 @@ public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1SnapshotSpecInitProviderDbInstanceIdentifierRefPolicy? Policy { get; set; }
+    public V1beta1MlflowTrackingServerSpecInitProviderRoleArnRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierSelectorPolicy
+public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -132,9 +148,9 @@ public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierSelector
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
+/// <summary>Selector for a Role in iam to populate roleArn.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierSelector
+public partial class V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -146,37 +162,53 @@ public partial class V1beta1SnapshotSpecInitProviderDbInstanceIdentifierSelector
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1SnapshotSpecInitProviderDbInstanceIdentifierSelectorPolicy? Policy { get; set; }
+    public V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecInitProvider
+public partial class V1beta1MlflowTrackingServerSpecInitProvider
 {
-    /// <summary>The DB Instance Identifier from which to take the snapshot.</summary>
-    [JsonPropertyName("dbInstanceIdentifier")]
-    public string? DbInstanceIdentifier { get; set; }
+    /// <summary>The S3 URI for a general purpose bucket to use as the MLflow Tracking Server artifact store.</summary>
+    [JsonPropertyName("artifactStoreUri")]
+    public string? ArtifactStoreUri { get; set; }
 
-    /// <summary>Reference to a Instance in rds to populate dbInstanceIdentifier.</summary>
-    [JsonPropertyName("dbInstanceIdentifierRef")]
-    public V1beta1SnapshotSpecInitProviderDbInstanceIdentifierRef? DbInstanceIdentifierRef { get; set; }
+    /// <summary>A list of Member Definitions that contains objects that identify the workers that make up the work team.</summary>
+    [JsonPropertyName("automaticModelRegistration")]
+    public bool? AutomaticModelRegistration { get; set; }
 
-    /// <summary>Selector for a Instance in rds to populate dbInstanceIdentifier.</summary>
-    [JsonPropertyName("dbInstanceIdentifierSelector")]
-    public V1beta1SnapshotSpecInitProviderDbInstanceIdentifierSelector? DbInstanceIdentifierSelector { get; set; }
+    /// <summary>The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.</summary>
+    [JsonPropertyName("mlflowVersion")]
+    public string? MlflowVersion { get; set; }
 
-    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
-    [JsonPropertyName("sharedAccounts")]
-    public IList<string>? SharedAccounts { get; set; }
+    /// <summary>The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnRef")]
+    public V1beta1MlflowTrackingServerSpecInitProviderRoleArnRef? RoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate roleArn.</summary>
+    [JsonPropertyName("roleArnSelector")]
+    public V1beta1MlflowTrackingServerSpecInitProviderRoleArnSelector? RoleArnSelector { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The size of the tracking server you want to create. You can choose between "Small", "Medium", and "Large". The default MLflow Tracking Server configuration size is "Small". You can choose a size depending on the projected use of the tracking server such as the volume of data logged, number of users, and frequency of use.</summary>
+    [JsonPropertyName("trackingServerSize")]
+    public string? TrackingServerSize { get; set; }
+
+    /// <summary>The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance updates are scheduled. For example: TUE:03:30.</summary>
+    [JsonPropertyName("weeklyMaintenanceWindowStart")]
+    public string? WeeklyMaintenanceWindowStart { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecProviderConfigRefPolicy
+public partial class V1beta1MlflowTrackingServerSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -189,7 +221,7 @@ public partial class V1beta1SnapshotSpecProviderConfigRefPolicy
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecProviderConfigRef
+public partial class V1beta1MlflowTrackingServerSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -197,12 +229,12 @@ public partial class V1beta1SnapshotSpecProviderConfigRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1SnapshotSpecProviderConfigRefPolicy? Policy { get; set; }
+    public V1beta1MlflowTrackingServerSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolicy
+public partial class V1beta1MlflowTrackingServerSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -215,7 +247,7 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolic
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRef
+public partial class V1beta1MlflowTrackingServerSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -223,12 +255,12 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsToConfigRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1SnapshotSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+    public V1beta1MlflowTrackingServerSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecPublishConnectionDetailsToMetadata
+public partial class V1beta1MlflowTrackingServerSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
     [JsonPropertyName("annotations")]
@@ -245,15 +277,15 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsToMetadata
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecPublishConnectionDetailsTo
+public partial class V1beta1MlflowTrackingServerSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
     [JsonPropertyName("configRef")]
-    public V1beta1SnapshotSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+    public V1beta1MlflowTrackingServerSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
 
     /// <summary>Metadata is the metadata for connection secret.</summary>
     [JsonPropertyName("metadata")]
-    public V1beta1SnapshotSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+    public V1beta1MlflowTrackingServerSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
 
     /// <summary>Name is the name of the connection secret.</summary>
     [JsonPropertyName("name")]
@@ -262,7 +294,7 @@ public partial class V1beta1SnapshotSpecPublishConnectionDetailsTo
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpecWriteConnectionSecretToRef
+public partial class V1beta1MlflowTrackingServerSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
     [JsonPropertyName("name")]
@@ -273,9 +305,9 @@ public partial class V1beta1SnapshotSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
-/// <summary>SnapshotSpec defines the desired state of Snapshot</summary>
+/// <summary>MlflowTrackingServerSpec defines the desired state of MlflowTrackingServer</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotSpec
+public partial class V1beta1MlflowTrackingServerSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
     [JsonPropertyName("deletionPolicy")]
@@ -283,11 +315,11 @@ public partial class V1beta1SnapshotSpec
 
     /// <summary></summary>
     [JsonPropertyName("forProvider")]
-    public V1beta1SnapshotSpecForProvider ForProvider { get; set; }
+    public V1beta1MlflowTrackingServerSpecForProvider ForProvider { get; set; }
 
     /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
     [JsonPropertyName("initProvider")]
-    public V1beta1SnapshotSpecInitProvider? InitProvider { get; set; }
+    public V1beta1MlflowTrackingServerSpecInitProvider? InitProvider { get; set; }
 
     /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
     [JsonPropertyName("managementPolicies")]
@@ -295,96 +327,44 @@ public partial class V1beta1SnapshotSpec
 
     /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
     [JsonPropertyName("providerConfigRef")]
-    public V1beta1SnapshotSpecProviderConfigRef? ProviderConfigRef { get; set; }
+    public V1beta1MlflowTrackingServerSpecProviderConfigRef? ProviderConfigRef { get; set; }
 
     /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
     [JsonPropertyName("publishConnectionDetailsTo")]
-    public V1beta1SnapshotSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+    public V1beta1MlflowTrackingServerSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
 
     /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
     [JsonPropertyName("writeConnectionSecretToRef")]
-    public V1beta1SnapshotSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+    public V1beta1MlflowTrackingServerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotStatusAtProvider
+public partial class V1beta1MlflowTrackingServerStatusAtProvider
 {
-    /// <summary>Specifies the allocated storage size in gigabytes (GB).</summary>
-    [JsonPropertyName("allocatedStorage")]
-    public double? AllocatedStorage { get; set; }
+    /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this MLFlow Tracking Server.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
 
-    /// <summary>Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.</summary>
-    [JsonPropertyName("availabilityZone")]
-    public string? AvailabilityZone { get; set; }
+    /// <summary>The S3 URI for a general purpose bucket to use as the MLflow Tracking Server artifact store.</summary>
+    [JsonPropertyName("artifactStoreUri")]
+    public string? ArtifactStoreUri { get; set; }
 
-    /// <summary>The DB Instance Identifier from which to take the snapshot.</summary>
-    [JsonPropertyName("dbInstanceIdentifier")]
-    public string? DbInstanceIdentifier { get; set; }
+    /// <summary>A list of Member Definitions that contains objects that identify the workers that make up the work team.</summary>
+    [JsonPropertyName("automaticModelRegistration")]
+    public bool? AutomaticModelRegistration { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) for the DB snapshot.</summary>
-    [JsonPropertyName("dbSnapshotArn")]
-    public string? DbSnapshotArn { get; set; }
-
-    /// <summary>Specifies whether the DB snapshot is encrypted.</summary>
-    [JsonPropertyName("encrypted")]
-    public bool? Encrypted { get; set; }
-
-    /// <summary>Specifies the name of the database engine.</summary>
-    [JsonPropertyName("engine")]
-    public string? Engine { get; set; }
-
-    /// <summary>Specifies the version of the database engine.</summary>
-    [JsonPropertyName("engineVersion")]
-    public string? EngineVersion { get; set; }
-
-    /// <summary></summary>
+    /// <summary>The name of the MLFlow Tracking Server.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.</summary>
-    [JsonPropertyName("iops")]
-    public double? Iops { get; set; }
+    /// <summary>The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.</summary>
+    [JsonPropertyName("mlflowVersion")]
+    public string? MlflowVersion { get; set; }
 
-    /// <summary>The ARN for the KMS encryption key.</summary>
-    [JsonPropertyName("kmsKeyId")]
-    public string? KmsKeyId { get; set; }
-
-    /// <summary>License model information for the restored DB instance.</summary>
-    [JsonPropertyName("licenseModel")]
-    public string? LicenseModel { get; set; }
-
-    /// <summary>Provides the option group name for the DB snapshot.</summary>
-    [JsonPropertyName("optionGroupName")]
-    public string? OptionGroupName { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("port")]
-    public double? Port { get; set; }
-
-    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
-    [JsonPropertyName("sharedAccounts")]
-    public IList<string>? SharedAccounts { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("snapshotType")]
-    public string? SnapshotType { get; set; }
-
-    /// <summary>The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.</summary>
-    [JsonPropertyName("sourceDbSnapshotIdentifier")]
-    public string? SourceDbSnapshotIdentifier { get; set; }
-
-    /// <summary>The region that the DB snapshot was created in or copied from.</summary>
-    [JsonPropertyName("sourceRegion")]
-    public string? SourceRegion { get; set; }
-
-    /// <summary>Specifies the status of this DB snapshot.</summary>
-    [JsonPropertyName("status")]
-    public string? Status { get; set; }
-
-    /// <summary>Specifies the storage type associated with DB snapshot.</summary>
-    [JsonPropertyName("storageType")]
-    public string? StorageType { get; set; }
+    /// <summary>The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.</summary>
+    [JsonPropertyName("roleArn")]
+    public string? RoleArn { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -394,14 +374,22 @@ public partial class V1beta1SnapshotStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Provides the VPC ID associated with the DB snapshot.</summary>
-    [JsonPropertyName("vpcId")]
-    public string? VpcId { get; set; }
+    /// <summary>The size of the tracking server you want to create. You can choose between "Small", "Medium", and "Large". The default MLflow Tracking Server configuration size is "Small". You can choose a size depending on the projected use of the tracking server such as the volume of data logged, number of users, and frequency of use.</summary>
+    [JsonPropertyName("trackingServerSize")]
+    public string? TrackingServerSize { get; set; }
+
+    /// <summary>The URL to connect to the MLflow user interface for the described tracking server.</summary>
+    [JsonPropertyName("trackingServerUrl")]
+    public string? TrackingServerUrl { get; set; }
+
+    /// <summary>The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance updates are scheduled. For example: TUE:03:30.</summary>
+    [JsonPropertyName("weeklyMaintenanceWindowStart")]
+    public string? WeeklyMaintenanceWindowStart { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotStatusConditions
+public partial class V1beta1MlflowTrackingServerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -428,32 +416,32 @@ public partial class V1beta1SnapshotStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>SnapshotStatus defines the observed state of Snapshot.</summary>
+/// <summary>MlflowTrackingServerStatus defines the observed state of MlflowTrackingServer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SnapshotStatus
+public partial class V1beta1MlflowTrackingServerStatus
 {
     /// <summary></summary>
     [JsonPropertyName("atProvider")]
-    public V1beta1SnapshotStatusAtProvider? AtProvider { get; set; }
+    public V1beta1MlflowTrackingServerStatusAtProvider? AtProvider { get; set; }
 
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1SnapshotStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1MlflowTrackingServerStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Snapshot is the Schema for the Snapshots API. Manages an RDS database instance snapshot.</summary>
+/// <summary>MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker MLFlow Tracking Server resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1Snapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SnapshotSpec>, IStatus<V1beta1SnapshotStatus>
+public partial class V1beta1MlflowTrackingServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MlflowTrackingServerSpec>, IStatus<V1beta1MlflowTrackingServerStatus>
 {
     public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "Snapshot";
-    public const string KubeGroup = "rds.aws.upbound.io";
-    public const string KubePluralName = "snapshots";
+    public const string KubeKind = "MlflowTrackingServer";
+    public const string KubeGroup = "sagemaker.aws.upbound.io";
+    public const string KubePluralName = "mlflowtrackingservers";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
@@ -466,11 +454,11 @@ public partial class V1beta1Snapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>SnapshotSpec defines the desired state of Snapshot</summary>
+    /// <summary>MlflowTrackingServerSpec defines the desired state of MlflowTrackingServer</summary>
     [JsonPropertyName("spec")]
-    public V1beta1SnapshotSpec Spec { get; set; }
+    public V1beta1MlflowTrackingServerSpec Spec { get; set; }
 
-    /// <summary>SnapshotStatus defines the observed state of Snapshot.</summary>
+    /// <summary>MlflowTrackingServerStatus defines the observed state of MlflowTrackingServer.</summary>
     [JsonPropertyName("status")]
-    public V1beta1SnapshotStatus? Status { get; set; }
+    public V1beta1MlflowTrackingServerStatus? Status { get; set; }
 }

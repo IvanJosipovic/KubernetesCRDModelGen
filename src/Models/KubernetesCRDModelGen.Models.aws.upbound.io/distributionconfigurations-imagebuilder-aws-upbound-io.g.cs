@@ -158,6 +158,27 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionConfigurationSpecForProviderDistributionS3ExportConfiguration
+{
+    /// <summary>The disk image format of the exported image (RAW, VHD, or VMDK)</summary>
+    [JsonPropertyName("diskImageFormat")]
+    public string? DiskImageFormat { get; set; }
+
+    /// <summary>The name of the IAM role to use for exporting.</summary>
+    [JsonPropertyName("roleName")]
+    public string? RoleName { get; set; }
+
+    /// <summary>The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.</summary>
+    [JsonPropertyName("s3Bucket")]
+    public string? S3Bucket { get; set; }
+
+    /// <summary>The prefix for the exported image.</summary>
+    [JsonPropertyName("s3Prefix")]
+    public string? S3Prefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -183,6 +204,10 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     /// <summary>AWS Region for the distribution.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
+
+    /// <summary>Configuration block with S3 export settings. Detailed below.</summary>
+    [JsonPropertyName("s3ExportConfiguration")]
+    public IList<V1beta1DistributionConfigurationSpecForProviderDistributionS3ExportConfiguration>? S3ExportConfiguration { get; set; }
 }
 
 /// <summary></summary>
@@ -360,6 +385,27 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionS3ExportConfiguration
+{
+    /// <summary>The disk image format of the exported image (RAW, VHD, or VMDK)</summary>
+    [JsonPropertyName("diskImageFormat")]
+    public string? DiskImageFormat { get; set; }
+
+    /// <summary>The name of the IAM role to use for exporting.</summary>
+    [JsonPropertyName("roleName")]
+    public string? RoleName { get; set; }
+
+    /// <summary>The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.</summary>
+    [JsonPropertyName("s3Bucket")]
+    public string? S3Bucket { get; set; }
+
+    /// <summary>The prefix for the exported image.</summary>
+    [JsonPropertyName("s3Prefix")]
+    public string? S3Prefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -381,6 +427,10 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     /// <summary>Set of Amazon Resource Names (ARNs) of License Manager License Configurations.</summary>
     [JsonPropertyName("licenseConfigurationArns")]
     public IList<string>? LicenseConfigurationArns { get; set; }
+
+    /// <summary>Configuration block with S3 export settings. Detailed below.</summary>
+    [JsonPropertyName("s3ExportConfiguration")]
+    public IList<V1beta1DistributionConfigurationSpecInitProviderDistributionS3ExportConfiguration>? S3ExportConfiguration { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -686,6 +736,27 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionS3ExportConfiguration
+{
+    /// <summary>The disk image format of the exported image (RAW, VHD, or VMDK)</summary>
+    [JsonPropertyName("diskImageFormat")]
+    public string? DiskImageFormat { get; set; }
+
+    /// <summary>The name of the IAM role to use for exporting.</summary>
+    [JsonPropertyName("roleName")]
+    public string? RoleName { get; set; }
+
+    /// <summary>The name of the S3 bucket to store the exported image in. The bucket needs to exist before the export configuration is created.</summary>
+    [JsonPropertyName("s3Bucket")]
+    public string? S3Bucket { get; set; }
+
+    /// <summary>The prefix for the exported image.</summary>
+    [JsonPropertyName("s3Prefix")]
+    public string? S3Prefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -711,6 +782,10 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     /// <summary>AWS Region for the distribution.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
+
+    /// <summary>Configuration block with S3 export settings. Detailed below.</summary>
+    [JsonPropertyName("s3ExportConfiguration")]
+    public IList<V1beta1DistributionConfigurationStatusAtProviderDistributionS3ExportConfiguration>? S3ExportConfiguration { get; set; }
 }
 
 /// <summary></summary>

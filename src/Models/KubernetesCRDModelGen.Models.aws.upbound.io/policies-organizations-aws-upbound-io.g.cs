@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.organizations.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProvider
 {
-    /// <summary>The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the Service Control Policy Syntax documentation and for more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.</summary>
+    /// <summary>The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the RCP syntax, see the Resource Control Policy Syntax documentation. For more information about the SCP syntax, see the Service Control Policy Syntax documentation. For more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.</summary>
     [JsonPropertyName("content")]
     public string? Content { get; set; }
 
@@ -36,7 +36,7 @@ public partial class V1beta1PolicySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.</summary>
+    /// <summary>The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY (RCP), SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -45,7 +45,7 @@ public partial class V1beta1PolicySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProvider
 {
-    /// <summary>The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the Service Control Policy Syntax documentation and for more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.</summary>
+    /// <summary>The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the RCP syntax, see the Resource Control Policy Syntax documentation. For more information about the SCP syntax, see the Service Control Policy Syntax documentation. For more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.</summary>
     [JsonPropertyName("content")]
     public string? Content { get; set; }
 
@@ -65,7 +65,7 @@ public partial class V1beta1PolicySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.</summary>
+    /// <summary>The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY (RCP), SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -210,7 +210,7 @@ public partial class V1beta1PolicyStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the Service Control Policy Syntax documentation and for more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.</summary>
+    /// <summary>The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the RCP syntax, see the Resource Control Policy Syntax documentation. For more information about the SCP syntax, see the Service Control Policy Syntax documentation. For more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.</summary>
     [JsonPropertyName("content")]
     public string? Content { get; set; }
 
@@ -238,7 +238,7 @@ public partial class V1beta1PolicyStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.</summary>
+    /// <summary>The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY (RCP), SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

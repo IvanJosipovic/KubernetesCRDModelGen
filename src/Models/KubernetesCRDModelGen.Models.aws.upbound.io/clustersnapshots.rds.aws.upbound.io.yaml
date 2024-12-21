@@ -180,7 +180,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   sharedAccounts:
-                    description: List of AWS Account ids to share snapshot with, use all to make snaphot public.
+                    description: List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.
                     items:
                       type: string
                     type: array
@@ -309,7 +309,7 @@ spec:
                     description: The Identifier for the snapshot.
                     type: string
                   sharedAccounts:
-                    description: List of AWS Account ids to share snapshot with, use all to make snaphot public.
+                    description: List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.
                     items:
                       type: string
                     type: array
@@ -572,7 +572,7 @@ spec:
                     description: Port that the DB cluster was listening on at the time of the snapshot.
                     type: number
                   sharedAccounts:
-                    description: List of AWS Account ids to share snapshot with, use all to make snaphot public.
+                    description: List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.
                     items:
                       type: string
                     type: array

@@ -21,7 +21,7 @@ public partial class V1NetworkPolicySpecEgressDestinationServiceAccounts
     public string? Selector { get; set; }
 }
 
-/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressDestinationServices
 {
@@ -38,7 +38,7 @@ public partial class V1NetworkPolicySpecEgressDestinationServices
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressDestination
 {
-    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
+    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.  For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.  For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.  For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
     public string? NamespaceSelector { get; set; }
 
@@ -58,11 +58,11 @@ public partial class V1NetworkPolicySpecEgressDestination
     [JsonPropertyName("notSelector")]
     public string? NotSelector { get; set; }
 
-    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.   Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
+    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.  Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
     [JsonPropertyName("ports")]
     public IList<IntstrIntOrString>? Ports { get; set; }
 
-    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.   Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:   	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".   	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".   The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
+    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.  Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:  	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".  	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".  The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
@@ -70,7 +70,7 @@ public partial class V1NetworkPolicySpecEgressDestination
     [JsonPropertyName("serviceAccounts")]
     public V1NetworkPolicySpecEgressDestinationServiceAccounts? ServiceAccounts { get; set; }
 
-    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecEgressDestinationServices? Services { get; set; }
 }
@@ -149,7 +149,7 @@ public partial class V1NetworkPolicySpecEgressSourceServiceAccounts
     public string? Selector { get; set; }
 }
 
-/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressSourceServices
 {
@@ -166,7 +166,7 @@ public partial class V1NetworkPolicySpecEgressSourceServices
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgressSource
 {
-    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
+    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.  For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.  For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.  For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
     public string? NamespaceSelector { get; set; }
 
@@ -186,11 +186,11 @@ public partial class V1NetworkPolicySpecEgressSource
     [JsonPropertyName("notSelector")]
     public string? NotSelector { get; set; }
 
-    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.   Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
+    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.  Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
     [JsonPropertyName("ports")]
     public IList<IntstrIntOrString>? Ports { get; set; }
 
-    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.   Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:   	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".   	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".   The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
+    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.  Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:  	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".  	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".  The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
@@ -198,12 +198,12 @@ public partial class V1NetworkPolicySpecEgressSource
     [JsonPropertyName("serviceAccounts")]
     public V1NetworkPolicySpecEgressSourceServiceAccounts? ServiceAccounts { get; set; }
 
-    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecEgressSourceServices? Services { get; set; }
 }
 
-/// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.   Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
+/// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.  Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecEgress
 {
@@ -239,7 +239,7 @@ public partial class V1NetworkPolicySpecEgress
     [JsonPropertyName("notProtocol")]
     public IntstrIntOrString? NotProtocol { get; set; }
 
-    /// <summary>Protocol is an optional field that restricts the rule to only apply to traffic of a specific IP protocol. Required if any of the EntityRules contain Ports (because ports only apply to certain protocols).   Must be one of these string values: "TCP", "UDP", "ICMP", "ICMPv6", "SCTP", "UDPLite" or an integer in the range 1-255.</summary>
+    /// <summary>Protocol is an optional field that restricts the rule to only apply to traffic of a specific IP protocol. Required if any of the EntityRules contain Ports (because ports only apply to certain protocols).  Must be one of these string values: "TCP", "UDP", "ICMP", "ICMPv6", "SCTP", "UDPLite" or an integer in the range 1-255.</summary>
     [JsonPropertyName("protocol")]
     public IntstrIntOrString? Protocol { get; set; }
 
@@ -261,7 +261,7 @@ public partial class V1NetworkPolicySpecIngressDestinationServiceAccounts
     public string? Selector { get; set; }
 }
 
-/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressDestinationServices
 {
@@ -278,7 +278,7 @@ public partial class V1NetworkPolicySpecIngressDestinationServices
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressDestination
 {
-    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
+    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.  For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.  For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.  For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
     public string? NamespaceSelector { get; set; }
 
@@ -298,11 +298,11 @@ public partial class V1NetworkPolicySpecIngressDestination
     [JsonPropertyName("notSelector")]
     public string? NotSelector { get; set; }
 
-    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.   Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
+    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.  Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
     [JsonPropertyName("ports")]
     public IList<IntstrIntOrString>? Ports { get; set; }
 
-    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.   Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:   	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".   	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".   The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
+    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.  Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:  	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".  	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".  The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
@@ -310,7 +310,7 @@ public partial class V1NetworkPolicySpecIngressDestination
     [JsonPropertyName("serviceAccounts")]
     public V1NetworkPolicySpecIngressDestinationServiceAccounts? ServiceAccounts { get; set; }
 
-    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecIngressDestinationServices? Services { get; set; }
 }
@@ -389,7 +389,7 @@ public partial class V1NetworkPolicySpecIngressSourceServiceAccounts
     public string? Selector { get; set; }
 }
 
-/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+/// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressSourceServices
 {
@@ -406,7 +406,7 @@ public partial class V1NetworkPolicySpecIngressSourceServices
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngressSource
 {
-    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.   For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.   For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.   For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
+    /// <summary>NamespaceSelector is an optional field that contains a selector expression. Only traffic that originates from (or terminates at) endpoints within the selected namespaces will be matched. When both NamespaceSelector and another selector are defined on the same rule, then only workload endpoints that are matched by both selectors will be selected by the rule.  For NetworkPolicy, an empty NamespaceSelector implies that the Selector is limited to selecting only workload endpoints in the same namespace as the NetworkPolicy.  For NetworkPolicy, `global()` NamespaceSelector implies that the Selector is limited to selecting only GlobalNetworkSet or HostEndpoint.  For GlobalNetworkPolicy, an empty NamespaceSelector implies the Selector applies to workload endpoints across all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
     public string? NamespaceSelector { get; set; }
 
@@ -426,11 +426,11 @@ public partial class V1NetworkPolicySpecIngressSource
     [JsonPropertyName("notSelector")]
     public string? NotSelector { get; set; }
 
-    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.   Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
+    /// <summary>Ports is an optional field that restricts the rule to only apply to traffic that has a source (destination) port that matches one of these ranges/values. This value is a list of integers or strings that represent ranges of ports.  Since only some protocols have ports, if any ports are specified it requires the Protocol match in the Rule to be set to "TCP" or "UDP".</summary>
     [JsonPropertyName("ports")]
     public IList<IntstrIntOrString>? Ports { get; set; }
 
-    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.   Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:   	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".   	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".   The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
+    /// <summary>Selector is an optional field that contains a selector expression (see Policy for sample syntax).  Only traffic that originates from (terminates at) endpoints matching the selector will be matched.  Note that: in addition to the negated version of the Selector (see NotSelector below), the selector expression syntax itself supports negation.  The two types of negation are subtly different. One negates the set of matched endpoints, the other negates the whole match:  	Selector = "!has(my_label)" matches packets that are from other Calico-controlled 	endpoints that do not have the label "my_label".  	NotSelector = "has(my_label)" matches packets that are not from Calico-controlled 	endpoints that do have the label "my_label".  The effect is that the latter will accept packets from non-Calico sources whereas the former is limited to packets from Calico-controlled endpoints.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
@@ -438,12 +438,12 @@ public partial class V1NetworkPolicySpecIngressSource
     [JsonPropertyName("serviceAccounts")]
     public V1NetworkPolicySpecIngressSourceServiceAccounts? ServiceAccounts { get; set; }
 
-    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.   Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.   Ports and NotPorts can only be specified with Services on ingress rules.</summary>
+    /// <summary>Services is an optional field that contains options for matching Kubernetes Services. If specified, only traffic that originates from or terminates at endpoints within the selected service(s) will be matched, and only to/from each endpoint's port.  Services cannot be specified on the same rule as Selector, NotSelector, NamespaceSelector, Nets, NotNets or ServiceAccounts.  Ports and NotPorts can only be specified with Services on ingress rules.</summary>
     [JsonPropertyName("services")]
     public V1NetworkPolicySpecIngressSourceServices? Services { get; set; }
 }
 
-/// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.   Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
+/// <summary>A Rule encapsulates a set of match criteria and an action.  Both selector-based security Policy and security Profiles reference rules - separated out as a list of rules for both ingress and egress packet matching.  Each positive match criteria has a negated version, prefixed with "Not". All the match criteria within a rule must be satisfied for a packet to match. A single rule can contain the positive and negative version of a match and both must be satisfied for the rule to match.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkPolicySpecIngress
 {
@@ -479,7 +479,7 @@ public partial class V1NetworkPolicySpecIngress
     [JsonPropertyName("notProtocol")]
     public IntstrIntOrString? NotProtocol { get; set; }
 
-    /// <summary>Protocol is an optional field that restricts the rule to only apply to traffic of a specific IP protocol. Required if any of the EntityRules contain Ports (because ports only apply to certain protocols).   Must be one of these string values: "TCP", "UDP", "ICMP", "ICMPv6", "SCTP", "UDPLite" or an integer in the range 1-255.</summary>
+    /// <summary>Protocol is an optional field that restricts the rule to only apply to traffic of a specific IP protocol. Required if any of the EntityRules contain Ports (because ports only apply to certain protocols).  Must be one of these string values: "TCP", "UDP", "ICMP", "ICMPv6", "SCTP", "UDPLite" or an integer in the range 1-255.</summary>
     [JsonPropertyName("protocol")]
     public IntstrIntOrString? Protocol { get; set; }
 
@@ -504,11 +504,11 @@ public partial class V1NetworkPolicySpec
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
-    /// <summary>PerformanceHints contains a list of hints to Calico's policy engine to help process the policy more efficiently.  Hints never change the enforcement behaviour of the policy.   Currently, the only available hint is "AssumeNeededOnEveryNode".  When that hint is set on a policy, Felix will act as if the policy matches a local endpoint even if it does not. This is useful for "preloading" any large static policies that are known to be used on every node. If the policy is _not_ used on a particular node then the work done to preload the policy (and to maintain it) is wasted.</summary>
+    /// <summary>PerformanceHints contains a list of hints to Calico's policy engine to help process the policy more efficiently.  Hints never change the enforcement behaviour of the policy.  Currently, the only available hint is "AssumeNeededOnEveryNode".  When that hint is set on a policy, Felix will act as if the policy matches a local endpoint even if it does not. This is useful for "preloading" any large static policies that are known to be used on every node. If the policy is _not_ used on a particular node then the work done to preload the policy (and to maintain it) is wasted.</summary>
     [JsonPropertyName("performanceHints")]
     public IList<string>? PerformanceHints { get; set; }
 
-    /// <summary>The selector is an expression used to pick out the endpoints that the policy should be applied to.   Selector expressions follow this syntax:   	label == "string_literal"  -&gt;  comparison, e.g. my_label == "foo bar" 	label != "string_literal"   -&gt;  not equal; also matches if label is not present 	label in { "a", "b", "c", ... }  -&gt;  true if the value of label X is one of "a", "b", "c" 	label not in { "a", "b", "c", ... }  -&gt;  true if the value of label X is not one of "a", "b", "c" 	has(label_name)  -&gt; True if that label is present 	! expr -&gt; negation of expr 	expr &amp;&amp; expr  -&gt; Short-circuit and 	expr || expr  -&gt; Short-circuit or 	( expr ) -&gt; parens for grouping 	all() or the empty selector -&gt; matches all endpoints.   Label names are allowed to contain alphanumerics, -, _ and /. String literals are more permissive but they do not support escape characters.   Examples (with made-up labels):   	type == "webserver" &amp;&amp; deployment == "prod" 	type in {"frontend", "backend"} 	deployment != "dev" 	! has(label_name)</summary>
+    /// <summary>The selector is an expression used to pick out the endpoints that the policy should be applied to.  Selector expressions follow this syntax:  	label == "string_literal"  -&gt;  comparison, e.g. my_label == "foo bar" 	label != "string_literal"   -&gt;  not equal; also matches if label is not present 	label in { "a", "b", "c", ... }  -&gt;  true if the value of label X is one of "a", "b", "c" 	label not in { "a", "b", "c", ... }  -&gt;  true if the value of label X is not one of "a", "b", "c" 	has(label_name)  -&gt; True if that label is present 	! expr -&gt; negation of expr 	expr &amp;&amp; expr  -&gt; Short-circuit and 	expr || expr  -&gt; Short-circuit or 	( expr ) -&gt; parens for grouping 	all() or the empty selector -&gt; matches all endpoints.  Label names are allowed to contain alphanumerics, -, _ and /. String literals are more permissive but they do not support escape characters.  Examples (with made-up labels):  	type == "webserver" &amp;&amp; deployment == "prod" 	type in {"frontend", "backend"} 	deployment != "dev" 	! has(label_name)</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
@@ -520,7 +520,7 @@ public partial class V1NetworkPolicySpec
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
 
-    /// <summary>Types indicates whether this policy applies to ingress, or to egress, or to both.  When not explicitly specified (and so the value on creation is empty or nil), Calico defaults Types according to what Ingress and Egress are present in the policy.  The default is:   - [ PolicyTypeIngress ], if there are no Egress rules (including the case where there are   also no Ingress rules)   - [ PolicyTypeEgress ], if there are Egress rules but no Ingress rules   - [ PolicyTypeIngress, PolicyTypeEgress ], if there are both Ingress and Egress rules.   When the policy is read back again, Types will always be one of these values, never empty or nil.</summary>
+    /// <summary>Types indicates whether this policy applies to ingress, or to egress, or to both.  When not explicitly specified (and so the value on creation is empty or nil), Calico defaults Types according to what Ingress and Egress are present in the policy.  The default is:  - [ PolicyTypeIngress ], if there are no Egress rules (including the case where there are   also no Ingress rules)  - [ PolicyTypeEgress ], if there are Egress rules but no Ingress rules  - [ PolicyTypeIngress, PolicyTypeEgress ], if there are both Ingress and Egress rules.  When the policy is read back again, Types will always be one of these values, never empty or nil.</summary>
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
 }

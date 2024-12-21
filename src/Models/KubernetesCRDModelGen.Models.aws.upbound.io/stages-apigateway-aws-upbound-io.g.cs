@@ -25,6 +25,10 @@ public partial class V1beta1StageSpecForProviderAccessLogSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StageSpecForProviderCanarySettings
 {
+    /// <summary>ID of the deployment that the stage points to</summary>
+    [JsonPropertyName("deploymentId")]
+    public string? DeploymentId { get; set; }
+
     /// <summary>Percent 0.0 - 100.0 of traffic to divert to the canary deployment.</summary>
     [JsonPropertyName("percentTraffic")]
     public double? PercentTraffic { get; set; }
@@ -244,6 +248,10 @@ public partial class V1beta1StageSpecInitProviderAccessLogSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StageSpecInitProviderCanarySettings
 {
+    /// <summary>ID of the deployment that the stage points to</summary>
+    [JsonPropertyName("deploymentId")]
+    public string? DeploymentId { get; set; }
+
     /// <summary>Percent 0.0 - 100.0 of traffic to divert to the canary deployment.</summary>
     [JsonPropertyName("percentTraffic")]
     public double? PercentTraffic { get; set; }
@@ -591,6 +599,10 @@ public partial class V1beta1StageStatusAtProviderAccessLogSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StageStatusAtProviderCanarySettings
 {
+    /// <summary>ID of the deployment that the stage points to</summary>
+    [JsonPropertyName("deploymentId")]
+    public string? DeploymentId { get; set; }
+
     /// <summary>Percent 0.0 - 100.0 of traffic to divert to the canary deployment.</summary>
     [JsonPropertyName("percentTraffic")]
     public double? PercentTraffic { get; set; }

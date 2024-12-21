@@ -105,7 +105,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfConnectTimeLoadBalancing")]
     public string? BpfConnectTimeLoadBalancing { get; set; }
 
-    /// <summary>BPFConnectTimeLoadBalancingEnabled when in BPF mode, controls whether Felix installs the connection-time load balancer.  The connect-time load balancer is required for the host to be able to reach Kubernetes services and it improves the performance of pod-to-service connections.  The only reason to disable it is for debugging purposes.   Deprecated: Use BPFConnectTimeLoadBalancing [Default: true]</summary>
+    /// <summary>BPFConnectTimeLoadBalancingEnabled when in BPF mode, controls whether Felix installs the connection-time load balancer.  The connect-time load balancer is required for the host to be able to reach Kubernetes services and it improves the performance of pod-to-service connections.  The only reason to disable it is for debugging purposes.  Deprecated: Use BPFConnectTimeLoadBalancing [Default: true]</summary>
     [JsonPropertyName("bpfConnectTimeLoadBalancingEnabled")]
     public bool? BpfConnectTimeLoadBalancingEnabled { get; set; }
 
@@ -181,7 +181,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfL3IfacePattern")]
     public string? BpfL3IfacePattern { get; set; }
 
-    /// <summary>BPFLogFilters is a map of key=values where the value is a pcap filter expression and the key is an interface name with 'all' denoting all interfaces, 'weps' all workload endpoints and 'heps' all host endpoints.   When specified as an env var, it accepts a comma-separated list of key=values. [Default: unset - means all debug logs are emitted]</summary>
+    /// <summary>BPFLogFilters is a map of key=values where the value is a pcap filter expression and the key is an interface name with 'all' denoting all interfaces, 'weps' all workload endpoints and 'heps' all host endpoints.  When specified as an env var, it accepts a comma-separated list of key=values. [Default: unset - means all debug logs are emitted]</summary>
     [JsonPropertyName("bpfLogFilters")]
     public IDictionary<string, string>? BpfLogFilters { get; set; }
 
@@ -228,6 +228,10 @@ public partial class V1FelixConfigurationSpec
     /// <summary>BPFPolicyDebugEnabled when true, Felix records detailed information about the BPF policy programs, which can be examined with the calico-bpf command-line tool.</summary>
     [JsonPropertyName("bpfPolicyDebugEnabled")]
     public bool? BpfPolicyDebugEnabled { get; set; }
+
+    /// <summary>BPFProfiling controls profiling of BPF programs. At the monent, it can be Disabled or Enabled. [Default: Disabled]</summary>
+    [JsonPropertyName("bpfProfiling")]
+    public string? BpfProfiling { get; set; }
 
     /// <summary>BPFRedirectToPeer controls which whether it is allowed to forward straight to the peer side of the workload devices. It is allowed for any host L2 devices by default (L2Only), but it breaks TCP dump on the host side of workload device as it bypasses it on ingress. Value of Enabled also allows redirection from L3 host devices like IPIP tunnel or Wireguard directly to the peer side of the workload's device. This makes redirection faster, however, it breaks tools like tcpdump on the peer side. Use Enabled with caution. [Default: L2Only]</summary>
     [JsonPropertyName("bpfRedirectToPeer")]
@@ -301,7 +305,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("endpointReportingEnabled")]
     public bool? EndpointReportingEnabled { get; set; }
 
-    /// <summary>EndpointStatusPathPrefix is the path to the directory where endpoint status will be written. Endpoint status file reporting is disabled if field is left empty.   Chosen directory should match the directory used by the CNI plugin for PodStartupDelay. [Default: ""]</summary>
+    /// <summary>EndpointStatusPathPrefix is the path to the directory where endpoint status will be written. Endpoint status file reporting is disabled if field is left empty.  Chosen directory should match the directory used by the CNI plugin for PodStartupDelay. [Default: ""]</summary>
     [JsonPropertyName("endpointStatusPathPrefix")]
     public string? EndpointStatusPathPrefix { get; set; }
 
@@ -333,15 +337,15 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("genericXDPEnabled")]
     public bool? GenericXDPEnabled { get; set; }
 
-    /// <summary>GoGCThreshold Sets the Go runtime's garbage collection threshold.  I.e. the percentage that the heap is allowed to grow before garbage collection is triggered.  In general, doubling the value halves the CPU time spent doing GC, but it also doubles peak GC memory overhead.  A special value of -1 can be used to disable GC entirely; this should only be used in conjunction with the GoMemoryLimitMB setting.   This setting is overridden by the GOGC environment variable.   [Default: 40]</summary>
+    /// <summary>GoGCThreshold Sets the Go runtime's garbage collection threshold.  I.e. the percentage that the heap is allowed to grow before garbage collection is triggered.  In general, doubling the value halves the CPU time spent doing GC, but it also doubles peak GC memory overhead.  A special value of -1 can be used to disable GC entirely; this should only be used in conjunction with the GoMemoryLimitMB setting.  This setting is overridden by the GOGC environment variable.  [Default: 40]</summary>
     [JsonPropertyName("goGCThreshold")]
     public int? GoGCThreshold { get; set; }
 
-    /// <summary>GoMaxProcs sets the maximum number of CPUs that the Go runtime will use concurrently.  A value of -1 means "use the system default"; typically the number of real CPUs on the system.   this setting is overridden by the GOMAXPROCS environment variable.   [Default: -1]</summary>
+    /// <summary>GoMaxProcs sets the maximum number of CPUs that the Go runtime will use concurrently.  A value of -1 means "use the system default"; typically the number of real CPUs on the system.  this setting is overridden by the GOMAXPROCS environment variable.  [Default: -1]</summary>
     [JsonPropertyName("goMaxProcs")]
     public int? GoMaxProcs { get; set; }
 
-    /// <summary>GoMemoryLimitMB sets a (soft) memory limit for the Go runtime in MB.  The Go runtime will try to keep its memory usage under the limit by triggering GC as needed.  To avoid thrashing, it will exceed the limit if GC starts to take more than 50% of the process's CPU time.  A value of -1 disables the memory limit.   Note that the memory limit, if used, must be considerably less than any hard resource limit set at the container or pod level.  This is because felix is not the only process that must run in the container or pod.   This setting is overridden by the GOMEMLIMIT environment variable.   [Default: -1]</summary>
+    /// <summary>GoMemoryLimitMB sets a (soft) memory limit for the Go runtime in MB.  The Go runtime will try to keep its memory usage under the limit by triggering GC as needed.  To avoid thrashing, it will exceed the limit if GC starts to take more than 50% of the process's CPU time.  A value of -1 disables the memory limit.  Note that the memory limit, if used, must be considerably less than any hard resource limit set at the container or pod level.  This is because felix is not the only process that must run in the container or pod.  This setting is overridden by the GOMEMLIMIT environment variable.  [Default: -1]</summary>
     [JsonPropertyName("goMemoryLimitMB")]
     public int? GoMemoryLimitMB { get; set; }
 
@@ -389,7 +393,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("ipsetsRefreshInterval")]
     public string? IpsetsRefreshInterval { get; set; }
 
-    /// <summary>IptablesBackend controls which backend of iptables will be used. The default is `Auto`.   Warning: changing this on a running system can leave "orphaned" rules in the "other" backend. These should be cleaned up to avoid confusing interactions.</summary>
+    /// <summary>IptablesBackend controls which backend of iptables will be used. The default is `Auto`.  Warning: changing this on a running system can leave "orphaned" rules in the "other" backend. These should be cleaned up to avoid confusing interactions.</summary>
     [JsonPropertyName("iptablesBackend")]
     public string? IptablesBackend { get; set; }
 
@@ -409,7 +413,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("iptablesLockProbeInterval")]
     public string? IptablesLockProbeInterval { get; set; }
 
-    /// <summary>IptablesLockTimeout is the time that Felix itself will wait for the iptables lock (rather than delegating the lock handling to the `iptables` command).   Deprecated: `iptables-restore` v1.8+ always takes the lock, so enabling this feature results in deadlock. [Default: 0s disabled]</summary>
+    /// <summary>IptablesLockTimeout is the time that Felix itself will wait for the iptables lock (rather than delegating the lock handling to the `iptables` command).  Deprecated: `iptables-restore` v1.8+ always takes the lock, so enabling this feature results in deadlock. [Default: 0s disabled]</summary>
     [JsonPropertyName("iptablesLockTimeout")]
     public string? IptablesLockTimeout { get; set; }
 

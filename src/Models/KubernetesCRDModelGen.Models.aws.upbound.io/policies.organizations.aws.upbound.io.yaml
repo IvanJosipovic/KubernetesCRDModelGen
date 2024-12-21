@@ -85,7 +85,16 @@ spec:
               forProvider:
                 properties:
                   content:
-                    description: The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the Service Control Policy Syntax documentation and for more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.
+                    description: >-
+                      The policy content to add to the new policy.
+
+                      For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles.
+
+                      For more information about the RCP syntax, see the Resource Control Policy Syntax documentation.
+
+                      For more information about the SCP syntax, see the Service Control Policy Syntax documentation.
+
+                      For more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.
                     type: string
                   description:
                     description: A description to assign to the policy.
@@ -106,7 +115,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.
+                    description: The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY (RCP), SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.
                     type: string
                 required:
                 - region
@@ -134,7 +143,16 @@ spec:
                   autoscaler.
                 properties:
                   content:
-                    description: The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the Service Control Policy Syntax documentation and for more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.
+                    description: >-
+                      The policy content to add to the new policy.
+
+                      For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles.
+
+                      For more information about the RCP syntax, see the Resource Control Policy Syntax documentation.
+
+                      For more information about the SCP syntax, see the Service Control Policy Syntax documentation.
+
+                      For more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.
                     type: string
                   description:
                     description: A description to assign to the policy.
@@ -152,7 +170,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.
+                    description: The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY (RCP), SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.
                     type: string
                 type: object
               managementPolicies:
@@ -377,7 +395,16 @@ spec:
                     description: Amazon Resource Name (ARN) of the policy.
                     type: string
                   content:
-                    description: The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the Service Control Policy Syntax documentation and for more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.
+                    description: >-
+                      The policy content to add to the new policy.
+
+                      For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles.
+
+                      For more information about the RCP syntax, see the Resource Control Policy Syntax documentation.
+
+                      For more information about the SCP syntax, see the Service Control Policy Syntax documentation.
+
+                      For more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.
                     type: string
                   description:
                     description: A description to assign to the policy.
@@ -404,7 +431,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.
+                    description: The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, RESOURCE_CONTROL_POLICY (RCP), SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.
                     type: string
                 type: object
               conditions:

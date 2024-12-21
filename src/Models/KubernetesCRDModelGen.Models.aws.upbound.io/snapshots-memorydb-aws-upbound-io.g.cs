@@ -442,7 +442,11 @@ public partial class V1beta1SnapshotStatusAtProviderClusterConfiguration
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Version number of the Redis engine used by the cluster.</summary>
+    /// <summary>The engine that will run on cluster nodes.</summary>
+    [JsonPropertyName("engine")]
+    public string? Engine { get; set; }
+
+    /// <summary>Version number of the engine used by the cluster.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 

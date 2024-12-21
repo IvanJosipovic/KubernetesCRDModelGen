@@ -3,18 +3,18 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.14.0
-  name: deployments.apigateway.aws.upbound.io
+  name: mlflowtrackingservers.sagemaker.aws.upbound.io
 spec:
-  group: apigateway.aws.upbound.io
+  group: sagemaker.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - aws
-    kind: Deployment
-    listKind: DeploymentList
-    plural: deployments
-    singular: deployment
+    kind: MlflowTrackingServer
+    listKind: MlflowTrackingServerList
+    plural: mlflowtrackingservers
+    singular: mlflowtrackingserver
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Deployment is the Schema for the Deployments API. Manages an API Gateway REST Deployment.
+        description: MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker MLFlow Tracking Server resource.
         properties:
           apiVersion:
             description: >-
@@ -60,7 +60,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DeploymentSpec defines the desired state of Deployment
+            description: MlflowTrackingServerSpec defines the desired state of MlflowTrackingServer
             properties:
               deletionPolicy:
                 default: Delete
@@ -84,36 +84,23 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  canarySettings:
-                    description: >-
-                      Input configuration for the canary deployment when the deployment is a canary release deployment.
-
-                      See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.
-                    properties:
-                      percentTraffic:
-                        description: Percentage (0.0-100.0) of traffic routed to the canary deployment.
-                        type: number
-                      stageVariableOverrides:
-                        additionalProperties:
-                          type: string
-                        description: Stage variable overrides used for the canary release deployment. They can override existing stage variables or add new stage variables for the canary release deployment. These stage variables are represented as a string-to-string map between stage variable names and their values.
-                        type: object
-                        x-kubernetes-map-type: granular
-                      useStageCache:
-                        description: Boolean flag to indicate whether the canary release deployment uses the stage cache or not.
-                        type: boolean
-                    type: object
-                  description:
-                    description: Description of the deployment
+                  artifactStoreUri:
+                    description: The S3 URI for a general purpose bucket to use as the MLflow Tracking Server artifact store.
+                    type: string
+                  automaticModelRegistration:
+                    description: A list of Member Definitions that contains objects that identify the workers that make up the work team.
+                    type: boolean
+                  mlflowVersion:
+                    description: The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
-                  restApiId:
-                    description: REST API identifier.
+                  roleArn:
+                    description: The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.
                     type: string
-                  restApiIdRef:
-                    description: Reference to a RestAPI in apigateway to populate restApiId.
+                  roleArnRef:
+                    description: Reference to a Role in iam to populate roleArn.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -152,8 +139,8 @@ spec:
                     required:
                     - name
                     type: object
-                  restApiIdSelector:
-                    description: Selector for a RestAPI in apigateway to populate restApiId.
+                  roleArnSelector:
+                    description: Selector for a Role in iam to populate roleArn.
                     properties:
                       matchControllerRef:
                         description: >-
@@ -198,32 +185,18 @@ spec:
                             type: string
                         type: object
                     type: object
-                  stageDescription:
-                    description: >-
-                      Description to set on the stage managed by the stage_name argument.
-
-                      Has no effect when stage_name is not set.
-                    type: string
-                  stageName:
-                    description: >-
-                      Name of the stage to create with this deployment.
-
-                      If the specified stage already exists, it will be updated to point to the new deployment.
-
-                      We recommend using the aws_api_gateway_stage resource instead to manage stages.
-                    type: string
-                  triggers:
+                  tags:
                     additionalProperties:
                       type: string
-                    description: argument or explicit resource references using the resource . The triggers argument should be preferred over depends_on, since depends_on can only capture dependency ordering and will not cause the resource to recreate (redeploy the REST API) with upstream configuration changes.
+                    description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                  variables:
-                    additionalProperties:
-                      type: string
-                    description: Map to set on the stage managed by the stage_name argument.
-                    type: object
-                    x-kubernetes-map-type: granular
+                  trackingServerSize:
+                    description: The size of the tracking server you want to create. You can choose between "Small", "Medium", and "Large". The default MLflow Tracking Server configuration size is "Small". You can choose a size depending on the projected use of the tracking server such as the volume of data logged, number of users, and frequency of use.
+                    type: string
+                  weeklyMaintenanceWindowStart:
+                    description: 'The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance updates are scheduled. For example: TUE:03:30.'
+                    type: string
                 required:
                 - region
                 type: object
@@ -249,33 +222,20 @@ spec:
 
                   autoscaler.
                 properties:
-                  canarySettings:
-                    description: >-
-                      Input configuration for the canary deployment when the deployment is a canary release deployment.
-
-                      See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.
-                    properties:
-                      percentTraffic:
-                        description: Percentage (0.0-100.0) of traffic routed to the canary deployment.
-                        type: number
-                      stageVariableOverrides:
-                        additionalProperties:
-                          type: string
-                        description: Stage variable overrides used for the canary release deployment. They can override existing stage variables or add new stage variables for the canary release deployment. These stage variables are represented as a string-to-string map between stage variable names and their values.
-                        type: object
-                        x-kubernetes-map-type: granular
-                      useStageCache:
-                        description: Boolean flag to indicate whether the canary release deployment uses the stage cache or not.
-                        type: boolean
-                    type: object
-                  description:
-                    description: Description of the deployment
+                  artifactStoreUri:
+                    description: The S3 URI for a general purpose bucket to use as the MLflow Tracking Server artifact store.
                     type: string
-                  restApiId:
-                    description: REST API identifier.
+                  automaticModelRegistration:
+                    description: A list of Member Definitions that contains objects that identify the workers that make up the work team.
+                    type: boolean
+                  mlflowVersion:
+                    description: The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.
                     type: string
-                  restApiIdRef:
-                    description: Reference to a RestAPI in apigateway to populate restApiId.
+                  roleArn:
+                    description: The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.
+                    type: string
+                  roleArnRef:
+                    description: Reference to a Role in iam to populate roleArn.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -314,8 +274,8 @@ spec:
                     required:
                     - name
                     type: object
-                  restApiIdSelector:
-                    description: Selector for a RestAPI in apigateway to populate restApiId.
+                  roleArnSelector:
+                    description: Selector for a Role in iam to populate roleArn.
                     properties:
                       matchControllerRef:
                         description: >-
@@ -360,32 +320,18 @@ spec:
                             type: string
                         type: object
                     type: object
-                  stageDescription:
-                    description: >-
-                      Description to set on the stage managed by the stage_name argument.
-
-                      Has no effect when stage_name is not set.
-                    type: string
-                  stageName:
-                    description: >-
-                      Name of the stage to create with this deployment.
-
-                      If the specified stage already exists, it will be updated to point to the new deployment.
-
-                      We recommend using the aws_api_gateway_stage resource instead to manage stages.
-                    type: string
-                  triggers:
+                  tags:
                     additionalProperties:
                       type: string
-                    description: argument or explicit resource references using the resource . The triggers argument should be preferred over depends_on, since depends_on can only capture dependency ordering and will not cause the resource to recreate (redeploy the REST API) with upstream configuration changes.
+                    description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                  variables:
-                    additionalProperties:
-                      type: string
-                    description: Map to set on the stage managed by the stage_name argument.
-                    type: object
-                    x-kubernetes-map-type: granular
+                  trackingServerSize:
+                    description: The size of the tracking server you want to create. You can choose between "Small", "Medium", and "Large". The default MLflow Tracking Server configuration size is "Small". You can choose a size depending on the projected use of the tracking server such as the volume of data logged, number of users, and frequency of use.
+                    type: string
+                  weeklyMaintenanceWindowStart:
+                    description: 'The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance updates are scheduled. For example: TUE:03:30.'
+                    type: string
                 type: object
               managementPolicies:
                 default:
@@ -595,82 +541,53 @@ spec:
             required:
             - forProvider
             type: object
+            x-kubernetes-validations:
+            - message: spec.forProvider.artifactStoreUri is a required parameter
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.artifactStoreUri) || (has(self.initProvider) && has(self.initProvider.artifactStoreUri))"
           status:
-            description: DeploymentStatus defines the observed state of Deployment.
+            description: MlflowTrackingServerStatus defines the observed state of MlflowTrackingServer.
             properties:
               atProvider:
                 properties:
-                  canarySettings:
-                    description: >-
-                      Input configuration for the canary deployment when the deployment is a canary release deployment.
-
-                      See [canary_settings](#canary_settings-argument-reference) below. Has no effect when stage_name` is not set.
-                    properties:
-                      percentTraffic:
-                        description: Percentage (0.0-100.0) of traffic routed to the canary deployment.
-                        type: number
-                      stageVariableOverrides:
-                        additionalProperties:
-                          type: string
-                        description: Stage variable overrides used for the canary release deployment. They can override existing stage variables or add new stage variables for the canary release deployment. These stage variables are represented as a string-to-string map between stage variable names and their values.
-                        type: object
-                        x-kubernetes-map-type: granular
-                      useStageCache:
-                        description: Boolean flag to indicate whether the canary release deployment uses the stage cache or not.
-                        type: boolean
-                    type: object
-                  createdDate:
-                    description: Creation date of the deployment
+                  arn:
+                    description: The Amazon Resource Name (ARN) assigned by AWS to this MLFlow Tracking Server.
                     type: string
-                  description:
-                    description: Description of the deployment
+                  artifactStoreUri:
+                    description: The S3 URI for a general purpose bucket to use as the MLflow Tracking Server artifact store.
                     type: string
-                  executionArn:
-                    description: >-
-                      Execution ARN to be used in lambda_permission's source_arn
-
-                      when allowing API Gateway to invoke a Lambda function,
-
-                      e.g., arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod
-                    type: string
+                  automaticModelRegistration:
+                    description: A list of Member Definitions that contains objects that identify the workers that make up the work team.
+                    type: boolean
                   id:
-                    description: ID of the deployment
+                    description: The name of the MLFlow Tracking Server.
                     type: string
-                  invokeUrl:
-                    description: >-
-                      URL to invoke the API pointing to the stage,
-
-                      e.g., https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod
+                  mlflowVersion:
+                    description: The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.
                     type: string
-                  restApiId:
-                    description: REST API identifier.
+                  roleArn:
+                    description: The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.
                     type: string
-                  stageDescription:
-                    description: >-
-                      Description to set on the stage managed by the stage_name argument.
-
-                      Has no effect when stage_name is not set.
-                    type: string
-                  stageName:
-                    description: >-
-                      Name of the stage to create with this deployment.
-
-                      If the specified stage already exists, it will be updated to point to the new deployment.
-
-                      We recommend using the aws_api_gateway_stage resource instead to manage stages.
-                    type: string
-                  triggers:
+                  tags:
                     additionalProperties:
                       type: string
-                    description: argument or explicit resource references using the resource . The triggers argument should be preferred over depends_on, since depends_on can only capture dependency ordering and will not cause the resource to recreate (redeploy the REST API) with upstream configuration changes.
+                    description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                  variables:
+                  tagsAll:
                     additionalProperties:
                       type: string
-                    description: Map to set on the stage managed by the stage_name argument.
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  trackingServerSize:
+                    description: The size of the tracking server you want to create. You can choose between "Small", "Medium", and "Large". The default MLflow Tracking Server configuration size is "Small". You can choose a size depending on the projected use of the tracking server such as the volume of data logged, number of users, and frequency of use.
+                    type: string
+                  trackingServerUrl:
+                    description: The URL to connect to the MLflow user interface for the described tracking server.
+                    type: string
+                  weeklyMaintenanceWindowStart:
+                    description: 'The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance updates are scheduled. For example: TUE:03:30.'
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

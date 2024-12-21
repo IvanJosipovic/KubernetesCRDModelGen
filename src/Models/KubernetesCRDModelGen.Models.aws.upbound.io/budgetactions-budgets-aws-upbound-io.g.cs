@@ -133,6 +133,62 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Role in iam to populate roles.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinition
@@ -156,6 +212,14 @@ public partial class V1beta1BudgetActionSpecForProviderDefinitionIamActionDefini
     /// <summary>A list of roles to be attached. There must be at least one role.</summary>
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
+
+    /// <summary>References to Role in iam to populate roles.</summary>
+    [JsonPropertyName("rolesRefs")]
+    public IList<V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesRefs>? RolesRefs { get; set; }
+
+    /// <summary>Selector for a list of Role in iam to populate roles.</summary>
+    [JsonPropertyName("rolesSelector")]
+    public V1beta1BudgetActionSpecForProviderDefinitionIamActionDefinitionRolesSelector? RolesSelector { get; set; }
 
     /// <summary>A list of users to be attached. There must be at least one user.</summary>
     [JsonPropertyName("users")]
@@ -468,6 +532,62 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionPolicyArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Role in iam to populate roles.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinition
@@ -491,6 +611,14 @@ public partial class V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefin
     /// <summary>A list of roles to be attached. There must be at least one role.</summary>
     [JsonPropertyName("roles")]
     public IList<string>? Roles { get; set; }
+
+    /// <summary>References to Role in iam to populate roles.</summary>
+    [JsonPropertyName("rolesRefs")]
+    public IList<V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesRefs>? RolesRefs { get; set; }
+
+    /// <summary>Selector for a list of Role in iam to populate roles.</summary>
+    [JsonPropertyName("rolesSelector")]
+    public V1beta1BudgetActionSpecInitProviderDefinitionIamActionDefinitionRolesSelector? RolesSelector { get; set; }
 
     /// <summary>A list of users to be attached. There must be at least one user.</summary>
     [JsonPropertyName("users")]

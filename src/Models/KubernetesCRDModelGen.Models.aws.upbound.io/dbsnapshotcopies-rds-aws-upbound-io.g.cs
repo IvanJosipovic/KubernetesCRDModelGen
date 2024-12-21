@@ -156,7 +156,7 @@ public partial class V1beta1DBSnapshotCopySpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
     [JsonPropertyName("sharedAccounts")]
     public IList<string>? SharedAccounts { get; set; }
 
@@ -329,7 +329,7 @@ public partial class V1beta1DBSnapshotCopySpecInitProvider
     [JsonPropertyName("presignedUrl")]
     public string? PresignedUrl { get; set; }
 
-    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
     [JsonPropertyName("sharedAccounts")]
     public IList<string>? SharedAccounts { get; set; }
 
@@ -554,7 +554,7 @@ public partial class V1beta1DBSnapshotCopyStatusAtProvider
     [JsonPropertyName("presignedUrl")]
     public string? PresignedUrl { get; set; }
 
-    /// <summary>List of AWS Account ids to share snapshot with, use all to make snaphot public.</summary>
+    /// <summary>List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.</summary>
     [JsonPropertyName("sharedAccounts")]
     public IList<string>? SharedAccounts { get; set; }
 
