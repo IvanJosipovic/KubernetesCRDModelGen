@@ -73,7 +73,7 @@ namespace Worker
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
                                 var code = generator.GenerateCode(crd, @namespace);
 
-                                var filename = $"{crd.Metadata.Name.Replace(".", "-")}.g.cs";
+                                var filename = RemoveIllegalFileNameCharacters($"{crd.Metadata.Name.Replace(".", "-")}.g.cs");
 
                                 logger.LogInformation("Generating: {file}", filename);
 
@@ -99,6 +99,17 @@ namespace Worker
             logger.LogInformation("Tool complated at: {time}", DateTimeOffset.Now);
             Environment.ExitCode = 0;
             appLifetime.StopApplication();
+        }
+
+        public static string RemoveIllegalFileNameCharacters(string fileName)
+        {
+            if (string.IsNullOrEmpty(fileName))
+                throw new ArgumentException("File name cannot be null or empty", nameof(fileName));
+
+            // Remove invalid characters from the input
+            string sanitizedFileName = new([.. fileName.Where(c => !Path.GetInvalidFileNameChars().Contains(c))]);
+
+            return sanitizedFileName;
         }
     }
 }
