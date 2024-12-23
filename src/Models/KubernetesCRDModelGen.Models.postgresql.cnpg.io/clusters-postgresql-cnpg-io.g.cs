@@ -987,6 +987,14 @@ public partial class V1ClusterSpecBootstrapInitdbImport
     [JsonPropertyName("databases")]
     public IList<string> Databases { get; set; }
 
+    /// <summary>List of custom options to pass to the `pg_dump` command. IMPORTANT: Use these options with caution and at your own risk, as the operator does not validate their content. Be aware that certain options may conflict with the operator's intended functionality or design.</summary>
+    [JsonPropertyName("pgDumpExtraOptions")]
+    public IList<string>? PgDumpExtraOptions { get; set; }
+
+    /// <summary>List of custom options to pass to the `pg_restore` command. IMPORTANT: Use these options with caution and at your own risk, as the operator does not validate their content. Be aware that certain options may conflict with the operator's intended functionality or design.</summary>
+    [JsonPropertyName("pgRestoreExtraOptions")]
+    public IList<string>? PgRestoreExtraOptions { get; set; }
+
     /// <summary>List of SQL queries to be executed as a superuser in the application database right after is imported - to be used with extreme care (by default empty). Only available in microservice type.</summary>
     [JsonPropertyName("postImportApplicationSQL")]
     public IList<string>? PostImportApplicationSQL { get; set; }
@@ -1138,6 +1146,10 @@ public partial class V1ClusterSpecBootstrapInitdbSecret
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecBootstrapInitdb
 {
+    /// <summary>Specifies the locale name when the builtin provider is used. This option requires `localeProvider` to be set to `builtin`. Available from PostgreSQL 17.</summary>
+    [JsonPropertyName("builtinLocale")]
+    public string? BuiltinLocale { get; set; }
+
     /// <summary>Whether the `-k` option should be passed to initdb, enabling checksums on data pages (default: `false`)</summary>
     [JsonPropertyName("dataChecksums")]
     public bool? DataChecksums { get; set; }
@@ -1150,9 +1162,21 @@ public partial class V1ClusterSpecBootstrapInitdb
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 
+    /// <summary>Specifies the ICU locale when the ICU provider is used. This option requires `localeProvider` to be set to `icu`. Available from PostgreSQL 15.</summary>
+    [JsonPropertyName("icuLocale")]
+    public string? IcuLocale { get; set; }
+
+    /// <summary>Specifies additional collation rules to customize the behavior of the default collation. This option requires `localeProvider` to be set to `icu`. Available from PostgreSQL 16.</summary>
+    [JsonPropertyName("icuRules")]
+    public string? IcuRules { get; set; }
+
     /// <summary>Bootstraps the new cluster by importing data from an existing PostgreSQL instance using logical backup (`pg_dump` and `pg_restore`)</summary>
     [JsonPropertyName("import")]
     public V1ClusterSpecBootstrapInitdbImport? Import { get; set; }
+
+    /// <summary>Sets the default collation order and character classification in the new database.</summary>
+    [JsonPropertyName("locale")]
+    public string? Locale { get; set; }
 
     /// <summary>The value to be passed as option `--lc-ctype` for initdb (default:`C`)</summary>
     [JsonPropertyName("localeCType")]
@@ -1161,6 +1185,10 @@ public partial class V1ClusterSpecBootstrapInitdb
     /// <summary>The value to be passed as option `--lc-collate` for initdb (default:`C`)</summary>
     [JsonPropertyName("localeCollate")]
     public string? LocaleCollate { get; set; }
+
+    /// <summary>This option sets the locale provider for databases created in the new cluster. Available from PostgreSQL 16.</summary>
+    [JsonPropertyName("localeProvider")]
+    public string? LocaleProvider { get; set; }
 
     /// <summary>The list of options that must be passed to initdb when creating the cluster. Deprecated: This could lead to inconsistent configurations, please use the explicit provided parameters instead. If defined, explicit values will be ignored.</summary>
     [JsonPropertyName("options")]
@@ -2065,6 +2093,23 @@ public partial class V1ClusterSpecExternalClustersPassword
     public bool? Optional { get; set; }
 }
 
+/// <summary>The configuration of the plugin that is taking care of WAL archiving and backups for this external cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecExternalClustersPlugin
+{
+    /// <summary>Enabled is true if this plugin will be used</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Name is the plugin name</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Parameters is the configuration of the plugin</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+}
+
 /// <summary>The reference to an SSL certificate to be used to connect to this instance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecExternalClustersSslCert
@@ -2135,6 +2180,10 @@ public partial class V1ClusterSpecExternalClusters
     /// <summary>The reference to the password to be used to connect to the server. If a password is provided, CloudNativePG creates a PostgreSQL passfile at `/controller/external/NAME/pass` (where "NAME" is the cluster's name). This passfile is automatically referenced in the connection string when establishing a connection to the remote PostgreSQL server from the current PostgreSQL `Cluster`. This ensures secure and efficient password management for external clusters.</summary>
     [JsonPropertyName("password")]
     public V1ClusterSpecExternalClustersPassword? Password { get; set; }
+
+    /// <summary>The configuration of the plugin that is taking care of WAL archiving and backups for this external cluster</summary>
+    [JsonPropertyName("plugin")]
+    public V1ClusterSpecExternalClustersPlugin? Plugin { get; set; }
 
     /// <summary>The reference to an SSL certificate to be used to connect to this instance</summary>
     [JsonPropertyName("sslCert")]
@@ -2406,7 +2455,7 @@ public partial class V1ClusterSpecManagedServicesAdditionalServiceTemplateSpec
     [JsonPropertyName("sessionAffinityConfig")]
     public V1ClusterSpecManagedServicesAdditionalServiceTemplateSpecSessionAffinityConfig? SessionAffinityConfig { get; set; }
 
-    /// <summary>TrafficDistribution offers a way to express preferences for how traffic is distributed to Service endpoints. Implementations can use this field as a hint, but are not required to guarantee strict adherence. If the field is not set, the implementation will apply its default routing strategy. If set to "PreferClose", implementations should prioritize endpoints that are topologically close (e.g., same zone). This is an alpha field and requires enabling ServiceTrafficDistribution feature.</summary>
+    /// <summary>TrafficDistribution offers a way to express preferences for how traffic is distributed to Service endpoints. Implementations can use this field as a hint, but are not required to guarantee strict adherence. If the field is not set, the implementation will apply its default routing strategy. If set to "PreferClose", implementations should prioritize endpoints that are topologically close (e.g., same zone). This is a beta field and requires enabling ServiceTrafficDistribution feature.</summary>
     [JsonPropertyName("trafficDistribution")]
     public string? TrafficDistribution { get; set; }
 
@@ -2622,6 +2671,10 @@ public partial class V1ClusterSpecNodeMaintenanceWindow
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPlugins
 {
+    /// <summary>Enabled is true if this plugin will be used</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
     /// <summary>Name is the plugin name</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
@@ -2732,6 +2785,10 @@ public partial class V1ClusterSpecPostgresqlSyncReplicaElectionConstraint
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlSynchronous
 {
+    /// <summary>If set to "required", data durability is strictly enforced. Write operations with synchronous commit settings (`on`, `remote_write`, or `remote_apply`) will block if there are insufficient healthy replicas, ensuring data persistence. If set to "preferred", data durability is maintained when healthy replicas are available, but the required number of instances will adjust dynamically if replicas become unavailable. This setting relaxes strict durability enforcement to allow for operational continuity. This setting is only applicable if both `standbyNamesPre` and `standbyNamesPost` are unset (empty).</summary>
+    [JsonPropertyName("dataDurability")]
+    public string? DataDurability { get; set; }
+
     /// <summary>Specifies the maximum number of local cluster pods that can be automatically included in the `synchronous_standby_names` option in PostgreSQL.</summary>
     [JsonPropertyName("maxStandbyNamesFromCluster")]
     public int? MaxStandbyNamesFromCluster { get; set; }
@@ -2792,6 +2849,110 @@ public partial class V1ClusterSpecPostgresql
     /// <summary>Configuration of the PostgreSQL synchronous replication feature</summary>
     [JsonPropertyName("synchronous")]
     public V1ClusterSpecPostgresqlSynchronous? Synchronous { get; set; }
+}
+
+/// <summary>The liveness probe configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecProbesLiveness
+{
+    /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
+    [JsonPropertyName("failureThreshold")]
+    public int? FailureThreshold { get; set; }
+
+    /// <summary>Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+    [JsonPropertyName("initialDelaySeconds")]
+    public int? InitialDelaySeconds { get; set; }
+
+    /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.</summary>
+    [JsonPropertyName("periodSeconds")]
+    public int? PeriodSeconds { get; set; }
+
+    /// <summary>Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.</summary>
+    [JsonPropertyName("successThreshold")]
+    public int? SuccessThreshold { get; set; }
+
+    /// <summary>Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.</summary>
+    [JsonPropertyName("terminationGracePeriodSeconds")]
+    public long? TerminationGracePeriodSeconds { get; set; }
+
+    /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public int? TimeoutSeconds { get; set; }
+}
+
+/// <summary>The readiness probe configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecProbesReadiness
+{
+    /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
+    [JsonPropertyName("failureThreshold")]
+    public int? FailureThreshold { get; set; }
+
+    /// <summary>Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+    [JsonPropertyName("initialDelaySeconds")]
+    public int? InitialDelaySeconds { get; set; }
+
+    /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.</summary>
+    [JsonPropertyName("periodSeconds")]
+    public int? PeriodSeconds { get; set; }
+
+    /// <summary>Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.</summary>
+    [JsonPropertyName("successThreshold")]
+    public int? SuccessThreshold { get; set; }
+
+    /// <summary>Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.</summary>
+    [JsonPropertyName("terminationGracePeriodSeconds")]
+    public long? TerminationGracePeriodSeconds { get; set; }
+
+    /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public int? TimeoutSeconds { get; set; }
+}
+
+/// <summary>The startup probe configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecProbesStartup
+{
+    /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
+    [JsonPropertyName("failureThreshold")]
+    public int? FailureThreshold { get; set; }
+
+    /// <summary>Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+    [JsonPropertyName("initialDelaySeconds")]
+    public int? InitialDelaySeconds { get; set; }
+
+    /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.</summary>
+    [JsonPropertyName("periodSeconds")]
+    public int? PeriodSeconds { get; set; }
+
+    /// <summary>Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.</summary>
+    [JsonPropertyName("successThreshold")]
+    public int? SuccessThreshold { get; set; }
+
+    /// <summary>Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.</summary>
+    [JsonPropertyName("terminationGracePeriodSeconds")]
+    public long? TerminationGracePeriodSeconds { get; set; }
+
+    /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public int? TimeoutSeconds { get; set; }
+}
+
+/// <summary>The configuration of the probes to be injected in the PostgreSQL Pods.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecProbes
+{
+    /// <summary>The liveness probe configuration</summary>
+    [JsonPropertyName("liveness")]
+    public V1ClusterSpecProbesLiveness? Liveness { get; set; }
+
+    /// <summary>The readiness probe configuration</summary>
+    [JsonPropertyName("readiness")]
+    public V1ClusterSpecProbesReadiness? Readiness { get; set; }
+
+    /// <summary>The startup probe configuration</summary>
+    [JsonPropertyName("startup")]
+    public V1ClusterSpecProbesStartup? Startup { get; set; }
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
@@ -3844,6 +4005,10 @@ public partial class V1ClusterSpec
     [JsonPropertyName("priorityClassName")]
     public string? PriorityClassName { get; set; }
 
+    /// <summary>The configuration of the probes to be injected in the PostgreSQL Pods.</summary>
+    [JsonPropertyName("probes")]
+    public V1ClusterSpecProbes? Probes { get; set; }
+
     /// <summary>Template to be used to define projected volumes, projected volumes will be mounted under `/projected` base folder</summary>
     [JsonPropertyName("projectedVolumeTemplate")]
     public V1ClusterSpecProjectedVolumeTemplate? ProjectedVolumeTemplate { get; set; }
@@ -4051,6 +4216,10 @@ public partial class V1ClusterStatusPluginStatus
     /// <summary>OperatorCapabilities are the list of capabilities of the plugin regarding the reconciler</summary>
     [JsonPropertyName("operatorCapabilities")]
     public IList<string>? OperatorCapabilities { get; set; }
+
+    /// <summary>RestoreJobHookCapabilities are the list of capabilities of the plugin regarding the RestoreJobHook management</summary>
+    [JsonPropertyName("restoreJobHookCapabilities")]
+    public IList<string>? RestoreJobHookCapabilities { get; set; }
 
     /// <summary>Status contain the status reported by the plugin through the SetStatusInCluster interface</summary>
     [JsonPropertyName("status")]
