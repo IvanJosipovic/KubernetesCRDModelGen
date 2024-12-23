@@ -388,6 +388,10 @@ public partial class V1BackupStatus
     [JsonPropertyName("phase")]
     public string? Phase { get; set; }
 
+    /// <summary>A map containing the plugin metadata</summary>
+    [JsonPropertyName("pluginMetadata")]
+    public IDictionary<string, string>? PluginMetadata { get; set; }
+
     /// <summary>The credentials to use to upload data to S3</summary>
     [JsonPropertyName("s3Credentials")]
     public V1BackupStatusS3Credentials? S3Credentials { get; set; }
