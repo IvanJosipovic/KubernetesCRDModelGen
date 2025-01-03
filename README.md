@@ -35,6 +35,7 @@ We publish the following premade packages
 
 | Group | NuGet |
 |---|---|
+| aquasecurity.github.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.aquasecurity.github.io/) |
 | argoproj.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.argoproj.io/) |
 | aws.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.aws.upbound.io/) |
 | azure.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.com/)  |
