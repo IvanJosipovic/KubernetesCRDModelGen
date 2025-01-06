@@ -217,6 +217,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfMapSizeNATFrontend")]
     public int? BpfMapSizeNATFrontend { get; set; }
 
+    /// <summary>BPFMapSizePerCPUConntrack determines the size of conntrack map based on the number of CPUs. If set to a non-zero value, overrides BPFMapSizeConntrack with `BPFMapSizePerCPUConntrack * (Number of CPUs)`. This map must be large enough to hold an entry for each active connection.  Warning: changing the size of the conntrack map can cause disruption.</summary>
+    [JsonPropertyName("bpfMapSizePerCpuConntrack")]
+    public int? BpfMapSizePerCpuConntrack { get; set; }
+
     /// <summary>BPFMapSizeRoute sets the size for the routes map.  The routes map should be large enough to hold one entry per workload and a handful of entries per host (enough to cover its own IPs and tunnel IPs).</summary>
     [JsonPropertyName("bpfMapSizeRoute")]
     public int? BpfMapSizeRoute { get; set; }
