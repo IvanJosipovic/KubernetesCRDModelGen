@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.iam.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecForProvider
 {
-    /// <summary>A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)</summary>
+    /// <summary>List of client IDs (audiences) that identify the application registered with the OpenID Connect provider. This is the value sent as the client_id parameter in OAuth requests.</summary>
     [JsonPropertyName("clientIdList")]
     public IList<string>? ClientIdList { get; set; }
 
@@ -20,11 +20,11 @@ public partial class V1beta1OpenIDConnectProviderSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).</summary>
+    /// <summary>List of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s). For certain OIDC identity providers (e.g., Auth0, GitHub, GitLab, Google, or those using an Amazon S3-hosted JWKS endpoint), AWS relies on its own library of trusted root certificate authorities (CAs) for validation instead of using any configured thumbprints. In these cases, any configured thumbprint_list is retained in the configuration but not used for verification. For other IdPs, if no thumbprint_list is provided, IAM automatically retrieves and uses the top intermediate CA thumbprint from the OIDC IdP server certificate. Instead, it continues using the original thumbprint list from the initial configuration. This differs from the behavior when creating an aws_iam_openid_connect_provider without a thumbprint_list.</summary>
     [JsonPropertyName("thumbprintList")]
     public IList<string>? ThumbprintList { get; set; }
 
-    /// <summary>The URL of the identity provider. Corresponds to the iss claim.</summary>
+    /// <summary>URL of the identity provider, corresponding to the iss claim.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -33,7 +33,7 @@ public partial class V1beta1OpenIDConnectProviderSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderSpecInitProvider
 {
-    /// <summary>A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)</summary>
+    /// <summary>List of client IDs (audiences) that identify the application registered with the OpenID Connect provider. This is the value sent as the client_id parameter in OAuth requests.</summary>
     [JsonPropertyName("clientIdList")]
     public IList<string>? ClientIdList { get; set; }
 
@@ -41,11 +41,11 @@ public partial class V1beta1OpenIDConnectProviderSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).</summary>
+    /// <summary>List of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s). For certain OIDC identity providers (e.g., Auth0, GitHub, GitLab, Google, or those using an Amazon S3-hosted JWKS endpoint), AWS relies on its own library of trusted root certificate authorities (CAs) for validation instead of using any configured thumbprints. In these cases, any configured thumbprint_list is retained in the configuration but not used for verification. For other IdPs, if no thumbprint_list is provided, IAM automatically retrieves and uses the top intermediate CA thumbprint from the OIDC IdP server certificate. Instead, it continues using the original thumbprint list from the initial configuration. This differs from the behavior when creating an aws_iam_openid_connect_provider without a thumbprint_list.</summary>
     [JsonPropertyName("thumbprintList")]
     public IList<string>? ThumbprintList { get; set; }
 
-    /// <summary>The URL of the identity provider. Corresponds to the iss claim.</summary>
+    /// <summary>URL of the identity provider, corresponding to the iss claim.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -186,11 +186,11 @@ public partial class V1beta1OpenIDConnectProviderSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OpenIDConnectProviderStatusAtProvider
 {
-    /// <summary>The ARN assigned by AWS for this provider.</summary>
+    /// <summary>ARN assigned by AWS for this provider.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)</summary>
+    /// <summary>List of client IDs (audiences) that identify the application registered with the OpenID Connect provider. This is the value sent as the client_id parameter in OAuth requests.</summary>
     [JsonPropertyName("clientIdList")]
     public IList<string>? ClientIdList { get; set; }
 
@@ -202,15 +202,15 @@ public partial class V1beta1OpenIDConnectProviderStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).</summary>
+    /// <summary>List of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s). For certain OIDC identity providers (e.g., Auth0, GitHub, GitLab, Google, or those using an Amazon S3-hosted JWKS endpoint), AWS relies on its own library of trusted root certificate authorities (CAs) for validation instead of using any configured thumbprints. In these cases, any configured thumbprint_list is retained in the configuration but not used for verification. For other IdPs, if no thumbprint_list is provided, IAM automatically retrieves and uses the top intermediate CA thumbprint from the OIDC IdP server certificate. Instead, it continues using the original thumbprint list from the initial configuration. This differs from the behavior when creating an aws_iam_openid_connect_provider without a thumbprint_list.</summary>
     [JsonPropertyName("thumbprintList")]
     public IList<string>? ThumbprintList { get; set; }
 
-    /// <summary>The URL of the identity provider. Corresponds to the iss claim.</summary>
+    /// <summary>URL of the identity provider, corresponding to the iss claim.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }

@@ -128,6 +128,10 @@ public partial class V1beta1NetworkInterfaceSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Enables assigning a primary IPv6 Global Unicast Address (GUA) to the network interface (ENI) in dual-stack or IPv6-only subnets. This ensures the instance attached to the ENI retains a consistent IPv6 address. Once enabled, the first IPv6 GUA becomes the primary IPv6 address and cannot be disabled. The primary IPv6 address remains assigned until the instance is terminated or the ENI is detached. Enabling and subsequent disabling forces recreation of the ENI.</summary>
+    [JsonPropertyName("enablePrimaryIpv6")]
+    public bool? EnablePrimaryIpv6 { get; set; }
+
     /// <summary>Type of network interface to create. Set to efa for Elastic Fabric Adapter. Changing interface_type will cause the resource to be destroyed and re-created.</summary>
     [JsonPropertyName("interfaceType")]
     public string? InterfaceType { get; set; }
@@ -148,7 +152,7 @@ public partial class V1beta1NetworkInterfaceSpecForProvider
     [JsonPropertyName("ipv6AddressList")]
     public IList<string>? Ipv6AddressList { get; set; }
 
-    /// <summary>Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default false.</summary>
+    /// <summary>Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default is false.</summary>
     [JsonPropertyName("ipv6AddressListEnabled")]
     public bool? Ipv6AddressListEnabled { get; set; }
 
@@ -172,7 +176,7 @@ public partial class V1beta1NetworkInterfaceSpecForProvider
     [JsonPropertyName("privateIpList")]
     public IList<string>? PrivateIpList { get; set; }
 
-    /// <summary>Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default false.</summary>
+    /// <summary>Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default is false.</summary>
     [JsonPropertyName("privateIpListEnabled")]
     public bool? PrivateIpListEnabled { get; set; }
 
@@ -341,6 +345,10 @@ public partial class V1beta1NetworkInterfaceSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Enables assigning a primary IPv6 Global Unicast Address (GUA) to the network interface (ENI) in dual-stack or IPv6-only subnets. This ensures the instance attached to the ENI retains a consistent IPv6 address. Once enabled, the first IPv6 GUA becomes the primary IPv6 address and cannot be disabled. The primary IPv6 address remains assigned until the instance is terminated or the ENI is detached. Enabling and subsequent disabling forces recreation of the ENI.</summary>
+    [JsonPropertyName("enablePrimaryIpv6")]
+    public bool? EnablePrimaryIpv6 { get; set; }
+
     /// <summary>Type of network interface to create. Set to efa for Elastic Fabric Adapter. Changing interface_type will cause the resource to be destroyed and re-created.</summary>
     [JsonPropertyName("interfaceType")]
     public string? InterfaceType { get; set; }
@@ -361,7 +369,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProvider
     [JsonPropertyName("ipv6AddressList")]
     public IList<string>? Ipv6AddressList { get; set; }
 
-    /// <summary>Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default false.</summary>
+    /// <summary>Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default is false.</summary>
     [JsonPropertyName("ipv6AddressListEnabled")]
     public bool? Ipv6AddressListEnabled { get; set; }
 
@@ -385,7 +393,7 @@ public partial class V1beta1NetworkInterfaceSpecInitProvider
     [JsonPropertyName("privateIpList")]
     public IList<string>? PrivateIpList { get; set; }
 
-    /// <summary>Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default false.</summary>
+    /// <summary>Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default is false.</summary>
     [JsonPropertyName("privateIpListEnabled")]
     public bool? PrivateIpListEnabled { get; set; }
 
@@ -595,6 +603,10 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Enables assigning a primary IPv6 Global Unicast Address (GUA) to the network interface (ENI) in dual-stack or IPv6-only subnets. This ensures the instance attached to the ENI retains a consistent IPv6 address. Once enabled, the first IPv6 GUA becomes the primary IPv6 address and cannot be disabled. The primary IPv6 address remains assigned until the instance is terminated or the ENI is detached. Enabling and subsequent disabling forces recreation of the ENI.</summary>
+    [JsonPropertyName("enablePrimaryIpv6")]
+    public bool? EnablePrimaryIpv6 { get; set; }
+
     /// <summary>ID of the network interface.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -619,7 +631,7 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     [JsonPropertyName("ipv6AddressList")]
     public IList<string>? Ipv6AddressList { get; set; }
 
-    /// <summary>Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default false.</summary>
+    /// <summary>Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default is false.</summary>
     [JsonPropertyName("ipv6AddressListEnabled")]
     public bool? Ipv6AddressListEnabled { get; set; }
 
@@ -659,7 +671,7 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     [JsonPropertyName("privateIpList")]
     public IList<string>? PrivateIpList { get; set; }
 
-    /// <summary>Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default false.</summary>
+    /// <summary>Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default is false.</summary>
     [JsonPropertyName("privateIpListEnabled")]
     public bool? PrivateIpListEnabled { get; set; }
 

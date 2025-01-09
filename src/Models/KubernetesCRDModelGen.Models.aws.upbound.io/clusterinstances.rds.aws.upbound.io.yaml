@@ -378,6 +378,9 @@ spec:
                   engineVersion:
                     description: Database engine version. Please note that to upgrade the engine_version of the instance, it must be done on the aws_rds_cluster engine_version. Trying to upgrade in aws_cluster_instance will not update the engine_version.
                     type: string
+                  forceDestroy:
+                    description: 'Forces an instance to be destroyed when a part of a read replica cluster. Note: will promote the read replica to a standalone cluster before instance deletion.'
+                    type: boolean
                   instanceClass:
                     description: Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details. For Aurora Serverless v2 use db.serverless.
                     type: string
@@ -908,6 +911,9 @@ spec:
                   engineVersion:
                     description: Database engine version. Please note that to upgrade the engine_version of the instance, it must be done on the aws_rds_cluster engine_version. Trying to upgrade in aws_cluster_instance will not update the engine_version.
                     type: string
+                  forceDestroy:
+                    description: 'Forces an instance to be destroyed when a part of a read replica cluster. Note: will promote the read replica to a standalone cluster before instance deletion.'
+                    type: boolean
                   instanceClass:
                     description: Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details. For Aurora Serverless v2 use db.serverless.
                     type: string
@@ -1383,6 +1389,9 @@ spec:
                   engineVersionActual:
                     description: Database engine version
                     type: string
+                  forceDestroy:
+                    description: 'Forces an instance to be destroyed when a part of a read replica cluster. Note: will promote the read replica to a standalone cluster before instance deletion.'
+                    type: boolean
                   id:
                     description: Instance identifier
                     type: string

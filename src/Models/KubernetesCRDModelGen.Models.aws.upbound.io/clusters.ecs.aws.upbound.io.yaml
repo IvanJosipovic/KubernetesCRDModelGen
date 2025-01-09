@@ -767,7 +767,7 @@ spec:
                           description: 'Name of the setting to manage. Valid values: containerInsights.'
                           type: string
                         value:
-                          description: 'Value to assign to the setting. Valid values: enabled, disabled.'
+                          description: 'Value to assign to the setting. Valid values: enhanced, enabled, disabled.'
                           type: string
                       type: object
                     type: array
@@ -860,7 +860,7 @@ spec:
                           description: 'Name of the setting to manage. Valid values: containerInsights.'
                           type: string
                         value:
-                          description: 'Value to assign to the setting. Valid values: enabled, disabled.'
+                          description: 'Value to assign to the setting. Valid values: enhanced, enabled, disabled.'
                           type: string
                       type: object
                     type: array
@@ -1148,7 +1148,7 @@ spec:
                           description: 'Name of the setting to manage. Valid values: containerInsights.'
                           type: string
                         value:
-                          description: 'Value to assign to the setting. Valid values: enabled, disabled.'
+                          description: 'Value to assign to the setting. Valid values: enhanced, enabled, disabled.'
                           type: string
                       type: object
                     type: array

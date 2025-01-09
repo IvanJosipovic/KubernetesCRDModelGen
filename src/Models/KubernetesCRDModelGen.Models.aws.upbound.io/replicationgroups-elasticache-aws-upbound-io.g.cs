@@ -278,9 +278,9 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
-    /// <summary>Whether to enable encryption at rest.</summary>
+    /// <summary>Whether to enable encryption at rest. When engine is redis, default is false. When engine is valkey, default is true.</summary>
     [JsonPropertyName("atRestEncryptionEnabled")]
-    public bool? AtRestEncryptionEnabled { get; set; }
+    public string? AtRestEncryptionEnabled { get; set; }
 
     /// <summary>Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true. If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.</summary>
     [JsonPropertyName("authTokenSecretRef")]
@@ -314,7 +314,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey.</summary>
+    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey. Default is redis.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -737,9 +737,9 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
-    /// <summary>Whether to enable encryption at rest.</summary>
+    /// <summary>Whether to enable encryption at rest. When engine is redis, default is false. When engine is valkey, default is true.</summary>
     [JsonPropertyName("atRestEncryptionEnabled")]
-    public bool? AtRestEncryptionEnabled { get; set; }
+    public string? AtRestEncryptionEnabled { get; set; }
 
     /// <summary>Password used to access a password protected server. Can be specified only if transit_encryption_enabled = true. If you set autoGenerateAuthToken to true, the Secret referenced here will be created or updated with generated auth token if it does not already contain one.</summary>
     [JsonPropertyName("authTokenSecretRef")]
@@ -769,7 +769,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey.</summary>
+    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey. Default is redis.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -1083,9 +1083,9 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>Whether to enable encryption at rest.</summary>
+    /// <summary>Whether to enable encryption at rest. When engine is redis, default is false. When engine is valkey, default is true.</summary>
     [JsonPropertyName("atRestEncryptionEnabled")]
-    public bool? AtRestEncryptionEnabled { get; set; }
+    public string? AtRestEncryptionEnabled { get; set; }
 
     /// <summary>Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Defaults to ROTATE.</summary>
     [JsonPropertyName("authTokenUpdateStrategy")]
@@ -1119,7 +1119,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey.</summary>
+    /// <summary>Name of the cache engine to be used for the clusters in this replication group. Valid values are redis or valkey. Default is redis.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 

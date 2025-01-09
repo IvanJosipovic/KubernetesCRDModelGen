@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryBucketSpecForProviderLocation
 {
-    /// <summary>Availability Zone ID.</summary>
+    /// <summary>Availability Zone ID or Local Zone ID.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Location type. Valid values: AvailabilityZone.</summary>
+    /// <summary>Location type. Valid values: AvailabilityZone, LocalZone.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -50,11 +50,11 @@ public partial class V1beta1DirectoryBucketSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryBucketSpecInitProviderLocation
 {
-    /// <summary>Availability Zone ID.</summary>
+    /// <summary>Availability Zone ID or Local Zone ID.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Location type. Valid values: AvailabilityZone.</summary>
+    /// <summary>Location type. Valid values: AvailabilityZone, LocalZone.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -216,11 +216,11 @@ public partial class V1beta1DirectoryBucketSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryBucketStatusAtProviderLocation
 {
-    /// <summary>Availability Zone ID.</summary>
+    /// <summary>Availability Zone ID or Local Zone ID.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Location type. Valid values: AvailabilityZone.</summary>
+    /// <summary>Location type. Valid values: AvailabilityZone, LocalZone.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

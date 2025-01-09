@@ -124,6 +124,10 @@ public partial class V1beta1EBSSnapshotCopySpecForProviderSourceSnapshotIdSelect
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecForProvider
 {
+    /// <summary>Specifies a completion duration to initiate a time-based snapshot copy. Time-based snapshot copy operations complete within the specified duration.  Value must be between 15 and 2880 minutes, in 15 minute increments only.</summary>
+    [JsonPropertyName("completionDurationMinutes")]
+    public double? CompletionDurationMinutes { get; set; }
+
     /// <summary>A description of what the snapshot is.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -297,6 +301,10 @@ public partial class V1beta1EBSSnapshotCopySpecInitProviderSourceSnapshotIdSelec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSSnapshotCopySpecInitProvider
 {
+    /// <summary>Specifies a completion duration to initiate a time-based snapshot copy. Time-based snapshot copy operations complete within the specified duration.  Value must be between 15 and 2880 minutes, in 15 minute increments only.</summary>
+    [JsonPropertyName("completionDurationMinutes")]
+    public double? CompletionDurationMinutes { get; set; }
+
     /// <summary>A description of what the snapshot is.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -489,6 +497,10 @@ public partial class V1beta1EBSSnapshotCopyStatusAtProvider
     /// <summary>Amazon Resource Name (ARN) of the EBS Snapshot.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
+
+    /// <summary>Specifies a completion duration to initiate a time-based snapshot copy. Time-based snapshot copy operations complete within the specified duration.  Value must be between 15 and 2880 minutes, in 15 minute increments only.</summary>
+    [JsonPropertyName("completionDurationMinutes")]
+    public double? CompletionDurationMinutes { get; set; }
 
     /// <summary>The data encryption key identifier for the snapshot.</summary>
     [JsonPropertyName("dataEncryptionKeyId")]

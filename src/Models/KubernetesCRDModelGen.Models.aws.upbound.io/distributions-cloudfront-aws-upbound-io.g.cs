@@ -654,6 +654,23 @@ public partial class V1beta1DistributionSpecForProviderOriginS3OriginConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionSpecForProviderOriginVpcOriginConfig
+{
+    /// <summary>The Custom KeepAlive timeout, in seconds. By default, AWS enforces an upper limit of 60. But you can request an increase. Defaults to 5.</summary>
+    [JsonPropertyName("originKeepaliveTimeout")]
+    public double? OriginKeepaliveTimeout { get; set; }
+
+    /// <summary>The Custom Read timeout, in seconds. By default, AWS enforces an upper limit of 60. But you can request an increase. Defaults to 30.</summary>
+    [JsonPropertyName("originReadTimeout")]
+    public double? OriginReadTimeout { get; set; }
+
+    /// <summary>The VPC origin ID.</summary>
+    [JsonPropertyName("vpcOriginId")]
+    public string? VpcOriginId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -703,6 +720,10 @@ public partial class V1beta1DistributionSpecForProviderOrigin
     /// <summary>CloudFront S3 origin configuration information. If a custom origin is required, use custom_origin_config instead.</summary>
     [JsonPropertyName("s3OriginConfig")]
     public IList<V1beta1DistributionSpecForProviderOriginS3OriginConfig>? S3OriginConfig { get; set; }
+
+    /// <summary>The VPC origin configuration.</summary>
+    [JsonPropertyName("vpcOriginConfig")]
+    public IList<V1beta1DistributionSpecForProviderOriginVpcOriginConfig>? VpcOriginConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -1526,6 +1547,23 @@ public partial class V1beta1DistributionSpecInitProviderOriginS3OriginConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionSpecInitProviderOriginVpcOriginConfig
+{
+    /// <summary>The Custom KeepAlive timeout, in seconds. By default, AWS enforces an upper limit of 60. But you can request an increase. Defaults to 5.</summary>
+    [JsonPropertyName("originKeepaliveTimeout")]
+    public double? OriginKeepaliveTimeout { get; set; }
+
+    /// <summary>The Custom Read timeout, in seconds. By default, AWS enforces an upper limit of 60. But you can request an increase. Defaults to 30.</summary>
+    [JsonPropertyName("originReadTimeout")]
+    public double? OriginReadTimeout { get; set; }
+
+    /// <summary>The VPC origin ID.</summary>
+    [JsonPropertyName("vpcOriginId")]
+    public string? VpcOriginId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -1575,6 +1613,10 @@ public partial class V1beta1DistributionSpecInitProviderOrigin
     /// <summary>CloudFront S3 origin configuration information. If a custom origin is required, use custom_origin_config instead.</summary>
     [JsonPropertyName("s3OriginConfig")]
     public IList<V1beta1DistributionSpecInitProviderOriginS3OriginConfig>? S3OriginConfig { get; set; }
+
+    /// <summary>The VPC origin configuration.</summary>
+    [JsonPropertyName("vpcOriginConfig")]
+    public IList<V1beta1DistributionSpecInitProviderOriginVpcOriginConfig>? VpcOriginConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -2278,6 +2320,23 @@ public partial class V1beta1DistributionStatusAtProviderOriginS3OriginConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionStatusAtProviderOriginVpcOriginConfig
+{
+    /// <summary>The Custom KeepAlive timeout, in seconds. By default, AWS enforces an upper limit of 60. But you can request an increase. Defaults to 5.</summary>
+    [JsonPropertyName("originKeepaliveTimeout")]
+    public double? OriginKeepaliveTimeout { get; set; }
+
+    /// <summary>The Custom Read timeout, in seconds. By default, AWS enforces an upper limit of 60. But you can request an increase. Defaults to 30.</summary>
+    [JsonPropertyName("originReadTimeout")]
+    public double? OriginReadTimeout { get; set; }
+
+    /// <summary>The VPC origin ID.</summary>
+    [JsonPropertyName("vpcOriginId")]
+    public string? VpcOriginId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrigin
 {
     /// <summary>Number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.</summary>
@@ -2319,6 +2378,10 @@ public partial class V1beta1DistributionStatusAtProviderOrigin
     /// <summary>CloudFront S3 origin configuration information. If a custom origin is required, use custom_origin_config instead.</summary>
     [JsonPropertyName("s3OriginConfig")]
     public IList<V1beta1DistributionStatusAtProviderOriginS3OriginConfig>? S3OriginConfig { get; set; }
+
+    /// <summary>The VPC origin configuration.</summary>
+    [JsonPropertyName("vpcOriginConfig")]
+    public IList<V1beta1DistributionStatusAtProviderOriginVpcOriginConfig>? VpcOriginConfig { get; set; }
 }
 
 /// <summary></summary>

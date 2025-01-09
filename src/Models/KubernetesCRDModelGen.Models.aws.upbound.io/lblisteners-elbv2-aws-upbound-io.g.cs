@@ -421,6 +421,10 @@ public partial class V1beta1LBListenerSpecForProviderLoadBalancerArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderMutualAuthentication
 {
+    /// <summary>Valid values are off and on.</summary>
+    [JsonPropertyName("advertiseTrustStoreCaNames")]
+    public string? AdvertiseTrustStoreCaNames { get; set; }
+
     /// <summary>Whether client certificate expiry is ignored. Default is false.</summary>
     [JsonPropertyName("ignoreClientCertificateExpiry")]
     public bool? IgnoreClientCertificateExpiry { get; set; }
@@ -904,6 +908,10 @@ public partial class V1beta1LBListenerSpecInitProviderLoadBalancerArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderMutualAuthentication
 {
+    /// <summary>Valid values are off and on.</summary>
+    [JsonPropertyName("advertiseTrustStoreCaNames")]
+    public string? AdvertiseTrustStoreCaNames { get; set; }
+
     /// <summary>Whether client certificate expiry is ignored. Default is false.</summary>
     [JsonPropertyName("ignoreClientCertificateExpiry")]
     public bool? IgnoreClientCertificateExpiry { get; set; }
@@ -1310,6 +1318,10 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultAction
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderMutualAuthentication
 {
+    /// <summary>Valid values are off and on.</summary>
+    [JsonPropertyName("advertiseTrustStoreCaNames")]
+    public string? AdvertiseTrustStoreCaNames { get; set; }
+
     /// <summary>Whether client certificate expiry is ignored. Default is false.</summary>
     [JsonPropertyName("ignoreClientCertificateExpiry")]
     public bool? IgnoreClientCertificateExpiry { get; set; }

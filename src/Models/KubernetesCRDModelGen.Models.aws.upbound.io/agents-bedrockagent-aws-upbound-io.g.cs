@@ -148,6 +148,10 @@ public partial class V1beta1AgentSpecForProviderPromptOverrideConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProvider
 {
+    /// <summary>Agents collaboration role. Valid values: SUPERVISOR, SUPERVISOR_ROUTER, DISABLED.</summary>
+    [JsonPropertyName("agentCollaboration")]
+    public string? AgentCollaboration { get; set; }
+
     /// <summary>Name of the agent.</summary>
     [JsonPropertyName("agentName")]
     public string? AgentName { get; set; }
@@ -176,7 +180,7 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("foundationModel")]
     public string? FoundationModel { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Details about the guardrail associated with the agent. See guardrail_configuration Block for details.</summary>
     [JsonPropertyName("guardrailConfiguration")]
     public IList<V1beta1AgentSpecForProviderGuardrailConfiguration>? GuardrailConfiguration { get; set; }
 
@@ -184,7 +188,7 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("idleSessionTtlInSeconds")]
     public double? IdleSessionTtlInSeconds { get; set; }
 
-    /// <summary>Instructions that tell the agent what it should do and how it should interact with users.</summary>
+    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.</summary>
     [JsonPropertyName("instruction")]
     public string? Instruction { get; set; }
 
@@ -349,6 +353,10 @@ public partial class V1beta1AgentSpecInitProviderPromptOverrideConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProvider
 {
+    /// <summary>Agents collaboration role. Valid values: SUPERVISOR, SUPERVISOR_ROUTER, DISABLED.</summary>
+    [JsonPropertyName("agentCollaboration")]
+    public string? AgentCollaboration { get; set; }
+
     /// <summary>Name of the agent.</summary>
     [JsonPropertyName("agentName")]
     public string? AgentName { get; set; }
@@ -377,7 +385,7 @@ public partial class V1beta1AgentSpecInitProvider
     [JsonPropertyName("foundationModel")]
     public string? FoundationModel { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Details about the guardrail associated with the agent. See guardrail_configuration Block for details.</summary>
     [JsonPropertyName("guardrailConfiguration")]
     public IList<V1beta1AgentSpecInitProviderGuardrailConfiguration>? GuardrailConfiguration { get; set; }
 
@@ -385,7 +393,7 @@ public partial class V1beta1AgentSpecInitProvider
     [JsonPropertyName("idleSessionTtlInSeconds")]
     public double? IdleSessionTtlInSeconds { get; set; }
 
-    /// <summary>Instructions that tell the agent what it should do and how it should interact with users.</summary>
+    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.</summary>
     [JsonPropertyName("instruction")]
     public string? Instruction { get; set; }
 
@@ -626,6 +634,10 @@ public partial class V1beta1AgentStatusAtProvider
     [JsonPropertyName("agentArn")]
     public string? AgentArn { get; set; }
 
+    /// <summary>Agents collaboration role. Valid values: SUPERVISOR, SUPERVISOR_ROUTER, DISABLED.</summary>
+    [JsonPropertyName("agentCollaboration")]
+    public string? AgentCollaboration { get; set; }
+
     /// <summary>Unique identifier of the agent.</summary>
     [JsonPropertyName("agentId")]
     public string? AgentId { get; set; }
@@ -654,7 +666,7 @@ public partial class V1beta1AgentStatusAtProvider
     [JsonPropertyName("foundationModel")]
     public string? FoundationModel { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Details about the guardrail associated with the agent. See guardrail_configuration Block for details.</summary>
     [JsonPropertyName("guardrailConfiguration")]
     public IList<V1beta1AgentStatusAtProviderGuardrailConfiguration>? GuardrailConfiguration { get; set; }
 
@@ -666,7 +678,7 @@ public partial class V1beta1AgentStatusAtProvider
     [JsonPropertyName("idleSessionTtlInSeconds")]
     public double? IdleSessionTtlInSeconds { get; set; }
 
-    /// <summary>Instructions that tell the agent what it should do and how it should interact with users.</summary>
+    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.</summary>
     [JsonPropertyName("instruction")]
     public string? Instruction { get; set; }
 
