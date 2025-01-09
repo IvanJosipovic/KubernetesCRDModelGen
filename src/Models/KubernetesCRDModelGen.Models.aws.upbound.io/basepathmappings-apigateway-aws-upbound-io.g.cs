@@ -200,6 +200,10 @@ public partial class V1beta1BasePathMappingSpecForProvider
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
+    /// <summary>The identifier for the domain name resource. Supported only for private custom domain names.</summary>
+    [JsonPropertyName("domainNameId")]
+    public string? DomainNameId { get; set; }
+
     /// <summary>Reference to a DomainName in apigateway to populate domainName.</summary>
     [JsonPropertyName("domainNameRef")]
     public V1beta1BasePathMappingSpecForProviderDomainNameRef? DomainNameRef { get; set; }
@@ -417,6 +421,10 @@ public partial class V1beta1BasePathMappingSpecInitProvider
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
+    /// <summary>The identifier for the domain name resource. Supported only for private custom domain names.</summary>
+    [JsonPropertyName("domainNameId")]
+    public string? DomainNameId { get; set; }
+
     /// <summary>Reference to a DomainName in apigateway to populate domainName.</summary>
     [JsonPropertyName("domainNameRef")]
     public V1beta1BasePathMappingSpecInitProviderDomainNameRef? DomainNameRef { get; set; }
@@ -585,6 +593,10 @@ public partial class V1beta1BasePathMappingStatusAtProvider
     /// <summary>Already-registered domain name to connect the API to.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
+
+    /// <summary>The identifier for the domain name resource. Supported only for private custom domain names.</summary>
+    [JsonPropertyName("domainNameId")]
+    public string? DomainNameId { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]

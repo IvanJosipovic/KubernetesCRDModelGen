@@ -87,6 +87,9 @@ spec:
                   description:
                     description: Description for the network interface.
                     type: string
+                  enablePrimaryIpv6:
+                    description: Enables assigning a primary IPv6 Global Unicast Address (GUA) to the network interface (ENI) in dual-stack or IPv6-only subnets. This ensures the instance attached to the ENI retains a consistent IPv6 address. Once enabled, the first IPv6 GUA becomes the primary IPv6 address and cannot be disabled. The primary IPv6 address remains assigned until the instance is terminated or the ENI is detached. Enabling and subsequent disabling forces recreation of the ENI.
+                    type: boolean
                   interfaceType:
                     description: Type of network interface to create. Set to efa for Elastic Fabric Adapter. Changing interface_type will cause the resource to be destroyed and re-created.
                     type: string
@@ -108,7 +111,7 @@ spec:
                       type: string
                     type: array
                   ipv6AddressListEnabled:
-                    description: Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default false.
+                    description: Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default is false.
                     type: boolean
                   ipv6Addresses:
                     description: One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying ipv6_address_count.
@@ -133,7 +136,7 @@ spec:
                       type: string
                     type: array
                   privateIpListEnabled:
-                    description: Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default false.
+                    description: Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default is false.
                     type: boolean
                   privateIps:
                     description: List of private IPs to assign to the ENI without regard to order.
@@ -368,6 +371,9 @@ spec:
                   description:
                     description: Description for the network interface.
                     type: string
+                  enablePrimaryIpv6:
+                    description: Enables assigning a primary IPv6 Global Unicast Address (GUA) to the network interface (ENI) in dual-stack or IPv6-only subnets. This ensures the instance attached to the ENI retains a consistent IPv6 address. Once enabled, the first IPv6 GUA becomes the primary IPv6 address and cannot be disabled. The primary IPv6 address remains assigned until the instance is terminated or the ENI is detached. Enabling and subsequent disabling forces recreation of the ENI.
+                    type: boolean
                   interfaceType:
                     description: Type of network interface to create. Set to efa for Elastic Fabric Adapter. Changing interface_type will cause the resource to be destroyed and re-created.
                     type: string
@@ -389,7 +395,7 @@ spec:
                       type: string
                     type: array
                   ipv6AddressListEnabled:
-                    description: Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default false.
+                    description: Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default is false.
                     type: boolean
                   ipv6Addresses:
                     description: One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying ipv6_address_count.
@@ -414,7 +420,7 @@ spec:
                       type: string
                     type: array
                   privateIpListEnabled:
-                    description: Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default false.
+                    description: Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default is false.
                     type: boolean
                   privateIps:
                     description: List of private IPs to assign to the ENI without regard to order.
@@ -853,6 +859,9 @@ spec:
                   description:
                     description: Description for the network interface.
                     type: string
+                  enablePrimaryIpv6:
+                    description: Enables assigning a primary IPv6 Global Unicast Address (GUA) to the network interface (ENI) in dual-stack or IPv6-only subnets. This ensures the instance attached to the ENI retains a consistent IPv6 address. Once enabled, the first IPv6 GUA becomes the primary IPv6 address and cannot be disabled. The primary IPv6 address remains assigned until the instance is terminated or the ENI is detached. Enabling and subsequent disabling forces recreation of the ENI.
+                    type: boolean
                   id:
                     description: ID of the network interface.
                     type: string
@@ -877,7 +886,7 @@ spec:
                       type: string
                     type: array
                   ipv6AddressListEnabled:
-                    description: Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default false.
+                    description: Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default is false.
                     type: boolean
                   ipv6Addresses:
                     description: One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying ipv6_address_count.
@@ -914,7 +923,7 @@ spec:
                       type: string
                     type: array
                   privateIpListEnabled:
-                    description: Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default false.
+                    description: Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default is false.
                     type: boolean
                   privateIps:
                     description: List of private IPs to assign to the ENI without regard to order.

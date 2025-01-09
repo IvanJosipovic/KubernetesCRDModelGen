@@ -111,6 +111,10 @@ public partial class V1beta1GlobalClusterSpecForProvider
     /// <summary>Specifies whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -212,6 +216,10 @@ public partial class V1beta1GlobalClusterSpecInitProvider
     /// <summary>Specifies whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -350,11 +358,11 @@ public partial class V1beta1GlobalClusterSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
 {
-    /// <summary>Amazon Resource Name (ARN) of member DB Cluster</summary>
+    /// <summary>Amazon Resource Name (ARN) of member DB Cluster.</summary>
     [JsonPropertyName("dbClusterArn")]
     public string? DbClusterArn { get; set; }
 
-    /// <summary>Whether the member is the primary DB Cluster</summary>
+    /// <summary>Whether the member is the primary DB Cluster.</summary>
     [JsonPropertyName("isWriter")]
     public bool? IsWriter { get; set; }
 }
@@ -363,7 +371,7 @@ public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatusAtProvider
 {
-    /// <summary>RDS Global Cluster Amazon Resource Name (ARN)</summary>
+    /// <summary>RDS Global Cluster Amazon Resource Name (ARN).</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -403,11 +411,11 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     [JsonPropertyName("globalClusterMembers")]
     public IList<V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers>? GlobalClusterMembers { get; set; }
 
-    /// <summary>AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed</summary>
+    /// <summary>AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed.</summary>
     [JsonPropertyName("globalClusterResourceId")]
     public string? GlobalClusterResourceId { get; set; }
 
-    /// <summary>RDS Global Cluster identifier</summary>
+    /// <summary>RDS Global Cluster identifier.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -418,6 +426,14 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     /// <summary>Specifies whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

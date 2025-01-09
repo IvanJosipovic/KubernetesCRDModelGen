@@ -207,6 +207,10 @@ public partial class V1beta1DomainNameSpecForProvider
     [JsonPropertyName("ownershipVerificationCertificateArn")]
     public string? OwnershipVerificationCertificateArn { get; set; }
 
+    /// <summary>A stringified JSON policy document that applies to the execute-api service for this DomainName regardless of the caller and Method configuration. Supported only for private custom domain names.</summary>
+    [JsonPropertyName("policy")]
+    public string? Policy { get; set; }
+
     /// <summary>Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
@@ -435,6 +439,10 @@ public partial class V1beta1DomainNameSpecInitProvider
     [JsonPropertyName("ownershipVerificationCertificateArn")]
     public string? OwnershipVerificationCertificateArn { get; set; }
 
+    /// <summary>A stringified JSON policy document that applies to the execute-api service for this DomainName regardless of the caller and Method configuration. Supported only for private custom domain names.</summary>
+    [JsonPropertyName("policy")]
+    public string? Policy { get; set; }
+
     /// <summary>ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with certificate_arn, certificate_name, certificate_body, certificate_chain, and certificate_private_key.</summary>
     [JsonPropertyName("regionalCertificateArn")]
     public string? RegionalCertificateArn { get; set; }
@@ -654,6 +662,10 @@ public partial class V1beta1DomainNameStatusAtProvider
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
+    /// <summary>The identifier for the domain name resource. Supported only for private custom domain names.</summary>
+    [JsonPropertyName("domainNameId")]
+    public string? DomainNameId { get; set; }
+
     /// <summary>Configuration block defining API endpoint information including type. See below.</summary>
     [JsonPropertyName("endpointConfiguration")]
     public IList<V1beta1DomainNameStatusAtProviderEndpointConfiguration>? EndpointConfiguration { get; set; }
@@ -669,6 +681,10 @@ public partial class V1beta1DomainNameStatusAtProvider
     /// <summary>ARN of the AWS-issued certificate used to validate custom domain ownership (when certificate_arn is issued via an ACM Private CA or mutual_tls_authentication is configured with an ACM-imported certificate.)</summary>
     [JsonPropertyName("ownershipVerificationCertificateArn")]
     public string? OwnershipVerificationCertificateArn { get; set; }
+
+    /// <summary>A stringified JSON policy document that applies to the execute-api service for this DomainName regardless of the caller and Method configuration. Supported only for private custom domain names.</summary>
+    [JsonPropertyName("policy")]
+    public string? Policy { get; set; }
 
     /// <summary>ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with certificate_arn, certificate_name, certificate_body, certificate_chain, and certificate_private_key.</summary>
     [JsonPropertyName("regionalCertificateArn")]

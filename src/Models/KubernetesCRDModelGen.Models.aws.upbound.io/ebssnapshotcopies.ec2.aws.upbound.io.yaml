@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  completionDurationMinutes:
+                    description: Specifies a completion duration to initiate a time-based snapshot copy. Time-based snapshot copy operations complete within the specified duration.  Value must be between 15 and 2880 minutes, in 15 minute increments only.
+                    type: number
                   description:
                     description: A description of what the snapshot is.
                     type: string
@@ -314,6 +317,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  completionDurationMinutes:
+                    description: Specifies a completion duration to initiate a time-based snapshot copy. Time-based snapshot copy operations complete within the specified duration.  Value must be between 15 and 2880 minutes, in 15 minute increments only.
+                    type: number
                   description:
                     description: A description of what the snapshot is.
                     type: string
@@ -736,6 +742,9 @@ spec:
                   arn:
                     description: Amazon Resource Name (ARN) of the EBS Snapshot.
                     type: string
+                  completionDurationMinutes:
+                    description: Specifies a completion duration to initiate a time-based snapshot copy. Time-based snapshot copy operations complete within the specified duration.  Value must be between 15 and 2880 minutes, in 15 minute increments only.
+                    type: number
                   dataEncryptionKeyId:
                     description: The data encryption key identifier for the snapshot.
                     type: string

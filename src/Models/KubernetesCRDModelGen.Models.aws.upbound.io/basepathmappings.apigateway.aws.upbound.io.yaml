@@ -179,6 +179,9 @@ spec:
                   domainName:
                     description: Already-registered domain name to connect the API to.
                     type: string
+                  domainNameId:
+                    description: The identifier for the domain name resource. Supported only for private custom domain names.
+                    type: string
                   domainNameRef:
                     description: Reference to a DomainName in apigateway to populate domainName.
                     properties:
@@ -476,6 +479,9 @@ spec:
                     type: string
                   domainName:
                     description: Already-registered domain name to connect the API to.
+                    type: string
+                  domainNameId:
+                    description: The identifier for the domain name resource. Supported only for private custom domain names.
                     type: string
                   domainNameRef:
                     description: Reference to a DomainName in apigateway to populate domainName.
@@ -874,6 +880,9 @@ spec:
                     type: string
                   domainName:
                     description: Already-registered domain name to connect the API to.
+                    type: string
+                  domainNameId:
+                    description: The identifier for the domain name resource. Supported only for private custom domain names.
                     type: string
                   id:
                     type: string

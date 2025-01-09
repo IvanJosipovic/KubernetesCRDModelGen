@@ -224,6 +224,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
+    /// <summary>The multi region cluster identifier specified on aws_memorydb_multi_region_cluster.</summary>
+    [JsonPropertyName("multiRegionClusterName")]
+    public string? MultiRegionClusterName { get; set; }
+
     /// <summary>The compute and memory capacity of the nodes in the cluster. See AWS documentation on supported node types as well as vertical scaling.</summary>
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
@@ -516,6 +520,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Specifies the weekly time range during which maintenance on the cluster is performed. Specify as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:23:00-mon:01:30.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
+
+    /// <summary>The multi region cluster identifier specified on aws_memorydb_multi_region_cluster.</summary>
+    [JsonPropertyName("multiRegionClusterName")]
+    public string? MultiRegionClusterName { get; set; }
 
     /// <summary>The compute and memory capacity of the nodes in the cluster. See AWS documentation on supported node types as well as vertical scaling.</summary>
     [JsonPropertyName("nodeType")]
@@ -845,6 +853,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Specifies the weekly time range during which maintenance on the cluster is performed. Specify as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:23:00-mon:01:30.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
+
+    /// <summary>The multi region cluster identifier specified on aws_memorydb_multi_region_cluster.</summary>
+    [JsonPropertyName("multiRegionClusterName")]
+    public string? MultiRegionClusterName { get; set; }
 
     /// <summary>The compute and memory capacity of the nodes in the cluster. See AWS documentation on supported node types as well as vertical scaling.</summary>
     [JsonPropertyName("nodeType")]

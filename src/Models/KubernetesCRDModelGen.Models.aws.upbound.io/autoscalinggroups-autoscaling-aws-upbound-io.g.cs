@@ -10,6 +10,15 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.autoscaling.aws.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupSpecForProviderAvailabilityZoneDistribution
+{
+    /// <summary>The strategy to use for distributing capacity across the Availability Zones. Valid values are balanced-only and balanced-best-effort. Default is balanced-best-effort.</summary>
+    [JsonPropertyName("capacityDistributionStrategy")]
+    public string? CapacityDistributionStrategy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderInitialLifecycleHook
 {
     /// <summary></summary>
@@ -950,6 +959,10 @@ public partial class V1beta2AutoscalingGroupSpecForProviderWarmPool
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProvider
 {
+    /// <summary>The instance capacity distribution across Availability Zones. See Availability Zone Distribution below for more details.</summary>
+    [JsonPropertyName("availabilityZoneDistribution")]
+    public IList<V1beta2AutoscalingGroupSpecForProviderAvailabilityZoneDistribution>? AvailabilityZoneDistribution { get; set; }
+
     /// <summary>A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.</summary>
     [JsonPropertyName("availabilityZones")]
     public IList<string>? AvailabilityZones { get; set; }
@@ -1125,6 +1138,15 @@ public partial class V1beta2AutoscalingGroupSpecForProvider
     /// <summary>If this block is configured, add a Warm Pool to the specified Auto Scaling group. Defined below</summary>
     [JsonPropertyName("warmPool")]
     public IList<V1beta2AutoscalingGroupSpecForProviderWarmPool>? WarmPool { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupSpecInitProviderAvailabilityZoneDistribution
+{
+    /// <summary>The strategy to use for distributing capacity across the Availability Zones. Valid values are balanced-only and balanced-best-effort. Default is balanced-best-effort.</summary>
+    [JsonPropertyName("capacityDistributionStrategy")]
+    public string? CapacityDistributionStrategy { get; set; }
 }
 
 /// <summary></summary>
@@ -2069,6 +2091,10 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderWarmPool
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecInitProvider
 {
+    /// <summary>The instance capacity distribution across Availability Zones. See Availability Zone Distribution below for more details.</summary>
+    [JsonPropertyName("availabilityZoneDistribution")]
+    public IList<V1beta2AutoscalingGroupSpecInitProviderAvailabilityZoneDistribution>? AvailabilityZoneDistribution { get; set; }
+
     /// <summary>A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.</summary>
     [JsonPropertyName("availabilityZones")]
     public IList<string>? AvailabilityZones { get; set; }
@@ -2372,6 +2398,15 @@ public partial class V1beta2AutoscalingGroupSpec
     /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta2AutoscalingGroupSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupStatusAtProviderAvailabilityZoneDistribution
+{
+    /// <summary>The strategy to use for distributing capacity across the Availability Zones. Valid values are balanced-only and balanced-best-effort. Default is balanced-best-effort.</summary>
+    [JsonPropertyName("capacityDistributionStrategy")]
+    public string? CapacityDistributionStrategy { get; set; }
 }
 
 /// <summary></summary>
@@ -2903,6 +2938,10 @@ public partial class V1beta2AutoscalingGroupStatusAtProvider
     /// <summary>ARN for this Auto Scaling Group</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
+
+    /// <summary>The instance capacity distribution across Availability Zones. See Availability Zone Distribution below for more details.</summary>
+    [JsonPropertyName("availabilityZoneDistribution")]
+    public IList<V1beta2AutoscalingGroupStatusAtProviderAvailabilityZoneDistribution>? AvailabilityZoneDistribution { get; set; }
 
     /// <summary>A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.</summary>
     [JsonPropertyName("availabilityZones")]

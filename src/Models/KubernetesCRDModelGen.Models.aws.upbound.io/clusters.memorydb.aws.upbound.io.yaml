@@ -197,6 +197,9 @@ spec:
                   maintenanceWindow:
                     description: 'Specifies the weekly time range during which maintenance on the cluster is performed. Specify as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:23:00-mon:01:30.'
                     type: string
+                  multiRegionClusterName:
+                    description: The multi region cluster identifier specified on aws_memorydb_multi_region_cluster.
+                    type: string
                   nodeType:
                     description: The compute and memory capacity of the nodes in the cluster. See AWS documentation on supported node types as well as vertical scaling.
                     type: string
@@ -562,6 +565,9 @@ spec:
                     type: object
                   maintenanceWindow:
                     description: 'Specifies the weekly time range during which maintenance on the cluster is performed. Specify as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:23:00-mon:01:30.'
+                    type: string
+                  multiRegionClusterName:
+                    description: The multi region cluster identifier specified on aws_memorydb_multi_region_cluster.
                     type: string
                   nodeType:
                     description: The compute and memory capacity of the nodes in the cluster. See AWS documentation on supported node types as well as vertical scaling.
@@ -1053,6 +1059,9 @@ spec:
                     type: string
                   maintenanceWindow:
                     description: 'Specifies the weekly time range during which maintenance on the cluster is performed. Specify as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:23:00-mon:01:30.'
+                    type: string
+                  multiRegionClusterName:
+                    description: The multi region cluster identifier specified on aws_memorydb_multi_region_cluster.
                     type: string
                   nodeType:
                     description: The compute and memory capacity of the nodes in the cluster. See AWS documentation on supported node types as well as vertical scaling.

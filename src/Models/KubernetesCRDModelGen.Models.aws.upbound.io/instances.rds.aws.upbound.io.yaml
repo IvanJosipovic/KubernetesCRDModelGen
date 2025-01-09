@@ -6194,19 +6194,17 @@ spec:
                     type: string
                   dbSubnetGroupName:
                     description: >-
-                      Name of DB subnet group. DB instance will
+                      Name of DB subnet group.
 
-                      be created in the VPC associated with the DB subnet group. If unspecified, will
+                      DB instance will be created in the VPC associated with the DB subnet group.
 
-                      be created in the default VPC, or in EC2 Classic, if available. When working
+                      If unspecified, will be created in the default Subnet Group.
 
-                      with read replicas, it should be specified only if the source database
+                      When working with read replicas created in the same region, defaults to the Subnet Group Name of the source DB.
 
-                      specifies an instance in another AWS Region. See DBSubnetGroupName in API
+                      When working with read replicas created in a different region, defaults to the default Subnet Group.
 
-                      action CreateDBInstanceReadReplica
-
-                      for additional read replica constraints.
+                      See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica constraints.
                     type: string
                   dbSubnetGroupNameRef:
                     description: Reference to a SubnetGroup in rds to populate dbSubnetGroupName.
@@ -6836,23 +6834,17 @@ spec:
                     type: string
                   replicateSourceDb:
                     description: >-
-                      Specifies that this resource is a Replicate
+                      Specifies that this resource is a Replica database, and to use this value as the source database.
 
-                      database, and to use this value as the source database. This correlates to the
+                      If replicating an Amazon RDS Database Instance in the same region, use the identifier of the source DB, unless also specifying the db_subnet_group_name.
 
-                      identifier of another Amazon RDS Database to replicate (if replicating within
+                      If specifying the db_subnet_group_name in the same region, use the arn of the source DB.
 
-                      a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+                      If replicating an Instance in a different region, use the arn of the source DB.
 
-                      cross-region). Note that if you are
+                      Note that if you are creating a cross-region replica of an encrypted database you will also need to specify a kms_key_id.
 
-                      creating a cross-region replica of an encrypted database you will also need to
-
-                      specify a kms_key_id. See DB Instance Replication and Working with
-
-                      PostgreSQL and MySQL Read Replicas
-
-                      for more information on using Replication.
+                      See DB Instance Replication and Working with PostgreSQL and MySQL Read Replicas for more information on using Replication.
                     type: string
                   replicateSourceDbRef:
                     description: Reference to a Instance in rds to populate replicateSourceDb.
@@ -6941,7 +6933,12 @@ spec:
                         type: object
                     type: object
                   restoreToPointInTime:
-                    description: A configuration block for restoring a DB instance to an arbitrary point in time. Requires the identifier argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
+                    description: >-
+                      A configuration block for restoring a DB instance to an arbitrary point in time.
+
+                      Requires the identifier argument to be set with the name of the new DB instance to be created.
+
+                      See Restore To Point In Time below for details.
                     properties:
                       restoreTime:
                         description: The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with use_latest_restorable_time.
@@ -6992,11 +6989,9 @@ spec:
                     type: boolean
                   snapshotIdentifier:
                     description: >-
-                      Specifies whether or not to create this
+                      Specifies whether or not to create this database from a snapshot.
 
-                      database from a snapshot. This correlates to the snapshot ID you'd find in the
-
-                      RDS console, e.g: rds:production-2015-06-26-06-05.
+                      This corresponds to the snapshot ID you'd find in the RDS console, e.g: rds:production-2015-06-26-06-05.
                     type: string
                   storageEncrypted:
                     description: >-
@@ -7040,7 +7035,10 @@ spec:
                       for more information.
                     type: string
                   upgradeStorageConfig:
-                    description: Whether to upgrade the storage file system configuration on the read replica. Can only be set with replicate_source_db.
+                    description: >-
+                      Whether to upgrade the storage file system configuration on the read replica.
+
+                      Can only be set with replicate_source_db.
                     type: boolean
                   username:
                     description: Username for the master DB user. Cannot be specified for a replica.
@@ -7265,19 +7263,17 @@ spec:
                     type: string
                   dbSubnetGroupName:
                     description: >-
-                      Name of DB subnet group. DB instance will
+                      Name of DB subnet group.
 
-                      be created in the VPC associated with the DB subnet group. If unspecified, will
+                      DB instance will be created in the VPC associated with the DB subnet group.
 
-                      be created in the default VPC, or in EC2 Classic, if available. When working
+                      If unspecified, will be created in the default Subnet Group.
 
-                      with read replicas, it should be specified only if the source database
+                      When working with read replicas created in the same region, defaults to the Subnet Group Name of the source DB.
 
-                      specifies an instance in another AWS Region. See DBSubnetGroupName in API
+                      When working with read replicas created in a different region, defaults to the default Subnet Group.
 
-                      action CreateDBInstanceReadReplica
-
-                      for additional read replica constraints.
+                      See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica constraints.
                     type: string
                   dbSubnetGroupNameRef:
                     description: Reference to a SubnetGroup in rds to populate dbSubnetGroupName.
@@ -7904,23 +7900,17 @@ spec:
                     type: string
                   replicateSourceDb:
                     description: >-
-                      Specifies that this resource is a Replicate
+                      Specifies that this resource is a Replica database, and to use this value as the source database.
 
-                      database, and to use this value as the source database. This correlates to the
+                      If replicating an Amazon RDS Database Instance in the same region, use the identifier of the source DB, unless also specifying the db_subnet_group_name.
 
-                      identifier of another Amazon RDS Database to replicate (if replicating within
+                      If specifying the db_subnet_group_name in the same region, use the arn of the source DB.
 
-                      a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+                      If replicating an Instance in a different region, use the arn of the source DB.
 
-                      cross-region). Note that if you are
+                      Note that if you are creating a cross-region replica of an encrypted database you will also need to specify a kms_key_id.
 
-                      creating a cross-region replica of an encrypted database you will also need to
-
-                      specify a kms_key_id. See DB Instance Replication and Working with
-
-                      PostgreSQL and MySQL Read Replicas
-
-                      for more information on using Replication.
+                      See DB Instance Replication and Working with PostgreSQL and MySQL Read Replicas for more information on using Replication.
                     type: string
                   replicateSourceDbRef:
                     description: Reference to a Instance in rds to populate replicateSourceDb.
@@ -8009,7 +7999,12 @@ spec:
                         type: object
                     type: object
                   restoreToPointInTime:
-                    description: A configuration block for restoring a DB instance to an arbitrary point in time. Requires the identifier argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
+                    description: >-
+                      A configuration block for restoring a DB instance to an arbitrary point in time.
+
+                      Requires the identifier argument to be set with the name of the new DB instance to be created.
+
+                      See Restore To Point In Time below for details.
                     properties:
                       restoreTime:
                         description: The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with use_latest_restorable_time.
@@ -8060,11 +8055,9 @@ spec:
                     type: boolean
                   snapshotIdentifier:
                     description: >-
-                      Specifies whether or not to create this
+                      Specifies whether or not to create this database from a snapshot.
 
-                      database from a snapshot. This correlates to the snapshot ID you'd find in the
-
-                      RDS console, e.g: rds:production-2015-06-26-06-05.
+                      This corresponds to the snapshot ID you'd find in the RDS console, e.g: rds:production-2015-06-26-06-05.
                     type: string
                   storageEncrypted:
                     description: >-
@@ -8108,7 +8101,10 @@ spec:
                       for more information.
                     type: string
                   upgradeStorageConfig:
-                    description: Whether to upgrade the storage file system configuration on the read replica. Can only be set with replicate_source_db.
+                    description: >-
+                      Whether to upgrade the storage file system configuration on the read replica.
+
+                      Can only be set with replicate_source_db.
                     type: boolean
                   username:
                     description: Username for the master DB user. Cannot be specified for a replica.
@@ -8531,19 +8527,17 @@ spec:
                     type: string
                   dbSubnetGroupName:
                     description: >-
-                      Name of DB subnet group. DB instance will
+                      Name of DB subnet group.
 
-                      be created in the VPC associated with the DB subnet group. If unspecified, will
+                      DB instance will be created in the VPC associated with the DB subnet group.
 
-                      be created in the default VPC, or in EC2 Classic, if available. When working
+                      If unspecified, will be created in the default Subnet Group.
 
-                      with read replicas, it should be specified only if the source database
+                      When working with read replicas created in the same region, defaults to the Subnet Group Name of the source DB.
 
-                      specifies an instance in another AWS Region. See DBSubnetGroupName in API
+                      When working with read replicas created in a different region, defaults to the default Subnet Group.
 
-                      action CreateDBInstanceReadReplica
-
-                      for additional read replica constraints.
+                      See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica constraints.
                     type: string
                   dedicatedLogVolume:
                     description: Use a dedicated log volume (DLV) for the DB instance. Requires Provisioned IOPS. See the AWS documentation for more details.
@@ -8773,29 +8767,28 @@ spec:
                     type: array
                   replicateSourceDb:
                     description: >-
-                      Specifies that this resource is a Replicate
+                      Specifies that this resource is a Replica database, and to use this value as the source database.
 
-                      database, and to use this value as the source database. This correlates to the
+                      If replicating an Amazon RDS Database Instance in the same region, use the identifier of the source DB, unless also specifying the db_subnet_group_name.
 
-                      identifier of another Amazon RDS Database to replicate (if replicating within
+                      If specifying the db_subnet_group_name in the same region, use the arn of the source DB.
 
-                      a single region) or ARN of the Amazon RDS Database to replicate (if replicating
+                      If replicating an Instance in a different region, use the arn of the source DB.
 
-                      cross-region). Note that if you are
+                      Note that if you are creating a cross-region replica of an encrypted database you will also need to specify a kms_key_id.
 
-                      creating a cross-region replica of an encrypted database you will also need to
-
-                      specify a kms_key_id. See DB Instance Replication and Working with
-
-                      PostgreSQL and MySQL Read Replicas
-
-                      for more information on using Replication.
+                      See DB Instance Replication and Working with PostgreSQL and MySQL Read Replicas for more information on using Replication.
                     type: string
                   resourceId:
                     description: The RDS Resource ID of this instance.
                     type: string
                   restoreToPointInTime:
-                    description: A configuration block for restoring a DB instance to an arbitrary point in time. Requires the identifier argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
+                    description: >-
+                      A configuration block for restoring a DB instance to an arbitrary point in time.
+
+                      Requires the identifier argument to be set with the name of the new DB instance to be created.
+
+                      See Restore To Point In Time below for details.
                     properties:
                       restoreTime:
                         description: The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with use_latest_restorable_time.
@@ -8846,11 +8839,9 @@ spec:
                     type: boolean
                   snapshotIdentifier:
                     description: >-
-                      Specifies whether or not to create this
+                      Specifies whether or not to create this database from a snapshot.
 
-                      database from a snapshot. This correlates to the snapshot ID you'd find in the
-
-                      RDS console, e.g: rds:production-2015-06-26-06-05.
+                      This corresponds to the snapshot ID you'd find in the RDS console, e.g: rds:production-2015-06-26-06-05.
                     type: string
                   status:
                     description: The RDS instance status.
@@ -8903,7 +8894,10 @@ spec:
                       for more information.
                     type: string
                   upgradeStorageConfig:
-                    description: Whether to upgrade the storage file system configuration on the read replica. Can only be set with replicate_source_db.
+                    description: >-
+                      Whether to upgrade the storage file system configuration on the read replica.
+
+                      Can only be set with replicate_source_db.
                     type: boolean
                   username:
                     description: Username for the master DB user. Cannot be specified for a replica.

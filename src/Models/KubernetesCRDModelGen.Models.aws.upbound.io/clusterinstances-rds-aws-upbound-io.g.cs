@@ -360,6 +360,10 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
+    /// <summary>Forces an instance to be destroyed when a part of a read replica cluster. Note: will promote the read replica to a standalone cluster before instance deletion.</summary>
+    [JsonPropertyName("forceDestroy")]
+    public bool? ForceDestroy { get; set; }
+
     /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details. For Aurora Serverless v2 use db.serverless.</summary>
     [JsonPropertyName("instanceClass")]
     public string? InstanceClass { get; set; }
@@ -777,6 +781,10 @@ public partial class V1beta1ClusterInstanceSpecInitProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
+    /// <summary>Forces an instance to be destroyed when a part of a read replica cluster. Note: will promote the read replica to a standalone cluster before instance deletion.</summary>
+    [JsonPropertyName("forceDestroy")]
+    public bool? ForceDestroy { get; set; }
+
     /// <summary>Instance class to use. For details on CPU and memory, see Scaling Aurora DB Instances. Aurora uses db.* instance classes/types. Please see AWS Documentation for currently available instance classes and complete details. For Aurora Serverless v2 use db.serverless.</summary>
     [JsonPropertyName("instanceClass")]
     public string? InstanceClass { get; set; }
@@ -1033,6 +1041,10 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     /// <summary>Database engine version</summary>
     [JsonPropertyName("engineVersionActual")]
     public string? EngineVersionActual { get; set; }
+
+    /// <summary>Forces an instance to be destroyed when a part of a read replica cluster. Note: will promote the read replica to a standalone cluster before instance deletion.</summary>
+    [JsonPropertyName("forceDestroy")]
+    public bool? ForceDestroy { get; set; }
 
     /// <summary>Instance identifier</summary>
     [JsonPropertyName("id")]

@@ -54,8 +54,21 @@ public partial class V1beta1FirewallPolicySpecForProviderFirewallPolicyPolicyVar
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicySpecForProviderFirewallPolicyStatefulEngineOptionsFlowTimeouts
+{
+    /// <summary>Number of seconds that can pass without any TCP traffic sent through the firewall before the firewall determines that the connection is idle. After the idle timeout passes, data packets are dropped, however, the next TCP SYN packet is considered a new flow and is processed by the firewall. Clients or targets can use TCP keepalive packets to reset the idle timeout. Default value: 350.</summary>
+    [JsonPropertyName("tcpIdleTimeoutSeconds")]
+    public double? TcpIdleTimeoutSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecForProviderFirewallPolicyStatefulEngineOptions
 {
+    /// <summary>Amount of time that can pass without any traffic sent through the firewall before the firewall determines that the connection is idle.</summary>
+    [JsonPropertyName("flowTimeouts")]
+    public IList<V1beta1FirewallPolicySpecForProviderFirewallPolicyStatefulEngineOptionsFlowTimeouts>? FlowTimeouts { get; set; }
+
     /// <summary>Indicates how to manage the order of stateful rule evaluation for the policy. Default value: DEFAULT_ACTION_ORDER. Valid values: DEFAULT_ACTION_ORDER, STRICT_ORDER.</summary>
     [JsonPropertyName("ruleOrder")]
     public string? RuleOrder { get; set; }
@@ -384,8 +397,21 @@ public partial class V1beta1FirewallPolicySpecInitProviderFirewallPolicyPolicyVa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicySpecInitProviderFirewallPolicyStatefulEngineOptionsFlowTimeouts
+{
+    /// <summary>Number of seconds that can pass without any TCP traffic sent through the firewall before the firewall determines that the connection is idle. After the idle timeout passes, data packets are dropped, however, the next TCP SYN packet is considered a new flow and is processed by the firewall. Clients or targets can use TCP keepalive packets to reset the idle timeout. Default value: 350.</summary>
+    [JsonPropertyName("tcpIdleTimeoutSeconds")]
+    public double? TcpIdleTimeoutSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicySpecInitProviderFirewallPolicyStatefulEngineOptions
 {
+    /// <summary>Amount of time that can pass without any traffic sent through the firewall before the firewall determines that the connection is idle.</summary>
+    [JsonPropertyName("flowTimeouts")]
+    public IList<V1beta1FirewallPolicySpecInitProviderFirewallPolicyStatefulEngineOptionsFlowTimeouts>? FlowTimeouts { get; set; }
+
     /// <summary>Indicates how to manage the order of stateful rule evaluation for the policy. Default value: DEFAULT_ACTION_ORDER. Valid values: DEFAULT_ACTION_ORDER, STRICT_ORDER.</summary>
     [JsonPropertyName("ruleOrder")]
     public string? RuleOrder { get; set; }
@@ -842,8 +868,21 @@ public partial class V1beta1FirewallPolicyStatusAtProviderFirewallPolicyPolicyVa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyStatusAtProviderFirewallPolicyStatefulEngineOptionsFlowTimeouts
+{
+    /// <summary>Number of seconds that can pass without any TCP traffic sent through the firewall before the firewall determines that the connection is idle. After the idle timeout passes, data packets are dropped, however, the next TCP SYN packet is considered a new flow and is processed by the firewall. Clients or targets can use TCP keepalive packets to reset the idle timeout. Default value: 350.</summary>
+    [JsonPropertyName("tcpIdleTimeoutSeconds")]
+    public double? TcpIdleTimeoutSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyStatusAtProviderFirewallPolicyStatefulEngineOptions
 {
+    /// <summary>Amount of time that can pass without any traffic sent through the firewall before the firewall determines that the connection is idle.</summary>
+    [JsonPropertyName("flowTimeouts")]
+    public IList<V1beta1FirewallPolicyStatusAtProviderFirewallPolicyStatefulEngineOptionsFlowTimeouts>? FlowTimeouts { get; set; }
+
     /// <summary>Indicates how to manage the order of stateful rule evaluation for the policy. Default value: DEFAULT_ACTION_ORDER. Valid values: DEFAULT_ACTION_ORDER, STRICT_ORDER.</summary>
     [JsonPropertyName("ruleOrder")]
     public string? RuleOrder { get; set; }

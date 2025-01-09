@@ -23,6 +23,23 @@ public partial class V1beta1ClusterSpecForProviderAccessConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderComputeConfig
+{
+    /// <summary>Request to enable or disable the compute capability on your EKS Auto Mode cluster. If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed Instances in your Amazon Web Services account.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Configuration for node pools that defines the compute resources for your EKS Auto Mode cluster. Valid options are general-purpose and system.</summary>
+    [JsonPropertyName("nodePools")]
+    public IList<string>? NodePools { get; set; }
+
+    /// <summary>The ARN of the IAM Role EKS will assign to EC2 Managed Instances in your EKS Auto Mode cluster. This value cannot be changed after the compute capability of EKS Auto Mode is enabled..</summary>
+    [JsonPropertyName("nodeRoleArn")]
+    public string? NodeRoleArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderEncryptionConfigProvider
 {
     /// <summary>ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide.</summary>
@@ -45,8 +62,21 @@ public partial class V1beta1ClusterSpecForProviderEncryptionConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfigElasticLoadBalancing
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderKubernetesNetworkConfig
 {
+    /// <summary>Configuration block with elastic load balancing configuration for the cluster. Detailed below.</summary>
+    [JsonPropertyName("elasticLoadBalancing")]
+    public IList<V1beta1ClusterSpecForProviderKubernetesNetworkConfigElasticLoadBalancing>? ElasticLoadBalancing { get; set; }
+
     /// <summary>The IP family used to assign Kubernetes pod and service addresses. Valid values are ipv4 (default) and ipv6. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.</summary>
     [JsonPropertyName("ipFamily")]
     public string? IpFamily { get; set; }
@@ -80,6 +110,37 @@ public partial class V1beta1ClusterSpecForProviderOutpostConfig
     /// <summary>The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts. This argument is a list of arns, but only a single Outpost ARN is supported currently.</summary>
     [JsonPropertyName("outpostArns")]
     public IList<string>? OutpostArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfigRemoteNodeNetworks
+{
+    /// <summary>List of network CIDRs that can contain hybrid nodes.</summary>
+    [JsonPropertyName("cidrs")]
+    public IList<string>? Cidrs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfigRemotePodNetworks
+{
+    /// <summary>List of network CIDRs that can contain pods that run Kubernetes webhooks on hybrid nodes.</summary>
+    [JsonPropertyName("cidrs")]
+    public IList<string>? Cidrs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderRemoteNetworkConfig
+{
+    /// <summary>Configuration block with remote node network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remoteNodeNetworks")]
+    public IList<V1beta1ClusterSpecForProviderRemoteNetworkConfigRemoteNodeNetworks>? RemoteNodeNetworks { get; set; }
+
+    /// <summary>Configuration block with remote pod network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remotePodNetworks")]
+    public IList<V1beta1ClusterSpecForProviderRemoteNetworkConfigRemotePodNetworks>? RemotePodNetworks { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -136,6 +197,24 @@ public partial class V1beta1ClusterSpecForProviderRoleArnSelector
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderStorageConfigBlockStorage
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderStorageConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("blockStorage")]
+    public IList<V1beta1ClusterSpecForProviderStorageConfigBlockStorage>? BlockStorage { get; set; }
 }
 
 /// <summary></summary>
@@ -325,6 +404,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("bootstrapSelfManagedAddons")]
     public bool? BootstrapSelfManagedAddons { get; set; }
 
+    /// <summary>Configuration block with compute configuration for EKS Auto Mode. Detailed below.</summary>
+    [JsonPropertyName("computeConfig")]
+    public IList<V1beta1ClusterSpecForProviderComputeConfig>? ComputeConfig { get; set; }
+
     /// <summary>List of the desired control plane logging to enable. For more information, see Amazon EKS Control Plane Logging.</summary>
     [JsonPropertyName("enabledClusterLogTypes")]
     public IList<string>? EnabledClusterLogTypes { get; set; }
@@ -345,6 +428,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
+    /// <summary>Configuration block with remote network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remoteNetworkConfig")]
+    public IList<V1beta1ClusterSpecForProviderRemoteNetworkConfig>? RemoteNetworkConfig { get; set; }
+
     /// <summary>ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding depends_on if using the aws_iam_role_policy resource or aws_iam_role_policy_attachment resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
@@ -356,6 +443,10 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Selector for a Role in iam to populate roleArn.</summary>
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ClusterSpecForProviderRoleArnSelector? RoleArnSelector { get; set; }
+
+    /// <summary>Configuration block with storage configuration for EKS Auto Mode. Detailed below.</summary>
+    [JsonPropertyName("storageConfig")]
+    public IList<V1beta1ClusterSpecForProviderStorageConfig>? StorageConfig { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -393,6 +484,23 @@ public partial class V1beta1ClusterSpecInitProviderAccessConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderComputeConfig
+{
+    /// <summary>Request to enable or disable the compute capability on your EKS Auto Mode cluster. If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed Instances in your Amazon Web Services account.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Configuration for node pools that defines the compute resources for your EKS Auto Mode cluster. Valid options are general-purpose and system.</summary>
+    [JsonPropertyName("nodePools")]
+    public IList<string>? NodePools { get; set; }
+
+    /// <summary>The ARN of the IAM Role EKS will assign to EC2 Managed Instances in your EKS Auto Mode cluster. This value cannot be changed after the compute capability of EKS Auto Mode is enabled..</summary>
+    [JsonPropertyName("nodeRoleArn")]
+    public string? NodeRoleArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderEncryptionConfigProvider
 {
     /// <summary>ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide.</summary>
@@ -415,8 +523,21 @@ public partial class V1beta1ClusterSpecInitProviderEncryptionConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfigElasticLoadBalancing
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderKubernetesNetworkConfig
 {
+    /// <summary>Configuration block with elastic load balancing configuration for the cluster. Detailed below.</summary>
+    [JsonPropertyName("elasticLoadBalancing")]
+    public IList<V1beta1ClusterSpecInitProviderKubernetesNetworkConfigElasticLoadBalancing>? ElasticLoadBalancing { get; set; }
+
     /// <summary>The IP family used to assign Kubernetes pod and service addresses. Valid values are ipv4 (default) and ipv6. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.</summary>
     [JsonPropertyName("ipFamily")]
     public string? IpFamily { get; set; }
@@ -450,6 +571,37 @@ public partial class V1beta1ClusterSpecInitProviderOutpostConfig
     /// <summary>The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts. This argument is a list of arns, but only a single Outpost ARN is supported currently.</summary>
     [JsonPropertyName("outpostArns")]
     public IList<string>? OutpostArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemoteNodeNetworks
+{
+    /// <summary>List of network CIDRs that can contain hybrid nodes.</summary>
+    [JsonPropertyName("cidrs")]
+    public IList<string>? Cidrs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemotePodNetworks
+{
+    /// <summary>List of network CIDRs that can contain pods that run Kubernetes webhooks on hybrid nodes.</summary>
+    [JsonPropertyName("cidrs")]
+    public IList<string>? Cidrs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderRemoteNetworkConfig
+{
+    /// <summary>Configuration block with remote node network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remoteNodeNetworks")]
+    public IList<V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemoteNodeNetworks>? RemoteNodeNetworks { get; set; }
+
+    /// <summary>Configuration block with remote pod network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remotePodNetworks")]
+    public IList<V1beta1ClusterSpecInitProviderRemoteNetworkConfigRemotePodNetworks>? RemotePodNetworks { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -506,6 +658,24 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnSelector
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderStorageConfigBlockStorage
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderStorageConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("blockStorage")]
+    public IList<V1beta1ClusterSpecInitProviderStorageConfigBlockStorage>? BlockStorage { get; set; }
 }
 
 /// <summary></summary>
@@ -695,6 +865,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("bootstrapSelfManagedAddons")]
     public bool? BootstrapSelfManagedAddons { get; set; }
 
+    /// <summary>Configuration block with compute configuration for EKS Auto Mode. Detailed below.</summary>
+    [JsonPropertyName("computeConfig")]
+    public IList<V1beta1ClusterSpecInitProviderComputeConfig>? ComputeConfig { get; set; }
+
     /// <summary>List of the desired control plane logging to enable. For more information, see Amazon EKS Control Plane Logging.</summary>
     [JsonPropertyName("enabledClusterLogTypes")]
     public IList<string>? EnabledClusterLogTypes { get; set; }
@@ -711,6 +885,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("outpostConfig")]
     public IList<V1beta1ClusterSpecInitProviderOutpostConfig>? OutpostConfig { get; set; }
 
+    /// <summary>Configuration block with remote network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remoteNetworkConfig")]
+    public IList<V1beta1ClusterSpecInitProviderRemoteNetworkConfig>? RemoteNetworkConfig { get; set; }
+
     /// <summary>ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding depends_on if using the aws_iam_role_policy resource or aws_iam_role_policy_attachment resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
@@ -722,6 +900,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Selector for a Role in iam to populate roleArn.</summary>
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ClusterSpecInitProviderRoleArnSelector? RoleArnSelector { get; set; }
+
+    /// <summary>Configuration block with storage configuration for EKS Auto Mode. Detailed below.</summary>
+    [JsonPropertyName("storageConfig")]
+    public IList<V1beta1ClusterSpecInitProviderStorageConfig>? StorageConfig { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -900,6 +1082,23 @@ public partial class V1beta1ClusterStatusAtProviderCertificateAuthority
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderComputeConfig
+{
+    /// <summary>Request to enable or disable the compute capability on your EKS Auto Mode cluster. If the compute capability is enabled, EKS Auto Mode will create and delete EC2 Managed Instances in your Amazon Web Services account.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Configuration for node pools that defines the compute resources for your EKS Auto Mode cluster. Valid options are general-purpose and system.</summary>
+    [JsonPropertyName("nodePools")]
+    public IList<string>? NodePools { get; set; }
+
+    /// <summary>The ARN of the IAM Role EKS will assign to EC2 Managed Instances in your EKS Auto Mode cluster. This value cannot be changed after the compute capability of EKS Auto Mode is enabled..</summary>
+    [JsonPropertyName("nodeRoleArn")]
+    public string? NodeRoleArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderEncryptionConfigProvider
 {
     /// <summary>ARN of the Key Management Service (KMS) customer master key (CMK). The CMK must be symmetric, created in the same region as the cluster, and if the CMK was created in a different account, the user must have access to the CMK. For more information, see Allowing Users in Other Accounts to Use a CMK in the AWS Key Management Service Developer Guide.</summary>
@@ -940,8 +1139,21 @@ public partial class V1beta1ClusterStatusAtProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfigElasticLoadBalancing
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfig
 {
+    /// <summary>Configuration block with elastic load balancing configuration for the cluster. Detailed below.</summary>
+    [JsonPropertyName("elasticLoadBalancing")]
+    public IList<V1beta1ClusterStatusAtProviderKubernetesNetworkConfigElasticLoadBalancing>? ElasticLoadBalancing { get; set; }
+
     /// <summary>The IP family used to assign Kubernetes pod and service addresses. Valid values are ipv4 (default) and ipv6. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.</summary>
     [JsonPropertyName("ipFamily")]
     public string? IpFamily { get; set; }
@@ -979,6 +1191,55 @@ public partial class V1beta1ClusterStatusAtProviderOutpostConfig
     /// <summary>The ARN of the Outpost that you want to use for your local Amazon EKS cluster on Outposts. This argument is a list of arns, but only a single Outpost ARN is supported currently.</summary>
     [JsonPropertyName("outpostArns")]
     public IList<string>? OutpostArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemoteNodeNetworks
+{
+    /// <summary>List of network CIDRs that can contain hybrid nodes.</summary>
+    [JsonPropertyName("cidrs")]
+    public IList<string>? Cidrs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemotePodNetworks
+{
+    /// <summary>List of network CIDRs that can contain pods that run Kubernetes webhooks on hybrid nodes.</summary>
+    [JsonPropertyName("cidrs")]
+    public IList<string>? Cidrs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfig
+{
+    /// <summary>Configuration block with remote node network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remoteNodeNetworks")]
+    public IList<V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemoteNodeNetworks>? RemoteNodeNetworks { get; set; }
+
+    /// <summary>Configuration block with remote pod network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remotePodNetworks")]
+    public IList<V1beta1ClusterStatusAtProviderRemoteNetworkConfigRemotePodNetworks>? RemotePodNetworks { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderStorageConfigBlockStorage
+{
+    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderStorageConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("blockStorage")]
+    public IList<V1beta1ClusterStatusAtProviderStorageConfigBlockStorage>? BlockStorage { get; set; }
 }
 
 /// <summary></summary>
@@ -1060,6 +1321,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("clusterId")]
     public string? ClusterId { get; set; }
 
+    /// <summary>Configuration block with compute configuration for EKS Auto Mode. Detailed below.</summary>
+    [JsonPropertyName("computeConfig")]
+    public IList<V1beta1ClusterStatusAtProviderComputeConfig>? ComputeConfig { get; set; }
+
     /// <summary>Unix epoch timestamp in seconds for when the cluster was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
@@ -1096,6 +1361,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("platformVersion")]
     public string? PlatformVersion { get; set; }
 
+    /// <summary>Configuration block with remote network configuration for EKS Hybrid Nodes. Detailed below.</summary>
+    [JsonPropertyName("remoteNetworkConfig")]
+    public IList<V1beta1ClusterStatusAtProviderRemoteNetworkConfig>? RemoteNetworkConfig { get; set; }
+
     /// <summary>ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. Ensure the resource configuration includes explicit dependencies on the IAM Role permissions by adding depends_on if using the aws_iam_role_policy resource or aws_iam_role_policy_attachment resource, otherwise EKS cannot delete EKS managed EC2 infrastructure such as Security Groups on EKS Cluster deletion.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
@@ -1103,6 +1372,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Status of the EKS cluster. One of CREATING, ACTIVE, DELETING, FAILED.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
+
+    /// <summary>Configuration block with storage configuration for EKS Auto Mode. Detailed below.</summary>
+    [JsonPropertyName("storageConfig")]
+    public IList<V1beta1ClusterStatusAtProviderStorageConfig>? StorageConfig { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

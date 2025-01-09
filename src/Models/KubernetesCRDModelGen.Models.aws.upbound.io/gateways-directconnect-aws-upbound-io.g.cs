@@ -178,6 +178,10 @@ public partial class V1beta1GatewayStatusAtProvider
     [JsonPropertyName("amazonSideAsn")]
     public string? AmazonSideAsn { get; set; }
 
+    /// <summary>The ARN of the gateway.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>The ID of the gateway.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  deletionProtectionEnabled:
+                    description: Whether deletion protection is enabled (true) or disabled (false) on the table replica.
+                    type: boolean
                   globalTableArn:
                     description: ARN of the main or global table which this resource will replicate.
                     type: string
@@ -263,7 +266,7 @@ spec:
                         type: object
                     type: object
                   pointInTimeRecovery:
-                    description: Whether to enable Point In Time Recovery for the replica. Default is false.
+                    description: Whether to enable Point In Time Recovery for the table replica. Default is false.
                     type: boolean
                   region:
                     description: Region is the region you'd like your resource to be created in.
@@ -302,6 +305,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  deletionProtectionEnabled:
+                    description: Whether deletion protection is enabled (true) or disabled (false) on the table replica.
+                    type: boolean
                   globalTableArn:
                     description: ARN of the main or global table which this resource will replicate.
                     type: string
@@ -481,7 +487,7 @@ spec:
                         type: object
                     type: object
                   pointInTimeRecovery:
-                    description: Whether to enable Point In Time Recovery for the replica. Default is false.
+                    description: Whether to enable Point In Time Recovery for the table replica. Default is false.
                     type: boolean
                   tableClassOverride:
                     description: Storage class of the table replica. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS. If not used, the table replica will use the same class as the global table.
@@ -709,6 +715,9 @@ spec:
                   arn:
                     description: ARN of the table replica.
                     type: string
+                  deletionProtectionEnabled:
+                    description: Whether deletion protection is enabled (true) or disabled (false) on the table replica.
+                    type: boolean
                   globalTableArn:
                     description: ARN of the main or global table which this resource will replicate.
                     type: string
@@ -719,7 +728,7 @@ spec:
                     description: 'ARN of the CMK that should be used for the AWS KMS encryption. This argument should only be used if the key is different from the default KMS-managed DynamoDB key, alias/aws/dynamodb. Note: This attribute will not be populated with the ARN of default keys.'
                     type: string
                   pointInTimeRecovery:
-                    description: Whether to enable Point In Time Recovery for the replica. Default is false.
+                    description: Whether to enable Point In Time Recovery for the table replica. Default is false.
                     type: boolean
                   tableClassOverride:
                     description: Storage class of the table replica. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS. If not used, the table replica will use the same class as the global table.

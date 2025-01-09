@@ -450,9 +450,13 @@ public partial class V1beta1AttachmentAccepterStatusAtProvider
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
-    /// <summary>The Region where the edge is located.</summary>
+    /// <summary>The Region where the edge is located. This is returned for all attachment types except a Direct Connect gateway attachment, which instead returns edge_locations.</summary>
     [JsonPropertyName("edgeLocation")]
     public string? EdgeLocation { get; set; }
+
+    /// <summary>The edge locations that the Direct Connect gateway is associated with. This is returned only for Direct Connect gateway attachments. All other attachment types return edge_location</summary>
+    [JsonPropertyName("edgeLocations")]
+    public IList<string>? EdgeLocations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]

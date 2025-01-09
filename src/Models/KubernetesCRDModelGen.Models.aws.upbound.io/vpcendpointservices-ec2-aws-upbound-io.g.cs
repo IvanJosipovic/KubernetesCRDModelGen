@@ -164,6 +164,10 @@ public partial class V1beta1VPCEndpointServiceSpecForProvider
     [JsonPropertyName("supportedIpAddressTypes")]
     public IList<string>? SupportedIpAddressTypes { get; set; }
 
+    /// <summary>The set of regions from which service consumers can access the service.</summary>
+    [JsonPropertyName("supportedRegions")]
+    public IList<string>? SupportedRegions { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -320,6 +324,10 @@ public partial class V1beta1VPCEndpointServiceSpecInitProvider
     /// <summary>The supported IP address types. The possible values are ipv4 and ipv6.</summary>
     [JsonPropertyName("supportedIpAddressTypes")]
     public IList<string>? SupportedIpAddressTypes { get; set; }
+
+    /// <summary>The set of regions from which service consumers can access the service.</summary>
+    [JsonPropertyName("supportedRegions")]
+    public IList<string>? SupportedRegions { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -542,6 +550,10 @@ public partial class V1beta1VPCEndpointServiceStatusAtProvider
     /// <summary>The supported IP address types. The possible values are ipv4 and ipv6.</summary>
     [JsonPropertyName("supportedIpAddressTypes")]
     public IList<string>? SupportedIpAddressTypes { get; set; }
+
+    /// <summary>The set of regions from which service consumers can access the service.</summary>
+    [JsonPropertyName("supportedRegions")]
+    public IList<string>? SupportedRegions { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

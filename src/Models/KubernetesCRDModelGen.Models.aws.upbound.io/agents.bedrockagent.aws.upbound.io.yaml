@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  agentCollaboration:
+                    description: 'Agents collaboration role. Valid values: SUPERVISOR, SUPERVISOR_ROUTER, DISABLED.'
+                    type: string
                   agentName:
                     description: Name of the agent.
                     type: string
@@ -186,6 +189,7 @@ spec:
                     description: Foundation model used for orchestration by the agent.
                     type: string
                   guardrailConfiguration:
+                    description: Details about the guardrail associated with the agent. See guardrail_configuration Block for details.
                     items:
                       properties:
                         guardrailIdentifier:
@@ -200,7 +204,7 @@ spec:
                     description: Number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent. A user interaction remains active for the amount of time specified. If no conversation occurs during this time, the session expires and Amazon Bedrock deletes any data provided before the timeout.
                     type: number
                   instruction:
-                    description: Instructions that tell the agent what it should do and how it should interact with users.
+                    description: Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.
                     type: string
                   prepareAgent:
                     description: Whether to prepare the agent after creation or modification. Defaults to true.
@@ -295,6 +299,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  agentCollaboration:
+                    description: 'Agents collaboration role. Valid values: SUPERVISOR, SUPERVISOR_ROUTER, DISABLED.'
+                    type: string
                   agentName:
                     description: Name of the agent.
                     type: string
@@ -397,6 +404,7 @@ spec:
                     description: Foundation model used for orchestration by the agent.
                     type: string
                   guardrailConfiguration:
+                    description: Details about the guardrail associated with the agent. See guardrail_configuration Block for details.
                     items:
                       properties:
                         guardrailIdentifier:
@@ -411,7 +419,7 @@ spec:
                     description: Number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent. A user interaction remains active for the amount of time specified. If no conversation occurs during this time, the session expires and Amazon Bedrock deletes any data provided before the timeout.
                     type: number
                   instruction:
-                    description: Instructions that tell the agent what it should do and how it should interact with users.
+                    description: Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.
                     type: string
                   prepareAgent:
                     description: Whether to prepare the agent after creation or modification. Defaults to true.
@@ -700,6 +708,9 @@ spec:
                   agentArn:
                     description: ARN of the agent.
                     type: string
+                  agentCollaboration:
+                    description: 'Agents collaboration role. Valid values: SUPERVISOR, SUPERVISOR_ROUTER, DISABLED.'
+                    type: string
                   agentId:
                     description: Unique identifier of the agent.
                     type: string
@@ -722,6 +733,7 @@ spec:
                     description: Foundation model used for orchestration by the agent.
                     type: string
                   guardrailConfiguration:
+                    description: Details about the guardrail associated with the agent. See guardrail_configuration Block for details.
                     items:
                       properties:
                         guardrailIdentifier:
@@ -739,7 +751,7 @@ spec:
                     description: Number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent. A user interaction remains active for the amount of time specified. If no conversation occurs during this time, the session expires and Amazon Bedrock deletes any data provided before the timeout.
                     type: number
                   instruction:
-                    description: Instructions that tell the agent what it should do and how it should interact with users.
+                    description: Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.
                     type: string
                   prepareAgent:
                     description: Whether to prepare the agent after creation or modification. Defaults to true.

@@ -254,6 +254,10 @@ public partial class V1beta1VPCEndpointSpecForProvider
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1VPCEndpointSpecForProviderServiceNameSelector? ServiceNameSelector { get; set; }
 
+    /// <summary>- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.</summary>
+    [JsonPropertyName("serviceRegion")]
+    public string? ServiceRegion { get; set; }
+
     /// <summary>Subnet configuration for the endpoint, used to select specific IPv4 and/or IPv6 addresses to the endpoint. See subnet_configuration below.</summary>
     [JsonPropertyName("subnetConfiguration")]
     public IList<V1beta1VPCEndpointSpecForProviderSubnetConfiguration>? SubnetConfiguration { get; set; }
@@ -520,6 +524,10 @@ public partial class V1beta1VPCEndpointSpecInitProvider
     /// <summary>Selector for a VPCEndpointService in ec2 to populate serviceName.</summary>
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1VPCEndpointSpecInitProviderServiceNameSelector? ServiceNameSelector { get; set; }
+
+    /// <summary>- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.</summary>
+    [JsonPropertyName("serviceRegion")]
+    public string? ServiceRegion { get; set; }
 
     /// <summary>Subnet configuration for the endpoint, used to select specific IPv4 and/or IPv6 addresses to the endpoint. See subnet_configuration below.</summary>
     [JsonPropertyName("subnetConfiguration")]
@@ -788,6 +796,10 @@ public partial class V1beta1VPCEndpointStatusAtProvider
     /// <summary>The service name. For AWS services the service name is usually in the form com.amazonaws.&lt;region&gt;.&lt;service&gt; (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.&lt;region&gt;.notebook).</summary>
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
+
+    /// <summary>- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.</summary>
+    [JsonPropertyName("serviceRegion")]
+    public string? ServiceRegion { get; set; }
 
     /// <summary>The state of the VPC endpoint.</summary>
     [JsonPropertyName("state")]

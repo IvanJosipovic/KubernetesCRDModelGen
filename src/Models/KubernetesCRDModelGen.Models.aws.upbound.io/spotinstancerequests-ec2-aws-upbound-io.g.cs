@@ -434,6 +434,10 @@ public partial class V1beta1SpotInstanceRequestSpecForProvider
     public bool? EbsOptimized { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("enablePrimaryIpv6")]
+    public bool? EnablePrimaryIpv6 { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("enclaveOptions")]
     public IList<V1beta1SpotInstanceRequestSpecForProviderEnclaveOptions>? EnclaveOptions { get; set; }
 
@@ -1038,6 +1042,10 @@ public partial class V1beta1SpotInstanceRequestSpecInitProvider
     /// <summary></summary>
     [JsonPropertyName("ebsOptimized")]
     public bool? EbsOptimized { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enablePrimaryIpv6")]
+    public bool? EnablePrimaryIpv6 { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enclaveOptions")]
@@ -1676,6 +1684,10 @@ public partial class V1beta1SpotInstanceRequestStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("ebsOptimized")]
     public bool? EbsOptimized { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enablePrimaryIpv6")]
+    public bool? EnablePrimaryIpv6 { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enclaveOptions")]

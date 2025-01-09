@@ -124,6 +124,10 @@ public partial class V1beta1TableReplicaSpecForProviderKmsKeyArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableReplicaSpecForProvider
 {
+    /// <summary>Whether deletion protection is enabled (true) or disabled (false) on the table replica.</summary>
+    [JsonPropertyName("deletionProtectionEnabled")]
+    public bool? DeletionProtectionEnabled { get; set; }
+
     /// <summary>ARN of the main or global table which this resource will replicate.</summary>
     [JsonPropertyName("globalTableArn")]
     public string? GlobalTableArn { get; set; }
@@ -148,7 +152,7 @@ public partial class V1beta1TableReplicaSpecForProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1TableReplicaSpecForProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>Whether to enable Point In Time Recovery for the replica. Default is false.</summary>
+    /// <summary>Whether to enable Point In Time Recovery for the table replica. Default is false.</summary>
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
 
@@ -281,6 +285,10 @@ public partial class V1beta1TableReplicaSpecInitProviderKmsKeyArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableReplicaSpecInitProvider
 {
+    /// <summary>Whether deletion protection is enabled (true) or disabled (false) on the table replica.</summary>
+    [JsonPropertyName("deletionProtectionEnabled")]
+    public bool? DeletionProtectionEnabled { get; set; }
+
     /// <summary>ARN of the main or global table which this resource will replicate.</summary>
     [JsonPropertyName("globalTableArn")]
     public string? GlobalTableArn { get; set; }
@@ -305,7 +313,7 @@ public partial class V1beta1TableReplicaSpecInitProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1TableReplicaSpecInitProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>Whether to enable Point In Time Recovery for the replica. Default is false.</summary>
+    /// <summary>Whether to enable Point In Time Recovery for the table replica. Default is false.</summary>
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
 
@@ -458,6 +466,10 @@ public partial class V1beta1TableReplicaStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
+    /// <summary>Whether deletion protection is enabled (true) or disabled (false) on the table replica.</summary>
+    [JsonPropertyName("deletionProtectionEnabled")]
+    public bool? DeletionProtectionEnabled { get; set; }
+
     /// <summary>ARN of the main or global table which this resource will replicate.</summary>
     [JsonPropertyName("globalTableArn")]
     public string? GlobalTableArn { get; set; }
@@ -470,7 +482,7 @@ public partial class V1beta1TableReplicaStatusAtProvider
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
-    /// <summary>Whether to enable Point In Time Recovery for the replica. Default is false.</summary>
+    /// <summary>Whether to enable Point In Time Recovery for the table replica. Default is false.</summary>
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
 

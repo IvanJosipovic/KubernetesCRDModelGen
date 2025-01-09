@@ -251,6 +251,10 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     [JsonPropertyName("driveCacheType")]
     public string? DriveCacheType { get; set; }
 
+    /// <summary>Adds support for Elastic Fabric Adapter (EFA) and GPUDirect Storage (GDS) to Lustre. This must be set at creation. If set this cannot be changed and this prevents changes to per_unit_storage_throughput. This is only supported when deployment_type is set to PERSISTENT_2, metadata_configuration is used, and an EFA-enabled security group is attached.</summary>
+    [JsonPropertyName("efaEnabled")]
+    public bool? EfaEnabled { get; set; }
+
     /// <summary>S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with import_path argument and the path must use the same Amazon S3 bucket as specified in import_path. Set equal to import_path to overwrite files on export. Defaults to s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}. Only supported on PERSISTENT_1 deployment types.</summary>
     [JsonPropertyName("exportPath")]
     public string? ExportPath { get; set; }
@@ -591,6 +595,10 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     [JsonPropertyName("driveCacheType")]
     public string? DriveCacheType { get; set; }
 
+    /// <summary>Adds support for Elastic Fabric Adapter (EFA) and GPUDirect Storage (GDS) to Lustre. This must be set at creation. If set this cannot be changed and this prevents changes to per_unit_storage_throughput. This is only supported when deployment_type is set to PERSISTENT_2, metadata_configuration is used, and an EFA-enabled security group is attached.</summary>
+    [JsonPropertyName("efaEnabled")]
+    public bool? EfaEnabled { get; set; }
+
     /// <summary>S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with import_path argument and the path must use the same Amazon S3 bucket as specified in import_path. Set equal to import_path to overwrite files on export. Defaults to s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}. Only supported on PERSISTENT_1 deployment types.</summary>
     [JsonPropertyName("exportPath")]
     public string? ExportPath { get; set; }
@@ -898,6 +906,10 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     /// <summary>- The type of drive cache used by PERSISTENT_1 filesystems that are provisioned with HDD storage_type. Required for HDD storage_type, set to either READ or NONE.</summary>
     [JsonPropertyName("driveCacheType")]
     public string? DriveCacheType { get; set; }
+
+    /// <summary>Adds support for Elastic Fabric Adapter (EFA) and GPUDirect Storage (GDS) to Lustre. This must be set at creation. If set this cannot be changed and this prevents changes to per_unit_storage_throughput. This is only supported when deployment_type is set to PERSISTENT_2, metadata_configuration is used, and an EFA-enabled security group is attached.</summary>
+    [JsonPropertyName("efaEnabled")]
+    public bool? EfaEnabled { get; set; }
 
     /// <summary>S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with import_path argument and the path must use the same Amazon S3 bucket as specified in import_path. Set equal to import_path to overwrite files on export. Defaults to s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}. Only supported on PERSISTENT_1 deployment types.</summary>
     [JsonPropertyName("exportPath")]

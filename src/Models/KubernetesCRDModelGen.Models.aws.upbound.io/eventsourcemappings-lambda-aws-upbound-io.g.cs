@@ -184,6 +184,28 @@ public partial class V1beta1EventSourceMappingSpecForProviderKmsKeyArnSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderMetricsConfig
+{
+    /// <summary>A list containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
+    [JsonPropertyName("metrics")]
+    public IList<string>? Metrics { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderProvisionedPollerConfig
+{
+    /// <summary>The maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
+    [JsonPropertyName("maximumPollers")]
+    public double? MaximumPollers { get; set; }
+
+    /// <summary>The minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
+    [JsonPropertyName("minimumPollers")]
+    public double? MinimumPollers { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderScalingConfig
 {
     /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be between 2 and 1000. See Configuring maximum concurrency for Amazon SQS event sources.</summary>
@@ -298,9 +320,17 @@ public partial class V1beta1EventSourceMappingSpecForProvider
     [JsonPropertyName("maximumRetryAttempts")]
     public double? MaximumRetryAttempts { get; set; }
 
+    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. Detailed below.</summary>
+    [JsonPropertyName("metricsConfig")]
+    public IList<V1beta1EventSourceMappingSpecForProviderMetricsConfig>? MetricsConfig { get; set; }
+
     /// <summary>The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
     [JsonPropertyName("parallelizationFactor")]
     public double? ParallelizationFactor { get; set; }
+
+    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. Detailed below.</summary>
+    [JsonPropertyName("provisionedPollerConfig")]
+    public IList<V1beta1EventSourceMappingSpecForProviderProvisionedPollerConfig>? ProvisionedPollerConfig { get; set; }
 
     /// <summary>The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
     [JsonPropertyName("queues")]
@@ -523,6 +553,28 @@ public partial class V1beta1EventSourceMappingSpecInitProviderKmsKeyArnSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderMetricsConfig
+{
+    /// <summary>A list containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
+    [JsonPropertyName("metrics")]
+    public IList<string>? Metrics { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderProvisionedPollerConfig
+{
+    /// <summary>The maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
+    [JsonPropertyName("maximumPollers")]
+    public double? MaximumPollers { get; set; }
+
+    /// <summary>The minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
+    [JsonPropertyName("minimumPollers")]
+    public double? MinimumPollers { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderScalingConfig
 {
     /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be between 2 and 1000. See Configuring maximum concurrency for Amazon SQS event sources.</summary>
@@ -637,9 +689,17 @@ public partial class V1beta1EventSourceMappingSpecInitProvider
     [JsonPropertyName("maximumRetryAttempts")]
     public double? MaximumRetryAttempts { get; set; }
 
+    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. Detailed below.</summary>
+    [JsonPropertyName("metricsConfig")]
+    public IList<V1beta1EventSourceMappingSpecInitProviderMetricsConfig>? MetricsConfig { get; set; }
+
     /// <summary>The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
     [JsonPropertyName("parallelizationFactor")]
     public double? ParallelizationFactor { get; set; }
+
+    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. Detailed below.</summary>
+    [JsonPropertyName("provisionedPollerConfig")]
+    public IList<V1beta1EventSourceMappingSpecInitProviderProvisionedPollerConfig>? ProvisionedPollerConfig { get; set; }
 
     /// <summary>The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
     [JsonPropertyName("queues")]
@@ -878,6 +938,28 @@ public partial class V1beta1EventSourceMappingStatusAtProviderFilterCriteria
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingStatusAtProviderMetricsConfig
+{
+    /// <summary>A list containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
+    [JsonPropertyName("metrics")]
+    public IList<string>? Metrics { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingStatusAtProviderProvisionedPollerConfig
+{
+    /// <summary>The maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
+    [JsonPropertyName("maximumPollers")]
+    public double? MaximumPollers { get; set; }
+
+    /// <summary>The minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
+    [JsonPropertyName("minimumPollers")]
+    public double? MinimumPollers { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderScalingConfig
 {
     /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be between 2 and 1000. See Configuring maximum concurrency for Amazon SQS event sources.</summary>
@@ -996,9 +1078,17 @@ public partial class V1beta1EventSourceMappingStatusAtProvider
     [JsonPropertyName("maximumRetryAttempts")]
     public double? MaximumRetryAttempts { get; set; }
 
+    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. Detailed below.</summary>
+    [JsonPropertyName("metricsConfig")]
+    public IList<V1beta1EventSourceMappingStatusAtProviderMetricsConfig>? MetricsConfig { get; set; }
+
     /// <summary>The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
     [JsonPropertyName("parallelizationFactor")]
     public double? ParallelizationFactor { get; set; }
+
+    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. Detailed below.</summary>
+    [JsonPropertyName("provisionedPollerConfig")]
+    public IList<V1beta1EventSourceMappingStatusAtProviderProvisionedPollerConfig>? ProvisionedPollerConfig { get; set; }
 
     /// <summary>The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
     [JsonPropertyName("queues")]
