@@ -8,6 +8,43 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
+/// <summary>BPFConntrackTimers overrides the default values for the specified conntrack timer if set. Each value can be either a duration or `Auto` to pick the value from a Linux conntrack timeout.  Configurable timers are: CreationGracePeriod, TCPSynSent, TCPEstablished, TCPFinsSeen, TCPResetSeen, UDPTimeout, GenericTimeout, ICMPTimeout.  Unset values are replaced by the default values with a warning log for incorrect values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1FelixConfigurationSpecBpfConntrackTimeouts
+{
+    /// <summary> CreationGracePeriod gives a generic grace period to new connection  before they are considered for cleanup [Default: 10s].</summary>
+    [JsonPropertyName("creationGracePeriod")]
+    public string? CreationGracePeriod { get; set; }
+
+    /// <summary>GenericTimeout controls how long it takes before considering this entry for cleanup after the connection became idle. If set to 'Auto', the value from nf_conntrack_generic_timeout is used. If nil, Calico uses its own default value. [Default: 10m].</summary>
+    [JsonPropertyName("genericTimeout")]
+    public string? GenericTimeout { get; set; }
+
+    /// <summary>ICMPTimeout controls how long it takes before considering this entry for cleanup after the connection became idle. If set to 'Auto', the value from nf_conntrack_icmp_timeout is used. If nil, Calico uses its own default value. [Default: 5s].</summary>
+    [JsonPropertyName("icmpTimeout")]
+    public string? IcmpTimeout { get; set; }
+
+    /// <summary>TCPEstablished controls how long it takes before considering this entry for cleanup after the connection became idle. If set to 'Auto', the value from nf_conntrack_tcp_timeout_established is used. If nil, Calico uses its own default value. [Default: 1h].</summary>
+    [JsonPropertyName("tcpEstablished")]
+    public string? TcpEstablished { get; set; }
+
+    /// <summary>TCPFinsSeen controls how long it takes before considering this entry for cleanup after the connection was closed gracefully. If set to 'Auto', the value from nf_conntrack_tcp_timeout_time_wait is used. If nil, Calico uses its own default value. [Default: Auto].</summary>
+    [JsonPropertyName("tcpFinsSeen")]
+    public string? TcpFinsSeen { get; set; }
+
+    /// <summary>TCPFinsSeen controls how long it takes before considering this entry for cleanup after the connection was aborted. If nil, Calico uses its own default value. [Default: 40s].</summary>
+    [JsonPropertyName("tcpResetSeen")]
+    public string? TcpResetSeen { get; set; }
+
+    /// <summary>TCPSynSent controls how long it takes before considering this entry for cleanup after the last SYN without a response. If set to 'Auto', the value from nf_conntrack_tcp_timeout_syn_sent is used. If nil, Calico uses its own default value. [Default: 20s].</summary>
+    [JsonPropertyName("tcpSynSent")]
+    public string? TcpSynSent { get; set; }
+
+    /// <summary>UDPTimeout controls how long it takes before considering this entry for cleanup after the connection became idle. If nil, Calico uses its own default value. [Default: 60s].</summary>
+    [JsonPropertyName("udpTimeout")]
+    public string? UdpTimeout { get; set; }
+}
+
 /// <summary>ProtoPort is combination of protocol, port, and CIDR. Protocol and port must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecFailsafeInboundHostPorts
@@ -116,6 +153,10 @@ public partial class V1FelixConfigurationSpec
     /// <summary>BPFConntrackCleanupMode controls how BPF conntrack entries are cleaned up.  `Auto` will use a BPF program if supported, falling back to userspace if not.  `Userspace` will always use the userspace cleanup code.  `BPFProgram` will always use the BPF program (failing if not supported). [Default: Auto]</summary>
     [JsonPropertyName("bpfConntrackMode")]
     public string? BpfConntrackMode { get; set; }
+
+    /// <summary>BPFConntrackTimers overrides the default values for the specified conntrack timer if set. Each value can be either a duration or `Auto` to pick the value from a Linux conntrack timeout.  Configurable timers are: CreationGracePeriod, TCPSynSent, TCPEstablished, TCPFinsSeen, TCPResetSeen, UDPTimeout, GenericTimeout, ICMPTimeout.  Unset values are replaced by the default values with a warning log for incorrect values.</summary>
+    [JsonPropertyName("bpfConntrackTimeouts")]
+    public V1FelixConfigurationSpecBpfConntrackTimeouts? BpfConntrackTimeouts { get; set; }
 
     /// <summary>BPFDSROptoutCIDRs is a list of CIDRs which are excluded from DSR. That is, clients in those CIDRs will access service node ports as if BPFExternalServiceMode was set to Tunnel.</summary>
     [JsonPropertyName("bpfDSROptoutCIDRs")]
