@@ -21,11 +21,11 @@ public partial class V1alpha1IngressSpecRulesHttpPathsHeaders
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRulesHttpPathsSplits
 {
-    /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.   NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
+    /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.  NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
     [JsonPropertyName("appendHeaders")]
     public IDictionary<string, string>? AppendHeaders { get; set; }
 
-    /// <summary>Specifies the split percentage, a number between 0 and 100.  If only one split is specified, we default to 100.   NOTE: This differs from K8s Ingress to allow percentage split.</summary>
+    /// <summary>Specifies the split percentage, a number between 0 and 100.  If only one split is specified, we default to 100.  NOTE: This differs from K8s Ingress to allow percentage split.</summary>
     [JsonPropertyName("percent")]
     public int? Percent { get; set; }
 
@@ -33,7 +33,7 @@ public partial class V1alpha1IngressSpecRulesHttpPathsSplits
     [JsonPropertyName("serviceName")]
     public string ServiceName { get; set; }
 
-    /// <summary>Specifies the namespace of the referenced service.   NOTE: This differs from K8s Ingress to allow routing to different namespaces.</summary>
+    /// <summary>Specifies the namespace of the referenced service.  NOTE: This differs from K8s Ingress to allow routing to different namespaces.</summary>
     [JsonPropertyName("serviceNamespace")]
     public string ServiceNamespace { get; set; }
 
@@ -46,7 +46,7 @@ public partial class V1alpha1IngressSpecRulesHttpPathsSplits
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRulesHttpPaths
 {
-    /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.   NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
+    /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.  NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
     [JsonPropertyName("appendHeaders")]
     public IDictionary<string, string>? AppendHeaders { get; set; }
 
@@ -58,7 +58,7 @@ public partial class V1alpha1IngressSpecRulesHttpPaths
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>RewriteHost rewrites the incoming request's host header.   This field is currently experimental and not supported by all Ingress implementations.</summary>
+    /// <summary>RewriteHost rewrites the incoming request's host header.  This field is currently experimental and not supported by all Ingress implementations.</summary>
     [JsonPropertyName("rewriteHost")]
     public string? RewriteHost { get; set; }
 
@@ -71,7 +71,7 @@ public partial class V1alpha1IngressSpecRulesHttpPaths
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressSpecRulesHttp
 {
-    /// <summary>A collection of paths that map requests to backends.   If they are multiple matching paths, the first match takes precedence.</summary>
+    /// <summary>A collection of paths that map requests to backends.  If they are multiple matching paths, the first match takes precedence.</summary>
     [JsonPropertyName("paths")]
     public IList<V1alpha1IngressSpecRulesHttpPaths> Paths { get; set; }
 }
@@ -164,7 +164,7 @@ public partial class V1alpha1IngressStatusPrivateLoadBalancerIngress
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>DomainInternal is set if there is a cluster-local DNS name to access the Ingress.   NOTE: This differs from K8s Ingress, since we also desire to have a cluster-local       DNS name to allow routing in case of not having a mesh.</summary>
+    /// <summary>DomainInternal is set if there is a cluster-local DNS name to access the Ingress.  NOTE: This differs from K8s Ingress, since we also desire to have a cluster-local       DNS name to allow routing in case of not having a mesh.</summary>
     [JsonPropertyName("domainInternal")]
     public string? DomainInternal { get; set; }
 
@@ -194,7 +194,7 @@ public partial class V1alpha1IngressStatusPublicLoadBalancerIngress
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>DomainInternal is set if there is a cluster-local DNS name to access the Ingress.   NOTE: This differs from K8s Ingress, since we also desire to have a cluster-local       DNS name to allow routing in case of not having a mesh.</summary>
+    /// <summary>DomainInternal is set if there is a cluster-local DNS name to access the Ingress.  NOTE: This differs from K8s Ingress, since we also desire to have a cluster-local       DNS name to allow routing in case of not having a mesh.</summary>
     [JsonPropertyName("domainInternal")]
     public string? DomainInternal { get; set; }
 
@@ -241,7 +241,7 @@ public partial class V1alpha1IngressStatus
     public V1alpha1IngressStatusPublicLoadBalancer? PublicLoadBalancer { get; set; }
 }
 
-/// <summary>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable URLs, load balance traffic, offer name based virtual hosting, etc.   This is heavily based on K8s Ingress https://godoc.org/k8s.io/api/networking/v1beta1#Ingress which some highlighted modifications.</summary>
+/// <summary>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable URLs, load balance traffic, offer name based virtual hosting, etc.  This is heavily based on K8s Ingress https://godoc.org/k8s.io/api/networking/v1beta1#Ingress which some highlighted modifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1Ingress : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IngressSpec>, IStatus<V1alpha1IngressStatus>

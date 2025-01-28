@@ -186,6 +186,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfExcludeCIDRsFromNAT")]
     public IList<string>? BpfExcludeCIDRsFromNAT { get; set; }
 
+    /// <summary>BPFExportBufferSizeMB in BPF mode, controls the buffer size used for sending BPF events to felix. [Default: 1]</summary>
+    [JsonPropertyName("bpfExportBufferSizeMB")]
+    public int? BpfExportBufferSizeMB { get; set; }
+
     /// <summary>BPFExtToServiceConnmark in BPF mode, controls a 32bit mark that is set on connections from an external client to a local service. This mark allows us to control how packets of that connection are routed within the host and how is routing interpreted by RPF check. [Default: 0]</summary>
     [JsonPropertyName("bpfExtToServiceConnmark")]
     public int? BpfExtToServiceConnmark { get; set; }
@@ -350,7 +354,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("endpointReportingEnabled")]
     public bool? EndpointReportingEnabled { get; set; }
 
-    /// <summary>EndpointStatusPathPrefix is the path to the directory where endpoint status will be written. Endpoint status file reporting is disabled if field is left empty.  Chosen directory should match the directory used by the CNI plugin for PodStartupDelay. [Default: ""]</summary>
+    /// <summary>EndpointStatusPathPrefix is the path to the directory where endpoint status will be written. Endpoint status file reporting is disabled if field is left empty.  Chosen directory should match the directory used by the CNI plugin for PodStartupDelay. [Default: /var/run/calico]</summary>
     [JsonPropertyName("endpointStatusPathPrefix")]
     public string? EndpointStatusPathPrefix { get; set; }
 
@@ -377,6 +381,22 @@ public partial class V1FelixConfigurationSpec
     /// <summary>FloatingIPs configures whether or not Felix will program non-OpenStack floating IP addresses.  (OpenStack-derived floating IPs are always programmed, regardless of this setting.)</summary>
     [JsonPropertyName("floatingIPs")]
     public string? FloatingIPs { get; set; }
+
+    /// <summary>When FlowLogsCollectorDebugTrace is set to true, enables the logs in the collector to be printed in their entirety.</summary>
+    [JsonPropertyName("flowLogsCollectorDebugTrace")]
+    public bool? FlowLogsCollectorDebugTrace { get; set; }
+
+    /// <summary>FlowLogsFlushInterval configures the interval at which Felix exports flow logs.</summary>
+    [JsonPropertyName("flowLogsFlushInterval")]
+    public string? FlowLogsFlushInterval { get; set; }
+
+    /// <summary>FlowLogGoldmaneServer is the flow server endpoint to which flow data should be published.</summary>
+    [JsonPropertyName("flowLogsGoldmaneServer")]
+    public string? FlowLogsGoldmaneServer { get; set; }
+
+    /// <summary>FlowLogsMaxOriginalIPsIncluded specifies the number of unique IP addresses (if relevant) that should be included in Flow logs.</summary>
+    [JsonPropertyName("flowLogsMaxOriginalIPsIncluded")]
+    public int? FlowLogsMaxOriginalIPsIncluded { get; set; }
 
     /// <summary>GenericXDPEnabled enables Generic XDP so network cards that don't support XDP offload or driver modes can use XDP. This is not recommended since it doesn't provide better performance than iptables. [Default: false]</summary>
     [JsonPropertyName("genericXDPEnabled")]
@@ -541,6 +561,10 @@ public partial class V1FelixConfigurationSpec
     /// <summary>NetlinkTimeout is the timeout when talking to the kernel over the netlink protocol, used for programming routes, rules, and other kernel objects. [Default: 10s]</summary>
     [JsonPropertyName("netlinkTimeout")]
     public string? NetlinkTimeout { get; set; }
+
+    /// <summary>NfNetlinkBufSize controls the size of NFLOG messages that the kernel will try to send to Felix.  NFLOG messages are used to report flow verdicts from the kernel.  Warning: currently increasing the value may cause errors due to a bug in the netlink library.</summary>
+    [JsonPropertyName("nfNetlinkBufSize")]
+    public string? NfNetlinkBufSize { get; set; }
 
     /// <summary>NftablesFilterAllowAction controls the nftables action that Felix uses to represent the "allow" policy verdict in the filter table. The default is to `ACCEPT` the traffic, which is a terminal action.  Alternatively, `RETURN` can be used to return the traffic back to the top-level chain for further processing by your rules.</summary>
     [JsonPropertyName("nftablesFilterAllowAction")]

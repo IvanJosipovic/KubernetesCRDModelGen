@@ -17,7 +17,7 @@ public partial class V1alpha1MiddlewareTCPSpecInFlightConn
     public long? Amount { get; set; }
 }
 
-/// <summary>IPAllowList defines the IPAllowList middleware configuration. This middleware accepts/refuses connections based on the client IP. More info: https://doc.traefik.io/traefik/v3.2/middlewares/tcp/ipallowlist/</summary>
+/// <summary>IPAllowList defines the IPAllowList middleware configuration. This middleware accepts/refuses connections based on the client IP. More info: https://doc.traefik.io/traefik/v3.3/middlewares/tcp/ipallowlist/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareTCPSpecIpAllowList
 {
@@ -26,7 +26,7 @@ public partial class V1alpha1MiddlewareTCPSpecIpAllowList
     public IList<string>? SourceRange { get; set; }
 }
 
-/// <summary>IPWhiteList defines the IPWhiteList middleware configuration. This middleware accepts/refuses connections based on the client IP. Deprecated: please use IPAllowList instead. More info: https://doc.traefik.io/traefik/v3.2/middlewares/tcp/ipwhitelist/</summary>
+/// <summary>IPWhiteList defines the IPWhiteList middleware configuration. This middleware accepts/refuses connections based on the client IP. Deprecated: please use IPAllowList instead. More info: https://doc.traefik.io/traefik/v3.3/middlewares/tcp/ipwhitelist/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MiddlewareTCPSpecIpWhiteList
 {
@@ -43,16 +43,16 @@ public partial class V1alpha1MiddlewareTCPSpec
     [JsonPropertyName("inFlightConn")]
     public V1alpha1MiddlewareTCPSpecInFlightConn? InFlightConn { get; set; }
 
-    /// <summary>IPAllowList defines the IPAllowList middleware configuration. This middleware accepts/refuses connections based on the client IP. More info: https://doc.traefik.io/traefik/v3.2/middlewares/tcp/ipallowlist/</summary>
+    /// <summary>IPAllowList defines the IPAllowList middleware configuration. This middleware accepts/refuses connections based on the client IP. More info: https://doc.traefik.io/traefik/v3.3/middlewares/tcp/ipallowlist/</summary>
     [JsonPropertyName("ipAllowList")]
     public V1alpha1MiddlewareTCPSpecIpAllowList? IpAllowList { get; set; }
 
-    /// <summary>IPWhiteList defines the IPWhiteList middleware configuration. This middleware accepts/refuses connections based on the client IP. Deprecated: please use IPAllowList instead. More info: https://doc.traefik.io/traefik/v3.2/middlewares/tcp/ipwhitelist/</summary>
+    /// <summary>IPWhiteList defines the IPWhiteList middleware configuration. This middleware accepts/refuses connections based on the client IP. Deprecated: please use IPAllowList instead. More info: https://doc.traefik.io/traefik/v3.3/middlewares/tcp/ipwhitelist/</summary>
     [JsonPropertyName("ipWhiteList")]
     public V1alpha1MiddlewareTCPSpecIpWhiteList? IpWhiteList { get; set; }
 }
 
-/// <summary>MiddlewareTCP is the CRD implementation of a Traefik TCP middleware. More info: https://doc.traefik.io/traefik/v3.2/middlewares/overview/</summary>
+/// <summary>MiddlewareTCP is the CRD implementation of a Traefik TCP middleware. More info: https://doc.traefik.io/traefik/v3.3/middlewares/overview/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1MiddlewareTCP : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1MiddlewareTCPSpec>
