@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: 1.16.0
+    app.kubernetes.io/version: 1.17.0
     knative.dev/crd-install: true
 spec:
   group: networking.internal.knative.dev
@@ -98,8 +98,6 @@ spec:
                       index 2 in this pod). This syntax is chosen only to have some well-defined way of
 
                       referencing a part of an object.
-
-                      TODO: this design is not final and this field is subject to change in the future.
                     type: string
                   kind:
                     description: >-

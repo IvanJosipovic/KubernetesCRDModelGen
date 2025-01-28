@@ -79,6 +79,10 @@ public partial class V1alpha1APIVersionSpecOpenApiSpec
     /// <summary>URL is a Traefik Hub agent accessible URL for obtaining the OpenAPI specification. The URL must be accessible via a GET request method and should serve a YAML or JSON document containing the OpenAPI specification.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
+
+    /// <summary>ValidateRequestMethodAndPath validates that the path and method matches an operation defined in the OpenAPI specification. This option overrides the default behavior configured in the static configuration.</summary>
+    [JsonPropertyName("validateRequestMethodAndPath")]
+    public bool? ValidateRequestMethodAndPath { get; set; }
 }
 
 /// <summary>The desired behavior of this APIVersion.</summary>

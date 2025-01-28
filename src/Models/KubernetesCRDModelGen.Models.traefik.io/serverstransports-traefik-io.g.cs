@@ -87,7 +87,7 @@ public partial class V1alpha1ServersTransportSpec
     public V1alpha1ServersTransportSpecSpiffe? Spiffe { get; set; }
 }
 
-/// <summary>ServersTransport is the CRD implementation of a ServersTransport. If no serversTransport is specified, the default@internal will be used. The default@internal serversTransport is created from the static configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#serverstransport_1</summary>
+/// <summary>ServersTransport is the CRD implementation of a ServersTransport. If no serversTransport is specified, the default@internal will be used. The default@internal serversTransport is created from the static configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#serverstransport_1</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ServersTransport : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServersTransportSpec>

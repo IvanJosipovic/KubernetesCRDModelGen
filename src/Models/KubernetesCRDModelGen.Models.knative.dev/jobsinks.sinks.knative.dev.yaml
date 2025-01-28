@@ -5,7 +5,7 @@ metadata:
   labels:
     knative.dev/crd-install: true
     duck.knative.dev/addressable: true
-    app.kubernetes.io/version: 1.16.3
+    app.kubernetes.io/version: 1.17.0
     app.kubernetes.io/name: knative-eventing
 spec:
   group: sinks.knative.dev
@@ -80,10 +80,6 @@ spec:
                     name:
                       description: The name of the applied EventPolicy
                       type: string
-              observedGeneration:
-                description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
-                type: integer
-                format: int64
               conditions:
                 description: Conditions the latest available observations of a resource's current state.
                 type: array
@@ -111,6 +107,10 @@ spec:
                     type:
                       description: Type of condition.
                       type: string
+              observedGeneration:
+                description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
+                type: integer
+                format: int64
     additionalPrinterColumns:
     - name: URL
       type: string

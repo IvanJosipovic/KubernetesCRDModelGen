@@ -71,7 +71,7 @@ public partial class V1alpha1ServersTransportTCPSpec
     public V1alpha1ServersTransportTCPSpecTls? Tls { get; set; }
 }
 
-/// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#serverstransport_3</summary>
+/// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#serverstransport_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ServersTransportTCP : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServersTransportTCPSpec>

@@ -12,26 +12,42 @@ namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LockPackagesDependencies
 {
+    /// <summary>APIVersion of the package.</summary>
+    [JsonPropertyName("apiVersion")]
+    public string? ApiVersion { get; set; }
+
     /// <summary>Constraints is a valid semver range or a digest, which will be used to select a valid dependency version.</summary>
     [JsonPropertyName("constraints")]
     public string Constraints { get; set; }
+
+    /// <summary>Kind of the package (not the kind of the package revision).</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
 
     /// <summary>Package is the OCI image name without a tag or digest.</summary>
     [JsonPropertyName("package")]
     public string Package { get; set; }
 
-    /// <summary>Type is the type of package. Can be either Configuration or Provider.</summary>
+    /// <summary>Type is the type of package. Can be either Configuration or Provider. Deprecated: Specify an apiVersion and kind instead.</summary>
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string? Type { get; set; }
 }
 
 /// <summary>LockPackage is a package that is in the lock.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LockPackages
 {
+    /// <summary>APIVersion of the package.</summary>
+    [JsonPropertyName("apiVersion")]
+    public string? ApiVersion { get; set; }
+
     /// <summary>Dependencies are the list of dependencies of this package. The order of the dependencies will dictate the order in which they are resolved.</summary>
     [JsonPropertyName("dependencies")]
     public IList<V1beta1LockPackagesDependencies> Dependencies { get; set; }
+
+    /// <summary>Kind of the package (not the kind of the package revision).</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
 
     /// <summary>Name corresponds to the name of the package revision for this package.</summary>
     [JsonPropertyName("name")]
@@ -41,9 +57,9 @@ public partial class V1beta1LockPackages
     [JsonPropertyName("source")]
     public string Source { get; set; }
 
-    /// <summary>Type is the type of package. Can be either Configuration or Provider.</summary>
+    /// <summary>Type is the type of package. Deprecated: Specify an apiVersion and kind instead.</summary>
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>Version is the tag or digest of the OCI image.</summary>
     [JsonPropertyName("version")]

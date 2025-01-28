@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serving.knative.dev;
-/// <summary>Ref specifies the target of the Domain Mapping.   The object identified by the Ref must be an Addressable with a URL of the form `{name}.{namespace}.{domain}` where `{domain}` is the cluster domain, and `{name}` and `{namespace}` are the name and namespace of a Kubernetes Service.   This contract is satisfied by Knative types such as Knative Services and Knative Routes, and by Kubernetes Services.</summary>
+/// <summary>Ref specifies the target of the Domain Mapping.  The object identified by the Ref must be an Addressable with a URL of the form `{name}.{namespace}.{domain}` where `{domain}` is the cluster domain, and `{name}` and `{namespace}` are the name and namespace of a Kubernetes Service.  This contract is satisfied by Knative types such as Knative Services and Knative Routes, and by Kubernetes Services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpecRef
 {
@@ -50,7 +50,7 @@ public partial class V1beta1DomainMappingSpecTls
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMappingSpec
 {
-    /// <summary>Ref specifies the target of the Domain Mapping.   The object identified by the Ref must be an Addressable with a URL of the form `{name}.{namespace}.{domain}` where `{domain}` is the cluster domain, and `{name}` and `{namespace}` are the name and namespace of a Kubernetes Service.   This contract is satisfied by Knative types such as Knative Services and Knative Routes, and by Kubernetes Services.</summary>
+    /// <summary>Ref specifies the target of the Domain Mapping.  The object identified by the Ref must be an Addressable with a URL of the form `{name}.{namespace}.{domain}` where `{domain}` is the cluster domain, and `{name}` and `{namespace}` are the name and namespace of a Kubernetes Service.  This contract is satisfied by Knative types such as Knative Services and Knative Routes, and by Kubernetes Services.</summary>
     [JsonPropertyName("ref")]
     public V1beta1DomainMappingSpecRef Ref { get; set; }
 

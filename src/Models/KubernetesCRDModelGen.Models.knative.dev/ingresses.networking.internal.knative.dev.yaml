@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: 1.16.0
+    app.kubernetes.io/version: 1.17.0
     knative.dev/crd-install: true
 spec:
   group: networking.internal.knative.dev
@@ -23,7 +23,6 @@ spec:
           by a backend. An Ingress can be configured to give services externally-reachable URLs, load
 
           balance traffic, offer name based virtual hosting, etc.
-
 
 
           This is heavily based on K8s Ingress https://godoc.org/k8s.io/api/networking/v1beta1#Ingress
@@ -117,7 +116,6 @@ spec:
                             A collection of paths that map requests to backends.
 
 
-
                             If they are multiple matching paths, the first match takes precedence.
                           type: array
                           items:
@@ -134,7 +132,6 @@ spec:
                                   AppendHeaders allow specifying additional HTTP headers to add
 
                                   before forwarding a request to the destination service.
-
 
 
                                   NOTE: This differs from K8s Ingress which doesn't allow header appending.
@@ -181,7 +178,6 @@ spec:
                                   RewriteHost rewrites the incoming request's host header.
 
 
-
                                   This field is currently experimental and not supported by all Ingress
 
                                   implementations.
@@ -207,7 +203,6 @@ spec:
                                         before forwarding a request to the destination service.
 
 
-
                                         NOTE: This differs from K8s Ingress which doesn't allow header appending.
                                       type: object
                                       additionalProperties:
@@ -219,7 +214,6 @@ spec:
                                         only one split is specified, we default to 100.
 
 
-
                                         NOTE: This differs from K8s Ingress to allow percentage split.
                                       type: integer
                                     serviceName:
@@ -228,7 +222,6 @@ spec:
                                     serviceNamespace:
                                       description: >-
                                         Specifies the namespace of the referenced service.
-
 
 
                                         NOTE: This differs from K8s Ingress to allow routing to different namespaces.
@@ -379,7 +372,6 @@ spec:
                             DomainInternal is set if there is a cluster-local DNS name to access the Ingress.
 
 
-
                             NOTE: This differs from K8s Ingress, since we also desire to have a cluster-local
                                   DNS name to allow routing in case of not having a mesh.
                           type: string
@@ -418,7 +410,6 @@ spec:
                         domainInternal:
                           description: >-
                             DomainInternal is set if there is a cluster-local DNS name to access the Ingress.
-
 
 
                             NOTE: This differs from K8s Ingress, since we also desire to have a cluster-local

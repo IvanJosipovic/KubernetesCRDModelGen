@@ -16,7 +16,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFromConfig
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -33,7 +33,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvValueFromSecret
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -84,7 +84,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvFromConfigMapRef
 {
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -97,7 +97,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersEnvFromConfigMapRe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersEnvFromSecretRef
 {
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -138,9 +138,9 @@ public partial class V1ConfigurationSpecTemplateSpecContainersLivenessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
     [JsonPropertyName("port")]
-    public int Port { get; set; }
+    public int? Port { get; set; }
 
-    /// <summary>Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).   If this is not specified, the default behavior is defined by gRPC.</summary>
+    /// <summary>Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).  If this is not specified, the default behavior is defined by gRPC.</summary>
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
@@ -243,7 +243,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersPorts
 {
     /// <summary>Number of port to expose on the pod's IP address. This must be a valid port number, 0 &lt; x &lt; 65536.</summary>
     [JsonPropertyName("containerPort")]
-    public int ContainerPort { get; set; }
+    public int? ContainerPort { get; set; }
 
     /// <summary>If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.</summary>
     [JsonPropertyName("name")]
@@ -269,9 +269,9 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
     [JsonPropertyName("port")]
-    public int Port { get; set; }
+    public int? Port { get; set; }
 
-    /// <summary>Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).   If this is not specified, the default behavior is defined by gRPC.</summary>
+    /// <summary>Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).  If this is not specified, the default behavior is defined by gRPC.</summary>
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
@@ -368,23 +368,10 @@ public partial class V1ConfigurationSpecTemplateSpecContainersReadinessProbe
     public int? TimeoutSeconds { get; set; }
 }
 
-/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ConfigurationSpecTemplateSpecContainersResourcesClaims
-{
-    /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
 /// <summary>Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecContainersResources
 {
-    /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.   This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.   This field is immutable. It can only be set for containers.</summary>
-    [JsonPropertyName("claims")]
-    public IList<V1ConfigurationSpecTemplateSpecContainersResourcesClaims>? Claims { get; set; }
-
     /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
     [JsonPropertyName("limits")]
     public IDictionary<string, IntstrIntOrString>? Limits { get; set; }
@@ -415,7 +402,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContextSec
     [JsonPropertyName("localhostProfile")]
     public string? LocalhostProfile { get; set; }
 
-    /// <summary>type indicates which kind of seccomp profile will be applied. Valid options are:   Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.</summary>
+    /// <summary>type indicates which kind of seccomp profile will be applied. Valid options are:  Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
@@ -431,6 +418,10 @@ public partial class V1ConfigurationSpecTemplateSpecContainersSecurityContext
     /// <summary>The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("capabilities")]
     public V1ConfigurationSpecTemplateSpecContainersSecurityContextCapabilities? Capabilities { get; set; }
+
+    /// <summary>Run container in privileged mode. This can only be set to explicitly to 'false'</summary>
+    [JsonPropertyName("privileged")]
+    public bool? Privileged { get; set; }
 
     /// <summary>Whether this container has a read-only root filesystem. Default is false. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("readOnlyRootFilesystem")]
@@ -468,9 +459,9 @@ public partial class V1ConfigurationSpecTemplateSpecContainersStartupProbeGrpc
 {
     /// <summary>Port number of the gRPC service. Number must be in the range 1 to 65535.</summary>
     [JsonPropertyName("port")]
-    public int Port { get; set; }
+    public int? Port { get; set; }
 
-    /// <summary>Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).   If this is not specified, the default behavior is defined by gRPC.</summary>
+    /// <summary>Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).  If this is not specified, the default behavior is defined by gRPC.</summary>
     [JsonPropertyName("service")]
     public string? Service { get; set; }
 }
@@ -665,7 +656,7 @@ public partial class V1ConfigurationSpecTemplateSpecContainers
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecImagePullSecrets
 {
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -699,7 +690,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesConfigMap
     [JsonPropertyName("items")]
     public IList<V1ConfigurationSpecTemplateSpecVolumesConfigMapItems>? Items { get; set; }
 
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -733,7 +724,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesConfi
     [JsonPropertyName("items")]
     public IList<V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesConfigMapItems>? Items { get; set; }
 
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -827,7 +818,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesSecre
     [JsonPropertyName("items")]
     public IList<V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesSecretItems>? Items { get; set; }
 
-    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. TODO: Add other useful fields. apiVersion, kind, uid? More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Drop `kubebuilder:default` when controller-gen doesn't need it https://github.com/kubernetes-sigs/kubebuilder/issues/3896.</summary>
+    /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -853,7 +844,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSourcesServi
     public string Path { get; set; }
 }
 
-/// <summary>Projection that may be projected along with other supported volume types</summary>
+/// <summary>Projection that may be projected along with other supported volume types. Exactly one of these fields must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ConfigurationSpecTemplateSpecVolumesProjectedSources
 {
@@ -882,7 +873,7 @@ public partial class V1ConfigurationSpecTemplateSpecVolumesProjected
     [JsonPropertyName("defaultMode")]
     public int? DefaultMode { get; set; }
 
-    /// <summary>sources is the list of volume projections</summary>
+    /// <summary>sources is the list of volume projections. Each entry in this list handles one source.</summary>
     [JsonPropertyName("sources")]
     public IList<V1ConfigurationSpecTemplateSpecVolumesProjectedSources>? Sources { get; set; }
 }
@@ -933,9 +924,13 @@ public partial class V1ConfigurationSpecTemplateSpecVolumes
     [JsonPropertyName("configMap")]
     public V1ConfigurationSpecTemplateSpecVolumesConfigMap? ConfigMap { get; set; }
 
-    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-emptydir</summary>
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-volumes-emptydir</summary>
     [JsonPropertyName("emptyDir")]
     public JsonNode? EmptyDir { get; set; }
+
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-volumes-hostpath</summary>
+    [JsonPropertyName("hostPath")]
+    public JsonNode? HostPath { get; set; }
 
     /// <summary>name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
@@ -982,7 +977,7 @@ public partial class V1ConfigurationSpecTemplateSpec
     [JsonPropertyName("dnsPolicy")]
     public string? DnsPolicy { get; set; }
 
-    /// <summary>EnableServiceLinks indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Optional: Knative defaults this to false.</summary>
+    /// <summary>EnableServiceLinks indicates whether information aboutservices should be injected into pod's environment variables, matching the syntax of Docker links. Optional: Knative defaults this to false.</summary>
     [JsonPropertyName("enableServiceLinks")]
     public bool? EnableServiceLinks { get; set; }
 
@@ -992,15 +987,15 @@ public partial class V1ConfigurationSpecTemplateSpec
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-hostipc</summary>
     [JsonPropertyName("hostIPC")]
-    public JsonNode? HostIPC { get; set; }
+    public bool? HostIPC { get; set; }
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-hostnetwork</summary>
     [JsonPropertyName("hostNetwork")]
-    public JsonNode? HostNetwork { get; set; }
+    public bool? HostNetwork { get; set; }
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-hostpid</summary>
     [JsonPropertyName("hostPID")]
-    public JsonNode? HostPID { get; set; }
+    public bool? HostPID { get; set; }
 
     /// <summary>IdleTimeoutSeconds is the maximum duration in seconds a request will be allowed to stay open while not receiving any bytes from the user's application. If unspecified, a system default will be provided.</summary>
     [JsonPropertyName("idleTimeoutSeconds")]
@@ -1010,17 +1005,17 @@ public partial class V1ConfigurationSpecTemplateSpec
     [JsonPropertyName("imagePullSecrets")]
     public IList<V1ConfigurationSpecTemplateSpecImagePullSecrets>? ImagePullSecrets { get; set; }
 
-    /// <summary>List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/</summary>
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-init-containers</summary>
     [JsonPropertyName("initContainers")]
     public IList<JsonNode>? InitContainers { get; set; }
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-nodeselector</summary>
     [JsonPropertyName("nodeSelector")]
-    public JsonNode? NodeSelector { get; set; }
+    public IDictionary<string, string>? NodeSelector { get; set; }
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-priorityclassname</summary>
     [JsonPropertyName("priorityClassName")]
-    public JsonNode? PriorityClassName { get; set; }
+    public string? PriorityClassName { get; set; }
 
     /// <summary>ResponseStartTimeoutSeconds is the maximum duration in seconds that the request routing layer will wait for a request delivered to a container to begin sending any network traffic.</summary>
     [JsonPropertyName("responseStartTimeoutSeconds")]
@@ -1028,11 +1023,11 @@ public partial class V1ConfigurationSpecTemplateSpec
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-runtimeclassname</summary>
     [JsonPropertyName("runtimeClassName")]
-    public JsonNode? RuntimeClassName { get; set; }
+    public string? RuntimeClassName { get; set; }
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-schedulername</summary>
     [JsonPropertyName("schedulerName")]
-    public JsonNode? SchedulerName { get; set; }
+    public string? SchedulerName { get; set; }
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-securitycontext</summary>
     [JsonPropertyName("securityContext")]
@@ -1042,9 +1037,9 @@ public partial class V1ConfigurationSpecTemplateSpec
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 
-    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-shareproccessnamespace</summary>
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-shareprocessnamespace</summary>
     [JsonPropertyName("shareProcessNamespace")]
-    public JsonNode? ShareProcessNamespace { get; set; }
+    public bool? ShareProcessNamespace { get; set; }
 
     /// <summary>TimeoutSeconds is the maximum duration in seconds that the request instance is allowed to respond to a request. If unspecified, a system default will be provided.</summary>
     [JsonPropertyName("timeoutSeconds")]

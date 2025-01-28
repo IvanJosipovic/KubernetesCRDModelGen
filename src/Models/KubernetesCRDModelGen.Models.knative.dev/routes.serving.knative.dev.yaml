@@ -4,7 +4,7 @@ metadata:
   name: routes.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.16.0
+    app.kubernetes.io/version: 1.17.0
     knative.dev/crd-install: true
     duck.knative.dev/addressable: true
 spec:

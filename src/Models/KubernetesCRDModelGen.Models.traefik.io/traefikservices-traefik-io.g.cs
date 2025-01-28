@@ -123,13 +123,17 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
 
-    /// <summary>MaxAge indicates the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
+    /// <summary>MaxAge defines the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
     [JsonPropertyName("maxAge")]
     public int? MaxAge { get; set; }
 
     /// <summary>Name defines the Cookie name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Path defines the path that must exist in the requested URL for the browser to send the Cookie header. When not provided the cookie will be sent on every request to the domain. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#pathpath-value</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
 
     /// <summary>SameSite defines the same site policy. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite</summary>
     [JsonPropertyName("sameSite")]
@@ -140,7 +144,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#sticky-sessions</summary>
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
 {
@@ -201,7 +205,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrors
     [JsonPropertyName("serversTransport")]
     public string? ServersTransport { get; set; }
 
-    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#sticky-sessions</summary>
+    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecMirroringMirrorsSticky? Sticky { get; set; }
 
@@ -231,13 +235,17 @@ public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
 
-    /// <summary>MaxAge indicates the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
+    /// <summary>MaxAge defines the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
     [JsonPropertyName("maxAge")]
     public int? MaxAge { get; set; }
 
     /// <summary>Name defines the Cookie name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Path defines the path that must exist in the requested URL for the browser to send the Cookie header. When not provided the cookie will be sent on every request to the domain. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#pathpath-value</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
 
     /// <summary>SameSite defines the same site policy. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite</summary>
     [JsonPropertyName("sameSite")]
@@ -248,7 +256,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#sticky-sessions</summary>
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringSticky
 {
@@ -317,7 +325,7 @@ public partial class V1alpha1TraefikServiceSpecMirroring
     [JsonPropertyName("serversTransport")]
     public string? ServersTransport { get; set; }
 
-    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#sticky-sessions</summary>
+    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecMirroringSticky? Sticky { get; set; }
 
@@ -396,13 +404,17 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
 
-    /// <summary>MaxAge indicates the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
+    /// <summary>MaxAge defines the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
     [JsonPropertyName("maxAge")]
     public int? MaxAge { get; set; }
 
     /// <summary>Name defines the Cookie name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Path defines the path that must exist in the requested URL for the browser to send the Cookie header. When not provided the cookie will be sent on every request to the domain. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#pathpath-value</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
 
     /// <summary>SameSite defines the same site policy. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite</summary>
     [JsonPropertyName("sameSite")]
@@ -413,7 +425,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#sticky-sessions</summary>
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
 {
@@ -470,7 +482,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServices
     [JsonPropertyName("serversTransport")]
     public string? ServersTransport { get; set; }
 
-    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.2/routing/services/#sticky-sessions</summary>
+    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecWeightedServicesSticky? Sticky { get; set; }
 
@@ -491,13 +503,17 @@ public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
 
-    /// <summary>MaxAge indicates the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
+    /// <summary>MaxAge defines the number of seconds until the cookie expires. When set to a negative number, the cookie expires immediately. When set to zero, the cookie never expires.</summary>
     [JsonPropertyName("maxAge")]
     public int? MaxAge { get; set; }
 
     /// <summary>Name defines the Cookie name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Path defines the path that must exist in the requested URL for the browser to send the Cookie header. When not provided the cookie will be sent on every request to the domain. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#pathpath-value</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
 
     /// <summary>SameSite defines the same site policy. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite</summary>
     [JsonPropertyName("sameSite")]
@@ -508,7 +524,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.2/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
+/// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.3/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedSticky
 {
@@ -525,7 +541,7 @@ public partial class V1alpha1TraefikServiceSpecWeighted
     [JsonPropertyName("services")]
     public IList<V1alpha1TraefikServiceSpecWeightedServices>? Services { get; set; }
 
-    /// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.2/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
+    /// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.3/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecWeightedSticky? Sticky { get; set; }
 }
@@ -543,7 +559,7 @@ public partial class V1alpha1TraefikServiceSpec
     public V1alpha1TraefikServiceSpecWeighted? Weighted { get; set; }
 }
 
-/// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.2/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
+/// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.3/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TraefikService : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TraefikServiceSpec>

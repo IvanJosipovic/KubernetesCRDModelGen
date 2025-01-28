@@ -4,7 +4,7 @@ metadata:
   name: subscriptions.messaging.knative.dev
   labels:
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.16.3
+    app.kubernetes.io/version: 1.17.0
     app.kubernetes.io/name: knative-eventing
 spec:
   group: messaging.knative.dev
