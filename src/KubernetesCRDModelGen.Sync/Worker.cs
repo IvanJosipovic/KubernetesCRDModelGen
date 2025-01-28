@@ -45,17 +45,25 @@ public class Worker : BackgroundService
 
                 CreateProject(item);
 
-                if (item.DirectUrl != null)
+                try
                 {
-                    await ProcessDirectUrls(item);
+                    if (item.DirectUrl != null)
+                    {
+                        await ProcessDirectUrls(item);
+                    }
+                    if (item.GitHub != null)
+                    {
+                        await ProcessGitHub(item);
+                    }
+                    if (item.Helm != null)
+                    {
+                        await ProcessHelmChart(item);
+                    }
                 }
-                if (item.GitHub != null)
+                catch (Exception ex)
                 {
-                    await ProcessGitHub(item);
-                }
-                if (item.Helm != null)
-                {
-                    await ProcessHelmChart(item);
+                    _logger.LogError(ex, "Run Failed: {name}", item.Group);
+                    throw;
                 }
             }
         }
@@ -143,15 +151,15 @@ public class Worker : BackgroundService
             var range = new SemanticVersioning.Range(config.GitHub.SemVer);
 
             release = gitHubReleases
-                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver) && x.assets.Any())
-                .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name))
+                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, true, out var ver) && x.assets.Any())
+                .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name, true))
                 .First(x => range.IsSatisfied(x.name));
         }
         else
         {
             release = gitHubReleases
-                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver) && x.assets.Any())
-                .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name))
+                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, true, out var ver) && x.assets.Any())
+                .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name, true))
                 .First();
         }
 
