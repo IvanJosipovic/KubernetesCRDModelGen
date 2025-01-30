@@ -242,6 +242,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfMapSizeConntrackCleanupQueue")]
     public int? BpfMapSizeConntrackCleanupQueue { get; set; }
 
+    /// <summary>BPFMapSizeConntrackScaling controls whether and how we scale the conntrack map size depending on its usage. 'Disabled' make the size stay at the default or whatever is set by BPFMapSizeConntrack*. 'DoubleIfFull' doubles the size when the map is pretty much full even after cleanups. [Default: DoubleIfFull]</summary>
+    [JsonPropertyName("bpfMapSizeConntrackScaling")]
+    public string? BpfMapSizeConntrackScaling { get; set; }
+
     /// <summary>BPFMapSizeIPSets sets the size for ipsets map.  The IP sets map must be large enough to hold an entry for each endpoint matched by every selector in the source/destination matches in network policy.  Selectors such as "all()" can result in large numbers of entries (one entry per endpoint in that case).</summary>
     [JsonPropertyName("bpfMapSizeIPSets")]
     public int? BpfMapSizeIPSets { get; set; }
