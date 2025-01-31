@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.125.0
+    cnrm.cloud.google.com/version: 1.128.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/dcl2crd: true
@@ -273,7 +273,7 @@ spec:
                             description: Optional. A gRPC method to match against. If this field is empty or omitted, will match all methods.
                             properties:
                               caseSensitive:
-                                description: Optional. Specifies that matches are case-sensitive. The default value is true. case_sensitive must not be used with a type of REGULAR_EXPRESSION.
+                                description: Optional. Specifies that matches are case sensitive. The default value is true. case_sensitive must not be used with a type of REGULAR_EXPRESSION.
                                 type: boolean
                               grpcMethod:
                                 description: Required. Name of the method to match against. If unspecified, will match all methods.

@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.firestore.cnrm.cloud.google.com;
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirestoreDatabaseSpecProjectRef
+public partial class V1beta1FirestoreDatabaseSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -31,7 +31,7 @@ public partial class V1alpha1FirestoreDatabaseSpecProjectRef
 
 /// <summary>FirestoreDatabaseSpec defines the desired state of FirestoreDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirestoreDatabaseSpec
+public partial class V1beta1FirestoreDatabaseSpec
 {
     /// <summary>The concurrency control mode to use for this database. See https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases#concurrencymode for more info.</summary>
     [JsonPropertyName("concurrencyMode")]
@@ -47,7 +47,7 @@ public partial class V1alpha1FirestoreDatabaseSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1FirestoreDatabaseSpecProjectRef ProjectRef { get; set; }
+    public V1beta1FirestoreDatabaseSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>The FirestoreDatabase name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
@@ -56,7 +56,7 @@ public partial class V1alpha1FirestoreDatabaseSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirestoreDatabaseStatusConditions
+public partial class V1beta1FirestoreDatabaseStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -81,7 +81,7 @@ public partial class V1alpha1FirestoreDatabaseStatusConditions
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirestoreDatabaseStatusObservedState
+public partial class V1beta1FirestoreDatabaseStatusObservedState
 {
     /// <summary>Output only. The timestamp at which this database was created. Databases created before 2016 do not populate create_time.</summary>
     [JsonPropertyName("createTime")]
@@ -114,11 +114,11 @@ public partial class V1alpha1FirestoreDatabaseStatusObservedState
 
 /// <summary>FirestoreDatabaseStatus defines the config connector machine state of FirestoreDatabase</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirestoreDatabaseStatus
+public partial class V1beta1FirestoreDatabaseStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1FirestoreDatabaseStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1FirestoreDatabaseStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the FirestoreDatabase resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -130,15 +130,15 @@ public partial class V1alpha1FirestoreDatabaseStatus
 
     /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
     [JsonPropertyName("observedState")]
-    public V1alpha1FirestoreDatabaseStatusObservedState? ObservedState { get; set; }
+    public V1beta1FirestoreDatabaseStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary>FirestoreDatabase is the Schema for the FirestoreDatabase API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1FirestoreDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirestoreDatabaseSpec>, IStatus<V1alpha1FirestoreDatabaseStatus>
+public partial class V1beta1FirestoreDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FirestoreDatabaseSpec>, IStatus<V1beta1FirestoreDatabaseStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "FirestoreDatabase";
     public const string KubeGroup = "firestore.cnrm.cloud.google.com";
     public const string KubePluralName = "firestoredatabases";
@@ -156,9 +156,9 @@ public partial class V1alpha1FirestoreDatabase : IKubernetesObject<V1ObjectMeta>
 
     /// <summary>FirestoreDatabaseSpec defines the desired state of FirestoreDatabase</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1FirestoreDatabaseSpec? Spec { get; set; }
+    public V1beta1FirestoreDatabaseSpec? Spec { get; set; }
 
     /// <summary>FirestoreDatabaseStatus defines the config connector machine state of FirestoreDatabase</summary>
     [JsonPropertyName("status")]
-    public V1alpha1FirestoreDatabaseStatus? Status { get; set; }
+    public V1beta1FirestoreDatabaseStatus? Status { get; set; }
 }

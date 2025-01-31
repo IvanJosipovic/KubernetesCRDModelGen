@@ -234,7 +234,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
     [JsonPropertyName("dockerConfig")]
     public V1beta1ArtifactRegistryRepositorySpecDockerConfig? DockerConfig { get; set; }
 
-    /// <summary>Immutable. The format of packages that are stored in the repository. See [Supported formats](https://cloud.google.com/artifact-registry/docs/supported-formats). You can only create alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).</summary>
+    /// <summary>Immutable. The format of packages that are stored in the repository. Supported formats can be found [here](https://cloud.google.com/artifact-registry/docs/supported-formats). You can only create alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).</summary>
     [JsonPropertyName("format")]
     public string Format { get; set; }
 

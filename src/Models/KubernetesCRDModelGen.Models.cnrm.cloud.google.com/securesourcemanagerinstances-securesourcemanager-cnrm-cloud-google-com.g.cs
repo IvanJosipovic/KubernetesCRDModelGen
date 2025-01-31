@@ -25,6 +25,44 @@ public partial class V1alpha1SecureSourceManagerInstanceSpecKmsKeyRef
     public string? Namespace { get; set; }
 }
 
+/// <summary>Required. Immutable. CA pool resource, resource must in the format of `projects/{project}/locations/{location}/caPools/{ca_pool}`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1SecureSourceManagerInstanceSpecPrivateConfigCaPoolRef
+{
+    /// <summary>A reference to an externally managed PrivateCACAPool. Should be in the format `projects/{project_id}/locations/{region}/caPools/{caPool}`.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The `name` of a `PrivateCACAPool` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `namespace` of a `PrivateCACAPool` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Optional. PrivateConfig includes settings for private instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1SecureSourceManagerInstanceSpecPrivateConfig
+{
+    /// <summary>Required. Immutable. CA pool resource, resource must in the format of `projects/{project}/locations/{location}/caPools/{ca_pool}`.</summary>
+    [JsonPropertyName("caPoolRef")]
+    public V1alpha1SecureSourceManagerInstanceSpecPrivateConfigCaPoolRef? CaPoolRef { get; set; }
+
+    /// <summary>Output only. Service Attachment for HTTP, resource is in the format of `projects/{project}/regions/{region}/serviceAttachments/{service_attachment}`.</summary>
+    [JsonPropertyName("httpServiceAttachment")]
+    public string? HttpServiceAttachment { get; set; }
+
+    /// <summary>Required. Immutable. Indicate if it's private instance.</summary>
+    [JsonPropertyName("isPrivate")]
+    public bool? IsPrivate { get; set; }
+
+    /// <summary>Output only. Service Attachment for SSH, resource is in the format of `projects/{project}/regions/{region}/serviceAttachments/{service_attachment}`.</summary>
+    [JsonPropertyName("sshServiceAttachment")]
+    public string? SshServiceAttachment { get; set; }
+}
+
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecureSourceManagerInstanceSpecProjectRef
@@ -57,6 +95,10 @@ public partial class V1alpha1SecureSourceManagerInstanceSpec
     /// <summary>Immutable. Location of the instance.</summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
+
+    /// <summary>Optional. PrivateConfig includes settings for private instance.</summary>
+    [JsonPropertyName("privateConfig")]
+    public V1alpha1SecureSourceManagerInstanceSpecPrivateConfig? PrivateConfig { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]

@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
 /// <summary>Project hosting KMSKeyHandle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyHandleSpecProjectRef
+public partial class V1beta1KMSKeyHandleSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -31,7 +31,7 @@ public partial class V1alpha1KMSKeyHandleSpecProjectRef
 
 /// <summary>KMSKeyHandleSpec defines the desired state of KMSKeyHandle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyHandleSpec
+public partial class V1beta1KMSKeyHandleSpec
 {
     /// <summary>Location name to create KeyHandle</summary>
     [JsonPropertyName("location")]
@@ -39,9 +39,9 @@ public partial class V1alpha1KMSKeyHandleSpec
 
     /// <summary>Project hosting KMSKeyHandle</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1KMSKeyHandleSpecProjectRef? ProjectRef { get; set; }
+    public V1beta1KMSKeyHandleSpecProjectRef? ProjectRef { get; set; }
 
-    /// <summary>Immutable. The KMSKeyHandle name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The KMS Key Handle ID used for resource creation or acquisition. For creation: If specified, this value is used as the key handle ID. If not provided, a UUID will be generated and assigned as the key handle ID. For acquisition: This field must be provided to identify the key handle resource to acquire.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
@@ -52,7 +52,7 @@ public partial class V1alpha1KMSKeyHandleSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyHandleStatusConditions
+public partial class V1beta1KMSKeyHandleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -77,7 +77,7 @@ public partial class V1alpha1KMSKeyHandleStatusConditions
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyHandleStatusObservedState
+public partial class V1beta1KMSKeyHandleStatusObservedState
 {
     /// <summary></summary>
     [JsonPropertyName("kmsKey")]
@@ -86,11 +86,11 @@ public partial class V1alpha1KMSKeyHandleStatusObservedState
 
 /// <summary>KMSKeyHandleStatus defines the config connector machine state of KMSKeyHandle</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyHandleStatus
+public partial class V1beta1KMSKeyHandleStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1KMSKeyHandleStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1KMSKeyHandleStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the KMSKeyHandle resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -102,15 +102,15 @@ public partial class V1alpha1KMSKeyHandleStatus
 
     /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
     [JsonPropertyName("observedState")]
-    public V1alpha1KMSKeyHandleStatusObservedState? ObservedState { get; set; }
+    public V1beta1KMSKeyHandleStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary>KMSKeyHandle is the Schema for the KMSKeyHandle API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1KMSKeyHandle : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSKeyHandleSpec>, IStatus<V1alpha1KMSKeyHandleStatus>
+public partial class V1beta1KMSKeyHandle : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KMSKeyHandleSpec>, IStatus<V1beta1KMSKeyHandleStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "KMSKeyHandle";
     public const string KubeGroup = "kms.cnrm.cloud.google.com";
     public const string KubePluralName = "kmskeyhandles";
@@ -128,9 +128,9 @@ public partial class V1alpha1KMSKeyHandle : IKubernetesObject<V1ObjectMeta>, ISp
 
     /// <summary>KMSKeyHandleSpec defines the desired state of KMSKeyHandle</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1KMSKeyHandleSpec Spec { get; set; }
+    public V1beta1KMSKeyHandleSpec Spec { get; set; }
 
     /// <summary>KMSKeyHandleStatus defines the config connector machine state of KMSKeyHandle</summary>
     [JsonPropertyName("status")]
-    public V1alpha1KMSKeyHandleStatus? Status { get; set; }
+    public V1beta1KMSKeyHandleStatus? Status { get; set; }
 }

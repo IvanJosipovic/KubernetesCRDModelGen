@@ -1319,7 +1319,7 @@ public partial class V1beta1ContainerClusterSpecNodePoolDefaults
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecNotificationConfigPubsubFilter
 {
-    /// <summary>Can be used to filter what notifications are sent. Valid values include UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT.</summary>
+    /// <summary>Can be used to filter what notifications are sent. Valid values include include UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT.</summary>
     [JsonPropertyName("eventType")]
     public IList<string> EventType { get; set; }
 }
@@ -1513,7 +1513,7 @@ public partial class V1beta1ContainerClusterSpecSecurityPostureConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerClusterSpecServiceExternalIpsConfig
 {
-    /// <summary>When enabled, services with external ips specified will be allowed.</summary>
+    /// <summary>When enabled, services with exterenal ips specified will be allowed.</summary>
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; }
 }

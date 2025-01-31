@@ -163,7 +163,7 @@ public partial class V1beta1SecretManagerSecretSpec
     [JsonPropertyName("replication")]
     public V1beta1SecretManagerSecretSpecReplication? Replication { get; set; }
 
-    /// <summary>Immutable. The SecretManagerSecret name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The SecretManagerSecret name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
@@ -175,7 +175,7 @@ public partial class V1beta1SecretManagerSecretSpec
     [JsonPropertyName("topics")]
     public IList<V1beta1SecretManagerSecretSpecTopics>? Topics { get; set; }
 
-    /// <summary>Input only. The TTL for the [Secret][google.cloud.secretmanager.v1.Secret].</summary>
+    /// <summary>Input only. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
 
@@ -213,6 +213,9 @@ public partial class V1beta1SecretManagerSecretStatusConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretStatusObservedState
 {
+    /// <summary></summary>
+    [JsonPropertyName("versionAliases")]
+    public IDictionary<string, string>? VersionAliases { get; set; }
 }
 
 /// <summary>SecretManagerSecretStatus defines the config connector machine state of SecretManagerSecret</summary>

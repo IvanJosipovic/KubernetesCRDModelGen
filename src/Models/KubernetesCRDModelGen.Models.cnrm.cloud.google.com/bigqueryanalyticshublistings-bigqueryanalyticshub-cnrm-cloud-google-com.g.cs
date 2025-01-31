@@ -8,26 +8,26 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryanalyticshub.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>BigQueryAnalyticsHubDataExchangeRef defines the resource reference to BigQueryAnalyticsHubDataExchange, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecDataExchangeRef
+public partial class V1beta1BigQueryAnalyticsHubListingSpecDataExchangeRef
 {
-    /// <summary>The DataExchange selfLink, when not managed by Config Connector.</summary>
+    /// <summary>A reference to an externally managed BigQueryAnalyticsHubDataExchange resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/dataexchanges/{{dataexchangeID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `DataExchange` resource.</summary>
+    /// <summary>The name of a BigQueryAnalyticsHubDataExchange resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `DataExchange` resource.</summary>
+    /// <summary>The namespace of a BigQueryAnalyticsHubDataExchange resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
 /// <summary>Optional. Details of the data provider who owns the source data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecDataProvider
+public partial class V1beta1BigQueryAnalyticsHubListingSpecDataProvider
 {
     /// <summary>Optional. Name of the data provider.</summary>
     [JsonPropertyName("name")]
@@ -40,7 +40,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecDataProvider
 
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecProjectRef
+public partial class V1beta1BigQueryAnalyticsHubListingSpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -61,7 +61,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecProjectRef
 
 /// <summary>Optional. Details of the publisher who owns the listing and who can share the source data.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecPublisher
+public partial class V1beta1BigQueryAnalyticsHubListingSpecPublisher
 {
     /// <summary>Optional. Name of the listing publisher.</summary>
     [JsonPropertyName("name")]
@@ -74,7 +74,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecPublisher
 
 /// <summary>Resource name of the dataset source for this listing. e.g. `projects/myproject/datasets/123`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceDatasetRef
+public partial class V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceDatasetRef
 {
     /// <summary>If provided must be in the format `projects/[project_id]/datasets/[dataset_id]`.</summary>
     [JsonPropertyName("external")]
@@ -89,100 +89,90 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatase
     public string? Namespace { get; set; }
 }
 
-/// <summary>Optional. If true, enable restricted export.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicyEnabled
-{
-    /// <summary>The bool value.</summary>
-    [JsonPropertyName("value")]
-    public bool? Value { get; set; }
-}
-
-/// <summary>Optional. If true, restrict direct table access (read api/tabledata.list) on linked table.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicyRestrictDirectTableAccess
-{
-    /// <summary>The bool value.</summary>
-    [JsonPropertyName("value")]
-    public bool? Value { get; set; }
-}
-
-/// <summary>Optional. If true, restrict export of query result derived from restricted linked dataset table.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicyRestrictQueryResult
-{
-    /// <summary>The bool value.</summary>
-    [JsonPropertyName("value")]
-    public bool? Value { get; set; }
-}
-
 /// <summary>Optional. If set, restricted export policy will be propagated and enforced on the linked dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicy
+public partial class V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicy
 {
     /// <summary>Optional. If true, enable restricted export.</summary>
     [JsonPropertyName("enabled")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicyEnabled? Enabled { get; set; }
+    public bool? Enabled { get; set; }
 
     /// <summary>Optional. If true, restrict direct table access (read api/tabledata.list) on linked table.</summary>
     [JsonPropertyName("restrictDirectTableAccess")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicyRestrictDirectTableAccess? RestrictDirectTableAccess { get; set; }
+    public bool? RestrictDirectTableAccess { get; set; }
 
     /// <summary>Optional. If true, restrict export of query result derived from restricted linked dataset table.</summary>
     [JsonPropertyName("restrictQueryResult")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicyRestrictQueryResult? RestrictQueryResult { get; set; }
+    public bool? RestrictQueryResult { get; set; }
+}
+
+/// <summary>Optional. A reference to a BigQueryTable. Format: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}` Example:"projects/test_project/datasets/test_dataset/tables/test_table"</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceSelectedResourcesTableRef
+{
+    /// <summary>If provided must be in the format `projects/{projectId}/datasets/{datasetId}/tables/{tableId}`.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The `metadata.name` field of a `BigQueryTable` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `metadata.namespace` field of a `BigQueryTable` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceSelectedResources
+public partial class V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceSelectedResources
 {
-    /// <summary>Optional. Format: For table: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}` Example:"projects/test_project/datasets/test_dataset/tables/test_table"</summary>
-    [JsonPropertyName("table")]
-    public string? Table { get; set; }
+    /// <summary>Optional. A reference to a BigQueryTable. Format: `projects/{projectId}/datasets/{datasetId}/tables/{tableId}` Example:"projects/test_project/datasets/test_dataset/tables/test_table"</summary>
+    [JsonPropertyName("tableRef")]
+    public V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceSelectedResourcesTableRef? TableRef { get; set; }
 }
 
 /// <summary>One of the following fields must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSource
+public partial class V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSource
 {
     /// <summary>Resource name of the dataset source for this listing. e.g. `projects/myproject/datasets/123`</summary>
     [JsonPropertyName("datasetRef")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceDatasetRef DatasetRef { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceDatasetRef DatasetRef { get; set; }
 
     /// <summary>Optional. If set, restricted export policy will be propagated and enforced on the linked dataset.</summary>
     [JsonPropertyName("restrictedExportPolicy")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicy? RestrictedExportPolicy { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceRestrictedExportPolicy? RestrictedExportPolicy { get; set; }
 
     /// <summary>Optional. Resources in this dataset that are selectively shared. If this field is empty, then the entire dataset (all resources) are shared. This field is only valid for data clean room exchanges.</summary>
     [JsonPropertyName("selectedResources")]
-    public IList<V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceSelectedResources>? SelectedResources { get; set; }
+    public IList<V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceSelectedResources>? SelectedResources { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpecSource
+public partial class V1beta1BigQueryAnalyticsHubListingSpecSource
 {
     /// <summary>One of the following fields must be set.</summary>
     [JsonPropertyName("bigQueryDatasetSource")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSource? BigQueryDatasetSource { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSource? BigQueryDatasetSource { get; set; }
 }
 
 /// <summary>BigQueryAnalyticsHubListingSpec defines the desired state of BigQueryAnalyticsHubDataExchangeListing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingSpec
+public partial class V1beta1BigQueryAnalyticsHubListingSpec
 {
     /// <summary>Optional. Categories of the listing. Up to two categories are allowed.</summary>
     [JsonPropertyName("categories")]
     public IList<string>? Categories { get; set; }
 
-    /// <summary></summary>
+    /// <summary>BigQueryAnalyticsHubDataExchangeRef defines the resource reference to BigQueryAnalyticsHubDataExchange, which "External" field holds the GCP identifier for the KRM object.</summary>
     [JsonPropertyName("dataExchangeRef")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecDataExchangeRef DataExchangeRef { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecDataExchangeRef DataExchangeRef { get; set; }
 
     /// <summary>Optional. Details of the data provider who owns the source data.</summary>
     [JsonPropertyName("dataProvider")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecDataProvider? DataProvider { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecDataProvider? DataProvider { get; set; }
 
     /// <summary>Optional. Short description of the listing. The description must contain only Unicode characters or tabs  (HT), new lines (LF), carriage returns (CR), and page breaks (FF). Default value is an empty string. Max length: 2000 bytes.</summary>
     [JsonPropertyName("description")]
@@ -210,11 +200,11 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpec
 
     /// <summary>The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecProjectRef ProjectRef { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Optional. Details of the publisher who owns the listing and who can share the source data.</summary>
     [JsonPropertyName("publisher")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecPublisher? Publisher { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecPublisher? Publisher { get; set; }
 
     /// <summary>Optional. Email or URL of the request access of the listing. Subscribers can use this reference to request access. Max Length: 1000 bytes.</summary>
     [JsonPropertyName("requestAccess")]
@@ -226,12 +216,12 @@ public partial class V1alpha1BigQueryAnalyticsHubListingSpec
 
     /// <summary></summary>
     [JsonPropertyName("source")]
-    public V1alpha1BigQueryAnalyticsHubListingSpecSource Source { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpecSource Source { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingStatusConditions
+public partial class V1beta1BigQueryAnalyticsHubListingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -256,7 +246,7 @@ public partial class V1alpha1BigQueryAnalyticsHubListingStatusConditions
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingStatusObservedState
+public partial class V1beta1BigQueryAnalyticsHubListingStatusObservedState
 {
     /// <summary>Output only. Current state of the listing.</summary>
     [JsonPropertyName("state")]
@@ -265,11 +255,11 @@ public partial class V1alpha1BigQueryAnalyticsHubListingStatusObservedState
 
 /// <summary>BigQueryAnalyticsHubListingStatus defines the config connector machine state of BigQueryAnalyticsHubDataExchangeListing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryAnalyticsHubListingStatus
+public partial class V1beta1BigQueryAnalyticsHubListingStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1BigQueryAnalyticsHubListingStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1BigQueryAnalyticsHubListingStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the BigQueryAnalyticsHubDataExchangeListing resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -281,15 +271,15 @@ public partial class V1alpha1BigQueryAnalyticsHubListingStatus
 
     /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
     [JsonPropertyName("observedState")]
-    public V1alpha1BigQueryAnalyticsHubListingStatusObservedState? ObservedState { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary>BigQueryAnalyticsHubListing is the Schema for the BigQueryAnalyticsHubListing API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BigQueryAnalyticsHubListing : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryAnalyticsHubListingSpec>, IStatus<V1alpha1BigQueryAnalyticsHubListingStatus>
+public partial class V1beta1BigQueryAnalyticsHubListing : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryAnalyticsHubListingSpec>, IStatus<V1beta1BigQueryAnalyticsHubListingStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "BigQueryAnalyticsHubListing";
     public const string KubeGroup = "bigqueryanalyticshub.cnrm.cloud.google.com";
     public const string KubePluralName = "bigqueryanalyticshublistings";
@@ -307,9 +297,9 @@ public partial class V1alpha1BigQueryAnalyticsHubListing : IKubernetesObject<V1O
 
     /// <summary>BigQueryAnalyticsHubListingSpec defines the desired state of BigQueryAnalyticsHubDataExchangeListing</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1BigQueryAnalyticsHubListingSpec? Spec { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingSpec? Spec { get; set; }
 
     /// <summary>BigQueryAnalyticsHubListingStatus defines the config connector machine state of BigQueryAnalyticsHubDataExchangeListing</summary>
     [JsonPropertyName("status")]
-    public V1alpha1BigQueryAnalyticsHubListingStatus? Status { get; set; }
+    public V1beta1BigQueryAnalyticsHubListingStatus? Status { get; set; }
 }

@@ -78,7 +78,7 @@ public partial class V1alpha1DiscoveryEngineDataStoreSpec
     [JsonPropertyName("projectRef")]
     public V1alpha1DiscoveryEngineDataStoreSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. The DiscoveryEngineDataStore name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The DiscoveryEngineDataStore name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
@@ -157,7 +157,7 @@ public partial class V1alpha1DiscoveryEngineDataStoreStatusObservedState
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
-    /// <summary>Output only. The id of the default [Schema][google.cloud.discoveryengine.v1.Schema] asscociated to this data store.</summary>
+    /// <summary>Output only. The id of the default [Schema][google.cloud.discoveryengine.v1.Schema] associated to this data store.</summary>
     [JsonPropertyName("defaultSchemaID")]
     public string? DefaultSchemaID { get; set; }
 }

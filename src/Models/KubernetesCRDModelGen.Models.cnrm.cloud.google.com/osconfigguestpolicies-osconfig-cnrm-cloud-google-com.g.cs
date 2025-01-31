@@ -46,7 +46,7 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignmentOsTypes
     [JsonPropertyName("osShortName")]
     public string? OsShortName { get; set; }
 
-    /// <summary>Targets VM instances with OS Inventory enabled and having the following OS version.</summary>
+    /// <summary>Targets VM instances with OS Inventory enabled and having the following following OS version.</summary>
     [JsonPropertyName("osVersion")]
     public string? OsVersion { get; set; }
 }
@@ -253,7 +253,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifacts
     [JsonPropertyName("gcs")]
     public V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcs? Gcs { get; set; }
 
-    /// <summary>Required. ID of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.</summary>
+    /// <summary>Required. Id of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 

@@ -74,11 +74,11 @@ public partial class V1alpha1DataCatalogEntrySpec
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>This field indicates the entry's source system that Data Catalog does not integrate with. userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case-insensitive; must be at least 1 character and at most 64 characters long.</summary>
+    /// <summary>This field indicates the entry's source system that Data Catalog does not integrate with. userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.</summary>
     [JsonPropertyName("userSpecifiedSystem")]
     public string? UserSpecifiedSystem { get; set; }
 
-    /// <summary>Entry type if it does not fit any of the input-allowed values listed in EntryType enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". userSpecifiedType strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case-insensitive; must be at least 1 character and at most 64 characters long.</summary>
+    /// <summary>Entry type if it does not fit any of the input-allowed values listed in EntryType enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". userSpecifiedType strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.</summary>
     [JsonPropertyName("userSpecifiedType")]
     public string? UserSpecifiedType { get; set; }
 }

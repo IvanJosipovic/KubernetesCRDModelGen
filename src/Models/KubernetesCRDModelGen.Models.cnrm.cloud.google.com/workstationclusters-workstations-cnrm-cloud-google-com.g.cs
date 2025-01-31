@@ -25,11 +25,11 @@ public partial class V1beta1WorkstationClusterSpecAnnotations
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationClusterSpecLabels
 {
-    /// <summary>Key for the annotation.</summary>
+    /// <summary>Key for the label.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>Value for the annotation.</summary>
+    /// <summary>Value for the label.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -38,7 +38,7 @@ public partial class V1beta1WorkstationClusterSpecLabels
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationClusterSpecNetworkRef
 {
-    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
+    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/{{projectID}}/global/networks/{{network}}`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
@@ -155,7 +155,7 @@ public partial class V1beta1WorkstationClusterSpec
     [JsonPropertyName("projectRef")]
     public V1beta1WorkstationClusterSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. The WorkstationCluster name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The WorkstationCluster name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 

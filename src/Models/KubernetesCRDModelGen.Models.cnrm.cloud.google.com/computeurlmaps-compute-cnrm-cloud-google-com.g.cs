@@ -1427,7 +1427,7 @@ public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRules
     [JsonPropertyName("headerMatches")]
     public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatches>? HeaderMatches { get; set; }
 
-    /// <summary>Specifies that prefixMatch and fullPathMatch matches are case-sensitive. Defaults to false.</summary>
+    /// <summary>Specifies that prefixMatch and fullPathMatch matches are case sensitive. Defaults to false.</summary>
     [JsonPropertyName("ignoreCase")]
     public bool? IgnoreCase { get; set; }
 

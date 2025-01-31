@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
 /// <summary>Immutable. The folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSAutokeyConfigSpecFolderRef
+public partial class V1beta1KMSAutokeyConfigSpecFolderRef
 {
     /// <summary>The 'name' field of a folder, when not managed by Config Connector. This field must be set when 'name' field is not set.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +27,7 @@ public partial class V1alpha1KMSAutokeyConfigSpecFolderRef
 
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSAutokeyConfigSpecKeyProject
+public partial class V1beta1KMSAutokeyConfigSpecKeyProject
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -48,20 +48,20 @@ public partial class V1alpha1KMSAutokeyConfigSpecKeyProject
 
 /// <summary>KMSAutokeyConfigSpec defines the desired state of KMSAutokeyConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSAutokeyConfigSpec
+public partial class V1beta1KMSAutokeyConfigSpec
 {
     /// <summary>Immutable. The folder that this resource belongs to.</summary>
     [JsonPropertyName("folderRef")]
-    public V1alpha1KMSAutokeyConfigSpecFolderRef FolderRef { get; set; }
+    public V1beta1KMSAutokeyConfigSpecFolderRef FolderRef { get; set; }
 
     /// <summary>The Project that this resource belongs to.</summary>
     [JsonPropertyName("keyProject")]
-    public V1alpha1KMSAutokeyConfigSpecKeyProject? KeyProject { get; set; }
+    public V1beta1KMSAutokeyConfigSpecKeyProject? KeyProject { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSAutokeyConfigStatusConditions
+public partial class V1beta1KMSAutokeyConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -86,7 +86,7 @@ public partial class V1alpha1KMSAutokeyConfigStatusConditions
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSAutokeyConfigStatusObservedState
+public partial class V1beta1KMSAutokeyConfigStatusObservedState
 {
     /// <summary>Output only. Current state of this AutokeyConfig.</summary>
     [JsonPropertyName("state")]
@@ -95,11 +95,11 @@ public partial class V1alpha1KMSAutokeyConfigStatusObservedState
 
 /// <summary>KMSAutokeyConfigStatus defines the config connector machine state of KMSAutokeyConfig</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSAutokeyConfigStatus
+public partial class V1beta1KMSAutokeyConfigStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1KMSAutokeyConfigStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1KMSAutokeyConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the KMSAutokeyConfig resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -111,15 +111,15 @@ public partial class V1alpha1KMSAutokeyConfigStatus
 
     /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
     [JsonPropertyName("observedState")]
-    public V1alpha1KMSAutokeyConfigStatusObservedState? ObservedState { get; set; }
+    public V1beta1KMSAutokeyConfigStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary>KMSAutokeyConfig is the Schema for the KMSAutokeyConfig API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1KMSAutokeyConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSAutokeyConfigSpec>, IStatus<V1alpha1KMSAutokeyConfigStatus>
+public partial class V1beta1KMSAutokeyConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KMSAutokeyConfigSpec>, IStatus<V1beta1KMSAutokeyConfigStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "KMSAutokeyConfig";
     public const string KubeGroup = "kms.cnrm.cloud.google.com";
     public const string KubePluralName = "kmsautokeyconfigs";
@@ -137,9 +137,9 @@ public partial class V1alpha1KMSAutokeyConfig : IKubernetesObject<V1ObjectMeta>,
 
     /// <summary>KMSAutokeyConfigSpec defines the desired state of KMSAutokeyConfig</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1KMSAutokeyConfigSpec? Spec { get; set; }
+    public V1beta1KMSAutokeyConfigSpec? Spec { get; set; }
 
     /// <summary>KMSAutokeyConfigStatus defines the config connector machine state of KMSAutokeyConfig</summary>
     [JsonPropertyName("status")]
-    public V1alpha1KMSAutokeyConfigStatus? Status { get; set; }
+    public V1beta1KMSAutokeyConfigStatus? Status { get; set; }
 }

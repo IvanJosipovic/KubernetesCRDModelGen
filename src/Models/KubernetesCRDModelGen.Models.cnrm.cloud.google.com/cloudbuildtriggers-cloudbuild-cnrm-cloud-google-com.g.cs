@@ -1007,7 +1007,7 @@ public partial class V1beta1CloudBuildTriggerSpec
     [JsonPropertyName("includedFiles")]
     public IList<string>? IncludedFiles { get; set; }
 
-    /// <summary>Immutable. The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger. If not specified, "global" is used.</summary>
+    /// <summary>Immutable. The location of the Cloud Build trigger. If not specified, "global" is used. More info: cloud.google.com/build/docs/locations.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 

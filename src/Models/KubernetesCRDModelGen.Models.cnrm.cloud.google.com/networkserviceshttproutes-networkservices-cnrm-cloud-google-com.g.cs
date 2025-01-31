@@ -177,7 +177,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect
     [JsonPropertyName("httpsRedirect")]
     public bool? HttpsRedirect { get; set; }
 
-    /// <summary>The path that will be used in the redirect response instead of the one that was supplied in the request. path_redirect cannot be supplied together with prefix_redirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.</summary>
+    /// <summary>The path that will be used in the redirect response instead of the one that was supplied in the request. path_redirect can not be supplied together with prefix_redirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.</summary>
     [JsonPropertyName("pathRedirect")]
     public string? PathRedirect { get; set; }
 
@@ -429,7 +429,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
     [JsonPropertyName("headers")]
     public IList<V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders>? Headers { get; set; }
 
-    /// <summary>Specifies if prefix_match and full_path_match matches are case-sensitive. The default value is false.</summary>
+    /// <summary>Specifies if prefix_match and full_path_match matches are case sensitive. The default value is false.</summary>
     [JsonPropertyName("ignoreCase")]
     public bool? IgnoreCase { get; set; }
 

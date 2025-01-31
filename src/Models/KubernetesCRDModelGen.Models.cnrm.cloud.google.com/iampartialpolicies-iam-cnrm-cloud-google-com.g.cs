@@ -25,6 +25,23 @@ public partial class V1beta1IAMPartialPolicySpecBindingsCondition
     public string Title { get; set; }
 }
 
+/// <summary>BigQueryConnectionConnection whose service account is to be bound to the role. Use the Type field to specifie the connection type. For "spark" connetion, the service account is in `status.observedState.spark.serviceAccountID`. For "cloudSQL" connection, the service account is in `status.observedState.cloudSQL.serviceAccountID`. For "cloudResource" connection, the service account is in `status.observedState.cloudResource.serviceAccountID`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromBigQueryConnectionConnectionRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Type field specifies the connection type of the BigQueryConnectionConnection resource, whose service account is to be bound to the role.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
 /// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromLogSinkRef
@@ -81,6 +98,10 @@ public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFromSqlInst
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsMembersMemberFrom
 {
+    /// <summary>BigQueryConnectionConnection whose service account is to be bound to the role. Use the Type field to specifie the connection type. For "spark" connetion, the service account is in `status.observedState.spark.serviceAccountID`. For "cloudSQL" connection, the service account is in `status.observedState.cloudSQL.serviceAccountID`. For "cloudResource" connection, the service account is in `status.observedState.cloudResource.serviceAccountID`.</summary>
+    [JsonPropertyName("bigQueryConnectionConnectionRef")]
+    public V1beta1IAMPartialPolicySpecBindingsMembersMemberFromBigQueryConnectionConnectionRef? BigQueryConnectionConnectionRef { get; set; }
+
     /// <summary>The LoggingLogSink whose writer identity (i.e. its 'status.writerIdentity') is to be bound to the role.</summary>
     [JsonPropertyName("logSinkRef")]
     public V1beta1IAMPartialPolicySpecBindingsMembersMemberFromLogSinkRef? LogSinkRef { get; set; }

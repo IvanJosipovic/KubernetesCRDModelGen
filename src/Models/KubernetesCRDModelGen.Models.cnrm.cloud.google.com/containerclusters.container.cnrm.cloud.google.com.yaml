@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.125.0
+    cnrm.cloud.google.com/version: 1.128.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -1199,7 +1199,7 @@ spec:
                         description: Allows filtering to one or more specific event types. If event types are present, those and only those event types will be transmitted to the cluster. Other types will be skipped. If no filter is specified, or no event types are present, all event types will be sent.
                         properties:
                           eventType:
-                            description: Can be used to filter what notifications are sent. Valid values include UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT.
+                            description: Can be used to filter what notifications are sent. Valid values include include UPGRADE_AVAILABLE_EVENT, UPGRADE_EVENT and SECURITY_BULLETIN_EVENT.
                             items:
                               type: string
                             type: array
@@ -1384,7 +1384,7 @@ spec:
                 description: If set, and enabled=true, services with external ips field will not be blocked.
                 properties:
                   enabled:
-                    description: When enabled, services with external ips specified will be allowed.
+                    description: When enabled, services with exterenal ips specified will be allowed.
                     type: boolean
                 required:
                 - enabled

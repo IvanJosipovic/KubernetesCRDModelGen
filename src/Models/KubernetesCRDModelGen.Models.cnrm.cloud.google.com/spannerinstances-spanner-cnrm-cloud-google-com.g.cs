@@ -8,10 +8,61 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
+/// <summary>Required. Autoscaling limits for an instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingLimits
+{
+    /// <summary>Maximum number of nodes allocated to the instance. If set, this number should be greater than or equal to min_nodes.</summary>
+    [JsonPropertyName("maxNodes")]
+    public int? MaxNodes { get; set; }
+
+    /// <summary>Maximum number of processing units allocated to the instance. If set, this number should be multiples of 1000 and be greater than or equal to min_processing_units.</summary>
+    [JsonPropertyName("maxProcessingUnits")]
+    public int? MaxProcessingUnits { get; set; }
+
+    /// <summary>Minimum number of nodes allocated to the instance. If set, this number should be greater than or equal to 1.</summary>
+    [JsonPropertyName("minNodes")]
+    public int? MinNodes { get; set; }
+
+    /// <summary>Minimum number of processing units allocated to the instance. If set, this number should be multiples of 1000.</summary>
+    [JsonPropertyName("minProcessingUnits")]
+    public int? MinProcessingUnits { get; set; }
+}
+
+/// <summary>Required. The autoscaling targets for an instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingTargets
+{
+    /// <summary>Required. The target high priority cpu utilization percentage that the autoscaler should be trying to achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full utilization). The valid range is [10, 90] inclusive.</summary>
+    [JsonPropertyName("highPriorityCpuUtilizationPercent")]
+    public int? HighPriorityCpuUtilizationPercent { get; set; }
+
+    /// <summary>Required. The target storage utilization percentage that the autoscaler should be trying to achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full utilization). The valid range is [10, 100] inclusive.</summary>
+    [JsonPropertyName("storageUtilizationPercent")]
+    public int? StorageUtilizationPercent { get; set; }
+}
+
+/// <summary>Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When autoscaling is enabled, node_count and processing_units are treated as OUTPUT_ONLY fields and reflect the current compute capacity allocated to the instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpannerInstanceSpecAutoscalingConfig
+{
+    /// <summary>Required. Autoscaling limits for an instance.</summary>
+    [JsonPropertyName("autoscalingLimits")]
+    public V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingLimits? AutoscalingLimits { get; set; }
+
+    /// <summary>Required. The autoscaling targets for an instance.</summary>
+    [JsonPropertyName("autoscalingTargets")]
+    public V1beta1SpannerInstanceSpecAutoscalingConfigAutoscalingTargets? AutoscalingTargets { get; set; }
+}
+
 /// <summary>SpannerInstanceSpec defines the desired state of SpannerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceSpec
 {
+    /// <summary>Optional. The autoscaling configuration. Autoscaling is enabled if this field is set. When autoscaling is enabled, node_count and processing_units are treated as OUTPUT_ONLY fields and reflect the current compute capacity allocated to the instance.</summary>
+    [JsonPropertyName("autoscalingConfig")]
+    public V1beta1SpannerInstanceSpecAutoscalingConfig? AutoscalingConfig { get; set; }
+
     /// <summary>Immutable. The name of the instance's configuration (similar but not quite the same as a region) which defines the geographic placement and replication of your databases in this instance. It determines where your data is stored. Values are typically of the form 'regional-europe-west1' , 'us-central' etc. In order to obtain a valid list please consult the [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).</summary>
     [JsonPropertyName("config")]
     public string Config { get; set; }
@@ -20,15 +71,19 @@ public partial class V1beta1SpannerInstanceSpec
     [JsonPropertyName("displayName")]
     public string DisplayName { get; set; }
 
+    /// <summary>Optional. The `Edition` of the current instance. Currently accepted values are EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS</summary>
+    [JsonPropertyName("edition")]
+    public string? Edition { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("numNodes")]
-    public long? NumNodes { get; set; }
+    public int? NumNodes { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("processingUnits")]
-    public long? ProcessingUnits { get; set; }
+    public int? ProcessingUnits { get; set; }
 
-    /// <summary>Immutable. The SpannerInstance name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The SpannerInstance name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
@@ -58,6 +113,19 @@ public partial class V1beta1SpannerInstanceStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpannerInstanceStatusObservedState
+{
+    /// <summary>NumNodes and ProcessUnits is output fields with AutoScaler is set.</summary>
+    [JsonPropertyName("numNodes")]
+    public int? NumNodes { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("processingUnits")]
+    public int? ProcessingUnits { get; set; }
+}
+
 /// <summary>SpannerInstanceStatus defines the config connector machine state of SpannerInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpannerInstanceStatus
@@ -73,6 +141,10 @@ public partial class V1beta1SpannerInstanceStatus
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1beta1SpannerInstanceStatusObservedState? ObservedState { get; set; }
 
     /// <summary>Instance status: 'CREATING' or 'READY'.</summary>
     [JsonPropertyName("state")]
