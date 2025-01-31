@@ -116,7 +116,7 @@ public partial class V1beta1ComputeFirewallPolicyStatus
     [JsonPropertyName("observedGeneration")]
     public int? ObservedGeneration { get; set; }
 
-    /// <summary>Total count of all firewall policy rule tuples. A firewall policy cannot exceed a set number of tuples.</summary>
+    /// <summary>Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.</summary>
     [JsonPropertyName("ruleTupleCount")]
     public long? RuleTupleCount { get; set; }
 

@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.125.0
+    cnrm.cloud.google.com/version: 1.128.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -134,9 +134,9 @@ spec:
                 type: object
               format:
                 description: >-
-                  Immutable. The format of packages that are stored in the repository. See
+                  Immutable. The format of packages that are stored in the repository. Supported formats
 
-                  [Supported formats](https://cloud.google.com/artifact-registry/docs/supported-formats).
+                  can be found [here](https://cloud.google.com/artifact-registry/docs/supported-formats).
 
                   You can only create alpha formats if you are a member of the
 

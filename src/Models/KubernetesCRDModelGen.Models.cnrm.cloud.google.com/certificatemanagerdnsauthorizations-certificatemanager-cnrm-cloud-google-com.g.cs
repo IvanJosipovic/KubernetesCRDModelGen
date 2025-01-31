@@ -49,7 +49,7 @@ public partial class V1beta1CertificateManagerDNSAuthorizationSpec
     [JsonPropertyName("projectRef")]
     public V1beta1CertificateManagerDNSAuthorizationSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }

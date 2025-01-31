@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecFirewallPolicyRef
 {
-    /// <summary>A reference to an externally managed ComputeFirewallPolicy resource. Should be in the format `locations/global/firewallPolicies/&lt;firewallPolicy&gt;`.</summary>
+    /// <summary>A reference to an externally managed ComputeFirewallPolicy resource. Should be in the format `locations/global/firewallPolicies/{{firewallPolicyID}}`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `ComputeFirewall olicy ` resource.</summary>
+    /// <summary>The `name` field of a `ComputeFirewallPolicy` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `ComputeFirewallPolicy ` resource.</summary>
+    /// <summary>The `namespace` field of a `ComputeFirewallPolicy` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -91,7 +91,7 @@ public partial class V1beta1ComputeFirewallPolicyRuleSpecMatch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeFirewallPolicyRuleSpecTargetResources
 {
-    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
+    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/{{projectID}}/global/networks/{{network}}`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 

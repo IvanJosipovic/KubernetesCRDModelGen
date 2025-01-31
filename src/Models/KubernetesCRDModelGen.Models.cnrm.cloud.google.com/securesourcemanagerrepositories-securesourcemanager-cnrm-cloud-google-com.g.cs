@@ -33,7 +33,7 @@ public partial class V1alpha1SecureSourceManagerRepositorySpecInitialConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecureSourceManagerRepositorySpecInstanceRef
 {
-    /// <summary>A reference to an externally managed SecureSourceManagerInstance resource. Should be in the format "projects/&lt;projectID&gt;/locations/&lt;location&gt;/instances/&lt;instanceID&gt;".</summary>
+    /// <summary>A reference to an externally managed SecureSourceManagerInstance resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/instances/{{instanceID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
@@ -87,7 +87,7 @@ public partial class V1alpha1SecureSourceManagerRepositorySpec
     [JsonPropertyName("projectRef")]
     public V1alpha1SecureSourceManagerRepositorySpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. The SecureSourceManagerRepository name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The SecureSourceManagerRepository name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
@@ -138,6 +138,14 @@ public partial class V1alpha1SecureSourceManagerRepositoryStatusObservedStateUri
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecureSourceManagerRepositoryStatusObservedState
 {
+    /// <summary>Output only. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.</summary>
+    [JsonPropertyName("etag")]
+    public string? Etag { get; set; }
+
+    /// <summary>Output only. Unique identifier of the repository.</summary>
+    [JsonPropertyName("uid")]
+    public string? Uid { get; set; }
+
     /// <summary>Output only. URIs for the repository.</summary>
     [JsonPropertyName("uris")]
     public V1alpha1SecureSourceManagerRepositoryStatusObservedStateUris? Uris { get; set; }

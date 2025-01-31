@@ -146,7 +146,7 @@ public partial class V1alpha1BigQueryDatasetAccessStatusConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigQueryDatasetAccessStatus
 {
-    /// <summary>If true, represents that the iam_member in the config was translated to a different member type by the API, and is stored in state as a different member type.</summary>
+    /// <summary>If true, represents that that the iam_member in the config was translated to a different member type by the API, and is stored in state as a different member type.</summary>
     [JsonPropertyName("apiUpdatedMember")]
     public bool? ApiUpdatedMember { get; set; }
 

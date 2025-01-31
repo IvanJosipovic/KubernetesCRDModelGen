@@ -182,7 +182,7 @@ public partial class V1beta1ContainerAttachedClusterSpec
     [JsonPropertyName("projectRef")]
     public V1beta1ContainerAttachedClusterSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable, Optional. The ContainerAttachedCluster name. If not given, the metadata.name will be used.</summary>
+    /// <summary>Optional. The ContainerAttachedCluster name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }

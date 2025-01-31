@@ -186,7 +186,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("headerMatch")]
     public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleHeaderMatch>? HeaderMatch { get; set; }
 
-    /// <summary>Specifies that prefixMatch and fullPathMatch matches are case-sensitive.</summary>
+    /// <summary>Specifies that prefixMatch and fullPathMatch matches are case sensitive.</summary>
     [JsonPropertyName("ignoreCase")]
     public bool? IgnoreCase { get; set; }
 
@@ -248,11 +248,11 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("includeProtocol")]
     public bool? IncludeProtocol { get; set; }
 
-    /// <summary>Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.  Cookie names:   - must be valid RFC 6265 "cookie-name" tokens   - are case-sensitive   - cannot start with "Edge-Cache-" (case-insensitive)    Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.    You may specify up to three cookie names.</summary>
+    /// <summary>Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.  Cookie names:   - must be valid RFC 6265 "cookie-name" tokens   - are case sensitive   - cannot start with "Edge-Cache-" (case insensitive)    Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.    You may specify up to three cookie names.</summary>
     [JsonPropertyName("includedCookieNames")]
     public IList<string>? IncludedCookieNames { get; set; }
 
-    /// <summary>Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.  - Header names must be valid HTTP RFC 7230 header field values. - Header field names are case-insensitive - To include the HTTP method, use ":method"  Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.</summary>
+    /// <summary>Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.  - Header names must be valid HTTP RFC 7230 header field values. - Header field names are case insensitive - To include the HTTP method, use ":method"  Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.</summary>
     [JsonPropertyName("includedHeaderNames")]
     public IList<string>? IncludedHeaderNames { get; set; }
 
@@ -298,7 +298,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatch
     [JsonPropertyName("defaultTtl")]
     public string? DefaultTtl { get; set; }
 
-    /// <summary>Specifies the maximum allowed TTL for cached content served by this origin.  Defaults to 86400s (1 day).  Cache directives that attempt to set a max-age or s-maxage greater than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.  - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year) - Setting a TTL of "0" means "always revalidate" - The value of maxTtl must be equal to or greater than defaultTtl. - Fractions of a second are not allowed.  When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.  A duration in seconds terminated by 's'. Example: "3s".</summary>
+    /// <summary>Specifies the maximum allowed TTL for cached content served by this origin.  Defaults to 86400s (1 day).  Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.  - The TTL must be &gt;= 0 and &lt;= 31,536,000 seconds (1 year) - Setting a TTL of "0" means "always revalidate" - The value of maxTtl must be equal to or greater than defaultTtl. - Fractions of a second are not allowed.  When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.  A duration in seconds terminated by 's'. Example: "3s".</summary>
     [JsonPropertyName("maxTtl")]
     public string? MaxTtl { get; set; }
 

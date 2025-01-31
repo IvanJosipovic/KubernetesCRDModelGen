@@ -115,6 +115,72 @@ public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptions
     public string? StartTime { get; set; }
 }
 
+/// <summary>Pub/Sub subscription used to receive events. Only Google Cloud Storage data source support this option.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2EventDrivenSchedulePubSubSubscriptionRef
+{
+    /// <summary>If provided must be in the format `projects/[project_id]/subscriptions/[subscription_id]`.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The `metadata.name` field of a `PubSubSubscription` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `metadata.namespace` field of a `PubSubSubscription` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Event driven transfer schedule options. If set, the transfer will be scheduled upon events arrial.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2EventDrivenSchedule
+{
+    /// <summary>Pub/Sub subscription used to receive events. Only Google Cloud Storage data source support this option.</summary>
+    [JsonPropertyName("pubSubSubscriptionRef")]
+    public V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2EventDrivenSchedulePubSubSubscriptionRef? PubSubSubscriptionRef { get; set; }
+}
+
+/// <summary>Manual transfer schedule. If set, the transfer run will not be auto-scheduled by the system, unless the client invokes StartManualTransferRuns.  This is equivalent to disable_auto_scheduling = true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2ManualSchedule
+{
+}
+
+/// <summary>Time based transfer schedule options. This is the default schedule option.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2TimeBasedSchedule
+{
+    /// <summary>Defines time to stop scheduling transfer runs. A transfer run cannot be scheduled at or after the end time. The end time can be changed at any moment.</summary>
+    [JsonPropertyName("endTime")]
+    public string? EndTime { get; set; }
+
+    /// <summary>Data transfer schedule.  If the data source does not support a custom schedule, this should be  empty. If it is empty, the default value for the data source will be used.  The specified times are in UTC.  Examples of valid format:  `1st,3rd monday of month 15:30`,  `every wed,fri of jan,jun 13:15`, and  `first sunday of quarter 00:00`.  See more explanation about the format here:  https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format   NOTE: The minimum interval time between recurring transfers depends on the  data source; refer to the documentation for your data source.</summary>
+    [JsonPropertyName("schedule")]
+    public string? Schedule { get; set; }
+
+    /// <summary>Specifies time to start scheduling transfer runs. The first run will be scheduled at or after the start time according to a recurrence pattern defined in the schedule string. The start time can be changed at any moment.</summary>
+    [JsonPropertyName("startTime")]
+    public string? StartTime { get; set; }
+}
+
+/// <summary>Options customizing different types of data transfer schedule. This field replaces "schedule" and "schedule_options" fields. ScheduleOptionsV2 cannot be used together with ScheduleOptions/Schedule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2
+{
+    /// <summary>Event driven transfer schedule options. If set, the transfer will be scheduled upon events arrial.</summary>
+    [JsonPropertyName("eventDrivenSchedule")]
+    public V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2EventDrivenSchedule? EventDrivenSchedule { get; set; }
+
+    /// <summary>Manual transfer schedule. If set, the transfer run will not be auto-scheduled by the system, unless the client invokes StartManualTransferRuns.  This is equivalent to disable_auto_scheduling = true.</summary>
+    [JsonPropertyName("manualSchedule")]
+    public V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2ManualSchedule? ManualSchedule { get; set; }
+
+    /// <summary>Time based transfer schedule options. This is the default schedule option.</summary>
+    [JsonPropertyName("timeBasedSchedule")]
+    public V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2TimeBasedSchedule? TimeBasedSchedule { get; set; }
+}
+
 /// <summary>Service account email. If this field is set, the transfer config will be created with this service account's credentials. It requires that the requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating a transfer config. For the latest list of data sources, please refer to https://cloud.google.com/bigquery/docs/use-service-accounts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDataTransferConfigSpecServiceAccountRef
@@ -180,7 +246,7 @@ public partial class V1beta1BigQueryDataTransferConfigSpec
     [JsonPropertyName("pubSubTopicRef")]
     public V1beta1BigQueryDataTransferConfigSpecPubSubTopicRef? PubSubTopicRef { get; set; }
 
-    /// <summary>Immutable. The BigQueryDataTransferConfig name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The BigQueryDataTransferConfig name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
@@ -191,6 +257,10 @@ public partial class V1beta1BigQueryDataTransferConfigSpec
     /// <summary>Options customizing the data transfer schedule.</summary>
     [JsonPropertyName("scheduleOptions")]
     public V1beta1BigQueryDataTransferConfigSpecScheduleOptions? ScheduleOptions { get; set; }
+
+    /// <summary>Options customizing different types of data transfer schedule. This field replaces "schedule" and "schedule_options" fields. ScheduleOptionsV2 cannot be used together with ScheduleOptions/Schedule.</summary>
+    [JsonPropertyName("scheduleOptionsV2")]
+    public V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2? ScheduleOptionsV2 { get; set; }
 
     /// <summary>Service account email. If this field is set, the transfer config will be created with this service account's credentials. It requires that the requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating a transfer config. For the latest list of data sources, please refer to https://cloud.google.com/bigquery/docs/use-service-accounts.</summary>
     [JsonPropertyName("serviceAccountRef")]
@@ -222,6 +292,19 @@ public partial class V1beta1BigQueryDataTransferConfigStatusConditions
     public string? Type { get; set; }
 }
 
+/// <summary>Output only. Error code with detailed information about reason of the latest config failure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BigQueryDataTransferConfigStatusObservedStateError
+{
+    /// <summary>The status code, which should be an enum value of [google.rpc.Code][google.rpc.Code].</summary>
+    [JsonPropertyName("code")]
+    public int? Code { get; set; }
+
+    /// <summary>A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the [google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+}
+
 /// <summary>Output only. Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDataTransferConfigStatusObservedStateOwnerInfo
@@ -238,6 +321,10 @@ public partial class V1beta1BigQueryDataTransferConfigStatusObservedState
     /// <summary>Output only. Region in which BigQuery dataset is located.</summary>
     [JsonPropertyName("datasetRegion")]
     public string? DatasetRegion { get; set; }
+
+    /// <summary>Output only. Error code with detailed information about reason of the latest config failure.</summary>
+    [JsonPropertyName("error")]
+    public V1beta1BigQueryDataTransferConfigStatusObservedStateError? Error { get; set; }
 
     /// <summary>Identifier. The resource name of the transfer config. Transfer config names have the form either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID, even though it is not guaranteed or required. The name is ignored when creating a transfer config.</summary>
     [JsonPropertyName("name")]

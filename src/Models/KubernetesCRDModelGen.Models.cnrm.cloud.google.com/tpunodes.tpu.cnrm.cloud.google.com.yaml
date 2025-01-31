@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.125.0
+    cnrm.cloud.google.com/version: 1.128.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -138,7 +138,7 @@ spec:
 
                   cidr_block field should not be specified. If the network that you want to peer the
 
-                  TPU Node to is a Shared VPC network, the node must be created with this field enabled.
+                  TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
                 type: boolean
               zone:
                 description: Immutable. The GCP location for the TPU. If it is not provided, the provider zone is used.

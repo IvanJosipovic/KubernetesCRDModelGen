@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.125.0
+    cnrm.cloud.google.com/version: 1.128.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -726,7 +726,7 @@ spec:
                 description: >-
                   A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow.
 
-                  When we are in a certain page, the TransitionRoutes are evaluated in the following order:
+                  When we are in a certain page, the TransitionRoutes are evalauted in the following order:
 
                   TransitionRoutes defined in the page with intent specified.
 

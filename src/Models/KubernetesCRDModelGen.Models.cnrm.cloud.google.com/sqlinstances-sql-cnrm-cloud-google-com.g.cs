@@ -361,7 +361,7 @@ public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationAuthorizedNetw
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInstanceSpecSettingsIpConfigurationPrivateNetworkRef
 {
-    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/&lt;projectID&gt;/global/networks/&lt;network&gt;`.</summary>
+    /// <summary>A reference to an externally managed Compute Network resource. Should be in the format `projects/{{projectID}}/global/networks/{{network}}`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 

@@ -49,7 +49,7 @@ public partial class V1beta1ComputeTargetTCPProxySpec
     [JsonPropertyName("proxyHeader")]
     public string? ProxyHeader { get; set; }
 
-    /// <summary>Immutable. The ComputeTargetTCPProxy name. If not given, the metadata.name will be used.</summary>
+    /// <summary>The ComputeTargetTCPProxy name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }

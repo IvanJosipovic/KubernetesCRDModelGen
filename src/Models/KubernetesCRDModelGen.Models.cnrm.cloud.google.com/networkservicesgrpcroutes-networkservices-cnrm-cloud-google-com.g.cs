@@ -183,7 +183,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod
 {
-    /// <summary>Optional. Specifies that matches are case-sensitive. The default value is true. case_sensitive must not be used with a type of REGULAR_EXPRESSION.</summary>
+    /// <summary>Optional. Specifies that matches are case sensitive. The default value is true. case_sensitive must not be used with a type of REGULAR_EXPRESSION.</summary>
     [JsonPropertyName("caseSensitive")]
     public bool? CaseSensitive { get; set; }
 

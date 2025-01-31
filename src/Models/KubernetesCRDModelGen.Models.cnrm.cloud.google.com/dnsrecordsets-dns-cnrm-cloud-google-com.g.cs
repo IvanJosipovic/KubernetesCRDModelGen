@@ -596,7 +596,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrr
     public double Weight { get; set; }
 }
 
-/// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation (GEO) type.</summary>
+/// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSRecordSetSpecRoutingPolicy
 {
@@ -650,7 +650,7 @@ public partial class V1beta1DNSRecordSetSpec
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
-    /// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation (GEO) type.</summary>
+    /// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type.</summary>
     [JsonPropertyName("routingPolicy")]
     public V1beta1DNSRecordSetSpecRoutingPolicy? RoutingPolicy { get; set; }
 

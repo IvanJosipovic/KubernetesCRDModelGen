@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreEntityTypeSpecMonitoringConfigCategoricalThresholdConfig
 {
-    /// <summary>Specify a threshold value that can trigger the alert. For categorical feature, the distribution distance is calculated by L-infinity norm. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
+    /// <summary>Specify a threshold value that can trigger the alert. For categorical feature, the distribution distance is calculated by L-inifinity norm. Each feature must have a non-zero threshold if they need to be monitored. Otherwise no alert will be triggered for that feature. The default value is 0.3.</summary>
     [JsonPropertyName("value")]
     public double Value { get; set; }
 }

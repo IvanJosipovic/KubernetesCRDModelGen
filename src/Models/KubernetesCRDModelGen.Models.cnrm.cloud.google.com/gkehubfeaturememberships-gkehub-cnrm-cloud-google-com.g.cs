@@ -153,6 +153,10 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementConfigSyn
     /// <summary>Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.</summary>
     [JsonPropertyName("sourceFormat")]
     public string? SourceFormat { get; set; }
+
+    /// <summary>Set to true to stop syncing configurations for a single cluster. This field is only available on clusters using Config Sync auto-upgrades or on Config Sync version 1.20.0 or later. Defaults: false.</summary>
+    [JsonPropertyName("stopSyncing")]
+    public bool? StopSyncing { get; set; }
 }
 
 /// <summary>Hierarchy Controller is no longer available. Use https://github.com/kubernetes-sigs/hierarchical-namespaces instead.</summary>
@@ -233,6 +237,10 @@ public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagement
     /// <summary>Hierarchy Controller is no longer available. Use https://github.com/kubernetes-sigs/hierarchical-namespaces instead.</summary>
     [JsonPropertyName("hierarchyController")]
     public V1beta1GKEHubFeatureMembershipSpecConfigmanagementHierarchyController? HierarchyController { get; set; }
+
+    /// <summary>Optional. Whether to automatically manage the configmanagement Feature. There are 3 accepted values. MANAGEMENT_UNSPECIFIED means that the mamangement mode is unspecified. MANAGEMENT_AUTOMATIC means that Google manages the Feature for the cluster. MANAGEMENT_MANUAL means that users should manage the Feature for the cluster.</summary>
+    [JsonPropertyName("management")]
+    public string? Management { get; set; }
 
     /// <summary>**DEPRECATED** Configuring Policy Controller through the configmanagement feature is no longer recommended. Use the policycontroller feature instead.</summary>
     [JsonPropertyName("policyController")]

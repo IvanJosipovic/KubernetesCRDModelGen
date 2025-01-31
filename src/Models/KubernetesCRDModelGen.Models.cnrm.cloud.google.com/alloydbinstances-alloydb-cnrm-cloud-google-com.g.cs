@@ -8,36 +8,36 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>The AlloyDBInstance cluster that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecClusterRef
 {
-    /// <summary>Allowed value: The `name` field of an `AlloyDBCluster` resource.</summary>
+    /// <summary>If provided must be in the format `projects/[projectId]/locations/[location]/clusters/[clusterId]`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The `metadata.name` field of a `AlloyDBCluster` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `metadata.namespace` field of a `AlloyDBCluster` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary>The type of instance. Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"] For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster. This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster. If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance. Example: instanceTypeRef:   name: clusterName For instances of type READ_POOL, set the value using external keyword. Example: instanceTypeRef:   external: READ_POOL If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead. Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.</summary>
+/// <summary>The type of instance. Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"]  For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster. This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster. If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance. Example: instanceTypeRef:   name: clusterName For instances of type READ_POOL, set the value using external keyword. Example: instanceTypeRef:   external: READ_POOL If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead. Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecInstanceTypeRef
 {
-    /// <summary>Allowed value: The `clusterType` field of an `AlloyDBCluster` resource.</summary>
+    /// <summary>The type of instance. Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"]</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The `metadata.name` field of a `AlloyDBCluster` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `metadata.namespace` field of a `AlloyDBCluster` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -55,7 +55,7 @@ public partial class V1alpha1AlloyDBInstanceSpecMachineConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalNetworks
 {
-    /// <summary>CIDR range for one authorized network of the instance.</summary>
+    /// <summary>CIDR range for one authorzied network of the instance.</summary>
     [JsonPropertyName("cidrRange")]
     public string? CidrRange { get; set; }
 }
@@ -64,15 +64,15 @@ public partial class V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalN
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpecNetworkConfig
 {
-    /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when 'enable_public_ip' is set to true.</summary>
+    /// <summary>Optional. A list of external network authorized to access this instance. This field is only allowed to be set when 'enablePublicIp' is set to true.</summary>
     [JsonPropertyName("authorizedExternalNetworks")]
     public IList<V1alpha1AlloyDBInstanceSpecNetworkConfigAuthorizedExternalNetworks>? AuthorizedExternalNetworks { get; set; }
 
-    /// <summary>Enabling outbound public ip for the instance.</summary>
+    /// <summary>Optional. Enabling an outbound public IP address to support a database server sending requests out into the internet.</summary>
     [JsonPropertyName("enableOutboundPublicIp")]
     public bool? EnableOutboundPublicIp { get; set; }
 
-    /// <summary>Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.</summary>
+    /// <summary>Optional. Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.</summary>
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
 }
@@ -86,7 +86,7 @@ public partial class V1alpha1AlloyDBInstanceSpecReadPoolConfig
     public int? NodeCount { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>AlloyDBInstanceSpec defines the desired state of AlloyDBInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceSpec
 {
@@ -94,11 +94,11 @@ public partial class V1alpha1AlloyDBInstanceSpec
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
 
-    /// <summary>'Availability type of an Instance. Defaults to REGIONAL for both primary and read instances. Note that primary and read instances can have different availability types. Only READ_POOL instance supports ZONAL type. Users can't specify the zone for READ_POOL instance. Zone is automatically chosen from the list of zones in the region specified. Read pool of size 1 can only have zonal availability. Read pools with node count of 2 or more can have regional availability (nodes are present in 2 or more zones in a region).' Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"].</summary>
+    /// <summary>Availability type of an Instance. If empty, defaults to REGIONAL for primary instances.  For read pools, availabilityType is always UNSPECIFIED. Instances in the read pools are evenly distributed across available zones within the region (i.e. read pools with more than one node will have a node in at least two zones). Possible values: ["AVAILABILITY_TYPE_UNSPECIFIED", "ZONAL", "REGIONAL"].</summary>
     [JsonPropertyName("availabilityType")]
     public string? AvailabilityType { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The AlloyDBInstance cluster that this resource belongs to.</summary>
     [JsonPropertyName("clusterRef")]
     public V1alpha1AlloyDBInstanceSpecClusterRef ClusterRef { get; set; }
 
@@ -114,11 +114,11 @@ public partial class V1alpha1AlloyDBInstanceSpec
     [JsonPropertyName("gceZone")]
     public string? GceZone { get; set; }
 
-    /// <summary>We recommend that you use `instanceTypeRef` instead. The type of the instance. Possible values: [PRIMARY, READ_POOL, SECONDARY]</summary>
+    /// <summary>Not recommended. We recommend that you use `instanceTypeRef` instead. The type of the instance. Possible values: [PRIMARY, READ_POOL, SECONDARY]</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
-    /// <summary>The type of instance. Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"] For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster. This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster. If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance. Example: instanceTypeRef:   name: clusterName For instances of type READ_POOL, set the value using external keyword. Example: instanceTypeRef:   external: READ_POOL If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead. Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.</summary>
+    /// <summary>The type of instance. Possible values: ["PRIMARY", "READ_POOL", "SECONDARY"]  For PRIMARY and SECONDARY instances, set the value to refer to the name of the associated cluster. This is recommended because the instance type of primary and secondary instances is tied to the cluster type of the associated cluster. If the secondary cluster is promoted to primary cluster, then the associated secondary instance also becomes primary instance. Example: instanceTypeRef:   name: clusterName For instances of type READ_POOL, set the value using external keyword. Example: instanceTypeRef:   external: READ_POOL If the instance type is SECONDARY, the delete instance operation does not delete the secondary instance but abandons it instead. Use deletionPolicy = "FORCE" in the associated secondary cluster and delete the cluster forcefully to delete the secondary cluster as well its associated secondary instance.</summary>
     [JsonPropertyName("instanceTypeRef")]
     public V1alpha1AlloyDBInstanceSpecInstanceTypeRef? InstanceTypeRef { get; set; }
 
@@ -134,7 +134,7 @@ public partial class V1alpha1AlloyDBInstanceSpec
     [JsonPropertyName("readPoolConfig")]
     public V1alpha1AlloyDBInstanceSpecReadPoolConfig? ReadPoolConfig { get; set; }
 
-    /// <summary>Immutable. Optional. The instanceId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>Optional. The instanceId of the resource. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
@@ -164,17 +164,21 @@ public partial class V1alpha1AlloyDBInstanceStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>AlloyDBInstanceStatus defines the config connector machine state of AlloyDBInstance</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBInstanceStatus
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1alpha1AlloyDBInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>Time the Instance was created in UTC.</summary>
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
+
+    /// <summary>A unique specifier for the AlloyDBInstance resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>The IP address for the Instance. This is the connection endpoint for an end-user application.</summary>
     [JsonPropertyName("ipAddress")]
@@ -186,7 +190,7 @@ public partial class V1alpha1AlloyDBInstanceStatus
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
 
     /// <summary>The outbound public IP addresses for the instance. This is available ONLY when networkConfig.enableOutboundPublicIp is set to true. These IP addresses are used for outbound connections.</summary>
     [JsonPropertyName("outboundPublicIpAddresses")]
@@ -213,7 +217,7 @@ public partial class V1alpha1AlloyDBInstanceStatus
     public string? UpdateTime { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>AlloyDBInstance is the Schema for the AlloyDBInstance API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1AlloyDBInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AlloyDBInstanceSpec>, IStatus<V1alpha1AlloyDBInstanceStatus>
@@ -234,11 +238,11 @@ public partial class V1alpha1AlloyDBInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>AlloyDBInstanceSpec defines the desired state of AlloyDBInstance</summary>
     [JsonPropertyName("spec")]
     public V1alpha1AlloyDBInstanceSpec Spec { get; set; }
 
-    /// <summary></summary>
+    /// <summary>AlloyDBInstanceStatus defines the config connector machine state of AlloyDBInstance</summary>
     [JsonPropertyName("status")]
     public V1alpha1AlloyDBInstanceStatus? Status { get; set; }
 }
