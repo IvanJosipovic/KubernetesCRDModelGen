@@ -177,6 +177,19 @@ public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderCloudWatc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderDatadogSecretRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespaced")]
+    public bool? Namespaced { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderDatadog
 {
     /// <summary></summary>
@@ -202,6 +215,10 @@ public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderDatadog
     /// <summary></summary>
     [JsonPropertyName("query")]
     public string? Query { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretRef")]
+    public V1alpha1ClusterAnalysisTemplateSpecMetricsProviderDatadogSecretRef? SecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -4634,6 +4651,10 @@ public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderNewRelic
     /// <summary></summary>
     [JsonPropertyName("query")]
     public string Query { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("timeout")]
+    public long? Timeout { get; set; }
 }
 
 /// <summary></summary>
@@ -4702,6 +4723,23 @@ public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderPrometheu
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderPrometheusRangeQuery
+{
+    /// <summary></summary>
+    [JsonPropertyName("end")]
+    public string? End { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("start")]
+    public string? Start { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("step")]
+    public string? Step { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderPrometheus
 {
     /// <summary></summary>
@@ -4723,6 +4761,10 @@ public partial class V1alpha1ClusterAnalysisTemplateSpecMetricsProviderPrometheu
     /// <summary></summary>
     [JsonPropertyName("query")]
     public string? Query { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("rangeQuery")]
+    public V1alpha1ClusterAnalysisTemplateSpecMetricsProviderPrometheusRangeQuery? RangeQuery { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("timeout")]
@@ -4924,6 +4966,10 @@ public partial class V1alpha1ClusterAnalysisTemplateSpecMetrics
     /// <summary></summary>
     [JsonPropertyName("consecutiveErrorLimit")]
     public IntstrIntOrString? ConsecutiveErrorLimit { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("consecutiveSuccessLimit")]
+    public IntstrIntOrString? ConsecutiveSuccessLimit { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("count")]

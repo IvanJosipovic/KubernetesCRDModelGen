@@ -901,6 +901,19 @@ public partial class V1alpha1RolloutSpecStrategyCanaryStepsPause
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1RolloutSpecStrategyCanaryStepsPlugin
+{
+    /// <summary></summary>
+    [JsonPropertyName("config")]
+    public JsonNode? Config { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutSpecStrategyCanaryStepsSetCanaryScale
 {
     /// <summary></summary>
@@ -1059,6 +1072,10 @@ public partial class V1alpha1RolloutSpecStrategyCanarySteps
     /// <summary></summary>
     [JsonPropertyName("pause")]
     public V1alpha1RolloutSpecStrategyCanaryStepsPause? Pause { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("plugin")]
+    public V1alpha1RolloutSpecStrategyCanaryStepsPlugin? Plugin { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("setCanaryScale")]
@@ -1347,6 +1364,10 @@ public partial class V1alpha1RolloutSpecStrategyCanaryTrafficRoutingNginx
     /// <summary></summary>
     [JsonPropertyName("annotationPrefix")]
     public string? AnnotationPrefix { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("canaryIngressAnnotations")]
+    public IDictionary<string, string>? CanaryIngressAnnotations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("stableIngress")]
@@ -5930,6 +5951,59 @@ public partial class V1alpha1RolloutStatusCanaryCurrentStepAnalysisRunStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1RolloutStatusCanaryStepPluginStatuses
+{
+    /// <summary></summary>
+    [JsonPropertyName("backoff")]
+    public string? Backoff { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("executions")]
+    public int? Executions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("finishedAt")]
+    public string? FinishedAt { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("index")]
+    public int Index { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("operation")]
+    public string Operation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("phase")]
+    public string? Phase { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("startedAt")]
+    public string? StartedAt { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("status")]
+    public JsonNode? Status { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("updatedAt")]
+    public string? UpdatedAt { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1RolloutStatusCanaryWeightsAdditional
 {
     /// <summary></summary>
@@ -6019,6 +6093,10 @@ public partial class V1alpha1RolloutStatusCanary
     /// <summary></summary>
     [JsonPropertyName("stablePingPong")]
     public string? StablePingPong { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("stepPluginStatuses")]
+    public IList<V1alpha1RolloutStatusCanaryStepPluginStatuses>? StepPluginStatuses { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("weights")]
