@@ -8,9 +8,9 @@ metadata:
     app: cert-manager
     app.kubernetes.io/name: cert-manager
     app.kubernetes.io/instance: release-name
-    app.kubernetes.io/version: v1.16.3
+    app.kubernetes.io/version: v1.17.0
     app.kubernetes.io/managed-by: Helm
-    helm.sh/chart: cert-manager-v1.16.3
+    helm.sh/chart: cert-manager-v1.17.0
 spec:
   group: cert-manager.io
   names:
@@ -231,7 +231,6 @@ spec:
                     type: object
                     required:
                     - create
-                    - passwordSecretRef
                     properties:
                       alias:
                         description: >-
@@ -247,7 +246,7 @@ spec:
 
                           Secret resource, encrypted using the password stored in
 
-                          `passwordSecretRef`.
+                          `passwordSecretRef` or `password`.
 
                           The keystore file will be updated immediately.
 
@@ -259,11 +258,23 @@ spec:
 
                           containing the issuing Certificate Authority
                         type: boolean
+                      password:
+                        description: >-
+                          Password provides a literal password used to encrypt the JKS keystore.
+
+                          Mutually exclusive with passwordSecretRef.
+
+                          One of password or passwordSecretRef must provide a password with a non-zero length.
+                        type: string
                       passwordSecretRef:
                         description: >-
-                          PasswordSecretRef is a reference to a key in a Secret resource
+                          PasswordSecretRef is a reference to a non-empty key in a Secret resource
 
                           containing the password used to encrypt the JKS keystore.
+
+                          Mutually exclusive with password.
+
+                          One of password or passwordSecretRef must provide a password with a non-zero length.
                         type: object
                         required:
                         - name
@@ -290,7 +301,6 @@ spec:
                     type: object
                     required:
                     - create
-                    - passwordSecretRef
                     properties:
                       create:
                         description: >-
@@ -300,7 +310,7 @@ spec:
 
                           Secret resource, encrypted using the password stored in
 
-                          `passwordSecretRef`.
+                          `passwordSecretRef` or in `password`.
 
                           The keystore file will be updated immediately.
 
@@ -312,11 +322,23 @@ spec:
 
                           Authority
                         type: boolean
+                      password:
+                        description: >-
+                          Password provides a literal password used to encrypt the PKCS#12 keystore.
+
+                          Mutually exclusive with passwordSecretRef.
+
+                          One of password or passwordSecretRef must provide a password with a non-zero length.
+                        type: string
                       passwordSecretRef:
                         description: >-
-                          PasswordSecretRef is a reference to a key in a Secret resource
+                          PasswordSecretRef is a reference to a non-empty key in a Secret resource
 
-                          containing the password used to encrypt the PKCS12 keystore.
+                          containing the password used to encrypt the PKCS#12 keystore.
+
+                          Mutually exclusive with password.
+
+                          One of password or passwordSecretRef must provide a password with a non-zero length.
                         type: object
                         required:
                         - name
