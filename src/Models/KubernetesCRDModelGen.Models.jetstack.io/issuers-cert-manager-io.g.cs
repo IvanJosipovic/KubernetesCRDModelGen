@@ -161,6 +161,10 @@ public partial class V1IssuerSpecAcmeSolversDns01AzureDNSManagedIdentity
     /// <summary>resource ID of the managed identity, can not be used at the same time as clientID Cannot be used for Azure Managed Service Identity</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
+
+    /// <summary>tenant ID of the managed identity, can not be used at the same time as resourceID</summary>
+    [JsonPropertyName("tenantID")]
+    public string? TenantID { get; set; }
 }
 
 /// <summary>Use the Microsoft Azure DNS API to manage DNS01 challenge records.</summary>
