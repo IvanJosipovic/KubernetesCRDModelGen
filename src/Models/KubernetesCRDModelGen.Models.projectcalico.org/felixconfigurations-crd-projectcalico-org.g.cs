@@ -32,7 +32,7 @@ public partial class V1FelixConfigurationSpecBpfConntrackTimeouts
     [JsonPropertyName("tcpFinsSeen")]
     public string? TcpFinsSeen { get; set; }
 
-    /// <summary>TCPFinsSeen controls how long it takes before considering this entry for cleanup after the connection was aborted. If nil, Calico uses its own default value. [Default: 40s].</summary>
+    /// <summary>TCPResetSeen controls how long it takes before considering this entry for cleanup after the connection was aborted. If nil, Calico uses its own default value. [Default: 40s].</summary>
     [JsonPropertyName("tcpResetSeen")]
     public string? TcpResetSeen { get; set; }
 

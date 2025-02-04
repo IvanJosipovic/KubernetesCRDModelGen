@@ -206,7 +206,7 @@ spec:
                     type: string
                   tcpResetSeen:
                     description: >-
-                      TCPFinsSeen controls how long it takes before considering this entry for
+                      TCPResetSeen controls how long it takes before considering this entry for
 
                       cleanup after the connection was aborted. If nil, Calico uses its own
 
