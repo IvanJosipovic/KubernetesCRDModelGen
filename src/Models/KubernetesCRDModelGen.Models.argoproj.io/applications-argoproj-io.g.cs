@@ -227,6 +227,14 @@ public partial class V1alpha1ApplicationOperationSyncSourceHelm
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
 
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
@@ -451,6 +459,10 @@ public partial class V1alpha1ApplicationOperationSyncSource
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationOperationSyncSourceKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -613,6 +625,14 @@ public partial class V1alpha1ApplicationOperationSyncSourcesHelm
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -837,6 +857,10 @@ public partial class V1alpha1ApplicationOperationSyncSources
     /// <summary>Kustomize holds kustomize specific options</summary>
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationOperationSyncSourcesKustomize? Kustomize { get; set; }
+
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
@@ -1165,6 +1189,14 @@ public partial class V1alpha1ApplicationSpecSourceHelm
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
 
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
@@ -1389,6 +1421,10 @@ public partial class V1alpha1ApplicationSpecSource
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationSpecSourceKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -1408,6 +1444,62 @@ public partial class V1alpha1ApplicationSpecSource
     /// <summary>TargetRevision defines the revision of the source to sync the application to. In case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD. In case of Helm, this is a semver tag for the Chart's version.</summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary>DrySource specifies where the dry "don't repeat yourself" manifest source lives.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSpecSourceHydratorDrySource
+{
+    /// <summary>Path is a directory path within the Git repository where the manifests are located</summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary>RepoURL is the URL to the git repository that contains the application manifests</summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary>TargetRevision defines the revision of the source to hydrate</summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary>HydrateTo specifies an optional "staging" location to push hydrated manifests to. An external system would then have to move manifests to the SyncSource, e.g. by pull request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSpecSourceHydratorHydrateTo
+{
+    /// <summary>TargetBranch is the branch to which hydrated manifests should be committed</summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary>SyncSource specifies where to sync hydrated manifests from.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSpecSourceHydratorSyncSource
+{
+    /// <summary>Path is a directory path within the git repository where hydrated manifests should be committed to and synced from. If hydrateTo is set, this is just the path from which hydrated manifests will be synced.</summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary>TargetBranch is the branch to which hydrated manifests should be committed</summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary>SourceHydrator provides a way to push hydrated manifests back to git before syncing them to the cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSpecSourceHydrator
+{
+    /// <summary>DrySource specifies where the dry "don't repeat yourself" manifest source lives.</summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary>HydrateTo specifies an optional "staging" location to push hydrated manifests to. An external system would then have to move manifests to the SyncSource, e.g. by pull request.</summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary>SyncSource specifies where to sync hydrated manifests from.</summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary>JsonnetVar represents a variable to be passed to jsonnet during manifest generation</summary>
@@ -1551,6 +1643,14 @@ public partial class V1alpha1ApplicationSpecSourcesHelm
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -1776,6 +1876,10 @@ public partial class V1alpha1ApplicationSpecSources
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationSpecSourcesKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -1906,6 +2010,10 @@ public partial class V1alpha1ApplicationSpec
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSpecSource? Source { get; set; }
 
+    /// <summary>SourceHydrator provides a way to push hydrated manifests back to git before syncing them to the cluster.</summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSpecSourceHydrator? SourceHydrator { get; set; }
+
     /// <summary>Sources is a reference to the location of the application's manifests or chart</summary>
     [JsonPropertyName("sources")]
     public IList<V1alpha1ApplicationSpecSources>? Sources { get; set; }
@@ -1936,6 +2044,10 @@ public partial class V1alpha1ApplicationStatusConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusHealth
 {
+    /// <summary>LastTransitionTime is the time the HealthStatus was set or updated</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string? LastTransitionTime { get; set; }
+
     /// <summary>Message is a human-readable informational message describing the health status</summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
@@ -2099,6 +2211,14 @@ public partial class V1alpha1ApplicationStatusHistorySourceHelm
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -2324,6 +2444,10 @@ public partial class V1alpha1ApplicationStatusHistorySource
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusHistorySourceKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -2486,6 +2610,14 @@ public partial class V1alpha1ApplicationStatusHistorySourcesHelm
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -2710,6 +2842,10 @@ public partial class V1alpha1ApplicationStatusHistorySources
     /// <summary>Kustomize holds kustomize specific options</summary>
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusHistorySourcesKustomize? Kustomize { get; set; }
+
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
@@ -2988,6 +3124,14 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceH
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
 
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
@@ -3212,6 +3356,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSource
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusOperationStateOperationSyncSourceKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -3374,6 +3522,14 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -3598,6 +3754,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     /// <summary>Kustomize holds kustomize specific options</summary>
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusOperationStateOperationSyncSourcesKustomize? Kustomize { get; set; }
+
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
@@ -3921,6 +4081,14 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceHelm
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
 
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
@@ -4145,6 +4313,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSource
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusOperationStateSyncResultSourceKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -4307,6 +4479,14 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesHel
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -4532,6 +4712,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSources
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusOperationStateSyncResultSourcesKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -4619,6 +4803,10 @@ public partial class V1alpha1ApplicationStatusOperationState
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusResourcesHealth
 {
+    /// <summary>LastTransitionTime is the time the HealthStatus was set or updated</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string? LastTransitionTime { get; set; }
+
     /// <summary>Message is a human-readable informational message describing the health status</summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
@@ -4657,6 +4845,10 @@ public partial class V1alpha1ApplicationStatusResources
     public string? Namespace { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("requiresDeletionConfirmation")]
+    public bool? RequiresDeletionConfirmation { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("requiresPruning")]
     public bool? RequiresPruning { get; set; }
 
@@ -4671,6 +4863,181 @@ public partial class V1alpha1ApplicationStatusResources
     /// <summary></summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
+}
+
+/// <summary>DrySource specifies where the dry "don't repeat yourself" manifest source lives.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydratorDrySource
+{
+    /// <summary>Path is a directory path within the Git repository where the manifests are located</summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary>RepoURL is the URL to the git repository that contains the application manifests</summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary>TargetRevision defines the revision of the source to hydrate</summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary>HydrateTo specifies an optional "staging" location to push hydrated manifests to. An external system would then have to move manifests to the SyncSource, e.g. by pull request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydratorHydrateTo
+{
+    /// <summary>TargetBranch is the branch to which hydrated manifests should be committed</summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary>SyncSource specifies where to sync hydrated manifests from.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydratorSyncSource
+{
+    /// <summary>Path is a directory path within the git repository where hydrated manifests should be committed to and synced from. If hydrateTo is set, this is just the path from which hydrated manifests will be synced.</summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary>TargetBranch is the branch to which hydrated manifests should be committed</summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary>SourceHydrator holds the hydrator config used for the hydrate operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydrator
+{
+    /// <summary>DrySource specifies where the dry "don't repeat yourself" manifest source lives.</summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary>HydrateTo specifies an optional "staging" location to push hydrated manifests to. An external system would then have to move manifests to the SyncSource, e.g. by pull request.</summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary>SyncSource specifies where to sync hydrated manifests from.</summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydratorSyncSource SyncSource { get; set; }
+}
+
+/// <summary>CurrentOperation holds the status of the hydrate operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorCurrentOperation
+{
+    /// <summary>DrySHA holds the resolved revision (sha) of the dry source as of the most recent reconciliation</summary>
+    [JsonPropertyName("drySHA")]
+    public string? DrySHA { get; set; }
+
+    /// <summary>FinishedAt indicates when the hydrate operation finished</summary>
+    [JsonPropertyName("finishedAt")]
+    public string? FinishedAt { get; set; }
+
+    /// <summary>HydratedSHA holds the resolved revision (sha) of the hydrated source as of the most recent reconciliation</summary>
+    [JsonPropertyName("hydratedSHA")]
+    public string? HydratedSHA { get; set; }
+
+    /// <summary>Message contains a message describing the current status of the hydrate operation</summary>
+    [JsonPropertyName("message")]
+    public string Message { get; set; }
+
+    /// <summary>Phase indicates the status of the hydrate operation</summary>
+    [JsonPropertyName("phase")]
+    public string Phase { get; set; }
+
+    /// <summary>SourceHydrator holds the hydrator config used for the hydrate operation</summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationStatusSourceHydratorCurrentOperationSourceHydrator? SourceHydrator { get; set; }
+
+    /// <summary>StartedAt indicates when the hydrate operation started</summary>
+    [JsonPropertyName("startedAt")]
+    public string? StartedAt { get; set; }
+}
+
+/// <summary>DrySource specifies where the dry "don't repeat yourself" manifest source lives.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydratorDrySource
+{
+    /// <summary>Path is a directory path within the Git repository where the manifests are located</summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary>RepoURL is the URL to the git repository that contains the application manifests</summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary>TargetRevision defines the revision of the source to hydrate</summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary>HydrateTo specifies an optional "staging" location to push hydrated manifests to. An external system would then have to move manifests to the SyncSource, e.g. by pull request.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydratorHydrateTo
+{
+    /// <summary>TargetBranch is the branch to which hydrated manifests should be committed</summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary>SyncSource specifies where to sync hydrated manifests from.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydratorSyncSource
+{
+    /// <summary>Path is a directory path within the git repository where hydrated manifests should be committed to and synced from. If hydrateTo is set, this is just the path from which hydrated manifests will be synced.</summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary>TargetBranch is the branch to which hydrated manifests should be committed</summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary>SourceHydrator holds the hydrator config used for the hydrate operation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydrator
+{
+    /// <summary>DrySource specifies where the dry "don't repeat yourself" manifest source lives.</summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary>HydrateTo specifies an optional "staging" location to push hydrated manifests to. An external system would then have to move manifests to the SyncSource, e.g. by pull request.</summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary>SyncSource specifies where to sync hydrated manifests from.</summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydratorSyncSource SyncSource { get; set; }
+}
+
+/// <summary>LastSuccessfulOperation holds info about the most recent successful hydration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperation
+{
+    /// <summary>DrySHA holds the resolved revision (sha) of the dry source as of the most recent reconciliation</summary>
+    [JsonPropertyName("drySHA")]
+    public string? DrySHA { get; set; }
+
+    /// <summary>HydratedSHA holds the resolved revision (sha) of the hydrated source as of the most recent reconciliation</summary>
+    [JsonPropertyName("hydratedSHA")]
+    public string? HydratedSHA { get; set; }
+
+    /// <summary>SourceHydrator holds the hydrator config used for the hydrate operation</summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperationSourceHydrator? SourceHydrator { get; set; }
+}
+
+/// <summary>SourceHydrator stores information about the current state of source hydration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationStatusSourceHydrator
+{
+    /// <summary>CurrentOperation holds the status of the hydrate operation</summary>
+    [JsonPropertyName("currentOperation")]
+    public V1alpha1ApplicationStatusSourceHydratorCurrentOperation? CurrentOperation { get; set; }
+
+    /// <summary>LastSuccessfulOperation holds info about the most recent successful hydration</summary>
+    [JsonPropertyName("lastSuccessfulOperation")]
+    public V1alpha1ApplicationStatusSourceHydratorLastSuccessfulOperation? LastSuccessfulOperation { get; set; }
 }
 
 /// <summary>Summary contains a list of URLs and container images used by this application</summary>
@@ -4877,6 +5244,14 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceHelm
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -5102,6 +5477,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSource
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusSyncComparedToSourceKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -5264,6 +5643,14 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesHelm
     /// <summary>SkipCrds skips custom resource definition installation step (Helm's --skip-crds)</summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary>SkipSchemaValidation skips JSON schema validation (Helm's --skip-schema-validation)</summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary>SkipTests skips test manifest installation step (Helm's --skip-tests).</summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary>ValuesFiles is a list of Helm value files to use when generating a template</summary>
     [JsonPropertyName("valueFiles")]
@@ -5489,6 +5876,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSources
     [JsonPropertyName("kustomize")]
     public V1alpha1ApplicationStatusSyncComparedToSourcesKustomize? Kustomize { get; set; }
 
+    /// <summary>Name is used to refer to a source and is displayed in the UI. It is used in multi-source Applications.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Path is a directory path within the Git repository, and is only valid for applications sourced from Git.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
@@ -5591,6 +5982,10 @@ public partial class V1alpha1ApplicationStatus
     /// <summary>Resources is a list of Kubernetes resources managed by this application</summary>
     [JsonPropertyName("resources")]
     public IList<V1alpha1ApplicationStatusResources>? Resources { get; set; }
+
+    /// <summary>SourceHydrator stores information about the current state of source hydration</summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationStatusSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary>SourceType specifies the type of this application</summary>
     [JsonPropertyName("sourceType")]
