@@ -269,6 +269,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -493,6 +501,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -511,6 +523,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -654,6 +722,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -880,6 +956,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -1008,6 +1088,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResourceTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -1321,6 +1405,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -1545,6 +1637,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -1563,6 +1659,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -1706,6 +1858,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -1932,6 +2092,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -2062,6 +2226,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSource? Source { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSourceHydrator? SourceHydrator { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("sources")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSources>? Sources { get; set; }
 
@@ -2087,6 +2255,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplate
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsClusters
 {
+    /// <summary></summary>
+    [JsonPropertyName("flatList")]
+    public bool? FlatList { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("selector")]
     public V1alpha1ApplicationSetSpecGeneratorsClustersSelector? Selector { get; set; }
@@ -2353,6 +2525,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHe
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -2577,6 +2757,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSource
     public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -2595,6 +2779,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSource
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -2738,6 +2978,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesH
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -2964,6 +3212,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSources
     public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -3092,6 +3344,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -3383,6 +3639,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceH
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -3607,6 +3871,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSource
     public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -3625,6 +3893,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSource
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -3768,6 +4092,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -3994,6 +4326,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -4122,6 +4458,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -4423,6 +4763,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -4647,6 +4995,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -4665,6 +5017,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -4808,6 +5216,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -5034,6 +5450,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -5162,6 +5582,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusterDecisionResourceTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -5475,6 +5899,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -5699,6 +6131,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -5717,6 +6153,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -5860,6 +6352,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -6086,6 +6586,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -6216,6 +6720,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSource? Source { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSourceHydrator? SourceHydrator { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("sources")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersTemplateSpecSources>? Sources { get; set; }
 
@@ -6241,6 +6749,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClusters
 {
+    /// <summary></summary>
+    [JsonPropertyName("flatList")]
+    public bool? FlatList { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("selector")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsClustersSelector? Selector { get; set; }
@@ -6507,6 +7019,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -6731,6 +7251,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -6749,6 +7273,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -6892,6 +7472,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -7118,6 +7706,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -7246,6 +7838,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -7537,6 +8133,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -7761,6 +8365,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -7779,6 +8387,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -7922,6 +8586,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -8148,6 +8820,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -8276,6 +8952,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -8565,6 +9245,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -8789,6 +9477,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -8807,6 +9499,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -8950,6 +9698,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -9176,6 +9932,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -9304,6 +10064,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -9944,6 +10708,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -10168,6 +10940,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -10186,6 +10962,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -10329,6 +11161,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -10555,6 +11395,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -10683,6 +11527,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -11346,6 +12194,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -11570,6 +12426,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -11588,6 +12448,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -11731,6 +12647,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -11957,6 +12881,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -12085,6 +13013,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProviderTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -12467,6 +13399,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -12691,6 +13631,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -12709,6 +13653,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -12852,6 +13852,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -13078,6 +14086,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -13206,6 +14218,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -13503,6 +14519,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -13727,6 +14751,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -13745,6 +14773,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -13888,6 +14972,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -14114,6 +15206,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -14242,6 +15338,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterDecisionResourceTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -14555,6 +15655,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -14779,6 +15887,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -14797,6 +15909,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -14940,6 +16108,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -15166,6 +16342,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -15296,6 +16476,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSource? Source { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSourceHydrator? SourceHydrator { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("sources")]
     public IList<V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersTemplateSpecSources>? Sources { get; set; }
 
@@ -15321,6 +16505,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
 {
+    /// <summary></summary>
+    [JsonPropertyName("flatList")]
+    public bool? FlatList { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("selector")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClustersSelector? Selector { get; set; }
@@ -15587,6 +16775,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -15811,6 +17007,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -15829,6 +17029,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -15972,6 +17228,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -16198,6 +17462,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -16326,6 +17594,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -16617,6 +17889,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -16841,6 +18121,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -16859,6 +18143,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -17002,6 +18342,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -17228,6 +18576,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -17356,6 +18708,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -17645,6 +19001,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -17869,6 +19233,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -17887,6 +19255,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -18030,6 +19454,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -18256,6 +19688,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -18384,6 +19820,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -19024,6 +20464,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -19248,6 +20696,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -19266,6 +20718,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -19409,6 +20917,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -19635,6 +21151,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -19763,6 +21283,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -20426,6 +21950,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -20650,6 +22182,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -20668,6 +22204,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -20811,6 +22403,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -21037,6 +22637,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -21165,6 +22769,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProviderTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -21547,6 +23155,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -21771,6 +23387,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -21789,6 +23409,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -21932,6 +23608,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -22158,6 +23842,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -22286,6 +23974,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -22575,6 +24267,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -22799,6 +24499,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -22817,6 +24521,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -22960,6 +24720,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -23186,6 +24954,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -23314,6 +25086,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -23954,6 +25730,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -24178,6 +25962,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -24196,6 +25984,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -24339,6 +26183,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -24565,6 +26417,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -24693,6 +26549,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -25356,6 +27216,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -25580,6 +27448,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -25598,6 +27470,62 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -25741,6 +27669,14 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -25967,6 +27903,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -26095,6 +28035,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("source")]
     public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSource? Source { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpecSourceHydrator? SourceHydrator { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sources")]
@@ -26572,6 +28516,14 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHelm
     public bool? SkipCrds { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("valueFiles")]
     public IList<string>? ValueFiles { get; set; }
 
@@ -26796,6 +28748,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSource
     public V1alpha1ApplicationSetSpecTemplateSpecSourceKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -26814,6 +28770,62 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSource
     /// <summary></summary>
     [JsonPropertyName("targetRevision")]
     public string? TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHydratorDrySource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("repoURL")]
+    public string RepoURL { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetRevision")]
+    public string TargetRevision { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHydratorHydrateTo
+{
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHydratorSyncSource
+{
+    /// <summary></summary>
+    [JsonPropertyName("path")]
+    public string Path { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("targetBranch")]
+    public string TargetBranch { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceHydrator
+{
+    /// <summary></summary>
+    [JsonPropertyName("drySource")]
+    public V1alpha1ApplicationSetSpecTemplateSpecSourceHydratorDrySource DrySource { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hydrateTo")]
+    public V1alpha1ApplicationSetSpecTemplateSpecSourceHydratorHydrateTo? HydrateTo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncSource")]
+    public V1alpha1ApplicationSetSpecTemplateSpecSourceHydratorSyncSource SyncSource { get; set; }
 }
 
 /// <summary></summary>
@@ -26957,6 +28969,14 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesHelm
     /// <summary></summary>
     [JsonPropertyName("skipCrds")]
     public bool? SkipCrds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipSchemaValidation")]
+    public bool? SkipSchemaValidation { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("skipTests")]
+    public bool? SkipTests { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("valueFiles")]
@@ -27183,6 +29203,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSources
     public V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomize? Kustomize { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -27313,6 +29337,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpec
     public V1alpha1ApplicationSetSpecTemplateSpecSource? Source { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("sourceHydrator")]
+    public V1alpha1ApplicationSetSpecTemplateSpecSourceHydrator? SourceHydrator { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("sources")]
     public IList<V1alpha1ApplicationSetSpecTemplateSpecSources>? Sources { get; set; }
 
@@ -27438,6 +29466,10 @@ public partial class V1alpha1ApplicationSetStatusConditions
 public partial class V1alpha1ApplicationSetStatusResourcesHealth
 {
     /// <summary></summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string? LastTransitionTime { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 
@@ -27473,6 +29505,10 @@ public partial class V1alpha1ApplicationSetStatusResources
     /// <summary></summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("requiresDeletionConfirmation")]
+    public bool? RequiresDeletionConfirmation { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requiresPruning")]
