@@ -98,9 +98,17 @@ public partial class V1alpha1APISpecVersions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpec
 {
+    /// <summary>Description explains what the API does.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
     /// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
     [JsonPropertyName("openApiSpec")]
     public V1alpha1APISpecOpenApiSpec? OpenApiSpec { get; set; }
+
+    /// <summary>Title is the human-readable name of the API that will be used on the portal.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 
     /// <summary>Versions are the different APIVersions available.</summary>
     [JsonPropertyName("versions")]

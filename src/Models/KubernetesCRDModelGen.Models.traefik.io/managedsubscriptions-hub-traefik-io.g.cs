@@ -93,7 +93,7 @@ public partial class V1alpha1ManagedSubscriptionSpec
 
     /// <summary>APIPlan defines which APIPlan will be used.</summary>
     [JsonPropertyName("apiPlan")]
-    public V1alpha1ManagedSubscriptionSpecApiPlan? ApiPlan { get; set; }
+    public V1alpha1ManagedSubscriptionSpecApiPlan ApiPlan { get; set; }
 
     /// <summary>APISelector selects the APIs that will be accessible. Multiple ManagedSubscriptions can select the same set of APIs. This field is optional and follows standard label selector semantics. An empty APISelector matches any API.</summary>
     [JsonPropertyName("apiSelector")]
