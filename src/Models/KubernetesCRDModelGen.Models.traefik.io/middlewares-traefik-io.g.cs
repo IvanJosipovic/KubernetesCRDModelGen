@@ -388,6 +388,10 @@ public partial class V1alpha1MiddlewareSpecForwardAuth
     [JsonPropertyName("forwardBody")]
     public bool? ForwardBody { get; set; }
 
+    /// <summary>HeaderField defines a header field to store the authenticated user. More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/forwardauth/#headerfield</summary>
+    [JsonPropertyName("headerField")]
+    public string? HeaderField { get; set; }
+
     /// <summary>MaxBodySize defines the maximum body size in bytes allowed to be forwarded to the authentication server.</summary>
     [JsonPropertyName("maxBodySize")]
     public long? MaxBodySize { get; set; }
