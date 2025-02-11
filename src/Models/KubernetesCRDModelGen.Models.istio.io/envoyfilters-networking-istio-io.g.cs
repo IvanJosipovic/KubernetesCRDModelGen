@@ -109,7 +109,7 @@ public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchListener
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha3EnvoyFilterSpecConfigPatchesMatchProxy
 {
-    /// <summary>Match on the node metadata supplied by a proxy when connecting to Istio Pilot.</summary>
+    /// <summary>Match on the node metadata supplied by a proxy when connecting to istiod.</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 
