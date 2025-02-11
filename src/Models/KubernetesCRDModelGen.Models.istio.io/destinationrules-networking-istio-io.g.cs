@@ -202,7 +202,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
     [JsonPropertyName("distribute")]
     public IList<V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
-    /// <summary>enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.</summary>
+    /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -289,7 +289,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetect
     [JsonPropertyName("maxEjectionPercent")]
     public int? MaxEjectionPercent { get; set; }
 
-    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least min_health_percent hosts in healthy mode.</summary>
+    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least `minHealthPercent` hosts in healthy mode.</summary>
     [JsonPropertyName("minHealthPercent")]
     public int? MinHealthPercent { get; set; }
 
@@ -492,7 +492,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     [JsonPropertyName("distribute")]
     public IList<V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
-    /// <summary>enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.</summary>
+    /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -579,7 +579,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
     [JsonPropertyName("maxEjectionPercent")]
     public int? MaxEjectionPercent { get; set; }
 
-    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least min_health_percent hosts in healthy mode.</summary>
+    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least `minHealthPercent` hosts in healthy mode.</summary>
     [JsonPropertyName("minHealthPercent")]
     public int? MinHealthPercent { get; set; }
 
@@ -974,7 +974,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
     [JsonPropertyName("distribute")]
     public IList<V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
-    /// <summary>enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.</summary>
+    /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -1061,7 +1061,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyOutlierDetection
     [JsonPropertyName("maxEjectionPercent")]
     public int? MaxEjectionPercent { get; set; }
 
-    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least min_health_percent hosts in healthy mode.</summary>
+    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least `minHealthPercent` hosts in healthy mode.</summary>
     [JsonPropertyName("minHealthPercent")]
     public int? MinHealthPercent { get; set; }
 
@@ -1264,7 +1264,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
     [JsonPropertyName("distribute")]
     public IList<V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
-    /// <summary>enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.</summary>
+    /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -1351,7 +1351,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsOut
     [JsonPropertyName("maxEjectionPercent")]
     public int? MaxEjectionPercent { get; set; }
 
-    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least min_health_percent hosts in healthy mode.</summary>
+    /// <summary>Outlier detection will be enabled as long as the associated load balancing pool has at least `minHealthPercent` hosts in healthy mode.</summary>
     [JsonPropertyName("minHealthPercent")]
     public int? MinHealthPercent { get; set; }
 
