@@ -20,7 +20,7 @@
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient" Version="15.0.1" />
-        <PackageReference Include="System.Text.Json" Version="9.0.1" />
+        <PackageReference Include="System.Text.Json" Version="9.0.2" />
     </ItemGroup>
     <ItemGroup>
         <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
