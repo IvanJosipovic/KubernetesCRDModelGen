@@ -97,7 +97,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecHostGroup
     public V1api20220301storageVirtualMachineScaleSetSpecHostGroupReference? Reference { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentitiesReference
 {
@@ -126,7 +126,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecIdentityUserA
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
     public V1api20220301storageVirtualMachineScaleSetSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -558,7 +558,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileDiagnosticsProfileBootDiagnostics? BootDiagnostics { get; set; }
 }
 
-/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettings
 {
@@ -642,7 +642,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("protectedSettings")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileExtensionProfileExtensionsProtectedSettings? ProtectedSettings { get; set; }
 
@@ -1256,7 +1256,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     public IList<V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileNetworkProfileNetworkInterfaceConfigurations>? NetworkInterfaceConfigurations { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileAdminPassword
 {
@@ -1560,7 +1560,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetSpecVirtualMachin
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("adminPassword")]
     public V1api20220301storageVirtualMachineScaleSetSpecVirtualMachineProfileOsProfileAdminPassword? AdminPassword { get; set; }
 
@@ -2300,7 +2300,7 @@ public partial class V1api20220301storageVirtualMachineScaleSetStatusAutomaticRe
     public string? RepairAction { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageVirtualMachineScaleSetStatusConditions
 {

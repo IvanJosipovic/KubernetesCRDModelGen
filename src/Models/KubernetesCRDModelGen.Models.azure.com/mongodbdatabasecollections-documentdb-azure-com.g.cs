@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOperatorSp
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecOperatorSpecSecretExpressions
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOperatorSp
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongodbDatabaseCollectionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240815.MongodbDatabaseCollectionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecOperatorSpec
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOperatorSp
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20231115storageMongodbDatabaseCollectionSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240815storageMongodbDatabaseCollectionSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20231115storageMongodbDatabaseCollectionSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240815storageMongodbDatabaseCollectionSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptionsAutoscaleSettings
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -72,17 +72,17 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptionsAut
     public int? MaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+/// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptions
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("throughput")]
@@ -91,7 +91,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOptions
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/MongodbDatabase resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecOwner
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -102,9 +102,9 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoIndexKeys Cosmos DB MongoDB collection resource object</summary>
+/// <summary>Storage version of v1api20240815.MongoIndexKeys Cosmos DB MongoDB collection resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexesKey
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecResourceIndexesKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -115,9 +115,9 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIn
     public IList<string>? Keys { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoIndexOptions Cosmos DB MongoDB collection index options</summary>
+/// <summary>Storage version of v1api20240815.MongoIndexOptions Cosmos DB MongoDB collection index options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexesOptions
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecResourceIndexesOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -132,26 +132,26 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIn
     public bool? Unique { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoIndex Cosmos DB MongoDB collection index key</summary>
+/// <summary>Storage version of v1api20240815.MongoIndex Cosmos DB MongoDB collection index key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexes
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecResourceIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongoIndexKeys Cosmos DB MongoDB collection resource object</summary>
+    /// <summary>Storage version of v1api20240815.MongoIndexKeys Cosmos DB MongoDB collection resource object</summary>
     [JsonPropertyName("key")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexesKey? Key { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecResourceIndexesKey? Key { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongoIndexOptions Cosmos DB MongoDB collection index options</summary>
+    /// <summary>Storage version of v1api20240815.MongoIndexOptions Cosmos DB MongoDB collection index options</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexesOptions? Options { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecResourceIndexesOptions? Options { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
+/// <summary>Storage version of v1api20240815.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceRestoreParameters
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -164,11 +164,15 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResourceRe
     /// <summary></summary>
     [JsonPropertyName("restoreTimestampInUtc")]
     public string? RestoreTimestampInUtc { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("restoreWithTtlDisabled")]
+    public bool? RestoreWithTtlDisabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoDBCollectionResource Cosmos DB MongoDB collection resource object</summary>
+/// <summary>Storage version of v1api20240815.MongoDBCollectionResource Cosmos DB MongoDB collection resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpecResource
+public partial class V1api20240815storageMongodbDatabaseCollectionSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -188,20 +192,20 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpecResource
 
     /// <summary></summary>
     [JsonPropertyName("indexes")]
-    public IList<V1api20231115storageMongodbDatabaseCollectionSpecResourceIndexes>? Indexes { get; set; }
+    public IList<V1api20240815storageMongodbDatabaseCollectionSpecResourceIndexes>? Indexes { get; set; }
 
-    /// <summary>Storage version of v1api20231115.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
+    /// <summary>Storage version of v1api20240815.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
     [JsonPropertyName("restoreParameters")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecResourceRestoreParameters? RestoreParameters { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecResourceRestoreParameters? RestoreParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("shardKey")]
     public IDictionary<string, string>? ShardKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_Spec</summary>
+/// <summary>Storage version of v1api20240815.MongodbDatabaseCollection_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionSpec
+public partial class V1api20240815storageMongodbDatabaseCollectionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -215,13 +219,13 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongodbDatabaseCollectionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240815.MongodbDatabaseCollectionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecOperatorSpec? OperatorSpec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+    /// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecOptions? Options { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecOptions? Options { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -229,20 +233,20 @@ public partial class V1api20231115storageMongodbDatabaseCollectionSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/MongodbDatabase resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecOwner Owner { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongoDBCollectionResource Cosmos DB MongoDB collection resource object</summary>
+    /// <summary>Storage version of v1api20240815.MongoDBCollectionResource Cosmos DB MongoDB collection resource object</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageMongodbDatabaseCollectionSpecResource? Resource { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpecResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusConditions
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -273,9 +277,9 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusConditio
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettings_STATUS</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettings_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusOptionsAutoscaleSettings
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -286,26 +290,26 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusOptionsA
     public int? MaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.OptionsResource_STATUS Cosmos DB options resource object</summary>
+/// <summary>Storage version of v1api20240815.OptionsResource_STATUS Cosmos DB options resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusOptions
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettings_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettings_STATUS</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageMongodbDatabaseCollectionStatusOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionStatusOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("throughput")]
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoIndexKeys_STATUS Cosmos DB MongoDB collection resource object</summary>
+/// <summary>Storage version of v1api20240815.MongoIndexKeys_STATUS Cosmos DB MongoDB collection resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexesKey
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusResourceIndexesKey
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -316,9 +320,9 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public IList<string>? Keys { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoIndexOptions_STATUS Cosmos DB MongoDB collection index options</summary>
+/// <summary>Storage version of v1api20240815.MongoIndexOptions_STATUS Cosmos DB MongoDB collection index options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexesOptions
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusResourceIndexesOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -333,26 +337,26 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     public bool? Unique { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoIndex_STATUS Cosmos DB MongoDB collection index key</summary>
+/// <summary>Storage version of v1api20240815.MongoIndex_STATUS Cosmos DB MongoDB collection index key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexes
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusResourceIndexes
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongoIndexKeys_STATUS Cosmos DB MongoDB collection resource object</summary>
+    /// <summary>Storage version of v1api20240815.MongoIndexKeys_STATUS Cosmos DB MongoDB collection resource object</summary>
     [JsonPropertyName("key")]
-    public V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexesKey? Key { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionStatusResourceIndexesKey? Key { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongoIndexOptions_STATUS Cosmos DB MongoDB collection index options</summary>
+    /// <summary>Storage version of v1api20240815.MongoIndexOptions_STATUS Cosmos DB MongoDB collection index options</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexesOptions? Options { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionStatusResourceIndexesOptions? Options { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
+/// <summary>Storage version of v1api20240815.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusResourceRestoreParameters
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -365,11 +369,15 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
     /// <summary></summary>
     [JsonPropertyName("restoreTimestampInUtc")]
     public string? RestoreTimestampInUtc { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("restoreWithTtlDisabled")]
+    public bool? RestoreWithTtlDisabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongoDBCollectionGetProperties_Resource_STATUS</summary>
+/// <summary>Storage version of v1api20240815.MongoDBCollectionGetProperties_Resource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
+public partial class V1api20240815storageMongodbDatabaseCollectionStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -401,20 +409,20 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatusResource
 
     /// <summary></summary>
     [JsonPropertyName("indexes")]
-    public IList<V1api20231115storageMongodbDatabaseCollectionStatusResourceIndexes>? Indexes { get; set; }
+    public IList<V1api20240815storageMongodbDatabaseCollectionStatusResourceIndexes>? Indexes { get; set; }
 
-    /// <summary>Storage version of v1api20231115.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
+    /// <summary>Storage version of v1api20240815.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
     [JsonPropertyName("restoreParameters")]
-    public V1api20231115storageMongodbDatabaseCollectionStatusResourceRestoreParameters? RestoreParameters { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionStatusResourceRestoreParameters? RestoreParameters { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("shardKey")]
     public IDictionary<string, string>? ShardKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_STATUS</summary>
+/// <summary>Storage version of v1api20240815.MongodbDatabaseCollection_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageMongodbDatabaseCollectionStatus
+public partial class V1api20240815storageMongodbDatabaseCollectionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -422,7 +430,7 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231115storageMongodbDatabaseCollectionStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240815storageMongodbDatabaseCollectionStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -436,13 +444,13 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231115.OptionsResource_STATUS Cosmos DB options resource object</summary>
+    /// <summary>Storage version of v1api20240815.OptionsResource_STATUS Cosmos DB options resource object</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageMongodbDatabaseCollectionStatusOptions? Options { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionStatusOptions? Options { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongoDBCollectionGetProperties_Resource_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.MongoDBCollectionGetProperties_Resource_STATUS</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageMongodbDatabaseCollectionStatusResource? Resource { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionStatusResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -453,12 +461,12 @@ public partial class V1api20231115storageMongodbDatabaseCollectionStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.MongodbDatabaseCollection Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbDatabases/{databaseName}/collections/{collectionName}</summary>
+/// <summary>Storage version of v1api20240815.MongodbDatabaseCollection Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbDatabases/{databaseName}/collections/{collectionName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231115storageMongodbDatabaseCollection : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageMongodbDatabaseCollectionSpec>, IStatus<V1api20231115storageMongodbDatabaseCollectionStatus>
+public partial class V1api20240815storageMongodbDatabaseCollection : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240815storageMongodbDatabaseCollectionSpec>, IStatus<V1api20240815storageMongodbDatabaseCollectionStatus>
 {
-    public const string KubeApiVersion = "v1api20231115storage";
+    public const string KubeApiVersion = "v1api20240815storage";
     public const string KubeKind = "MongodbDatabaseCollection";
     public const string KubeGroup = "documentdb.azure.com";
     public const string KubePluralName = "mongodbdatabasecollections";
@@ -474,11 +482,11 @@ public partial class V1api20231115storageMongodbDatabaseCollection : IKubernetes
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_Spec</summary>
+    /// <summary>Storage version of v1api20240815.MongodbDatabaseCollection_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231115storageMongodbDatabaseCollectionSpec? Spec { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.MongodbDatabaseCollection_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.MongodbDatabaseCollection_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20231115storageMongodbDatabaseCollectionStatus? Status { get; set; }
+    public V1api20240815storageMongodbDatabaseCollectionStatus? Status { get; set; }
 }

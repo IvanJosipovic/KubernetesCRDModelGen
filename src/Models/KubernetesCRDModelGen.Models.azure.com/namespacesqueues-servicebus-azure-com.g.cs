@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.servicebus.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespacesQueueSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20211101storageNamespacesQueueSpecOperatorSpecConfigMa
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespacesQueueSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20211101storageNamespacesQueueSpecOperatorSpecSecretEx
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesQueueOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespacesQueueOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueSpecOperatorSpec
+public partial class V1api20240101storageNamespacesQueueSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20211101storageNamespacesQueueSpecOperatorSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespacesQueueSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesQueueSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespacesQueueSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesQueueSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/Namespace resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueSpecOwner
+public partial class V1api20240101storageNamespacesQueueSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -72,9 +72,9 @@ public partial class V1api20211101storageNamespacesQueueSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesQueue_Spec</summary>
+/// <summary>Storage version of v1api20240101.NamespacesQueue_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueSpec
+public partial class V1api20240101storageNamespacesQueueSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -136,9 +136,9 @@ public partial class V1api20211101storageNamespacesQueueSpec
     [JsonPropertyName("maxSizeInMegabytes")]
     public int? MaxSizeInMegabytes { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesQueueOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesQueueOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespacesQueueSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespacesQueueSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -146,7 +146,7 @@ public partial class V1api20211101storageNamespacesQueueSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/Namespace resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespacesQueueSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespacesQueueSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requiresDuplicateDetection")]
@@ -157,9 +157,9 @@ public partial class V1api20211101storageNamespacesQueueSpec
     public bool? RequiresSession { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueStatusConditions
+public partial class V1api20240101storageNamespacesQueueStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -190,9 +190,9 @@ public partial class V1api20211101storageNamespacesQueueStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.MessageCountDetails_STATUS Message Count Details.</summary>
+/// <summary>Storage version of v1api20240101.MessageCountDetails_STATUS Message Count Details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueStatusCountDetails
+public partial class V1api20240101storageNamespacesQueueStatusCountDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -219,9 +219,9 @@ public partial class V1api20211101storageNamespacesQueueStatusCountDetails
     public int? TransferMessageCount { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueStatusSystemData
+public partial class V1api20240101storageNamespacesQueueStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -252,9 +252,9 @@ public partial class V1api20211101storageNamespacesQueueStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesQueue_STATUS</summary>
+/// <summary>Storage version of v1api20240101.NamespacesQueue_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesQueueStatus
+public partial class V1api20240101storageNamespacesQueueStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -270,11 +270,11 @@ public partial class V1api20211101storageNamespacesQueueStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespacesQueueStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespacesQueueStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Storage version of v1api20211101.MessageCountDetails_STATUS Message Count Details.</summary>
+    /// <summary>Storage version of v1api20240101.MessageCountDetails_STATUS Message Count Details.</summary>
     [JsonPropertyName("countDetails")]
-    public V1api20211101storageNamespacesQueueStatusCountDetails? CountDetails { get; set; }
+    public V1api20240101storageNamespacesQueueStatusCountDetails? CountDetails { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("createdAt")]
@@ -360,9 +360,9 @@ public partial class V1api20211101storageNamespacesQueueStatus
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespacesQueueStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespacesQueueStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -373,12 +373,12 @@ public partial class V1api20211101storageNamespacesQueueStatus
     public string? UpdatedAt { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesQueue Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/Queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues/{queueName}</summary>
+/// <summary>Storage version of v1api20240101.NamespacesQueue Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/Queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues/{queueName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespacesQueue : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesQueueSpec>, IStatus<V1api20211101storageNamespacesQueueStatus>
+public partial class V1api20240101storageNamespacesQueue : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespacesQueueSpec>, IStatus<V1api20240101storageNamespacesQueueStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "NamespacesQueue";
     public const string KubeGroup = "servicebus.azure.com";
     public const string KubePluralName = "namespacesqueues";
@@ -394,11 +394,11 @@ public partial class V1api20211101storageNamespacesQueue : IKubernetesObject<V1O
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesQueue_Spec</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesQueue_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespacesQueueSpec? Spec { get; set; }
+    public V1api20240101storageNamespacesQueueSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesQueue_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesQueue_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespacesQueueStatus? Status { get; set; }
+    public V1api20240101storageNamespacesQueueStatus? Status { get; set; }
 }

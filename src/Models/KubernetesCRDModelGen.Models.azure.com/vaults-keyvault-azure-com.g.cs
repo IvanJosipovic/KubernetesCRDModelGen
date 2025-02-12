@@ -72,7 +72,7 @@ public partial class V1api20230701storageVaultSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesApplicationIdFromConfig
 {
@@ -85,7 +85,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesApplic
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesObjectIdFromConfig
 {
@@ -123,7 +123,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesPermis
     public IList<string>? Storage { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesAccessPoliciesTenantIdFromConfig
 {
@@ -148,7 +148,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPolicies
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("applicationIdFromConfig")]
     public V1api20230701storageVaultSpecPropertiesAccessPoliciesApplicationIdFromConfig? ApplicationIdFromConfig { get; set; }
 
@@ -156,7 +156,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPolicies
     [JsonPropertyName("objectId")]
     public string? ObjectId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("objectIdFromConfig")]
     public V1api20230701storageVaultSpecPropertiesAccessPoliciesObjectIdFromConfig? ObjectIdFromConfig { get; set; }
 
@@ -168,7 +168,7 @@ public partial class V1api20230701storageVaultSpecPropertiesAccessPolicies
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("tenantIdFromConfig")]
     public V1api20230701storageVaultSpecPropertiesAccessPoliciesTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
@@ -266,7 +266,7 @@ public partial class V1api20230701storageVaultSpecPropertiesSku
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultSpecPropertiesTenantIdFromConfig
 {
@@ -343,7 +343,7 @@ public partial class V1api20230701storageVaultSpecProperties
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("tenantIdFromConfig")]
     public V1api20230701storageVaultSpecPropertiesTenantIdFromConfig? TenantIdFromConfig { get; set; }
 
@@ -389,7 +389,7 @@ public partial class V1api20230701storageVaultSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageVaultStatusConditions
 {

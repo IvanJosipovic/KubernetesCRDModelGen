@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240302storageDiskEncryptionSetSpecActiveKeyKeyUrlFromConfig
 {
@@ -67,7 +67,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecActiveKey
     [JsonPropertyName("keyUrl")]
     public string? KeyUrl { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("keyUrlFromConfig")]
     public V1api20240302storageDiskEncryptionSetSpecActiveKeyKeyUrlFromConfig? KeyUrlFromConfig { get; set; }
 
@@ -76,7 +76,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecActiveKey
     public V1api20240302storageDiskEncryptionSetSpecActiveKeySourceVault? SourceVault { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240302storageDiskEncryptionSetSpecFederatedClientIdFromConfig
 {
@@ -89,7 +89,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecFederatedClientIdF
     public string Name { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240302storageDiskEncryptionSetSpecIdentityUserAssignedIdentitiesReference
 {
@@ -118,7 +118,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpecIdentityUserAssign
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
     public V1api20240302storageDiskEncryptionSetSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -228,7 +228,7 @@ public partial class V1api20240302storageDiskEncryptionSetSpec
     [JsonPropertyName("federatedClientId")]
     public string? FederatedClientId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("federatedClientIdFromConfig")]
     public V1api20240302storageDiskEncryptionSetSpecFederatedClientIdFromConfig? FederatedClientIdFromConfig { get; set; }
 
@@ -358,7 +358,7 @@ public partial class V1api20240302storageDiskEncryptionSetStatusAutoKeyRotationE
     public string? Target { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240302storageDiskEncryptionSetStatusConditions
 {

@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecObjectIdFromConfig
 {
@@ -85,7 +85,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecTenantIdFromConfig
 {
@@ -114,7 +114,7 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("objectId")]
     public string? ObjectId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("objectIdFromConfig")]
     public V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecObjectIdFromConfig? ObjectIdFromConfig { get; set; }
 
@@ -134,12 +134,12 @@ public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAcc
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("tenantIdFromConfig")]
     public V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicySpecTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageAuthorizationProvidersAuthorizationsAccessPolicyStatusConditions
 {

@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOperato
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOperatorSpecSecretExpressions
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOperato
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSettingOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSettingOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOperatorSpec
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOperato
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20231115storageSqlDatabaseThroughputSettingSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20231115storageSqlDatabaseThroughputSettingSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabase resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOwner
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -72,9 +72,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.ThroughputPolicyResource Cosmos DB resource throughput policy</summary>
+/// <summary>Storage version of v1api20240815.ThroughputPolicyResource Cosmos DB resource throughput policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -89,56 +89,56 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecResourc
     public bool? IsEnabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoUpgradePolicyResource Cosmos DB resource auto-upgrade policy</summary>
+/// <summary>Storage version of v1api20240815.AutoUpgradePolicyResource Cosmos DB resource auto-upgrade policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicy
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.ThroughputPolicyResource Cosmos DB resource throughput policy</summary>
+    /// <summary>Storage version of v1api20240815.ThroughputPolicyResource Cosmos DB resource throughput policy</summary>
     [JsonPropertyName("throughputPolicy")]
-    public V1api20231115storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettingsResource Cosmos DB provisioned throughput settings object</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettingsResource Cosmos DB provisioned throughput settings object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettings
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoUpgradePolicyResource Cosmos DB resource auto-upgrade policy</summary>
+    /// <summary>Storage version of v1api20240815.AutoUpgradePolicyResource Cosmos DB resource auto-upgrade policy</summary>
     [JsonPropertyName("autoUpgradePolicy")]
-    public V1api20231115storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicy? AutoUpgradePolicy { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettingsAutoUpgradePolicy? AutoUpgradePolicy { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("maxThroughput")]
     public int? MaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.ThroughputSettingsResource Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.</summary>
+/// <summary>Storage version of v1api20240815.ThroughputSettingsResource Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpecResource
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettingsResource Cosmos DB provisioned throughput settings object</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettingsResource Cosmos DB provisioned throughput settings object</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingSpecResourceAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("throughput")]
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_Spec</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingSpec
+public partial class V1api20240815storageSqlDatabaseThroughputSettingSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -148,9 +148,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSettingOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSettingOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20231115storageSqlDatabaseThroughputSettingSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -158,20 +158,20 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabase resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231115storageSqlDatabaseThroughputSettingSpecOwner Owner { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20231115.ThroughputSettingsResource Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.</summary>
+    /// <summary>Storage version of v1api20240815.ThroughputSettingsResource Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseThroughputSettingSpecResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingSpecResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusConditions
+public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -202,9 +202,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusCondi
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.ThroughputPolicyResource_STATUS Cosmos DB resource throughput policy</summary>
+/// <summary>Storage version of v1api20240815.ThroughputPolicyResource_STATUS Cosmos DB resource throughput policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
+public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -219,30 +219,30 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResou
     public bool? IsEnabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoUpgradePolicyResource_STATUS Cosmos DB resource auto-upgrade policy</summary>
+/// <summary>Storage version of v1api20240815.AutoUpgradePolicyResource_STATUS Cosmos DB resource auto-upgrade policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicy
+public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.ThroughputPolicyResource_STATUS Cosmos DB resource throughput policy</summary>
+    /// <summary>Storage version of v1api20240815.ThroughputPolicyResource_STATUS Cosmos DB resource throughput policy</summary>
     [JsonPropertyName("throughputPolicy")]
-    public V1api20231115storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicyThroughputPolicy? ThroughputPolicy { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettingsResource_STATUS Cosmos DB provisioned throughput settings object</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettingsResource_STATUS Cosmos DB provisioned throughput settings object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettings
+public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoUpgradePolicyResource_STATUS Cosmos DB resource auto-upgrade policy</summary>
+    /// <summary>Storage version of v1api20240815.AutoUpgradePolicyResource_STATUS Cosmos DB resource auto-upgrade policy</summary>
     [JsonPropertyName("autoUpgradePolicy")]
-    public V1api20231115storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicy? AutoUpgradePolicy { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettingsAutoUpgradePolicy? AutoUpgradePolicy { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("maxThroughput")]
@@ -253,9 +253,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResou
     public int? TargetMaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.ThroughputSettingsGetProperties_Resource_STATUS</summary>
+/// <summary>Storage version of v1api20240815.ThroughputSettingsGetProperties_Resource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResource
+public partial class V1api20240815storageSqlDatabaseThroughputSettingStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -273,9 +273,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResou
     [JsonPropertyName("_ts")]
     public double? ts { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettingsResource_STATUS Cosmos DB provisioned throughput settings object</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettingsResource_STATUS Cosmos DB provisioned throughput settings object</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingStatusResourceAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("instantMaximumThroughput")]
@@ -298,9 +298,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatusResou
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseThroughputSettingStatus
+public partial class V1api20240815storageSqlDatabaseThroughputSettingStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -308,7 +308,7 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231115storageSqlDatabaseThroughputSettingStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseThroughputSettingStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -322,9 +322,9 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231115.ThroughputSettingsGetProperties_Resource_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.ThroughputSettingsGetProperties_Resource_STATUS</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseThroughputSettingStatusResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingStatusResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -335,12 +335,12 @@ public partial class V1api20231115storageSqlDatabaseThroughputSettingStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/throughputSettings/default</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231115storageSqlDatabaseThroughputSetting : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlDatabaseThroughputSettingSpec>, IStatus<V1api20231115storageSqlDatabaseThroughputSettingStatus>
+public partial class V1api20240815storageSqlDatabaseThroughputSetting : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240815storageSqlDatabaseThroughputSettingSpec>, IStatus<V1api20240815storageSqlDatabaseThroughputSettingStatus>
 {
-    public const string KubeApiVersion = "v1api20231115storage";
+    public const string KubeApiVersion = "v1api20240815storage";
     public const string KubeKind = "SqlDatabaseThroughputSetting";
     public const string KubeGroup = "documentdb.azure.com";
     public const string KubePluralName = "sqldatabasethroughputsettings";
@@ -356,11 +356,11 @@ public partial class V1api20231115storageSqlDatabaseThroughputSetting : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_Spec</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231115storageSqlDatabaseThroughputSettingSpec? Spec { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseThroughputSetting_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseThroughputSetting_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20231115storageSqlDatabaseThroughputSettingStatus? Status { get; set; }
+    public V1api20240815storageSqlDatabaseThroughputSettingStatus? Status { get; set; }
 }

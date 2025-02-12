@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.com;
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230630storageFlexibleServerSpecAdministratorLoginPassword
 {
@@ -126,7 +126,7 @@ public partial class V1api20230630storageFlexibleServerSpecHighAvailability
     public string? StandbyAvailabilityZone { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230630storageFlexibleServerSpecIdentityUserAssignedIdentitiesReference
 {
@@ -155,7 +155,7 @@ public partial class V1api20230630storageFlexibleServerSpecIdentityUserAssignedI
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
     public V1api20230630storageFlexibleServerSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -177,7 +177,7 @@ public partial class V1api20230630storageFlexibleServerSpecIdentity
     public IList<V1api20230630storageFlexibleServerSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230630storageFlexibleServerSpecImportSourcePropertiesSasToken
 {
@@ -202,7 +202,7 @@ public partial class V1api20230630storageFlexibleServerSpecImportSourcePropertie
     [JsonPropertyName("dataDirPath")]
     public string? DataDirPath { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("sasToken")]
     public V1api20230630storageFlexibleServerSpecImportSourcePropertiesSasToken? SasToken { get; set; }
 
@@ -523,7 +523,7 @@ public partial class V1api20230630storageFlexibleServerSpec
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("administratorLoginPassword")]
     public V1api20230630storageFlexibleServerSpecAdministratorLoginPassword? AdministratorLoginPassword { get; set; }
 
@@ -633,7 +633,7 @@ public partial class V1api20230630storageFlexibleServerStatusBackup
     public string? GeoRedundantBackup { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230630storageFlexibleServerStatusConditions
 {

@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecAuthenticationCertificatesData
 {
@@ -29,7 +29,7 @@ public partial class V1api20220701storageApplicationGatewaySpecAuthenticationCer
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("data")]
     public V1api20220701storageApplicationGatewaySpecAuthenticationCertificatesData? Data { get; set; }
 
@@ -893,7 +893,7 @@ public partial class V1api20220701storageApplicationGatewaySpecHttpListeners
     public V1api20220701storageApplicationGatewaySpecHttpListenersSslProfile? SslProfile { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecIdentityUserAssignedIdentitiesReference
 {
@@ -922,7 +922,7 @@ public partial class V1api20220701storageApplicationGatewaySpecIdentityUserAssig
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
     public V1api20220701storageApplicationGatewaySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -2124,7 +2124,7 @@ public partial class V1api20220701storageApplicationGatewaySpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslCertificatesData
 {
@@ -2137,7 +2137,7 @@ public partial class V1api20220701storageApplicationGatewaySpecSslCertificatesDa
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecSslCertificatesPassword
 {
@@ -2158,7 +2158,7 @@ public partial class V1api20220701storageApplicationGatewaySpecSslCertificates
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("data")]
     public V1api20220701storageApplicationGatewaySpecSslCertificatesData? Data { get; set; }
 
@@ -2170,7 +2170,7 @@ public partial class V1api20220701storageApplicationGatewaySpecSslCertificates
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("password")]
     public V1api20220701storageApplicationGatewaySpecSslCertificatesPassword? Password { get; set; }
 }
@@ -2309,7 +2309,7 @@ public partial class V1api20220701storageApplicationGatewaySpecSslProfiles
     public IList<V1api20220701storageApplicationGatewaySpecSslProfilesTrustedClientCertificates>? TrustedClientCertificates { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecTrustedClientCertificatesData
 {
@@ -2330,7 +2330,7 @@ public partial class V1api20220701storageApplicationGatewaySpecTrustedClientCert
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("data")]
     public V1api20220701storageApplicationGatewaySpecTrustedClientCertificatesData? Data { get; set; }
 
@@ -2339,7 +2339,7 @@ public partial class V1api20220701storageApplicationGatewaySpecTrustedClientCert
     public string? Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecTrustedRootCertificatesData
 {
@@ -2360,7 +2360,7 @@ public partial class V1api20220701storageApplicationGatewaySpecTrustedRootCertif
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("data")]
     public V1api20220701storageApplicationGatewaySpecTrustedRootCertificatesData? Data { get; set; }
 
@@ -2935,7 +2935,7 @@ public partial class V1api20220701storageApplicationGatewayStatusBackendSettings
     public string? Id { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewayStatusConditions
 {

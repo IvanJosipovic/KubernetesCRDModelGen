@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventhub.azure.com;
-/// <summary>StorageAccountResourceReference: Resource id of the storage account to be used to create the blobs</summary>
+/// <summary>UserAssignedIdentityReference: ARM ID of Managed User Identity. This property is required is the type is UserAssignedIdentity. If type is SystemAssigned, then the System Assigned Identity Associated with the namespace will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpecCaptureDescriptionDestinationStorageAccountResourceReference
+public partial class V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestinationIdentityUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,47 @@ public partial class V1api20211101storageNamespacesEventhubSpecCaptureDescriptio
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Destination Capture storage details for capture description</summary>
+/// <summary>Storage version of v1api20240101.CaptureIdentity A value that indicates whether capture description is enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpecCaptureDescriptionDestination
+public partial class V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestinationIdentity
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>UserAssignedIdentityReference: ARM ID of Managed User Identity. This property is required is the type is UserAssignedIdentity. If type is SystemAssigned, then the System Assigned Identity Associated with the namespace will be used.</summary>
+    [JsonPropertyName("userAssignedIdentityReference")]
+    public V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestinationIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
+}
+
+/// <summary>StorageAccountResourceReference: Resource id of the storage account to be used to create the blobs</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestinationStorageAccountResourceReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240101.Destination Capture storage details for capture description</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestination
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -57,26 +95,30 @@ public partial class V1api20211101storageNamespacesEventhubSpecCaptureDescriptio
     [JsonPropertyName("dataLakeSubscriptionId")]
     public string? DataLakeSubscriptionId { get; set; }
 
+    /// <summary>Storage version of v1api20240101.CaptureIdentity A value that indicates whether capture description is enabled.</summary>
+    [JsonPropertyName("identity")]
+    public V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestinationIdentity? Identity { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
     /// <summary>StorageAccountResourceReference: Resource id of the storage account to be used to create the blobs</summary>
     [JsonPropertyName("storageAccountResourceReference")]
-    public V1api20211101storageNamespacesEventhubSpecCaptureDescriptionDestinationStorageAccountResourceReference? StorageAccountResourceReference { get; set; }
+    public V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestinationStorageAccountResourceReference? StorageAccountResourceReference { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.CaptureDescription Properties to configure capture description for eventhub</summary>
+/// <summary>Storage version of v1api20240101.CaptureDescription Properties to configure capture description for eventhub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpecCaptureDescription
+public partial class V1api20240101storageNamespacesEventhubSpecCaptureDescription
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Destination Capture storage details for capture description</summary>
+    /// <summary>Storage version of v1api20240101.Destination Capture storage details for capture description</summary>
     [JsonPropertyName("destination")]
-    public V1api20211101storageNamespacesEventhubSpecCaptureDescriptionDestination? Destination { get; set; }
+    public V1api20240101storageNamespacesEventhubSpecCaptureDescriptionDestination? Destination { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enabled")]
@@ -101,7 +143,7 @@ public partial class V1api20211101storageNamespacesEventhubSpecCaptureDescriptio
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespacesEventhubSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -118,7 +160,7 @@ public partial class V1api20211101storageNamespacesEventhubSpecOperatorSpecConfi
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespacesEventhubSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -133,9 +175,9 @@ public partial class V1api20211101storageNamespacesEventhubSpecOperatorSpecSecre
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpecOperatorSpec
+public partial class V1api20240101storageNamespacesEventhubSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -143,16 +185,16 @@ public partial class V1api20211101storageNamespacesEventhubSpecOperatorSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespacesEventhubSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespacesEventhubSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/Namespace resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpecOwner
+public partial class V1api20240101storageNamespacesEventhubSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -163,9 +205,30 @@ public partial class V1api20211101storageNamespacesEventhubSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhub_Spec</summary>
+/// <summary>Storage version of v1api20240101.RetentionDescription Properties to configure retention settings for the  eventhub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubSpec
+public partial class V1api20240101storageNamespacesEventhubSpecRetentionDescription
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("cleanupPolicy")]
+    public string? CleanupPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("retentionTimeInHours")]
+    public int? RetentionTimeInHours { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tombstoneRetentionTimeInHours")]
+    public int? TombstoneRetentionTimeInHours { get; set; }
+}
+
+/// <summary>Storage version of v1api20240101.NamespacesEventhub_Spec</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240101storageNamespacesEventhubSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -175,17 +238,17 @@ public partial class V1api20211101storageNamespacesEventhubSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20211101.CaptureDescription Properties to configure capture description for eventhub</summary>
+    /// <summary>Storage version of v1api20240101.CaptureDescription Properties to configure capture description for eventhub</summary>
     [JsonPropertyName("captureDescription")]
-    public V1api20211101storageNamespacesEventhubSpecCaptureDescription? CaptureDescription { get; set; }
+    public V1api20240101storageNamespacesEventhubSpecCaptureDescription? CaptureDescription { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("messageRetentionInDays")]
     public int? MessageRetentionInDays { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespacesEventhubSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespacesEventhubSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -193,16 +256,41 @@ public partial class V1api20211101storageNamespacesEventhubSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/Namespace resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespacesEventhubSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespacesEventhubSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("partitionCount")]
     public int? PartitionCount { get; set; }
+
+    /// <summary>Storage version of v1api20240101.RetentionDescription Properties to configure retention settings for the  eventhub</summary>
+    [JsonPropertyName("retentionDescription")]
+    public V1api20240101storageNamespacesEventhubSpecRetentionDescription? RetentionDescription { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("userMetadata")]
+    public string? UserMetadata { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Destination_STATUS Capture storage details for capture description</summary>
+/// <summary>Storage version of v1api20240101.CaptureIdentity_STATUS A value that indicates whether capture description is enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubStatusCaptureDescriptionDestination
+public partial class V1api20240101storageNamespacesEventhubStatusCaptureDescriptionDestinationIdentity
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("userAssignedIdentity")]
+    public string? UserAssignedIdentity { get; set; }
+}
+
+/// <summary>Storage version of v1api20240101.Destination_STATUS Capture storage details for capture description</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240101storageNamespacesEventhubStatusCaptureDescriptionDestination
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -228,6 +316,10 @@ public partial class V1api20211101storageNamespacesEventhubStatusCaptureDescript
     [JsonPropertyName("dataLakeSubscriptionId")]
     public string? DataLakeSubscriptionId { get; set; }
 
+    /// <summary>Storage version of v1api20240101.CaptureIdentity_STATUS A value that indicates whether capture description is enabled.</summary>
+    [JsonPropertyName("identity")]
+    public V1api20240101storageNamespacesEventhubStatusCaptureDescriptionDestinationIdentity? Identity { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -237,17 +329,17 @@ public partial class V1api20211101storageNamespacesEventhubStatusCaptureDescript
     public string? StorageAccountResourceId { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.CaptureDescription_STATUS Properties to configure capture description for eventhub</summary>
+/// <summary>Storage version of v1api20240101.CaptureDescription_STATUS Properties to configure capture description for eventhub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubStatusCaptureDescription
+public partial class V1api20240101storageNamespacesEventhubStatusCaptureDescription
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Destination_STATUS Capture storage details for capture description</summary>
+    /// <summary>Storage version of v1api20240101.Destination_STATUS Capture storage details for capture description</summary>
     [JsonPropertyName("destination")]
-    public V1api20211101storageNamespacesEventhubStatusCaptureDescriptionDestination? Destination { get; set; }
+    public V1api20240101storageNamespacesEventhubStatusCaptureDescriptionDestination? Destination { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("enabled")]
@@ -270,9 +362,9 @@ public partial class V1api20211101storageNamespacesEventhubStatusCaptureDescript
     public bool? SkipEmptyArchives { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubStatusConditions
+public partial class V1api20240101storageNamespacesEventhubStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -303,9 +395,30 @@ public partial class V1api20211101storageNamespacesEventhubStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.RetentionDescription_STATUS Properties to configure retention settings for the  eventhub</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubStatusSystemData
+public partial class V1api20240101storageNamespacesEventhubStatusRetentionDescription
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("cleanupPolicy")]
+    public string? CleanupPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("retentionTimeInHours")]
+    public int? RetentionTimeInHours { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tombstoneRetentionTimeInHours")]
+    public int? TombstoneRetentionTimeInHours { get; set; }
+}
+
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240101storageNamespacesEventhubStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -336,21 +449,21 @@ public partial class V1api20211101storageNamespacesEventhubStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhub_STATUS</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhub_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubStatus
+public partial class V1api20240101storageNamespacesEventhubStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211101.CaptureDescription_STATUS Properties to configure capture description for eventhub</summary>
+    /// <summary>Storage version of v1api20240101.CaptureDescription_STATUS Properties to configure capture description for eventhub</summary>
     [JsonPropertyName("captureDescription")]
-    public V1api20211101storageNamespacesEventhubStatusCaptureDescription? CaptureDescription { get; set; }
+    public V1api20240101storageNamespacesEventhubStatusCaptureDescription? CaptureDescription { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespacesEventhubStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("createdAt")]
@@ -380,13 +493,17 @@ public partial class V1api20211101storageNamespacesEventhubStatus
     [JsonPropertyName("partitionIds")]
     public IList<string>? PartitionIds { get; set; }
 
+    /// <summary>Storage version of v1api20240101.RetentionDescription_STATUS Properties to configure retention settings for the  eventhub</summary>
+    [JsonPropertyName("retentionDescription")]
+    public V1api20240101storageNamespacesEventhubStatusRetentionDescription? RetentionDescription { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespacesEventhubStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespacesEventhubStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -395,14 +512,18 @@ public partial class V1api20211101storageNamespacesEventhubStatus
     /// <summary></summary>
     [JsonPropertyName("updatedAt")]
     public string? UpdatedAt { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("userMetadata")]
+    public string? UserMetadata { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhub Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/eventhubs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhub Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/eventhubs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespacesEventhub : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesEventhubSpec>, IStatus<V1api20211101storageNamespacesEventhubStatus>
+public partial class V1api20240101storageNamespacesEventhub : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespacesEventhubSpec>, IStatus<V1api20240101storageNamespacesEventhubStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "NamespacesEventhub";
     public const string KubeGroup = "eventhub.azure.com";
     public const string KubePluralName = "namespaceseventhubs";
@@ -418,11 +539,11 @@ public partial class V1api20211101storageNamespacesEventhub : IKubernetesObject<
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhub_Spec</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhub_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespacesEventhubSpec? Spec { get; set; }
+    public V1api20240101storageNamespacesEventhubSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhub_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhub_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespacesEventhubStatus? Status { get; set; }
+    public V1api20240101storageNamespacesEventhubStatus? Status { get; set; }
 }

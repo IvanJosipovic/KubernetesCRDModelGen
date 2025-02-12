@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.servicebus.azure.com;
 /// <summary>UserAssignedIdentityReference: ARM ID of user Identity selected for encryption</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentityUserAssignedIdentityReference
+public partial class V1api20240101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentityUserAssignedIdentityReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -29,9 +29,9 @@ public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperti
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.UserAssignedIdentityProperties</summary>
+/// <summary>Storage version of v1api20240101.UserAssignedIdentityProperties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentity
+public partial class V1api20240101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -39,20 +39,20 @@ public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperti
 
     /// <summary>UserAssignedIdentityReference: ARM ID of user Identity selected for encryption</summary>
     [JsonPropertyName("userAssignedIdentityReference")]
-    public V1api20211101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
+    public V1api20240101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.KeyVaultProperties Properties to configure keyVault Properties</summary>
+/// <summary>Storage version of v1api20240101.KeyVaultProperties Properties to configure keyVault Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperties
+public partial class V1api20240101storageNamespaceSpecEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211101.UserAssignedIdentityProperties</summary>
+    /// <summary>Storage version of v1api20240101.UserAssignedIdentityProperties</summary>
     [JsonPropertyName("identity")]
-    public V1api20211101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentity? Identity { get; set; }
+    public V1api20240101storageNamespaceSpecEncryptionKeyVaultPropertiesIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("keyName")]
@@ -67,9 +67,9 @@ public partial class V1api20211101storageNamespaceSpecEncryptionKeyVaultProperti
     public string? KeyVersion { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Encryption Properties to configure Encryption</summary>
+/// <summary>Storage version of v1api20240101.Encryption Properties to configure Encryption</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecEncryption
+public partial class V1api20240101storageNamespaceSpecEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -81,16 +81,16 @@ public partial class V1api20211101storageNamespaceSpecEncryption
 
     /// <summary></summary>
     [JsonPropertyName("keyVaultProperties")]
-    public IList<V1api20211101storageNamespaceSpecEncryptionKeyVaultProperties>? KeyVaultProperties { get; set; }
+    public IList<V1api20240101storageNamespaceSpecEncryptionKeyVaultProperties>? KeyVaultProperties { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requireInfrastructureEncryption")]
     public bool? RequireInfrastructureEncryption { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecIdentityUserAssignedIdentitiesReference
+public partial class V1api20240101storageNamespaceSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -109,22 +109,22 @@ public partial class V1api20211101storageNamespaceSpecIdentityUserAssignedIdenti
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+/// <summary>Storage version of v1api20240101.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecIdentityUserAssignedIdentities
+public partial class V1api20240101storageNamespaceSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
-    public V1api20211101storageNamespaceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
+    public V1api20240101storageNamespaceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Identity Properties to configure User Assigned Identities for Bring your Own Keys</summary>
+/// <summary>Storage version of v1api20240101.Identity Properties to configure User Assigned Identities for Bring your Own Keys</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecIdentity
+public partial class V1api20240101storageNamespaceSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -136,12 +136,12 @@ public partial class V1api20211101storageNamespaceSpecIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IList<V1api20211101storageNamespaceSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IList<V1api20240101storageNamespaceSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespaceSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -158,7 +158,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecConfigMapExpre
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespaceSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -175,7 +175,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretExpressi
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsEndpoint
+public partial class V1api20240101storageNamespaceSpecOperatorSpecSecretsEndpoint
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -188,7 +188,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsEndpoin
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimaryConnectionString
+public partial class V1api20240101storageNamespaceSpecOperatorSpecSecretsPrimaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -201,7 +201,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimary
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimaryKey
+public partial class V1api20240101storageNamespaceSpecOperatorSpecSecretsPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -214,7 +214,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimary
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSecondaryConnectionString
+public partial class V1api20240101storageNamespaceSpecOperatorSpecSecretsSecondaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -227,7 +227,7 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSeconda
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSecondaryKey
+public partial class V1api20240101storageNamespaceSpecOperatorSpecSecretsSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -238,9 +238,9 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecretsSeconda
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespaceOperatorSecrets</summary>
+/// <summary>Storage version of v1api20240101.NamespaceOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpecSecrets
+public partial class V1api20240101storageNamespaceSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -248,28 +248,28 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpecSecrets
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("endpoint")]
-    public V1api20211101storageNamespaceSpecOperatorSpecSecretsEndpoint? Endpoint { get; set; }
+    public V1api20240101storageNamespaceSpecOperatorSpecSecretsEndpoint? Endpoint { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryConnectionString")]
-    public V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
+    public V1api20240101storageNamespaceSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryKey")]
-    public V1api20211101storageNamespaceSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
+    public V1api20240101storageNamespaceSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryConnectionString")]
-    public V1api20211101storageNamespaceSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
+    public V1api20240101storageNamespaceSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryKey")]
-    public V1api20211101storageNamespaceSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
+    public V1api20240101storageNamespaceSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOperatorSpec
+public partial class V1api20240101storageNamespaceSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -277,20 +277,20 @@ public partial class V1api20211101storageNamespaceSpecOperatorSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespaceSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespaceSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespaceSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespaceSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespaceOperatorSecrets</summary>
+    /// <summary>Storage version of v1api20240101.NamespaceOperatorSecrets</summary>
     [JsonPropertyName("secrets")]
-    public V1api20211101storageNamespaceSpecOperatorSpecSecrets? Secrets { get; set; }
+    public V1api20240101storageNamespaceSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecOwner
+public partial class V1api20240101storageNamespaceSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -301,9 +301,9 @@ public partial class V1api20211101storageNamespaceSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SBSku SKU of the namespace.</summary>
+/// <summary>Storage version of v1api20240101.SBSku SKU of the namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpecSku
+public partial class V1api20240101storageNamespaceSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -322,9 +322,9 @@ public partial class V1api20211101storageNamespaceSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespace_Spec</summary>
+/// <summary>Storage version of v1api20240101.Namespace_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceSpec
+public partial class V1api20240101storageNamespaceSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -342,21 +342,25 @@ public partial class V1api20211101storageNamespaceSpec
     [JsonPropertyName("disableLocalAuth")]
     public bool? DisableLocalAuth { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Encryption Properties to configure Encryption</summary>
+    /// <summary>Storage version of v1api20240101.Encryption Properties to configure Encryption</summary>
     [JsonPropertyName("encryption")]
-    public V1api20211101storageNamespaceSpecEncryption? Encryption { get; set; }
+    public V1api20240101storageNamespaceSpecEncryption? Encryption { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Identity Properties to configure User Assigned Identities for Bring your Own Keys</summary>
+    /// <summary>Storage version of v1api20240101.Identity Properties to configure User Assigned Identities for Bring your Own Keys</summary>
     [JsonPropertyName("identity")]
-    public V1api20211101storageNamespaceSpecIdentity? Identity { get; set; }
+    public V1api20240101storageNamespaceSpecIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary></summary>
+    [JsonPropertyName("minimumTlsVersion")]
+    public string? MinimumTlsVersion { get; set; }
+
+    /// <summary>Storage version of v1api20240101.NamespaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespaceSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespaceSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -364,11 +368,19 @@ public partial class V1api20211101storageNamespaceSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespaceSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespaceSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SBSku SKU of the namespace.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("premiumMessagingPartitions")]
+    public int? PremiumMessagingPartitions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("publicNetworkAccess")]
+    public string? PublicNetworkAccess { get; set; }
+
+    /// <summary>Storage version of v1api20240101.SBSku SKU of the namespace.</summary>
     [JsonPropertyName("sku")]
-    public V1api20211101storageNamespaceSpecSku? Sku { get; set; }
+    public V1api20240101storageNamespaceSpecSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -379,9 +391,9 @@ public partial class V1api20211101storageNamespaceSpec
     public bool? ZoneRedundant { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusConditions
+public partial class V1api20240101storageNamespaceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -412,9 +424,9 @@ public partial class V1api20211101storageNamespaceStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.UserAssignedIdentityProperties_STATUS</summary>
+/// <summary>Storage version of v1api20240101.UserAssignedIdentityProperties_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultPropertiesIdentity
+public partial class V1api20240101storageNamespaceStatusEncryptionKeyVaultPropertiesIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -425,17 +437,17 @@ public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultProper
     public string? UserAssignedIdentity { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.KeyVaultProperties_STATUS Properties to configure keyVault Properties</summary>
+/// <summary>Storage version of v1api20240101.KeyVaultProperties_STATUS Properties to configure keyVault Properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultProperties
+public partial class V1api20240101storageNamespaceStatusEncryptionKeyVaultProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211101.UserAssignedIdentityProperties_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.UserAssignedIdentityProperties_STATUS</summary>
     [JsonPropertyName("identity")]
-    public V1api20211101storageNamespaceStatusEncryptionKeyVaultPropertiesIdentity? Identity { get; set; }
+    public V1api20240101storageNamespaceStatusEncryptionKeyVaultPropertiesIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("keyName")]
@@ -450,9 +462,9 @@ public partial class V1api20211101storageNamespaceStatusEncryptionKeyVaultProper
     public string? KeyVersion { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Encryption_STATUS Properties to configure Encryption</summary>
+/// <summary>Storage version of v1api20240101.Encryption_STATUS Properties to configure Encryption</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusEncryption
+public partial class V1api20240101storageNamespaceStatusEncryption
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -464,16 +476,16 @@ public partial class V1api20211101storageNamespaceStatusEncryption
 
     /// <summary></summary>
     [JsonPropertyName("keyVaultProperties")]
-    public IList<V1api20211101storageNamespaceStatusEncryptionKeyVaultProperties>? KeyVaultProperties { get; set; }
+    public IList<V1api20240101storageNamespaceStatusEncryptionKeyVaultProperties>? KeyVaultProperties { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requireInfrastructureEncryption")]
     public bool? RequireInfrastructureEncryption { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.UserAssignedIdentity_STATUS Recognized Dictionary value.</summary>
+/// <summary>Storage version of v1api20240101.UserAssignedIdentity_STATUS Recognized Dictionary value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusIdentityUserAssignedIdentities
+public partial class V1api20240101storageNamespaceStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -488,9 +500,9 @@ public partial class V1api20211101storageNamespaceStatusIdentityUserAssignedIden
     public string? PrincipalId { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Identity_STATUS Properties to configure User Assigned Identities for Bring your Own Keys</summary>
+/// <summary>Storage version of v1api20240101.Identity_STATUS Properties to configure User Assigned Identities for Bring your Own Keys</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusIdentity
+public partial class V1api20240101storageNamespaceStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -510,12 +522,12 @@ public partial class V1api20211101storageNamespaceStatusIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IDictionary<string, V1api20211101storageNamespaceStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IDictionary<string, V1api20240101storageNamespaceStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.PrivateEndpointConnection_STATUS Properties of the PrivateEndpointConnection.</summary>
+/// <summary>Storage version of v1api20240101.PrivateEndpointConnection_STATUS Properties of the PrivateEndpointConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusPrivateEndpointConnections
+public partial class V1api20240101storageNamespaceStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -526,9 +538,9 @@ public partial class V1api20211101storageNamespaceStatusPrivateEndpointConnectio
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SBSku_STATUS SKU of the namespace.</summary>
+/// <summary>Storage version of v1api20240101.SBSku_STATUS SKU of the namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusSku
+public partial class V1api20240101storageNamespaceStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -547,9 +559,9 @@ public partial class V1api20211101storageNamespaceStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatusSystemData
+public partial class V1api20240101storageNamespaceStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -580,9 +592,9 @@ public partial class V1api20211101storageNamespaceStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespace_STATUS</summary>
+/// <summary>Storage version of v1api20240101.Namespace_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespaceStatus
+public partial class V1api20240101storageNamespaceStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -594,7 +606,7 @@ public partial class V1api20211101storageNamespaceStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespaceStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespaceStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("createdAt")]
@@ -604,17 +616,17 @@ public partial class V1api20211101storageNamespaceStatus
     [JsonPropertyName("disableLocalAuth")]
     public bool? DisableLocalAuth { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Encryption_STATUS Properties to configure Encryption</summary>
+    /// <summary>Storage version of v1api20240101.Encryption_STATUS Properties to configure Encryption</summary>
     [JsonPropertyName("encryption")]
-    public V1api20211101storageNamespaceStatusEncryption? Encryption { get; set; }
+    public V1api20240101storageNamespaceStatusEncryption? Encryption { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Identity_STATUS Properties to configure User Assigned Identities for Bring your Own Keys</summary>
+    /// <summary>Storage version of v1api20240101.Identity_STATUS Properties to configure User Assigned Identities for Bring your Own Keys</summary>
     [JsonPropertyName("identity")]
-    public V1api20211101storageNamespaceStatusIdentity? Identity { get; set; }
+    public V1api20240101storageNamespaceStatusIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -625,32 +637,44 @@ public partial class V1api20211101storageNamespaceStatus
     public string? MetricId { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("minimumTlsVersion")]
+    public string? MinimumTlsVersion { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("premiumMessagingPartitions")]
+    public int? PremiumMessagingPartitions { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("privateEndpointConnections")]
-    public IList<V1api20211101storageNamespaceStatusPrivateEndpointConnections>? PrivateEndpointConnections { get; set; }
+    public IList<V1api20240101storageNamespaceStatusPrivateEndpointConnections>? PrivateEndpointConnections { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
     public string? ProvisioningState { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("publicNetworkAccess")]
+    public string? PublicNetworkAccess { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("serviceBusEndpoint")]
     public string? ServiceBusEndpoint { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SBSku_STATUS SKU of the namespace.</summary>
+    /// <summary>Storage version of v1api20240101.SBSku_STATUS SKU of the namespace.</summary>
     [JsonPropertyName("sku")]
-    public V1api20211101storageNamespaceStatusSku? Sku { get; set; }
+    public V1api20240101storageNamespaceStatusSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespaceStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespaceStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -669,12 +693,12 @@ public partial class V1api20211101storageNamespaceStatus
     public bool? ZoneRedundant { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Namespace Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/namespace-preview.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}</summary>
+/// <summary>Storage version of v1api20240101.Namespace Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/namespace-preview.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespaceSpec>, IStatus<V1api20211101storageNamespaceStatus>
+public partial class V1api20240101storageNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespaceSpec>, IStatus<V1api20240101storageNamespaceStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "Namespace";
     public const string KubeGroup = "servicebus.azure.com";
     public const string KubePluralName = "namespaces";
@@ -690,11 +714,11 @@ public partial class V1api20211101storageNamespace : IKubernetesObject<V1ObjectM
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespace_Spec</summary>
+    /// <summary>Storage version of v1api20240101.Namespace_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespaceSpec? Spec { get; set; }
+    public V1api20240101storageNamespaceSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Namespace_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.Namespace_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespaceStatus? Status { get; set; }
+    public V1api20240101storageNamespaceStatus? Status { get; set; }
 }

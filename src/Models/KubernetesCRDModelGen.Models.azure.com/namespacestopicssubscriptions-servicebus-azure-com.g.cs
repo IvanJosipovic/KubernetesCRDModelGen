@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.com;
-/// <summary>Storage version of v1api20211101.SBClientAffineProperties Properties specific to client affine subscriptions.</summary>
+/// <summary>Storage version of v1api20240101.SBClientAffineProperties Properties specific to client affine subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecClientAffineProperties
+public partial class V1api20240101storageNamespacesTopicsSubscriptionSpecClientAffineProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -31,7 +31,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecClientA
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespacesTopicsSubscriptionSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -48,7 +48,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOperato
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespacesTopicsSubscriptionSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -63,9 +63,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOperato
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOperatorSpec
+public partial class V1api20240101storageNamespacesTopicsSubscriptionSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -73,16 +73,16 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOperato
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespacesTopicsSubscriptionSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesTopicsSubscriptionSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespacesTopicsSubscriptionSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesTopicsSubscriptionSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopic resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOwner
+public partial class V1api20240101storageNamespacesTopicsSubscriptionSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -93,9 +93,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_Spec</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscription_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionSpec
+public partial class V1api20240101storageNamespacesTopicsSubscriptionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -109,9 +109,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SBClientAffineProperties Properties specific to client affine subscriptions.</summary>
+    /// <summary>Storage version of v1api20240101.SBClientAffineProperties Properties specific to client affine subscriptions.</summary>
     [JsonPropertyName("clientAffineProperties")]
-    public V1api20211101storageNamespacesTopicsSubscriptionSpecClientAffineProperties? ClientAffineProperties { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionSpecClientAffineProperties? ClientAffineProperties { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("deadLetteringOnFilterEvaluationExceptions")]
@@ -153,9 +153,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpec
     [JsonPropertyName("maxDeliveryCount")]
     public int? MaxDeliveryCount { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespacesTopicsSubscriptionSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -163,16 +163,16 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopic resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespacesTopicsSubscriptionSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("requiresSession")]
     public bool? RequiresSession { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SBClientAffineProperties_STATUS Properties specific to client affine subscriptions.</summary>
+/// <summary>Storage version of v1api20240101.SBClientAffineProperties_STATUS Properties specific to client affine subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusClientAffineProperties
+public partial class V1api20240101storageNamespacesTopicsSubscriptionStatusClientAffineProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -191,9 +191,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusClien
     public bool? IsShared { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusConditions
+public partial class V1api20240101storageNamespacesTopicsSubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -224,9 +224,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusCondi
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.MessageCountDetails_STATUS Message Count Details.</summary>
+/// <summary>Storage version of v1api20240101.MessageCountDetails_STATUS Message Count Details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusCountDetails
+public partial class V1api20240101storageNamespacesTopicsSubscriptionStatusCountDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -253,9 +253,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusCount
     public int? TransferMessageCount { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusSystemData
+public partial class V1api20240101storageNamespacesTopicsSubscriptionStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -286,9 +286,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_STATUS</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscription_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionStatus
+public partial class V1api20240101storageNamespacesTopicsSubscriptionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -302,17 +302,17 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatus
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SBClientAffineProperties_STATUS Properties specific to client affine subscriptions.</summary>
+    /// <summary>Storage version of v1api20240101.SBClientAffineProperties_STATUS Properties specific to client affine subscriptions.</summary>
     [JsonPropertyName("clientAffineProperties")]
-    public V1api20211101storageNamespacesTopicsSubscriptionStatusClientAffineProperties? ClientAffineProperties { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionStatusClientAffineProperties? ClientAffineProperties { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespacesTopicsSubscriptionStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespacesTopicsSubscriptionStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Storage version of v1api20211101.MessageCountDetails_STATUS Message Count Details.</summary>
+    /// <summary>Storage version of v1api20240101.MessageCountDetails_STATUS Message Count Details.</summary>
     [JsonPropertyName("countDetails")]
-    public V1api20211101storageNamespacesTopicsSubscriptionStatusCountDetails? CountDetails { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionStatusCountDetails? CountDetails { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("createdAt")]
@@ -382,9 +382,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatus
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespacesTopicsSubscriptionStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -395,12 +395,12 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionStatus
     public string? UpdatedAt { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/subscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscription Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/subscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespacesTopicsSubscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesTopicsSubscriptionSpec>, IStatus<V1api20211101storageNamespacesTopicsSubscriptionStatus>
+public partial class V1api20240101storageNamespacesTopicsSubscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespacesTopicsSubscriptionSpec>, IStatus<V1api20240101storageNamespacesTopicsSubscriptionStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "NamespacesTopicsSubscription";
     public const string KubeGroup = "servicebus.azure.com";
     public const string KubePluralName = "namespacestopicssubscriptions";
@@ -416,11 +416,11 @@ public partial class V1api20211101storageNamespacesTopicsSubscription : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_Spec</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscription_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespacesTopicsSubscriptionSpec? Spec { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscription_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscription_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespacesTopicsSubscriptionStatus? Status { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionStatus? Status { get; set; }
 }

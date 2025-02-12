@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signalrservice.azure.com;
-/// <summary>Storage version of v1api20211001.SignalRCorsSettings Cross-Origin Resource Sharing (CORS) settings.</summary>
+/// <summary>Storage version of v1api20240301.SignalRCorsSettings Cross-Origin Resource Sharing (CORS) settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecCors
+public partial class V1api20240301storageSignalRSpecCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -21,9 +21,9 @@ public partial class V1api20211001storageSignalRSpecCors
     public IList<string>? AllowedOrigins { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalRFeature Feature of a resource, which controls the runtime behavior.</summary>
+/// <summary>Storage version of v1api20240301.SignalRFeature Feature of a resource, which controls the runtime behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecFeatures
+public partial class V1api20240301storageSignalRSpecFeatures
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -42,9 +42,9 @@ public partial class V1api20211001storageSignalRSpecFeatures
     public string? Value { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecIdentityUserAssignedIdentitiesReference
+public partial class V1api20240301storageSignalRSpecIdentityUserAssignedIdentitiesReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -63,22 +63,22 @@ public partial class V1api20211001storageSignalRSpecIdentityUserAssignedIdentiti
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
+/// <summary>Storage version of v1api20240301.UserAssignedIdentityDetails Information about the user assigned identity for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecIdentityUserAssignedIdentities
+public partial class V1api20240301storageSignalRSpecIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
-    public V1api20211001storageSignalRSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
+    public V1api20240301storageSignalRSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ManagedIdentity A class represent managed identities used for request and response</summary>
+/// <summary>Storage version of v1api20240301.ManagedIdentity A class represent managed identities used for request and response</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecIdentity
+public partial class V1api20240301storageSignalRSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -90,216 +90,12 @@ public partial class V1api20211001storageSignalRSpecIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IList<V1api20211001storageSignalRSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IList<V1api20240301storageSignalRSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.PrivateEndpointACL ACL for a private endpoint</summary>
+/// <summary>Storage version of v1api20240301.LiveTraceCategory Live trace category configuration of a Microsoft.SignalRService resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecNetworkACLsPrivateEndpoints
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("allow")]
-    public IList<string>? Allow { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("deny")]
-    public IList<string>? Deny { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.NetworkACL Network ACL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecNetworkACLsPublicNetwork
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("allow")]
-    public IList<string>? Allow { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("deny")]
-    public IList<string>? Deny { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.SignalRNetworkACLs Network ACLs for the resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecNetworkACLs
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("defaultAction")]
-    public string? DefaultAction { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("privateEndpoints")]
-    public IList<V1api20211001storageSignalRSpecNetworkACLsPrivateEndpoints>? PrivateEndpoints { get; set; }
-
-    /// <summary>Storage version of v1api20211001.NetworkACL Network ACL</summary>
-    [JsonPropertyName("publicNetwork")]
-    public V1api20211001storageSignalRSpecNetworkACLsPublicNetwork? PublicNetwork { get; set; }
-}
-
-/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpecConfigMapExpressions
-{
-    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
-    [JsonPropertyName("key")]
-    public string? Key { get; set; }
-
-    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
-    [JsonPropertyName("value")]
-    public string Value { get; set; }
-}
-
-/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpecSecretExpressions
-{
-    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
-    [JsonPropertyName("key")]
-    public string? Key { get; set; }
-
-    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
-    [JsonPropertyName("value")]
-    public string Value { get; set; }
-}
-
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpecSecretsPrimaryConnectionString
-{
-    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpecSecretsPrimaryKey
-{
-    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpecSecretsSecondaryConnectionString
-{
-    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpecSecretsSecondaryKey
-{
-    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.SignalROperatorSecrets</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpecSecrets
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-    [JsonPropertyName("primaryConnectionString")]
-    public V1api20211001storageSignalRSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
-
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-    [JsonPropertyName("primaryKey")]
-    public V1api20211001storageSignalRSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
-
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-    [JsonPropertyName("secondaryConnectionString")]
-    public V1api20211001storageSignalRSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
-
-    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
-    [JsonPropertyName("secondaryKey")]
-    public V1api20211001storageSignalRSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.SignalROperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOperatorSpec
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211001storageSignalRSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211001storageSignalRSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
-
-    /// <summary>Storage version of v1api20211001.SignalROperatorSecrets</summary>
-    [JsonPropertyName("secrets")]
-    public V1api20211001storageSignalRSpecOperatorSpecSecrets? Secrets { get; set; }
-}
-
-/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecOwner
-{
-    /// <summary></summary>
-    [JsonPropertyName("armId")]
-    public string? ArmId { get; set; }
-
-    /// <summary>This is the name of the Kubernetes resource to reference.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.ResourceLogCategory Resource log category configuration of a Microsoft.SignalRService resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecResourceLogConfigurationCategories
+public partial class V1api20240301storageSignalRSpecLiveTraceConfigurationCategories
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -314,9 +110,9 @@ public partial class V1api20211001storageSignalRSpecResourceLogConfigurationCate
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ResourceLogConfiguration Resource log configuration of a Microsoft.SignalRService resource.</summary>
+/// <summary>Storage version of v1api20240301.LiveTraceConfiguration Live trace configuration of a Microsoft.SignalRService resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecResourceLogConfiguration
+public partial class V1api20240301storageSignalRSpecLiveTraceConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -324,12 +120,284 @@ public partial class V1api20211001storageSignalRSpecResourceLogConfiguration
 
     /// <summary></summary>
     [JsonPropertyName("categories")]
-    public IList<V1api20211001storageSignalRSpecResourceLogConfigurationCategories>? Categories { get; set; }
+    public IList<V1api20240301storageSignalRSpecLiveTraceConfigurationCategories>? Categories { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public string? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ResourceSku The billing information of the resource.</summary>
+/// <summary>Storage version of v1api20240301.IPRule An IP rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecSku
+public partial class V1api20240301storageSignalRSpecNetworkACLsIpRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.PrivateEndpointACL ACL for a private endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecNetworkACLsPrivateEndpoints
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("allow")]
+    public IList<string>? Allow { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("deny")]
+    public IList<string>? Deny { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.NetworkACL Network ACL</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecNetworkACLsPublicNetwork
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("allow")]
+    public IList<string>? Allow { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("deny")]
+    public IList<string>? Deny { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SignalRNetworkACLs Network ACLs for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecNetworkACLs
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("defaultAction")]
+    public string? DefaultAction { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ipRules")]
+    public IList<V1api20240301storageSignalRSpecNetworkACLsIpRules>? IpRules { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("privateEndpoints")]
+    public IList<V1api20240301storageSignalRSpecNetworkACLsPrivateEndpoints>? PrivateEndpoints { get; set; }
+
+    /// <summary>Storage version of v1api20240301.NetworkACL Network ACL</summary>
+    [JsonPropertyName("publicNetwork")]
+    public V1api20240301storageSignalRSpecNetworkACLsPublicNetwork? PublicNetwork { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpecConfigMapExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpecSecretExpressions
+{
+    /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap or secret to write to. The configmap or secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/</summary>
+    [JsonPropertyName("value")]
+    public string Value { get; set; }
+}
+
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpecSecretsPrimaryConnectionString
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpecSecretsPrimaryKey
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpecSecretsSecondaryConnectionString
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpecSecretsSecondaryKey
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SignalROperatorSecrets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpecSecrets
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+    [JsonPropertyName("primaryConnectionString")]
+    public V1api20240301storageSignalRSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
+
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+    [JsonPropertyName("primaryKey")]
+    public V1api20240301storageSignalRSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
+
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+    [JsonPropertyName("secondaryConnectionString")]
+    public V1api20240301storageSignalRSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
+
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+    [JsonPropertyName("secondaryKey")]
+    public V1api20240301storageSignalRSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SignalROperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOperatorSpec
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("configMapExpressions")]
+    public IList<V1api20240301storageSignalRSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretExpressions")]
+    public IList<V1api20240301storageSignalRSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+
+    /// <summary>Storage version of v1api20240301.SignalROperatorSecrets</summary>
+    [JsonPropertyName("secrets")]
+    public V1api20240301storageSignalRSpecOperatorSpecSecrets? Secrets { get; set; }
+}
+
+/// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecOwner
+{
+    /// <summary></summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>This is the name of the Kubernetes resource to reference.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ResourceLogCategory Resource log category configuration of a Microsoft.SignalRService resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecResourceLogConfigurationCategories
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public string? Enabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ResourceLogConfiguration Resource log configuration of a Microsoft.SignalRService resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecResourceLogConfiguration
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("categories")]
+    public IList<V1api20240301storageSignalRSpecResourceLogConfigurationCategories>? Categories { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ServerlessSettings Serverless settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecServerless
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("connectionTimeoutInSeconds")]
+    public int? ConnectionTimeoutInSeconds { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ResourceSku The billing information of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRSpecSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -348,9 +416,9 @@ public partial class V1api20211001storageSignalRSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalRTlsSettings TLS settings for the resource</summary>
+/// <summary>Storage version of v1api20240301.SignalRTlsSettings TLS settings for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecTls
+public partial class V1api20240301storageSignalRSpecTls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -361,9 +429,9 @@ public partial class V1api20211001storageSignalRSpecTls
     public bool? ClientCertEnabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ManagedIdentitySettings Managed identity settings for upstream.</summary>
+/// <summary>Storage version of v1api20240301.ManagedIdentitySettings Managed identity settings for upstream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecUpstreamTemplatesAuthManagedIdentity
+public partial class V1api20240301storageSignalRSpecUpstreamTemplatesAuthManagedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -374,34 +442,34 @@ public partial class V1api20211001storageSignalRSpecUpstreamTemplatesAuthManaged
     public string? Resource { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.UpstreamAuthSettings Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
+/// <summary>Storage version of v1api20240301.UpstreamAuthSettings Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecUpstreamTemplatesAuth
+public partial class V1api20240301storageSignalRSpecUpstreamTemplatesAuth
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ManagedIdentitySettings Managed identity settings for upstream.</summary>
+    /// <summary>Storage version of v1api20240301.ManagedIdentitySettings Managed identity settings for upstream.</summary>
     [JsonPropertyName("managedIdentity")]
-    public V1api20211001storageSignalRSpecUpstreamTemplatesAuthManagedIdentity? ManagedIdentity { get; set; }
+    public V1api20240301storageSignalRSpecUpstreamTemplatesAuthManagedIdentity? ManagedIdentity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.UpstreamTemplate Upstream template item settings. It defines the Upstream URL of the incoming requests. The template defines the pattern of the event, the hub or the category of the incoming request that matches current URL template.</summary>
+/// <summary>Storage version of v1api20240301.UpstreamTemplate Upstream template item settings. It defines the Upstream URL of the incoming requests. The template defines the pattern of the event, the hub or the category of the incoming request that matches current URL template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecUpstreamTemplates
+public partial class V1api20240301storageSignalRSpecUpstreamTemplates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211001.UpstreamAuthSettings Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
+    /// <summary>Storage version of v1api20240301.UpstreamAuthSettings Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
     [JsonPropertyName("auth")]
-    public V1api20211001storageSignalRSpecUpstreamTemplatesAuth? Auth { get; set; }
+    public V1api20240301storageSignalRSpecUpstreamTemplatesAuth? Auth { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("categoryPattern")]
@@ -420,9 +488,9 @@ public partial class V1api20211001storageSignalRSpecUpstreamTemplates
     public string? UrlTemplate { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ServerlessUpstreamSettings The settings for the Upstream when the service is in server-less mode.</summary>
+/// <summary>Storage version of v1api20240301.ServerlessUpstreamSettings The settings for the Upstream when the service is in server-less mode.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpecUpstream
+public partial class V1api20240301storageSignalRSpecUpstream
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -430,12 +498,12 @@ public partial class V1api20211001storageSignalRSpecUpstream
 
     /// <summary></summary>
     [JsonPropertyName("templates")]
-    public IList<V1api20211001storageSignalRSpecUpstreamTemplates>? Templates { get; set; }
+    public IList<V1api20240301storageSignalRSpecUpstreamTemplates>? Templates { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalR_Spec</summary>
+/// <summary>Storage version of v1api20240301.SignalR_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRSpec
+public partial class V1api20240301storageSignalRSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -445,9 +513,9 @@ public partial class V1api20211001storageSignalRSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalRCorsSettings Cross-Origin Resource Sharing (CORS) settings.</summary>
+    /// <summary>Storage version of v1api20240301.SignalRCorsSettings Cross-Origin Resource Sharing (CORS) settings.</summary>
     [JsonPropertyName("cors")]
-    public V1api20211001storageSignalRSpecCors? Cors { get; set; }
+    public V1api20240301storageSignalRSpecCors? Cors { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("disableAadAuth")]
@@ -459,27 +527,31 @@ public partial class V1api20211001storageSignalRSpec
 
     /// <summary></summary>
     [JsonPropertyName("features")]
-    public IList<V1api20211001storageSignalRSpecFeatures>? Features { get; set; }
+    public IList<V1api20240301storageSignalRSpecFeatures>? Features { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ManagedIdentity A class represent managed identities used for request and response</summary>
+    /// <summary>Storage version of v1api20240301.ManagedIdentity A class represent managed identities used for request and response</summary>
     [JsonPropertyName("identity")]
-    public V1api20211001storageSignalRSpecIdentity? Identity { get; set; }
+    public V1api20240301storageSignalRSpecIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
 
+    /// <summary>Storage version of v1api20240301.LiveTraceConfiguration Live trace configuration of a Microsoft.SignalRService resource.</summary>
+    [JsonPropertyName("liveTraceConfiguration")]
+    public V1api20240301storageSignalRSpecLiveTraceConfiguration? LiveTraceConfiguration { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalRNetworkACLs Network ACLs for the resource</summary>
+    /// <summary>Storage version of v1api20240301.SignalRNetworkACLs Network ACLs for the resource</summary>
     [JsonPropertyName("networkACLs")]
-    public V1api20211001storageSignalRSpecNetworkACLs? NetworkACLs { get; set; }
+    public V1api20240301storageSignalRSpecNetworkACLs? NetworkACLs { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalROperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240301.SignalROperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211001storageSignalRSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240301storageSignalRSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -487,36 +559,48 @@ public partial class V1api20211001storageSignalRSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211001storageSignalRSpecOwner Owner { get; set; }
+    public V1api20240301storageSignalRSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("publicNetworkAccess")]
     public string? PublicNetworkAccess { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ResourceLogConfiguration Resource log configuration of a Microsoft.SignalRService resource.</summary>
-    [JsonPropertyName("resourceLogConfiguration")]
-    public V1api20211001storageSignalRSpecResourceLogConfiguration? ResourceLogConfiguration { get; set; }
+    /// <summary></summary>
+    [JsonPropertyName("regionEndpointEnabled")]
+    public string? RegionEndpointEnabled { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ResourceSku The billing information of the resource.</summary>
+    /// <summary>Storage version of v1api20240301.ResourceLogConfiguration Resource log configuration of a Microsoft.SignalRService resource.</summary>
+    [JsonPropertyName("resourceLogConfiguration")]
+    public V1api20240301storageSignalRSpecResourceLogConfiguration? ResourceLogConfiguration { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("resourceStopped")]
+    public string? ResourceStopped { get; set; }
+
+    /// <summary>Storage version of v1api20240301.ServerlessSettings Serverless settings.</summary>
+    [JsonPropertyName("serverless")]
+    public V1api20240301storageSignalRSpecServerless? Serverless { get; set; }
+
+    /// <summary>Storage version of v1api20240301.ResourceSku The billing information of the resource.</summary>
     [JsonPropertyName("sku")]
-    public V1api20211001storageSignalRSpecSku? Sku { get; set; }
+    public V1api20240301storageSignalRSpecSku? Sku { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalRTlsSettings TLS settings for the resource</summary>
+    /// <summary>Storage version of v1api20240301.SignalRTlsSettings TLS settings for the resource</summary>
     [JsonPropertyName("tls")]
-    public V1api20211001storageSignalRSpecTls? Tls { get; set; }
+    public V1api20240301storageSignalRSpecTls? Tls { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ServerlessUpstreamSettings The settings for the Upstream when the service is in server-less mode.</summary>
+    /// <summary>Storage version of v1api20240301.ServerlessUpstreamSettings The settings for the Upstream when the service is in server-less mode.</summary>
     [JsonPropertyName("upstream")]
-    public V1api20211001storageSignalRSpecUpstream? Upstream { get; set; }
+    public V1api20240301storageSignalRSpecUpstream? Upstream { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusConditions
+public partial class V1api20240301storageSignalRStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -547,9 +631,9 @@ public partial class V1api20211001storageSignalRStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalRCorsSettings_STATUS Cross-Origin Resource Sharing (CORS) settings.</summary>
+/// <summary>Storage version of v1api20240301.SignalRCorsSettings_STATUS Cross-Origin Resource Sharing (CORS) settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusCors
+public partial class V1api20240301storageSignalRStatusCors
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -560,9 +644,9 @@ public partial class V1api20211001storageSignalRStatusCors
     public IList<string>? AllowedOrigins { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalRFeature_STATUS Feature of a resource, which controls the runtime behavior.</summary>
+/// <summary>Storage version of v1api20240301.SignalRFeature_STATUS Feature of a resource, which controls the runtime behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusFeatures
+public partial class V1api20240301storageSignalRStatusFeatures
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -581,9 +665,9 @@ public partial class V1api20211001storageSignalRStatusFeatures
     public string? Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.UserAssignedIdentityProperty_STATUS Properties of user assigned identity.</summary>
+/// <summary>Storage version of v1api20240301.UserAssignedIdentityProperty_STATUS Properties of user assigned identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusIdentityUserAssignedIdentities
+public partial class V1api20240301storageSignalRStatusIdentityUserAssignedIdentities
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -598,9 +682,9 @@ public partial class V1api20211001storageSignalRStatusIdentityUserAssignedIdenti
     public string? PrincipalId { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ManagedIdentity_STATUS A class represent managed identities used for request and response</summary>
+/// <summary>Storage version of v1api20240301.ManagedIdentity_STATUS A class represent managed identities used for request and response</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusIdentity
+public partial class V1api20240301storageSignalRStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -620,84 +704,12 @@ public partial class V1api20211001storageSignalRStatusIdentity
 
     /// <summary></summary>
     [JsonPropertyName("userAssignedIdentities")]
-    public IDictionary<string, V1api20211001storageSignalRStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
+    public IDictionary<string, V1api20240301storageSignalRStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.PrivateEndpointACL_STATUS ACL for a private endpoint</summary>
+/// <summary>Storage version of v1api20240301.LiveTraceCategory_STATUS Live trace category configuration of a Microsoft.SignalRService resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusNetworkACLsPrivateEndpoints
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("allow")]
-    public IList<string>? Allow { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("deny")]
-    public IList<string>? Deny { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.NetworkACL_STATUS Network ACL</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusNetworkACLsPublicNetwork
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("allow")]
-    public IList<string>? Allow { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("deny")]
-    public IList<string>? Deny { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.SignalRNetworkACLs_STATUS Network ACLs for the resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusNetworkACLs
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("defaultAction")]
-    public string? DefaultAction { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("privateEndpoints")]
-    public IList<V1api20211001storageSignalRStatusNetworkACLsPrivateEndpoints>? PrivateEndpoints { get; set; }
-
-    /// <summary>Storage version of v1api20211001.NetworkACL_STATUS Network ACL</summary>
-    [JsonPropertyName("publicNetwork")]
-    public V1api20211001storageSignalRStatusNetworkACLsPublicNetwork? PublicNetwork { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.PrivateEndpointConnection_STATUS_SignalR_SubResourceEmbedded A private endpoint connection to an azure resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusPrivateEndpointConnections
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("id")]
-    public string? Id { get; set; }
-}
-
-/// <summary>Storage version of v1api20211001.ResourceLogCategory_STATUS Resource log category configuration of a Microsoft.SignalRService resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusResourceLogConfigurationCategories
+public partial class V1api20240301storageSignalRStatusLiveTraceConfigurationCategories
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -712,9 +724,9 @@ public partial class V1api20211001storageSignalRStatusResourceLogConfigurationCa
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ResourceLogConfiguration_STATUS Resource log configuration of a Microsoft.SignalRService resource.</summary>
+/// <summary>Storage version of v1api20240301.LiveTraceConfiguration_STATUS Live trace configuration of a Microsoft.SignalRService resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusResourceLogConfiguration
+public partial class V1api20240301storageSignalRStatusLiveTraceConfiguration
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -722,12 +734,96 @@ public partial class V1api20211001storageSignalRStatusResourceLogConfiguration
 
     /// <summary></summary>
     [JsonPropertyName("categories")]
-    public IList<V1api20211001storageSignalRStatusResourceLogConfigurationCategories>? Categories { get; set; }
+    public IList<V1api20240301storageSignalRStatusLiveTraceConfigurationCategories>? Categories { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public string? Enabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SharedPrivateLinkResource_STATUS_SignalR_SubResourceEmbedded Describes a Shared Private Link Resource</summary>
+/// <summary>Storage version of v1api20240301.IPRule_STATUS An IP rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusSharedPrivateLinkResources
+public partial class V1api20240301storageSignalRStatusNetworkACLsIpRules
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.PrivateEndpointACL_STATUS ACL for a private endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusNetworkACLsPrivateEndpoints
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("allow")]
+    public IList<string>? Allow { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("deny")]
+    public IList<string>? Deny { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.NetworkACL_STATUS Network ACL</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusNetworkACLsPublicNetwork
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("allow")]
+    public IList<string>? Allow { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("deny")]
+    public IList<string>? Deny { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SignalRNetworkACLs_STATUS Network ACLs for the resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusNetworkACLs
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("defaultAction")]
+    public string? DefaultAction { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("ipRules")]
+    public IList<V1api20240301storageSignalRStatusNetworkACLsIpRules>? IpRules { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("privateEndpoints")]
+    public IList<V1api20240301storageSignalRStatusNetworkACLsPrivateEndpoints>? PrivateEndpoints { get; set; }
+
+    /// <summary>Storage version of v1api20240301.NetworkACL_STATUS Network ACL</summary>
+    [JsonPropertyName("publicNetwork")]
+    public V1api20240301storageSignalRStatusNetworkACLsPublicNetwork? PublicNetwork { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.PrivateEndpointConnection_STATUS_SignalR_SubResourceEmbedded A private endpoint connection to an azure resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusPrivateEndpointConnections
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -738,9 +834,65 @@ public partial class V1api20211001storageSignalRStatusSharedPrivateLinkResources
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ResourceSku_STATUS The billing information of the resource.</summary>
+/// <summary>Storage version of v1api20240301.ResourceLogCategory_STATUS Resource log category configuration of a Microsoft.SignalRService resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusSku
+public partial class V1api20240301storageSignalRStatusResourceLogConfigurationCategories
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public string? Enabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ResourceLogConfiguration_STATUS Resource log configuration of a Microsoft.SignalRService resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusResourceLogConfiguration
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("categories")]
+    public IList<V1api20240301storageSignalRStatusResourceLogConfigurationCategories>? Categories { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ServerlessSettings_STATUS Serverless settings.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusServerless
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("connectionTimeoutInSeconds")]
+    public int? ConnectionTimeoutInSeconds { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.SharedPrivateLinkResource_STATUS_SignalR_SubResourceEmbedded Describes a Shared Private Link Resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusSharedPrivateLinkResources
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+}
+
+/// <summary>Storage version of v1api20240301.ResourceSku_STATUS The billing information of the resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20240301storageSignalRStatusSku
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -767,9 +919,9 @@ public partial class V1api20211001storageSignalRStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240301.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusSystemData
+public partial class V1api20240301storageSignalRStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -800,9 +952,9 @@ public partial class V1api20211001storageSignalRStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalRTlsSettings_STATUS TLS settings for the resource</summary>
+/// <summary>Storage version of v1api20240301.SignalRTlsSettings_STATUS TLS settings for the resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusTls
+public partial class V1api20240301storageSignalRStatusTls
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -813,9 +965,9 @@ public partial class V1api20211001storageSignalRStatusTls
     public bool? ClientCertEnabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ManagedIdentitySettings_STATUS Managed identity settings for upstream.</summary>
+/// <summary>Storage version of v1api20240301.ManagedIdentitySettings_STATUS Managed identity settings for upstream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusUpstreamTemplatesAuthManagedIdentity
+public partial class V1api20240301storageSignalRStatusUpstreamTemplatesAuthManagedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -826,34 +978,34 @@ public partial class V1api20211001storageSignalRStatusUpstreamTemplatesAuthManag
     public string? Resource { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.UpstreamAuthSettings_STATUS Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
+/// <summary>Storage version of v1api20240301.UpstreamAuthSettings_STATUS Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusUpstreamTemplatesAuth
+public partial class V1api20240301storageSignalRStatusUpstreamTemplatesAuth
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ManagedIdentitySettings_STATUS Managed identity settings for upstream.</summary>
+    /// <summary>Storage version of v1api20240301.ManagedIdentitySettings_STATUS Managed identity settings for upstream.</summary>
     [JsonPropertyName("managedIdentity")]
-    public V1api20211001storageSignalRStatusUpstreamTemplatesAuthManagedIdentity? ManagedIdentity { get; set; }
+    public V1api20240301storageSignalRStatusUpstreamTemplatesAuthManagedIdentity? ManagedIdentity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.UpstreamTemplate_STATUS Upstream template item settings. It defines the Upstream URL of the incoming requests. The template defines the pattern of the event, the hub or the category of the incoming request that matches current URL template.</summary>
+/// <summary>Storage version of v1api20240301.UpstreamTemplate_STATUS Upstream template item settings. It defines the Upstream URL of the incoming requests. The template defines the pattern of the event, the hub or the category of the incoming request that matches current URL template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusUpstreamTemplates
+public partial class V1api20240301storageSignalRStatusUpstreamTemplates
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211001.UpstreamAuthSettings_STATUS Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
+    /// <summary>Storage version of v1api20240301.UpstreamAuthSettings_STATUS Upstream auth settings. If not set, no auth is used for upstream messages.</summary>
     [JsonPropertyName("auth")]
-    public V1api20211001storageSignalRStatusUpstreamTemplatesAuth? Auth { get; set; }
+    public V1api20240301storageSignalRStatusUpstreamTemplatesAuth? Auth { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("categoryPattern")]
@@ -872,9 +1024,9 @@ public partial class V1api20211001storageSignalRStatusUpstreamTemplates
     public string? UrlTemplate { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.ServerlessUpstreamSettings_STATUS The settings for the Upstream when the service is in server-less mode.</summary>
+/// <summary>Storage version of v1api20240301.ServerlessUpstreamSettings_STATUS The settings for the Upstream when the service is in server-less mode.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatusUpstream
+public partial class V1api20240301storageSignalRStatusUpstream
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -882,12 +1034,12 @@ public partial class V1api20211001storageSignalRStatusUpstream
 
     /// <summary></summary>
     [JsonPropertyName("templates")]
-    public IList<V1api20211001storageSignalRStatusUpstreamTemplates>? Templates { get; set; }
+    public IList<V1api20240301storageSignalRStatusUpstreamTemplates>? Templates { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalR_STATUS</summary>
+/// <summary>Storage version of v1api20240301.SignalR_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211001storageSignalRStatus
+public partial class V1api20240301storageSignalRStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -895,11 +1047,11 @@ public partial class V1api20211001storageSignalRStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211001storageSignalRStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240301storageSignalRStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalRCorsSettings_STATUS Cross-Origin Resource Sharing (CORS) settings.</summary>
+    /// <summary>Storage version of v1api20240301.SignalRCorsSettings_STATUS Cross-Origin Resource Sharing (CORS) settings.</summary>
     [JsonPropertyName("cors")]
-    public V1api20211001storageSignalRStatusCors? Cors { get; set; }
+    public V1api20240301storageSignalRStatusCors? Cors { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("disableAadAuth")]
@@ -915,7 +1067,7 @@ public partial class V1api20211001storageSignalRStatus
 
     /// <summary></summary>
     [JsonPropertyName("features")]
-    public IList<V1api20211001storageSignalRStatusFeatures>? Features { get; set; }
+    public IList<V1api20240301storageSignalRStatusFeatures>? Features { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("hostName")]
@@ -929,13 +1081,17 @@ public partial class V1api20211001storageSignalRStatus
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ManagedIdentity_STATUS A class represent managed identities used for request and response</summary>
+    /// <summary>Storage version of v1api20240301.ManagedIdentity_STATUS A class represent managed identities used for request and response</summary>
     [JsonPropertyName("identity")]
-    public V1api20211001storageSignalRStatusIdentity? Identity { get; set; }
+    public V1api20240301storageSignalRStatusIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
+
+    /// <summary>Storage version of v1api20240301.LiveTraceConfiguration_STATUS Live trace configuration of a Microsoft.SignalRService resource.</summary>
+    [JsonPropertyName("liveTraceConfiguration")]
+    public V1api20240301storageSignalRStatusLiveTraceConfiguration? LiveTraceConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("location")]
@@ -945,13 +1101,13 @@ public partial class V1api20211001storageSignalRStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalRNetworkACLs_STATUS Network ACLs for the resource</summary>
+    /// <summary>Storage version of v1api20240301.SignalRNetworkACLs_STATUS Network ACLs for the resource</summary>
     [JsonPropertyName("networkACLs")]
-    public V1api20211001storageSignalRStatusNetworkACLs? NetworkACLs { get; set; }
+    public V1api20240301storageSignalRStatusNetworkACLs? NetworkACLs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("privateEndpointConnections")]
-    public IList<V1api20211001storageSignalRStatusPrivateEndpointConnections>? PrivateEndpointConnections { get; set; }
+    public IList<V1api20240301storageSignalRStatusPrivateEndpointConnections>? PrivateEndpointConnections { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("provisioningState")]
@@ -965,53 +1121,65 @@ public partial class V1api20211001storageSignalRStatus
     [JsonPropertyName("publicPort")]
     public int? PublicPort { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ResourceLogConfiguration_STATUS Resource log configuration of a Microsoft.SignalRService resource.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("regionEndpointEnabled")]
+    public string? RegionEndpointEnabled { get; set; }
+
+    /// <summary>Storage version of v1api20240301.ResourceLogConfiguration_STATUS Resource log configuration of a Microsoft.SignalRService resource.</summary>
     [JsonPropertyName("resourceLogConfiguration")]
-    public V1api20211001storageSignalRStatusResourceLogConfiguration? ResourceLogConfiguration { get; set; }
+    public V1api20240301storageSignalRStatusResourceLogConfiguration? ResourceLogConfiguration { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("resourceStopped")]
+    public string? ResourceStopped { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("serverPort")]
     public int? ServerPort { get; set; }
 
+    /// <summary>Storage version of v1api20240301.ServerlessSettings_STATUS Serverless settings.</summary>
+    [JsonPropertyName("serverless")]
+    public V1api20240301storageSignalRStatusServerless? Serverless { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("sharedPrivateLinkResources")]
-    public IList<V1api20211001storageSignalRStatusSharedPrivateLinkResources>? SharedPrivateLinkResources { get; set; }
+    public IList<V1api20240301storageSignalRStatusSharedPrivateLinkResources>? SharedPrivateLinkResources { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ResourceSku_STATUS The billing information of the resource.</summary>
+    /// <summary>Storage version of v1api20240301.ResourceSku_STATUS The billing information of the resource.</summary>
     [JsonPropertyName("sku")]
-    public V1api20211001storageSignalRStatusSku? Sku { get; set; }
+    public V1api20240301storageSignalRStatusSku? Sku { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240301.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211001storageSignalRStatusSystemData? SystemData { get; set; }
+    public V1api20240301storageSignalRStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalRTlsSettings_STATUS TLS settings for the resource</summary>
+    /// <summary>Storage version of v1api20240301.SignalRTlsSettings_STATUS TLS settings for the resource</summary>
     [JsonPropertyName("tls")]
-    public V1api20211001storageSignalRStatusTls? Tls { get; set; }
+    public V1api20240301storageSignalRStatusTls? Tls { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Storage version of v1api20211001.ServerlessUpstreamSettings_STATUS The settings for the Upstream when the service is in server-less mode.</summary>
+    /// <summary>Storage version of v1api20240301.ServerlessUpstreamSettings_STATUS The settings for the Upstream when the service is in server-less mode.</summary>
     [JsonPropertyName("upstream")]
-    public V1api20211001storageSignalRStatusUpstream? Upstream { get; set; }
+    public V1api20240301storageSignalRStatusUpstream? Upstream { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
 
-/// <summary>Storage version of v1api20211001.SignalR Generator information: - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2021-10-01/signalr.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}</summary>
+/// <summary>Storage version of v1api20240301.SignalR Generator information: - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2024-03-01/signalr.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211001storageSignalR : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211001storageSignalRSpec>, IStatus<V1api20211001storageSignalRStatus>
+public partial class V1api20240301storageSignalR : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240301storageSignalRSpec>, IStatus<V1api20240301storageSignalRStatus>
 {
-    public const string KubeApiVersion = "v1api20211001storage";
+    public const string KubeApiVersion = "v1api20240301storage";
     public const string KubeKind = "SignalR";
     public const string KubeGroup = "signalrservice.azure.com";
     public const string KubePluralName = "signalrs";
@@ -1027,11 +1195,11 @@ public partial class V1api20211001storageSignalR : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalR_Spec</summary>
+    /// <summary>Storage version of v1api20240301.SignalR_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211001storageSignalRSpec? Spec { get; set; }
+    public V1api20240301storageSignalRSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211001.SignalR_STATUS</summary>
+    /// <summary>Storage version of v1api20240301.SignalR_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211001storageSignalRStatus? Status { get; set; }
+    public V1api20240301storageSignalRStatus? Status { get; set; }
 }

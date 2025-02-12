@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOperator
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOperatorSpecSecretExpressions
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOperator
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerTriggerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerTriggerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOperatorSpec
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOperator
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20231115storageSqlDatabaseContainerTriggerSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseContainerTriggerSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20231115storageSqlDatabaseContainerTriggerSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseContainerTriggerSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOptionsAutoscaleSettings
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpecOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -72,17 +72,17 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOptionsA
     public int? MaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+/// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOptions
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpecOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageSqlDatabaseContainerTriggerSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("throughput")]
@@ -91,7 +91,7 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOptions
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabaseContainer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOwner
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -102,9 +102,9 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlTriggerResource Cosmos DB SQL trigger resource object</summary>
+/// <summary>Storage version of v1api20240815.SqlTriggerResource Cosmos DB SQL trigger resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecResource
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -127,9 +127,9 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpecResource
     public string? TriggerType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_Spec</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerTrigger_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerSpec
+public partial class V1api20240815storageSqlDatabaseContainerTriggerSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -143,13 +143,13 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerTriggerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseContainerTriggerOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20231115storageSqlDatabaseContainerTriggerSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerSpecOperatorSpec? OperatorSpec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+    /// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageSqlDatabaseContainerTriggerSpecOptions? Options { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerSpecOptions? Options { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -157,20 +157,20 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabaseContainer resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231115storageSqlDatabaseContainerTriggerSpecOwner Owner { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlTriggerResource Cosmos DB SQL trigger resource object</summary>
+    /// <summary>Storage version of v1api20240815.SqlTriggerResource Cosmos DB SQL trigger resource object</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseContainerTriggerSpecResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerSpecResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerStatusConditions
+public partial class V1api20240815storageSqlDatabaseContainerTriggerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -201,9 +201,9 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerStatusCondit
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlTriggerGetProperties_Resource_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlTriggerGetProperties_Resource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerStatusResource
+public partial class V1api20240815storageSqlDatabaseContainerTriggerStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -238,9 +238,9 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerStatusResour
     public string? TriggerType { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerTrigger_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerTriggerStatus
+public partial class V1api20240815storageSqlDatabaseContainerTriggerStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -248,7 +248,7 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231115storageSqlDatabaseContainerTriggerStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseContainerTriggerStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -262,9 +262,9 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlTriggerGetProperties_Resource_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlTriggerGetProperties_Resource_STATUS</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseContainerTriggerStatusResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerStatusResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -275,12 +275,12 @@ public partial class V1api20231115storageSqlDatabaseContainerTriggerStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/triggers/{triggerName}</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerTrigger Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/triggers/{triggerName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231115storageSqlDatabaseContainerTrigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlDatabaseContainerTriggerSpec>, IStatus<V1api20231115storageSqlDatabaseContainerTriggerStatus>
+public partial class V1api20240815storageSqlDatabaseContainerTrigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240815storageSqlDatabaseContainerTriggerSpec>, IStatus<V1api20240815storageSqlDatabaseContainerTriggerStatus>
 {
-    public const string KubeApiVersion = "v1api20231115storage";
+    public const string KubeApiVersion = "v1api20240815storage";
     public const string KubeKind = "SqlDatabaseContainerTrigger";
     public const string KubeGroup = "documentdb.azure.com";
     public const string KubePluralName = "sqldatabasecontainertriggers";
@@ -296,11 +296,11 @@ public partial class V1api20231115storageSqlDatabaseContainerTrigger : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_Spec</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseContainerTrigger_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231115storageSqlDatabaseContainerTriggerSpec? Spec { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerTrigger_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseContainerTrigger_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20231115storageSqlDatabaseContainerTriggerStatus? Status { get; set; }
+    public V1api20240815storageSqlDatabaseContainerTriggerStatus? Status { get; set; }
 }

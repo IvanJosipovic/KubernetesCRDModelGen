@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.eventhub.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOpe
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOpe
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOperatorSpec
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOpe
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubsConsumerGroupSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/NamespacesEventhub resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOwner
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -72,9 +72,9 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpecOwn
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_Spec</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroup_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpec
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -84,9 +84,9 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroupOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespacesEventhubsConsumerGroupSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespacesEventhubsConsumerGroupSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -94,16 +94,16 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/NamespacesEventhub resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespacesEventhubsConsumerGroupSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespacesEventhubsConsumerGroupSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("userMetadata")]
     public string? UserMetadata { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusConditions
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -134,9 +134,9 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusC
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusSystemData
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -167,9 +167,9 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatusS
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_STATUS</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroup_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatus
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -177,7 +177,7 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespacesEventhubsConsumerGroupStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubsConsumerGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("createdAt")]
@@ -195,9 +195,9 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespacesEventhubsConsumerGroupStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespacesEventhubsConsumerGroupStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -212,12 +212,12 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroupStatus
     public string? UserMetadata { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/consumergroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/consumergroups/{consumerGroupName}</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroup Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/consumergroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/consumergroups/{consumerGroupName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespacesEventhubsConsumerGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesEventhubsConsumerGroupSpec>, IStatus<V1api20211101storageNamespacesEventhubsConsumerGroupStatus>
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespacesEventhubsConsumerGroupSpec>, IStatus<V1api20240101storageNamespacesEventhubsConsumerGroupStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "NamespacesEventhubsConsumerGroup";
     public const string KubeGroup = "eventhub.azure.com";
     public const string KubePluralName = "namespaceseventhubsconsumergroups";
@@ -233,11 +233,11 @@ public partial class V1api20211101storageNamespacesEventhubsConsumerGroup : IKub
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_Spec</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroup_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespacesEventhubsConsumerGroupSpec? Spec { get; set; }
+    public V1api20240101storageNamespacesEventhubsConsumerGroupSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubsConsumerGroup_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroup_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespacesEventhubsConsumerGroupStatus? Status { get; set; }
+    public V1api20240101storageNamespacesEventhubsConsumerGroupStatus? Status { get; set; }
 }

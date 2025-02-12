@@ -21,7 +21,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
     public string? Visibility { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullSecret
 {
@@ -50,7 +50,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
     [JsonPropertyName("fipsValidatedModules")]
     public string? FipsValidatedModules { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("pullSecret")]
     public V1api20231122storageOpenShiftClusterSpecClusterProfilePullSecret? PullSecret { get; set; }
 
@@ -266,7 +266,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientIdFromConfig
 {
@@ -279,7 +279,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret
 {
@@ -304,11 +304,11 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("clientIdFromConfig")]
     public V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientIdFromConfig? ClientIdFromConfig { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("clientSecret")]
     public V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret? ClientSecret { get; set; }
 }
@@ -499,7 +499,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
     public string? Version { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusConditions
 {

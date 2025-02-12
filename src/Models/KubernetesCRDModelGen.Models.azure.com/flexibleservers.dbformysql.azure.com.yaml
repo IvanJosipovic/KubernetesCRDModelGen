@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.11.0
+    app.kubernetes.io/version: v2.12.0
   name: flexibleservers.dbformysql.azure.com
 spec:
   conversion:
@@ -221,7 +221,10 @@ spec:
                       description: Information about the user assigned identity for the resource
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -561,7 +564,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -858,6 +864,8 @@ spec:
                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                   the resource it is on.
+
+                  nolint:recvcheck
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
@@ -1020,7 +1028,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -1412,7 +1423,10 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -1869,7 +1883,10 @@ spec:
                       description: Information about the user assigned identity for the resource
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -2280,7 +2297,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -2609,6 +2629,8 @@ spec:
                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                   the resource it is on.
+
+                  nolint:recvcheck
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
@@ -2771,7 +2793,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -2816,6 +2841,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -3229,7 +3256,10 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.

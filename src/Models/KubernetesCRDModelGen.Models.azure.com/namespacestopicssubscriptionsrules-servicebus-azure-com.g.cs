@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.com;
-/// <summary>Storage version of v1api20211101.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
+/// <summary>Storage version of v1api20240101.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecAction
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecAction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -29,9 +29,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecAc
     public string? SqlExpression { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.CorrelationFilter Represents the correlation filter expression.</summary>
+/// <summary>Storage version of v1api20240101.CorrelationFilter Represents the correlation filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecCorrelationFilter
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecCorrelationFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -80,7 +80,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecCo
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -97,7 +97,7 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOp
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -112,9 +112,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOp
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpec
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -122,16 +122,16 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOp
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOwner
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -142,9 +142,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOw
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
+/// <summary>Storage version of v1api20240101.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecSqlFilter
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecSqlFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -163,33 +163,33 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecSq
     public string? SqlExpression { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_Spec</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
+    /// <summary>Storage version of v1api20240101.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
     [JsonPropertyName("action")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecAction? Action { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecAction? Action { get; set; }
 
     /// <summary>AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be.</summary>
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20211101.CorrelationFilter Represents the correlation filter expression.</summary>
+    /// <summary>Storage version of v1api20240101.CorrelationFilter Represents the correlation filter expression.</summary>
     [JsonPropertyName("correlationFilter")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecCorrelationFilter? CorrelationFilter { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecCorrelationFilter? CorrelationFilter { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("filterType")]
     public string? FilterType { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -197,16 +197,16 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
+    /// <summary>Storage version of v1api20240101.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
     [JsonPropertyName("sqlFilter")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleSpecSqlFilter? SqlFilter { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleSpecSqlFilter? SqlFilter { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
+/// <summary>Storage version of v1api20240101.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusAction
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusAction
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -225,9 +225,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     public string? SqlExpression { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusConditions
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -258,9 +258,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.CorrelationFilter_STATUS Represents the correlation filter expression.</summary>
+/// <summary>Storage version of v1api20240101.CorrelationFilter_STATUS Represents the correlation filter expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusCorrelationFilter
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusCorrelationFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -307,9 +307,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     public string? To { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
+/// <summary>Storage version of v1api20240101.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusSqlFilter
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusSqlFilter
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -328,9 +328,9 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     public string? SqlExpression { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusSystemData
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -361,25 +361,25 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_STATUS</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20211101.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
+    /// <summary>Storage version of v1api20240101.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.</summary>
     [JsonPropertyName("action")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusAction? Action { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusAction? Action { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Storage version of v1api20211101.CorrelationFilter_STATUS Represents the correlation filter expression.</summary>
+    /// <summary>Storage version of v1api20240101.CorrelationFilter_STATUS Represents the correlation filter expression.</summary>
     [JsonPropertyName("correlationFilter")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusCorrelationFilter? CorrelationFilter { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusCorrelationFilter? CorrelationFilter { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("filterType")]
@@ -397,25 +397,25 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
+    /// <summary>Storage version of v1api20240101.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.</summary>
     [JsonPropertyName("sqlFilter")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusSqlFilter? SqlFilter { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusSqlFilter? SqlFilter { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}</summary>
+/// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespacesTopicsSubscriptionsRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec>, IStatus<V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus>
+public partial class V1api20240101storageNamespacesTopicsSubscriptionsRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespacesTopicsSubscriptionsRuleSpec>, IStatus<V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "NamespacesTopicsSubscriptionsRule";
     public const string KubeGroup = "servicebus.azure.com";
     public const string KubePluralName = "namespacestopicssubscriptionsrules";
@@ -431,11 +431,11 @@ public partial class V1api20211101storageNamespacesTopicsSubscriptionsRule : IKu
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_Spec</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleSpec? Spec { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesTopicsSubscriptionsRule_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespacesTopicsSubscriptionsRuleStatus? Status { get; set; }
+    public V1api20240101storageNamespacesTopicsSubscriptionsRuleStatus? Status { get; set; }
 }
