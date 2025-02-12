@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecSecretExpressions
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerStoredProcedureOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerStoredProcedureOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOperatorSpec
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOptionsAutoscaleSettings
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -72,17 +72,17 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
     public int? MaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+/// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOptions
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("throughput")]
@@ -91,7 +91,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabaseContainer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOwner
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -102,9 +102,9 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlStoredProcedureResource Cosmos DB SQL storedProcedure resource object</summary>
+/// <summary>Storage version of v1api20240815.SqlStoredProcedureResource Cosmos DB SQL storedProcedure resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpecResource
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -119,9 +119,9 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerStoredProcedure_Spec</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerStoredProcedure_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -135,13 +135,13 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerStoredProcedureOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseContainerStoredProcedureOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOperatorSpec? OperatorSpec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+    /// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOptions? Options { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOptions? Options { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -149,20 +149,20 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/SqlDatabaseContainer resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureSpecOwner Owner { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlStoredProcedureResource Cosmos DB SQL storedProcedure resource object</summary>
+    /// <summary>Storage version of v1api20240815.SqlStoredProcedureResource Cosmos DB SQL storedProcedure resource object</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureSpecResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureSpecResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStatusConditions
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -193,9 +193,9 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStat
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlStoredProcedureGetProperties_Resource_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlStoredProcedureGetProperties_Resource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStatusResource
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -222,9 +222,9 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStat
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerStoredProcedure_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerStoredProcedure_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStatus
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedureStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -232,7 +232,7 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStat
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231115storageSqlDatabaseContainerStoredProcedureStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseContainerStoredProcedureStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -246,9 +246,9 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStat
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlStoredProcedureGetProperties_Resource_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlStoredProcedureGetProperties_Resource_STATUS</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureStatusResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureStatusResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -259,12 +259,12 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedureStat
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseContainerStoredProcedure Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/storedProcedures/{storedProcedureName}</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerStoredProcedure Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/storedProcedures/{storedProcedureName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231115storageSqlDatabaseContainerStoredProcedure : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlDatabaseContainerStoredProcedureSpec>, IStatus<V1api20231115storageSqlDatabaseContainerStoredProcedureStatus>
+public partial class V1api20240815storageSqlDatabaseContainerStoredProcedure : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240815storageSqlDatabaseContainerStoredProcedureSpec>, IStatus<V1api20240815storageSqlDatabaseContainerStoredProcedureStatus>
 {
-    public const string KubeApiVersion = "v1api20231115storage";
+    public const string KubeApiVersion = "v1api20240815storage";
     public const string KubeKind = "SqlDatabaseContainerStoredProcedure";
     public const string KubeGroup = "documentdb.azure.com";
     public const string KubePluralName = "sqldatabasecontainerstoredprocedures";
@@ -280,11 +280,11 @@ public partial class V1api20231115storageSqlDatabaseContainerStoredProcedure : I
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerStoredProcedure_Spec</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseContainerStoredProcedure_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureSpec? Spec { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseContainerStoredProcedure_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseContainerStoredProcedure_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20231115storageSqlDatabaseContainerStoredProcedureStatus? Status { get; set; }
+    public V1api20240815storageSqlDatabaseContainerStoredProcedureStatus? Status { get; set; }
 }

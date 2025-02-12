@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.servicebus.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -44,7 +44,7 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -57,7 +57,7 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -70,7 +70,7 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -83,7 +83,7 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -94,9 +94,9 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesAuthorizationRuleOperatorSecrets</summary>
+/// <summary>Storage version of v1api20240101.NamespacesAuthorizationRuleOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecrets
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -104,24 +104,24 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryConnectionString")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryKey")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryConnectionString")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryKey")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespacesAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpec
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -129,20 +129,20 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOperator
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesAuthorizationRuleOperatorSecrets</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesAuthorizationRuleOperatorSecrets</summary>
     [JsonPropertyName("secrets")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpecSecrets? Secrets { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/Namespace resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOwner
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -153,9 +153,9 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesAuthorizationRule_Spec</summary>
+/// <summary>Storage version of v1api20240101.NamespacesAuthorizationRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleSpec
+public partial class V1api20240101storageNamespacesAuthorizationRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -165,9 +165,9 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -175,16 +175,16 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/Namespace resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("rights")]
     public IList<string>? Rights { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleStatusConditions
+public partial class V1api20240101storageNamespacesAuthorizationRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -215,9 +215,9 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleStatusCondit
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleStatusSystemData
+public partial class V1api20240101storageNamespacesAuthorizationRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -248,9 +248,9 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleStatusSystem
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesAuthorizationRule_STATUS</summary>
+/// <summary>Storage version of v1api20240101.NamespacesAuthorizationRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesAuthorizationRuleStatus
+public partial class V1api20240101storageNamespacesAuthorizationRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -258,7 +258,7 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespacesAuthorizationRuleStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespacesAuthorizationRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -276,21 +276,21 @@ public partial class V1api20211101storageNamespacesAuthorizationRuleStatus
     [JsonPropertyName("rights")]
     public IList<string>? Rights { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespacesAuthorizationRuleStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesAuthorizationRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/AuthorizationRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/AuthorizationRules/{authorizationRuleName}</summary>
+/// <summary>Storage version of v1api20240101.NamespacesAuthorizationRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/AuthorizationRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/AuthorizationRules/{authorizationRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespacesAuthorizationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesAuthorizationRuleSpec>, IStatus<V1api20211101storageNamespacesAuthorizationRuleStatus>
+public partial class V1api20240101storageNamespacesAuthorizationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespacesAuthorizationRuleSpec>, IStatus<V1api20240101storageNamespacesAuthorizationRuleStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "NamespacesAuthorizationRule";
     public const string KubeGroup = "servicebus.azure.com";
     public const string KubePluralName = "namespacesauthorizationrules";
@@ -306,11 +306,11 @@ public partial class V1api20211101storageNamespacesAuthorizationRule : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesAuthorizationRule_Spec</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesAuthorizationRule_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespacesAuthorizationRuleSpec? Spec { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesAuthorizationRule_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesAuthorizationRule_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespacesAuthorizationRuleStatus? Status { get; set; }
+    public V1api20240101storageNamespacesAuthorizationRuleStatus? Status { get; set; }
 }

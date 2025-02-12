@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.eventhub.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretExpressions
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -44,7 +44,7 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -57,7 +57,7 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -70,7 +70,7 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -83,7 +83,7 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
 /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
     [JsonPropertyName("key")]
@@ -94,9 +94,9 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRuleOperatorSecrets</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRuleOperatorSecrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecrets
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecrets
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -104,24 +104,24 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryConnectionString")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryConnectionString? PrimaryConnectionString { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("primaryKey")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsPrimaryKey? PrimaryKey { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryConnectionString")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryConnectionString? SecondaryConnectionString { get; set; }
 
     /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("secondaryKey")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretsSecondaryKey? SecondaryKey { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpec
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -129,20 +129,20 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRuleOperatorSecrets</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRuleOperatorSecrets</summary>
     [JsonPropertyName("secrets")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecrets? Secrets { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/NamespacesEventhub resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOwner
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -153,9 +153,9 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRule_Spec</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpec
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -165,9 +165,9 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -175,16 +175,16 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSpe
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventhub.azure.com/NamespacesEventhub resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpecOwner Owner { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("rights")]
     public IList<string>? Rights { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleStatusConditions
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -215,9 +215,9 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSta
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleStatusSystemData
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -248,9 +248,9 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSta
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRule_STATUS</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleStatus
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -258,7 +258,7 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSta
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20211101storageNamespacesEventhubsAuthorizationRuleStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240101storageNamespacesEventhubsAuthorizationRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -276,21 +276,21 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRuleSta
     [JsonPropertyName("rights")]
     public IList<string>? Rights { get; set; }
 
-    /// <summary>Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleStatusSystemData? SystemData { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRule Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/AuthorizationRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}</summary>
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/AuthorizationRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/authorizationRules/{authorizationRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageNamespacesEventhubsAuthorizationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20211101storageNamespacesEventhubsAuthorizationRuleSpec>, IStatus<V1api20211101storageNamespacesEventhubsAuthorizationRuleStatus>
+public partial class V1api20240101storageNamespacesEventhubsAuthorizationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240101storageNamespacesEventhubsAuthorizationRuleSpec>, IStatus<V1api20240101storageNamespacesEventhubsAuthorizationRuleStatus>
 {
-    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeApiVersion = "v1api20240101storage";
     public const string KubeKind = "NamespacesEventhubsAuthorizationRule";
     public const string KubeGroup = "eventhub.azure.com";
     public const string KubePluralName = "namespaceseventhubsauthorizationrules";
@@ -306,11 +306,11 @@ public partial class V1api20211101storageNamespacesEventhubsAuthorizationRule : 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRule_Spec</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleSpec? Spec { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20211101.NamespacesEventhubsAuthorizationRule_STATUS</summary>
+    /// <summary>Storage version of v1api20240101.NamespacesEventhubsAuthorizationRule_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20211101storageNamespacesEventhubsAuthorizationRuleStatus? Status { get; set; }
+    public V1api20240101storageNamespacesEventhubsAuthorizationRuleStatus? Status { get; set; }
 }

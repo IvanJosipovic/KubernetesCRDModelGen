@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kubernetesconfiguration.azure.com;
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecAzureBlobAccountKey
 {
@@ -34,7 +34,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobManagedId
     public string? ClientId { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecAzureBlobSasToken
 {
@@ -47,7 +47,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobSasToken
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificate
 {
@@ -60,7 +60,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificatePassword
 {
@@ -73,7 +73,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientIdFromConfig
 {
@@ -86,7 +86,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientSecret
 {
@@ -99,7 +99,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalTenantIdFromConfig
 {
@@ -120,11 +120,11 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("clientCertificate")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificate? ClientCertificate { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("clientCertificatePassword")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificatePassword? ClientCertificatePassword { get; set; }
 
@@ -136,11 +136,11 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("clientIdFromConfig")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientIdFromConfig? ClientIdFromConfig { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("clientSecret")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientSecret? ClientSecret { get; set; }
 
@@ -148,7 +148,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("tenantIdFromConfig")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
@@ -161,7 +161,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlob
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("accountKey")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobAccountKey? AccountKey { get; set; }
 
@@ -177,7 +177,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlob
     [JsonPropertyName("managedIdentity")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobManagedIdentity? ManagedIdentity { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("sasToken")]
     public V1api20230501storageFluxConfigurationSpecAzureBlobSasToken? SasToken { get; set; }
 
@@ -198,7 +198,7 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlob
     public string? Url { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecBucketAccessKey
 {
@@ -219,7 +219,7 @@ public partial class V1api20230501storageFluxConfigurationSpecBucket
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("accessKey")]
     public V1api20230501storageFluxConfigurationSpecBucketAccessKey? AccessKey { get; set; }
 
@@ -248,7 +248,7 @@ public partial class V1api20230501storageFluxConfigurationSpecBucket
     public string? Url { get; set; }
 }
 
-/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecConfigurationProtectedSettings
 {
@@ -257,7 +257,7 @@ public partial class V1api20230501storageFluxConfigurationSpecConfigurationProte
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationSpecGitRepositoryHttpsCACert
 {
@@ -303,7 +303,7 @@ public partial class V1api20230501storageFluxConfigurationSpecGitRepository
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("httpsCACert")]
     public V1api20230501storageFluxConfigurationSpecGitRepositoryHttpsCACert? HttpsCACert { get; set; }
 
@@ -511,7 +511,7 @@ public partial class V1api20230501storageFluxConfigurationSpec
     [JsonPropertyName("bucket")]
     public V1api20230501storageFluxConfigurationSpecBucket? Bucket { get; set; }
 
-    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("configurationProtectedSettings")]
     public V1api20230501storageFluxConfigurationSpecConfigurationProtectedSettings? ConfigurationProtectedSettings { get; set; }
 
@@ -664,7 +664,7 @@ public partial class V1api20230501storageFluxConfigurationStatusBucket
     public string? Url { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageFluxConfigurationStatusConditions
 {

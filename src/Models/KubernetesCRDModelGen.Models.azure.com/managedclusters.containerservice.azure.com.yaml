@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.11.0
+    app.kubernetes.io/version: v2.12.0
   name: managedclusters.containerservice.azure.com
 spec:
   conversion:
@@ -251,7 +251,10 @@ spec:
                         type: string
                       type: object
                     nodePublicIPPrefixIDReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -298,7 +301,10 @@ spec:
                       - Windows
                       type: string
                     podSubnetIDReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -350,7 +356,10 @@ spec:
                     vmSize:
                       type: string
                     vnetSubnetIDReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -451,7 +460,10 @@ spec:
               disableLocalAccounts:
                 type: boolean
               diskEncryptionSetIDReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: >-
+                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                  nolint:recvcheck
                 properties:
                   armId:
                     description: >-
@@ -514,7 +526,10 @@ spec:
                     items:
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -546,7 +561,10 @@ spec:
                     objectId:
                       type: string
                     resourceReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -614,7 +632,10 @@ spec:
                         items:
                           properties:
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -654,7 +675,10 @@ spec:
                             items:
                               properties:
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -684,7 +708,10 @@ spec:
                             items:
                               properties:
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -899,7 +926,10 @@ spec:
                             objectId:
                               type: string
                             resourceReference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -957,7 +987,10 @@ spec:
                     name:
                       type: string
                     reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -995,6 +1028,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -1035,6 +1070,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -1350,7 +1387,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -1946,7 +1986,10 @@ spec:
                         type: string
                       type: object
                     nodePublicIPPrefixIDReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -1982,7 +2025,10 @@ spec:
                     osType:
                       type: string
                     podSubnetIDReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -2034,7 +2080,10 @@ spec:
                     vmSize:
                       type: string
                     vnetSubnetIDReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -2148,7 +2197,10 @@ spec:
               disableLocalAccounts:
                 type: boolean
               diskEncryptionSetIDReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: >-
+                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                  nolint:recvcheck
                 properties:
                   armId:
                     description: >-
@@ -2241,7 +2293,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -2282,7 +2337,10 @@ spec:
                     objectId:
                       type: string
                     resourceReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -2392,7 +2450,10 @@ spec:
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -2455,7 +2516,10 @@ spec:
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -2503,7 +2567,10 @@ spec:
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -2748,7 +2815,10 @@ spec:
                             objectId:
                               type: string
                             resourceReference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -2816,7 +2886,10 @@ spec:
                     name:
                       type: string
                     reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -2863,6 +2936,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -2914,6 +2989,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -3339,7 +3416,10 @@ spec:
                 type: string
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -4013,7 +4093,10 @@ spec:
                     creationData:
                       properties:
                         sourceResourceReference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -4054,7 +4137,10 @@ spec:
                       - MIG7g
                       type: string
                     hostGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -4195,7 +4281,10 @@ spec:
                         type: string
                       type: object
                     nodePublicIPPrefixReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -4244,7 +4333,10 @@ spec:
                       - Windows
                       type: string
                     podSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -4274,7 +4366,10 @@ spec:
                           type: string
                       type: object
                     proximityPlacementGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -4329,7 +4424,10 @@ spec:
                     vmSize:
                       type: string
                     vnetSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -4456,7 +4554,10 @@ spec:
               disableLocalAccounts:
                 type: boolean
               diskEncryptionSetReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: >-
+                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                  nolint:recvcheck
                 properties:
                   armId:
                     description: >-
@@ -4519,7 +4620,10 @@ spec:
                     items:
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -4551,7 +4655,10 @@ spec:
                     objectId:
                       type: string
                     resourceReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -4626,7 +4733,10 @@ spec:
                         items:
                           properties:
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -4672,7 +4782,10 @@ spec:
                             items:
                               properties:
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -4702,7 +4815,10 @@ spec:
                             items:
                               properties:
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -4738,7 +4854,10 @@ spec:
                         items:
                           properties:
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -5023,7 +5142,10 @@ spec:
                             objectId:
                               type: string
                             resourceReference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -5081,7 +5203,10 @@ spec:
                     name:
                       type: string
                     reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -5129,7 +5254,10 @@ spec:
                         - Public
                         type: string
                       keyVaultResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -5154,7 +5282,10 @@ spec:
                   defender:
                     properties:
                       logAnalyticsWorkspaceResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -5203,6 +5334,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -5266,6 +5399,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -5630,7 +5765,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -6226,7 +6364,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         sourceResourceReference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -6261,7 +6402,10 @@ spec:
                     gpuInstanceProfile:
                       type: string
                     hostGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -6421,7 +6565,10 @@ spec:
                         type: string
                       type: object
                     nodePublicIPPrefixReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -6457,7 +6604,10 @@ spec:
                     osType:
                       type: string
                     podSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -6493,7 +6643,10 @@ spec:
                           type: string
                       type: object
                     proximityPlacementGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -6545,7 +6698,10 @@ spec:
                     vmSize:
                       type: string
                     vnetSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -6705,7 +6861,10 @@ spec:
               disableLocalAccounts:
                 type: boolean
               diskEncryptionSetReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: >-
+                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                  nolint:recvcheck
                 properties:
                   armId:
                     description: >-
@@ -6798,7 +6957,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -6839,7 +7001,10 @@ spec:
                     objectId:
                       type: string
                     resourceReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -6953,7 +7118,10 @@ spec:
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -7020,7 +7188,10 @@ spec:
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -7068,7 +7239,10 @@ spec:
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -7119,7 +7293,10 @@ spec:
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -7457,7 +7634,10 @@ spec:
                             objectId:
                               type: string
                             resourceReference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -7525,7 +7705,10 @@ spec:
                     name:
                       type: string
                     reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -7585,7 +7768,10 @@ spec:
                       keyVaultNetworkAccess:
                         type: string
                       keyVaultResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -7619,7 +7805,10 @@ spec:
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       logAnalyticsWorkspaceResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -7704,6 +7893,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -7823,6 +8014,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -8358,7 +8551,10 @@ spec:
                 type: string
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -9731,7 +9927,10 @@ spec:
 
                             created.
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -10368,7 +10567,10 @@ spec:
                       description: Information about the user assigned identity for the resource
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -12286,7 +12488,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -13634,7 +13839,10 @@ spec:
                           type: array
                         applicationSecurityGroupsReferences:
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -14166,7 +14374,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -15320,6 +15531,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -15496,6 +15709,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -16182,7 +16397,10 @@ spec:
                 type: string
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -17518,7 +17736,10 @@ spec:
                         type: string
                       type: array
                     capacityReservationGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -17544,7 +17765,10 @@ spec:
                     creationData:
                       properties:
                         sourceResourceReference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -17592,7 +17816,10 @@ spec:
                           type: boolean
                       type: object
                     hostGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -17758,7 +17985,10 @@ spec:
                           type: array
                         applicationSecurityGroupsReferences:
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -17799,7 +18029,10 @@ spec:
                         type: string
                       type: object
                     nodePublicIPPrefixReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -17851,7 +18084,10 @@ spec:
                       - Windows
                       type: string
                     podSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -17881,7 +18117,10 @@ spec:
                           type: string
                       type: object
                     proximityPlacementGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -17985,7 +18224,10 @@ spec:
                     vmSize:
                       type: string
                     vnetSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -18125,7 +18367,10 @@ spec:
                           enabled:
                             type: boolean
                           logAnalyticsWorkspaceResourceReference:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -18185,7 +18430,10 @@ spec:
               creationData:
                 properties:
                   sourceResourceReference:
-                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    description: >-
+                      ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                      nolint:recvcheck
                     properties:
                       armId:
                         description: >-
@@ -18210,7 +18458,10 @@ spec:
               disableLocalAccounts:
                 type: boolean
               diskEncryptionSetReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: >-
+                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                  nolint:recvcheck
                 properties:
                   armId:
                     description: >-
@@ -18273,7 +18524,10 @@ spec:
                         referralResource:
                           type: string
                         resourceReference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -18309,7 +18563,10 @@ spec:
                     items:
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -18341,7 +18598,10 @@ spec:
                     objectId:
                       type: string
                     resourceReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -18370,7 +18630,10 @@ spec:
                     properties:
                       dnsZoneResourceReferences:
                         items:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -18482,7 +18745,10 @@ spec:
                         items:
                           properties:
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -18528,7 +18794,10 @@ spec:
                             items:
                               properties:
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -18558,7 +18827,10 @@ spec:
                             items:
                               properties:
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -18599,7 +18871,10 @@ spec:
                         items:
                           properties:
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -18885,7 +19160,10 @@ spec:
                             objectId:
                               type: string
                             resourceReference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -18943,7 +19221,10 @@ spec:
                     name:
                       type: string
                     reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -19009,7 +19290,10 @@ spec:
                         - Public
                         type: string
                       keyVaultResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -19040,7 +19324,10 @@ spec:
                   defender:
                     properties:
                       logAnalyticsWorkspaceResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -19105,7 +19392,10 @@ spec:
                               keyObjectName:
                                 type: string
                               keyVaultReference:
-                                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                description: >-
+                                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                  nolint:recvcheck
                                 properties:
                                   armId:
                                     description: >-
@@ -19184,6 +19474,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -19265,6 +19557,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -19774,7 +20068,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -20560,7 +20857,10 @@ spec:
                         type: string
                       type: array
                     capacityReservationGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -20595,7 +20895,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         sourceResourceReference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -20646,7 +20949,10 @@ spec:
                           type: boolean
                       type: object
                     hostGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -20836,7 +21142,10 @@ spec:
                           type: array
                         applicationSecurityGroupsReferences:
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -20886,7 +21195,10 @@ spec:
                         type: string
                       type: object
                     nodePublicIPPrefixReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -20922,7 +21234,10 @@ spec:
                     osType:
                       type: string
                     podSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -20958,7 +21273,10 @@ spec:
                           type: string
                       type: object
                     proximityPlacementGroupReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -21094,7 +21412,10 @@ spec:
                     vmSize:
                       type: string
                     vnetSubnetReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -21293,7 +21614,10 @@ spec:
                           enabled:
                             type: boolean
                           logAnalyticsWorkspaceResourceReference:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -21393,7 +21717,10 @@ spec:
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   sourceResourceReference:
-                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    description: >-
+                      ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                      nolint:recvcheck
                     properties:
                       armId:
                         description: >-
@@ -21418,7 +21745,10 @@ spec:
               disableLocalAccounts:
                 type: boolean
               diskEncryptionSetReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: >-
+                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                  nolint:recvcheck
                 properties:
                   armId:
                     description: >-
@@ -21515,7 +21845,10 @@ spec:
                         referralResource:
                           type: string
                         resourceReference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -21555,7 +21888,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -21596,7 +21932,10 @@ spec:
                     objectId:
                       type: string
                     resourceReference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -21643,7 +21982,10 @@ spec:
                         type: object
                       dnsZoneResourceReferences:
                         items:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -21822,7 +22164,10 @@ spec:
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -21889,7 +22234,10 @@ spec:
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -21937,7 +22285,10 @@ spec:
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
-                                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                  description: >-
+                                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                    nolint:recvcheck
                                   properties:
                                     armId:
                                       description: >-
@@ -22002,7 +22353,10 @@ spec:
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             reference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -22347,7 +22701,10 @@ spec:
                             objectId:
                               type: string
                             resourceReference:
-                              description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                              description: >-
+                                ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                nolint:recvcheck
                               properties:
                                 armId:
                                   description: >-
@@ -22415,7 +22772,10 @@ spec:
                     name:
                       type: string
                     reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      description: >-
+                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                        nolint:recvcheck
                       properties:
                         armId:
                           description: >-
@@ -22495,7 +22855,10 @@ spec:
                       keyVaultNetworkAccess:
                         type: string
                       keyVaultResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -22533,7 +22896,10 @@ spec:
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       logAnalyticsWorkspaceResourceReference:
-                        description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                        description: >-
+                          ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                          nolint:recvcheck
                         properties:
                           armId:
                             description: >-
@@ -22679,7 +23045,10 @@ spec:
                               keyObjectName:
                                 type: string
                               keyVaultReference:
-                                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                                description: >-
+                                  ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                                  nolint:recvcheck
                                 properties:
                                   armId:
                                     description: >-
@@ -22780,6 +23149,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -22931,6 +23302,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -23768,7 +24141,10 @@ spec:
                 type: string
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -25617,7 +25993,10 @@ spec:
 
                             created.
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -26594,7 +26973,10 @@ spec:
                       description: Information about the user assigned identity for the resource
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -26667,7 +27049,10 @@ spec:
 
                           zones must be in the same resource group and all private DNS zones must be in the same resource group.
                         items:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -29033,7 +29418,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -30655,7 +31043,10 @@ spec:
                           type: array
                         applicationSecurityGroupsReferences:
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -31574,7 +31965,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -31671,7 +32065,10 @@ spec:
                         type: object
                       dnsZoneResourceReferences:
                         items:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -32976,6 +33373,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -33154,6 +33553,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -34192,7 +34593,10 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -36216,7 +36620,10 @@ spec:
 
                             created.
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -36910,7 +37317,10 @@ spec:
                       description: Information about the user assigned identity for the resource
                       properties:
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -36991,7 +37401,10 @@ spec:
 
                           public DNS zones must be in the same resource group and all private DNS zones must be in the same resource group.
                         items:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -38980,7 +39393,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -40436,7 +40852,10 @@ spec:
                           type: array
                         applicationSecurityGroupsReferences:
                           items:
-                            description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                            description: >-
+                              ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                              nolint:recvcheck
                             properties:
                               armId:
                                 description: >-
@@ -41012,7 +41431,10 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -41109,7 +41531,10 @@ spec:
                         type: object
                       dnsZoneResourceReferences:
                         items:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          description: >-
+                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+
+                            nolint:recvcheck
                           properties:
                             armId:
                               description: >-
@@ -42299,6 +42724,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -42475,6 +42902,8 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
+
+                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -43207,7 +43636,10 @@ spec:
                 type: string
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.

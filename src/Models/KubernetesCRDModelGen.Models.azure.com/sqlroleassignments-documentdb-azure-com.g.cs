@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240815storageSqlRoleAssignmentSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20231115storageSqlRoleAssignmentSpecOperatorSpecConfig
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentSpecOperatorSpecSecretExpressions
+public partial class V1api20240815storageSqlRoleAssignmentSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20231115storageSqlRoleAssignmentSpecOperatorSpecSecret
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlRoleAssignmentOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240815.SqlRoleAssignmentOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentSpecOperatorSpec
+public partial class V1api20240815storageSqlRoleAssignmentSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20231115storageSqlRoleAssignmentSpecOperatorSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20231115storageSqlRoleAssignmentSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240815storageSqlRoleAssignmentSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20231115storageSqlRoleAssignmentSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240815storageSqlRoleAssignmentSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/DatabaseAccount resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentSpecOwner
+public partial class V1api20240815storageSqlRoleAssignmentSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -72,9 +72,9 @@ public partial class V1api20231115storageSqlRoleAssignmentSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentSpecPrincipalIdFromConfig
+public partial class V1api20240815storageSqlRoleAssignmentSpecPrincipalIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
     [JsonPropertyName("key")]
@@ -85,9 +85,9 @@ public partial class V1api20231115storageSqlRoleAssignmentSpecPrincipalIdFromCon
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlRoleAssignment_Spec</summary>
+/// <summary>Storage version of v1api20240815.SqlRoleAssignment_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentSpec
+public partial class V1api20240815storageSqlRoleAssignmentSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -97,9 +97,9 @@ public partial class V1api20231115storageSqlRoleAssignmentSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlRoleAssignmentOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240815.SqlRoleAssignmentOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20231115storageSqlRoleAssignmentSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240815storageSqlRoleAssignmentSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -107,15 +107,15 @@ public partial class V1api20231115storageSqlRoleAssignmentSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/DatabaseAccount resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231115storageSqlRoleAssignmentSpecOwner Owner { get; set; }
+    public V1api20240815storageSqlRoleAssignmentSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("principalIdFromConfig")]
-    public V1api20231115storageSqlRoleAssignmentSpecPrincipalIdFromConfig? PrincipalIdFromConfig { get; set; }
+    public V1api20240815storageSqlRoleAssignmentSpecPrincipalIdFromConfig? PrincipalIdFromConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("roleDefinitionId")]
@@ -126,9 +126,9 @@ public partial class V1api20231115storageSqlRoleAssignmentSpec
     public string? Scope { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentStatusConditions
+public partial class V1api20240815storageSqlRoleAssignmentStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -159,9 +159,9 @@ public partial class V1api20231115storageSqlRoleAssignmentStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlRoleAssignment_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlRoleAssignment_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlRoleAssignmentStatus
+public partial class V1api20240815storageSqlRoleAssignmentStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -169,7 +169,7 @@ public partial class V1api20231115storageSqlRoleAssignmentStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231115storageSqlRoleAssignmentStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240815storageSqlRoleAssignmentStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -196,12 +196,12 @@ public partial class V1api20231115storageSqlRoleAssignmentStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlRoleAssignment Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/rbac.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlRoleAssignments/{roleAssignmentId}</summary>
+/// <summary>Storage version of v1api20240815.SqlRoleAssignment Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/rbac.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlRoleAssignments/{roleAssignmentId}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231115storageSqlRoleAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlRoleAssignmentSpec>, IStatus<V1api20231115storageSqlRoleAssignmentStatus>
+public partial class V1api20240815storageSqlRoleAssignment : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240815storageSqlRoleAssignmentSpec>, IStatus<V1api20240815storageSqlRoleAssignmentStatus>
 {
-    public const string KubeApiVersion = "v1api20231115storage";
+    public const string KubeApiVersion = "v1api20240815storage";
     public const string KubeKind = "SqlRoleAssignment";
     public const string KubeGroup = "documentdb.azure.com";
     public const string KubePluralName = "sqlroleassignments";
@@ -217,11 +217,11 @@ public partial class V1api20231115storageSqlRoleAssignment : IKubernetesObject<V
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlRoleAssignment_Spec</summary>
+    /// <summary>Storage version of v1api20240815.SqlRoleAssignment_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231115storageSqlRoleAssignmentSpec? Spec { get; set; }
+    public V1api20240815storageSqlRoleAssignmentSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlRoleAssignment_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlRoleAssignment_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20231115storageSqlRoleAssignmentStatus? Status { get; set; }
+    public V1api20240815storageSqlRoleAssignmentStatus? Status { get; set; }
 }

@@ -21,7 +21,7 @@ public partial class V1api20210601storageWorkspaceSpecCspWorkspaceAdminPropertie
     public string? InitialWorkspaceAdminObjectId { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorageAccountUrlFromConfig
 {
@@ -67,7 +67,7 @@ public partial class V1api20210601storageWorkspaceSpecDefaultDataLakeStorage
     [JsonPropertyName("accountUrl")]
     public string? AccountUrl { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("accountUrlFromConfig")]
     public V1api20210601storageWorkspaceSpecDefaultDataLakeStorageAccountUrlFromConfig? AccountUrlFromConfig { get; set; }
 
@@ -169,7 +169,7 @@ public partial class V1api20210601storageWorkspaceSpecEncryption
     public V1api20210601storageWorkspaceSpecEncryptionCmk? Cmk { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentitiesReference
 {
@@ -198,7 +198,7 @@ public partial class V1api20210601storageWorkspaceSpecIdentityUserAssignedIdenti
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
     public V1api20210601storageWorkspaceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -339,7 +339,7 @@ public partial class V1api20210601storageWorkspaceSpecPurviewConfiguration
     public V1api20210601storageWorkspaceSpecPurviewConfigurationPurviewResourceReference? PurviewResourceReference { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceSpecSqlAdministratorLoginPassword
 {
@@ -482,7 +482,7 @@ public partial class V1api20210601storageWorkspaceSpec
     [JsonPropertyName("sqlAdministratorLogin")]
     public string? SqlAdministratorLogin { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("sqlAdministratorLoginPassword")]
     public V1api20210601storageWorkspaceSpecSqlAdministratorLoginPassword? SqlAdministratorLoginPassword { get; set; }
 
@@ -503,7 +503,7 @@ public partial class V1api20210601storageWorkspaceSpec
     public V1api20210601storageWorkspaceSpecWorkspaceRepositoryConfiguration? WorkspaceRepositoryConfiguration { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210601storageWorkspaceStatusConditions
 {

@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.11.0
+    app.kubernetes.io/version: v2.12.0
   name: storageaccountsblobservices.storage.azure.com
 spec:
   conversion:
@@ -362,7 +362,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -923,7 +926,10 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -1491,7 +1497,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -2072,7 +2081,10 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -2646,7 +2658,10 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -3227,7 +3242,10 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: Condition defines an extension to status (an observation) of a resource
+                  description: >-
+                    Condition defines an extension to status (an observation) of a resource
+
+                    nolint:recvcheck
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.

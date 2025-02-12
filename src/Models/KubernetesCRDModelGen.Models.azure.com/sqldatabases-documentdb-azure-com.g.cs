@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240815storageSqlDatabaseSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20231115storageSqlDatabaseSpecOperatorSpecConfigMapExp
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecOperatorSpecSecretExpressions
+public partial class V1api20240815storageSqlDatabaseSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20231115storageSqlDatabaseSpecOperatorSpecSecretExpres
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecOperatorSpec
+public partial class V1api20240815storageSqlDatabaseSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20231115storageSqlDatabaseSpecOperatorSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20231115storageSqlDatabaseSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20231115storageSqlDatabaseSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecOptionsAutoscaleSettings
+public partial class V1api20240815storageSqlDatabaseSpecOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -72,17 +72,17 @@ public partial class V1api20231115storageSqlDatabaseSpecOptionsAutoscaleSettings
     public int? MaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+/// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecOptions
+public partial class V1api20240815storageSqlDatabaseSpecOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettings</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettings</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageSqlDatabaseSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageSqlDatabaseSpecOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("throughput")]
@@ -91,7 +91,7 @@ public partial class V1api20231115storageSqlDatabaseSpecOptions
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/DatabaseAccount resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecOwner
+public partial class V1api20240815storageSqlDatabaseSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -102,9 +102,9 @@ public partial class V1api20231115storageSqlDatabaseSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
+/// <summary>Storage version of v1api20240815.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecResourceRestoreParameters
+public partial class V1api20240815storageSqlDatabaseSpecResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -117,11 +117,15 @@ public partial class V1api20231115storageSqlDatabaseSpecResourceRestoreParameter
     /// <summary></summary>
     [JsonPropertyName("restoreTimestampInUtc")]
     public string? RestoreTimestampInUtc { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("restoreWithTtlDisabled")]
+    public bool? RestoreWithTtlDisabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseResource Cosmos DB SQL database resource object</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseResource Cosmos DB SQL database resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpecResource
+public partial class V1api20240815storageSqlDatabaseSpecResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -135,14 +139,14 @@ public partial class V1api20231115storageSqlDatabaseSpecResource
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20231115.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
+    /// <summary>Storage version of v1api20240815.RestoreParametersBase Parameters to indicate the information about the restore.</summary>
     [JsonPropertyName("restoreParameters")]
-    public V1api20231115storageSqlDatabaseSpecResourceRestoreParameters? RestoreParameters { get; set; }
+    public V1api20240815storageSqlDatabaseSpecResourceRestoreParameters? RestoreParameters { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabase_Spec</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabase_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseSpec
+public partial class V1api20240815storageSqlDatabaseSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -156,13 +160,13 @@ public partial class V1api20231115storageSqlDatabaseSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20231115storageSqlDatabaseSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240815storageSqlDatabaseSpecOperatorSpec? OperatorSpec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
+    /// <summary>Storage version of v1api20240815.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageSqlDatabaseSpecOptions? Options { get; set; }
+    public V1api20240815storageSqlDatabaseSpecOptions? Options { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -170,20 +174,20 @@ public partial class V1api20231115storageSqlDatabaseSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/DatabaseAccount resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20231115storageSqlDatabaseSpecOwner Owner { get; set; }
+    public V1api20240815storageSqlDatabaseSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseResource Cosmos DB SQL database resource object</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseResource Cosmos DB SQL database resource object</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseSpecResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseSpecResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseStatusConditions
+public partial class V1api20240815storageSqlDatabaseStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -214,9 +218,9 @@ public partial class V1api20231115storageSqlDatabaseStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.AutoscaleSettings_STATUS</summary>
+/// <summary>Storage version of v1api20240815.AutoscaleSettings_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseStatusOptionsAutoscaleSettings
+public partial class V1api20240815storageSqlDatabaseStatusOptionsAutoscaleSettings
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -227,26 +231,26 @@ public partial class V1api20231115storageSqlDatabaseStatusOptionsAutoscaleSettin
     public int? MaxThroughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.OptionsResource_STATUS Cosmos DB options resource object</summary>
+/// <summary>Storage version of v1api20240815.OptionsResource_STATUS Cosmos DB options resource object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseStatusOptions
+public partial class V1api20240815storageSqlDatabaseStatusOptions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20231115.AutoscaleSettings_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.AutoscaleSettings_STATUS</summary>
     [JsonPropertyName("autoscaleSettings")]
-    public V1api20231115storageSqlDatabaseStatusOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
+    public V1api20240815storageSqlDatabaseStatusOptionsAutoscaleSettings? AutoscaleSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("throughput")]
     public int? Throughput { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
+/// <summary>Storage version of v1api20240815.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseStatusResourceRestoreParameters
+public partial class V1api20240815storageSqlDatabaseStatusResourceRestoreParameters
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -259,11 +263,15 @@ public partial class V1api20231115storageSqlDatabaseStatusResourceRestoreParamet
     /// <summary></summary>
     [JsonPropertyName("restoreTimestampInUtc")]
     public string? RestoreTimestampInUtc { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("restoreWithTtlDisabled")]
+    public bool? RestoreWithTtlDisabled { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabaseGetProperties_Resource_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabaseGetProperties_Resource_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseStatusResource
+public partial class V1api20240815storageSqlDatabaseStatusResource
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -297,14 +305,14 @@ public partial class V1api20231115storageSqlDatabaseStatusResource
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20231115.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
+    /// <summary>Storage version of v1api20240815.RestoreParametersBase_STATUS Parameters to indicate the information about the restore.</summary>
     [JsonPropertyName("restoreParameters")]
-    public V1api20231115storageSqlDatabaseStatusResourceRestoreParameters? RestoreParameters { get; set; }
+    public V1api20240815storageSqlDatabaseStatusResourceRestoreParameters? RestoreParameters { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabase_STATUS</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabase_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20231115storageSqlDatabaseStatus
+public partial class V1api20240815storageSqlDatabaseStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -312,7 +320,7 @@ public partial class V1api20231115storageSqlDatabaseStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20231115storageSqlDatabaseStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240815storageSqlDatabaseStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -326,13 +334,13 @@ public partial class V1api20231115storageSqlDatabaseStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20231115.OptionsResource_STATUS Cosmos DB options resource object</summary>
+    /// <summary>Storage version of v1api20240815.OptionsResource_STATUS Cosmos DB options resource object</summary>
     [JsonPropertyName("options")]
-    public V1api20231115storageSqlDatabaseStatusOptions? Options { get; set; }
+    public V1api20240815storageSqlDatabaseStatusOptions? Options { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabaseGetProperties_Resource_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabaseGetProperties_Resource_STATUS</summary>
     [JsonPropertyName("resource")]
-    public V1api20231115storageSqlDatabaseStatusResource? Resource { get; set; }
+    public V1api20240815storageSqlDatabaseStatusResource? Resource { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tags")]
@@ -343,12 +351,12 @@ public partial class V1api20231115storageSqlDatabaseStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20231115.SqlDatabase Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}</summary>
+/// <summary>Storage version of v1api20240815.SqlDatabase Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231115storageSqlDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231115storageSqlDatabaseSpec>, IStatus<V1api20231115storageSqlDatabaseStatus>
+public partial class V1api20240815storageSqlDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240815storageSqlDatabaseSpec>, IStatus<V1api20240815storageSqlDatabaseStatus>
 {
-    public const string KubeApiVersion = "v1api20231115storage";
+    public const string KubeApiVersion = "v1api20240815storage";
     public const string KubeKind = "SqlDatabase";
     public const string KubeGroup = "documentdb.azure.com";
     public const string KubePluralName = "sqldatabases";
@@ -364,11 +372,11 @@ public partial class V1api20231115storageSqlDatabase : IKubernetesObject<V1Objec
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabase_Spec</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabase_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20231115storageSqlDatabaseSpec? Spec { get; set; }
+    public V1api20240815storageSqlDatabaseSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20231115.SqlDatabase_STATUS</summary>
+    /// <summary>Storage version of v1api20240815.SqlDatabase_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20231115storageSqlDatabaseStatus? Status { get; set; }
+    public V1api20240815storageSqlDatabaseStatus? Status { get; set; }
 }

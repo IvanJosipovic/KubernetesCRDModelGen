@@ -72,7 +72,7 @@ public partial class V1api20211101storageServersDatabasesSecurityAlertPolicySpec
     public string? Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesSecurityAlertPolicySpecStorageAccountAccessKey
 {
@@ -125,7 +125,7 @@ public partial class V1api20211101storageServersDatabasesSecurityAlertPolicySpec
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("storageAccountAccessKey")]
     public V1api20211101storageServersDatabasesSecurityAlertPolicySpecStorageAccountAccessKey? StorageAccountAccessKey { get; set; }
 
@@ -134,7 +134,7 @@ public partial class V1api20211101storageServersDatabasesSecurityAlertPolicySpec
     public string? StorageEndpoint { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabasesSecurityAlertPolicyStatusConditions
 {

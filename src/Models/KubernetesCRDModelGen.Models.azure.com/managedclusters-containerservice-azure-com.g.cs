@@ -358,7 +358,7 @@ public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesNetw
     public string? Protocol { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClusterSpecAgentPoolProfilesNetworkProfileApplicationSecurityGroupsReferences
 {
@@ -1037,7 +1037,7 @@ public partial class V1api20240901storageManagedClusterSpecIdentityDelegatedReso
     public string? TenantId { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClusterSpecIdentityUserAssignedIdentitiesReference
 {
@@ -1066,7 +1066,7 @@ public partial class V1api20240901storageManagedClusterSpecIdentityUserAssignedI
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
     [JsonPropertyName("reference")]
     public V1api20240901storageManagedClusterSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -1134,7 +1134,7 @@ public partial class V1api20240901storageManagedClusterSpecIdentityProfile
     public V1api20240901storageManagedClusterSpecIdentityProfileResourceReference? ResourceReference { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClusterSpecIngressProfileWebAppRoutingDnsZoneResourceReferences
 {
@@ -2258,7 +2258,7 @@ public partial class V1api20240901storageManagedClusterSpecServiceMeshProfile
     public string? Mode { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClusterSpecServicePrincipalProfileSecret
 {
@@ -2283,7 +2283,7 @@ public partial class V1api20240901storageManagedClusterSpecServicePrincipalProfi
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("secret")]
     public V1api20240901storageManagedClusterSpecServicePrincipalProfileSecret? Secret { get; set; }
 }
@@ -2412,7 +2412,7 @@ public partial class V1api20240901storageManagedClusterSpecUpgradeSettings
     public V1api20240901storageManagedClusterSpecUpgradeSettingsOverrideSettings? OverrideSettings { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClusterSpecWindowsProfileAdminPassword
 {
@@ -2454,7 +2454,7 @@ public partial class V1api20240901storageManagedClusterSpecWindowsProfile
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
     [JsonPropertyName("adminPassword")]
     public V1api20240901storageManagedClusterSpecWindowsProfileAdminPassword? AdminPassword { get; set; }
 
@@ -3492,7 +3492,7 @@ public partial class V1api20240901storageManagedClusterStatusAzureMonitorProfile
     public V1api20240901storageManagedClusterStatusAzureMonitorProfileMetrics? Metrics { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClusterStatusConditions
 {
