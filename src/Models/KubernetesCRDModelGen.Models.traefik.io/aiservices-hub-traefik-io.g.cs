@@ -190,6 +190,52 @@ public partial class V1alpha1AIServiceSpecCohere
 
 /// <summary>Params holds the LLM hyperparameters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecDeepSeekParams
+{
+    /// <summary></summary>
+    [JsonPropertyName("frequencyPenalty")]
+    public double? FrequencyPenalty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("maxTokens")]
+    public int? MaxTokens { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("presencePenalty")]
+    public double? PresencePenalty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("temperature")]
+    public double? Temperature { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("topP")]
+    public double? TopP { get; set; }
+}
+
+/// <summary>DeepSeek configures DeepSeek.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecDeepSeek
+{
+    /// <summary></summary>
+    [JsonPropertyName("baseUrl")]
+    public string? BaseUrl { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("model")]
+    public string? Model { get; set; }
+
+    /// <summary>Params holds the LLM hyperparameters.</summary>
+    [JsonPropertyName("params")]
+    public V1alpha1AIServiceSpecDeepSeekParams? Params { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("token")]
+    public string Token { get; set; }
+}
+
+/// <summary>Params holds the LLM hyperparameters.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecGeminiParams
 {
     /// <summary></summary>
@@ -344,12 +390,62 @@ public partial class V1alpha1AIServiceSpecOpenaiParams
 public partial class V1alpha1AIServiceSpecOpenai
 {
     /// <summary></summary>
+    [JsonPropertyName("baseUrl")]
+    public string? BaseUrl { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("model")]
     public string? Model { get; set; }
 
     /// <summary>Params holds the LLM hyperparameters.</summary>
     [JsonPropertyName("params")]
     public V1alpha1AIServiceSpecOpenaiParams? Params { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("token")]
+    public string Token { get; set; }
+}
+
+/// <summary>Params holds the LLM hyperparameters.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecQWenParams
+{
+    /// <summary></summary>
+    [JsonPropertyName("frequencyPenalty")]
+    public double? FrequencyPenalty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("maxTokens")]
+    public int? MaxTokens { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("presencePenalty")]
+    public double? PresencePenalty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("temperature")]
+    public double? Temperature { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("topP")]
+    public double? TopP { get; set; }
+}
+
+/// <summary>QWen configures QWen.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecQWen
+{
+    /// <summary></summary>
+    [JsonPropertyName("baseUrl")]
+    public string? BaseUrl { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("model")]
+    public string? Model { get; set; }
+
+    /// <summary>Params holds the LLM hyperparameters.</summary>
+    [JsonPropertyName("params")]
+    public V1alpha1AIServiceSpecQWenParams? Params { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("token")]
@@ -376,6 +472,10 @@ public partial class V1alpha1AIServiceSpec
     [JsonPropertyName("cohere")]
     public V1alpha1AIServiceSpecCohere? Cohere { get; set; }
 
+    /// <summary>DeepSeek configures DeepSeek.</summary>
+    [JsonPropertyName("deepSeek")]
+    public V1alpha1AIServiceSpecDeepSeek? DeepSeek { get; set; }
+
     /// <summary>Gemini configures Gemini backend.</summary>
     [JsonPropertyName("gemini")]
     public V1alpha1AIServiceSpecGemini? Gemini { get; set; }
@@ -391,6 +491,10 @@ public partial class V1alpha1AIServiceSpec
     /// <summary>OpenAI configures OpenAI.</summary>
     [JsonPropertyName("openai")]
     public V1alpha1AIServiceSpecOpenai? Openai { get; set; }
+
+    /// <summary>QWen configures QWen.</summary>
+    [JsonPropertyName("qWen")]
+    public V1alpha1AIServiceSpecQWen? QWen { get; set; }
 }
 
 /// <summary>AIService is a Kubernetes-like Service to interact with a text-based LLM provider. It defines the parameters and credentials required to interact with various LLM providers.</summary>
