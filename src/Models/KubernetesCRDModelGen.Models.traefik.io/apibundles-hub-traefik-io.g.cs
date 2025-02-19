@@ -58,6 +58,10 @@ public partial class V1alpha1APIBundleSpec
     /// <summary>APIs defines a set of APIs that will be accessible to the configured audience. Multiple APIBundles can select the same APIs. When combined with APISelector, this set of APIs is appended to the matching APIs.</summary>
     [JsonPropertyName("apis")]
     public IList<V1alpha1APIBundleSpecApis>? Apis { get; set; }
+
+    /// <summary>Title is the human-readable name of the APIBundle that will be used on the portal.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary>The current status of this APIBundle.</summary>

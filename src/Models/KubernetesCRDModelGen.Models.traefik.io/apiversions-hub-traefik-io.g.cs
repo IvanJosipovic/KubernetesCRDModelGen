@@ -8,6 +8,43 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>Cors defines the Cross-Origin Resource Sharing configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIVersionSpecCors
+{
+    /// <summary>AddVaryHeader defines whether the Vary header is automatically added/updated when the AllowOriginsList is set.</summary>
+    [JsonPropertyName("addVaryHeader")]
+    public bool? AddVaryHeader { get; set; }
+
+    /// <summary>AllowCredentials defines whether the request can include user credentials.</summary>
+    [JsonPropertyName("allowCredentials")]
+    public bool? AllowCredentials { get; set; }
+
+    /// <summary>AllowHeadersList defines the Access-Control-Request-Headers values sent in preflight response.</summary>
+    [JsonPropertyName("allowHeadersList")]
+    public IList<string>? AllowHeadersList { get; set; }
+
+    /// <summary>AllowMethodsList defines the Access-Control-Request-Method values sent in preflight response.</summary>
+    [JsonPropertyName("allowMethodsList")]
+    public IList<string>? AllowMethodsList { get; set; }
+
+    /// <summary>AllowOriginListRegex is a list of allowable origins written following the Regular Expression syntax (https://golang.org/pkg/regexp/).</summary>
+    [JsonPropertyName("allowOriginListRegex")]
+    public IList<string>? AllowOriginListRegex { get; set; }
+
+    /// <summary>AllowOriginsList is a list of allowable origins. Can also be a wildcard origin "*".</summary>
+    [JsonPropertyName("allowOriginsList")]
+    public IList<string>? AllowOriginsList { get; set; }
+
+    /// <summary>ExposeHeadersList defines the Access-Control-Expose-Headers values sent in preflight response.</summary>
+    [JsonPropertyName("exposeHeadersList")]
+    public IList<string>? ExposeHeadersList { get; set; }
+
+    /// <summary>MaxAge defines the time that a preflight request may be cached.</summary>
+    [JsonPropertyName("maxAge")]
+    public long? MaxAge { get; set; }
+}
+
 /// <summary>OperationMatcher defines criteria for matching an OpenAPI operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecOpenApiSpecOperationSetsMatchers
@@ -89,6 +126,14 @@ public partial class V1alpha1APIVersionSpecOpenApiSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpec
 {
+    /// <summary>Cors defines the Cross-Origin Resource Sharing configuration.</summary>
+    [JsonPropertyName("cors")]
+    public V1alpha1APIVersionSpecCors? Cors { get; set; }
+
+    /// <summary>Description explains what the APIVersion does.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
     /// <summary>OpenAPISpec defines the API contract as an OpenAPI specification.</summary>
     [JsonPropertyName("openApiSpec")]
     public V1alpha1APIVersionSpecOpenApiSpec? OpenApiSpec { get; set; }
