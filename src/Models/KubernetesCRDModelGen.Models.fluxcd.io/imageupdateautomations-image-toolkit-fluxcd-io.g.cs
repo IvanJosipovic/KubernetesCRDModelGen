@@ -85,6 +85,10 @@ public partial class V1beta2ImageUpdateAutomationSpecGitCommit
     [JsonPropertyName("messageTemplate")]
     public string? MessageTemplate { get; set; }
 
+    /// <summary>MessageTemplateValues provides additional values to be available to the templating rendering.</summary>
+    [JsonPropertyName("messageTemplateValues")]
+    public IDictionary<string, string>? MessageTemplateValues { get; set; }
+
     /// <summary>SigningKey provides the option to sign commits with a GPG key</summary>
     [JsonPropertyName("signingKey")]
     public V1beta2ImageUpdateAutomationSpecGitCommitSigningKey? SigningKey { get; set; }

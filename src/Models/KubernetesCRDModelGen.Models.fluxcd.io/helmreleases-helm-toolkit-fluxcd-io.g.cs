@@ -248,6 +248,10 @@ public partial class V2HelmReleaseSpecInstall
     [JsonPropertyName("disableSchemaValidation")]
     public bool? DisableSchemaValidation { get; set; }
 
+    /// <summary>DisableTakeOwnership disables taking ownership of existing resources during the Helm install action. Defaults to false.</summary>
+    [JsonPropertyName("disableTakeOwnership")]
+    public bool? DisableTakeOwnership { get; set; }
+
     /// <summary>DisableWait disables the waiting for resources to be ready after a Helm install has been performed.</summary>
     [JsonPropertyName("disableWait")]
     public bool? DisableWait { get; set; }
@@ -520,6 +524,10 @@ public partial class V2HelmReleaseSpecUpgrade
     /// <summary>DisableSchemaValidation prevents the Helm upgrade action from validating the values against the JSON Schema.</summary>
     [JsonPropertyName("disableSchemaValidation")]
     public bool? DisableSchemaValidation { get; set; }
+
+    /// <summary>DisableTakeOwnership disables taking ownership of existing resources during the Helm upgrade action. Defaults to false.</summary>
+    [JsonPropertyName("disableTakeOwnership")]
+    public bool? DisableTakeOwnership { get; set; }
 
     /// <summary>DisableWait disables the waiting for resources to be ready after a Helm upgrade has been performed.</summary>
     [JsonPropertyName("disableWait")]

@@ -115,7 +115,7 @@ public partial class V1GitRepositorySpec
     [JsonPropertyName("interval")]
     public string Interval { get; set; }
 
-    /// <summary>Provider used for authentication, can be 'azure', 'generic'. When not specified, defaults to 'generic'.</summary>
+    /// <summary>Provider used for authentication, can be 'azure', 'github', 'generic'. When not specified, defaults to 'generic'.</summary>
     [JsonPropertyName("provider")]
     public string? Provider { get; set; }
 
