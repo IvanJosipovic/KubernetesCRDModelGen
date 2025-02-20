@@ -56,6 +56,31 @@ public partial class V1KustomizationSpecDependsOn
     public string? Namespace { get; set; }
 }
 
+/// <summary>CustomHealthCheck defines the health check for custom resources.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1KustomizationSpecHealthCheckExprs
+{
+    /// <summary>APIVersion of the custom resource under evaluation.</summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary>Current is the CEL expression that determines if the status of the custom resource has reached the desired state.</summary>
+    [JsonPropertyName("current")]
+    public string Current { get; set; }
+
+    /// <summary>Failed is the CEL expression that determines if the status of the custom resource has failed to reach the desired state.</summary>
+    [JsonPropertyName("failed")]
+    public string? Failed { get; set; }
+
+    /// <summary>InProgress is the CEL expression that determines if the status of the custom resource has not yet reached the desired state.</summary>
+    [JsonPropertyName("inProgress")]
+    public string? InProgress { get; set; }
+
+    /// <summary>Kind of the custom resource under evaluation.</summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+}
+
 /// <summary>NamespacedObjectKindReference contains enough information to locate the typed referenced Kubernetes resource object in any namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecHealthChecks
@@ -233,6 +258,10 @@ public partial class V1KustomizationSpec
     [JsonPropertyName("decryption")]
     public V1KustomizationSpecDecryption? Decryption { get; set; }
 
+    /// <summary>DeletionPolicy can be used to control garbage collection when this Kustomization is deleted. Valid values are ('MirrorPrune', 'Delete', 'Orphan'). 'MirrorPrune' mirrors the Prune field (orphan if false, delete if true). Defaults to 'MirrorPrune'.</summary>
+    [JsonPropertyName("deletionPolicy")]
+    public string? DeletionPolicy { get; set; }
+
     /// <summary>DependsOn may contain a meta.NamespacedObjectReference slice with references to Kustomization resources that must be ready before this Kustomization can be reconciled.</summary>
     [JsonPropertyName("dependsOn")]
     public IList<V1KustomizationSpecDependsOn>? DependsOn { get; set; }
@@ -240,6 +269,10 @@ public partial class V1KustomizationSpec
     /// <summary>Force instructs the controller to recreate resources when patching fails due to an immutable field change.</summary>
     [JsonPropertyName("force")]
     public bool? Force { get; set; }
+
+    /// <summary>HealthCheckExprs is a list of healthcheck expressions for evaluating the health of custom resources using Common Expression Language (CEL). The expressions are evaluated only when Wait or HealthChecks are specified.</summary>
+    [JsonPropertyName("healthCheckExprs")]
+    public IList<V1KustomizationSpecHealthCheckExprs>? HealthCheckExprs { get; set; }
 
     /// <summary>A list of resources to be included in the health assessment.</summary>
     [JsonPropertyName("healthChecks")]
@@ -372,6 +405,10 @@ public partial class V1KustomizationStatus
     /// <summary>Inventory contains the list of Kubernetes resource object references that have been successfully applied.</summary>
     [JsonPropertyName("inventory")]
     public V1KustomizationStatusInventory? Inventory { get; set; }
+
+    /// <summary>The last successfully applied origin revision. Equals the origin revision of the applied Artifact from the referenced Source. Usually present on the Metadata of the applied Artifact and depends on the Source type, e.g. for OCI it's the value associated with the key "org.opencontainers.image.revision".</summary>
+    [JsonPropertyName("lastAppliedOriginRevision")]
+    public string? LastAppliedOriginRevision { get; set; }
 
     /// <summary>The last successfully applied revision. Equals the Revision of the applied Artifact from the referenced Source.</summary>
     [JsonPropertyName("lastAppliedRevision")]

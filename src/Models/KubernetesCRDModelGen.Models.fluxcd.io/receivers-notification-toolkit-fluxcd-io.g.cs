@@ -54,6 +54,10 @@ public partial class V1ReceiverSpec
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
 
+    /// <summary>ResourceFilter is a CEL expression expected to return a boolean that is evaluated for each resource referenced in the Resources field when a webhook is received. If the expression returns false then the controller will not request a reconciliation for the resource. When the expression is specified the controller will parse it and mark the object as terminally failed if the expression is invalid or does not return a boolean.</summary>
+    [JsonPropertyName("resourceFilter")]
+    public string? ResourceFilter { get; set; }
+
     /// <summary>A list of resources to be notified about changes.</summary>
     [JsonPropertyName("resources")]
     public IList<V1ReceiverSpecResources> Resources { get; set; }

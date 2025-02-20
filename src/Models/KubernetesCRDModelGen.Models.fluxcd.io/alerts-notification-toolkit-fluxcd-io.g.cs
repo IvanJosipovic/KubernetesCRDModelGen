@@ -70,7 +70,7 @@ public partial class V1beta3AlertSpec
     [JsonPropertyName("providerRef")]
     public V1beta3AlertSpecProviderRef ProviderRef { get; set; }
 
-    /// <summary>Summary holds a short description of the impact and affected cluster.</summary>
+    /// <summary>Summary holds a short description of the impact and affected cluster. Deprecated: Use EventMetadata instead.</summary>
     [JsonPropertyName("summary")]
     public string? Summary { get; set; }
 
