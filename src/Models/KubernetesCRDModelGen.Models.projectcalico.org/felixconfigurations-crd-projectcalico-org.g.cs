@@ -398,10 +398,6 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("flowLogsGoldmaneServer")]
     public string? FlowLogsGoldmaneServer { get; set; }
 
-    /// <summary>FlowLogsMaxOriginalIPsIncluded specifies the number of unique IP addresses (if relevant) that should be included in Flow logs.</summary>
-    [JsonPropertyName("flowLogsMaxOriginalIPsIncluded")]
-    public int? FlowLogsMaxOriginalIPsIncluded { get; set; }
-
     /// <summary>GenericXDPEnabled enables Generic XDP so network cards that don't support XDP offload or driver modes can use XDP. This is not recommended since it doesn't provide better performance than iptables. [Default: false]</summary>
     [JsonPropertyName("genericXDPEnabled")]
     public bool? GenericXDPEnabled { get; set; }
@@ -565,10 +561,6 @@ public partial class V1FelixConfigurationSpec
     /// <summary>NetlinkTimeout is the timeout when talking to the kernel over the netlink protocol, used for programming routes, rules, and other kernel objects. [Default: 10s]</summary>
     [JsonPropertyName("netlinkTimeout")]
     public string? NetlinkTimeout { get; set; }
-
-    /// <summary>NfNetlinkBufSize controls the size of NFLOG messages that the kernel will try to send to Felix.  NFLOG messages are used to report flow verdicts from the kernel.  Warning: currently increasing the value may cause errors due to a bug in the netlink library.</summary>
-    [JsonPropertyName("nfNetlinkBufSize")]
-    public string? NfNetlinkBufSize { get; set; }
 
     /// <summary>NftablesFilterAllowAction controls the nftables action that Felix uses to represent the "allow" policy verdict in the filter table. The default is to `ACCEPT` the traffic, which is a terminal action.  Alternatively, `RETURN` can be used to return the traffic back to the top-level chain for further processing by your rules.</summary>
     [JsonPropertyName("nftablesFilterAllowAction")]
