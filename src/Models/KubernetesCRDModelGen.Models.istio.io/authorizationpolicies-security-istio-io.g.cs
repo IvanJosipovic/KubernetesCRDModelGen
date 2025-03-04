@@ -50,6 +50,10 @@ public partial class V1beta1AuthorizationPolicySpecRulesFromSource
     public IList<string>? NotRequestPrincipals { get; set; }
 
     /// <summary>Optional.</summary>
+    [JsonPropertyName("notServiceAccounts")]
+    public IList<string>? NotServiceAccounts { get; set; }
+
+    /// <summary>Optional.</summary>
     [JsonPropertyName("principals")]
     public IList<string>? Principals { get; set; }
 
@@ -60,6 +64,10 @@ public partial class V1beta1AuthorizationPolicySpecRulesFromSource
     /// <summary>Optional.</summary>
     [JsonPropertyName("requestPrincipals")]
     public IList<string>? RequestPrincipals { get; set; }
+
+    /// <summary>Optional.</summary>
+    [JsonPropertyName("serviceAccounts")]
+    public IList<string>? ServiceAccounts { get; set; }
 }
 
 /// <summary></summary>

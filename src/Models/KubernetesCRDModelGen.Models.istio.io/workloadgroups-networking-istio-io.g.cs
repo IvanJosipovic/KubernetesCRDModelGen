@@ -30,6 +30,19 @@ public partial class V1beta1WorkloadGroupSpecProbeExec
     public IList<string> Command { get; set; }
 }
 
+/// <summary>GRPC call is made and response/error is used to determine health.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadGroupSpecProbeGrpc
+{
+    /// <summary>Port on which the endpoint lives.</summary>
+    [JsonPropertyName("port")]
+    public int? Port { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("service")]
+    public string? Service { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadGroupSpecProbeHttpGetHttpHeaders
@@ -92,6 +105,10 @@ public partial class V1beta1WorkloadGroupSpecProbe
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded.</summary>
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
+
+    /// <summary>GRPC call is made and response/error is used to determine health.</summary>
+    [JsonPropertyName("grpc")]
+    public V1beta1WorkloadGroupSpecProbeGrpc? Grpc { get; set; }
 
     /// <summary>`httpGet` is performed to a given endpoint and the status/able to connect determines health.</summary>
     [JsonPropertyName("httpGet")]

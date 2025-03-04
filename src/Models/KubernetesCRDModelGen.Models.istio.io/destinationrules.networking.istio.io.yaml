@@ -7,8 +7,8 @@ metadata:
     app.kubernetes.io/instance: release-name
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: istio
-    app.kubernetes.io/version: 1.24.3
-    helm.sh/chart: base-1.24.3
+    app.kubernetes.io/version: 1.25.0
+    helm.sh/chart: base-1.25.0
   name: destinationrules.networking.istio.io
 spec:
   group: networking.istio.io
@@ -1611,13 +1611,13 @@ spec:
                       type: string
                       x-kubernetes-validations:
                       - message: wildcard not allowed in label value match
-                        rule: "!self.contains('*')"
+                        rule: '!self.contains("*")'
                     description: One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.
                     maxProperties: 4096
                     type: object
                     x-kubernetes-validations:
                     - message: wildcard not allowed in label key match
-                      rule: self.all(key, !key.contains('*'))
+                      rule: self.all(key, !key.contains("*"))
                     - message: key must not be empty
                       rule: self.all(key, key.size() != 0)
                 type: object
@@ -1641,6 +1641,12 @@ spec:
                     message:
                       description: Human-readable message indicating details about last transition.
                       type: string
+                    observedGeneration:
+                      anyOf:
+                      - type: integer
+                      - type: string
+                      description: Resource Generation to which the Condition refers.
+                      x-kubernetes-int-or-string: true
                     reason:
                       description: Unique, one-word, CamelCase reason for the condition's last transition.
                       type: string
@@ -1656,7 +1662,6 @@ spec:
                 anyOf:
                 - type: integer
                 - type: string
-                description: Resource Generation to which the Reconciled Condition refers.
                 x-kubernetes-int-or-string: true
               validationMessages:
                 description: Includes any errors or warnings detected by Istio's analyzers.
@@ -3282,13 +3287,13 @@ spec:
                       type: string
                       x-kubernetes-validations:
                       - message: wildcard not allowed in label value match
-                        rule: "!self.contains('*')"
+                        rule: '!self.contains("*")'
                     description: One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.
                     maxProperties: 4096
                     type: object
                     x-kubernetes-validations:
                     - message: wildcard not allowed in label key match
-                      rule: self.all(key, !key.contains('*'))
+                      rule: self.all(key, !key.contains("*"))
                     - message: key must not be empty
                       rule: self.all(key, key.size() != 0)
                 type: object
@@ -3312,6 +3317,12 @@ spec:
                     message:
                       description: Human-readable message indicating details about last transition.
                       type: string
+                    observedGeneration:
+                      anyOf:
+                      - type: integer
+                      - type: string
+                      description: Resource Generation to which the Condition refers.
+                      x-kubernetes-int-or-string: true
                     reason:
                       description: Unique, one-word, CamelCase reason for the condition's last transition.
                       type: string
@@ -3327,7 +3338,6 @@ spec:
                 anyOf:
                 - type: integer
                 - type: string
-                description: Resource Generation to which the Reconciled Condition refers.
                 x-kubernetes-int-or-string: true
               validationMessages:
                 description: Includes any errors or warnings detected by Istio's analyzers.
@@ -4953,13 +4963,13 @@ spec:
                       type: string
                       x-kubernetes-validations:
                       - message: wildcard not allowed in label value match
-                        rule: "!self.contains('*')"
+                        rule: '!self.contains("*")'
                     description: One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.
                     maxProperties: 4096
                     type: object
                     x-kubernetes-validations:
                     - message: wildcard not allowed in label key match
-                      rule: self.all(key, !key.contains('*'))
+                      rule: self.all(key, !key.contains("*"))
                     - message: key must not be empty
                       rule: self.all(key, key.size() != 0)
                 type: object
@@ -4983,6 +4993,12 @@ spec:
                     message:
                       description: Human-readable message indicating details about last transition.
                       type: string
+                    observedGeneration:
+                      anyOf:
+                      - type: integer
+                      - type: string
+                      description: Resource Generation to which the Condition refers.
+                      x-kubernetes-int-or-string: true
                     reason:
                       description: Unique, one-word, CamelCase reason for the condition's last transition.
                       type: string
@@ -4998,7 +5014,6 @@ spec:
                 anyOf:
                 - type: integer
                 - type: string
-                description: Resource Generation to which the Reconciled Condition refers.
                 x-kubernetes-int-or-string: true
               validationMessages:
                 description: Includes any errors or warnings detected by Istio's analyzers.
