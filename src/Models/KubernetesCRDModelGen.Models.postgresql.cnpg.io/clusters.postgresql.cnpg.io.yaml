@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.16.5
+    controller-gen.kubebuilder.io/version: v0.17.2
     helm.sh/resource-policy: keep
   name: clusters.postgresql.cnpg.io
 spec:
@@ -3521,6 +3521,13 @@ spec:
                           default: true
                           description: Enabled is true if this plugin will be used
                           type: boolean
+                        isWALArchiver:
+                          default: false
+                          description: >-
+                            Only one plugin can be declared as WALArchiver.
+
+                            Cannot be active if ".spec.backup.barmanObjectStore" configuration is present.
+                          type: boolean
                         name:
                           description: Name is the plugin name
                           type: string
@@ -4807,6 +4814,13 @@ spec:
                     enabled:
                       default: true
                       description: Enabled is true if this plugin will be used
+                      type: boolean
+                    isWALArchiver:
+                      default: false
+                      description: >-
+                        Only one plugin can be declared as WALArchiver.
+
+                        Cannot be active if ".spec.backup.barmanObjectStore" configuration is present.
                       type: boolean
                     name:
                       description: Name is the plugin name

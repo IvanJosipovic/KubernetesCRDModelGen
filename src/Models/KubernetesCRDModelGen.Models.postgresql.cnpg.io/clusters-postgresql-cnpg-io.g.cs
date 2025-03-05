@@ -2101,6 +2101,10 @@ public partial class V1ClusterSpecExternalClustersPlugin
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary>Only one plugin can be declared as WALArchiver. Cannot be active if ".spec.backup.barmanObjectStore" configuration is present.</summary>
+    [JsonPropertyName("isWALArchiver")]
+    public bool? IsWALArchiver { get; set; }
+
     /// <summary>Name is the plugin name</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
@@ -2674,6 +2678,10 @@ public partial class V1ClusterSpecPlugins
     /// <summary>Enabled is true if this plugin will be used</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+
+    /// <summary>Only one plugin can be declared as WALArchiver. Cannot be active if ".spec.backup.barmanObjectStore" configuration is present.</summary>
+    [JsonPropertyName("isWALArchiver")]
+    public bool? IsWALArchiver { get; set; }
 
     /// <summary>Name is the plugin name</summary>
     [JsonPropertyName("name")]
