@@ -398,6 +398,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("flowLogsGoldmaneServer")]
     public string? FlowLogsGoldmaneServer { get; set; }
 
+    /// <summary>Continuous - Felix evaluates active flows on a regular basis to determine the rule traces in the flow logs. Any policy updates that impact a flow will be reflected in the pending_policies field, offering a near-real-time view of policy changes across flows. None - Felix stops evaluating pending traces. [Default: Continuous]</summary>
+    [JsonPropertyName("flowLogsPolicyEvaluationMode")]
+    public string? FlowLogsPolicyEvaluationMode { get; set; }
+
     /// <summary>GenericXDPEnabled enables Generic XDP so network cards that don't support XDP offload or driver modes can use XDP. This is not recommended since it doesn't provide better performance than iptables. [Default: false]</summary>
     [JsonPropertyName("genericXDPEnabled")]
     public bool? GenericXDPEnabled { get; set; }
