@@ -26,6 +26,27 @@ public partial class V1KubeControllersConfigurationSpecControllersNamespace
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpointTemplates
+{
+    /// <summary>GenerateName is appended to the end of the generated AutoHostEndpoint name</summary>
+    [JsonPropertyName("generateName")]
+    public string? GenerateName { get; set; }
+
+    /// <summary>InterfaceCIDRs contains a list of CIRDs used for matching nodeIPs to the AutoHostEndpoint</summary>
+    [JsonPropertyName("interfaceCIDRs")]
+    public IList<string>? InterfaceCIDRs { get; set; }
+
+    /// <summary>Labels adds the specified labels to the generated AutoHostEndpoint, labels from node with the same name will be overwritten by values from the template label</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>NodeSelector allows the AutoHostEndpoint to be created only for specific nodes</summary>
+    [JsonPropertyName("nodeSelector")]
+    public string? NodeSelector { get; set; }
+}
+
 /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoint
@@ -33,6 +54,14 @@ public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoi
     /// <summary>AutoCreate enables automatic creation of host endpoints for every node. [Default: Disabled]</summary>
     [JsonPropertyName("autoCreate")]
     public string? AutoCreate { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("createDefaultHostEndpoint")]
+    public string? CreateDefaultHostEndpoint { get; set; }
+
+    /// <summary>Templates contains definition for creating AutoHostEndpoints</summary>
+    [JsonPropertyName("templates")]
+    public IList<V1KubeControllersConfigurationSpecControllersNodeHostEndpointTemplates>? Templates { get; set; }
 }
 
 /// <summary>Node enables and configures the node controller. Enabled by default, set to nil to disable.</summary>
@@ -159,6 +188,27 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     public string? ReconcilerPeriod { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpointTemplates
+{
+    /// <summary>GenerateName is appended to the end of the generated AutoHostEndpoint name</summary>
+    [JsonPropertyName("generateName")]
+    public string? GenerateName { get; set; }
+
+    /// <summary>InterfaceCIDRs contains a list of CIRDs used for matching nodeIPs to the AutoHostEndpoint</summary>
+    [JsonPropertyName("interfaceCIDRs")]
+    public IList<string>? InterfaceCIDRs { get; set; }
+
+    /// <summary>Labels adds the specified labels to the generated AutoHostEndpoint, labels from node with the same name will be overwritten by values from the template label</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>NodeSelector allows the AutoHostEndpoint to be created only for specific nodes</summary>
+    [JsonPropertyName("nodeSelector")]
+    public string? NodeSelector { get; set; }
+}
+
 /// <summary>HostEndpoint controls syncing nodes to host endpoints. Disabled by default, set to nil to disable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpoint
@@ -166,6 +216,14 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     /// <summary>AutoCreate enables automatic creation of host endpoints for every node. [Default: Disabled]</summary>
     [JsonPropertyName("autoCreate")]
     public string? AutoCreate { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("createDefaultHostEndpoint")]
+    public string? CreateDefaultHostEndpoint { get; set; }
+
+    /// <summary>Templates contains definition for creating AutoHostEndpoints</summary>
+    [JsonPropertyName("templates")]
+    public IList<V1KubeControllersConfigurationStatusRunningConfigControllersNodeHostEndpointTemplates>? Templates { get; set; }
 }
 
 /// <summary>Node enables and configures the node controller. Enabled by default, set to nil to disable.</summary>
