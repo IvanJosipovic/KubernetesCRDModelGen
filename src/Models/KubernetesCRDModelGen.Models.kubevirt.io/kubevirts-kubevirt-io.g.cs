@@ -493,11 +493,15 @@ public partial class V1KubeVirtSpecConfigurationMigrations
     [JsonPropertyName("allowPostCopy")]
     public bool? AllowPostCopy { get; set; }
 
+    /// <summary>AllowWorkloadDisruption indicates that the migration shouldn't be canceled after acceptableCompletionTime is exceeded. Instead, if permitted, migration will be switched to post-copy or the VMI will be paused to allow the migration to complete</summary>
+    [JsonPropertyName("allowWorkloadDisruption")]
+    public bool? AllowWorkloadDisruption { get; set; }
+
     /// <summary>BandwidthPerMigration limits the amount of network bandwidth live migrations are allowed to use. The value is in quantity per second. Defaults to 0 (no limit)</summary>
     [JsonPropertyName("bandwidthPerMigration")]
     public IntstrIntOrString? BandwidthPerMigration { get; set; }
 
-    /// <summary>CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If a live-migration takes longer to migrate than this value multiplied by the size of the VMI, the migration will be cancelled, unless AllowPostCopy is true. Defaults to 150</summary>
+    /// <summary>CompletionTimeoutPerGiB is the maximum number of seconds per GiB a migration is allowed to take. If the timeout is reached, the migration will be either paused, switched to post-copy or cancelled depending on other settings. Defaults to 150</summary>
     [JsonPropertyName("completionTimeoutPerGiB")]
     public long? CompletionTimeoutPerGiB { get; set; }
 
@@ -987,11 +991,11 @@ public partial class V1KubeVirtSpecConfiguration
     [JsonPropertyName("virtualMachineOptions")]
     public V1KubeVirtSpecConfigurationVirtualMachineOptions? VirtualMachineOptions { get; set; }
 
-    /// <summary>VMRolloutStrategy defines how changes to a VM object propagate to its VMI</summary>
+    /// <summary>VMRolloutStrategy defines how live-updatable fields, like CPU sockets, memory, tolerations, and affinity, are propagated from a VM to its VMI.</summary>
     [JsonPropertyName("vmRolloutStrategy")]
     public string? VmRolloutStrategy { get; set; }
 
-    /// <summary>VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode.</summary>
+    /// <summary>VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM.</summary>
     [JsonPropertyName("vmStateStorageClass")]
     public string? VmStateStorageClass { get; set; }
 
