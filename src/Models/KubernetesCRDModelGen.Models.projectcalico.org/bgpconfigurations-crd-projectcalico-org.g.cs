@@ -111,6 +111,14 @@ public partial class V1BGPConfigurationSpec
     [JsonPropertyName("listenPort")]
     public int? ListenPort { get; set; }
 
+    /// <summary>The virtual IPv4 address of the node with which its local workload is expected to peer. It is recommended to use a link-local address.</summary>
+    [JsonPropertyName("localWorkloadPeeringIPV4")]
+    public string? LocalWorkloadPeeringIPV4 { get; set; }
+
+    /// <summary>The virtual IPv6 address of the node with which its local workload is expected to peer. It is recommended to use a link-local address.</summary>
+    [JsonPropertyName("localWorkloadPeeringIPV6")]
+    public string? LocalWorkloadPeeringIPV6 { get; set; }
+
     /// <summary>LogSeverityScreen is the log severity above which logs are sent to the stdout. [Default: INFO]</summary>
     [JsonPropertyName("logSeverityScreen")]
     public string? LogSeverityScreen { get; set; }
