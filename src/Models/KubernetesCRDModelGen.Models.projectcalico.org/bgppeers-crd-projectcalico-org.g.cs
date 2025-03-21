@@ -50,7 +50,7 @@ public partial class V1BGPPeerSpec
     [JsonPropertyName("keepOriginalNextHop")]
     public bool? KeepOriginalNextHop { get; set; }
 
-    /// <summary>Selector for the local workload that the node should peer with. When this is set, the peerSelector and peerIP fields must be empty.</summary>
+    /// <summary>Selector for the local workload that the node should peer with. When this is set, the peerSelector and peerIP fields must be empty, and the ASNumber must not be empty.</summary>
     [JsonPropertyName("localWorkloadSelector")]
     public string? LocalWorkloadSelector { get; set; }
 
