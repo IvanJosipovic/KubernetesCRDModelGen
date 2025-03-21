@@ -50,6 +50,10 @@ public partial class V1BGPPeerSpec
     [JsonPropertyName("keepOriginalNextHop")]
     public bool? KeepOriginalNextHop { get; set; }
 
+    /// <summary>Selector for the local workload that the node should peer with. When this is set, the peerSelector and peerIP fields must be empty.</summary>
+    [JsonPropertyName("localWorkloadSelector")]
+    public string? LocalWorkloadSelector { get; set; }
+
     /// <summary>Time to allow for software restart.  When specified, this is configured as the graceful restart timeout.  When not specified, the BIRD default of 120s is used.</summary>
     [JsonPropertyName("maxRestartTime")]
     public string? MaxRestartTime { get; set; }
