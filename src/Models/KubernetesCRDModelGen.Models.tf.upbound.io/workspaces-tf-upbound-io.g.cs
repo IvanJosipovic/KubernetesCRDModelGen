@@ -163,7 +163,7 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("inlineFormat")]
     public string? InlineFormat { get; set; }
 
-    /// <summary>The root module of this workspace; i.e. the module containing its main.tf file. When the workspace's source is 'Remote' (the default) this can be any address supported by terraform init -from-module, for example a git repository or an S3 bucket. When the workspace's source is 'Inline' the content of a simple main.tf or main.tf.json file may be written inline.</summary>
+    /// <summary>The root module of this workspace; i.e. the module containing its main.tf file. When the workspace's source is 'Remote' (the default) this can be any address supported by terraform init -from-module, for example a git repository or an S3 bucket. When the workspace's source is 'Inline' the content of a simple main.tf or main.tf.json file may be written inline. When the workspace's source is 'Flux', use the FluxSourceKind::namespace/name format. Example: Module: "GitRepository::my-namespace/my-repo"</summary>
     [JsonPropertyName("module")]
     public string Module { get; set; }
 
