@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FelixConfigurationSpecBpfConntrackTimeouts
 {
-    /// <summary> CreationGracePeriod gives a generic grace period to new connection  before they are considered for cleanup [Default: 10s].</summary>
+    /// <summary>CreationGracePeriod gives a generic grace period to new connections before they are considered for cleanup [Default: 10s].</summary>
     [JsonPropertyName("creationGracePeriod")]
     public string? CreationGracePeriod { get; set; }
 
