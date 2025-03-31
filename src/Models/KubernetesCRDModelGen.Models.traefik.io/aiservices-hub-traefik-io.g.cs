@@ -33,6 +33,15 @@ public partial class V1alpha1AIServiceSpecAnthropicParams
     public double? TopP { get; set; }
 }
 
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecAnthropicToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
 /// <summary>Anthropic configures Anthropic backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecAnthropic
@@ -45,9 +54,18 @@ public partial class V1alpha1AIServiceSpecAnthropic
     [JsonPropertyName("params")]
     public V1alpha1AIServiceSpecAnthropicParams? Params { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SecretReference references a kubernetes secret.</summary>
     [JsonPropertyName("token")]
-    public string Token { get; set; }
+    public V1alpha1AIServiceSpecAnthropicToken? Token { get; set; }
+}
+
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecAzureOpenaiApiKeySecret
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
 }
 
 /// <summary>Params holds the LLM hyperparameters.</summary>
@@ -79,9 +97,9 @@ public partial class V1alpha1AIServiceSpecAzureOpenaiParams
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecAzureOpenai
 {
-    /// <summary></summary>
-    [JsonPropertyName("apiKey")]
-    public string ApiKey { get; set; }
+    /// <summary>SecretReference references a kubernetes secret.</summary>
+    [JsonPropertyName("apiKeySecret")]
+    public V1alpha1AIServiceSpecAzureOpenaiApiKeySecret? ApiKeySecret { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("baseUrl")]
@@ -171,6 +189,15 @@ public partial class V1alpha1AIServiceSpecCohereParams
     public double? TopP { get; set; }
 }
 
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecCohereToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
 /// <summary>Cohere configures Cohere backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecCohere
@@ -183,9 +210,9 @@ public partial class V1alpha1AIServiceSpecCohere
     [JsonPropertyName("params")]
     public V1alpha1AIServiceSpecCohereParams? Params { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SecretReference references a kubernetes secret.</summary>
     [JsonPropertyName("token")]
-    public string Token { get; set; }
+    public V1alpha1AIServiceSpecCohereToken? Token { get; set; }
 }
 
 /// <summary>Params holds the LLM hyperparameters.</summary>
@@ -213,6 +240,15 @@ public partial class V1alpha1AIServiceSpecDeepSeekParams
     public double? TopP { get; set; }
 }
 
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecDeepSeekToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
 /// <summary>DeepSeek configures DeepSeek.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecDeepSeek
@@ -229,9 +265,18 @@ public partial class V1alpha1AIServiceSpecDeepSeek
     [JsonPropertyName("params")]
     public V1alpha1AIServiceSpecDeepSeekParams? Params { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SecretReference references a kubernetes secret.</summary>
     [JsonPropertyName("token")]
-    public string Token { get; set; }
+    public V1alpha1AIServiceSpecDeepSeekToken? Token { get; set; }
+}
+
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecGeminiApiKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
 }
 
 /// <summary>Params holds the LLM hyperparameters.</summary>
@@ -263,9 +308,9 @@ public partial class V1alpha1AIServiceSpecGeminiParams
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecGemini
 {
-    /// <summary></summary>
+    /// <summary>SecretReference references a kubernetes secret.</summary>
     [JsonPropertyName("apiKey")]
-    public string ApiKey { get; set; }
+    public V1alpha1AIServiceSpecGeminiApiKey? ApiKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("model")]
@@ -274,6 +319,15 @@ public partial class V1alpha1AIServiceSpecGemini
     /// <summary>Params holds the LLM hyperparameters.</summary>
     [JsonPropertyName("params")]
     public V1alpha1AIServiceSpecGeminiParams? Params { get; set; }
+}
+
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecMistralApiKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
 }
 
 /// <summary>Params holds the LLM hyperparameters.</summary>
@@ -305,9 +359,9 @@ public partial class V1alpha1AIServiceSpecMistralParams
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecMistral
 {
-    /// <summary></summary>
+    /// <summary>SecretReference references a kubernetes secret.</summary>
     [JsonPropertyName("apiKey")]
-    public string ApiKey { get; set; }
+    public V1alpha1AIServiceSpecMistralApiKey? ApiKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("model")]
@@ -385,6 +439,15 @@ public partial class V1alpha1AIServiceSpecOpenaiParams
     public double? TopP { get; set; }
 }
 
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecOpenaiToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
 /// <summary>OpenAI configures OpenAI.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecOpenai
@@ -401,9 +464,9 @@ public partial class V1alpha1AIServiceSpecOpenai
     [JsonPropertyName("params")]
     public V1alpha1AIServiceSpecOpenaiParams? Params { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SecretReference references a kubernetes secret.</summary>
     [JsonPropertyName("token")]
-    public string Token { get; set; }
+    public V1alpha1AIServiceSpecOpenaiToken? Token { get; set; }
 }
 
 /// <summary>Params holds the LLM hyperparameters.</summary>
@@ -431,6 +494,15 @@ public partial class V1alpha1AIServiceSpecQWenParams
     public double? TopP { get; set; }
 }
 
+/// <summary>SecretReference references a kubernetes secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1AIServiceSpecQWenToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("secretName")]
+    public string SecretName { get; set; }
+}
+
 /// <summary>QWen configures QWen.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIServiceSpecQWen
@@ -447,9 +519,9 @@ public partial class V1alpha1AIServiceSpecQWen
     [JsonPropertyName("params")]
     public V1alpha1AIServiceSpecQWenParams? Params { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SecretReference references a kubernetes secret.</summary>
     [JsonPropertyName("token")]
-    public string Token { get; set; }
+    public V1alpha1AIServiceSpecQWenToken? Token { get; set; }
 }
 
 /// <summary>The desired behavior of this AIService.</summary>
