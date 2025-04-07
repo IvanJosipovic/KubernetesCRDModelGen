@@ -145,6 +145,10 @@ public partial class V1alpha1ScaledObjectSpecAdvanced
 public partial class V1alpha1ScaledObjectSpecFallback
 {
     /// <summary></summary>
+    [JsonPropertyName("behavior")]
+    public string? Behavior { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("failureThreshold")]
     public int FailureThreshold { get; set; }
 
@@ -321,6 +325,10 @@ public partial class V1alpha1ScaledObjectStatusScaleTargetGVKR
 public partial class V1alpha1ScaledObjectStatus
 {
     /// <summary></summary>
+    [JsonPropertyName("authenticationsTypes")]
+    public string? AuthenticationsTypes { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("compositeScalerName")]
     public string? CompositeScalerName { get; set; }
 
@@ -363,6 +371,10 @@ public partial class V1alpha1ScaledObjectStatus
     /// <summary></summary>
     [JsonPropertyName("scaleTargetKind")]
     public string? ScaleTargetKind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("triggersTypes")]
+    public string? TriggersTypes { get; set; }
 }
 
 /// <summary>ScaledObject is a specification for a ScaledObject resource</summary>
