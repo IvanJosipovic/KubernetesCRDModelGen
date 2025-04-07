@@ -160,6 +160,10 @@ public partial class V1alpha1TriggerAuthenticationSpecAwsSecretManagerSecrets
     public string Parameter { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("secretKey")]
+    public string? SecretKey { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
 
@@ -323,6 +327,19 @@ public partial class V1alpha1TriggerAuthenticationSpecAzureKeyVault
     /// <summary></summary>
     [JsonPropertyName("vaultUri")]
     public string VaultUri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1TriggerAuthenticationSpecBoundServiceAccountToken
+{
+    /// <summary></summary>
+    [JsonPropertyName("parameter")]
+    public string Parameter { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("serviceAccountName")]
+    public string ServiceAccountName { get; set; }
 }
 
 /// <summary>AuthConfigMapTargetRef is used to authenticate using a reference to a config map</summary>
@@ -623,6 +640,10 @@ public partial class V1alpha1TriggerAuthenticationSpec
     /// <summary>AzureKeyVault is used to authenticate using Azure Key Vault</summary>
     [JsonPropertyName("azureKeyVault")]
     public V1alpha1TriggerAuthenticationSpecAzureKeyVault? AzureKeyVault { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("boundServiceAccountToken")]
+    public IList<V1alpha1TriggerAuthenticationSpecBoundServiceAccountToken>? BoundServiceAccountToken { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("configMapTargetRef")]
