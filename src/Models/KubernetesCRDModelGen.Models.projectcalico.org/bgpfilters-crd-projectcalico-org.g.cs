@@ -21,7 +21,7 @@ public partial class V1BGPFilterSpecExportV4PrefixLength
     public int? Min { get; set; }
 }
 
-/// <summary>BGPFilterRuleV4 defines a BGP filter rule consisting a single IPv4 CIDR block and a filter action for this CIDR.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPFilterSpecExportV4
 {
@@ -63,7 +63,7 @@ public partial class V1BGPFilterSpecExportV6PrefixLength
     public int? Min { get; set; }
 }
 
-/// <summary>BGPFilterRuleV6 defines a BGP filter rule consisting a single IPv6 CIDR block and a filter action for this CIDR.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPFilterSpecExportV6
 {
@@ -105,7 +105,7 @@ public partial class V1BGPFilterSpecImportV4PrefixLength
     public int? Min { get; set; }
 }
 
-/// <summary>BGPFilterRuleV4 defines a BGP filter rule consisting a single IPv4 CIDR block and a filter action for this CIDR.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPFilterSpecImportV4
 {
@@ -147,7 +147,7 @@ public partial class V1BGPFilterSpecImportV6PrefixLength
     public int? Min { get; set; }
 }
 
-/// <summary>BGPFilterRuleV6 defines a BGP filter rule consisting a single IPv6 CIDR block and a filter action for this CIDR.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPFilterSpecImportV6
 {
@@ -176,23 +176,23 @@ public partial class V1BGPFilterSpecImportV6
     public string? Source { get; set; }
 }
 
-/// <summary>BGPFilterSpec contains the IPv4 and IPv6 filter rules of the BGP Filter.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPFilterSpec
 {
-    /// <summary>The ordered set of IPv4 BGPFilter rules acting on exporting routes to a peer.</summary>
+    /// <summary></summary>
     [JsonPropertyName("exportV4")]
     public IList<V1BGPFilterSpecExportV4>? ExportV4 { get; set; }
 
-    /// <summary>The ordered set of IPv6 BGPFilter rules acting on exporting routes to a peer.</summary>
+    /// <summary></summary>
     [JsonPropertyName("exportV6")]
     public IList<V1BGPFilterSpecExportV6>? ExportV6 { get; set; }
 
-    /// <summary>The ordered set of IPv4 BGPFilter rules acting on importing routes from a peer.</summary>
+    /// <summary></summary>
     [JsonPropertyName("importV4")]
     public IList<V1BGPFilterSpecImportV4>? ImportV4 { get; set; }
 
-    /// <summary>The ordered set of IPv6 BGPFilter rules acting on importing routes from a peer.</summary>
+    /// <summary></summary>
     [JsonPropertyName("importV6")]
     public IList<V1BGPFilterSpecImportV6>? ImportV6 { get; set; }
 }
@@ -218,7 +218,7 @@ public partial class V1BGPFilter : IKubernetesObject<V1ObjectMeta>, ISpec<V1BGPF
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>BGPFilterSpec contains the IPv4 and IPv6 filter rules of the BGP Filter.</summary>
+    /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1BGPFilterSpec? Spec { get; set; }
 }

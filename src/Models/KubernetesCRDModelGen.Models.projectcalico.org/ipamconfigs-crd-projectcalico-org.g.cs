@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
-/// <summary>IPAMConfigSpec contains the specification for an IPAMConfig resource.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IPAMConfigSpec
 {
@@ -16,7 +16,7 @@ public partial class V1IPAMConfigSpec
     [JsonPropertyName("autoAllocateBlocks")]
     public bool AutoAllocateBlocks { get; set; }
 
-    /// <summary>MaxBlocksPerHost, if non-zero, is the max number of blocks that can be affine to each host.</summary>
+    /// <summary></summary>
     [JsonPropertyName("maxBlocksPerHost")]
     public int? MaxBlocksPerHost { get; set; }
 
@@ -46,7 +46,7 @@ public partial class V1IPAMConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1IPA
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>IPAMConfigSpec contains the specification for an IPAMConfig resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1IPAMConfigSpec? Spec { get; set; }
 }

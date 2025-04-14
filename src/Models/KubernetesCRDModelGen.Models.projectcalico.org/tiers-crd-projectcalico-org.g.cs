@@ -8,15 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
-/// <summary>TierSpec contains the specification for a security policy tier resource.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1TierSpec
 {
-    /// <summary>DefaultAction specifies the action applied to workloads selected by a policy in the tier, but not rule matched the workload's traffic. [Default: Deny]</summary>
+    /// <summary></summary>
     [JsonPropertyName("defaultAction")]
     public string? DefaultAction { get; set; }
 
-    /// <summary>Order is an optional field that specifies the order in which the tier is applied. Tiers with higher "order" are applied after those with lower order.  If the order is omitted, it may be considered to be "infinite" - i.e. the tier will be applied last.  Tiers with identical order will be applied in alphanumerical order based on the Tier "Name".</summary>
+    /// <summary></summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 }
@@ -42,7 +42,7 @@ public partial class V1Tier : IKubernetesObject<V1ObjectMeta>, ISpec<V1TierSpec>
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>TierSpec contains the specification for a security policy tier resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1TierSpec? Spec { get; set; }
 }
