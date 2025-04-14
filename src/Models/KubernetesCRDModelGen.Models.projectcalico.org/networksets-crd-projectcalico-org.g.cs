@@ -8,16 +8,16 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
-/// <summary>NetworkSetSpec contains the specification for a NetworkSet resource.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1NetworkSetSpec
 {
-    /// <summary>The list of IP networks that belong to this set.</summary>
+    /// <summary></summary>
     [JsonPropertyName("nets")]
     public IList<string>? Nets { get; set; }
 }
 
-/// <summary>NetworkSet is the Namespaced-equivalent of the GlobalNetworkSet.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1NetworkSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1NetworkSetSpec>
@@ -38,7 +38,7 @@ public partial class V1NetworkSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1Net
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>NetworkSetSpec contains the specification for a NetworkSet resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1NetworkSetSpec? Spec { get; set; }
 }

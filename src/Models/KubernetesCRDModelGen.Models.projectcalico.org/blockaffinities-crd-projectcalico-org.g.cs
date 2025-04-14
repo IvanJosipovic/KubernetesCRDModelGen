@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
-/// <summary>BlockAffinitySpec contains the specification for a BlockAffinity resource.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BlockAffinitySpec
 {
@@ -16,7 +16,7 @@ public partial class V1BlockAffinitySpec
     [JsonPropertyName("cidr")]
     public string Cidr { get; set; }
 
-    /// <summary>Deleted indicates that this block affinity is being deleted. This field is a string for compatibility with older releases that mistakenly treat this field as a string.</summary>
+    /// <summary></summary>
     [JsonPropertyName("deleted")]
     public string Deleted { get; set; }
 
@@ -54,7 +54,7 @@ public partial class V1BlockAffinity : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>BlockAffinitySpec contains the specification for a BlockAffinity resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1BlockAffinitySpec? Spec { get; set; }
 }
