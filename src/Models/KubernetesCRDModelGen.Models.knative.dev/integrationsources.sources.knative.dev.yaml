@@ -5,7 +5,7 @@ metadata:
     eventing.knative.dev/source: true
     duck.knative.dev/source: true
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.17.4
+    app.kubernetes.io/version: 1.17.5
     app.kubernetes.io/name: knative-eventing
   name: integrationsources.sources.knative.dev
 spec:
