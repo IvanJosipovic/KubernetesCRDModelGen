@@ -15,7 +15,7 @@ public class Benchmark
     [GlobalSetup]
     public void GlobalSetup()
     {
-        var fac = LoggerFactory.Create((x) => { });
+        var fac = new LoggerFactory();
 
         generator = new Generator(fac.CreateLogger<Generator>());
 
