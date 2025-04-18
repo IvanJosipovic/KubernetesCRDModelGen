@@ -4670,7 +4670,7 @@ spec:
                   type: object
                 type: array
               etag:
-                description: '\`etag\` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.'
+                description: \`etag\` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
