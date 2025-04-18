@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
-/// <summary>IPAMHandleSpec contains the specification for an IPAMHandle resource.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IPAMHandleSpec
 {
@@ -46,7 +46,7 @@ public partial class V1IPAMHandle : IKubernetesObject<V1ObjectMeta>, ISpec<V1IPA
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>IPAMHandleSpec contains the specification for an IPAMHandle resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1IPAMHandleSpec? Spec { get; set; }
 }

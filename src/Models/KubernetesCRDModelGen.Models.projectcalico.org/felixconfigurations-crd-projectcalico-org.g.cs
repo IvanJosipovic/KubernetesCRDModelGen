@@ -398,6 +398,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("flowLogsGoldmaneServer")]
     public string? FlowLogsGoldmaneServer { get; set; }
 
+    /// <summary>FlowLogsLocalReporter configures local unix socket for reporting flow data from each node. [Default: Disabled]</summary>
+    [JsonPropertyName("flowLogsLocalReporter")]
+    public string? FlowLogsLocalReporter { get; set; }
+
     /// <summary>Continuous - Felix evaluates active flows on a regular basis to determine the rule traces in the flow logs. Any policy updates that impact a flow will be reflected in the pending_policies field, offering a near-real-time view of policy changes across flows. None - Felix stops evaluating pending traces. [Default: Continuous]</summary>
     [JsonPropertyName("flowLogsPolicyEvaluationMode")]
     public string? FlowLogsPolicyEvaluationMode { get; set; }
