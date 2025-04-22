@@ -123,7 +123,7 @@ public partial class V1ServiceSpecTemplateSpecContainersEnvFrom
     public V1ServiceSpecTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeExec
 {
@@ -132,7 +132,7 @@ public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeExec
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeGrpc
 {
@@ -158,7 +158,7 @@ public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeHttpGetHttp
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeHttpGet
 {
@@ -183,7 +183,7 @@ public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeHttpGet
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeTcpSocket
 {
@@ -200,7 +200,7 @@ public partial class V1ServiceSpecTemplateSpecContainersLivenessProbeTcpSocket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersLivenessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1ServiceSpecTemplateSpecContainersLivenessProbeExec? Exec { get; set; }
 
@@ -208,11 +208,11 @@ public partial class V1ServiceSpecTemplateSpecContainersLivenessProbe
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1ServiceSpecTemplateSpecContainersLivenessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1ServiceSpecTemplateSpecContainersLivenessProbeHttpGet? HttpGet { get; set; }
 
@@ -228,7 +228,7 @@ public partial class V1ServiceSpecTemplateSpecContainersLivenessProbe
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1ServiceSpecTemplateSpecContainersLivenessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -254,7 +254,7 @@ public partial class V1ServiceSpecTemplateSpecContainersPorts
     public string? Protocol { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeExec
 {
@@ -263,7 +263,7 @@ public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeExec
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeGrpc
 {
@@ -289,7 +289,7 @@ public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeHttpGetHtt
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeHttpGet
 {
@@ -314,7 +314,7 @@ public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeHttpGet
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeTcpSocket
 {
@@ -331,7 +331,7 @@ public partial class V1ServiceSpecTemplateSpecContainersReadinessProbeTcpSocket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersReadinessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1ServiceSpecTemplateSpecContainersReadinessProbeExec? Exec { get; set; }
 
@@ -339,11 +339,11 @@ public partial class V1ServiceSpecTemplateSpecContainersReadinessProbe
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1ServiceSpecTemplateSpecContainersReadinessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1ServiceSpecTemplateSpecContainersReadinessProbeHttpGet? HttpGet { get; set; }
 
@@ -359,7 +359,7 @@ public partial class V1ServiceSpecTemplateSpecContainersReadinessProbe
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1ServiceSpecTemplateSpecContainersReadinessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -444,7 +444,7 @@ public partial class V1ServiceSpecTemplateSpecContainersSecurityContext
     public V1ServiceSpecTemplateSpecContainersSecurityContextSeccompProfile? SeccompProfile { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersStartupProbeExec
 {
@@ -453,7 +453,7 @@ public partial class V1ServiceSpecTemplateSpecContainersStartupProbeExec
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersStartupProbeGrpc
 {
@@ -479,7 +479,7 @@ public partial class V1ServiceSpecTemplateSpecContainersStartupProbeHttpGetHttpH
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersStartupProbeHttpGet
 {
@@ -504,7 +504,7 @@ public partial class V1ServiceSpecTemplateSpecContainersStartupProbeHttpGet
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersStartupProbeTcpSocket
 {
@@ -521,7 +521,7 @@ public partial class V1ServiceSpecTemplateSpecContainersStartupProbeTcpSocket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ServiceSpecTemplateSpecContainersStartupProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1ServiceSpecTemplateSpecContainersStartupProbeExec? Exec { get; set; }
 
@@ -529,11 +529,11 @@ public partial class V1ServiceSpecTemplateSpecContainersStartupProbe
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1ServiceSpecTemplateSpecContainersStartupProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1ServiceSpecTemplateSpecContainersStartupProbeHttpGet? HttpGet { get; set; }
 
@@ -549,7 +549,7 @@ public partial class V1ServiceSpecTemplateSpecContainersStartupProbe
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1ServiceSpecTemplateSpecContainersStartupProbeTcpSocket? TcpSocket { get; set; }
 
@@ -565,6 +565,10 @@ public partial class V1ServiceSpecTemplateSpecContainersVolumeMounts
     /// <summary>Path within the container at which the volume should be mounted.  Must not contain ':'.</summary>
     [JsonPropertyName("mountPath")]
     public string MountPath { get; set; }
+
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-volumes-mount-propagation</summary>
+    [JsonPropertyName("mountPropagation")]
+    public string? MountPropagation { get; set; }
 
     /// <summary>This must match the Name of a Volume.</summary>
     [JsonPropertyName("name")]
@@ -923,6 +927,10 @@ public partial class V1ServiceSpecTemplateSpecVolumes
     /// <summary>configMap represents a configMap that should populate this volume</summary>
     [JsonPropertyName("configMap")]
     public V1ServiceSpecTemplateSpecVolumesConfigMap? ConfigMap { get; set; }
+
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-volumes-csi</summary>
+    [JsonPropertyName("csi")]
+    public JsonNode? Csi { get; set; }
 
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-volumes-emptydir</summary>
     [JsonPropertyName("emptyDir")]
