@@ -1,4 +1,4 @@
-﻿using System.CodeDom.Compiler;
+using System.CodeDom.Compiler;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using System.Text;
@@ -70,7 +70,7 @@ public class Generator : IGenerator
 
         var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + crd.Spec.Group, true))).NormalizeWhitespace();
 
-        namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
+        namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind));
 
         var nullableDirective = SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true);
 
@@ -95,9 +95,9 @@ public class Generator : IGenerator
         ]);
     }
 
-    private BaseTypeDeclarationSyntax[] GenerateClass(OpenApiSchema schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null)
+    private BaseTypeDeclarationSyntax[] GenerateClass(OpenApiSchema schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null, string? listKind = null)
     {
-        bool isRoot = version != null && kind != null && group != null && plural != null;
+        bool isRoot = version != null && kind != null && group != null && plural != null && listKind != null;
 
         var types = new List<BaseTypeDeclarationSyntax>();
 
@@ -121,10 +121,31 @@ public class Generator : IGenerator
                                 SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed));
 
+        var @classList = SyntaxFactory.ClassDeclaration(CleanIdentifier((isRoot ? version : string.Empty) + " " + $"{name}List"))
+                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
+                        .AddAttributeLists(SyntaxFactory.AttributeList()
+                            .AddAttributes(
+                            [
+                                SyntaxFactory.Attribute(
+                                    SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
+                                    {
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                                    }))),
+                                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
+                            ])
+                        )
+                        .WithLeadingTrivia(
+                            SyntaxFactory.TriviaList(
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
+                                SyntaxFactory.CarriageReturnLineFeed));
+
         if (isRoot)
         {
             // Base Classes
             @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ObjectMeta>")));
+            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
 
             // Create an attribute syntax for the KubernetesEntity attribute
             var kubernetesEntityAttribute = SyntaxFactory.Attribute(
@@ -150,6 +171,7 @@ public class Generator : IGenerator
                             SyntaxFactory.IdentifierName("KubePluralName"))));
 
             @class = @class.AddAttributeLists(SyntaxFactory.AttributeList().AddAttributes(kubernetesEntityAttribute));
+            @classList = @classList.AddAttributeLists(SyntaxFactory.AttributeList().AddAttributes(kubernetesEntityAttribute));
 
             // Create the field declarations for the KubernetesEntity attribute
             var kubeApiVersion = SyntaxFactory.FieldDeclaration(
@@ -174,6 +196,18 @@ public class Generator : IGenerator
                                     SyntaxFactory.EqualsValueClause(
                                         SyntaxFactory.LiteralExpression(
                                             SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(kind!)))))))
+                    .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.ConstKeyword));
+
+            var kubeListKind = SyntaxFactory.FieldDeclaration(
+                    SyntaxFactory.VariableDeclaration(
+                        SyntaxFactory.ParseTypeName("string"))
+                    .WithVariables(
+                        SyntaxFactory.SingletonSeparatedList(
+                            SyntaxFactory.VariableDeclarator("KubeKind")
+                                .WithInitializer(
+                                    SyntaxFactory.EqualsValueClause(
+                                        SyntaxFactory.LiteralExpression(
+                                            SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(listKind!)))))))
                     .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.ConstKeyword));
 
             var kubeGroup = SyntaxFactory.FieldDeclaration(
@@ -209,7 +243,14 @@ public class Generator : IGenerator
             // Create a property declaration for Metadata
             var metaProp = CreateProperty("V1ObjectMeta", "metadata");
 
+            // Create a property declaration for List Metadata
+            var metaListProp = CreateProperty("V1ListMeta", "metadata");
+
+            // Create a property declaration for List Kind
+            var kindListProp = CreateProperty($"IList<{kind}>", "items");
+
             @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
+            @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaListProp, kindListProp);
         }
 
         if (schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var preserve) && preserve is OpenApiBoolean preserveBool && preserveBool.Value)
@@ -287,7 +328,7 @@ public class Generator : IGenerator
             @class = @class.AddMembers(newProperty);
         }
 
-        types.Add(@class);
+        types.AddRange([@class, @classList]);
 
         return [.. types];
     }
