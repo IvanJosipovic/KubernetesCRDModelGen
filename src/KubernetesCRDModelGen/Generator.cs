@@ -247,7 +247,7 @@ public class Generator : IGenerator
             var metaListProp = CreateProperty("V1ListMeta", "metadata");
 
             // Create a property declaration for List Kind
-            var kindListProp = CreateProperty($"IList<{kind}>", "items");
+            var kindListProp = CreateProperty($"IList<{CleanIdentifier((isRoot ? version : string.Empty) + " " + name)}>", "items");
 
             @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
             @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaListProp, kindListProp);
