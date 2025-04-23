@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signalrservice.azure.com;
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageCustomCertificateSpecKeyVaultBaseUriFromConfig
 {
@@ -101,7 +101,7 @@ public partial class V1api20240301storageCustomCertificateSpec
     [JsonPropertyName("keyVaultBaseUri")]
     public string? KeyVaultBaseUri { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("keyVaultBaseUriFromConfig")]
     public V1api20240301storageCustomCertificateSpecKeyVaultBaseUriFromConfig? KeyVaultBaseUriFromConfig { get; set; }
 
@@ -126,7 +126,7 @@ public partial class V1api20240301storageCustomCertificateSpec
     public V1api20240301storageCustomCertificateSpecOwner Owner { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageCustomCertificateStatusConditions
 {

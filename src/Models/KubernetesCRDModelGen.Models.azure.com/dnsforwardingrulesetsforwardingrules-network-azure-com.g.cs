@@ -72,7 +72,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpecTargetDnsServersIpAddressFromConfig
 {
@@ -97,7 +97,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("ipAddressFromConfig")]
     public V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpecTargetDnsServersIpAddressFromConfig? IpAddressFromConfig { get; set; }
 
@@ -147,7 +147,7 @@ public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpec
     public IList<V1api20220701storageDnsForwardingRuleSetsForwardingRuleSpecTargetDnsServers>? TargetDnsServers { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsForwardingRuleSetsForwardingRuleStatusConditions
 {

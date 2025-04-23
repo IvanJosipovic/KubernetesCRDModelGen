@@ -42,6 +42,19 @@ public partial class V1api20230501storageAfdOriginSpecAzureOrigin
     public V1api20230501storageAfdOriginSpecAzureOriginReference? Reference { get; set; }
 }
 
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20230501storageAfdOriginSpecHostNameFromConfig
+{
+    /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdOriginSpecOperatorSpecConfigMapExpressions
@@ -197,6 +210,10 @@ public partial class V1api20230501storageAfdOriginSpec
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
+    [JsonPropertyName("hostNameFromConfig")]
+    public V1api20230501storageAfdOriginSpecHostNameFromConfig? HostNameFromConfig { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("httpPort")]
     public int? HttpPort { get; set; }
@@ -247,7 +264,7 @@ public partial class V1api20230501storageAfdOriginStatusAzureOrigin
     public string? Id { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230501storageAfdOriginStatusConditions
 {

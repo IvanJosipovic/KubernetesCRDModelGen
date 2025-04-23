@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.12.0
+    app.kubernetes.io/version: v2.13.0
   name: registries.machinelearningservices.azure.com
 spec:
   conversion:
@@ -104,10 +104,7 @@ spec:
                       description: Information about the user assigned identity for the resource
                       properties:
                         reference:
-                          description: >-
-                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-
-                            nolint:recvcheck
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
                               description: >-
@@ -339,43 +336,6 @@ spec:
                                 description: 'AcrAccountSku: SKU of the ACR account'
                                 type: string
                             type: object
-                          userCreatedAcrAccount:
-                            description: 'UserCreatedAcrAccount: Details of user created ACR account to be used for the Registry'
-                            properties:
-                              armResourceId:
-                                description: 'ArmResourceId: ARM ResourceId of a resource'
-                                properties:
-                                  resourceReference:
-                                    description: >-
-                                      ResourceReference: Arm ResourceId is in the format
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
-                                      or
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
-                                    properties:
-                                      armId:
-                                        description: >-
-                                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
-                                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
-                                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                                        type: string
-                                      group:
-                                        description: Group is the Kubernetes group of the resource.
-                                        type: string
-                                      kind:
-                                        description: Kind is the Kubernetes kind of the resource.
-                                        type: string
-                                      name:
-                                        description: Name is the Kubernetes name of the resource.
-                                        type: string
-                                    type: object
-                                type: object
-                            type: object
                         type: object
                       type: array
                     location:
@@ -418,43 +378,6 @@ spec:
 
                                   "Premium_ZRS"
                                 type: string
-                            type: object
-                          userCreatedStorageAccount:
-                            description: 'UserCreatedStorageAccount: Details of user created storage account to be used for the registry'
-                            properties:
-                              armResourceId:
-                                description: 'ArmResourceId: ARM ResourceId of a resource'
-                                properties:
-                                  resourceReference:
-                                    description: >-
-                                      ResourceReference: Arm ResourceId is in the format
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
-                                      or
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
-                                    properties:
-                                      armId:
-                                        description: >-
-                                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
-                                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
-                                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                                        type: string
-                                      group:
-                                        description: Group is the Kubernetes group of the resource.
-                                        type: string
-                                      kind:
-                                        description: Kind is the Kubernetes kind of the resource.
-                                        type: string
-                                      name:
-                                        description: Name is the Kubernetes name of the resource.
-                                        type: string
-                                    type: object
-                                type: object
                             type: object
                         type: object
                       type: array
@@ -598,10 +521,7 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -757,24 +677,6 @@ spec:
                                     type: string
                                 type: object
                             type: object
-                          userCreatedAcrAccount:
-                            description: 'UserCreatedAcrAccount: Details of user created ACR account to be used for the Registry'
-                            properties:
-                              armResourceId:
-                                description: 'ArmResourceId: ARM ResourceId of a resource'
-                                properties:
-                                  resourceId:
-                                    description: >-
-                                      ResourceId: Arm ResourceId is in the format
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
-                                      or
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
-                                    type: string
-                                type: object
-                            type: object
                         type: object
                       type: array
                     location:
@@ -831,24 +733,6 @@ spec:
 
                                   "Premium_ZRS"
                                 type: string
-                            type: object
-                          userCreatedStorageAccount:
-                            description: 'UserCreatedStorageAccount: Details of user created storage account to be used for the registry'
-                            properties:
-                              armResourceId:
-                                description: 'ArmResourceId: ARM ResourceId of a resource'
-                                properties:
-                                  resourceId:
-                                    description: >-
-                                      ResourceId: Arm ResourceId is in the format
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
-                                      or
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
-                                    type: string
-                                type: object
                             type: object
                         type: object
                       type: array
@@ -1067,10 +951,7 @@ spec:
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
-                          description: >-
-                            ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-
-                            nolint:recvcheck
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
                               description: >-
@@ -1352,62 +1233,6 @@ spec:
                               acrAccountSku:
                                 type: string
                             type: object
-                          userCreatedAcrAccount:
-                            description: Storage version of v1api20240401.UserCreatedAcrAccount
-                            properties:
-                              $propertyBag:
-                                additionalProperties:
-                                  type: string
-                                description: >-
-                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                  resources, allowing for full fidelity round trip conversions
-                                type: object
-                              armResourceId:
-                                description: >-
-                                  Storage version of v1api20240401.ArmResourceId
-
-                                  ARM ResourceId of a resource
-                                properties:
-                                  $propertyBag:
-                                    additionalProperties:
-                                      type: string
-                                    description: >-
-                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                      resources, allowing for full fidelity round trip conversions
-                                    type: object
-                                  resourceReference:
-                                    description: >-
-                                      ResourceReference: Arm ResourceId is in the format
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
-                                      or
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
-                                    properties:
-                                      armId:
-                                        description: >-
-                                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
-                                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
-                                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                                        type: string
-                                      group:
-                                        description: Group is the Kubernetes group of the resource.
-                                        type: string
-                                      kind:
-                                        description: Kind is the Kubernetes kind of the resource.
-                                        type: string
-                                      name:
-                                        description: Name is the Kubernetes name of the resource.
-                                        type: string
-                                    type: object
-                                type: object
-                            type: object
                         type: object
                       type: array
                     location:
@@ -1446,62 +1271,6 @@ spec:
                                 type: string
                               storageAccountType:
                                 type: string
-                            type: object
-                          userCreatedStorageAccount:
-                            description: Storage version of v1api20240401.UserCreatedStorageAccount
-                            properties:
-                              $propertyBag:
-                                additionalProperties:
-                                  type: string
-                                description: >-
-                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                  resources, allowing for full fidelity round trip conversions
-                                type: object
-                              armResourceId:
-                                description: >-
-                                  Storage version of v1api20240401.ArmResourceId
-
-                                  ARM ResourceId of a resource
-                                properties:
-                                  $propertyBag:
-                                    additionalProperties:
-                                      type: string
-                                    description: >-
-                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                      resources, allowing for full fidelity round trip conversions
-                                    type: object
-                                  resourceReference:
-                                    description: >-
-                                      ResourceReference: Arm ResourceId is in the format
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}"
-
-                                      or
-
-                                      "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"
-                                    properties:
-                                      armId:
-                                        description: >-
-                                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
-                                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
-                                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                                        type: string
-                                      group:
-                                        description: Group is the Kubernetes group of the resource.
-                                        type: string
-                                      kind:
-                                        description: Kind is the Kubernetes kind of the resource.
-                                        type: string
-                                      name:
-                                        description: Name is the Kubernetes name of the resource.
-                                        type: string
-                                    type: object
-                                type: object
                             type: object
                         type: object
                       type: array
@@ -1662,10 +1431,7 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -1850,35 +1616,6 @@ spec:
                                     type: string
                                 type: object
                             type: object
-                          userCreatedAcrAccount:
-                            description: Storage version of v1api20240401.UserCreatedAcrAccount_STATUS
-                            properties:
-                              $propertyBag:
-                                additionalProperties:
-                                  type: string
-                                description: >-
-                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                  resources, allowing for full fidelity round trip conversions
-                                type: object
-                              armResourceId:
-                                description: >-
-                                  Storage version of v1api20240401.ArmResourceId_STATUS
-
-                                  ARM ResourceId of a resource
-                                properties:
-                                  $propertyBag:
-                                    additionalProperties:
-                                      type: string
-                                    description: >-
-                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                      resources, allowing for full fidelity round trip conversions
-                                    type: object
-                                  resourceId:
-                                    type: string
-                                type: object
-                            type: object
                         type: object
                       type: array
                     location:
@@ -1934,35 +1671,6 @@ spec:
                                 type: string
                               storageAccountType:
                                 type: string
-                            type: object
-                          userCreatedStorageAccount:
-                            description: Storage version of v1api20240401.UserCreatedStorageAccount_STATUS
-                            properties:
-                              $propertyBag:
-                                additionalProperties:
-                                  type: string
-                                description: >-
-                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                  resources, allowing for full fidelity round trip conversions
-                                type: object
-                              armResourceId:
-                                description: >-
-                                  Storage version of v1api20240401.ArmResourceId_STATUS
-
-                                  ARM ResourceId of a resource
-                                properties:
-                                  $propertyBag:
-                                    additionalProperties:
-                                      type: string
-                                    description: >-
-                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
-                                      resources, allowing for full fidelity round trip conversions
-                                    type: object
-                                  resourceId:
-                                    type: string
-                                type: object
                             type: object
                         type: object
                       type: array

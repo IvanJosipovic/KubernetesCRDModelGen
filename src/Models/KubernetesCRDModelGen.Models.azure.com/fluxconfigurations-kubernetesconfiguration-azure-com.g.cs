@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kubernetesconfiguration.azure.com;
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobAccountKey
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobAccountKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -21,9 +21,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobAccountKe
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ManagedIdentityDefinition Parameters to authenticate using a Managed Identity.</summary>
+/// <summary>Storage version of v1api20241101.ManagedIdentityDefinition Parameters to authenticate using a Managed Identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobManagedIdentity
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobManagedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -34,9 +34,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobManagedId
     public string? ClientId { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobSasToken
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobSasToken
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -47,9 +47,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobSasToken
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificate
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificate
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -60,9 +60,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificatePassword
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificatePassword
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -73,9 +73,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientIdFromConfig
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
     [JsonPropertyName("key")]
@@ -86,9 +86,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientSecret
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientSecret
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -99,9 +99,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalTenantIdFromConfig
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalTenantIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
     [JsonPropertyName("key")]
@@ -112,21 +112,21 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ServicePrincipalDefinition Parameters to authenticate using Service Principal.</summary>
+/// <summary>Storage version of v1api20241101.ServicePrincipalDefinition Parameters to authenticate using Service Principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipal
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipal
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("clientCertificate")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificate? ClientCertificate { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificate? ClientCertificate { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("clientCertificatePassword")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificatePassword? ClientCertificatePassword { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientCertificatePassword? ClientCertificatePassword { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("clientCertificateSendChain")]
@@ -136,34 +136,34 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlobServicePr
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("clientIdFromConfig")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientIdFromConfig? ClientIdFromConfig { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientIdFromConfig? ClientIdFromConfig { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("clientSecret")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalClientSecret? ClientSecret { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalClientSecret? ClientSecret { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("tenantIdFromConfig")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipalTenantIdFromConfig? TenantIdFromConfig { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipalTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.AzureBlobDefinition Parameters to reconcile to the AzureBlob source kind type.</summary>
+/// <summary>Storage version of v1api20241101.AzureBlobDefinition Parameters to reconcile to the AzureBlob source kind type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecAzureBlob
+public partial class V1api20241101storageFluxConfigurationSpecAzureBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("accountKey")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobAccountKey? AccountKey { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobAccountKey? AccountKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("containerName")]
@@ -173,17 +173,17 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlob
     [JsonPropertyName("localAuthRef")]
     public string? LocalAuthRef { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ManagedIdentityDefinition Parameters to authenticate using a Managed Identity.</summary>
+    /// <summary>Storage version of v1api20241101.ManagedIdentityDefinition Parameters to authenticate using a Managed Identity.</summary>
     [JsonPropertyName("managedIdentity")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobManagedIdentity? ManagedIdentity { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobManagedIdentity? ManagedIdentity { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("sasToken")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobSasToken? SasToken { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobSasToken? SasToken { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ServicePrincipalDefinition Parameters to authenticate using Service Principal.</summary>
+    /// <summary>Storage version of v1api20241101.ServicePrincipalDefinition Parameters to authenticate using Service Principal.</summary>
     [JsonPropertyName("servicePrincipal")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlobServicePrincipal? ServicePrincipal { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlobServicePrincipal? ServicePrincipal { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("syncIntervalInSeconds")]
@@ -198,9 +198,9 @@ public partial class V1api20230501storageFluxConfigurationSpecAzureBlob
     public string? Url { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecBucketAccessKey
+public partial class V1api20241101storageFluxConfigurationSpecBucketAccessKey
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -211,17 +211,17 @@ public partial class V1api20230501storageFluxConfigurationSpecBucketAccessKey
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.BucketDefinition Parameters to reconcile to the Bucket source kind type.</summary>
+/// <summary>Storage version of v1api20241101.BucketDefinition Parameters to reconcile to the Bucket source kind type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecBucket
+public partial class V1api20241101storageFluxConfigurationSpecBucket
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("accessKey")]
-    public V1api20230501storageFluxConfigurationSpecBucketAccessKey? AccessKey { get; set; }
+    public V1api20241101storageFluxConfigurationSpecBucketAccessKey? AccessKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("bucketName")]
@@ -248,18 +248,18 @@ public partial class V1api20230501storageFluxConfigurationSpecBucket
     public string? Url { get; set; }
 }
 
-/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecConfigurationProtectedSettings
+public partial class V1api20241101storageFluxConfigurationSpecConfigurationProtectedSettings
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecGitRepositoryHttpsCACert
+public partial class V1api20241101storageFluxConfigurationSpecGitRepositoryHttpsCACert
 {
     /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
     [JsonPropertyName("key")]
@@ -270,9 +270,9 @@ public partial class V1api20230501storageFluxConfigurationSpecGitRepositoryHttps
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.RepositoryRefDefinition The source reference for the GitRepository object.</summary>
+/// <summary>Storage version of v1api20241101.RepositoryRefDefinition The source reference for the GitRepository object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecGitRepositoryRepositoryRef
+public partial class V1api20241101storageFluxConfigurationSpecGitRepositoryRepositoryRef
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -295,17 +295,17 @@ public partial class V1api20230501storageFluxConfigurationSpecGitRepositoryRepos
     public string? Tag { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.GitRepositoryDefinition Parameters to reconcile to the GitRepository source kind type.</summary>
+/// <summary>Storage version of v1api20241101.GitRepositoryDefinition Parameters to reconcile to the GitRepository source kind type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecGitRepository
+public partial class V1api20241101storageFluxConfigurationSpecGitRepository
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("httpsCACert")]
-    public V1api20230501storageFluxConfigurationSpecGitRepositoryHttpsCACert? HttpsCACert { get; set; }
+    public V1api20241101storageFluxConfigurationSpecGitRepositoryHttpsCACert? HttpsCACert { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("httpsUser")]
@@ -315,9 +315,13 @@ public partial class V1api20230501storageFluxConfigurationSpecGitRepository
     [JsonPropertyName("localAuthRef")]
     public string? LocalAuthRef { get; set; }
 
-    /// <summary>Storage version of v1api20230501.RepositoryRefDefinition The source reference for the GitRepository object.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
+
+    /// <summary>Storage version of v1api20241101.RepositoryRefDefinition The source reference for the GitRepository object.</summary>
     [JsonPropertyName("repositoryRef")]
-    public V1api20230501storageFluxConfigurationSpecGitRepositoryRepositoryRef? RepositoryRef { get; set; }
+    public V1api20241101storageFluxConfigurationSpecGitRepositoryRepositoryRef? RepositoryRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sshKnownHosts")]
@@ -336,9 +340,9 @@ public partial class V1api20230501storageFluxConfigurationSpecGitRepository
     public string? Url { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.SubstituteFromDefinition Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.</summary>
+/// <summary>Storage version of v1api20241101.SubstituteFromDefinition Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecKustomizationsPostBuildSubstituteFrom
+public partial class V1api20241101storageFluxConfigurationSpecKustomizationsPostBuildSubstituteFrom
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -357,9 +361,9 @@ public partial class V1api20230501storageFluxConfigurationSpecKustomizationsPost
     public bool? Optional { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.PostBuildDefinition The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
+/// <summary>Storage version of v1api20241101.PostBuildDefinition The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecKustomizationsPostBuild
+public partial class V1api20241101storageFluxConfigurationSpecKustomizationsPostBuild
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -371,12 +375,12 @@ public partial class V1api20230501storageFluxConfigurationSpecKustomizationsPost
 
     /// <summary></summary>
     [JsonPropertyName("substituteFrom")]
-    public IList<V1api20230501storageFluxConfigurationSpecKustomizationsPostBuildSubstituteFrom>? SubstituteFrom { get; set; }
+    public IList<V1api20241101storageFluxConfigurationSpecKustomizationsPostBuildSubstituteFrom>? SubstituteFrom { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.KustomizationDefinition The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.</summary>
+/// <summary>Storage version of v1api20241101.KustomizationDefinition The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecKustomizations
+public partial class V1api20241101storageFluxConfigurationSpecKustomizations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -394,9 +398,9 @@ public partial class V1api20230501storageFluxConfigurationSpecKustomizations
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>Storage version of v1api20230501.PostBuildDefinition The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
+    /// <summary>Storage version of v1api20241101.PostBuildDefinition The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
     [JsonPropertyName("postBuild")]
-    public V1api20230501storageFluxConfigurationSpecKustomizationsPostBuild? PostBuild { get; set; }
+    public V1api20241101storageFluxConfigurationSpecKustomizationsPostBuild? PostBuild { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -419,9 +423,198 @@ public partial class V1api20230501storageFluxConfigurationSpecKustomizations
     public bool? Wait { get; set; }
 }
 
+/// <summary>Storage version of v1api20241101.LayerSelectorDefinition Parameters to specify which layer to pull from the OCI artifact. By default, the first layer in the artifact is pulled.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryLayerSelector
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("mediaType")]
+    public string? MediaType { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("operation")]
+    public string? Operation { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.OCIRepositoryRefDefinition The source reference for the OCIRepository object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryRepositoryRef
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("digest")]
+    public string? Digest { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("semver")]
+    public string? Semver { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tag")]
+    public string? Tag { get; set; }
+}
+
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfigCaCertificate
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfigClientCertificate
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfigPrivateKey
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.TlsConfigDefinition Parameters to authenticate using TLS config for OCI repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfig
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    [JsonPropertyName("caCertificate")]
+    public V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfigCaCertificate? CaCertificate { get; set; }
+
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    [JsonPropertyName("clientCertificate")]
+    public V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfigClientCertificate? ClientCertificate { get; set; }
+
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
+    [JsonPropertyName("privateKey")]
+    public V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfigPrivateKey? PrivateKey { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.MatchOidcIdentityDefinition MatchOIDCIdentity defines the criteria for matching the identity while verifying an OCI artifact.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryVerifyMatchOidcIdentity
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("issuer")]
+    public string? Issuer { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.VerifyDefinition Parameters to verify the authenticity of an OCI Artifact.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepositoryVerify
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("matchOidcIdentity")]
+    public IList<V1api20241101storageFluxConfigurationSpecOciRepositoryVerifyMatchOidcIdentity>? MatchOidcIdentity { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("verificationConfig")]
+    public IDictionary<string, string>? VerificationConfig { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.OCIRepositoryDefinition Parameters to reconcile to the OCIRepository source kind type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationSpecOciRepository
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
+
+    /// <summary>Storage version of v1api20241101.LayerSelectorDefinition Parameters to specify which layer to pull from the OCI artifact. By default, the first layer in the artifact is pulled.</summary>
+    [JsonPropertyName("layerSelector")]
+    public V1api20241101storageFluxConfigurationSpecOciRepositoryLayerSelector? LayerSelector { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("localAuthRef")]
+    public string? LocalAuthRef { get; set; }
+
+    /// <summary>Storage version of v1api20241101.OCIRepositoryRefDefinition The source reference for the OCIRepository object.</summary>
+    [JsonPropertyName("repositoryRef")]
+    public V1api20241101storageFluxConfigurationSpecOciRepositoryRepositoryRef? RepositoryRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("serviceAccountName")]
+    public string? ServiceAccountName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncIntervalInSeconds")]
+    public int? SyncIntervalInSeconds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("timeoutInSeconds")]
+    public int? TimeoutInSeconds { get; set; }
+
+    /// <summary>Storage version of v1api20241101.TlsConfigDefinition Parameters to authenticate using TLS config for OCI repository.</summary>
+    [JsonPropertyName("tlsConfig")]
+    public V1api20241101storageFluxConfigurationSpecOciRepositoryTlsConfig? TlsConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("url")]
+    public string? Url { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("useWorkloadIdentity")]
+    public bool? UseWorkloadIdentity { get; set; }
+
+    /// <summary>Storage version of v1api20241101.VerifyDefinition Parameters to verify the authenticity of an OCI Artifact.</summary>
+    [JsonPropertyName("verify")]
+    public V1api20241101storageFluxConfigurationSpecOciRepositoryVerify? Verify { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecOperatorSpecConfigMapExpressions
+public partial class V1api20241101storageFluxConfigurationSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -438,7 +631,7 @@ public partial class V1api20230501storageFluxConfigurationSpecOperatorSpecConfig
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecOperatorSpecSecretExpressions
+public partial class V1api20241101storageFluxConfigurationSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -453,9 +646,9 @@ public partial class V1api20230501storageFluxConfigurationSpecOperatorSpecSecret
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.FluxConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20241101.FluxConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecOperatorSpec
+public partial class V1api20241101storageFluxConfigurationSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -463,16 +656,16 @@ public partial class V1api20230501storageFluxConfigurationSpecOperatorSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20230501storageFluxConfigurationSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20241101storageFluxConfigurationSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20230501storageFluxConfigurationSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20241101storageFluxConfigurationSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpecOwner
+public partial class V1api20241101storageFluxConfigurationSpecOwner
 {
     /// <summary>Ownership across namespaces is not supported.</summary>
     [JsonPropertyName("armId")]
@@ -491,45 +684,49 @@ public partial class V1api20230501storageFluxConfigurationSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.FluxConfiguration_Spec</summary>
+/// <summary>Storage version of v1api20241101.FluxConfiguration_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationSpec
+public partial class V1api20241101storageFluxConfigurationSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230501.AzureBlobDefinition Parameters to reconcile to the AzureBlob source kind type.</summary>
+    /// <summary>Storage version of v1api20241101.AzureBlobDefinition Parameters to reconcile to the AzureBlob source kind type.</summary>
     [JsonPropertyName("azureBlob")]
-    public V1api20230501storageFluxConfigurationSpecAzureBlob? AzureBlob { get; set; }
+    public V1api20241101storageFluxConfigurationSpecAzureBlob? AzureBlob { get; set; }
 
     /// <summary>AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be.</summary>
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20230501.BucketDefinition Parameters to reconcile to the Bucket source kind type.</summary>
+    /// <summary>Storage version of v1api20241101.BucketDefinition Parameters to reconcile to the Bucket source kind type.</summary>
     [JsonPropertyName("bucket")]
-    public V1api20230501storageFluxConfigurationSpecBucket? Bucket { get; set; }
+    public V1api20241101storageFluxConfigurationSpecBucket? Bucket { get; set; }
 
-    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("configurationProtectedSettings")]
-    public V1api20230501storageFluxConfigurationSpecConfigurationProtectedSettings? ConfigurationProtectedSettings { get; set; }
+    public V1api20241101storageFluxConfigurationSpecConfigurationProtectedSettings? ConfigurationProtectedSettings { get; set; }
 
-    /// <summary>Storage version of v1api20230501.GitRepositoryDefinition Parameters to reconcile to the GitRepository source kind type.</summary>
+    /// <summary>Storage version of v1api20241101.GitRepositoryDefinition Parameters to reconcile to the GitRepository source kind type.</summary>
     [JsonPropertyName("gitRepository")]
-    public V1api20230501storageFluxConfigurationSpecGitRepository? GitRepository { get; set; }
+    public V1api20241101storageFluxConfigurationSpecGitRepository? GitRepository { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kustomizations")]
-    public IDictionary<string, V1api20230501storageFluxConfigurationSpecKustomizations>? Kustomizations { get; set; }
+    public IDictionary<string, V1api20241101storageFluxConfigurationSpecKustomizations>? Kustomizations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Storage version of v1api20230501.FluxConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20241101.OCIRepositoryDefinition Parameters to reconcile to the OCIRepository source kind type.</summary>
+    [JsonPropertyName("ociRepository")]
+    public V1api20241101storageFluxConfigurationSpecOciRepository? OciRepository { get; set; }
+
+    /// <summary>Storage version of v1api20241101.FluxConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20230501storageFluxConfigurationSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20241101storageFluxConfigurationSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -537,7 +734,7 @@ public partial class V1api20230501storageFluxConfigurationSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.</summary>
     [JsonPropertyName("owner")]
-    public V1api20230501storageFluxConfigurationSpecOwner Owner { get; set; }
+    public V1api20241101storageFluxConfigurationSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("reconciliationWaitDuration")]
@@ -560,9 +757,9 @@ public partial class V1api20230501storageFluxConfigurationSpec
     public bool? WaitForReconciliation { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ManagedIdentityDefinition_STATUS Parameters to authenticate using a Managed Identity.</summary>
+/// <summary>Storage version of v1api20241101.ManagedIdentityDefinition_STATUS Parameters to authenticate using a Managed Identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusAzureBlobManagedIdentity
+public partial class V1api20241101storageFluxConfigurationStatusAzureBlobManagedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -573,9 +770,9 @@ public partial class V1api20230501storageFluxConfigurationStatusAzureBlobManaged
     public string? ClientId { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ServicePrincipalDefinition_STATUS Parameters to authenticate using Service Principal.</summary>
+/// <summary>Storage version of v1api20241101.ServicePrincipalDefinition_STATUS Parameters to authenticate using Service Principal.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusAzureBlobServicePrincipal
+public partial class V1api20241101storageFluxConfigurationStatusAzureBlobServicePrincipal
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -594,9 +791,9 @@ public partial class V1api20230501storageFluxConfigurationStatusAzureBlobService
     public string? TenantId { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.AzureBlobDefinition_STATUS Parameters to reconcile to the AzureBlob source kind type.</summary>
+/// <summary>Storage version of v1api20241101.AzureBlobDefinition_STATUS Parameters to reconcile to the AzureBlob source kind type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusAzureBlob
+public partial class V1api20241101storageFluxConfigurationStatusAzureBlob
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -610,13 +807,13 @@ public partial class V1api20230501storageFluxConfigurationStatusAzureBlob
     [JsonPropertyName("localAuthRef")]
     public string? LocalAuthRef { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ManagedIdentityDefinition_STATUS Parameters to authenticate using a Managed Identity.</summary>
+    /// <summary>Storage version of v1api20241101.ManagedIdentityDefinition_STATUS Parameters to authenticate using a Managed Identity.</summary>
     [JsonPropertyName("managedIdentity")]
-    public V1api20230501storageFluxConfigurationStatusAzureBlobManagedIdentity? ManagedIdentity { get; set; }
+    public V1api20241101storageFluxConfigurationStatusAzureBlobManagedIdentity? ManagedIdentity { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ServicePrincipalDefinition_STATUS Parameters to authenticate using Service Principal.</summary>
+    /// <summary>Storage version of v1api20241101.ServicePrincipalDefinition_STATUS Parameters to authenticate using Service Principal.</summary>
     [JsonPropertyName("servicePrincipal")]
-    public V1api20230501storageFluxConfigurationStatusAzureBlobServicePrincipal? ServicePrincipal { get; set; }
+    public V1api20241101storageFluxConfigurationStatusAzureBlobServicePrincipal? ServicePrincipal { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("syncIntervalInSeconds")]
@@ -631,9 +828,9 @@ public partial class V1api20230501storageFluxConfigurationStatusAzureBlob
     public string? Url { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.BucketDefinition_STATUS Parameters to reconcile to the Bucket source kind type.</summary>
+/// <summary>Storage version of v1api20241101.BucketDefinition_STATUS Parameters to reconcile to the Bucket source kind type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusBucket
+public partial class V1api20241101storageFluxConfigurationStatusBucket
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -664,9 +861,9 @@ public partial class V1api20230501storageFluxConfigurationStatusBucket
     public string? Url { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusConditions
+public partial class V1api20241101storageFluxConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -697,9 +894,9 @@ public partial class V1api20230501storageFluxConfigurationStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.RepositoryRefDefinition_STATUS The source reference for the GitRepository object.</summary>
+/// <summary>Storage version of v1api20241101.RepositoryRefDefinition_STATUS The source reference for the GitRepository object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusGitRepositoryRepositoryRef
+public partial class V1api20241101storageFluxConfigurationStatusGitRepositoryRepositoryRef
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -722,9 +919,9 @@ public partial class V1api20230501storageFluxConfigurationStatusGitRepositoryRep
     public string? Tag { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.GitRepositoryDefinition_STATUS Parameters to reconcile to the GitRepository source kind type.</summary>
+/// <summary>Storage version of v1api20241101.GitRepositoryDefinition_STATUS Parameters to reconcile to the GitRepository source kind type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusGitRepository
+public partial class V1api20241101storageFluxConfigurationStatusGitRepository
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -738,9 +935,13 @@ public partial class V1api20230501storageFluxConfigurationStatusGitRepository
     [JsonPropertyName("localAuthRef")]
     public string? LocalAuthRef { get; set; }
 
-    /// <summary>Storage version of v1api20230501.RepositoryRefDefinition_STATUS The source reference for the GitRepository object.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
+
+    /// <summary>Storage version of v1api20241101.RepositoryRefDefinition_STATUS The source reference for the GitRepository object.</summary>
     [JsonPropertyName("repositoryRef")]
-    public V1api20230501storageFluxConfigurationStatusGitRepositoryRepositoryRef? RepositoryRef { get; set; }
+    public V1api20241101storageFluxConfigurationStatusGitRepositoryRepositoryRef? RepositoryRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sshKnownHosts")]
@@ -759,9 +960,9 @@ public partial class V1api20230501storageFluxConfigurationStatusGitRepository
     public string? Url { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.SubstituteFromDefinition_STATUS Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.</summary>
+/// <summary>Storage version of v1api20241101.SubstituteFromDefinition_STATUS Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusKustomizationsPostBuildSubstituteFrom
+public partial class V1api20241101storageFluxConfigurationStatusKustomizationsPostBuildSubstituteFrom
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -780,9 +981,9 @@ public partial class V1api20230501storageFluxConfigurationStatusKustomizationsPo
     public bool? Optional { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.PostBuildDefinition_STATUS The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
+/// <summary>Storage version of v1api20241101.PostBuildDefinition_STATUS The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusKustomizationsPostBuild
+public partial class V1api20241101storageFluxConfigurationStatusKustomizationsPostBuild
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -794,12 +995,12 @@ public partial class V1api20230501storageFluxConfigurationStatusKustomizationsPo
 
     /// <summary></summary>
     [JsonPropertyName("substituteFrom")]
-    public IList<V1api20230501storageFluxConfigurationStatusKustomizationsPostBuildSubstituteFrom>? SubstituteFrom { get; set; }
+    public IList<V1api20241101storageFluxConfigurationStatusKustomizationsPostBuildSubstituteFrom>? SubstituteFrom { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.KustomizationDefinition_STATUS The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.</summary>
+/// <summary>Storage version of v1api20241101.KustomizationDefinition_STATUS The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusKustomizations
+public partial class V1api20241101storageFluxConfigurationStatusKustomizations
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -821,9 +1022,9 @@ public partial class V1api20230501storageFluxConfigurationStatusKustomizations
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>Storage version of v1api20230501.PostBuildDefinition_STATUS The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
+    /// <summary>Storage version of v1api20241101.PostBuildDefinition_STATUS The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.</summary>
     [JsonPropertyName("postBuild")]
-    public V1api20230501storageFluxConfigurationStatusKustomizationsPostBuild? PostBuild { get; set; }
+    public V1api20241101storageFluxConfigurationStatusKustomizationsPostBuild? PostBuild { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -846,9 +1047,147 @@ public partial class V1api20230501storageFluxConfigurationStatusKustomizations
     public bool? Wait { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
+/// <summary>Storage version of v1api20241101.LayerSelectorDefinition_STATUS Parameters to specify which layer to pull from the OCI artifact. By default, the first layer in the artifact is pulled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusStatusesAppliedBy
+public partial class V1api20241101storageFluxConfigurationStatusOciRepositoryLayerSelector
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("mediaType")]
+    public string? MediaType { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("operation")]
+    public string? Operation { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.OCIRepositoryRefDefinition_STATUS The source reference for the OCIRepository object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationStatusOciRepositoryRepositoryRef
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("digest")]
+    public string? Digest { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("semver")]
+    public string? Semver { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tag")]
+    public string? Tag { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.TlsConfigDefinition_STATUS Parameters to authenticate using TLS config for OCI repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationStatusOciRepositoryTlsConfig
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.MatchOidcIdentityDefinition_STATUS MatchOIDCIdentity defines the criteria for matching the identity while verifying an OCI artifact.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationStatusOciRepositoryVerifyMatchOidcIdentity
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("issuer")]
+    public string? Issuer { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.VerifyDefinition_STATUS Parameters to verify the authenticity of an OCI Artifact.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationStatusOciRepositoryVerify
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("matchOidcIdentity")]
+    public IList<V1api20241101storageFluxConfigurationStatusOciRepositoryVerifyMatchOidcIdentity>? MatchOidcIdentity { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("verificationConfig")]
+    public IDictionary<string, string>? VerificationConfig { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.OCIRepositoryDefinition_STATUS Parameters to reconcile to the OCIRepository source kind type.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationStatusOciRepository
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("insecure")]
+    public bool? Insecure { get; set; }
+
+    /// <summary>Storage version of v1api20241101.LayerSelectorDefinition_STATUS Parameters to specify which layer to pull from the OCI artifact. By default, the first layer in the artifact is pulled.</summary>
+    [JsonPropertyName("layerSelector")]
+    public V1api20241101storageFluxConfigurationStatusOciRepositoryLayerSelector? LayerSelector { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("localAuthRef")]
+    public string? LocalAuthRef { get; set; }
+
+    /// <summary>Storage version of v1api20241101.OCIRepositoryRefDefinition_STATUS The source reference for the OCIRepository object.</summary>
+    [JsonPropertyName("repositoryRef")]
+    public V1api20241101storageFluxConfigurationStatusOciRepositoryRepositoryRef? RepositoryRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("serviceAccountName")]
+    public string? ServiceAccountName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("syncIntervalInSeconds")]
+    public int? SyncIntervalInSeconds { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("timeoutInSeconds")]
+    public int? TimeoutInSeconds { get; set; }
+
+    /// <summary>Storage version of v1api20241101.TlsConfigDefinition_STATUS Parameters to authenticate using TLS config for OCI repository.</summary>
+    [JsonPropertyName("tlsConfig")]
+    public V1api20241101storageFluxConfigurationStatusOciRepositoryTlsConfig? TlsConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("url")]
+    public string? Url { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("useWorkloadIdentity")]
+    public bool? UseWorkloadIdentity { get; set; }
+
+    /// <summary>Storage version of v1api20241101.VerifyDefinition_STATUS Parameters to verify the authenticity of an OCI Artifact.</summary>
+    [JsonPropertyName("verify")]
+    public V1api20241101storageFluxConfigurationStatusOciRepositoryVerify? Verify { get; set; }
+}
+
+/// <summary>Storage version of v1api20241101.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20241101storageFluxConfigurationStatusStatusesAppliedBy
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -863,9 +1202,9 @@ public partial class V1api20230501storageFluxConfigurationStatusStatusesAppliedB
     public string? Namespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
+/// <summary>Storage version of v1api20241101.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusStatusesHelmReleasePropertiesHelmChartRef
+public partial class V1api20241101storageFluxConfigurationStatusStatusesHelmReleasePropertiesHelmChartRef
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -880,9 +1219,9 @@ public partial class V1api20230501storageFluxConfigurationStatusStatusesHelmRele
     public string? Namespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.HelmReleasePropertiesDefinition_STATUS Properties for HelmRelease objects</summary>
+/// <summary>Storage version of v1api20241101.HelmReleasePropertiesDefinition_STATUS Properties for HelmRelease objects</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusStatusesHelmReleaseProperties
+public partial class V1api20241101storageFluxConfigurationStatusStatusesHelmReleaseProperties
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -892,9 +1231,9 @@ public partial class V1api20230501storageFluxConfigurationStatusStatusesHelmRele
     [JsonPropertyName("failureCount")]
     public int? FailureCount { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
+    /// <summary>Storage version of v1api20241101.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
     [JsonPropertyName("helmChartRef")]
-    public V1api20230501storageFluxConfigurationStatusStatusesHelmReleasePropertiesHelmChartRef? HelmChartRef { get; set; }
+    public V1api20241101storageFluxConfigurationStatusStatusesHelmReleasePropertiesHelmChartRef? HelmChartRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("installFailureCount")]
@@ -909,9 +1248,9 @@ public partial class V1api20230501storageFluxConfigurationStatusStatusesHelmRele
     public int? UpgradeFailureCount { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ObjectStatusConditionDefinition_STATUS Status condition of Kubernetes object</summary>
+/// <summary>Storage version of v1api20241101.ObjectStatusConditionDefinition_STATUS Status condition of Kubernetes object</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusStatusesStatusConditions
+public partial class V1api20241101storageFluxConfigurationStatusStatusesStatusConditions
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -938,25 +1277,25 @@ public partial class V1api20230501storageFluxConfigurationStatusStatusesStatusCo
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ObjectStatusDefinition_STATUS Statuses of objects deployed by the user-specified kustomizations from the git repository.</summary>
+/// <summary>Storage version of v1api20241101.ObjectStatusDefinition_STATUS Statuses of objects deployed by the user-specified kustomizations from the git repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatusStatuses
+public partial class V1api20241101storageFluxConfigurationStatusStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
+    /// <summary>Storage version of v1api20241101.ObjectReferenceDefinition_STATUS Object reference to a Kubernetes object on a cluster</summary>
     [JsonPropertyName("appliedBy")]
-    public V1api20230501storageFluxConfigurationStatusStatusesAppliedBy? AppliedBy { get; set; }
+    public V1api20241101storageFluxConfigurationStatusStatusesAppliedBy? AppliedBy { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("complianceState")]
     public string? ComplianceState { get; set; }
 
-    /// <summary>Storage version of v1api20230501.HelmReleasePropertiesDefinition_STATUS Properties for HelmRelease objects</summary>
+    /// <summary>Storage version of v1api20241101.HelmReleasePropertiesDefinition_STATUS Properties for HelmRelease objects</summary>
     [JsonPropertyName("helmReleaseProperties")]
-    public V1api20230501storageFluxConfigurationStatusStatusesHelmReleaseProperties? HelmReleaseProperties { get; set; }
+    public V1api20241101storageFluxConfigurationStatusStatusesHelmReleaseProperties? HelmReleaseProperties { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kind")]
@@ -972,24 +1311,24 @@ public partial class V1api20230501storageFluxConfigurationStatusStatuses
 
     /// <summary></summary>
     [JsonPropertyName("statusConditions")]
-    public IList<V1api20230501storageFluxConfigurationStatusStatusesStatusConditions>? StatusConditions { get; set; }
+    public IList<V1api20241101storageFluxConfigurationStatusStatusesStatusConditions>? StatusConditions { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.FluxConfiguration_STATUS The Flux Configuration object returned in Get &amp; Put response.</summary>
+/// <summary>Storage version of v1api20241101.FluxConfiguration_STATUS The Flux Configuration object returned in Get &amp; Put response.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageFluxConfigurationStatus
+public partial class V1api20241101storageFluxConfigurationStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230501.AzureBlobDefinition_STATUS Parameters to reconcile to the AzureBlob source kind type.</summary>
+    /// <summary>Storage version of v1api20241101.AzureBlobDefinition_STATUS Parameters to reconcile to the AzureBlob source kind type.</summary>
     [JsonPropertyName("azureBlob")]
-    public V1api20230501storageFluxConfigurationStatusAzureBlob? AzureBlob { get; set; }
+    public V1api20241101storageFluxConfigurationStatusAzureBlob? AzureBlob { get; set; }
 
-    /// <summary>Storage version of v1api20230501.BucketDefinition_STATUS Parameters to reconcile to the Bucket source kind type.</summary>
+    /// <summary>Storage version of v1api20241101.BucketDefinition_STATUS Parameters to reconcile to the Bucket source kind type.</summary>
     [JsonPropertyName("bucket")]
-    public V1api20230501storageFluxConfigurationStatusBucket? Bucket { get; set; }
+    public V1api20241101storageFluxConfigurationStatusBucket? Bucket { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("complianceState")]
@@ -997,7 +1336,7 @@ public partial class V1api20230501storageFluxConfigurationStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20230501storageFluxConfigurationStatusConditions>? Conditions { get; set; }
+    public IList<V1api20241101storageFluxConfigurationStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("configurationProtectedSettings")]
@@ -1007,9 +1346,9 @@ public partial class V1api20230501storageFluxConfigurationStatus
     [JsonPropertyName("errorMessage")]
     public string? ErrorMessage { get; set; }
 
-    /// <summary>Storage version of v1api20230501.GitRepositoryDefinition_STATUS Parameters to reconcile to the GitRepository source kind type.</summary>
+    /// <summary>Storage version of v1api20241101.GitRepositoryDefinition_STATUS Parameters to reconcile to the GitRepository source kind type.</summary>
     [JsonPropertyName("gitRepository")]
-    public V1api20230501storageFluxConfigurationStatusGitRepository? GitRepository { get; set; }
+    public V1api20241101storageFluxConfigurationStatusGitRepository? GitRepository { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -1017,7 +1356,7 @@ public partial class V1api20230501storageFluxConfigurationStatus
 
     /// <summary></summary>
     [JsonPropertyName("kustomizations")]
-    public IDictionary<string, V1api20230501storageFluxConfigurationStatusKustomizations>? Kustomizations { get; set; }
+    public IDictionary<string, V1api20241101storageFluxConfigurationStatusKustomizations>? Kustomizations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -1027,9 +1366,9 @@ public partial class V1api20230501storageFluxConfigurationStatus
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("provisioningState")]
-    public string? ProvisioningState { get; set; }
+    /// <summary>Storage version of v1api20241101.OCIRepositoryDefinition_STATUS Parameters to reconcile to the OCIRepository source kind type.</summary>
+    [JsonPropertyName("ociRepository")]
+    public V1api20241101storageFluxConfigurationStatusOciRepository? OciRepository { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("reconciliationWaitDuration")]
@@ -1061,7 +1400,7 @@ public partial class V1api20230501storageFluxConfigurationStatus
 
     /// <summary></summary>
     [JsonPropertyName("statuses")]
-    public IList<V1api20230501storageFluxConfigurationStatusStatuses>? Statuses { get; set; }
+    public IList<V1api20241101storageFluxConfigurationStatusStatuses>? Statuses { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("suspend")]
@@ -1076,12 +1415,12 @@ public partial class V1api20230501storageFluxConfigurationStatus
     public bool? WaitForReconciliation { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.FluxConfiguration Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/fluxconfiguration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}</summary>
+/// <summary>Storage version of v1api20241101.FluxConfiguration Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/fluxConfigurations/stable/2024-11-01/fluxconfiguration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230501storageFluxConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageFluxConfigurationSpec>, IStatus<V1api20230501storageFluxConfigurationStatus>
+public partial class V1api20241101storageFluxConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20241101storageFluxConfigurationSpec>, IStatus<V1api20241101storageFluxConfigurationStatus>
 {
-    public const string KubeApiVersion = "v1api20230501storage";
+    public const string KubeApiVersion = "v1api20241101storage";
     public const string KubeKind = "FluxConfiguration";
     public const string KubeGroup = "kubernetesconfiguration.azure.com";
     public const string KubePluralName = "fluxconfigurations";
@@ -1097,11 +1436,11 @@ public partial class V1api20230501storageFluxConfiguration : IKubernetesObject<V
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.FluxConfiguration_Spec</summary>
+    /// <summary>Storage version of v1api20241101.FluxConfiguration_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20230501storageFluxConfigurationSpec? Spec { get; set; }
+    public V1api20241101storageFluxConfigurationSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.FluxConfiguration_STATUS The Flux Configuration object returned in Get &amp; Put response.</summary>
+    /// <summary>Storage version of v1api20241101.FluxConfiguration_STATUS The Flux Configuration object returned in Get &amp; Put response.</summary>
     [JsonPropertyName("status")]
-    public V1api20230501storageFluxConfigurationStatus? Status { get; set; }
+    public V1api20241101storageFluxConfigurationStatus? Status { get; set; }
 }

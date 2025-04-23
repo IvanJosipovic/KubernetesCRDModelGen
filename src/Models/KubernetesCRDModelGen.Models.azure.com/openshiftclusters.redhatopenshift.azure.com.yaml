@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.12.0
+    app.kubernetes.io/version: v2.13.0
   name: openshiftclusters.redhatopenshift.azure.com
 spec:
   conversion:
@@ -321,6 +321,61 @@ spec:
                       - value
                       type: object
                     type: array
+                  secrets:
+                    description: 'Secrets: configures where to place Azure generated secrets.'
+                    properties:
+                      adminCredentials:
+                        description: >-
+                          AdminCredentials: indicates where the AdminCredentials secret should be placed. If omitted, the secret will not be
+
+                          retrieved from Azure.
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced.
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes secret to write to.
+
+                              The secret will be created in the same namespace as the resource.
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      password:
+                        description: 'Password: indicates where the Password secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced.
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes secret to write to.
+
+                              The secret will be created in the same namespace as the resource.
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      username:
+                        description: 'Username: indicates where the Username secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced.
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes secret to write to.
+
+                              The secret will be created in the same namespace as the resource.
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                    type: object
                 type: object
               owner:
                 description: >-
@@ -489,10 +544,7 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -838,8 +890,6 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
-
-                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -1086,6 +1136,81 @@ spec:
                       - value
                       type: object
                     type: array
+                  secrets:
+                    description: Storage version of v1api20231122.OpenShiftClusterOperatorSecrets
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      adminCredentials:
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to: ConfigMapDestination in configmaps.go.
+
+                          Changes to one may need to be made to the others as well.
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced.
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes secret to write to.
+
+                              The secret will be created in the same namespace as the resource.
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      password:
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to: ConfigMapDestination in configmaps.go.
+
+                          Changes to one may need to be made to the others as well.
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced.
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes secret to write to.
+
+                              The secret will be created in the same namespace as the resource.
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      username:
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to: ConfigMapDestination in configmaps.go.
+
+                          Changes to one may need to be made to the others as well.
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced.
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes secret to write to.
+
+                              The secret will be created in the same namespace as the resource.
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                    type: object
                 type: object
               originalVersion:
                 type: string
@@ -1125,8 +1250,6 @@ spec:
                       ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
 
                       the resource it is on.
-
-                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes configmap being referenced
@@ -1146,8 +1269,6 @@ spec:
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
 
                       the resource it is on.
-
-                      nolint:recvcheck
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
@@ -1301,10 +1422,7 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.

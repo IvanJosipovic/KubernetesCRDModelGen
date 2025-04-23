@@ -245,7 +245,7 @@ public partial class V1api20240815storageDatabaseAccountSpecCors
     public int? MaxAgeInSeconds { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageDatabaseAccountSpecIdentityUserAssignedIdentitiesReference
 {
@@ -274,7 +274,7 @@ public partial class V1api20240815storageDatabaseAccountSpecIdentityUserAssigned
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20240815storageDatabaseAccountSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -330,7 +330,7 @@ public partial class V1api20240815storageDatabaseAccountSpecLocations
     public string? LocationName { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageDatabaseAccountSpecNetworkAclBypassResourceReferences
 {
@@ -974,7 +974,7 @@ public partial class V1api20240815storageDatabaseAccountStatusCapacity
     public int? TotalThroughputLimit { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageDatabaseAccountStatusConditions
 {

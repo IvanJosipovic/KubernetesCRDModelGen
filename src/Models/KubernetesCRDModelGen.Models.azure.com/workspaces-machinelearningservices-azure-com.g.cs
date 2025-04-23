@@ -84,7 +84,7 @@ public partial class V1api20240401storageWorkspaceSpecEncryptionIdentity
     public V1api20240401storageWorkspaceSpecEncryptionIdentityUserAssignedIdentityReference? UserAssignedIdentityReference { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspaceSpecEncryptionKeyVaultPropertiesIdentityClientIdFromConfig
 {
@@ -130,7 +130,7 @@ public partial class V1api20240401storageWorkspaceSpecEncryptionKeyVaultProperti
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("identityClientIdFromConfig")]
     public V1api20240401storageWorkspaceSpecEncryptionKeyVaultPropertiesIdentityClientIdFromConfig? IdentityClientIdFromConfig { get; set; }
 
@@ -194,7 +194,7 @@ public partial class V1api20240401storageWorkspaceSpecFeatureStoreSettings
     public string? OnlineStoreConnectionName { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspaceSpecHubResourceReference
 {
@@ -215,7 +215,7 @@ public partial class V1api20240401storageWorkspaceSpecHubResourceReference
     public string? Name { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspaceSpecIdentityUserAssignedIdentitiesReference
 {
@@ -244,7 +244,7 @@ public partial class V1api20240401storageWorkspaceSpecIdentityUserAssignedIdenti
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20240401storageWorkspaceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -312,7 +312,7 @@ public partial class V1api20240401storageWorkspaceSpecManagedNetworkOutboundRule
     public string? Type { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspaceSpecManagedNetworkOutboundRulesPrivateEndpointDestinationServiceResourceReference
 {
@@ -333,7 +333,7 @@ public partial class V1api20240401storageWorkspaceSpecManagedNetworkOutboundRule
     public string? Name { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspaceSpecManagedNetworkOutboundRulesPrivateEndpointDestinationSubresourceTargetReference
 {
@@ -362,7 +362,7 @@ public partial class V1api20240401storageWorkspaceSpecManagedNetworkOutboundRule
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("serviceResourceReference")]
     public V1api20240401storageWorkspaceSpecManagedNetworkOutboundRulesPrivateEndpointDestinationServiceResourceReference? ServiceResourceReference { get; set; }
 
@@ -374,7 +374,7 @@ public partial class V1api20240401storageWorkspaceSpecManagedNetworkOutboundRule
     [JsonPropertyName("sparkStatus")]
     public string? SparkStatus { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("subresourceTargetReference")]
     public V1api20240401storageWorkspaceSpecManagedNetworkOutboundRulesPrivateEndpointDestinationSubresourceTargetReference? SubresourceTargetReference { get; set; }
 }
@@ -967,7 +967,7 @@ public partial class V1api20240401storageWorkspaceSpec
     [JsonPropertyName("hbiWorkspace")]
     public bool? HbiWorkspace { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("hubResourceReference")]
     public V1api20240401storageWorkspaceSpecHubResourceReference? HubResourceReference { get; set; }
 
@@ -1048,7 +1048,7 @@ public partial class V1api20240401storageWorkspaceSpec
     public V1api20240401storageWorkspaceSpecWorkspaceHubConfig? WorkspaceHubConfig { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageWorkspaceStatusConditions
 {

@@ -140,7 +140,7 @@ public partial class V1api20220801storageSubscriptionSpecOwnerReference
     public string? Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageSubscriptionSpecPrimaryKey
 {
@@ -153,7 +153,7 @@ public partial class V1api20220801storageSubscriptionSpecPrimaryKey
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageSubscriptionSpecSecondaryKey
 {
@@ -202,7 +202,7 @@ public partial class V1api20220801storageSubscriptionSpec
     [JsonPropertyName("ownerReference")]
     public V1api20220801storageSubscriptionSpecOwnerReference? OwnerReference { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("primaryKey")]
     public V1api20220801storageSubscriptionSpecPrimaryKey? PrimaryKey { get; set; }
 
@@ -210,7 +210,7 @@ public partial class V1api20220801storageSubscriptionSpec
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("secondaryKey")]
     public V1api20220801storageSubscriptionSpecSecondaryKey? SecondaryKey { get; set; }
 
@@ -219,7 +219,7 @@ public partial class V1api20220801storageSubscriptionSpec
     public string? State { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageSubscriptionStatusConditions
 {

@@ -183,7 +183,7 @@ public partial class V1api20220301storageSiteSpecHostingEnvironmentProfile
     public V1api20220301storageSiteSpecHostingEnvironmentProfileReference? Reference { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecIdentityUserAssignedIdentitiesReference
 {
@@ -212,7 +212,7 @@ public partial class V1api20220301storageSiteSpecIdentityUserAssignedIdentities
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20220301storageSiteSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -596,7 +596,7 @@ public partial class V1api20220301storageSiteSpecSiteConfigAutoHealRules
     public V1api20220301storageSiteSpecSiteConfigAutoHealRulesTriggers? Triggers { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecSiteConfigAzureStorageAccountsAccessKey
 {
@@ -617,7 +617,7 @@ public partial class V1api20220301storageSiteSpecSiteConfigAzureStorageAccounts
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("accessKey")]
     public V1api20220301storageSiteSpecSiteConfigAzureStorageAccountsAccessKey? AccessKey { get; set; }
 
@@ -1491,7 +1491,7 @@ public partial class V1api20220301storageSiteStatusCloningInfo
     public string? TrafficManagerProfileName { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteStatusConditions
 {

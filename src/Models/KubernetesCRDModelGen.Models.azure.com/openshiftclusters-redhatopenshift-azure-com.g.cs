@@ -21,7 +21,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecApiserverProfile
     public string? Visibility { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecClusterProfilePullSecret
 {
@@ -50,7 +50,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecClusterProfile
     [JsonPropertyName("fipsValidatedModules")]
     public string? FipsValidatedModules { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("pullSecret")]
     public V1api20231122storageOpenShiftClusterSpecClusterProfilePullSecret? PullSecret { get; set; }
 
@@ -236,6 +236,66 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretE
     public string Value { get; set; }
 }
 
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsAdminCredentials
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsPassword
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsUsername
+{
+    /// <summary>Key is the key in the Kubernetes secret being referenced.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name is the name of the Kubernetes secret to write to. The secret will be created in the same namespace as the resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20231122.OpenShiftClusterOperatorSecrets</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+    [JsonPropertyName("adminCredentials")]
+    public V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsAdminCredentials? AdminCredentials { get; set; }
+
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+    [JsonPropertyName("password")]
+    public V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsPassword? Password { get; set; }
+
+    /// <summary>SecretDestination describes the location to store a single secret value. Note: This is similar to: ConfigMapDestination in configmaps.go. Changes to one may need to be made to the others as well.</summary>
+    [JsonPropertyName("username")]
+    public V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretsUsername? Username { get; set; }
+}
+
 /// <summary>Storage version of v1api20231122.OpenShiftClusterOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpec
@@ -251,6 +311,10 @@ public partial class V1api20231122storageOpenShiftClusterSpecOperatorSpec
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
     public IList<V1api20231122storageOpenShiftClusterSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+
+    /// <summary>Storage version of v1api20231122.OpenShiftClusterOperatorSecrets</summary>
+    [JsonPropertyName("secrets")]
+    public V1api20231122storageOpenShiftClusterSpecOperatorSpecSecrets? Secrets { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource</summary>
@@ -266,7 +330,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientIdFromConfig
 {
@@ -279,7 +343,7 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     public string Name { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret
 {
@@ -304,11 +368,11 @@ public partial class V1api20231122storageOpenShiftClusterSpecServicePrincipalPro
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("clientIdFromConfig")]
     public V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientIdFromConfig? ClientIdFromConfig { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("clientSecret")]
     public V1api20231122storageOpenShiftClusterSpecServicePrincipalProfileClientSecret? ClientSecret { get; set; }
 }
@@ -499,7 +563,7 @@ public partial class V1api20231122storageOpenShiftClusterStatusClusterProfile
     public string? Version { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231122storageOpenShiftClusterStatusConditions
 {

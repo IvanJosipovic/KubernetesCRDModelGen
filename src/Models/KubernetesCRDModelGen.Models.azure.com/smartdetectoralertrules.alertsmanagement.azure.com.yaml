@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.12.0
+    app.kubernetes.io/version: v2.13.0
   name: smartdetectoralertrules.alertsmanagement.azure.com
 spec:
   conversion:
@@ -90,10 +90,7 @@ spec:
                   groupReferences:
                     description: 'GroupReferences: The Action Group resource IDs.'
                     items:
-                      description: >-
-                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-
-                        nolint:recvcheck
+                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
                           description: >-
@@ -249,10 +246,7 @@ spec:
               scopeReferences:
                 description: 'ScopeReferences: The alert rule resources scope.'
                 items:
-                  description: >-
-                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-
-                    nolint:recvcheck
+                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
                       description: >-
@@ -333,10 +327,7 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -571,10 +562,7 @@ spec:
                     type: string
                   groupReferences:
                     items:
-                      description: >-
-                        ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-
-                        nolint:recvcheck
+                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
                           description: >-
@@ -736,10 +724,7 @@ spec:
                 type: object
               scopeReferences:
                 items:
-                  description: >-
-                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-
-                    nolint:recvcheck
+                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
                       description: >-
@@ -825,10 +810,7 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
