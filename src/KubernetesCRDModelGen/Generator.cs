@@ -328,7 +328,12 @@ public class Generator : IGenerator
             @class = @class.AddMembers(newProperty);
         }
 
-        types.AddRange([@class, @classList]);
+        types.Add(@class);
+        
+        if (isRoot)
+        {
+            types.Add(@classList);
+        }
 
         return [.. types];
     }
