@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerinstance.azure.com;
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageContainerGroupSpecContainersEnvironmentVariablesSecureValue
 {
@@ -33,7 +33,7 @@ public partial class V1api20211001storageContainerGroupSpecContainersEnvironment
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("secureValue")]
     public V1api20211001storageContainerGroupSpecContainersEnvironmentVariablesSecureValue? SecureValue { get; set; }
 
@@ -402,7 +402,7 @@ public partial class V1api20211001storageContainerGroupSpecContainers
     public IList<V1api20211001storageContainerGroupSpecContainersVolumeMounts>? VolumeMounts { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyticsWorkspaceKey
 {
@@ -456,7 +456,7 @@ public partial class V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyti
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("workspaceKey")]
     public V1api20211001storageContainerGroupSpecDiagnosticsLogAnalyticsWorkspaceKey? WorkspaceKey { get; set; }
 
@@ -520,7 +520,7 @@ public partial class V1api20211001storageContainerGroupSpecEncryptionProperties
     public string? VaultBaseUrl { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageContainerGroupSpecIdentityUserAssignedIdentitiesReference
 {
@@ -549,7 +549,7 @@ public partial class V1api20211001storageContainerGroupSpecIdentityUserAssignedI
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20211001storageContainerGroupSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -571,7 +571,7 @@ public partial class V1api20211001storageContainerGroupSpecIdentity
     public IList<V1api20211001storageContainerGroupSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageContainerGroupSpecImageRegistryCredentialsPassword
 {
@@ -600,7 +600,7 @@ public partial class V1api20211001storageContainerGroupSpecImageRegistryCredenti
     [JsonPropertyName("identityUrl")]
     public string? IdentityUrl { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("password")]
     public V1api20211001storageContainerGroupSpecImageRegistryCredentialsPassword? Password { get; set; }
 
@@ -613,7 +613,7 @@ public partial class V1api20211001storageContainerGroupSpecImageRegistryCredenti
     public string? Username { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageContainerGroupSpecInitContainersEnvironmentVariablesSecureValue
 {
@@ -638,7 +638,7 @@ public partial class V1api20211001storageContainerGroupSpecInitContainersEnviron
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("secureValue")]
     public V1api20211001storageContainerGroupSpecInitContainersEnvironmentVariablesSecureValue? SecureValue { get; set; }
 
@@ -1009,7 +1009,7 @@ public partial class V1api20211001storageContainerGroupSpec
     public IList<string>? Zones { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211001storageContainerGroupStatusConditions
 {

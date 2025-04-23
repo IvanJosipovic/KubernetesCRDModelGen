@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240801storageFlexibleServersFirewallRuleSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOperator
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOperatorSpecSecretExpressions
+public partial class V1api20240801storageFlexibleServersFirewallRuleSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOperator
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersFirewallRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersFirewallRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOperatorSpec
+public partial class V1api20240801storageFlexibleServersFirewallRuleSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOperator
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20221201storageFlexibleServersFirewallRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240801storageFlexibleServersFirewallRuleSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20221201storageFlexibleServersFirewallRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240801storageFlexibleServersFirewallRuleSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOwner
+public partial class V1api20240801storageFlexibleServersFirewallRuleSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -72,9 +72,9 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_Spec</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersFirewallRule_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleSpec
+public partial class V1api20240801storageFlexibleServersFirewallRuleSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -88,9 +88,9 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleSpec
     [JsonPropertyName("endIpAddress")]
     public string? EndIpAddress { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServersFirewallRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240801.FlexibleServersFirewallRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20221201storageFlexibleServersFirewallRuleSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240801storageFlexibleServersFirewallRuleSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -98,16 +98,16 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20221201storageFlexibleServersFirewallRuleSpecOwner Owner { get; set; }
+    public V1api20240801storageFlexibleServersFirewallRuleSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("startIpAddress")]
     public string? StartIpAddress { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleStatusConditions
+public partial class V1api20240801storageFlexibleServersFirewallRuleStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -138,9 +138,9 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleStatusCondit
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240801.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleStatusSystemData
+public partial class V1api20240801storageFlexibleServersFirewallRuleStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -171,9 +171,9 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleStatusSystem
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_STATUS</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersFirewallRule_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersFirewallRuleStatus
+public partial class V1api20240801storageFlexibleServersFirewallRuleStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -181,7 +181,7 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20221201storageFlexibleServersFirewallRuleStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240801storageFlexibleServersFirewallRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("endIpAddress")]
@@ -199,21 +199,21 @@ public partial class V1api20221201storageFlexibleServersFirewallRuleStatus
     [JsonPropertyName("startIpAddress")]
     public string? StartIpAddress { get; set; }
 
-    /// <summary>Storage version of v1api20221201.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240801.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20221201storageFlexibleServersFirewallRuleStatusSystemData? SystemData { get; set; }
+    public V1api20240801storageFlexibleServersFirewallRuleStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2022-12-01/FirewallRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/firewallRules/{firewallRuleName}</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersFirewallRule Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/FirewallRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/firewallRules/{firewallRuleName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20221201storageFlexibleServersFirewallRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20221201storageFlexibleServersFirewallRuleSpec>, IStatus<V1api20221201storageFlexibleServersFirewallRuleStatus>
+public partial class V1api20240801storageFlexibleServersFirewallRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240801storageFlexibleServersFirewallRuleSpec>, IStatus<V1api20240801storageFlexibleServersFirewallRuleStatus>
 {
-    public const string KubeApiVersion = "v1api20221201storage";
+    public const string KubeApiVersion = "v1api20240801storage";
     public const string KubeKind = "FlexibleServersFirewallRule";
     public const string KubeGroup = "dbforpostgresql.azure.com";
     public const string KubePluralName = "flexibleserversfirewallrules";
@@ -229,11 +229,11 @@ public partial class V1api20221201storageFlexibleServersFirewallRule : IKubernet
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_Spec</summary>
+    /// <summary>Storage version of v1api20240801.FlexibleServersFirewallRule_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20221201storageFlexibleServersFirewallRuleSpec? Spec { get; set; }
+    public V1api20240801storageFlexibleServersFirewallRuleSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServersFirewallRule_STATUS</summary>
+    /// <summary>Storage version of v1api20240801.FlexibleServersFirewallRule_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20221201storageFlexibleServersFirewallRuleStatus? Status { get; set; }
+    public V1api20240801storageFlexibleServersFirewallRuleStatus? Status { get; set; }
 }

@@ -72,7 +72,7 @@ public partial class V1api20240815storageSqlRoleAssignmentSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlRoleAssignmentSpecPrincipalIdFromConfig
 {
@@ -113,7 +113,7 @@ public partial class V1api20240815storageSqlRoleAssignmentSpec
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("principalIdFromConfig")]
     public V1api20240815storageSqlRoleAssignmentSpecPrincipalIdFromConfig? PrincipalIdFromConfig { get; set; }
 
@@ -126,7 +126,7 @@ public partial class V1api20240815storageSqlRoleAssignmentSpec
     public string? Scope { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageSqlRoleAssignmentStatusConditions
 {

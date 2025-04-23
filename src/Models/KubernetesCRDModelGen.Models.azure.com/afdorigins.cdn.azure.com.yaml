@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.12.0
+    app.kubernetes.io/version: v2.13.0
   name: afdorigins.cdn.azure.com
 spec:
   conversion:
@@ -128,6 +128,25 @@ spec:
 
                   unique across all origins in an endpoint.
                 type: string
+              hostNameFromConfig:
+                description: >-
+                  HostNameFromConfig: The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This
+
+                  should be unique across all origins in an endpoint.
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: >-
+                      Name is the name of the Kubernetes configmap being referenced.
+
+                      The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
+                type: object
               httpPort:
                 description: 'HttpPort: The value of the HTTP port. Must be between 1 and 65535.'
                 maximum: 65535
@@ -318,10 +337,7 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -583,6 +599,25 @@ spec:
                 type: boolean
               hostName:
                 type: string
+              hostNameFromConfig:
+                description: >-
+                  ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
+
+                  the resource it is on.
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: >-
+                      Name is the name of the Kubernetes configmap being referenced.
+
+                      The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
+                type: object
               httpPort:
                 type: integer
               httpsPort:
@@ -790,10 +825,7 @@ spec:
                 type: object
               conditions:
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.

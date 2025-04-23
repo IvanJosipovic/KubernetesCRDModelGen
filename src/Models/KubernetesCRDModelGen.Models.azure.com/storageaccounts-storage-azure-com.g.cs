@@ -285,7 +285,7 @@ public partial class V1api20230101storageStorageAccountSpecExtendedLocation
     public string? Type { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountSpecIdentityUserAssignedIdentitiesReference
 {
@@ -314,7 +314,7 @@ public partial class V1api20230101storageStorageAccountSpecIdentityUserAssignedI
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20230101storageStorageAccountSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -1158,7 +1158,7 @@ public partial class V1api20230101storageStorageAccountStatusBlobRestoreStatus
     public string? Status { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230101storageStorageAccountStatusConditions
 {

@@ -454,7 +454,7 @@ public partial class V1api20180301storageMetricAlertSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertSpecScopesReferences
 {
@@ -569,7 +569,7 @@ public partial class V1api20180301storageMetricAlertStatusActions
     public IDictionary<string, string>? WebHookProperties { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180301storageMetricAlertStatusConditions
 {

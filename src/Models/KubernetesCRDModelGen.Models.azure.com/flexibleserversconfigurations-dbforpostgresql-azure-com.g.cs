@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationSpecOperatorSpecConfigMapExpressions
+public partial class V1api20240801storageFlexibleServersConfigurationSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -27,7 +27,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpecOperato
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationSpecOperatorSpecSecretExpressions
+public partial class V1api20240801storageFlexibleServersConfigurationSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -42,9 +42,9 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpecOperato
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationSpecOperatorSpec
+public partial class V1api20240801storageFlexibleServersConfigurationSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -52,16 +52,16 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpecOperato
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20221201storageFlexibleServersConfigurationSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20240801storageFlexibleServersConfigurationSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20221201storageFlexibleServersConfigurationSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20240801storageFlexibleServersConfigurationSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationSpecOwner
+public partial class V1api20240801storageFlexibleServersConfigurationSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -72,9 +72,9 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersConfiguration_Spec</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersConfiguration_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationSpec
+public partial class V1api20240801storageFlexibleServersConfigurationSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -84,9 +84,9 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServersConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20240801.FlexibleServersConfigurationOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20221201storageFlexibleServersConfigurationSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20240801storageFlexibleServersConfigurationSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -94,7 +94,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbforpostgresql.azure.com/FlexibleServer resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20221201storageFlexibleServersConfigurationSpecOwner Owner { get; set; }
+    public V1api20240801storageFlexibleServersConfigurationSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("source")]
@@ -105,9 +105,9 @@ public partial class V1api20221201storageFlexibleServersConfigurationSpec
     public string? Value { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationStatusConditions
+public partial class V1api20240801storageFlexibleServersConfigurationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -138,9 +138,9 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatusCondi
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20240801.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationStatusSystemData
+public partial class V1api20240801storageFlexibleServersConfigurationStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -171,9 +171,9 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersConfiguration_STATUS</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersConfiguration_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20221201storageFlexibleServersConfigurationStatus
+public partial class V1api20240801storageFlexibleServersConfigurationStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -185,7 +185,7 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20221201storageFlexibleServersConfigurationStatusConditions>? Conditions { get; set; }
+    public IList<V1api20240801storageFlexibleServersConfigurationStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("dataType")]
@@ -227,9 +227,9 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatus
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 
-    /// <summary>Storage version of v1api20221201.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20240801.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20221201storageFlexibleServersConfigurationStatusSystemData? SystemData { get; set; }
+    public V1api20240801storageFlexibleServersConfigurationStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -244,12 +244,12 @@ public partial class V1api20221201storageFlexibleServersConfigurationStatus
     public string? Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20221201.FlexibleServersConfiguration Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2022-12-01/Configuration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/configurations/{configurationName}</summary>
+/// <summary>Storage version of v1api20240801.FlexibleServersConfiguration Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/Configuration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/configurations/{configurationName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20221201storageFlexibleServersConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20221201storageFlexibleServersConfigurationSpec>, IStatus<V1api20221201storageFlexibleServersConfigurationStatus>
+public partial class V1api20240801storageFlexibleServersConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20240801storageFlexibleServersConfigurationSpec>, IStatus<V1api20240801storageFlexibleServersConfigurationStatus>
 {
-    public const string KubeApiVersion = "v1api20221201storage";
+    public const string KubeApiVersion = "v1api20240801storage";
     public const string KubeKind = "FlexibleServersConfiguration";
     public const string KubeGroup = "dbforpostgresql.azure.com";
     public const string KubePluralName = "flexibleserversconfigurations";
@@ -265,11 +265,11 @@ public partial class V1api20221201storageFlexibleServersConfiguration : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServersConfiguration_Spec</summary>
+    /// <summary>Storage version of v1api20240801.FlexibleServersConfiguration_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20221201storageFlexibleServersConfigurationSpec? Spec { get; set; }
+    public V1api20240801storageFlexibleServersConfigurationSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20221201.FlexibleServersConfiguration_STATUS</summary>
+    /// <summary>Storage version of v1api20240801.FlexibleServersConfiguration_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20221201storageFlexibleServersConfigurationStatus? Status { get; set; }
+    public V1api20240801storageFlexibleServersConfigurationStatus? Status { get; set; }
 }

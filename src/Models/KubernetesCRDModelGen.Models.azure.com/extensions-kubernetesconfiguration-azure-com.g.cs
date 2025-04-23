@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kubernetesconfiguration.azure.com;
-/// <summary>Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_Spec</summary>
+/// <summary>Storage version of v1api20241101.Extension_Properties_AksAssignedIdentity_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecAksAssignedIdentity
+public partial class V1api20241101storageExtensionSpecAksAssignedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -21,18 +21,18 @@ public partial class V1api20230501storageExtensionSpecAksAssignedIdentity
     public string? Type { get; set; }
 }
 
-/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecConfigurationProtectedSettings
+public partial class V1api20241101storageExtensionSpecConfigurationProtectedSettings
 {
     /// <summary>Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Identity Identity for the resource.</summary>
+/// <summary>Storage version of v1api20241101.Identity Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecIdentity
+public partial class V1api20241101storageExtensionSpecIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -45,7 +45,7 @@ public partial class V1api20230501storageExtensionSpecIdentity
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMapExpressions
+public partial class V1api20241101storageExtensionSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -62,7 +62,7 @@ public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMapExpre
 
 /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMapsPrincipalId
+public partial class V1api20241101storageExtensionSpecOperatorSpecConfigMapsPrincipalId
 {
     /// <summary>Key is the key in the ConfigMap being referenced</summary>
     [JsonPropertyName("key")]
@@ -73,9 +73,9 @@ public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMapsPrin
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ExtensionOperatorConfigMaps</summary>
+/// <summary>Storage version of v1api20241101.ExtensionOperatorConfigMaps</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMaps
+public partial class V1api20241101storageExtensionSpecOperatorSpecConfigMaps
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -83,12 +83,12 @@ public partial class V1api20230501storageExtensionSpecOperatorSpecConfigMaps
 
     /// <summary>ConfigMapDestination describes the location to store a single configmap value Note: This is similar to: SecretDestination in secrets.go. Changes to one may need to be made to the others as well.</summary>
     [JsonPropertyName("principalId")]
-    public V1api20230501storageExtensionSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
+    public V1api20241101storageExtensionSpecOperatorSpecConfigMapsPrincipalId? PrincipalId { get; set; }
 }
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecOperatorSpecSecretExpressions
+public partial class V1api20241101storageExtensionSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -103,9 +103,9 @@ public partial class V1api20230501storageExtensionSpecOperatorSpecSecretExpressi
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ExtensionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20241101.ExtensionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecOperatorSpec
+public partial class V1api20241101storageExtensionSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -113,20 +113,20 @@ public partial class V1api20230501storageExtensionSpecOperatorSpec
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20230501storageExtensionSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20241101storageExtensionSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ExtensionOperatorConfigMaps</summary>
+    /// <summary>Storage version of v1api20241101.ExtensionOperatorConfigMaps</summary>
     [JsonPropertyName("configMaps")]
-    public V1api20230501storageExtensionSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
+    public V1api20241101storageExtensionSpecOperatorSpecConfigMaps? ConfigMaps { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20230501storageExtensionSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20241101storageExtensionSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecOwner
+public partial class V1api20241101storageExtensionSpecOwner
 {
     /// <summary>Ownership across namespaces is not supported.</summary>
     [JsonPropertyName("armId")]
@@ -145,9 +145,9 @@ public partial class V1api20230501storageExtensionSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Plan Plan for the resource.</summary>
+/// <summary>Storage version of v1api20241101.Plan Plan for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecPlan
+public partial class V1api20241101storageExtensionSpecPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -174,9 +174,9 @@ public partial class V1api20230501storageExtensionSpecPlan
     public string? Version { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ScopeCluster Specifies that the scope of the extension is Cluster</summary>
+/// <summary>Storage version of v1api20241101.ScopeCluster Specifies that the scope of the extension is Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecScopeCluster
+public partial class V1api20241101storageExtensionSpecScopeCluster
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -187,9 +187,9 @@ public partial class V1api20230501storageExtensionSpecScopeCluster
     public string? ReleaseNamespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ScopeNamespace Specifies that the scope of the extension is Namespace</summary>
+/// <summary>Storage version of v1api20241101.ScopeNamespace Specifies that the scope of the extension is Namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecScopeNamespace
+public partial class V1api20241101storageExtensionSpecScopeNamespace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -200,26 +200,26 @@ public partial class V1api20230501storageExtensionSpecScopeNamespace
     public string? TargetNamespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Scope Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
+/// <summary>Storage version of v1api20241101.Scope Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecScope
+public partial class V1api20241101storageExtensionSpecScope
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ScopeCluster Specifies that the scope of the extension is Cluster</summary>
+    /// <summary>Storage version of v1api20241101.ScopeCluster Specifies that the scope of the extension is Cluster</summary>
     [JsonPropertyName("cluster")]
-    public V1api20230501storageExtensionSpecScopeCluster? Cluster { get; set; }
+    public V1api20241101storageExtensionSpecScopeCluster? Cluster { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ScopeNamespace Specifies that the scope of the extension is Namespace</summary>
+    /// <summary>Storage version of v1api20241101.ScopeNamespace Specifies that the scope of the extension is Namespace</summary>
     [JsonPropertyName("namespace")]
-    public V1api20230501storageExtensionSpecScopeNamespace? Namespace { get; set; }
+    public V1api20241101storageExtensionSpecScopeNamespace? Namespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20241101.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpecSystemData
+public partial class V1api20241101storageExtensionSpecSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -250,17 +250,17 @@ public partial class V1api20230501storageExtensionSpecSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Extension_Spec</summary>
+/// <summary>Storage version of v1api20241101.Extension_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionSpec
+public partial class V1api20241101storageExtensionSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_Spec</summary>
+    /// <summary>Storage version of v1api20241101.Extension_Properties_AksAssignedIdentity_Spec</summary>
     [JsonPropertyName("aksAssignedIdentity")]
-    public V1api20230501storageExtensionSpecAksAssignedIdentity? AksAssignedIdentity { get; set; }
+    public V1api20241101storageExtensionSpecAksAssignedIdentity? AksAssignedIdentity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("autoUpgradeMinorVersion")]
@@ -270,9 +270,9 @@ public partial class V1api20230501storageExtensionSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("configurationProtectedSettings")]
-    public V1api20230501storageExtensionSpecConfigurationProtectedSettings? ConfigurationProtectedSettings { get; set; }
+    public V1api20241101storageExtensionSpecConfigurationProtectedSettings? ConfigurationProtectedSettings { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("configurationSettings")]
@@ -282,13 +282,13 @@ public partial class V1api20230501storageExtensionSpec
     [JsonPropertyName("extensionType")]
     public string? ExtensionType { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Identity Identity for the resource.</summary>
+    /// <summary>Storage version of v1api20241101.Identity Identity for the resource.</summary>
     [JsonPropertyName("identity")]
-    public V1api20230501storageExtensionSpecIdentity? Identity { get; set; }
+    public V1api20241101storageExtensionSpecIdentity? Identity { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ExtensionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20241101.ExtensionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20230501storageExtensionSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20241101storageExtensionSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -296,32 +296,32 @@ public partial class V1api20230501storageExtensionSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.</summary>
     [JsonPropertyName("owner")]
-    public V1api20230501storageExtensionSpecOwner Owner { get; set; }
+    public V1api20241101storageExtensionSpecOwner Owner { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Plan Plan for the resource.</summary>
+    /// <summary>Storage version of v1api20241101.Plan Plan for the resource.</summary>
     [JsonPropertyName("plan")]
-    public V1api20230501storageExtensionSpecPlan? Plan { get; set; }
+    public V1api20241101storageExtensionSpecPlan? Plan { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("releaseTrain")]
     public string? ReleaseTrain { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Scope Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
+    /// <summary>Storage version of v1api20241101.Scope Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
     [JsonPropertyName("scope")]
-    public V1api20230501storageExtensionSpecScope? Scope { get; set; }
+    public V1api20241101storageExtensionSpecScope? Scope { get; set; }
 
-    /// <summary>Storage version of v1api20230501.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20241101.SystemData Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20230501storageExtensionSpecSystemData? SystemData { get; set; }
+    public V1api20241101storageExtensionSpecSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_STATUS</summary>
+/// <summary>Storage version of v1api20241101.Extension_Properties_AksAssignedIdentity_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusAksAssignedIdentity
+public partial class V1api20241101storageExtensionStatusAksAssignedIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -340,9 +340,9 @@ public partial class V1api20230501storageExtensionStatusAksAssignedIdentity
     public string? Type { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusConditions
+public partial class V1api20241101storageExtensionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -373,9 +373,9 @@ public partial class V1api20230501storageExtensionStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+/// <summary>Storage version of v1api20241101.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusErrorInfoAdditionalInfo
+public partial class V1api20241101storageExtensionStatusErrorInfoAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -390,9 +390,9 @@ public partial class V1api20230501storageExtensionStatusErrorInfoAdditionalInfo
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
+/// <summary>Storage version of v1api20241101.ErrorAdditionalInfo_STATUS The resource management error additional info.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusErrorInfoDetailsAdditionalInfo
+public partial class V1api20241101storageExtensionStatusErrorInfoDetailsAdditionalInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -407,9 +407,9 @@ public partial class V1api20230501storageExtensionStatusErrorInfoDetailsAddition
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ErrorDetail_STATUS_Unrolled</summary>
+/// <summary>Storage version of v1api20241101.ErrorDetail_STATUS_Unrolled</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusErrorInfoDetails
+public partial class V1api20241101storageExtensionStatusErrorInfoDetails
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -417,7 +417,7 @@ public partial class V1api20230501storageExtensionStatusErrorInfoDetails
 
     /// <summary></summary>
     [JsonPropertyName("additionalInfo")]
-    public IList<V1api20230501storageExtensionStatusErrorInfoDetailsAdditionalInfo>? AdditionalInfo { get; set; }
+    public IList<V1api20241101storageExtensionStatusErrorInfoDetailsAdditionalInfo>? AdditionalInfo { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("code")]
@@ -432,9 +432,9 @@ public partial class V1api20230501storageExtensionStatusErrorInfoDetails
     public string? Target { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ErrorDetail_STATUS The error detail.</summary>
+/// <summary>Storage version of v1api20241101.ErrorDetail_STATUS The error detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusErrorInfo
+public partial class V1api20241101storageExtensionStatusErrorInfo
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -442,7 +442,7 @@ public partial class V1api20230501storageExtensionStatusErrorInfo
 
     /// <summary></summary>
     [JsonPropertyName("additionalInfo")]
-    public IList<V1api20230501storageExtensionStatusErrorInfoAdditionalInfo>? AdditionalInfo { get; set; }
+    public IList<V1api20241101storageExtensionStatusErrorInfoAdditionalInfo>? AdditionalInfo { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("code")]
@@ -450,7 +450,7 @@ public partial class V1api20230501storageExtensionStatusErrorInfo
 
     /// <summary></summary>
     [JsonPropertyName("details")]
-    public IList<V1api20230501storageExtensionStatusErrorInfoDetails>? Details { get; set; }
+    public IList<V1api20241101storageExtensionStatusErrorInfoDetails>? Details { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("message")]
@@ -461,9 +461,9 @@ public partial class V1api20230501storageExtensionStatusErrorInfo
     public string? Target { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Identity_STATUS Identity for the resource.</summary>
+/// <summary>Storage version of v1api20241101.Identity_STATUS Identity for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusIdentity
+public partial class V1api20241101storageExtensionStatusIdentity
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -482,9 +482,9 @@ public partial class V1api20230501storageExtensionStatusIdentity
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Plan_STATUS Plan for the resource.</summary>
+/// <summary>Storage version of v1api20241101.Plan_STATUS Plan for the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusPlan
+public partial class V1api20241101storageExtensionStatusPlan
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -511,9 +511,9 @@ public partial class V1api20230501storageExtensionStatusPlan
     public string? Version { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ScopeCluster_STATUS Specifies that the scope of the extension is Cluster</summary>
+/// <summary>Storage version of v1api20241101.ScopeCluster_STATUS Specifies that the scope of the extension is Cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusScopeCluster
+public partial class V1api20241101storageExtensionStatusScopeCluster
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -524,9 +524,9 @@ public partial class V1api20230501storageExtensionStatusScopeCluster
     public string? ReleaseNamespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ScopeNamespace_STATUS Specifies that the scope of the extension is Namespace</summary>
+/// <summary>Storage version of v1api20241101.ScopeNamespace_STATUS Specifies that the scope of the extension is Namespace</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusScopeNamespace
+public partial class V1api20241101storageExtensionStatusScopeNamespace
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -537,26 +537,26 @@ public partial class V1api20230501storageExtensionStatusScopeNamespace
     public string? TargetNamespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Scope_STATUS Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
+/// <summary>Storage version of v1api20241101.Scope_STATUS Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusScope
+public partial class V1api20241101storageExtensionStatusScope
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ScopeCluster_STATUS Specifies that the scope of the extension is Cluster</summary>
+    /// <summary>Storage version of v1api20241101.ScopeCluster_STATUS Specifies that the scope of the extension is Cluster</summary>
     [JsonPropertyName("cluster")]
-    public V1api20230501storageExtensionStatusScopeCluster? Cluster { get; set; }
+    public V1api20241101storageExtensionStatusScopeCluster? Cluster { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ScopeNamespace_STATUS Specifies that the scope of the extension is Namespace</summary>
+    /// <summary>Storage version of v1api20241101.ScopeNamespace_STATUS Specifies that the scope of the extension is Namespace</summary>
     [JsonPropertyName("namespace")]
-    public V1api20230501storageExtensionStatusScopeNamespace? Namespace { get; set; }
+    public V1api20241101storageExtensionStatusScopeNamespace? Namespace { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.ExtensionStatus_STATUS Status from the extension.</summary>
+/// <summary>Storage version of v1api20241101.ExtensionStatus_STATUS Status from the extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusStatuses
+public partial class V1api20241101storageExtensionStatusStatuses
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -583,9 +583,9 @@ public partial class V1api20230501storageExtensionStatusStatuses
     public string? Time { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20241101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatusSystemData
+public partial class V1api20241101storageExtensionStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -616,17 +616,17 @@ public partial class V1api20230501storageExtensionStatusSystemData
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Extension_STATUS The Extension object.</summary>
+/// <summary>Storage version of v1api20241101.Extension_STATUS The Extension object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230501storageExtensionStatus
+public partial class V1api20241101storageExtensionStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_STATUS</summary>
+    /// <summary>Storage version of v1api20241101.Extension_Properties_AksAssignedIdentity_STATUS</summary>
     [JsonPropertyName("aksAssignedIdentity")]
-    public V1api20230501storageExtensionStatusAksAssignedIdentity? AksAssignedIdentity { get; set; }
+    public V1api20241101storageExtensionStatusAksAssignedIdentity? AksAssignedIdentity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("autoUpgradeMinorVersion")]
@@ -634,7 +634,7 @@ public partial class V1api20230501storageExtensionStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20230501storageExtensionStatusConditions>? Conditions { get; set; }
+    public IList<V1api20241101storageExtensionStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("configurationProtectedSettings")]
@@ -652,9 +652,9 @@ public partial class V1api20230501storageExtensionStatus
     [JsonPropertyName("customLocationSettings")]
     public IDictionary<string, string>? CustomLocationSettings { get; set; }
 
-    /// <summary>Storage version of v1api20230501.ErrorDetail_STATUS The error detail.</summary>
+    /// <summary>Storage version of v1api20241101.ErrorDetail_STATUS The error detail.</summary>
     [JsonPropertyName("errorInfo")]
-    public V1api20230501storageExtensionStatusErrorInfo? ErrorInfo { get; set; }
+    public V1api20241101storageExtensionStatusErrorInfo? ErrorInfo { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("extensionType")]
@@ -664,9 +664,9 @@ public partial class V1api20230501storageExtensionStatus
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Identity_STATUS Identity for the resource.</summary>
+    /// <summary>Storage version of v1api20241101.Identity_STATUS Identity for the resource.</summary>
     [JsonPropertyName("identity")]
-    public V1api20230501storageExtensionStatusIdentity? Identity { get; set; }
+    public V1api20241101storageExtensionStatusIdentity? Identity { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("isSystemExtension")]
@@ -680,29 +680,25 @@ public partial class V1api20230501storageExtensionStatus
     [JsonPropertyName("packageUri")]
     public string? PackageUri { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Plan_STATUS Plan for the resource.</summary>
+    /// <summary>Storage version of v1api20241101.Plan_STATUS Plan for the resource.</summary>
     [JsonPropertyName("plan")]
-    public V1api20230501storageExtensionStatusPlan? Plan { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("provisioningState")]
-    public string? ProvisioningState { get; set; }
+    public V1api20241101storageExtensionStatusPlan? Plan { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("releaseTrain")]
     public string? ReleaseTrain { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Scope_STATUS Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
+    /// <summary>Storage version of v1api20241101.Scope_STATUS Scope of the extension. It can be either Cluster or Namespace; but not both.</summary>
     [JsonPropertyName("scope")]
-    public V1api20230501storageExtensionStatusScope? Scope { get; set; }
+    public V1api20241101storageExtensionStatusScope? Scope { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("statuses")]
-    public IList<V1api20230501storageExtensionStatusStatuses>? Statuses { get; set; }
+    public IList<V1api20241101storageExtensionStatusStatuses>? Statuses { get; set; }
 
-    /// <summary>Storage version of v1api20230501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20241101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20230501storageExtensionStatusSystemData? SystemData { get; set; }
+    public V1api20241101storageExtensionStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -713,12 +709,12 @@ public partial class V1api20230501storageExtensionStatus
     public string? Version { get; set; }
 }
 
-/// <summary>Storage version of v1api20230501.Extension Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/extensions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}</summary>
+/// <summary>Storage version of v1api20241101.Extension Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/extensions/stable/2024-11-01/extensions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230501storageExtension : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230501storageExtensionSpec>, IStatus<V1api20230501storageExtensionStatus>
+public partial class V1api20241101storageExtension : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20241101storageExtensionSpec>, IStatus<V1api20241101storageExtensionStatus>
 {
-    public const string KubeApiVersion = "v1api20230501storage";
+    public const string KubeApiVersion = "v1api20241101storage";
     public const string KubeKind = "Extension";
     public const string KubeGroup = "kubernetesconfiguration.azure.com";
     public const string KubePluralName = "extensions";
@@ -734,11 +730,11 @@ public partial class V1api20230501storageExtension : IKubernetesObject<V1ObjectM
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Extension_Spec</summary>
+    /// <summary>Storage version of v1api20241101.Extension_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20230501storageExtensionSpec? Spec { get; set; }
+    public V1api20241101storageExtensionSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230501.Extension_STATUS The Extension object.</summary>
+    /// <summary>Storage version of v1api20241101.Extension_STATUS The Extension object.</summary>
     [JsonPropertyName("status")]
-    public V1api20230501storageExtensionStatus? Status { get; set; }
+    public V1api20241101storageExtensionStatus? Status { get; set; }
 }
