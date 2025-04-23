@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.com;
 /// <summary>IdentityResourceReference: The resource id of the identity used for AAD Authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpecIdentityResourceReference
+public partial class V1api20231230storageFlexibleServersAdministratorSpecIdentityResourceReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -31,7 +31,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecIdentit
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpecOperatorSpecConfigMapExpressions
+public partial class V1api20231230storageFlexibleServersAdministratorSpecOperatorSpecConfigMapExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -48,7 +48,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecOperato
 
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpecOperatorSpecSecretExpressions
+public partial class V1api20231230storageFlexibleServersAdministratorSpecOperatorSpecSecretExpressions
 {
     /// <summary>Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting map[string]string.</summary>
     [JsonPropertyName("key")]
@@ -63,9 +63,9 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecOperato
     public string Value { get; set; }
 }
 
-/// <summary>Storage version of v1api20230630.FlexibleServersAdministratorOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+/// <summary>Storage version of v1api20231230.FlexibleServersAdministratorOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpecOperatorSpec
+public partial class V1api20231230storageFlexibleServersAdministratorSpecOperatorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -73,16 +73,16 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecOperato
 
     /// <summary></summary>
     [JsonPropertyName("configMapExpressions")]
-    public IList<V1api20230630storageFlexibleServersAdministratorSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
+    public IList<V1api20231230storageFlexibleServersAdministratorSpecOperatorSpecConfigMapExpressions>? ConfigMapExpressions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secretExpressions")]
-    public IList<V1api20230630storageFlexibleServersAdministratorSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
+    public IList<V1api20231230storageFlexibleServersAdministratorSpecOperatorSpecSecretExpressions>? SecretExpressions { get; set; }
 }
 
 /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformysql.azure.com/FlexibleServer resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpecOwner
+public partial class V1api20231230storageFlexibleServersAdministratorSpecOwner
 {
     /// <summary></summary>
     [JsonPropertyName("armId")]
@@ -93,9 +93,9 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpecSidFromConfig
+public partial class V1api20231230storageFlexibleServersAdministratorSpecSidFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
     [JsonPropertyName("key")]
@@ -106,9 +106,9 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecSidFrom
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpecTenantIdFromConfig
+public partial class V1api20231230storageFlexibleServersAdministratorSpecTenantIdFromConfig
 {
     /// <summary>Key is the key in the Kubernetes configmap being referenced</summary>
     [JsonPropertyName("key")]
@@ -119,9 +119,9 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpecTenantI
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_Spec</summary>
+/// <summary>Storage version of v1api20231230.FlexibleServersAdministrator_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorSpec
+public partial class V1api20231230storageFlexibleServersAdministratorSpec
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -133,15 +133,15 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpec
 
     /// <summary>IdentityResourceReference: The resource id of the identity used for AAD Authentication.</summary>
     [JsonPropertyName("identityResourceReference")]
-    public V1api20230630storageFlexibleServersAdministratorSpecIdentityResourceReference? IdentityResourceReference { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorSpecIdentityResourceReference? IdentityResourceReference { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("login")]
     public string? Login { get; set; }
 
-    /// <summary>Storage version of v1api20230630.FlexibleServersAdministratorOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
+    /// <summary>Storage version of v1api20231230.FlexibleServersAdministratorOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure</summary>
     [JsonPropertyName("operatorSpec")]
-    public V1api20230630storageFlexibleServersAdministratorSpecOperatorSpec? OperatorSpec { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorSpecOperatorSpec? OperatorSpec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("originalVersion")]
@@ -149,28 +149,28 @@ public partial class V1api20230630storageFlexibleServersAdministratorSpec
 
     /// <summary>Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformysql.azure.com/FlexibleServer resource</summary>
     [JsonPropertyName("owner")]
-    public V1api20230630storageFlexibleServersAdministratorSpecOwner Owner { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorSpecOwner Owner { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sid")]
     public string? Sid { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("sidFromConfig")]
-    public V1api20230630storageFlexibleServersAdministratorSpecSidFromConfig? SidFromConfig { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorSpecSidFromConfig? SidFromConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("tenantIdFromConfig")]
-    public V1api20230630storageFlexibleServersAdministratorSpecTenantIdFromConfig? TenantIdFromConfig { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorSpecTenantIdFromConfig? TenantIdFromConfig { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorStatusConditions
+public partial class V1api20231230storageFlexibleServersAdministratorStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -201,9 +201,9 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatusCondi
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230630.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+/// <summary>Storage version of v1api20231230.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorStatusSystemData
+public partial class V1api20231230storageFlexibleServersAdministratorStatusSystemData
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -234,9 +234,9 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatusSyste
     public string? LastModifiedByType { get; set; }
 }
 
-/// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_STATUS</summary>
+/// <summary>Storage version of v1api20231230.FlexibleServersAdministrator_STATUS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20230630storageFlexibleServersAdministratorStatus
+public partial class V1api20231230storageFlexibleServersAdministratorStatus
 {
     /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
     [JsonPropertyName("$propertyBag")]
@@ -248,7 +248,7 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatus
 
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1api20230630storageFlexibleServersAdministratorStatusConditions>? Conditions { get; set; }
+    public IList<V1api20231230storageFlexibleServersAdministratorStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -270,9 +270,9 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatus
     [JsonPropertyName("sid")]
     public string? Sid { get; set; }
 
-    /// <summary>Storage version of v1api20230630.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
+    /// <summary>Storage version of v1api20231230.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.</summary>
     [JsonPropertyName("systemData")]
-    public V1api20230630storageFlexibleServersAdministratorStatusSystemData? SystemData { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorStatusSystemData? SystemData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tenantId")]
@@ -283,12 +283,12 @@ public partial class V1api20230630storageFlexibleServersAdministratorStatus
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20230630.FlexibleServersAdministrator Generator information: - Generated from: /mysql/resource-manager/Microsoft.DBforMySQL/AAD/stable/2023-06-30/AzureADAdministrator.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/administrators/{administratorName}</summary>
+/// <summary>Storage version of v1api20231230.FlexibleServersAdministrator Generator information: - Generated from: /mysql/resource-manager/Microsoft.DBforMySQL/AAD/stable/2023-12-30/AzureADAdministrator.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/administrators/{administratorName}</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230630storageFlexibleServersAdministrator : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20230630storageFlexibleServersAdministratorSpec>, IStatus<V1api20230630storageFlexibleServersAdministratorStatus>
+public partial class V1api20231230storageFlexibleServersAdministrator : IKubernetesObject<V1ObjectMeta>, ISpec<V1api20231230storageFlexibleServersAdministratorSpec>, IStatus<V1api20231230storageFlexibleServersAdministratorStatus>
 {
-    public const string KubeApiVersion = "v1api20230630storage";
+    public const string KubeApiVersion = "v1api20231230storage";
     public const string KubeKind = "FlexibleServersAdministrator";
     public const string KubeGroup = "dbformysql.azure.com";
     public const string KubePluralName = "flexibleserversadministrators";
@@ -304,11 +304,11 @@ public partial class V1api20230630storageFlexibleServersAdministrator : IKuberne
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_Spec</summary>
+    /// <summary>Storage version of v1api20231230.FlexibleServersAdministrator_Spec</summary>
     [JsonPropertyName("spec")]
-    public V1api20230630storageFlexibleServersAdministratorSpec? Spec { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorSpec? Spec { get; set; }
 
-    /// <summary>Storage version of v1api20230630.FlexibleServersAdministrator_STATUS</summary>
+    /// <summary>Storage version of v1api20231230.FlexibleServersAdministrator_STATUS</summary>
     [JsonPropertyName("status")]
-    public V1api20230630storageFlexibleServersAdministratorStatus? Status { get; set; }
+    public V1api20231230storageFlexibleServersAdministratorStatus? Status { get; set; }
 }

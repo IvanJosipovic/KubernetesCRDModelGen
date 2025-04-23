@@ -130,7 +130,7 @@ public partial class V1api20220801storageServiceSpecApiVersionConstraint
     public string? MinApiVersion { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecCertificatesCertificateExpiryFromConfig
 {
@@ -143,7 +143,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificateExpir
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecCertificatesCertificateSubjectFromConfig
 {
@@ -156,7 +156,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificateSubje
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecCertificatesCertificateThumbprintFromConfig
 {
@@ -181,7 +181,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificate
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("expiryFromConfig")]
     public V1api20220801storageServiceSpecCertificatesCertificateExpiryFromConfig? ExpiryFromConfig { get; set; }
 
@@ -189,7 +189,7 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificate
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("subjectFromConfig")]
     public V1api20220801storageServiceSpecCertificatesCertificateSubjectFromConfig? SubjectFromConfig { get; set; }
 
@@ -197,12 +197,12 @@ public partial class V1api20220801storageServiceSpecCertificatesCertificate
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("thumbprintFromConfig")]
     public V1api20220801storageServiceSpecCertificatesCertificateThumbprintFromConfig? ThumbprintFromConfig { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecCertificatesCertificatePassword
 {
@@ -227,7 +227,7 @@ public partial class V1api20220801storageServiceSpecCertificates
     [JsonPropertyName("certificate")]
     public V1api20220801storageServiceSpecCertificatesCertificate? Certificate { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("certificatePassword")]
     public V1api20220801storageServiceSpecCertificatesCertificatePassword? CertificatePassword { get; set; }
 
@@ -240,7 +240,7 @@ public partial class V1api20220801storageServiceSpecCertificates
     public string? StoreName { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificateExpiryFromConfig
 {
@@ -253,7 +253,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificateSubjectFromConfig
 {
@@ -266,7 +266,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificateThumbprintFromConfig
 {
@@ -291,7 +291,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("expiryFromConfig")]
     public V1api20220801storageServiceSpecHostnameConfigurationsCertificateExpiryFromConfig? ExpiryFromConfig { get; set; }
 
@@ -299,7 +299,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     [JsonPropertyName("subject")]
     public string? Subject { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("subjectFromConfig")]
     public V1api20220801storageServiceSpecHostnameConfigurationsCertificateSubjectFromConfig? SubjectFromConfig { get; set; }
 
@@ -307,12 +307,12 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     [JsonPropertyName("thumbprint")]
     public string? Thumbprint { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("thumbprintFromConfig")]
     public V1api20220801storageServiceSpecHostnameConfigurationsCertificateThumbprintFromConfig? ThumbprintFromConfig { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertificatePassword
 {
@@ -325,7 +325,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurationsCertif
     public string Name { get; set; }
 }
 
-/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecHostnameConfigurationsIdentityClientIdFromConfig
 {
@@ -350,7 +350,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurations
     [JsonPropertyName("certificate")]
     public V1api20220801storageServiceSpecHostnameConfigurationsCertificate? Certificate { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("certificatePassword")]
     public V1api20220801storageServiceSpecHostnameConfigurationsCertificatePassword? CertificatePassword { get; set; }
 
@@ -378,7 +378,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurations
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
 
-    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("identityClientIdFromConfig")]
     public V1api20220801storageServiceSpecHostnameConfigurationsIdentityClientIdFromConfig? IdentityClientIdFromConfig { get; set; }
 
@@ -395,7 +395,7 @@ public partial class V1api20220801storageServiceSpecHostnameConfigurations
     public string? Type { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecIdentityUserAssignedIdentitiesReference
 {
@@ -424,7 +424,7 @@ public partial class V1api20220801storageServiceSpecIdentityUserAssignedIdentiti
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20220801storageServiceSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -841,7 +841,7 @@ public partial class V1api20220801storageServiceStatusCertificates
     public string? StoreName { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceStatusConditions
 {

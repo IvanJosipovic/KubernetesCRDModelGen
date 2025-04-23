@@ -484,7 +484,7 @@ public partial class V1api20231101storageBackupVaultsBackupInstanceSpecPropertie
     public IList<V1api20231101storageBackupVaultsBackupInstanceSpecPropertiesPolicyInfoPolicyParametersDataStoreParametersList>? DataStoreParametersList { get; set; }
 }
 
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultsBackupInstanceSpecPropertiesPolicyInfoPolicyReference
 {
@@ -517,7 +517,7 @@ public partial class V1api20231101storageBackupVaultsBackupInstanceSpecPropertie
     [JsonPropertyName("policyParameters")]
     public V1api20231101storageBackupVaultsBackupInstanceSpecPropertiesPolicyInfoPolicyParameters? PolicyParameters { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("policyReference")]
     public V1api20231101storageBackupVaultsBackupInstanceSpecPropertiesPolicyInfoPolicyReference PolicyReference { get; set; }
 }
@@ -596,7 +596,7 @@ public partial class V1api20231101storageBackupVaultsBackupInstanceSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageBackupVaultsBackupInstanceStatusConditions
 {

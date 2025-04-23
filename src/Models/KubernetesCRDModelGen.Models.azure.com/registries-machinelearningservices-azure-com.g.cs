@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.com;
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecIdentityUserAssignedIdentitiesReference
 {
@@ -37,7 +37,7 @@ public partial class V1api20240401storageRegistrySpecIdentityUserAssignedIdentit
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20240401storageRegistrySpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -221,53 +221,6 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetailsSyst
     public string? AcrAccountSku { get; set; }
 }
 
-/// <summary>ResourceReference: Arm ResourceId is in the format "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}" or "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetailsUserCreatedAcrAccountArmResourceIdResourceReference
-{
-    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
-    [JsonPropertyName("armId")]
-    public string? ArmId { get; set; }
-
-    /// <summary>Group is the Kubernetes group of the resource.</summary>
-    [JsonPropertyName("group")]
-    public string? Group { get; set; }
-
-    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
-    [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
-
-    /// <summary>Name is the Kubernetes name of the resource.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>Storage version of v1api20240401.ArmResourceId ARM ResourceId of a resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetailsUserCreatedAcrAccountArmResourceId
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary>ResourceReference: Arm ResourceId is in the format "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}" or "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"</summary>
-    [JsonPropertyName("resourceReference")]
-    public V1api20240401storageRegistrySpecRegionDetailsAcrDetailsUserCreatedAcrAccountArmResourceIdResourceReference? ResourceReference { get; set; }
-}
-
-/// <summary>Storage version of v1api20240401.UserCreatedAcrAccount</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetailsUserCreatedAcrAccount
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary>Storage version of v1api20240401.ArmResourceId ARM ResourceId of a resource</summary>
-    [JsonPropertyName("armResourceId")]
-    public V1api20240401storageRegistrySpecRegionDetailsAcrDetailsUserCreatedAcrAccountArmResourceId? ArmResourceId { get; set; }
-}
-
 /// <summary>Storage version of v1api20240401.AcrDetails Details of ACR account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetails
@@ -279,10 +232,6 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsAcrDetails
     /// <summary>Storage version of v1api20240401.SystemCreatedAcrAccount</summary>
     [JsonPropertyName("systemCreatedAcrAccount")]
     public V1api20240401storageRegistrySpecRegionDetailsAcrDetailsSystemCreatedAcrAccount? SystemCreatedAcrAccount { get; set; }
-
-    /// <summary>Storage version of v1api20240401.UserCreatedAcrAccount</summary>
-    [JsonPropertyName("userCreatedAcrAccount")]
-    public V1api20240401storageRegistrySpecRegionDetailsAcrDetailsUserCreatedAcrAccount? UserCreatedAcrAccount { get; set; }
 }
 
 /// <summary>Storage version of v1api20240401.SystemCreatedStorageAccount</summary>
@@ -310,53 +259,6 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccount
     public string? StorageAccountType { get; set; }
 }
 
-/// <summary>ResourceReference: Arm ResourceId is in the format "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}" or "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsUserCreatedStorageAccountArmResourceIdResourceReference
-{
-    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
-    [JsonPropertyName("armId")]
-    public string? ArmId { get; set; }
-
-    /// <summary>Group is the Kubernetes group of the resource.</summary>
-    [JsonPropertyName("group")]
-    public string? Group { get; set; }
-
-    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
-    [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
-
-    /// <summary>Name is the Kubernetes name of the resource.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-}
-
-/// <summary>Storage version of v1api20240401.ArmResourceId ARM ResourceId of a resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsUserCreatedStorageAccountArmResourceId
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary>ResourceReference: Arm ResourceId is in the format "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}" or "/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{AcrName}"</summary>
-    [JsonPropertyName("resourceReference")]
-    public V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsUserCreatedStorageAccountArmResourceIdResourceReference? ResourceReference { get; set; }
-}
-
-/// <summary>Storage version of v1api20240401.UserCreatedStorageAccount</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsUserCreatedStorageAccount
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary>Storage version of v1api20240401.ArmResourceId ARM ResourceId of a resource</summary>
-    [JsonPropertyName("armResourceId")]
-    public V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsUserCreatedStorageAccountArmResourceId? ArmResourceId { get; set; }
-}
-
 /// <summary>Storage version of v1api20240401.StorageAccountDetails Details of storage account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetails
@@ -368,10 +270,6 @@ public partial class V1api20240401storageRegistrySpecRegionDetailsStorageAccount
     /// <summary>Storage version of v1api20240401.SystemCreatedStorageAccount</summary>
     [JsonPropertyName("systemCreatedStorageAccount")]
     public V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsSystemCreatedStorageAccount? SystemCreatedStorageAccount { get; set; }
-
-    /// <summary>Storage version of v1api20240401.UserCreatedStorageAccount</summary>
-    [JsonPropertyName("userCreatedStorageAccount")]
-    public V1api20240401storageRegistrySpecRegionDetailsStorageAccountDetailsUserCreatedStorageAccount? UserCreatedStorageAccount { get; set; }
 }
 
 /// <summary>Storage version of v1api20240401.RegistryRegionArmDetails Details for each region the registry is in</summary>
@@ -606,7 +504,7 @@ public partial class V1api20240401storageRegistrySpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusConditions
 {
@@ -728,32 +626,6 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSy
     public V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSystemCreatedAcrAccountArmResourceId? ArmResourceId { get; set; }
 }
 
-/// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetailsUserCreatedAcrAccountArmResourceId
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("resourceId")]
-    public string? ResourceId { get; set; }
-}
-
-/// <summary>Storage version of v1api20240401.UserCreatedAcrAccount_STATUS</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetailsUserCreatedAcrAccount
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
-    [JsonPropertyName("armResourceId")]
-    public V1api20240401storageRegistryStatusRegionDetailsAcrDetailsUserCreatedAcrAccountArmResourceId? ArmResourceId { get; set; }
-}
-
 /// <summary>Storage version of v1api20240401.AcrDetails_STATUS Details of ACR account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetails
@@ -765,10 +637,6 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsAcrDetails
     /// <summary>Storage version of v1api20240401.SystemCreatedAcrAccount_STATUS</summary>
     [JsonPropertyName("systemCreatedAcrAccount")]
     public V1api20240401storageRegistryStatusRegionDetailsAcrDetailsSystemCreatedAcrAccount? SystemCreatedAcrAccount { get; set; }
-
-    /// <summary>Storage version of v1api20240401.UserCreatedAcrAccount_STATUS</summary>
-    [JsonPropertyName("userCreatedAcrAccount")]
-    public V1api20240401storageRegistryStatusRegionDetailsAcrDetailsUserCreatedAcrAccount? UserCreatedAcrAccount { get; set; }
 }
 
 /// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
@@ -813,32 +681,6 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccou
     public string? StorageAccountType { get; set; }
 }
 
-/// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsUserCreatedStorageAccountArmResourceId
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("resourceId")]
-    public string? ResourceId { get; set; }
-}
-
-/// <summary>Storage version of v1api20240401.UserCreatedStorageAccount_STATUS</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsUserCreatedStorageAccount
-{
-    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
-    [JsonPropertyName("$propertyBag")]
-    public IDictionary<string, string>? PropertyBag { get; set; }
-
-    /// <summary>Storage version of v1api20240401.ArmResourceId_STATUS ARM ResourceId of a resource</summary>
-    [JsonPropertyName("armResourceId")]
-    public V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsUserCreatedStorageAccountArmResourceId? ArmResourceId { get; set; }
-}
-
 /// <summary>Storage version of v1api20240401.StorageAccountDetails_STATUS Details of storage account to be used for the Registry</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetails
@@ -850,10 +692,6 @@ public partial class V1api20240401storageRegistryStatusRegionDetailsStorageAccou
     /// <summary>Storage version of v1api20240401.SystemCreatedStorageAccount_STATUS</summary>
     [JsonPropertyName("systemCreatedStorageAccount")]
     public V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsSystemCreatedStorageAccount? SystemCreatedStorageAccount { get; set; }
-
-    /// <summary>Storage version of v1api20240401.UserCreatedStorageAccount_STATUS</summary>
-    [JsonPropertyName("userCreatedStorageAccount")]
-    public V1api20240401storageRegistryStatusRegionDetailsStorageAccountDetailsUserCreatedStorageAccount? UserCreatedStorageAccount { get; set; }
 }
 
 /// <summary>Storage version of v1api20240401.RegistryRegionArmDetails_STATUS Details for each region the registry is in</summary>

@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.com;
-/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+/// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecIdentityUserAssignedIdentitiesReference
 {
@@ -37,7 +37,7 @@ public partial class V1api20210702storageIotHubSpecIdentityUserAssignedIdentitie
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID nolint:recvcheck</summary>
+    /// <summary>ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID</summary>
     [JsonPropertyName("reference")]
     public V1api20210702storageIotHubSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
@@ -466,7 +466,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesNetworkRuleSets
     public IList<V1api20210702storageIotHubSpecPropertiesNetworkRuleSetsIpRules>? IpRules { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEventHubsConnectionString
 {
@@ -525,7 +525,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEve
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("connectionString")]
     public V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEventHubsConnectionString? ConnectionString { get; set; }
 
@@ -558,7 +558,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsEve
     public string? SubscriptionId { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusQueuesConnectionString
 {
@@ -617,7 +617,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("connectionString")]
     public V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusQueuesConnectionString? ConnectionString { get; set; }
 
@@ -650,7 +650,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
     public string? SubscriptionId { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusTopicsConnectionString
 {
@@ -709,7 +709,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("connectionString")]
     public V1api20210702storageIotHubSpecPropertiesRoutingEndpointsServiceBusTopicsConnectionString? ConnectionString { get; set; }
 
@@ -742,7 +742,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSer
     public string? SubscriptionId { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsStorageContainersConnectionString
 {
@@ -805,7 +805,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRoutingEndpointsSto
     [JsonPropertyName("batchFrequencyInSeconds")]
     public int? BatchFrequencyInSeconds { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("connectionString")]
     public V1api20210702storageIotHubSpecPropertiesRoutingEndpointsStorageContainersConnectionString? ConnectionString { get; set; }
 
@@ -979,7 +979,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesRouting
     public IList<V1api20210702storageIotHubSpecPropertiesRoutingRoutes>? Routes { get; set; }
 }
 
-/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+/// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpointsConnectionString
 {
@@ -1017,7 +1017,7 @@ public partial class V1api20210702storageIotHubSpecPropertiesStorageEndpoints
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
-    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on. nolint:recvcheck</summary>
+    /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
     [JsonPropertyName("connectionString")]
     public V1api20210702storageIotHubSpecPropertiesStorageEndpointsConnectionString? ConnectionString { get; set; }
 
@@ -1181,7 +1181,7 @@ public partial class V1api20210702storageIotHubSpec
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Condition defines an extension to status (an observation) of a resource nolint:recvcheck</summary>
+/// <summary>Condition defines an extension to status (an observation) of a resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210702storageIotHubStatusConditions
 {

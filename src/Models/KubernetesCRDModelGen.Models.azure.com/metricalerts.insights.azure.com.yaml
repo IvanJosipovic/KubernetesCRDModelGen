@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.16.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.12.0
+    app.kubernetes.io/version: v2.13.0
   name: metricalerts.insights.azure.com
 spec:
   conversion:
@@ -573,12 +573,12 @@ spec:
                     type: string
                 type: object
               scopesReferences:
-                description: "ScopesReferences: the list of resource id's that this metric alert is scoped to."
-                items:
-                  description: >-
-                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: >-
+                  ScopesReferences: the list of resource id's that this metric alert is scoped to. You cannot change the scope of a metric
 
-                    nolint:recvcheck
+                  rule based on logs.
+                items:
+                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
                       description: >-
@@ -665,10 +665,7 @@ spec:
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
@@ -981,7 +978,10 @@ spec:
                 description: 'Name: Azure resource name'
                 type: string
               scopes:
-                description: "Scopes: the list of resource id's that this metric alert is scoped to."
+                description: >-
+                  Scopes: the list of resource id's that this metric alert is scoped to. You cannot change the scope of a metric rule
+
+                  based on logs.
                 items:
                   type: string
                 type: array
@@ -1527,10 +1527,7 @@ spec:
                 type: object
               scopesReferences:
                 items:
-                  description: >-
-                    ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-
-                    nolint:recvcheck
+                  description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
                       description: >-
@@ -1605,10 +1602,7 @@ spec:
                 type: boolean
               conditions:
                 items:
-                  description: >-
-                    Condition defines an extension to status (an observation) of a resource
-
-                    nolint:recvcheck
+                  description: Condition defines an extension to status (an observation) of a resource
                   properties:
                     lastTransitionTime:
                       description: LastTransitionTime is the last time the condition transitioned from one status to another.
