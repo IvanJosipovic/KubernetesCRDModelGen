@@ -329,9 +329,10 @@ public class Generator : IGenerator
         }
 
         types.Add(@class);
-        
+
         if (isRoot)
         {
+            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{CleanIdentifier(version + " " + name)}>")));
             types.Add(@classList);
         }
 
