@@ -121,7 +121,7 @@ public class Generator : IGenerator
                                 SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed));
 
-        var @classList = SyntaxFactory.ClassDeclaration(CleanIdentifier((isRoot ? version : string.Empty) + " " + $"{name}List"))
+        var @classList = SyntaxFactory.ClassDeclaration(CleanIdentifier(version + " " + $"{name}List"))
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
                         .AddAttributeLists(SyntaxFactory.AttributeList()
                             .AddAttributes(
@@ -247,7 +247,7 @@ public class Generator : IGenerator
             var metaListProp = CreateProperty("V1ListMeta", "metadata");
 
             // Create a property declaration for List Kind
-            var kindListProp = CreateProperty($"IList<{CleanIdentifier((isRoot ? version : string.Empty) + " " + name)}>", "items");
+            var kindListProp = CreateProperty($"IList<{CleanIdentifier(version + " " + name)}>", "items");
 
             @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
             @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaListProp, kindListProp);
