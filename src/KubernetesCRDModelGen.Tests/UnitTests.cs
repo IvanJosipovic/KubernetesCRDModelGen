@@ -33,6 +33,13 @@ public class UnitTest1
         return GetType((V1CustomResourceDefinition)crd[0], kind);
     }
 
+    private static Type[]? GetTypeYaml(string yaml, string kind, string kindList)
+    {
+        var crd = KubernetesYaml.LoadAllFromString(yaml);
+
+        return GetType((V1CustomResourceDefinition)crd[0], kind, kindList);
+    }
+
     private static Type? GetType(V1CustomResourceDefinition crd, string kind)
     {
         var assembly = GetGenerator().GenerateAssembly(crd, Namespace);
@@ -40,6 +47,13 @@ public class UnitTest1
         var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
         return types.First();
+    }
+
+    private static Type[]? GetType(V1CustomResourceDefinition crd, string kind, string kindList)
+    {
+        var assembly = GetGenerator().GenerateAssembly(crd, Namespace);
+
+        return [.. assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && new[]{kind, kindList}.Contains(z.TypedValue.Value))))];
     }
 
     private static string GetCode(string yaml)
@@ -85,9 +99,10 @@ spec:
             metadata:
               type: object
 ";
-        var type = GetTypeYaml(yaml, "Test");
-
-        type.Namespace.Should().Be(Namespace + ".kubeui.com");
+        var types = GetTypeYaml(yaml, "Test", "TestList");
+        types.Should().AllSatisfy(
+          t => t.Namespace.Should().Be(Namespace + ".kubeui.com")
+        );
     }
 
     [Fact]
@@ -121,9 +136,10 @@ spec:
             metadata:
               type: object
 ";
-        var type = GetTypeYaml(yaml, "Test");
-
-        type.Assembly.ManifestModule.ScopeName.Should().Be("tests.kubeui.com.dll");
+        var types = GetTypeYaml(yaml, "Test", "TestList");
+        types.Should().AllSatisfy(
+          t => t.Assembly.ManifestModule.ScopeName.Should().Be("tests.kubeui.com.dll")
+        );
     }
 
     [Fact]
@@ -158,21 +174,27 @@ spec:
               type: object
 
 ";
-        var type = GetTypeYaml(yaml, "Test");
+        var types = GetTypeYaml(yaml, "Test", "TestList");
 
-        var attribute = type.CustomAttributes.First(x => x.AttributeType == typeof(KubernetesEntityAttribute));
+        ShouldHaveCorrectAttributeArguments(types[0], "Test");
+        ShouldHaveCorrectAttributeArguments(types[1], "TestList");
 
-        var kind = attribute.NamedArguments.First(x => x.MemberName == "Kind");
-        kind.TypedValue.Value.Should().Be("Test");
+        static void ShouldHaveCorrectAttributeArguments(Type type, string namedKind)
+        {            
+          var attribute = type.CustomAttributes.First(x => x.AttributeType == typeof(KubernetesEntityAttribute));
 
-        var group = attribute.NamedArguments.First(x => x.MemberName == "Group");
-        group.TypedValue.Value.Should().Be("kubeui.com");
+          var kind = attribute.NamedArguments.First(x => x.MemberName == "Kind");
+          kind.TypedValue.Value.Should().Be(namedKind);
 
-        var version = attribute.NamedArguments.First(x => x.MemberName == "ApiVersion");
-        version.TypedValue.Value.Should().Be("v1beta1");
+          var group = attribute.NamedArguments.First(x => x.MemberName == "Group");
+          group.TypedValue.Value.Should().Be("kubeui.com");
 
-        var plural = attribute.NamedArguments.First(x => x.MemberName == "PluralName");
-        plural.TypedValue.Value.Should().Be("tests");
+          var version = attribute.NamedArguments.First(x => x.MemberName == "ApiVersion");
+          version.TypedValue.Value.Should().Be("v1beta1");
+
+          var plural = attribute.NamedArguments.First(x => x.MemberName == "PluralName");
+          plural.TypedValue.Value.Should().Be("tests");
+        }        
     }
 
     [Fact]
@@ -217,6 +239,13 @@ spec:
         type.IsAssignableTo(typeof(IMetadata<V1ObjectMeta>)).Should().BeTrue();
         type.GetInterfaces().FirstOrDefault(x => x.Name == "ISpec`1").Should().NotBeNull();
         type.GetInterfaces().FirstOrDefault(x => x.Name == "IStatus`1").Should().NotBeNull();
+
+        var typeList = GetTypeYaml(yaml, "TestList");
+        typeList.Name.Should().Be("V1beta1TestList");
+        typeList.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
+        typeList.IsAssignableTo(typeof(IKubernetesObject<V1ListMeta>)).Should().BeTrue();
+        typeList.IsAssignableTo(typeof(IMetadata<V1ListMeta>)).Should().BeTrue();
+        typeList.GetInterfaces().FirstOrDefault(x => x.Name == "IItems`1").Should().NotBeNull();
     }
 
     [Fact]
@@ -250,12 +279,18 @@ spec:
             metadata:
               type: object
 ";
-        var type = GetTypeYaml(yaml, "Test");
+        var types = GetTypeYaml(yaml, "Test", "TestList");
 
-        type.GetField("KubeApiVersion").GetValue(null).Should().Be("v1beta1");
-        type.GetField("KubeGroup").GetValue(null).Should().Be("kubeui.com");
-        type.GetField("KubeKind").GetValue(null).Should().Be("Test");
-        type.GetField("KubePluralName").GetValue(null).Should().Be("tests");
+        ShouldHaveCorrectFieldValues(types[0], "Test");
+        ShouldHaveCorrectFieldValues(types[1], "TestList");
+
+        static void ShouldHaveCorrectFieldValues(Type type, string namedKind)
+        {            
+          type.GetField("KubeApiVersion").GetValue(null).Should().Be("v1beta1");
+          type.GetField("KubeGroup").GetValue(null).Should().Be("kubeui.com");
+          type.GetField("KubeKind").GetValue(null).Should().Be(namedKind);
+          type.GetField("KubePluralName").GetValue(null).Should().Be("tests");
+        }
     }
 
     [Fact]
@@ -294,9 +329,9 @@ spec:
                 someString:
                   type: string
 ";
-        var type = GetTypeYaml(yaml, "Test");
+        var types = GetTypeYaml(yaml, "Test", "TestList");
 
-        var specType = type.GetProperty("Spec").PropertyType;
+        var specType = types[0].GetProperty("Spec").PropertyType;
 
         specType.GetProperty("SomeString").PropertyType.Should().Be<string?>();
     }
