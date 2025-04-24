@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryRoutineSpecArguments
+public partial class BigQueryRoutineMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class BigQueryRoutineSpecArguments
 {
     /// <summary>Defaults to FIXED_TYPE. Default value: "FIXED_TYPE" Possible values: ["FIXED_TYPE", "ANY_TYPE"].</summary>
     [JsonPropertyName("argumentKind")]
@@ -31,7 +37,7 @@ public partial class V1beta1BigQueryRoutineSpecArguments
 
 /// <summary>The ID of the dataset containing this routine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryRoutineSpecDatasetRef
+public partial class BigQueryRoutineSpecDatasetRef
 {
     /// <summary>Allowed value: The `name` field of a `BigQueryDataset` resource.</summary>
     [JsonPropertyName("external")]
@@ -48,7 +54,7 @@ public partial class V1beta1BigQueryRoutineSpecDatasetRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryRoutineSpecProjectRef
+public partial class BigQueryRoutineSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -65,15 +71,15 @@ public partial class V1beta1BigQueryRoutineSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryRoutineSpec
+public partial class BigQueryRoutineSpec
 {
     /// <summary>Input/output argument of a function or a stored procedure.</summary>
     [JsonPropertyName("arguments")]
-    public IList<V1beta1BigQueryRoutineSpecArguments>? Arguments { get; set; }
+    public IList<BigQueryRoutineSpecArguments>? Arguments { get; set; }
 
     /// <summary>The ID of the dataset containing this routine.</summary>
     [JsonPropertyName("datasetRef")]
-    public V1beta1BigQueryRoutineSpecDatasetRef DatasetRef { get; set; }
+    public BigQueryRoutineSpecDatasetRef DatasetRef { get; set; }
 
     /// <summary>The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses.</summary>
     [JsonPropertyName("definitionBody")]
@@ -97,7 +103,7 @@ public partial class V1beta1BigQueryRoutineSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1BigQueryRoutineSpecProjectRef ProjectRef { get; set; }
+    public BigQueryRoutineSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The routineId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -118,7 +124,7 @@ public partial class V1beta1BigQueryRoutineSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryRoutineStatusConditions
+public partial class BigQueryRoutineStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -143,11 +149,11 @@ public partial class V1beta1BigQueryRoutineStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryRoutineStatus
+public partial class BigQueryRoutineStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1BigQueryRoutineStatusConditions>? Conditions { get; set; }
+    public IList<BigQueryRoutineStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when this routine was created, in milliseconds since the epoch.</summary>
     [JsonPropertyName("creationTime")]
@@ -164,30 +170,25 @@ public partial class V1beta1BigQueryRoutineStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BigQueryRoutine : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryRoutineSpec>, IStatus<V1beta1BigQueryRoutineStatus>
+public partial class BigQueryRoutine
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BigQueryRoutine";
-    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigqueryroutines";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public BigQueryRoutineMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1BigQueryRoutineSpec Spec { get; set; }
+    public BigQueryRoutineSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1BigQueryRoutineStatus? Status { get; set; }
+    public BigQueryRoutineStatus? Status { get; set; }
 }

@@ -518,3 +518,29 @@ public partial class V1beta1PolicyAttachment : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1PolicyAttachmentStatus? Status { get; set; }
 }
+
+/// <summary>PolicyAttachment is the Schema for the PolicyAttachments API. Provides an IoT policy attachment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicyAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PolicyAttachmentList";
+    public const string KubeGroup = "iot.aws.upbound.io";
+    public const string KubePluralName = "policyattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PolicyAttachment> Items { get; set; }
+}

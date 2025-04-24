@@ -2098,3 +2098,29 @@ public partial class V1api20210702storageIotHub : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1api20210702storageIotHubStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20210702.IotHub Generator information: - Generated from: /iothub/resource-manager/Microsoft.Devices/stable/2021-07-02/iothub.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20210702storageIotHubList : IKubernetesObject<V1ListMeta>, IItems<V1api20210702storageIotHub>
+{
+    public const string KubeApiVersion = "v1api20210702storage";
+    public const string KubeKind = "IotHubList";
+    public const string KubeGroup = "devices.azure.com";
+    public const string KubePluralName = "iothubs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20210702storageIotHub> Items { get; set; }
+}

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeInstanceTemplateMetadata
+{
+}
+
 /// <summary>Immutable. Controls for advanced machine-related behavior features.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecAdvancedMachineFeatures
+public partial class ComputeInstanceTemplateSpecAdvancedMachineFeatures
 {
     /// <summary>Immutable. Whether to enable nested virtualization or not.</summary>
     [JsonPropertyName("enableNestedVirtualization")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecAdvancedMachineFeatures
 
 /// <summary>Immutable. The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail to create.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecConfidentialInstanceConfig
+public partial class ComputeInstanceTemplateSpecConfidentialInstanceConfig
 {
     /// <summary>Immutable. Defines whether the instance should have confidential compute enabled.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
@@ -36,7 +42,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecConfidentialInstanceConfi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskDiskEncryptionKeyKmsKeyRef
+public partial class ComputeInstanceTemplateSpecDiskDiskEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -53,16 +59,16 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskDiskEncryptionKeyKmsK
 
 /// <summary>Immutable. Encrypts or decrypts a disk using a customer-supplied encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskDiskEncryptionKey
+public partial class ComputeInstanceTemplateSpecDiskDiskEncryptionKey
 {
     /// <summary></summary>
     [JsonPropertyName("kmsKeyRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskDiskEncryptionKeyKmsKeyRef KmsKeyRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskDiskEncryptionKeyKmsKeyRef KmsKeyRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskResourcePolicies
+public partial class ComputeInstanceTemplateSpecDiskResourcePolicies
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeResourcePolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -79,7 +85,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskResourcePolicies
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceDiskRef
+public partial class ComputeInstanceTemplateSpecDiskSourceDiskRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeDisk` resource.</summary>
     [JsonPropertyName("external")]
@@ -96,7 +102,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceDiskRef
 
 /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeySelfLinkRef
+public partial class ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeySelfLinkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -113,7 +119,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryption
 
 /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeyServiceAccountRef
+public partial class ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -130,20 +136,20 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryption
 
 /// <summary>Immutable. The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.  Instance templates do not store customer-supplied encryption keys, so you cannot create disks for instances in a managed instance group if the source images are encrypted with your own keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryptionKey
+public partial class ComputeInstanceTemplateSpecDiskSourceImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
     [JsonPropertyName("kmsKeySelfLinkRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeySelfLinkRef KmsKeySelfLinkRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeySelfLinkRef KmsKeySelfLinkRef { get; set; }
 
     /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccountRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceImageRef
+public partial class ComputeInstanceTemplateSpecDiskSourceImageRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
     [JsonPropertyName("external")]
@@ -160,7 +166,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceImageRef
 
 /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeySelfLinkRef
+public partial class ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeySelfLinkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -177,7 +183,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncrypt
 
 /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef
+public partial class ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -194,20 +200,20 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncrypt
 
 /// <summary>Immutable. The customer-supplied encryption key of the source snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKey
+public partial class ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
     [JsonPropertyName("kmsKeySelfLinkRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeySelfLinkRef KmsKeySelfLinkRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeySelfLinkRef KmsKeySelfLinkRef { get; set; }
 
     /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccountRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 }
 
 /// <summary>The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot, initializeParams.sourceImage, or disks.source is required except for local SSD.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotRef
+public partial class ComputeInstanceTemplateSpecDiskSourceSnapshotRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSnapshot` resource.</summary>
     [JsonPropertyName("external")]
@@ -224,7 +230,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecDisk
+public partial class ComputeInstanceTemplateSpecDisk
 {
     /// <summary>Immutable. Whether or not the disk should be auto-deleted. This defaults to true.</summary>
     [JsonPropertyName("autoDelete")]
@@ -240,7 +246,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDisk
 
     /// <summary>Immutable. Encrypts or decrypts a disk using a customer-supplied encryption key.</summary>
     [JsonPropertyName("diskEncryptionKey")]
-    public V1beta1ComputeInstanceTemplateSpecDiskDiskEncryptionKey? DiskEncryptionKey { get; set; }
+    public ComputeInstanceTemplateSpecDiskDiskEncryptionKey? DiskEncryptionKey { get; set; }
 
     /// <summary>Immutable. Name of the disk. When not provided, this defaults to the name of the instance.</summary>
     [JsonPropertyName("diskName")]
@@ -272,27 +278,27 @@ public partial class V1beta1ComputeInstanceTemplateSpecDisk
 
     /// <summary></summary>
     [JsonPropertyName("resourcePolicies")]
-    public IList<V1beta1ComputeInstanceTemplateSpecDiskResourcePolicies>? ResourcePolicies { get; set; }
+    public IList<ComputeInstanceTemplateSpecDiskResourcePolicies>? ResourcePolicies { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sourceDiskRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceDiskRef? SourceDiskRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceDiskRef? SourceDiskRef { get; set; }
 
     /// <summary>Immutable. The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.  Instance templates do not store customer-supplied encryption keys, so you cannot create disks for instances in a managed instance group if the source images are encrypted with your own keys.</summary>
     [JsonPropertyName("sourceImageEncryptionKey")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceImageEncryptionKey? SourceImageEncryptionKey { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceImageEncryptionKey? SourceImageEncryptionKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sourceImageRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceImageRef? SourceImageRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceImageRef? SourceImageRef { get; set; }
 
     /// <summary>Immutable. The customer-supplied encryption key of the source snapshot.</summary>
     [JsonPropertyName("sourceSnapshotEncryptionKey")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKey? SourceSnapshotEncryptionKey { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceSnapshotEncryptionKey? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary>The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot, initializeParams.sourceImage, or disks.source is required except for local SSD.</summary>
     [JsonPropertyName("sourceSnapshotRef")]
-    public V1beta1ComputeInstanceTemplateSpecDiskSourceSnapshotRef? SourceSnapshotRef { get; set; }
+    public ComputeInstanceTemplateSpecDiskSourceSnapshotRef? SourceSnapshotRef { get; set; }
 
     /// <summary>Immutable. The type of Google Compute Engine disk, can be either "SCRATCH" or "PERSISTENT".</summary>
     [JsonPropertyName("type")]
@@ -301,7 +307,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecDisk
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecGuestAccelerator
+public partial class ComputeInstanceTemplateSpecGuestAccelerator
 {
     /// <summary>Immutable. The number of the guest accelerator cards exposed to this instance.</summary>
     [JsonPropertyName("count")]
@@ -314,7 +320,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecGuestAccelerator
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecMetadata
+public partial class ComputeInstanceTemplateSpecMetadata
 {
     /// <summary></summary>
     [JsonPropertyName("key")]
@@ -327,7 +333,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecMetadata
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAccessConfigNatIpRef
+public partial class ComputeInstanceTemplateSpecNetworkInterfaceAccessConfigNatIpRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -344,11 +350,11 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAccessCon
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAccessConfig
+public partial class ComputeInstanceTemplateSpecNetworkInterfaceAccessConfig
 {
     /// <summary></summary>
     [JsonPropertyName("natIpRef")]
-    public V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAccessConfigNatIpRef? NatIpRef { get; set; }
+    public ComputeInstanceTemplateSpecNetworkInterfaceAccessConfigNatIpRef? NatIpRef { get; set; }
 
     /// <summary>Immutable. The networking tier used for configuring this instance template. This field can take the following values: PREMIUM, STANDARD, FIXED_STANDARD. If this field is not specified, it is assumed to be PREMIUM.</summary>
     [JsonPropertyName("networkTier")]
@@ -361,7 +367,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAccessCon
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAliasIpRange
+public partial class ComputeInstanceTemplateSpecNetworkInterfaceAliasIpRange
 {
     /// <summary>Immutable. The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. At the time of writing only a netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API error.</summary>
     [JsonPropertyName("ipCidrRange")]
@@ -374,7 +380,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAliasIpRa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceIpv6AccessConfig
+public partial class ComputeInstanceTemplateSpecNetworkInterfaceIpv6AccessConfig
 {
     /// <summary>The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6 address from a subnetwork associated with the instance will be allocated dynamically.</summary>
     [JsonPropertyName("externalIpv6")]
@@ -399,7 +405,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceIpv6Acces
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceNetworkRef
+public partial class ComputeInstanceTemplateSpecNetworkInterfaceNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -416,7 +422,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceNetworkRe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceSubnetworkRef
+public partial class ComputeInstanceTemplateSpecNetworkInterfaceSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -433,15 +439,15 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterfaceSubnetwor
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterface
+public partial class ComputeInstanceTemplateSpecNetworkInterface
 {
     /// <summary></summary>
     [JsonPropertyName("accessConfig")]
-    public IList<V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAccessConfig>? AccessConfig { get; set; }
+    public IList<ComputeInstanceTemplateSpecNetworkInterfaceAccessConfig>? AccessConfig { get; set; }
 
     /// <summary>Immutable. An array of alias IP ranges for this network interface. Can only be specified for network interfaces on subnet-mode networks.</summary>
     [JsonPropertyName("aliasIpRange")]
-    public IList<V1beta1ComputeInstanceTemplateSpecNetworkInterfaceAliasIpRange>? AliasIpRange { get; set; }
+    public IList<ComputeInstanceTemplateSpecNetworkInterfaceAliasIpRange>? AliasIpRange { get; set; }
 
     /// <summary>The prefix length of the primary internal IPv6 range.</summary>
     [JsonPropertyName("internalIpv6PrefixLength")]
@@ -449,7 +455,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterface
 
     /// <summary>An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access.</summary>
     [JsonPropertyName("ipv6AccessConfig")]
-    public IList<V1beta1ComputeInstanceTemplateSpecNetworkInterfaceIpv6AccessConfig>? Ipv6AccessConfig { get; set; }
+    public IList<ComputeInstanceTemplateSpecNetworkInterfaceIpv6AccessConfig>? Ipv6AccessConfig { get; set; }
 
     /// <summary>One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet. This field is always inherited from its subnetwork.</summary>
     [JsonPropertyName("ipv6AccessType")]
@@ -473,7 +479,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterface
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ComputeInstanceTemplateSpecNetworkInterfaceNetworkRef? NetworkRef { get; set; }
+    public ComputeInstanceTemplateSpecNetworkInterfaceNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET.</summary>
     [JsonPropertyName("nicType")]
@@ -493,12 +499,12 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkInterface
 
     /// <summary></summary>
     [JsonPropertyName("subnetworkRef")]
-    public V1beta1ComputeInstanceTemplateSpecNetworkInterfaceSubnetworkRef? SubnetworkRef { get; set; }
+    public ComputeInstanceTemplateSpecNetworkInterfaceSubnetworkRef? SubnetworkRef { get; set; }
 }
 
 /// <summary>Immutable. Configures network performance settings for the instance. If not specified, the instance will be created with its default network performance configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecNetworkPerformanceConfig
+public partial class ComputeInstanceTemplateSpecNetworkPerformanceConfig
 {
     /// <summary>Immutable. The egress bandwidth tier to enable. Possible values:TIER_1, DEFAULT.</summary>
     [JsonPropertyName("totalEgressBandwidthTier")]
@@ -507,7 +513,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecNetworkPerformanceConfig
 
 /// <summary>Immutable. Specifies the label selector for the reservation to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecReservationAffinitySpecificReservation
+public partial class ComputeInstanceTemplateSpecReservationAffinitySpecificReservation
 {
     /// <summary>Immutable. Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.</summary>
     [JsonPropertyName("key")]
@@ -520,11 +526,11 @@ public partial class V1beta1ComputeInstanceTemplateSpecReservationAffinitySpecif
 
 /// <summary>Immutable. Specifies the reservations that this instance can consume from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecReservationAffinity
+public partial class ComputeInstanceTemplateSpecReservationAffinity
 {
     /// <summary>Immutable. Specifies the label selector for the reservation to use.</summary>
     [JsonPropertyName("specificReservation")]
-    public V1beta1ComputeInstanceTemplateSpecReservationAffinitySpecificReservation? SpecificReservation { get; set; }
+    public ComputeInstanceTemplateSpecReservationAffinitySpecificReservation? SpecificReservation { get; set; }
 
     /// <summary>Immutable. The type of reservation from which this instance can consume resources.</summary>
     [JsonPropertyName("type")]
@@ -533,7 +539,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecReservationAffinity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecResourcePolicies
+public partial class ComputeInstanceTemplateSpecResourcePolicies
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeResourcePolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -550,7 +556,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecResourcePolicies
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecSchedulingLocalSsdRecoveryTimeout
+public partial class ComputeInstanceTemplateSpecSchedulingLocalSsdRecoveryTimeout
 {
     /// <summary>Immutable. Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -563,7 +569,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecSchedulingLocalSsdRecover
 
 /// <summary>Immutable. The timeout for new network connections to hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecSchedulingMaxRunDuration
+public partial class ComputeInstanceTemplateSpecSchedulingMaxRunDuration
 {
     /// <summary>Immutable. Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -576,7 +582,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecSchedulingMaxRunDuration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecSchedulingNodeAffinities
+public partial class ComputeInstanceTemplateSpecSchedulingNodeAffinities
 {
     /// <summary></summary>
     [JsonPropertyName("value")]
@@ -585,7 +591,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecSchedulingNodeAffinities
 
 /// <summary>Immutable. The scheduling strategy to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecScheduling
+public partial class ComputeInstanceTemplateSpecScheduling
 {
     /// <summary>Immutable. Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true.</summary>
     [JsonPropertyName("automaticRestart")]
@@ -597,7 +603,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecScheduling
 
     /// <summary>Specifies the maximum amount of time a Local Ssd Vm should wait while   recovery of the Local Ssd state is attempted. Its value should be in   between 0 and 168 hours with hour granularity and the default value being 1   hour.</summary>
     [JsonPropertyName("localSsdRecoveryTimeout")]
-    public IList<V1beta1ComputeInstanceTemplateSpecSchedulingLocalSsdRecoveryTimeout>? LocalSsdRecoveryTimeout { get; set; }
+    public IList<ComputeInstanceTemplateSpecSchedulingLocalSsdRecoveryTimeout>? LocalSsdRecoveryTimeout { get; set; }
 
     /// <summary>Specifies the frequency of planned maintenance events. The accepted values are: PERIODIC.</summary>
     [JsonPropertyName("maintenanceInterval")]
@@ -605,7 +611,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecScheduling
 
     /// <summary>Immutable. The timeout for new network connections to hosts.</summary>
     [JsonPropertyName("maxRunDuration")]
-    public V1beta1ComputeInstanceTemplateSpecSchedulingMaxRunDuration? MaxRunDuration { get; set; }
+    public ComputeInstanceTemplateSpecSchedulingMaxRunDuration? MaxRunDuration { get; set; }
 
     /// <summary>Minimum number of cpus for the instance.</summary>
     [JsonPropertyName("minNodeCpus")]
@@ -613,7 +619,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecScheduling
 
     /// <summary></summary>
     [JsonPropertyName("nodeAffinities")]
-    public IList<V1beta1ComputeInstanceTemplateSpecSchedulingNodeAffinities>? NodeAffinities { get; set; }
+    public IList<ComputeInstanceTemplateSpecSchedulingNodeAffinities>? NodeAffinities { get; set; }
 
     /// <summary>Immutable. Defines the maintenance behavior for this instance.</summary>
     [JsonPropertyName("onHostMaintenance")]
@@ -630,7 +636,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecScheduling
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecServiceAccountServiceAccountRef
+public partial class ComputeInstanceTemplateSpecServiceAccountServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -647,7 +653,7 @@ public partial class V1beta1ComputeInstanceTemplateSpecServiceAccountServiceAcco
 
 /// <summary>Immutable. Service account to attach to the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecServiceAccount
+public partial class ComputeInstanceTemplateSpecServiceAccount
 {
     /// <summary>Immutable. A list of service scopes. Both OAuth2 URLs and gcloud short names are supported. To allow full access to all Cloud APIs, use the cloud-platform scope.</summary>
     [JsonPropertyName("scopes")]
@@ -655,12 +661,12 @@ public partial class V1beta1ComputeInstanceTemplateSpecServiceAccount
 
     /// <summary></summary>
     [JsonPropertyName("serviceAccountRef")]
-    public V1beta1ComputeInstanceTemplateSpecServiceAccountServiceAccountRef? ServiceAccountRef { get; set; }
+    public ComputeInstanceTemplateSpecServiceAccountServiceAccountRef? ServiceAccountRef { get; set; }
 }
 
 /// <summary>Immutable. Enable Shielded VM on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Note: shielded_instance_config can only be used with boot images with shielded vm support.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpecShieldedInstanceConfig
+public partial class ComputeInstanceTemplateSpecShieldedInstanceConfig
 {
     /// <summary>Immutable. Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.</summary>
     [JsonPropertyName("enableIntegrityMonitoring")]
@@ -677,11 +683,11 @@ public partial class V1beta1ComputeInstanceTemplateSpecShieldedInstanceConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateSpec
+public partial class ComputeInstanceTemplateSpec
 {
     /// <summary>Immutable. Controls for advanced machine-related behavior features.</summary>
     [JsonPropertyName("advancedMachineFeatures")]
-    public V1beta1ComputeInstanceTemplateSpecAdvancedMachineFeatures? AdvancedMachineFeatures { get; set; }
+    public ComputeInstanceTemplateSpecAdvancedMachineFeatures? AdvancedMachineFeatures { get; set; }
 
     /// <summary>Immutable. Whether to allow sending and receiving of packets with non-matching source or destination IPs. This defaults to false.</summary>
     [JsonPropertyName("canIpForward")]
@@ -689,7 +695,7 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
     /// <summary>Immutable. The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail to create.</summary>
     [JsonPropertyName("confidentialInstanceConfig")]
-    public V1beta1ComputeInstanceTemplateSpecConfidentialInstanceConfig? ConfidentialInstanceConfig { get; set; }
+    public ComputeInstanceTemplateSpecConfidentialInstanceConfig? ConfidentialInstanceConfig { get; set; }
 
     /// <summary>Immutable. A brief description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -697,7 +703,7 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
     /// <summary>Immutable. Disks to attach to instances created from this template. This can be specified multiple times for multiple disks.</summary>
     [JsonPropertyName("disk")]
-    public IList<V1beta1ComputeInstanceTemplateSpecDisk> Disk { get; set; }
+    public IList<ComputeInstanceTemplateSpecDisk> Disk { get; set; }
 
     /// <summary>Immutable. Enable Virtual Displays on this instance. Note: allow_stopping_for_update must be set to true in order to update this field.</summary>
     [JsonPropertyName("enableDisplay")]
@@ -705,7 +711,7 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
     /// <summary>Immutable. List of the type and count of accelerator cards attached to the instance.</summary>
     [JsonPropertyName("guestAccelerator")]
-    public IList<V1beta1ComputeInstanceTemplateSpecGuestAccelerator>? GuestAccelerator { get; set; }
+    public IList<ComputeInstanceTemplateSpecGuestAccelerator>? GuestAccelerator { get; set; }
 
     /// <summary>Immutable. A description of the instance.</summary>
     [JsonPropertyName("instanceDescription")]
@@ -717,7 +723,7 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public IList<V1beta1ComputeInstanceTemplateSpecMetadata>? Metadata { get; set; }
+    public IList<ComputeInstanceTemplateSpecMetadata>? Metadata { get; set; }
 
     /// <summary>Immutable. An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously.</summary>
     [JsonPropertyName("metadataStartupScript")]
@@ -733,11 +739,11 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
     /// <summary>Immutable. Networks to attach to instances created from this template. This can be specified multiple times for multiple networks.</summary>
     [JsonPropertyName("networkInterface")]
-    public IList<V1beta1ComputeInstanceTemplateSpecNetworkInterface>? NetworkInterface { get; set; }
+    public IList<ComputeInstanceTemplateSpecNetworkInterface>? NetworkInterface { get; set; }
 
     /// <summary>Immutable. Configures network performance settings for the instance. If not specified, the instance will be created with its default network performance configuration.</summary>
     [JsonPropertyName("networkPerformanceConfig")]
-    public V1beta1ComputeInstanceTemplateSpecNetworkPerformanceConfig? NetworkPerformanceConfig { get; set; }
+    public ComputeInstanceTemplateSpecNetworkPerformanceConfig? NetworkPerformanceConfig { get; set; }
 
     /// <summary>Immutable. An instance template is a global resource that is not bound to a zone or a region. However, you can still specify some regional resources in an instance template, which restricts the template to the region where that resource resides. For example, a custom subnetwork resource is tied to a specific region. Defaults to the region of the Provider if no value is given.</summary>
     [JsonPropertyName("region")]
@@ -745,7 +751,7 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
     /// <summary>Immutable. Specifies the reservations that this instance can consume from.</summary>
     [JsonPropertyName("reservationAffinity")]
-    public V1beta1ComputeInstanceTemplateSpecReservationAffinity? ReservationAffinity { get; set; }
+    public ComputeInstanceTemplateSpecReservationAffinity? ReservationAffinity { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -753,19 +759,19 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
     /// <summary></summary>
     [JsonPropertyName("resourcePolicies")]
-    public IList<V1beta1ComputeInstanceTemplateSpecResourcePolicies>? ResourcePolicies { get; set; }
+    public IList<ComputeInstanceTemplateSpecResourcePolicies>? ResourcePolicies { get; set; }
 
     /// <summary>Immutable. The scheduling strategy to use.</summary>
     [JsonPropertyName("scheduling")]
-    public V1beta1ComputeInstanceTemplateSpecScheduling? Scheduling { get; set; }
+    public ComputeInstanceTemplateSpecScheduling? Scheduling { get; set; }
 
     /// <summary>Immutable. Service account to attach to the instance.</summary>
     [JsonPropertyName("serviceAccount")]
-    public V1beta1ComputeInstanceTemplateSpecServiceAccount? ServiceAccount { get; set; }
+    public ComputeInstanceTemplateSpecServiceAccount? ServiceAccount { get; set; }
 
     /// <summary>Immutable. Enable Shielded VM on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Note: shielded_instance_config can only be used with boot images with shielded vm support.</summary>
     [JsonPropertyName("shieldedInstanceConfig")]
-    public V1beta1ComputeInstanceTemplateSpecShieldedInstanceConfig? ShieldedInstanceConfig { get; set; }
+    public ComputeInstanceTemplateSpecShieldedInstanceConfig? ShieldedInstanceConfig { get; set; }
 
     /// <summary>Immutable. Tags to attach to the instance.</summary>
     [JsonPropertyName("tags")]
@@ -774,7 +780,7 @@ public partial class V1beta1ComputeInstanceTemplateSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateStatusConditions
+public partial class ComputeInstanceTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -799,11 +805,11 @@ public partial class V1beta1ComputeInstanceTemplateStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceTemplateStatus
+public partial class ComputeInstanceTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeInstanceTemplateStatusConditions>? Conditions { get; set; }
+    public IList<ComputeInstanceTemplateStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique fingerprint of the metadata.</summary>
     [JsonPropertyName("metadataFingerprint")]
@@ -828,30 +834,25 @@ public partial class V1beta1ComputeInstanceTemplateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeInstanceTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInstanceTemplateSpec>, IStatus<V1beta1ComputeInstanceTemplateStatus>
+public partial class ComputeInstanceTemplate
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeInstanceTemplate";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeinstancetemplates";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeInstanceTemplateMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeInstanceTemplateSpec Spec { get; set; }
+    public ComputeInstanceTemplateSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeInstanceTemplateStatus? Status { get; set; }
+    public ComputeInstanceTemplateStatus? Status { get; set; }
 }

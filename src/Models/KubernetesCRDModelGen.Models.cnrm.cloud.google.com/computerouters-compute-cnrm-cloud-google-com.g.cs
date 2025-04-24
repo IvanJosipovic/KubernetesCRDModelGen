@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterSpecBgpAdvertisedIpRanges
+public partial class ComputeRouterMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeRouterSpecBgpAdvertisedIpRanges
 {
     /// <summary>User-specified description for the IP range.</summary>
     [JsonPropertyName("description")]
@@ -23,7 +29,7 @@ public partial class V1beta1ComputeRouterSpecBgpAdvertisedIpRanges
 
 /// <summary>BGP information specific to this router.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterSpecBgp
+public partial class ComputeRouterSpecBgp
 {
     /// <summary>User-specified flag to indicate which mode to use for advertisement. Default value: "DEFAULT" Possible values: ["DEFAULT", "CUSTOM"].</summary>
     [JsonPropertyName("advertiseMode")]
@@ -35,7 +41,7 @@ public partial class V1beta1ComputeRouterSpecBgp
 
     /// <summary>User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.</summary>
     [JsonPropertyName("advertisedIpRanges")]
-    public IList<V1beta1ComputeRouterSpecBgpAdvertisedIpRanges>? AdvertisedIpRanges { get; set; }
+    public IList<ComputeRouterSpecBgpAdvertisedIpRanges>? AdvertisedIpRanges { get; set; }
 
     /// <summary>Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.</summary>
     [JsonPropertyName("asn")]
@@ -48,7 +54,7 @@ public partial class V1beta1ComputeRouterSpecBgp
 
 /// <summary>A reference to the network to which this router belongs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterSpecNetworkRef
+public partial class ComputeRouterSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -65,11 +71,11 @@ public partial class V1beta1ComputeRouterSpecNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterSpec
+public partial class ComputeRouterSpec
 {
     /// <summary>BGP information specific to this router.</summary>
     [JsonPropertyName("bgp")]
-    public V1beta1ComputeRouterSpecBgp? Bgp { get; set; }
+    public ComputeRouterSpecBgp? Bgp { get; set; }
 
     /// <summary>An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -81,7 +87,7 @@ public partial class V1beta1ComputeRouterSpec
 
     /// <summary>A reference to the network to which this router belongs.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ComputeRouterSpecNetworkRef NetworkRef { get; set; }
+    public ComputeRouterSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>Immutable. Region where the router resides.</summary>
     [JsonPropertyName("region")]
@@ -94,7 +100,7 @@ public partial class V1beta1ComputeRouterSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterStatusConditions
+public partial class ComputeRouterStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -119,11 +125,11 @@ public partial class V1beta1ComputeRouterStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterStatus
+public partial class ComputeRouterStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeRouterStatusConditions>? Conditions { get; set; }
+    public IList<ComputeRouterStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -140,30 +146,25 @@ public partial class V1beta1ComputeRouterStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeRouter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouterSpec>, IStatus<V1beta1ComputeRouterStatus>
+public partial class ComputeRouter
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeRouter";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computerouters";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeRouterMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeRouterSpec Spec { get; set; }
+    public ComputeRouterSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeRouterStatus? Status { get; set; }
+    public ComputeRouterStatus? Status { get; set; }
 }

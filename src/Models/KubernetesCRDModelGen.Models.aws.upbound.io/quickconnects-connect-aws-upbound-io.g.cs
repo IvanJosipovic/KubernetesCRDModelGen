@@ -606,3 +606,29 @@ public partial class V1beta1QuickConnect : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1QuickConnectStatus? Status { get; set; }
 }
+
+/// <summary>QuickConnect is the Schema for the QuickConnects API. Provides details about a specific Amazon Quick Connect</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1QuickConnectList : IKubernetesObject<V1ListMeta>, IItems<V1beta1QuickConnect>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "QuickConnectList";
+    public const string KubeGroup = "connect.aws.upbound.io";
+    public const string KubePluralName = "quickconnects";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1QuickConnect> Items { get; set; }
+}

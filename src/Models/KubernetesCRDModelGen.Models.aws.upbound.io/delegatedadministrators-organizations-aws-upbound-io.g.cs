@@ -418,3 +418,29 @@ public partial class V1beta1DelegatedAdministrator : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1DelegatedAdministratorStatus? Status { get; set; }
 }
+
+/// <summary>DelegatedAdministrator is the Schema for the DelegatedAdministrators API. Provides a resource to manage an AWS Organizations Delegated Administrator.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DelegatedAdministratorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DelegatedAdministrator>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DelegatedAdministratorList";
+    public const string KubeGroup = "organizations.aws.upbound.io";
+    public const string KubePluralName = "delegatedadministrators";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DelegatedAdministrator> Items { get; set; }
+}

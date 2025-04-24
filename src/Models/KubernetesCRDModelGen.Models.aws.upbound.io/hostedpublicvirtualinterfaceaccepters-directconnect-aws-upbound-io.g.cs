@@ -398,3 +398,29 @@ public partial class V1beta1HostedPublicVirtualInterfaceAccepter : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1HostedPublicVirtualInterfaceAccepterStatus? Status { get; set; }
 }
+
+/// <summary>HostedPublicVirtualInterfaceAccepter is the Schema for the HostedPublicVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HostedPublicVirtualInterfaceAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HostedPublicVirtualInterfaceAccepter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HostedPublicVirtualInterfaceAccepterList";
+    public const string KubeGroup = "directconnect.aws.upbound.io";
+    public const string KubePluralName = "hostedpublicvirtualinterfaceaccepters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HostedPublicVirtualInterfaceAccepter> Items { get; set; }
+}

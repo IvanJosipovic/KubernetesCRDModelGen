@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebase.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class FirebaseAndroidAppMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseAndroidAppSpecProjectRef
+public partial class FirebaseAndroidAppSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1FirebaseAndroidAppSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseAndroidAppSpec
+public partial class FirebaseAndroidAppSpec
 {
     /// <summary>The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with the AndroidApp. If apiKeyId is not set during creation, then Firebase automatically associates an apiKeyId with the AndroidApp. This auto-associated key may be an existing valid key or, if no valid key exists, a new one will be provisioned.</summary>
     [JsonPropertyName("apiKeyId")]
@@ -47,7 +53,7 @@ public partial class V1alpha1FirebaseAndroidAppSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1FirebaseAndroidAppSpecProjectRef ProjectRef { get; set; }
+    public FirebaseAndroidAppSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated appId of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -64,7 +70,7 @@ public partial class V1alpha1FirebaseAndroidAppSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseAndroidAppStatusConditions
+public partial class FirebaseAndroidAppStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -89,7 +95,7 @@ public partial class V1alpha1FirebaseAndroidAppStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseAndroidAppStatus
+public partial class FirebaseAndroidAppStatus
 {
     /// <summary>The globally unique, Firebase-assigned identifier of the AndroidApp. This identifier should be treated as an opaque token, as the data format is not specified.</summary>
     [JsonPropertyName("appId")]
@@ -97,7 +103,7 @@ public partial class V1alpha1FirebaseAndroidAppStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1FirebaseAndroidAppStatusConditions>? Conditions { get; set; }
+    public IList<FirebaseAndroidAppStatusConditions>? Conditions { get; set; }
 
     /// <summary>This checksum is computed by the server based on the value of other fields, and it may be sent with update requests to ensure the client has an up-to-date value before proceeding.</summary>
     [JsonPropertyName("etag")]
@@ -114,30 +120,25 @@ public partial class V1alpha1FirebaseAndroidAppStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1FirebaseAndroidApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseAndroidAppSpec>, IStatus<V1alpha1FirebaseAndroidAppStatus>
+public partial class FirebaseAndroidApp
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "FirebaseAndroidApp";
-    public const string KubeGroup = "firebase.cnrm.cloud.google.com";
-    public const string KubePluralName = "firebaseandroidapps";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public FirebaseAndroidAppMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1FirebaseAndroidAppSpec Spec { get; set; }
+    public FirebaseAndroidAppSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1FirebaseAndroidAppStatus? Status { get; set; }
+    public FirebaseAndroidAppStatus? Status { get; set; }
 }

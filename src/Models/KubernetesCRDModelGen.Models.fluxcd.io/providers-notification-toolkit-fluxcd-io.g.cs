@@ -96,3 +96,29 @@ public partial class V1beta3Provider : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("spec")]
     public V1beta3ProviderSpec? Spec { get; set; }
 }
+
+/// <summary>Provider is the Schema for the providers API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta3ProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta3Provider>
+{
+    public const string KubeApiVersion = "v1beta3";
+    public const string KubeKind = "ProviderList";
+    public const string KubeGroup = "notification.toolkit.fluxcd.io";
+    public const string KubePluralName = "providers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta3Provider> Items { get; set; }
+}

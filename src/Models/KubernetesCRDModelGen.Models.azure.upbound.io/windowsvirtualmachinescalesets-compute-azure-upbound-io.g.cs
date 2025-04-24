@@ -2849,3 +2849,29 @@ public partial class V1beta1WindowsVirtualMachineScaleSet : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1WindowsVirtualMachineScaleSetStatus? Status { get; set; }
 }
+
+/// <summary>WindowsVirtualMachineScaleSet is the Schema for the WindowsVirtualMachineScaleSets API. Manages a Windows Virtual Machine Scale Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WindowsVirtualMachineScaleSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WindowsVirtualMachineScaleSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WindowsVirtualMachineScaleSetList";
+    public const string KubeGroup = "compute.azure.upbound.io";
+    public const string KubePluralName = "windowsvirtualmachinescalesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WindowsVirtualMachineScaleSet> Items { get; set; }
+}

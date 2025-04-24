@@ -220,3 +220,29 @@ public partial class V1api20240301storageRouteTable : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1api20240301storageRouteTableStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240301.RouteTable Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/routeTable.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/routeTables/{routeTableName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240301storageRouteTableList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageRouteTable>
+{
+    public const string KubeApiVersion = "v1api20240301storage";
+    public const string KubeKind = "RouteTableList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "routetables";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240301storageRouteTable> Items { get; set; }
+}

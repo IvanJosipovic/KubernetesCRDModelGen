@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class VertexAIFeaturestoreMetadata
+{
+}
+
 /// <summary>If set, both of the online and offline data storage will be secured by this key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIFeaturestoreSpecEncryptionSpec
+public partial class VertexAIFeaturestoreSpecEncryptionSpec
 {
     /// <summary>The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -19,7 +25,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpecEncryptionSpec
 
 /// <summary>Online serving scaling configuration. Only one of fixedNodeCount and scaling can be set. Setting one will reset the other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfigScaling
+public partial class VertexAIFeaturestoreSpecOnlineServingConfigScaling
 {
     /// <summary>The maximum number of nodes to scale up to. Must be greater than minNodeCount, and less than or equal to 10 times of 'minNodeCount'.</summary>
     [JsonPropertyName("maxNodeCount")]
@@ -32,7 +38,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfigScaling
 
 /// <summary>Config for online serving resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfig
+public partial class VertexAIFeaturestoreSpecOnlineServingConfig
 {
     /// <summary>The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.</summary>
     [JsonPropertyName("fixedNodeCount")]
@@ -40,12 +46,12 @@ public partial class V1alpha1VertexAIFeaturestoreSpecOnlineServingConfig
 
     /// <summary>Online serving scaling configuration. Only one of fixedNodeCount and scaling can be set. Setting one will reset the other.</summary>
     [JsonPropertyName("scaling")]
-    public V1alpha1VertexAIFeaturestoreSpecOnlineServingConfigScaling? Scaling { get; set; }
+    public VertexAIFeaturestoreSpecOnlineServingConfigScaling? Scaling { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIFeaturestoreSpecProjectRef
+public partial class VertexAIFeaturestoreSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -62,11 +68,11 @@ public partial class V1alpha1VertexAIFeaturestoreSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIFeaturestoreSpec
+public partial class VertexAIFeaturestoreSpec
 {
     /// <summary>If set, both of the online and offline data storage will be secured by this key.</summary>
     [JsonPropertyName("encryptionSpec")]
-    public V1alpha1VertexAIFeaturestoreSpecEncryptionSpec? EncryptionSpec { get; set; }
+    public VertexAIFeaturestoreSpecEncryptionSpec? EncryptionSpec { get; set; }
 
     /// <summary>If set to true, any EntityTypes and Features for this Featurestore will also be deleted.</summary>
     [JsonPropertyName("forceDestroy")]
@@ -74,7 +80,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpec
 
     /// <summary>Config for online serving resources.</summary>
     [JsonPropertyName("onlineServingConfig")]
-    public V1alpha1VertexAIFeaturestoreSpecOnlineServingConfig? OnlineServingConfig { get; set; }
+    public VertexAIFeaturestoreSpecOnlineServingConfig? OnlineServingConfig { get; set; }
 
     /// <summary>TTL in days for feature values that will be stored in online serving storage. The Feature Store online storage periodically removes obsolete feature values older than onlineStorageTtlDays since the feature generation time. Note that onlineStorageTtlDays should be less than or equal to offlineStorageTtlDays for each EntityType under a featurestore. If not set, default to 4000 days.</summary>
     [JsonPropertyName("onlineStorageTtlDays")]
@@ -82,7 +88,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1VertexAIFeaturestoreSpecProjectRef ProjectRef { get; set; }
+    public VertexAIFeaturestoreSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the dataset. eg us-central1.</summary>
     [JsonPropertyName("region")]
@@ -95,7 +101,7 @@ public partial class V1alpha1VertexAIFeaturestoreSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIFeaturestoreStatusConditions
+public partial class VertexAIFeaturestoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -120,11 +126,11 @@ public partial class V1alpha1VertexAIFeaturestoreStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIFeaturestoreStatus
+public partial class VertexAIFeaturestoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1VertexAIFeaturestoreStatusConditions>? Conditions { get; set; }
+    public IList<VertexAIFeaturestoreStatusConditions>? Conditions { get; set; }
 
     /// <summary>The timestamp of when the featurestore was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -145,30 +151,25 @@ public partial class V1alpha1VertexAIFeaturestoreStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1VertexAIFeaturestore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIFeaturestoreSpec>, IStatus<V1alpha1VertexAIFeaturestoreStatus>
+public partial class VertexAIFeaturestore
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "VertexAIFeaturestore";
-    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
-    public const string KubePluralName = "vertexaifeaturestores";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public VertexAIFeaturestoreMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1VertexAIFeaturestoreSpec Spec { get; set; }
+    public VertexAIFeaturestoreSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1VertexAIFeaturestoreStatus? Status { get; set; }
+    public VertexAIFeaturestoreStatus? Status { get; set; }
 }

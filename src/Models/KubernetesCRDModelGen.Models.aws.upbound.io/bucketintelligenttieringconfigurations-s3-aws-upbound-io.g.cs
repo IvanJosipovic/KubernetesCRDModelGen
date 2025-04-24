@@ -504,3 +504,29 @@ public partial class V1beta1BucketIntelligentTieringConfiguration : IKubernetesO
     [JsonPropertyName("status")]
     public V1beta1BucketIntelligentTieringConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>BucketIntelligentTieringConfiguration is the Schema for the BucketIntelligentTieringConfigurations API. Provides an S3 Intelligent-Tiering configuration resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BucketIntelligentTieringConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BucketIntelligentTieringConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BucketIntelligentTieringConfigurationList";
+    public const string KubeGroup = "s3.aws.upbound.io";
+    public const string KubePluralName = "bucketintelligenttieringconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BucketIntelligentTieringConfiguration> Items { get; set; }
+}

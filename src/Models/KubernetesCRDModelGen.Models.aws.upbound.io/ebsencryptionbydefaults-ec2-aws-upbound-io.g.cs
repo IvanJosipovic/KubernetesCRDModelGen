@@ -250,3 +250,29 @@ public partial class V1beta1EBSEncryptionByDefault : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1EBSEncryptionByDefaultStatus? Status { get; set; }
 }
+
+/// <summary>EBSEncryptionByDefault is the Schema for the EBSEncryptionByDefaults API. Manages whether default EBS encryption is enabled for your AWS account in the current AWS region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EBSEncryptionByDefaultList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EBSEncryptionByDefault>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EBSEncryptionByDefaultList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "ebsencryptionbydefaults";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EBSEncryptionByDefault> Items { get; set; }
+}

@@ -494,3 +494,29 @@ public partial class V1beta1DiskPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1DiskPoolStatus? Status { get; set; }
 }
+
+/// <summary>DiskPool is the Schema for the DiskPools API. Manages a Disk Pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DiskPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DiskPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DiskPoolList";
+    public const string KubeGroup = "storagepool.azure.upbound.io";
+    public const string KubePluralName = "diskpools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DiskPool> Items { get; set; }
+}

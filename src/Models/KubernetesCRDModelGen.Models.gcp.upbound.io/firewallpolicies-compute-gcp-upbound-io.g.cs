@@ -298,3 +298,29 @@ public partial class V1beta1FirewallPolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1FirewallPolicyStatus? Status { get; set; }
 }
+
+/// <summary>FirewallPolicy is the Schema for the FirewallPolicys API. Creates a hierarchical firewall policy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FirewallPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FirewallPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FirewallPolicyList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "firewallpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FirewallPolicy> Items { get; set; }
+}

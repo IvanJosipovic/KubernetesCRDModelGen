@@ -445,3 +445,29 @@ public partial class V1beta1LiteSubscription : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1LiteSubscriptionStatus? Status { get; set; }
 }
+
+/// <summary>LiteSubscription is the Schema for the LiteSubscriptions API. A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LiteSubscriptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LiteSubscription>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LiteSubscriptionList";
+    public const string KubeGroup = "pubsub.gcp.upbound.io";
+    public const string KubePluralName = "litesubscriptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LiteSubscription> Items { get; set; }
+}

@@ -465,3 +465,29 @@ public partial class V1beta1LBSSLNegotiationPolicy : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1LBSSLNegotiationPolicyStatus? Status { get; set; }
 }
+
+/// <summary>LBSSLNegotiationPolicy is the Schema for the LBSSLNegotiationPolicys API. Provides a load balancer SSL negotiation policy, which allows an ELB to control which ciphers and protocols are supported during SSL negotiations between a client and a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LBSSLNegotiationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBSSLNegotiationPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LBSSLNegotiationPolicyList";
+    public const string KubeGroup = "elb.aws.upbound.io";
+    public const string KubePluralName = "lbsslnegotiationpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LBSSLNegotiationPolicy> Items { get; set; }
+}

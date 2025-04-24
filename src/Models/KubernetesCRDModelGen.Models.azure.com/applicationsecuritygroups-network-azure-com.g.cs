@@ -212,3 +212,29 @@ public partial class V1api20240101storageApplicationSecurityGroup : IKubernetesO
     [JsonPropertyName("status")]
     public V1api20240101storageApplicationSecurityGroupStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240101.ApplicationSecurityGroup Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-01-01/applicationSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationSecurityGroups/{applicationSecurityGroupName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240101storageApplicationSecurityGroupList : IKubernetesObject<V1ListMeta>, IItems<V1api20240101storageApplicationSecurityGroup>
+{
+    public const string KubeApiVersion = "v1api20240101storage";
+    public const string KubeKind = "ApplicationSecurityGroupList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "applicationsecuritygroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240101storageApplicationSecurityGroup> Items { get; set; }
+}

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeTargetHTTPSProxyMetadata
+{
+}
+
 /// <summary>URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer. Currently, you may specify up to 15 certificates. Certificate manager certificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED. sslCertificates and certificateManagerCertificates fields cannot be defined together.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxySpecCertificateManagerCertificates
+public partial class ComputeTargetHTTPSProxySpecCertificateManagerCertificates
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/global/certificates/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificate` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeTargetHTTPSProxySpecCertificateManagerCertifi
 
 /// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. This field is only supported for EXTERNAL and EXTERNAL_MANAGED load balancing schemes. For INTERNAL_MANAGED, use certificateManagerCertificates instead. sslCertificates and certificateMap fields cannot be defined together.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxySpecCertificateMapRef
+public partial class ComputeTargetHTTPSProxySpecCertificateMapRef
 {
     /// <summary>Allowed value: string of the format `//certificatemanager.googleapis.com/projects/{{project}}/locations/global/certificateMaps/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificateMap` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1ComputeTargetHTTPSProxySpecCertificateMapRef
 
 /// <summary>Immutable. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are not encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxySpecServerTlsPolicyRef
+public partial class ComputeTargetHTTPSProxySpecServerTlsPolicyRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/{{location}}/serverTlsPolicies/{{value}}`, where {{value}} is the `name` field of a `NetworkSecurityServerTLSPolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1ComputeTargetHTTPSProxySpecServerTlsPolicyRef
 
 /// <summary>A list of ComputeSSLCertificate resources that are used to authenticate connections between users and the load balancer. At least one SSL certificate must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxySpecSslCertificates
+public partial class ComputeTargetHTTPSProxySpecSslCertificates
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLCertificate` resource.</summary>
     [JsonPropertyName("external")]
@@ -78,7 +84,7 @@ public partial class V1beta1ComputeTargetHTTPSProxySpecSslCertificates
 
 /// <summary>A reference to the ComputeSSLPolicy resource that will be associated with the ComputeTargetHTTPSProxy resource. If not set, the ComputeTargetHTTPSProxy resource will not have any SSL policy configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxySpecSslPolicyRef
+public partial class ComputeTargetHTTPSProxySpecSslPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLPolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -95,7 +101,7 @@ public partial class V1beta1ComputeTargetHTTPSProxySpecSslPolicyRef
 
 /// <summary>A reference to the ComputeURLMap resource that defines the mapping from URL to the BackendService.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxySpecUrlMapRef
+public partial class ComputeTargetHTTPSProxySpecUrlMapRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeURLMap` resource.</summary>
     [JsonPropertyName("external")]
@@ -112,15 +118,15 @@ public partial class V1beta1ComputeTargetHTTPSProxySpecUrlMapRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxySpec
+public partial class ComputeTargetHTTPSProxySpec
 {
     /// <summary></summary>
     [JsonPropertyName("certificateManagerCertificates")]
-    public IList<V1beta1ComputeTargetHTTPSProxySpecCertificateManagerCertificates>? CertificateManagerCertificates { get; set; }
+    public IList<ComputeTargetHTTPSProxySpecCertificateManagerCertificates>? CertificateManagerCertificates { get; set; }
 
     /// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. This field is only supported for EXTERNAL and EXTERNAL_MANAGED load balancing schemes. For INTERNAL_MANAGED, use certificateManagerCertificates instead. sslCertificates and certificateMap fields cannot be defined together.</summary>
     [JsonPropertyName("certificateMapRef")]
-    public V1beta1ComputeTargetHTTPSProxySpecCertificateMapRef? CertificateMapRef { get; set; }
+    public ComputeTargetHTTPSProxySpecCertificateMapRef? CertificateMapRef { get; set; }
 
     /// <summary>Immutable. An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -148,24 +154,24 @@ public partial class V1beta1ComputeTargetHTTPSProxySpec
 
     /// <summary>Immutable. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are not encrypted.</summary>
     [JsonPropertyName("serverTlsPolicyRef")]
-    public V1beta1ComputeTargetHTTPSProxySpecServerTlsPolicyRef? ServerTlsPolicyRef { get; set; }
+    public ComputeTargetHTTPSProxySpecServerTlsPolicyRef? ServerTlsPolicyRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sslCertificates")]
-    public IList<V1beta1ComputeTargetHTTPSProxySpecSslCertificates>? SslCertificates { get; set; }
+    public IList<ComputeTargetHTTPSProxySpecSslCertificates>? SslCertificates { get; set; }
 
     /// <summary>A reference to the ComputeSSLPolicy resource that will be associated with the ComputeTargetHTTPSProxy resource. If not set, the ComputeTargetHTTPSProxy resource will not have any SSL policy configured.</summary>
     [JsonPropertyName("sslPolicyRef")]
-    public V1beta1ComputeTargetHTTPSProxySpecSslPolicyRef? SslPolicyRef { get; set; }
+    public ComputeTargetHTTPSProxySpecSslPolicyRef? SslPolicyRef { get; set; }
 
     /// <summary>A reference to the ComputeURLMap resource that defines the mapping from URL to the BackendService.</summary>
     [JsonPropertyName("urlMapRef")]
-    public V1beta1ComputeTargetHTTPSProxySpecUrlMapRef UrlMapRef { get; set; }
+    public ComputeTargetHTTPSProxySpecUrlMapRef UrlMapRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxyStatusConditions
+public partial class ComputeTargetHTTPSProxyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -190,11 +196,11 @@ public partial class V1beta1ComputeTargetHTTPSProxyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetHTTPSProxyStatus
+public partial class ComputeTargetHTTPSProxyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeTargetHTTPSProxyStatusConditions>? Conditions { get; set; }
+    public IList<ComputeTargetHTTPSProxyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -215,30 +221,25 @@ public partial class V1beta1ComputeTargetHTTPSProxyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeTargetHTTPSProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetHTTPSProxySpec>, IStatus<V1beta1ComputeTargetHTTPSProxyStatus>
+public partial class ComputeTargetHTTPSProxy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeTargetHTTPSProxy";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computetargethttpsproxies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeTargetHTTPSProxyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeTargetHTTPSProxySpec Spec { get; set; }
+    public ComputeTargetHTTPSProxySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeTargetHTTPSProxyStatus? Status { get; set; }
+    public ComputeTargetHTTPSProxyStatus? Status { get; set; }
 }

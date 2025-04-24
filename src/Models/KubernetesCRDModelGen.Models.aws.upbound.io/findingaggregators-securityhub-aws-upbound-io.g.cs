@@ -262,3 +262,29 @@ public partial class V1beta1FindingAggregator : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1FindingAggregatorStatus? Status { get; set; }
 }
+
+/// <summary>FindingAggregator is the Schema for the FindingAggregators API. Manages a Security Hub finding aggregator</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FindingAggregatorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FindingAggregator>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FindingAggregatorList";
+    public const string KubeGroup = "securityhub.aws.upbound.io";
+    public const string KubePluralName = "findingaggregators";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FindingAggregator> Items { get; set; }
+}

@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesGuestAccelerators
+public partial class ComputeReservationMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeReservationSpecSpecificReservationInstancePropertiesGuestAccelerators
 {
     /// <summary>Immutable. The number of the guest accelerator cards exposed to this instance.</summary>
     [JsonPropertyName("acceleratorCount")]
@@ -23,7 +29,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesLocalSsds
+public partial class ComputeReservationSpecSpecificReservationInstancePropertiesLocalSsds
 {
     /// <summary>Immutable. The size of the disk in base-2 GB.</summary>
     [JsonPropertyName("diskSizeGb")]
@@ -36,15 +42,15 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
 
 /// <summary>Immutable. The instance properties for the reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeReservationSpecSpecificReservationInstanceProperties
+public partial class ComputeReservationSpecSpecificReservationInstanceProperties
 {
     /// <summary>Immutable. Guest accelerator type and count.</summary>
     [JsonPropertyName("guestAccelerators")]
-    public IList<V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesGuestAccelerators>? GuestAccelerators { get; set; }
+    public IList<ComputeReservationSpecSpecificReservationInstancePropertiesGuestAccelerators>? GuestAccelerators { get; set; }
 
     /// <summary>Immutable. The amount of local ssd to reserve with each instance. This reserves disks of type 'local-ssd'.</summary>
     [JsonPropertyName("localSsds")]
-    public IList<V1beta1ComputeReservationSpecSpecificReservationInstancePropertiesLocalSsds>? LocalSsds { get; set; }
+    public IList<ComputeReservationSpecSpecificReservationInstancePropertiesLocalSsds>? LocalSsds { get; set; }
 
     /// <summary>Immutable. The name of the machine type to reserve.</summary>
     [JsonPropertyName("machineType")]
@@ -57,7 +63,7 @@ public partial class V1beta1ComputeReservationSpecSpecificReservationInstancePro
 
 /// <summary>Reservation for instances with specific machine shapes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeReservationSpecSpecificReservation
+public partial class ComputeReservationSpecSpecificReservation
 {
     /// <summary>The number of resources that are allocated.</summary>
     [JsonPropertyName("count")]
@@ -69,12 +75,12 @@ public partial class V1beta1ComputeReservationSpecSpecificReservation
 
     /// <summary>Immutable. The instance properties for the reservation.</summary>
     [JsonPropertyName("instanceProperties")]
-    public V1beta1ComputeReservationSpecSpecificReservationInstanceProperties InstanceProperties { get; set; }
+    public ComputeReservationSpecSpecificReservationInstanceProperties InstanceProperties { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeReservationSpec
+public partial class ComputeReservationSpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -86,7 +92,7 @@ public partial class V1beta1ComputeReservationSpec
 
     /// <summary>Reservation for instances with specific machine shapes.</summary>
     [JsonPropertyName("specificReservation")]
-    public V1beta1ComputeReservationSpecSpecificReservation SpecificReservation { get; set; }
+    public ComputeReservationSpecSpecificReservation SpecificReservation { get; set; }
 
     /// <summary>Immutable. When set to true, only VMs that target this reservation by name can consume this reservation. Otherwise, it can be consumed by VMs with affinity for any reservation. Defaults to false.</summary>
     [JsonPropertyName("specificReservationRequired")]
@@ -99,7 +105,7 @@ public partial class V1beta1ComputeReservationSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeReservationStatusConditions
+public partial class ComputeReservationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -124,7 +130,7 @@ public partial class V1beta1ComputeReservationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeReservationStatus
+public partial class ComputeReservationStatus
 {
     /// <summary>Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.</summary>
     [JsonPropertyName("commitment")]
@@ -132,7 +138,7 @@ public partial class V1beta1ComputeReservationStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeReservationStatusConditions>? Conditions { get; set; }
+    public IList<ComputeReservationStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -153,30 +159,25 @@ public partial class V1beta1ComputeReservationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeReservationSpec>, IStatus<V1beta1ComputeReservationStatus>
+public partial class ComputeReservation
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeReservation";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computereservations";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeReservationMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeReservationSpec Spec { get; set; }
+    public ComputeReservationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeReservationStatus? Status { get; set; }
+    public ComputeReservationStatus? Status { get; set; }
 }

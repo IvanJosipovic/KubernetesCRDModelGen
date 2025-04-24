@@ -458,3 +458,29 @@ public partial class V1beta1MaintenanceAssignmentVirtualMachine : IKubernetesObj
     [JsonPropertyName("status")]
     public V1beta1MaintenanceAssignmentVirtualMachineStatus? Status { get; set; }
 }
+
+/// <summary>MaintenanceAssignmentVirtualMachine is the Schema for the MaintenanceAssignmentVirtualMachines API. Manages a Maintenance Assignment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MaintenanceAssignmentVirtualMachineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MaintenanceAssignmentVirtualMachine>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MaintenanceAssignmentVirtualMachineList";
+    public const string KubeGroup = "maintenance.azure.upbound.io";
+    public const string KubePluralName = "maintenanceassignmentvirtualmachines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MaintenanceAssignmentVirtualMachine> Items { get; set; }
+}

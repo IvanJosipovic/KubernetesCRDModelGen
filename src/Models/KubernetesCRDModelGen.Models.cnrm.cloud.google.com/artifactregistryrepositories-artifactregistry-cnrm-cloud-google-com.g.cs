@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.artifactregistry.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ArtifactRegistryRepositoryMetadata
+{
+}
+
 /// <summary>Policy condition for matching versions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesCondition
+public partial class ArtifactRegistryRepositorySpecCleanupPoliciesCondition
 {
     /// <summary>Match versions newer than a duration.</summary>
     [JsonPropertyName("newerThan")]
@@ -39,7 +45,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesConditi
 
 /// <summary>Policy condition for retaining a minimum number of versions. May only be specified with a Keep action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRecentVersions
+public partial class ArtifactRegistryRepositorySpecCleanupPoliciesMostRecentVersions
 {
     /// <summary>Minimum number of versions to keep.</summary>
     [JsonPropertyName("keepCount")]
@@ -52,7 +58,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPolicies
+public partial class ArtifactRegistryRepositorySpecCleanupPolicies
 {
     /// <summary>Policy action. Possible values: ["DELETE", "KEEP"].</summary>
     [JsonPropertyName("action")]
@@ -60,7 +66,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPolicies
 
     /// <summary>Policy condition for matching versions.</summary>
     [JsonPropertyName("condition")]
-    public V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesCondition? Condition { get; set; }
+    public ArtifactRegistryRepositorySpecCleanupPoliciesCondition? Condition { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
@@ -68,12 +74,12 @@ public partial class V1beta1ArtifactRegistryRepositorySpecCleanupPolicies
 
     /// <summary>Policy condition for retaining a minimum number of versions. May only be specified with a Keep action.</summary>
     [JsonPropertyName("mostRecentVersions")]
-    public V1beta1ArtifactRegistryRepositorySpecCleanupPoliciesMostRecentVersions? MostRecentVersions { get; set; }
+    public ArtifactRegistryRepositorySpecCleanupPoliciesMostRecentVersions? MostRecentVersions { get; set; }
 }
 
 /// <summary>Docker repository config contains repository level configuration for the repositories of docker type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecDockerConfig
+public partial class ArtifactRegistryRepositorySpecDockerConfig
 {
     /// <summary>The repository which enabled this flag prevents all tags from being modified, moved or deleted. This does not prevent tags from being created.</summary>
     [JsonPropertyName("immutableTags")]
@@ -82,7 +88,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecDockerConfig
 
 /// <summary>The customer managed encryption key that’s used to encrypt the contents of the Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecKmsKeyRef
+public partial class ArtifactRegistryRepositorySpecKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -99,7 +105,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecKmsKeyRef
 
 /// <summary>MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecMavenConfig
+public partial class ArtifactRegistryRepositorySpecMavenConfig
 {
     /// <summary>Immutable. The repository with this flag will allow publishing the same snapshot versions.</summary>
     [JsonPropertyName("allowSnapshotOverwrites")]
@@ -112,7 +118,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecMavenConfig
 
 /// <summary>Immutable. Specific settings for a Docker remote repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigDockerRepository
+public partial class ArtifactRegistryRepositorySpecRemoteRepositoryConfigDockerRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "DOCKER_HUB" Possible values: ["DOCKER_HUB"].</summary>
     [JsonPropertyName("publicRepository")]
@@ -121,7 +127,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 
 /// <summary>Immutable. Specific settings for a Maven remote repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigMavenRepository
+public partial class ArtifactRegistryRepositorySpecRemoteRepositoryConfigMavenRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "MAVEN_CENTRAL" Possible values: ["MAVEN_CENTRAL"].</summary>
     [JsonPropertyName("publicRepository")]
@@ -130,7 +136,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 
 /// <summary>Immutable. Specific settings for an Npm remote repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigNpmRepository
+public partial class ArtifactRegistryRepositorySpecRemoteRepositoryConfigNpmRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "NPMJS" Possible values: ["NPMJS"].</summary>
     [JsonPropertyName("publicRepository")]
@@ -139,7 +145,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 
 /// <summary>Immutable. Specific settings for a Python remote repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigPythonRepository
+public partial class ArtifactRegistryRepositorySpecRemoteRepositoryConfigPythonRepository
 {
     /// <summary>Immutable. Address of the remote repository. Default value: "PYPI" Possible values: ["PYPI"].</summary>
     [JsonPropertyName("publicRepository")]
@@ -148,7 +154,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 
 /// <summary>Immutable. Configuration specific for a Remote Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
+public partial class ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 {
     /// <summary>Immutable. The description of the remote source.</summary>
     [JsonPropertyName("description")]
@@ -156,24 +162,24 @@ public partial class V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig
 
     /// <summary>Immutable. Specific settings for a Docker remote repository.</summary>
     [JsonPropertyName("dockerRepository")]
-    public V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigDockerRepository? DockerRepository { get; set; }
+    public ArtifactRegistryRepositorySpecRemoteRepositoryConfigDockerRepository? DockerRepository { get; set; }
 
     /// <summary>Immutable. Specific settings for a Maven remote repository.</summary>
     [JsonPropertyName("mavenRepository")]
-    public V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigMavenRepository? MavenRepository { get; set; }
+    public ArtifactRegistryRepositorySpecRemoteRepositoryConfigMavenRepository? MavenRepository { get; set; }
 
     /// <summary>Immutable. Specific settings for an Npm remote repository.</summary>
     [JsonPropertyName("npmRepository")]
-    public V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigNpmRepository? NpmRepository { get; set; }
+    public ArtifactRegistryRepositorySpecRemoteRepositoryConfigNpmRepository? NpmRepository { get; set; }
 
     /// <summary>Immutable. Specific settings for a Python remote repository.</summary>
     [JsonPropertyName("pythonRepository")]
-    public V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfigPythonRepository? PythonRepository { get; set; }
+    public ArtifactRegistryRepositorySpecRemoteRepositoryConfigPythonRepository? PythonRepository { get; set; }
 }
 
 /// <summary>A reference to the repository resource, for example: "projects/p1/locations/us-central1/repositories/repo1".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
+public partial class ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPoliciesRepositoryRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/{{location}}/repositories/{{value}}`, where {{value}} is the `name` field of an `ArtifactRegistryRepository` resource.</summary>
     [JsonPropertyName("external")]
@@ -190,7 +196,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPolicies
+public partial class ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPolicies
 {
     /// <summary>The user-provided ID of the upstream policy.</summary>
     [JsonPropertyName("id")]
@@ -202,25 +208,25 @@ public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfi
 
     /// <summary>A reference to the repository resource, for example: "projects/p1/locations/us-central1/repositories/repo1".</summary>
     [JsonPropertyName("repositoryRef")]
-    public V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPoliciesRepositoryRef? RepositoryRef { get; set; }
+    public ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPoliciesRepositoryRef? RepositoryRef { get; set; }
 }
 
 /// <summary>Configuration specific for a Virtual Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfig
+public partial class ArtifactRegistryRepositorySpecVirtualRepositoryConfig
 {
     /// <summary>Policies that configure the upstream artifacts distributed by the Virtual Repository. Upstream policies cannot be set on a standard repository.</summary>
     [JsonPropertyName("upstreamPolicies")]
-    public IList<V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
+    public IList<ArtifactRegistryRepositorySpecVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositorySpec
+public partial class ArtifactRegistryRepositorySpec
 {
     /// <summary>Cleanup policies for this repository. Cleanup policies indicate when certain package versions can be automatically deleted. Map keys are policy IDs supplied by users during policy creation. They must unique within a repository and be under 128 characters in length.</summary>
     [JsonPropertyName("cleanupPolicies")]
-    public IList<V1beta1ArtifactRegistryRepositorySpecCleanupPolicies>? CleanupPolicies { get; set; }
+    public IList<ArtifactRegistryRepositorySpecCleanupPolicies>? CleanupPolicies { get; set; }
 
     /// <summary>If true, the cleanup pipeline is prevented from deleting versions in this repository.</summary>
     [JsonPropertyName("cleanupPolicyDryRun")]
@@ -232,7 +238,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
 
     /// <summary>Docker repository config contains repository level configuration for the repositories of docker type.</summary>
     [JsonPropertyName("dockerConfig")]
-    public V1beta1ArtifactRegistryRepositorySpecDockerConfig? DockerConfig { get; set; }
+    public ArtifactRegistryRepositorySpecDockerConfig? DockerConfig { get; set; }
 
     /// <summary>Immutable. The format of packages that are stored in the repository. Supported formats can be found [here](https://cloud.google.com/artifact-registry/docs/supported-formats). You can only create alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).</summary>
     [JsonPropertyName("format")]
@@ -240,7 +246,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
 
     /// <summary>The customer managed encryption key that’s used to encrypt the contents of the Repository.</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public V1beta1ArtifactRegistryRepositorySpecKmsKeyRef? KmsKeyRef { get; set; }
+    public ArtifactRegistryRepositorySpecKmsKeyRef? KmsKeyRef { get; set; }
 
     /// <summary>Immutable. The name of the location this repository is located in.</summary>
     [JsonPropertyName("location")]
@@ -248,7 +254,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
 
     /// <summary>MavenRepositoryConfig is maven related repository details. Provides additional configuration details for repositories of the maven format type.</summary>
     [JsonPropertyName("mavenConfig")]
-    public V1beta1ArtifactRegistryRepositorySpecMavenConfig? MavenConfig { get; set; }
+    public ArtifactRegistryRepositorySpecMavenConfig? MavenConfig { get; set; }
 
     /// <summary>Immutable. The mode configures the repository to serve artifacts from different sources. Default value: "STANDARD_REPOSITORY" Possible values: ["STANDARD_REPOSITORY", "VIRTUAL_REPOSITORY", "REMOTE_REPOSITORY"].</summary>
     [JsonPropertyName("mode")]
@@ -256,7 +262,7 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
 
     /// <summary>Immutable. Configuration specific for a Remote Repository.</summary>
     [JsonPropertyName("remoteRepositoryConfig")]
-    public V1beta1ArtifactRegistryRepositorySpecRemoteRepositoryConfig? RemoteRepositoryConfig { get; set; }
+    public ArtifactRegistryRepositorySpecRemoteRepositoryConfig? RemoteRepositoryConfig { get; set; }
 
     /// <summary>Immutable. Optional. The repositoryId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -264,12 +270,12 @@ public partial class V1beta1ArtifactRegistryRepositorySpec
 
     /// <summary>Configuration specific for a Virtual Repository.</summary>
     [JsonPropertyName("virtualRepositoryConfig")]
-    public V1beta1ArtifactRegistryRepositorySpecVirtualRepositoryConfig? VirtualRepositoryConfig { get; set; }
+    public ArtifactRegistryRepositorySpecVirtualRepositoryConfig? VirtualRepositoryConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositoryStatusConditions
+public partial class ArtifactRegistryRepositoryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -294,11 +300,11 @@ public partial class V1beta1ArtifactRegistryRepositoryStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ArtifactRegistryRepositoryStatus
+public partial class ArtifactRegistryRepositoryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ArtifactRegistryRepositoryStatusConditions>? Conditions { get; set; }
+    public IList<ArtifactRegistryRepositoryStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when the repository was created.</summary>
     [JsonPropertyName("createTime")]
@@ -319,30 +325,25 @@ public partial class V1beta1ArtifactRegistryRepositoryStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ArtifactRegistryRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ArtifactRegistryRepositorySpec>, IStatus<V1beta1ArtifactRegistryRepositoryStatus>
+public partial class ArtifactRegistryRepository
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ArtifactRegistryRepository";
-    public const string KubeGroup = "artifactregistry.cnrm.cloud.google.com";
-    public const string KubePluralName = "artifactregistryrepositories";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ArtifactRegistryRepositoryMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ArtifactRegistryRepositorySpec Spec { get; set; }
+    public ArtifactRegistryRepositorySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ArtifactRegistryRepositoryStatus? Status { get; set; }
+    public ArtifactRegistryRepositoryStatus? Status { get; set; }
 }

@@ -4901,3 +4901,29 @@ public partial class V1beta1LinuxWebAppSlot : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1LinuxWebAppSlotStatus? Status { get; set; }
 }
+
+/// <summary>LinuxWebAppSlot is the Schema for the LinuxWebAppSlots API. Manages a Linux Web App Slot.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinuxWebAppSlotList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinuxWebAppSlot>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinuxWebAppSlotList";
+    public const string KubeGroup = "web.azure.upbound.io";
+    public const string KubePluralName = "linuxwebappslots";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinuxWebAppSlot> Items { get; set; }
+}

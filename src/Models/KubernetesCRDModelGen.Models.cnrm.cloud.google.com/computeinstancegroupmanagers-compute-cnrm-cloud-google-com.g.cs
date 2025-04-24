@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPoliciesHealthCheckRef
+public partial class ComputeInstanceGroupManagerMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeInstanceGroupManagerSpecAutoHealingPoliciesHealthCheckRef
 {
     /// <summary>The URL for the health check that signals autohealing.  Allowed value: The `selfLink` field of a `ComputeHealthCheck` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,11 +33,11 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPoliciesHe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPolicies
+public partial class ComputeInstanceGroupManagerSpecAutoHealingPolicies
 {
     /// <summary></summary>
     [JsonPropertyName("healthCheckRef")]
-    public V1beta1ComputeInstanceGroupManagerSpecAutoHealingPoliciesHealthCheckRef? HealthCheckRef { get; set; }
+    public ComputeInstanceGroupManagerSpecAutoHealingPoliciesHealthCheckRef? HealthCheckRef { get; set; }
 
     /// <summary>The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].</summary>
     [JsonPropertyName("initialDelaySec")]
@@ -40,7 +46,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecAutoHealingPolicies
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZones
+public partial class ComputeInstanceGroupManagerSpecDistributionPolicyZones
 {
     /// <summary>Immutable. The URL of the [zone](/compute/docs/regions-zones/#available). The zone must exist in the region where the managed instance group is located.</summary>
     [JsonPropertyName("zone")]
@@ -49,7 +55,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZon
 
 /// <summary>Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicy
+public partial class ComputeInstanceGroupManagerSpecDistributionPolicy
 {
     /// <summary>The distribution shape to which the group converges either proactively or on resize events (depending on the value set in `updatePolicy.instanceRedistributionType`). Possible values: TARGET_SHAPE_UNSPECIFIED, ANY, BALANCED, ANY_SINGLE_ZONE</summary>
     [JsonPropertyName("targetShape")]
@@ -57,12 +63,12 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecDistributionPolicy
 
     /// <summary>Immutable. Zones where the regional managed instance group will create and manage its instances.</summary>
     [JsonPropertyName("zones")]
-    public IList<V1beta1ComputeInstanceGroupManagerSpecDistributionPolicyZones>? Zones { get; set; }
+    public IList<ComputeInstanceGroupManagerSpecDistributionPolicyZones>? Zones { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecInstanceTemplateRef
+public partial class ComputeInstanceGroupManagerSpecInstanceTemplateRef
 {
     /// <summary>The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run `recreateInstances`, run `applyUpdatesToInstances`, or set the group's `updatePolicy.type` to `PROACTIVE`.  Allowed value: The `selfLink` field of a `ComputeInstanceTemplate` resource.</summary>
     [JsonPropertyName("external")]
@@ -79,7 +85,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecInstanceTemplateRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecNamedPorts
+public partial class ComputeInstanceGroupManagerSpecNamedPorts
 {
     /// <summary>Immutable. The name for this named port. The name must be 1-63 characters long, and comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).</summary>
     [JsonPropertyName("name")]
@@ -92,7 +98,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecNamedPorts
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecProjectRef
+public partial class ComputeInstanceGroupManagerSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -109,7 +115,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecServiceAccountRef
+public partial class ComputeInstanceGroupManagerSpecServiceAccountRef
 {
     /// <summary>The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account: {projectNumber}@cloudservices.gserviceaccount.com is used.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -126,7 +132,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecServiceAccountRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateDisks
+public partial class ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateDisks
 {
     /// <summary>These stateful disks will never be deleted during autohealing, update or VM instance recreate operations. This flag is used to configure if the disk should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Note: disks attached in READ_ONLY mode cannot be auto-deleted. Possible values: NEVER, ON_PERMANENT_INSTANCE_DELETION</summary>
     [JsonPropertyName("autoDelete")]
@@ -135,7 +141,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateExternalIps
+public partial class ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateExternalIps
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Possible values: NEVER, ON_PERMANENT_INSTANCE_DELETION</summary>
     [JsonPropertyName("autoDelete")]
@@ -144,7 +150,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps
+public partial class ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Possible values: NEVER, ON_PERMANENT_INSTANCE_DELETION</summary>
     [JsonPropertyName("autoDelete")]
@@ -153,33 +159,33 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreserv
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState
+public partial class ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState
 {
     /// <summary>Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.</summary>
     [JsonPropertyName("disks")]
-    public IDictionary<string, V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateDisks>? Disks { get; set; }
+    public IDictionary<string, ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateDisks>? Disks { get; set; }
 
     /// <summary>External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.</summary>
     [JsonPropertyName("externalIps")]
-    public IDictionary<string, V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateExternalIps>? ExternalIps { get; set; }
+    public IDictionary<string, ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateExternalIps>? ExternalIps { get; set; }
 
     /// <summary>Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.</summary>
     [JsonPropertyName("internalIps")]
-    public IDictionary<string, V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps>? InternalIps { get; set; }
+    public IDictionary<string, ComputeInstanceGroupManagerSpecStatefulPolicyPreservedStateInternalIps>? InternalIps { get; set; }
 }
 
 /// <summary>Stateful configuration for this Instanced Group Manager</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecStatefulPolicy
+public partial class ComputeInstanceGroupManagerSpecStatefulPolicy
 {
     /// <summary></summary>
     [JsonPropertyName("preservedState")]
-    public V1beta1ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState? PreservedState { get; set; }
+    public ComputeInstanceGroupManagerSpecStatefulPolicyPreservedState? PreservedState { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecTargetPools
+public partial class ComputeInstanceGroupManagerSpecTargetPools
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeTargetPool` resource.</summary>
     [JsonPropertyName("external")]
@@ -196,7 +202,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecTargetPools
 
 /// <summary>The maximum number of instances that can be created above the specified `targetSize` during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxSurge` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxSurge`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_surge).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge
+public partial class ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
     [JsonPropertyName("fixed")]
@@ -209,7 +215,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge
 
 /// <summary>The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance's [status](/compute/docs/instances/checking-instance-status) is `RUNNING`. - If there is a [health check](/compute/docs/instance-groups/autohealing-instances-in-migs) on the instance group, the instance's health check status must be `HEALTHY` at least once. If there is no health check on the group, then the instance only needs to have a status of `RUNNING` to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxUnavailable` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxUnavailable`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_unavailable).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavailable
+public partial class ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavailable
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
     [JsonPropertyName("fixed")]
@@ -222,7 +228,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavai
 
 /// <summary>The update policy for this managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy
+public partial class ComputeInstanceGroupManagerSpecUpdatePolicy
 {
     /// <summary>The [instance redistribution policy](/compute/docs/instance-groups/regional-migs#proactive_instance_redistribution) for regional managed instance groups. Valid values are: - `PROACTIVE` (default): The group attempts to maintain an even distribution of VM instances across zones in the region. - `NONE`: For non-autoscaled groups, proactive redistribution is disabled.</summary>
     [JsonPropertyName("instanceRedistributionType")]
@@ -230,11 +236,11 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy
 
     /// <summary>The maximum number of instances that can be created above the specified `targetSize` during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxSurge` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxSurge`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_surge).</summary>
     [JsonPropertyName("maxSurge")]
-    public V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge? MaxSurge { get; set; }
+    public ComputeInstanceGroupManagerSpecUpdatePolicyMaxSurge? MaxSurge { get; set; }
 
     /// <summary>The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance's [status](/compute/docs/instances/checking-instance-status) is `RUNNING`. - If there is a [health check](/compute/docs/instance-groups/autohealing-instances-in-migs) on the instance group, the instance's health check status must be `HEALTHY` at least once. If there is no health check on the group, then the instance only needs to have a status of `RUNNING` to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for `maxUnavailable` is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either `maxSurge` or `maxUnavailable` must be greater than 0. Learn more about [`maxUnavailable`](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#max_unavailable).</summary>
     [JsonPropertyName("maxUnavailable")]
-    public V1beta1ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavailable? MaxUnavailable { get; set; }
+    public ComputeInstanceGroupManagerSpecUpdatePolicyMaxUnavailable? MaxUnavailable { get; set; }
 
     /// <summary>Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].</summary>
     [JsonPropertyName("minReadySec")]
@@ -259,7 +265,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsInstanceTemplateRef
+public partial class ComputeInstanceGroupManagerSpecVersionsInstanceTemplateRef
 {
     /// <summary>The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run `recreateInstances`, run `applyUpdatesToInstances`, or set the group's `updatePolicy.type` to `PROACTIVE`; in those cases, existing instances are updated until the `targetSize` for this version is reached.  Allowed value: The `selfLink` field of a `ComputeInstanceTemplate` resource.</summary>
     [JsonPropertyName("external")]
@@ -276,7 +282,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsInstanceTempl
 
 /// <summary>Specifies the intended number of instances to be created from the `instanceTemplate`. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either `targetSize.fixed` or `instanceGroupManager.targetSize` is used. - if expressed as a `percent`, the `targetSize` would be `(targetSize.percent/100 * InstanceGroupManager.targetSize)` If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another `version`. Read [Starting a canary update](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#starting_a_canary_update) for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize
+public partial class ComputeInstanceGroupManagerSpecVersionsTargetSize
 {
     /// <summary>[Output Only] Absolute value of VM instances calculated based on the specific mode. - If the value is `fixed`, then the `calculated` value is equal to the `fixed` value. - If the value is a `percent`, then the `calculated` value is `percent`/100 * `targetSize`. For example, the `calculated` value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.</summary>
     [JsonPropertyName("calculated")]
@@ -293,11 +299,11 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpecVersions
+public partial class ComputeInstanceGroupManagerSpecVersions
 {
     /// <summary></summary>
     [JsonPropertyName("instanceTemplateRef")]
-    public V1beta1ComputeInstanceGroupManagerSpecVersionsInstanceTemplateRef? InstanceTemplateRef { get; set; }
+    public ComputeInstanceGroupManagerSpecVersionsInstanceTemplateRef? InstanceTemplateRef { get; set; }
 
     /// <summary>Name of the version. Unique among all versions in the scope of this managed instance group.</summary>
     [JsonPropertyName("name")]
@@ -305,16 +311,16 @@ public partial class V1beta1ComputeInstanceGroupManagerSpecVersions
 
     /// <summary>Specifies the intended number of instances to be created from the `instanceTemplate`. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either `targetSize.fixed` or `instanceGroupManager.targetSize` is used. - if expressed as a `percent`, the `targetSize` would be `(targetSize.percent/100 * InstanceGroupManager.targetSize)` If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another `version`. Read [Starting a canary update](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#starting_a_canary_update) for more information.</summary>
     [JsonPropertyName("targetSize")]
-    public V1beta1ComputeInstanceGroupManagerSpecVersionsTargetSize? TargetSize { get; set; }
+    public ComputeInstanceGroupManagerSpecVersionsTargetSize? TargetSize { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerSpec
+public partial class ComputeInstanceGroupManagerSpec
 {
     /// <summary>The autohealing policy for this managed instance group. You can specify only one value.</summary>
     [JsonPropertyName("autoHealingPolicies")]
-    public IList<V1beta1ComputeInstanceGroupManagerSpecAutoHealingPolicies>? AutoHealingPolicies { get; set; }
+    public IList<ComputeInstanceGroupManagerSpecAutoHealingPolicies>? AutoHealingPolicies { get; set; }
 
     /// <summary>The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).</summary>
     [JsonPropertyName("baseInstanceName")]
@@ -326,7 +332,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpec
 
     /// <summary>Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.</summary>
     [JsonPropertyName("distributionPolicy")]
-    public V1beta1ComputeInstanceGroupManagerSpecDistributionPolicy? DistributionPolicy { get; set; }
+    public ComputeInstanceGroupManagerSpecDistributionPolicy? DistributionPolicy { get; set; }
 
     /// <summary>The action to perform in case of zone failure. Only one value is supported, `NO_FAILOVER`. The default is `NO_FAILOVER`. Possible values: UNKNOWN, NO_FAILOVER</summary>
     [JsonPropertyName("failoverAction")]
@@ -334,7 +340,7 @@ public partial class V1beta1ComputeInstanceGroupManagerSpec
 
     /// <summary></summary>
     [JsonPropertyName("instanceTemplateRef")]
-    public V1beta1ComputeInstanceGroupManagerSpecInstanceTemplateRef? InstanceTemplateRef { get; set; }
+    public ComputeInstanceGroupManagerSpecInstanceTemplateRef? InstanceTemplateRef { get; set; }
 
     /// <summary>Immutable. The location of this resource.</summary>
     [JsonPropertyName("location")]
@@ -342,11 +348,11 @@ public partial class V1beta1ComputeInstanceGroupManagerSpec
 
     /// <summary>Immutable. Named ports configured for the Instance Groups complementary to this Instance Group Manager.</summary>
     [JsonPropertyName("namedPorts")]
-    public IList<V1beta1ComputeInstanceGroupManagerSpecNamedPorts>? NamedPorts { get; set; }
+    public IList<ComputeInstanceGroupManagerSpecNamedPorts>? NamedPorts { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1ComputeInstanceGroupManagerSpecProjectRef ProjectRef { get; set; }
+    public ComputeInstanceGroupManagerSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -354,15 +360,15 @@ public partial class V1beta1ComputeInstanceGroupManagerSpec
 
     /// <summary></summary>
     [JsonPropertyName("serviceAccountRef")]
-    public V1beta1ComputeInstanceGroupManagerSpecServiceAccountRef? ServiceAccountRef { get; set; }
+    public ComputeInstanceGroupManagerSpecServiceAccountRef? ServiceAccountRef { get; set; }
 
     /// <summary>Stateful configuration for this Instanced Group Manager</summary>
     [JsonPropertyName("statefulPolicy")]
-    public V1beta1ComputeInstanceGroupManagerSpecStatefulPolicy? StatefulPolicy { get; set; }
+    public ComputeInstanceGroupManagerSpecStatefulPolicy? StatefulPolicy { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("targetPools")]
-    public IList<V1beta1ComputeInstanceGroupManagerSpecTargetPools>? TargetPools { get; set; }
+    public IList<ComputeInstanceGroupManagerSpecTargetPools>? TargetPools { get; set; }
 
     /// <summary>The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.</summary>
     [JsonPropertyName("targetSize")]
@@ -370,16 +376,16 @@ public partial class V1beta1ComputeInstanceGroupManagerSpec
 
     /// <summary>The update policy for this managed instance group.</summary>
     [JsonPropertyName("updatePolicy")]
-    public V1beta1ComputeInstanceGroupManagerSpecUpdatePolicy? UpdatePolicy { get; set; }
+    public ComputeInstanceGroupManagerSpecUpdatePolicy? UpdatePolicy { get; set; }
 
     /// <summary>Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an `instanceTemplate` and a `name`. Every version can appear at most once per instance group. This field overrides the top-level `instanceTemplate` field. Read more about the [relationships between these fields](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#relationship_between_versions_and_instancetemplate_properties_for_a_managed_instance_group). Exactly one `version` must leave the `targetSize` field unset. That version will be applied to all remaining instances. For more information, read about [canary updates](/compute/docs/instance-groups/rolling-out-updates-to-managed-instance-groups#starting_a_canary_update).</summary>
     [JsonPropertyName("versions")]
-    public IList<V1beta1ComputeInstanceGroupManagerSpecVersions>? Versions { get; set; }
+    public IList<ComputeInstanceGroupManagerSpecVersions>? Versions { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusConditions
+public partial class ComputeInstanceGroupManagerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -404,7 +410,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusConditions
 
 /// <summary>[Output Only] The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusCurrentActions
+public partial class ComputeInstanceGroupManagerStatusCurrentActions
 {
     /// <summary>[Output Only] The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.</summary>
     [JsonPropertyName("abandoning")]
@@ -445,7 +451,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusCurrentActions
 
 /// <summary>[Output Only] Status of per-instance configs on the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs
+public partial class ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs
 {
     /// <summary>A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.</summary>
     [JsonPropertyName("allEffective")]
@@ -454,7 +460,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerIn
 
 /// <summary>[Output Only] Stateful status of the given Instance Group Manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStateful
+public partial class ComputeInstanceGroupManagerStatusStatusStateful
 {
     /// <summary>[Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions.</summary>
     [JsonPropertyName("hasStatefulConfig")]
@@ -466,12 +472,12 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusStateful
 
     /// <summary>[Output Only] Status of per-instance configs on the instance.</summary>
     [JsonPropertyName("perInstanceConfigs")]
-    public V1beta1ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs? PerInstanceConfigs { get; set; }
+    public ComputeInstanceGroupManagerStatusStatusStatefulPerInstanceConfigs? PerInstanceConfigs { get; set; }
 }
 
 /// <summary>[Output Only] A status of consistency of Instances' versions with their target version specified by `version` field on Instance Group Manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget
+public partial class ComputeInstanceGroupManagerStatusStatusVersionTarget
 {
     /// <summary>[Output Only] A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by `version` field on Instance Group Manager.</summary>
     [JsonPropertyName("isReached")]
@@ -480,7 +486,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget
 
 /// <summary>[Output Only] The status of this managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusStatus
+public partial class ComputeInstanceGroupManagerStatusStatus
 {
     /// <summary>[Output Only] The URL of the [Autoscaler](/compute/docs/autoscaler/) that targets this instance group manager.</summary>
     [JsonPropertyName("autoscaler")]
@@ -492,16 +498,16 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusStatus
 
     /// <summary>[Output Only] Stateful status of the given Instance Group Manager.</summary>
     [JsonPropertyName("stateful")]
-    public V1beta1ComputeInstanceGroupManagerStatusStatusStateful? Stateful { get; set; }
+    public ComputeInstanceGroupManagerStatusStatusStateful? Stateful { get; set; }
 
     /// <summary>[Output Only] A status of consistency of Instances' versions with their target version specified by `version` field on Instance Group Manager.</summary>
     [JsonPropertyName("versionTarget")]
-    public V1beta1ComputeInstanceGroupManagerStatusStatusVersionTarget? VersionTarget { get; set; }
+    public ComputeInstanceGroupManagerStatusStatusVersionTarget? VersionTarget { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurge
+public partial class ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurge
 {
     /// <summary>[Output Only] Absolute value of VM instances calculated based on the specific mode. - If the value is `fixed`, then the `calculated` value is equal to the `fixed` value. - If the value is a `percent`, then the `calculated` value is `percent`/100 * `targetSize`. For example, the `calculated` value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.</summary>
     [JsonPropertyName("calculated")]
@@ -510,7 +516,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurg
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable
+public partial class ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable
 {
     /// <summary>[Output Only] Absolute value of VM instances calculated based on the specific mode. - If the value is `fixed`, then the `calculated` value is equal to the `fixed` value. - If the value is a `percent`, then the `calculated` value is `percent`/100 * `targetSize`. For example, the `calculated` value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.</summary>
     [JsonPropertyName("calculated")]
@@ -519,24 +525,24 @@ public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnav
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatusUpdatePolicy
+public partial class ComputeInstanceGroupManagerStatusUpdatePolicy
 {
     /// <summary></summary>
     [JsonPropertyName("maxSurge")]
-    public V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurge? MaxSurge { get; set; }
+    public ComputeInstanceGroupManagerStatusUpdatePolicyMaxSurge? MaxSurge { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("maxUnavailable")]
-    public V1beta1ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable? MaxUnavailable { get; set; }
+    public ComputeInstanceGroupManagerStatusUpdatePolicyMaxUnavailable? MaxUnavailable { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInstanceGroupManagerStatus
+public partial class ComputeInstanceGroupManagerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeInstanceGroupManagerStatusConditions>? Conditions { get; set; }
+    public IList<ComputeInstanceGroupManagerStatusConditions>? Conditions { get; set; }
 
     /// <summary>The creation timestamp for this managed instance group in \[RFC3339\](https://www.ietf.org/rfc/rfc3339.txt) text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -544,7 +550,7 @@ public partial class V1beta1ComputeInstanceGroupManagerStatus
 
     /// <summary>[Output Only] The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.</summary>
     [JsonPropertyName("currentActions")]
-    public V1beta1ComputeInstanceGroupManagerStatusCurrentActions? CurrentActions { get; set; }
+    public ComputeInstanceGroupManagerStatusCurrentActions? CurrentActions { get; set; }
 
     /// <summary>Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error `412 conditionNotMet`. To see the latest fingerprint, make a `get()` request to retrieve an InstanceGroupManager.</summary>
     [JsonPropertyName("fingerprint")]
@@ -572,11 +578,11 @@ public partial class V1beta1ComputeInstanceGroupManagerStatus
 
     /// <summary>[Output Only] The status of this managed instance group.</summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeInstanceGroupManagerStatusStatus? Status { get; set; }
+    public ComputeInstanceGroupManagerStatusStatus? Status { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("updatePolicy")]
-    public V1beta1ComputeInstanceGroupManagerStatusUpdatePolicy? UpdatePolicy { get; set; }
+    public ComputeInstanceGroupManagerStatusUpdatePolicy? UpdatePolicy { get; set; }
 
     /// <summary>[Output Only] The URL of a [zone](/compute/docs/regions-zones/#available) where the managed instance group is located (for zonal resources).</summary>
     [JsonPropertyName("zone")]
@@ -585,30 +591,25 @@ public partial class V1beta1ComputeInstanceGroupManagerStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeInstanceGroupManager : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInstanceGroupManagerSpec>, IStatus<V1beta1ComputeInstanceGroupManagerStatus>
+public partial class ComputeInstanceGroupManager
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeInstanceGroupManager";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeinstancegroupmanagers";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeInstanceGroupManagerMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeInstanceGroupManagerSpec Spec { get; set; }
+    public ComputeInstanceGroupManagerSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeInstanceGroupManagerStatus? Status { get; set; }
+    public ComputeInstanceGroupManagerStatus? Status { get; set; }
 }

@@ -700,3 +700,29 @@ public partial class V1beta2RoutingProfile : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta2RoutingProfileStatus? Status { get; set; }
 }
+
+/// <summary>RoutingProfile is the Schema for the RoutingProfiles API. Provides details about a specific Amazon Connect Routing Profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2RoutingProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta2RoutingProfile>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "RoutingProfileList";
+    public const string KubeGroup = "connect.aws.upbound.io";
+    public const string KubePluralName = "routingprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2RoutingProfile> Items { get; set; }
+}

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class NotebooksEnvironmentMetadata
+{
+}
+
 /// <summary>Use a container image to start the notebook instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
+public partial class NotebooksEnvironmentSpecContainerImage
 {
     /// <summary>The path to the container image repository. For example: gcr.io/{project_id}/{imageName}.</summary>
     [JsonPropertyName("repository")]
@@ -23,7 +29,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecContainerImage
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NotebooksEnvironmentSpecLocationRef
+public partial class NotebooksEnvironmentSpecLocationRef
 {
     /// <summary>Allowed value: The `name` field of a `NotebooksLocation` resource.</summary>
     [JsonPropertyName("external")]
@@ -40,7 +46,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecLocationRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
+public partial class NotebooksEnvironmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -57,7 +63,7 @@ public partial class V1alpha1NotebooksEnvironmentSpecProjectRef
 
 /// <summary>Use a Compute Engine VM image to start the notebook instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NotebooksEnvironmentSpecVmImage
+public partial class NotebooksEnvironmentSpecVmImage
 {
     /// <summary>Use this VM image family to find the image; the newest image in this family will be used.</summary>
     [JsonPropertyName("imageFamily")]
@@ -74,11 +80,11 @@ public partial class V1alpha1NotebooksEnvironmentSpecVmImage
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NotebooksEnvironmentSpec
+public partial class NotebooksEnvironmentSpec
 {
     /// <summary>Use a container image to start the notebook instance.</summary>
     [JsonPropertyName("containerImage")]
-    public V1alpha1NotebooksEnvironmentSpecContainerImage? ContainerImage { get; set; }
+    public NotebooksEnvironmentSpecContainerImage? ContainerImage { get; set; }
 
     /// <summary>A brief description of this environment.</summary>
     [JsonPropertyName("description")]
@@ -90,7 +96,7 @@ public partial class V1alpha1NotebooksEnvironmentSpec
 
     /// <summary></summary>
     [JsonPropertyName("locationRef")]
-    public V1alpha1NotebooksEnvironmentSpecLocationRef LocationRef { get; set; }
+    public NotebooksEnvironmentSpecLocationRef LocationRef { get; set; }
 
     /// <summary>Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name".</summary>
     [JsonPropertyName("postStartupScript")]
@@ -98,7 +104,7 @@ public partial class V1alpha1NotebooksEnvironmentSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1NotebooksEnvironmentSpecProjectRef ProjectRef { get; set; }
+    public NotebooksEnvironmentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -106,12 +112,12 @@ public partial class V1alpha1NotebooksEnvironmentSpec
 
     /// <summary>Use a Compute Engine VM image to start the notebook instance.</summary>
     [JsonPropertyName("vmImage")]
-    public V1alpha1NotebooksEnvironmentSpecVmImage? VmImage { get; set; }
+    public NotebooksEnvironmentSpecVmImage? VmImage { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NotebooksEnvironmentStatusConditions
+public partial class NotebooksEnvironmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -136,11 +142,11 @@ public partial class V1alpha1NotebooksEnvironmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NotebooksEnvironmentStatus
+public partial class NotebooksEnvironmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1NotebooksEnvironmentStatusConditions>? Conditions { get; set; }
+    public IList<NotebooksEnvironmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>Instance creation time.</summary>
     [JsonPropertyName("createTime")]
@@ -153,30 +159,25 @@ public partial class V1alpha1NotebooksEnvironmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1NotebooksEnvironment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NotebooksEnvironmentSpec>, IStatus<V1alpha1NotebooksEnvironmentStatus>
+public partial class NotebooksEnvironment
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "NotebooksEnvironment";
-    public const string KubeGroup = "notebooks.cnrm.cloud.google.com";
-    public const string KubePluralName = "notebooksenvironments";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public NotebooksEnvironmentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1NotebooksEnvironmentSpec Spec { get; set; }
+    public NotebooksEnvironmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1NotebooksEnvironmentStatus? Status { get; set; }
+    public NotebooksEnvironmentStatus? Status { get; set; }
 }

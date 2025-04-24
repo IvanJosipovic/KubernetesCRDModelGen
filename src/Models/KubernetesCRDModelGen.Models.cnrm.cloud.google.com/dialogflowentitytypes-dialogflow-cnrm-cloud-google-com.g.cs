@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dialogflow.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowEntityTypeSpecEntities
+public partial class DialogflowEntityTypeMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DialogflowEntityTypeSpecEntities
 {
     /// <summary>A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions. For KIND_LIST entity types: * This collection must contain exactly one synonym equal to value.</summary>
     [JsonPropertyName("synonyms")]
@@ -23,7 +29,7 @@ public partial class V1alpha1DialogflowEntityTypeSpecEntities
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowEntityTypeSpecProjectRef
+public partial class DialogflowEntityTypeSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -40,7 +46,7 @@ public partial class V1alpha1DialogflowEntityTypeSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowEntityTypeSpec
+public partial class DialogflowEntityTypeSpec
 {
     /// <summary>The name of this entity type to be displayed on the console.</summary>
     [JsonPropertyName("displayName")]
@@ -52,7 +58,7 @@ public partial class V1alpha1DialogflowEntityTypeSpec
 
     /// <summary>The collection of entity entries associated with the entity type.</summary>
     [JsonPropertyName("entities")]
-    public IList<V1alpha1DialogflowEntityTypeSpecEntities>? Entities { get; set; }
+    public IList<DialogflowEntityTypeSpecEntities>? Entities { get; set; }
 
     /// <summary>Indicates the kind of entity type. * KIND_MAP: Map entity types allow mapping of a group of synonyms to a reference value. * KIND_LIST: List entity types contain a set of entries that do not map to reference values. However, list entity types can contain references to other entity types (with or without aliases). * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"].</summary>
     [JsonPropertyName("kind")]
@@ -60,7 +66,7 @@ public partial class V1alpha1DialogflowEntityTypeSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DialogflowEntityTypeSpecProjectRef ProjectRef { get; set; }
+    public DialogflowEntityTypeSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -69,7 +75,7 @@ public partial class V1alpha1DialogflowEntityTypeSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowEntityTypeStatusConditions
+public partial class DialogflowEntityTypeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -94,11 +100,11 @@ public partial class V1alpha1DialogflowEntityTypeStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowEntityTypeStatus
+public partial class DialogflowEntityTypeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DialogflowEntityTypeStatusConditions>? Conditions { get; set; }
+    public IList<DialogflowEntityTypeStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/agent/entityTypes/&lt;Entity type ID&gt;.</summary>
     [JsonPropertyName("name")]
@@ -111,30 +117,25 @@ public partial class V1alpha1DialogflowEntityTypeStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DialogflowEntityType : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowEntityTypeSpec>, IStatus<V1alpha1DialogflowEntityTypeStatus>
+public partial class DialogflowEntityType
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DialogflowEntityType";
-    public const string KubeGroup = "dialogflow.cnrm.cloud.google.com";
-    public const string KubePluralName = "dialogflowentitytypes";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DialogflowEntityTypeMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DialogflowEntityTypeSpec Spec { get; set; }
+    public DialogflowEntityTypeSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DialogflowEntityTypeStatus? Status { get; set; }
+    public DialogflowEntityTypeStatus? Status { get; set; }
 }

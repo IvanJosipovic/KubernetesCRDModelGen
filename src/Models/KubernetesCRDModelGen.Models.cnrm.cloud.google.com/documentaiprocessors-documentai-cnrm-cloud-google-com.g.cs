@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentai.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DocumentAIProcessorMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DocumentAIProcessorSpecProjectRef
+public partial class DocumentAIProcessorSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1DocumentAIProcessorSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DocumentAIProcessorSpec
+public partial class DocumentAIProcessorSpec
 {
     /// <summary>Immutable. The display name. Must be unique.</summary>
     [JsonPropertyName("displayName")]
@@ -43,7 +49,7 @@ public partial class V1alpha1DocumentAIProcessorSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DocumentAIProcessorSpecProjectRef ProjectRef { get; set; }
+    public DocumentAIProcessorSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -56,7 +62,7 @@ public partial class V1alpha1DocumentAIProcessorSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DocumentAIProcessorStatusConditions
+public partial class DocumentAIProcessorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -81,11 +87,11 @@ public partial class V1alpha1DocumentAIProcessorStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DocumentAIProcessorStatus
+public partial class DocumentAIProcessorStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DocumentAIProcessorStatusConditions>? Conditions { get; set; }
+    public IList<DocumentAIProcessorStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name of the processor.</summary>
     [JsonPropertyName("name")]
@@ -98,30 +104,25 @@ public partial class V1alpha1DocumentAIProcessorStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DocumentAIProcessor : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DocumentAIProcessorSpec>, IStatus<V1alpha1DocumentAIProcessorStatus>
+public partial class DocumentAIProcessor
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DocumentAIProcessor";
-    public const string KubeGroup = "documentai.cnrm.cloud.google.com";
-    public const string KubePluralName = "documentaiprocessors";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DocumentAIProcessorMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DocumentAIProcessorSpec Spec { get; set; }
+    public DocumentAIProcessorSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DocumentAIProcessorStatus? Status { get; set; }
+    public DocumentAIProcessorStatus? Status { get; set; }
 }

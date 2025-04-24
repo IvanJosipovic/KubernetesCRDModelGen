@@ -421,3 +421,29 @@ public partial class V1api20230701storageRedisEnterpriseDatabase : IKubernetesOb
     [JsonPropertyName("status")]
     public V1api20230701storageRedisEnterpriseDatabaseStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230701.RedisEnterpriseDatabase Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2023-07-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230701storageRedisEnterpriseDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1api20230701storageRedisEnterpriseDatabase>
+{
+    public const string KubeApiVersion = "v1api20230701storage";
+    public const string KubeKind = "RedisEnterpriseDatabaseList";
+    public const string KubeGroup = "cache.azure.com";
+    public const string KubePluralName = "redisenterprisedatabases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230701storageRedisEnterpriseDatabase> Items { get; set; }
+}

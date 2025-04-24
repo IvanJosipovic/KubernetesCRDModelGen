@@ -518,3 +518,29 @@ public partial class V1beta1BudgetResourceAssociation : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1BudgetResourceAssociationStatus? Status { get; set; }
 }
+
+/// <summary>BudgetResourceAssociation is the Schema for the BudgetResourceAssociations API. Manages a Service Catalog Budget Resource Association</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BudgetResourceAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BudgetResourceAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BudgetResourceAssociationList";
+    public const string KubeGroup = "servicecatalog.aws.upbound.io";
+    public const string KubePluralName = "budgetresourceassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BudgetResourceAssociation> Items { get; set; }
+}

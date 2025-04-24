@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeSubnetworkMetadata
+{
+}
+
 /// <summary>This field denotes the VPC flow logging options for this subnetwork. If logging is enabled, logs are exported to Cloud Logging. Flow logging isn't supported if the subnet 'purpose' field is set to subnetwork is 'REGIONAL_MANAGED_PROXY' or 'GLOBAL_MANAGED_PROXY'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeSubnetworkSpecLogConfig
+public partial class ComputeSubnetworkSpecLogConfig
 {
     /// <summary>Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection. Default value: "INTERVAL_5_SEC" Possible values: ["INTERVAL_5_SEC", "INTERVAL_30_SEC", "INTERVAL_1_MIN", "INTERVAL_5_MIN", "INTERVAL_10_MIN", "INTERVAL_15_MIN"].</summary>
     [JsonPropertyName("aggregationInterval")]
@@ -35,7 +41,7 @@ public partial class V1beta1ComputeSubnetworkSpecLogConfig
 
 /// <summary>The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeSubnetworkSpecNetworkRef
+public partial class ComputeSubnetworkSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -52,7 +58,7 @@ public partial class V1beta1ComputeSubnetworkSpecNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeSubnetworkSpecSecondaryIpRange
+public partial class ComputeSubnetworkSpecSecondaryIpRange
 {
     /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported.</summary>
     [JsonPropertyName("ipCidrRange")]
@@ -65,7 +71,7 @@ public partial class V1beta1ComputeSubnetworkSpecSecondaryIpRange
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeSubnetworkSpec
+public partial class ComputeSubnetworkSpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("description")]
@@ -81,11 +87,11 @@ public partial class V1beta1ComputeSubnetworkSpec
 
     /// <summary>This field denotes the VPC flow logging options for this subnetwork. If logging is enabled, logs are exported to Cloud Logging. Flow logging isn't supported if the subnet 'purpose' field is set to subnetwork is 'REGIONAL_MANAGED_PROXY' or 'GLOBAL_MANAGED_PROXY'.</summary>
     [JsonPropertyName("logConfig")]
-    public V1beta1ComputeSubnetworkSpecLogConfig? LogConfig { get; set; }
+    public ComputeSubnetworkSpecLogConfig? LogConfig { get; set; }
 
     /// <summary>The network this subnet belongs to. Only networks that are in the distributed mode can have subnetworks.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ComputeSubnetworkSpecNetworkRef NetworkRef { get; set; }
+    public ComputeSubnetworkSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private Google Access.</summary>
     [JsonPropertyName("privateIpGoogleAccess")]
@@ -113,7 +119,7 @@ public partial class V1beta1ComputeSubnetworkSpec
 
     /// <summary></summary>
     [JsonPropertyName("secondaryIpRange")]
-    public IList<V1beta1ComputeSubnetworkSpecSecondaryIpRange>? SecondaryIpRange { get; set; }
+    public IList<ComputeSubnetworkSpecSecondaryIpRange>? SecondaryIpRange { get; set; }
 
     /// <summary>The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. Possible values: ["IPV4_ONLY", "IPV4_IPV6"].</summary>
     [JsonPropertyName("stackType")]
@@ -122,7 +128,7 @@ public partial class V1beta1ComputeSubnetworkSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeSubnetworkStatusConditions
+public partial class ComputeSubnetworkStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -147,11 +153,11 @@ public partial class V1beta1ComputeSubnetworkStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeSubnetworkStatus
+public partial class ComputeSubnetworkStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeSubnetworkStatusConditions>? Conditions { get; set; }
+    public IList<ComputeSubnetworkStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -188,30 +194,25 @@ public partial class V1beta1ComputeSubnetworkStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeSubnetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSubnetworkSpec>, IStatus<V1beta1ComputeSubnetworkStatus>
+public partial class ComputeSubnetwork
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeSubnetwork";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computesubnetworks";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeSubnetworkMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeSubnetworkSpec Spec { get; set; }
+    public ComputeSubnetworkSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeSubnetworkStatus? Status { get; set; }
+    public ComputeSubnetworkStatus? Status { get; set; }
 }

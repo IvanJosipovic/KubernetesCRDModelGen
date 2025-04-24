@@ -418,3 +418,29 @@ public partial class V1beta1EmailTemplate : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1EmailTemplateStatus? Status { get; set; }
 }
+
+/// <summary>EmailTemplate is the Schema for the EmailTemplates API. Manages a API Management Email Template.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EmailTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EmailTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EmailTemplateList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "emailtemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EmailTemplate> Items { get; set; }
+}

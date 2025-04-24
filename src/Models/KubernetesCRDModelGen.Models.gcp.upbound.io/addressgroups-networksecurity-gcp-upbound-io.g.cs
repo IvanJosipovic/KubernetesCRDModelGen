@@ -326,3 +326,29 @@ public partial class V1beta1AddressGroup : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1AddressGroupStatus? Status { get; set; }
 }
+
+/// <summary>AddressGroup is the Schema for the AddressGroups API. AddressGroup is a resource that specifies how a collection of IP/DNS used in Firewall Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AddressGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AddressGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AddressGroupList";
+    public const string KubeGroup = "networksecurity.gcp.upbound.io";
+    public const string KubePluralName = "addressgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AddressGroup> Items { get; set; }
+}

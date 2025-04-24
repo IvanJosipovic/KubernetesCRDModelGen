@@ -312,3 +312,29 @@ public partial class V1alpha3EnvoyFilter : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
 }
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha3EnvoyFilterList : IKubernetesObject<V1ListMeta>, IItems<V1alpha3EnvoyFilter>
+{
+    public const string KubeApiVersion = "v1alpha3";
+    public const string KubeKind = "EnvoyFilterList";
+    public const string KubeGroup = "networking.istio.io";
+    public const string KubePluralName = "envoyfilters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha3EnvoyFilter> Items { get; set; }
+}

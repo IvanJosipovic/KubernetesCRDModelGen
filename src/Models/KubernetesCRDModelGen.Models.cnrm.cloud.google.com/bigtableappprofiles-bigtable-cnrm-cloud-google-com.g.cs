@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class BigtableAppProfileMetadata
+{
+}
+
 /// <summary>The instance to create the app profile within.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigtableAppProfileSpecInstanceRef
+public partial class BigtableAppProfileSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1BigtableAppProfileSpecInstanceRef
 
 /// <summary>Use a single-cluster routing policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
+public partial class BigtableAppProfileSpecSingleClusterRouting
 {
     /// <summary>If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.</summary>
     [JsonPropertyName("allowTransactionalWrites")]
@@ -40,7 +46,7 @@ public partial class V1beta1BigtableAppProfileSpecSingleClusterRouting
 
 /// <summary>The standard options used for isolating this app profile's traffic from other use cases.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigtableAppProfileSpecStandardIsolation
+public partial class BigtableAppProfileSpecStandardIsolation
 {
     /// <summary>The priority of requests sent using this app profile. Possible values: ["PRIORITY_LOW", "PRIORITY_MEDIUM", "PRIORITY_HIGH"].</summary>
     [JsonPropertyName("priority")]
@@ -49,7 +55,7 @@ public partial class V1beta1BigtableAppProfileSpecStandardIsolation
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigtableAppProfileSpec
+public partial class BigtableAppProfileSpec
 {
     /// <summary>Long form description of the use case for this app profile.</summary>
     [JsonPropertyName("description")]
@@ -57,7 +63,7 @@ public partial class V1beta1BigtableAppProfileSpec
 
     /// <summary>The instance to create the app profile within.</summary>
     [JsonPropertyName("instanceRef")]
-    public V1beta1BigtableAppProfileSpecInstanceRef? InstanceRef { get; set; }
+    public BigtableAppProfileSpecInstanceRef? InstanceRef { get; set; }
 
     /// <summary>The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.</summary>
     [JsonPropertyName("multiClusterRoutingClusterIds")]
@@ -73,16 +79,16 @@ public partial class V1beta1BigtableAppProfileSpec
 
     /// <summary>Use a single-cluster routing policy.</summary>
     [JsonPropertyName("singleClusterRouting")]
-    public V1beta1BigtableAppProfileSpecSingleClusterRouting? SingleClusterRouting { get; set; }
+    public BigtableAppProfileSpecSingleClusterRouting? SingleClusterRouting { get; set; }
 
     /// <summary>The standard options used for isolating this app profile's traffic from other use cases.</summary>
     [JsonPropertyName("standardIsolation")]
-    public V1beta1BigtableAppProfileSpecStandardIsolation? StandardIsolation { get; set; }
+    public BigtableAppProfileSpecStandardIsolation? StandardIsolation { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigtableAppProfileStatusConditions
+public partial class BigtableAppProfileStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -107,11 +113,11 @@ public partial class V1beta1BigtableAppProfileStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigtableAppProfileStatus
+public partial class BigtableAppProfileStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1BigtableAppProfileStatusConditions>? Conditions { get; set; }
+    public IList<BigtableAppProfileStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique name of the requested app profile. Values are of the form 'projects/&lt;project&gt;/instances/&lt;instance&gt;/appProfiles/&lt;appProfileId&gt;'.</summary>
     [JsonPropertyName("name")]
@@ -124,30 +130,25 @@ public partial class V1beta1BigtableAppProfileStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BigtableAppProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableAppProfileSpec>, IStatus<V1beta1BigtableAppProfileStatus>
+public partial class BigtableAppProfile
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BigtableAppProfile";
-    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigtableappprofiles";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public BigtableAppProfileMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1BigtableAppProfileSpec? Spec { get; set; }
+    public BigtableAppProfileSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1BigtableAppProfileStatus? Status { get; set; }
+    public BigtableAppProfileStatus? Status { get; set; }
 }

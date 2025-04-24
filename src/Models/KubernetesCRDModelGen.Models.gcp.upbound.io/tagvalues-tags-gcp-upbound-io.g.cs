@@ -414,3 +414,29 @@ public partial class V1beta1TagValue : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1TagValueStatus? Status { get; set; }
 }
+
+/// <summary>TagValue is the Schema for the TagValues API. A TagValue is a child of a particular TagKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TagValueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TagValue>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TagValueList";
+    public const string KubeGroup = "tags.gcp.upbound.io";
+    public const string KubePluralName = "tagvalues";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TagValue> Items { get; set; }
+}

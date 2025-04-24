@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ApigeeOrganizationMetadata
+{
+}
+
 /// <summary>Configuration for the Advanced API Ops add-on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConfig
+public partial class ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConfig
 {
     /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
@@ -19,7 +25,7 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConf
 
 /// <summary>Configuration for the Monetization add-on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig
+public partial class ApigeeOrganizationSpecAddonsConfigMonetizationConfig
 {
     /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
@@ -28,20 +34,20 @@ public partial class V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig
 
 /// <summary>Addon configurations of the Apigee organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationSpecAddonsConfig
+public partial class ApigeeOrganizationSpecAddonsConfig
 {
     /// <summary>Configuration for the Advanced API Ops add-on.</summary>
     [JsonPropertyName("advancedApiOpsConfig")]
-    public V1beta1ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConfig? AdvancedApiOpsConfig { get; set; }
+    public ApigeeOrganizationSpecAddonsConfigAdvancedApiOpsConfig? AdvancedApiOpsConfig { get; set; }
 
     /// <summary>Configuration for the Monetization add-on.</summary>
     [JsonPropertyName("monetizationConfig")]
-    public V1beta1ApigeeOrganizationSpecAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
+    public ApigeeOrganizationSpecAddonsConfigMonetizationConfig? MonetizationConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef
+public partial class ApigeeOrganizationSpecAuthorizedNetworkRef
 {
     /// <summary>Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See (https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -58,7 +64,7 @@ public partial class V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationSpecProjectRef
+public partial class ApigeeOrganizationSpecProjectRef
 {
     /// <summary>Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: projects/&lt;project&gt; Authorization requires the following IAM permission on the specified resource parent: apigee.organizations.create  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -75,7 +81,7 @@ public partial class V1beta1ApigeeOrganizationSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRef
+public partial class ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRef
 {
     /// <summary>Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when (#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -92,11 +98,11 @@ public partial class V1beta1ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationSpec
+public partial class ApigeeOrganizationSpec
 {
     /// <summary>Addon configurations of the Apigee organization.</summary>
     [JsonPropertyName("addonsConfig")]
-    public V1beta1ApigeeOrganizationSpecAddonsConfig? AddonsConfig { get; set; }
+    public ApigeeOrganizationSpecAddonsConfig? AddonsConfig { get; set; }
 
     /// <summary>Immutable. Required. Primary GCP region for analytics data storage. For valid values, see (https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).</summary>
     [JsonPropertyName("analyticsRegion")]
@@ -104,7 +110,7 @@ public partial class V1beta1ApigeeOrganizationSpec
 
     /// <summary></summary>
     [JsonPropertyName("authorizedNetworkRef")]
-    public V1beta1ApigeeOrganizationSpecAuthorizedNetworkRef? AuthorizedNetworkRef { get; set; }
+    public ApigeeOrganizationSpecAuthorizedNetworkRef? AuthorizedNetworkRef { get; set; }
 
     /// <summary>Description of the Apigee organization.</summary>
     [JsonPropertyName("description")]
@@ -116,7 +122,7 @@ public partial class V1beta1ApigeeOrganizationSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1ApigeeOrganizationSpecProjectRef ProjectRef { get; set; }
+    public ApigeeOrganizationSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Properties defined in the Apigee organization profile.</summary>
     [JsonPropertyName("properties")]
@@ -128,7 +134,7 @@ public partial class V1beta1ApigeeOrganizationSpec
 
     /// <summary></summary>
     [JsonPropertyName("runtimeDatabaseEncryptionKeyRef")]
-    public V1beta1ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRef? RuntimeDatabaseEncryptionKeyRef { get; set; }
+    public ApigeeOrganizationSpecRuntimeDatabaseEncryptionKeyRef? RuntimeDatabaseEncryptionKeyRef { get; set; }
 
     /// <summary>Immutable. Required. Runtime type of the Apigee organization based on the Apigee subscription purchased. Possible values: RUNTIME_TYPE_UNSPECIFIED, CLOUD, HYBRID</summary>
     [JsonPropertyName("runtimeType")]
@@ -137,7 +143,7 @@ public partial class V1beta1ApigeeOrganizationSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationStatusConditions
+public partial class ApigeeOrganizationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -162,7 +168,7 @@ public partial class V1beta1ApigeeOrganizationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeOrganizationStatus
+public partial class ApigeeOrganizationStatus
 {
     /// <summary>Output only. Billing type of the Apigee organization. See (https://cloud.google.com/apigee/pricing). Possible values: BILLING_TYPE_UNSPECIFIED, SUBSCRIPTION, EVALUATION</summary>
     [JsonPropertyName("billingType")]
@@ -174,7 +180,7 @@ public partial class V1beta1ApigeeOrganizationStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ApigeeOrganizationStatusConditions>? Conditions { get; set; }
+    public IList<ApigeeOrganizationStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. Time that the Apigee organization was created in milliseconds since epoch.</summary>
     [JsonPropertyName("createdAt")]
@@ -211,30 +217,25 @@ public partial class V1beta1ApigeeOrganizationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApigeeOrganization : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApigeeOrganizationSpec>, IStatus<V1beta1ApigeeOrganizationStatus>
+public partial class ApigeeOrganization
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApigeeOrganization";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeeorganizations";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ApigeeOrganizationMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ApigeeOrganizationSpec Spec { get; set; }
+    public ApigeeOrganizationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ApigeeOrganizationStatus? Status { get; set; }
+    public ApigeeOrganizationStatus? Status { get; set; }
 }

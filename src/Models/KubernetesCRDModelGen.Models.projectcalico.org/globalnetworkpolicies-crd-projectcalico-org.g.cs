@@ -566,3 +566,29 @@ public partial class V1GlobalNetworkPolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("spec")]
     public V1GlobalNetworkPolicySpec? Spec { get; set; }
 }
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1GlobalNetworkPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1GlobalNetworkPolicy>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "GlobalNetworkPolicyList";
+    public const string KubeGroup = "crd.projectcalico.org";
+    public const string KubePluralName = "globalnetworkpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1GlobalNetworkPolicy> Items { get; set; }
+}

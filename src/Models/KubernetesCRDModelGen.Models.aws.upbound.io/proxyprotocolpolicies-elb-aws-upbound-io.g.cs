@@ -390,3 +390,29 @@ public partial class V1beta1ProxyProtocolPolicy : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ProxyProtocolPolicyStatus? Status { get; set; }
 }
+
+/// <summary>ProxyProtocolPolicy is the Schema for the ProxyProtocolPolicys API. Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProxyProtocolPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProxyProtocolPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProxyProtocolPolicyList";
+    public const string KubeGroup = "elb.aws.upbound.io";
+    public const string KubePluralName = "proxyprotocolpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProxyProtocolPolicy> Items { get; set; }
+}

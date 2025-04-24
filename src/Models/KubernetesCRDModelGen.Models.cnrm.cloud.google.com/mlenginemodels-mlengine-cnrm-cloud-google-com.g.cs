@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.mlengine.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class MLEngineModelMetadata
+{
+}
+
 /// <summary>Immutable. The default version of the model. This version will be used to handle prediction requests that do not specify a version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1MLEngineModelSpecDefaultVersion
+public partial class MLEngineModelSpecDefaultVersion
 {
     /// <summary>Immutable. The name specified for the version when it was created.</summary>
     [JsonPropertyName("name")]
@@ -19,7 +25,7 @@ public partial class V1alpha1MLEngineModelSpecDefaultVersion
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1MLEngineModelSpecProjectRef
+public partial class MLEngineModelSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -36,11 +42,11 @@ public partial class V1alpha1MLEngineModelSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1MLEngineModelSpec
+public partial class MLEngineModelSpec
 {
     /// <summary>Immutable. The default version of the model. This version will be used to handle prediction requests that do not specify a version.</summary>
     [JsonPropertyName("defaultVersion")]
-    public V1alpha1MLEngineModelSpecDefaultVersion? DefaultVersion { get; set; }
+    public MLEngineModelSpecDefaultVersion? DefaultVersion { get; set; }
 
     /// <summary>Immutable. The description specified for the model when it was created.</summary>
     [JsonPropertyName("description")]
@@ -56,7 +62,7 @@ public partial class V1alpha1MLEngineModelSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1MLEngineModelSpecProjectRef ProjectRef { get; set; }
+    public MLEngineModelSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The list of regions where the model is going to be deployed. Currently only one region per model is supported.</summary>
     [JsonPropertyName("regions")]
@@ -69,7 +75,7 @@ public partial class V1alpha1MLEngineModelSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1MLEngineModelStatusConditions
+public partial class MLEngineModelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -94,11 +100,11 @@ public partial class V1alpha1MLEngineModelStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1MLEngineModelStatus
+public partial class MLEngineModelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1MLEngineModelStatusConditions>? Conditions { get; set; }
+    public IList<MLEngineModelStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -107,30 +113,25 @@ public partial class V1alpha1MLEngineModelStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MLEngineModel : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1MLEngineModelSpec>, IStatus<V1alpha1MLEngineModelStatus>
+public partial class MLEngineModel
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MLEngineModel";
-    public const string KubeGroup = "mlengine.cnrm.cloud.google.com";
-    public const string KubePluralName = "mlenginemodels";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public MLEngineModelMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1MLEngineModelSpec Spec { get; set; }
+    public MLEngineModelSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1MLEngineModelStatus? Status { get; set; }
+    public MLEngineModelStatus? Status { get; set; }
 }

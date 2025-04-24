@@ -3045,3 +3045,29 @@ public partial class V1beta1Transform : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1TransformStatus? Status { get; set; }
 }
+
+/// <summary>Transform is the Schema for the Transforms API. Manages a Transform.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TransformList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Transform>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TransformList";
+    public const string KubeGroup = "media.azure.upbound.io";
+    public const string KubePluralName = "transforms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Transform> Items { get; set; }
+}

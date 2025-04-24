@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class AccessContextManagerGCPUserAccessBindingMetadata
+{
+}
+
 /// <summary>The organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpecOrganizationRef
+public partial class AccessContextManagerGCPUserAccessBindingSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpecOrganiz
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpec
+public partial class AccessContextManagerGCPUserAccessBindingSpec
 {
     /// <summary>Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted".</summary>
     [JsonPropertyName("accessLevels")]
@@ -39,7 +45,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpec
 
     /// <summary>The organization that this resource belongs to.</summary>
     [JsonPropertyName("organizationRef")]
-    public V1alpha1AccessContextManagerGCPUserAccessBindingSpecOrganizationRef OrganizationRef { get; set; }
+    public AccessContextManagerGCPUserAccessBindingSpecOrganizationRef OrganizationRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -48,7 +54,7 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatusConditions
+public partial class AccessContextManagerGCPUserAccessBindingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -73,11 +79,11 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatusCondi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatus
+public partial class AccessContextManagerGCPUserAccessBindingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1AccessContextManagerGCPUserAccessBindingStatusConditions>? Conditions { get; set; }
+    public IList<AccessContextManagerGCPUserAccessBindingStatusConditions>? Conditions { get; set; }
 
     /// <summary>Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by RFC 3986 Section 2.3). Should not be specified by the client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N".</summary>
     [JsonPropertyName("name")]
@@ -90,30 +96,25 @@ public partial class V1alpha1AccessContextManagerGCPUserAccessBindingStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1AccessContextManagerGCPUserAccessBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessContextManagerGCPUserAccessBindingSpec>, IStatus<V1alpha1AccessContextManagerGCPUserAccessBindingStatus>
+public partial class AccessContextManagerGCPUserAccessBinding
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "AccessContextManagerGCPUserAccessBinding";
-    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
-    public const string KubePluralName = "accesscontextmanagergcpuseraccessbindings";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public AccessContextManagerGCPUserAccessBindingMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1AccessContextManagerGCPUserAccessBindingSpec Spec { get; set; }
+    public AccessContextManagerGCPUserAccessBindingSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1AccessContextManagerGCPUserAccessBindingStatus? Status { get; set; }
+    public AccessContextManagerGCPUserAccessBindingStatus? Status { get; set; }
 }

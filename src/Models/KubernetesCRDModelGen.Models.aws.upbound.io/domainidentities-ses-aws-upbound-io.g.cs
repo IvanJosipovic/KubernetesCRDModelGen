@@ -247,3 +247,29 @@ public partial class V1beta1DomainIdentity : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1DomainIdentityStatus? Status { get; set; }
 }
+
+/// <summary>DomainIdentity is the Schema for the DomainIdentitys API. Provides an SES domain identity resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainIdentityList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainIdentity>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainIdentityList";
+    public const string KubeGroup = "ses.aws.upbound.io";
+    public const string KubePluralName = "domainidentities";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DomainIdentity> Items { get; set; }
+}

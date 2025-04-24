@@ -104,3 +104,29 @@ public partial class V1beta3Alert : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("spec")]
     public V1beta3AlertSpec? Spec { get; set; }
 }
+
+/// <summary>Alert is the Schema for the alerts API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta3AlertList : IKubernetesObject<V1ListMeta>, IItems<V1beta3Alert>
+{
+    public const string KubeApiVersion = "v1beta3";
+    public const string KubeKind = "AlertList";
+    public const string KubeGroup = "notification.toolkit.fluxcd.io";
+    public const string KubePluralName = "alerts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta3Alert> Items { get; set; }
+}

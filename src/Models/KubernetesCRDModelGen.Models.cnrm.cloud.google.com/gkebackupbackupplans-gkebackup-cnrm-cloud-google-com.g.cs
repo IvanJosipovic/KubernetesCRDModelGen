@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkebackup.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class GKEBackupBackupPlanMetadata
+{
+}
+
 /// <summary>This defines a customer managed encryption key that will be used to encrypt the "config" portion (the Kubernetes resources) of Backups created via this plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKey
+public partial class GKEBackupBackupPlanSpecBackupConfigEncryptionKey
 {
     /// <summary>Google Cloud KMS encryption key. Format: projects/*/locations/*/keyRings/*/cryptoKeys/*.</summary>
     [JsonPropertyName("gcpKmsEncryptionKey")]
@@ -19,7 +25,7 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKey
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplicationsNamespacedNames
+public partial class GKEBackupBackupPlanSpecBackupConfigSelectedApplicationsNamespacedNames
 {
     /// <summary>The name of a Kubernetes Resource.</summary>
     [JsonPropertyName("name")]
@@ -32,16 +38,16 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplicat
 
 /// <summary>A list of namespaced Kubernetes Resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplications
+public partial class GKEBackupBackupPlanSpecBackupConfigSelectedApplications
 {
     /// <summary>A list of namespaced Kubernetes resources.</summary>
     [JsonPropertyName("namespacedNames")]
-    public IList<V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplicationsNamespacedNames> NamespacedNames { get; set; }
+    public IList<GKEBackupBackupPlanSpecBackupConfigSelectedApplicationsNamespacedNames> NamespacedNames { get; set; }
 }
 
 /// <summary>If set, include just the resources in the listed namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedNamespaces
+public partial class GKEBackupBackupPlanSpecBackupConfigSelectedNamespaces
 {
     /// <summary>A list of Kubernetes Namespaces.</summary>
     [JsonPropertyName("namespaces")]
@@ -50,7 +56,7 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedNamespac
 
 /// <summary>Defines the configuration of Backups created via this BackupPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfig
+public partial class GKEBackupBackupPlanSpecBackupConfig
 {
     /// <summary>If True, include all namespaced resources.</summary>
     [JsonPropertyName("allNamespaces")]
@@ -58,7 +64,7 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfig
 
     /// <summary>This defines a customer managed encryption key that will be used to encrypt the "config" portion (the Kubernetes resources) of Backups created via this plan.</summary>
     [JsonPropertyName("encryptionKey")]
-    public V1alpha1GKEBackupBackupPlanSpecBackupConfigEncryptionKey? EncryptionKey { get; set; }
+    public GKEBackupBackupPlanSpecBackupConfigEncryptionKey? EncryptionKey { get; set; }
 
     /// <summary>This flag specifies whether Kubernetes Secret resources should be included when they fall into the scope of Backups.</summary>
     [JsonPropertyName("includeSecrets")]
@@ -70,16 +76,16 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupConfig
 
     /// <summary>A list of namespaced Kubernetes Resources.</summary>
     [JsonPropertyName("selectedApplications")]
-    public V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedApplications? SelectedApplications { get; set; }
+    public GKEBackupBackupPlanSpecBackupConfigSelectedApplications? SelectedApplications { get; set; }
 
     /// <summary>If set, include just the resources in the listed namespaces.</summary>
     [JsonPropertyName("selectedNamespaces")]
-    public V1alpha1GKEBackupBackupPlanSpecBackupConfigSelectedNamespaces? SelectedNamespaces { get; set; }
+    public GKEBackupBackupPlanSpecBackupConfigSelectedNamespaces? SelectedNamespaces { get; set; }
 }
 
 /// <summary>Defines a schedule for automatic Backup creation via this BackupPlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecBackupSchedule
+public partial class GKEBackupBackupPlanSpecBackupSchedule
 {
     /// <summary>A standard cron string that defines a repeating schedule for creating Backups via this BackupPlan. If this is defined, then backupRetainDays must also be defined.</summary>
     [JsonPropertyName("cronSchedule")]
@@ -92,7 +98,7 @@ public partial class V1alpha1GKEBackupBackupPlanSpecBackupSchedule
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecProjectRef
+public partial class GKEBackupBackupPlanSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -109,7 +115,7 @@ public partial class V1alpha1GKEBackupBackupPlanSpecProjectRef
 
 /// <summary>RetentionPolicy governs lifecycle of Backups created under this plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpecRetentionPolicy
+public partial class GKEBackupBackupPlanSpecRetentionPolicy
 {
     /// <summary>Minimum age for a Backup created via this BackupPlan (in days). Must be an integer value between 0-90 (inclusive). A Backup created under this BackupPlan will not be deletable until it reaches Backup's (create time + backup_delete_lock_days). Updating this field of a BackupPlan does not affect existing Backups. Backups created after a successful update will inherit this new value.</summary>
     [JsonPropertyName("backupDeleteLockDays")]
@@ -126,15 +132,15 @@ public partial class V1alpha1GKEBackupBackupPlanSpecRetentionPolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanSpec
+public partial class GKEBackupBackupPlanSpec
 {
     /// <summary>Defines the configuration of Backups created via this BackupPlan.</summary>
     [JsonPropertyName("backupConfig")]
-    public V1alpha1GKEBackupBackupPlanSpecBackupConfig? BackupConfig { get; set; }
+    public GKEBackupBackupPlanSpecBackupConfig? BackupConfig { get; set; }
 
     /// <summary>Defines a schedule for automatic Backup creation via this BackupPlan.</summary>
     [JsonPropertyName("backupSchedule")]
-    public V1alpha1GKEBackupBackupPlanSpecBackupSchedule? BackupSchedule { get; set; }
+    public GKEBackupBackupPlanSpecBackupSchedule? BackupSchedule { get; set; }
 
     /// <summary>Immutable. The source cluster from which Backups will be created via this BackupPlan.</summary>
     [JsonPropertyName("cluster")]
@@ -154,7 +160,7 @@ public partial class V1alpha1GKEBackupBackupPlanSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1GKEBackupBackupPlanSpecProjectRef ProjectRef { get; set; }
+    public GKEBackupBackupPlanSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -162,12 +168,12 @@ public partial class V1alpha1GKEBackupBackupPlanSpec
 
     /// <summary>RetentionPolicy governs lifecycle of Backups created under this plan.</summary>
     [JsonPropertyName("retentionPolicy")]
-    public V1alpha1GKEBackupBackupPlanSpecRetentionPolicy? RetentionPolicy { get; set; }
+    public GKEBackupBackupPlanSpecRetentionPolicy? RetentionPolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanStatusConditions
+public partial class GKEBackupBackupPlanStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -192,11 +198,11 @@ public partial class V1alpha1GKEBackupBackupPlanStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1GKEBackupBackupPlanStatus
+public partial class GKEBackupBackupPlanStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1GKEBackupBackupPlanStatusConditions>? Conditions { get; set; }
+    public IList<GKEBackupBackupPlanStatusConditions>? Conditions { get; set; }
 
     /// <summary>etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a backup plan from overwriting each other. It is strongly suggested that systems make use of the 'etag' in the read-modify-write cycle to perform BackupPlan updates in order to avoid race conditions: An etag is returned in the response to backupPlans.get, and systems are expected to put that etag in the request to backupPlans.patch or backupPlans.delete to ensure that their change will be applied to the same version of the resource.</summary>
     [JsonPropertyName("etag")]
@@ -225,30 +231,25 @@ public partial class V1alpha1GKEBackupBackupPlanStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1GKEBackupBackupPlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1GKEBackupBackupPlanSpec>, IStatus<V1alpha1GKEBackupBackupPlanStatus>
+public partial class GKEBackupBackupPlan
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "GKEBackupBackupPlan";
-    public const string KubeGroup = "gkebackup.cnrm.cloud.google.com";
-    public const string KubePluralName = "gkebackupbackupplans";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public GKEBackupBackupPlanMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1GKEBackupBackupPlanSpec Spec { get; set; }
+    public GKEBackupBackupPlanSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1GKEBackupBackupPlanStatus? Status { get; set; }
+    public GKEBackupBackupPlanStatus? Status { get; set; }
 }

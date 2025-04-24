@@ -558,3 +558,29 @@ public partial class V1beta1UserPoolUICustomization : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1UserPoolUICustomizationStatus? Status { get; set; }
 }
+
+/// <summary>UserPoolUICustomization is the Schema for the UserPoolUICustomizations API. Provides a Cognito User Pool UI Customization resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1UserPoolUICustomizationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserPoolUICustomization>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "UserPoolUICustomizationList";
+    public const string KubeGroup = "cognitoidp.aws.upbound.io";
+    public const string KubePluralName = "userpooluicustomizations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1UserPoolUICustomization> Items { get; set; }
+}

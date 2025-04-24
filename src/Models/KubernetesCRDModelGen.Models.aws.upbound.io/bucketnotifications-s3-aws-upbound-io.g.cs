@@ -907,3 +907,29 @@ public partial class V1beta1BucketNotification : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1BucketNotificationStatus? Status { get; set; }
 }
+
+/// <summary>BucketNotification is the Schema for the BucketNotifications API. Manages a S3 Bucket Notification Configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BucketNotificationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BucketNotification>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BucketNotificationList";
+    public const string KubeGroup = "s3.aws.upbound.io";
+    public const string KubePluralName = "bucketnotifications";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BucketNotification> Items { get; set; }
+}

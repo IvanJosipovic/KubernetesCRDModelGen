@@ -300,3 +300,29 @@ public partial class V1api20220801storageNamedValue : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1api20220801storageNamedValueStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220801.NamedValue Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimnamedvalues.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/namedValues/{namedValueId}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220801storageNamedValueList : IKubernetesObject<V1ListMeta>, IItems<V1api20220801storageNamedValue>
+{
+    public const string KubeApiVersion = "v1api20220801storage";
+    public const string KubeKind = "NamedValueList";
+    public const string KubeGroup = "apimanagement.azure.com";
+    public const string KubePluralName = "namedvalues";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220801storageNamedValue> Items { get; set; }
+}

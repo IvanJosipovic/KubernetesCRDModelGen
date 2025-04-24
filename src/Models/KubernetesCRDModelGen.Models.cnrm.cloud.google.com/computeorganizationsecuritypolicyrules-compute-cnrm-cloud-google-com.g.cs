@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfigLayer4Config
+public partial class ComputeOrganizationSecurityPolicyRuleMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeOrganizationSecurityPolicyRuleSpecMatchConfigLayer4Config
 {
     /// <summary>The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.</summary>
     [JsonPropertyName("ipProtocol")]
@@ -23,7 +29,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfi
 
 /// <summary>The configuration options for matching the rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfig
+public partial class ComputeOrganizationSecurityPolicyRuleSpecMatchConfig
 {
     /// <summary>Destination IP address range in CIDR format. Required for EGRESS rules.</summary>
     [JsonPropertyName("destIpRanges")]
@@ -31,7 +37,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfi
 
     /// <summary>Pairs of IP protocols and ports that the rule should match.</summary>
     [JsonPropertyName("layer4Config")]
-    public IList<V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfigLayer4Config> Layer4Config { get; set; }
+    public IList<ComputeOrganizationSecurityPolicyRuleSpecMatchConfigLayer4Config> Layer4Config { get; set; }
 
     /// <summary>Source IP address range in CIDR format. Required for INGRESS rules.</summary>
     [JsonPropertyName("srcIpRanges")]
@@ -40,11 +46,11 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfi
 
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatch
+public partial class ComputeOrganizationSecurityPolicyRuleSpecMatch
 {
     /// <summary>The configuration options for matching the rule.</summary>
     [JsonPropertyName("config")]
-    public V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatchConfig Config { get; set; }
+    public ComputeOrganizationSecurityPolicyRuleSpecMatchConfig Config { get; set; }
 
     /// <summary>A description of the rule.</summary>
     [JsonPropertyName("description")]
@@ -57,7 +63,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatch
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpec
+public partial class ComputeOrganizationSecurityPolicyRuleSpec
 {
     /// <summary>The Action to perform when the client connection triggers the rule. Can currently be either "allow", "deny" or "goto_next".</summary>
     [JsonPropertyName("action")]
@@ -77,7 +83,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpec
 
     /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
     [JsonPropertyName("match")]
-    public V1alpha1ComputeOrganizationSecurityPolicyRuleSpecMatch Match { get; set; }
+    public ComputeOrganizationSecurityPolicyRuleSpecMatch Match { get; set; }
 
     /// <summary>Immutable. The ID of the OrganizationSecurityPolicy this rule applies to.</summary>
     [JsonPropertyName("policyId")]
@@ -102,7 +108,7 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatusConditions
+public partial class ComputeOrganizationSecurityPolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -127,11 +133,11 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatusConditio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatus
+public partial class ComputeOrganizationSecurityPolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ComputeOrganizationSecurityPolicyRuleStatusConditions>? Conditions { get; set; }
+    public IList<ComputeOrganizationSecurityPolicyRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -140,30 +146,25 @@ public partial class V1alpha1ComputeOrganizationSecurityPolicyRuleStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ComputeOrganizationSecurityPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeOrganizationSecurityPolicyRuleSpec>, IStatus<V1alpha1ComputeOrganizationSecurityPolicyRuleStatus>
+public partial class ComputeOrganizationSecurityPolicyRule
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ComputeOrganizationSecurityPolicyRule";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeorganizationsecuritypolicyrules";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeOrganizationSecurityPolicyRuleMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ComputeOrganizationSecurityPolicyRuleSpec Spec { get; set; }
+    public ComputeOrganizationSecurityPolicyRuleSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ComputeOrganizationSecurityPolicyRuleStatus? Status { get; set; }
+    public ComputeOrganizationSecurityPolicyRuleStatus? Status { get; set; }
 }

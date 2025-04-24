@@ -156,3 +156,29 @@ public partial class V1User : IKubernetesObject<V1ObjectMeta>, ISpec<V1UserSpec>
     [JsonPropertyName("status")]
     public V1UserStatus? Status { get; set; }
 }
+
+/// <summary>User is an Azure SQL user</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1UserList : IKubernetesObject<V1ListMeta>, IItems<V1User>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "UserList";
+    public const string KubeGroup = "sql.azure.com";
+    public const string KubePluralName = "users";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1User> Items { get; set; }
+}

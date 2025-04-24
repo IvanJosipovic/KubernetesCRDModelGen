@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DataprocWorkflowTemplateMetadata
+{
+}
+
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConfig
+public partial class DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
     [JsonPropertyName("driverLogLevels")]
@@ -19,7 +25,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConf
 
 /// <summary>Immutable. Optional. Job is a Hadoop job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob
+public partial class DataprocWorkflowTemplateSpecJobsHadoopJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.</summary>
     [JsonPropertyName("archiveUris")]
@@ -39,7 +45,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob
 
     /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConfig? LoggingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecJobsHadoopJobLoggingConfig? LoggingConfig { get; set; }
 
     /// <summary>Immutable. The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`.</summary>
     [JsonPropertyName("mainClass")]
@@ -56,7 +62,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob
 
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJobQueryList
+public partial class DataprocWorkflowTemplateSpecJobsHiveJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
     [JsonPropertyName("queries")]
@@ -65,7 +71,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJobQueryList
 
 /// <summary>Immutable. Optional. Job is a Hive job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJob
+public partial class DataprocWorkflowTemplateSpecJobsHiveJob
 {
     /// <summary>Immutable. Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.</summary>
     [JsonPropertyName("continueOnFailure")]
@@ -85,7 +91,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJob
 
     /// <summary>Immutable. A list of queries.</summary>
     [JsonPropertyName("queryList")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsHiveJobQueryList? QueryList { get; set; }
+    public DataprocWorkflowTemplateSpecJobsHiveJobQueryList? QueryList { get; set; }
 
     /// <summary>Immutable. Optional. Mapping of query variable names to values (equivalent to the Hive command: `SET name="value";`).</summary>
     [JsonPropertyName("scriptVariables")]
@@ -94,7 +100,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsHiveJob
 
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig
+public partial class DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
     [JsonPropertyName("driverLogLevels")]
@@ -103,7 +109,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig
 
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobQueryList
+public partial class DataprocWorkflowTemplateSpecJobsPigJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
     [JsonPropertyName("queries")]
@@ -112,7 +118,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJobQueryList
 
 /// <summary>Immutable. Optional. Job is a Pig job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
+public partial class DataprocWorkflowTemplateSpecJobsPigJob
 {
     /// <summary>Immutable. Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.</summary>
     [JsonPropertyName("continueOnFailure")]
@@ -124,7 +130,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
 
     /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig? LoggingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPigJobLoggingConfig? LoggingConfig { get; set; }
 
     /// <summary>Immutable. Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.</summary>
     [JsonPropertyName("properties")]
@@ -136,7 +142,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
 
     /// <summary>Immutable. A list of queries.</summary>
     [JsonPropertyName("queryList")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPigJobQueryList? QueryList { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPigJobQueryList? QueryList { get; set; }
 
     /// <summary>Immutable. Optional. Mapping of query variable names to values (equivalent to the Pig command: `name=[value]`).</summary>
     [JsonPropertyName("scriptVariables")]
@@ -145,7 +151,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPigJob
 
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConfig
+public partial class DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
     [JsonPropertyName("driverLogLevels")]
@@ -154,7 +160,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConf
 
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList
+public partial class DataprocWorkflowTemplateSpecJobsPrestoJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
     [JsonPropertyName("queries")]
@@ -163,7 +169,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList
 
 /// <summary>Immutable. Optional. Job is a Presto job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob
+public partial class DataprocWorkflowTemplateSpecJobsPrestoJob
 {
     /// <summary>Immutable. Optional. Presto client tags to attach to this query</summary>
     [JsonPropertyName("clientTags")]
@@ -175,7 +181,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob
 
     /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConfig? LoggingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPrestoJobLoggingConfig? LoggingConfig { get; set; }
 
     /// <summary>Immutable. Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats</summary>
     [JsonPropertyName("outputFormat")]
@@ -191,12 +197,12 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob
 
     /// <summary>Immutable. A list of queries.</summary>
     [JsonPropertyName("queryList")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPrestoJobQueryList? QueryList { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPrestoJobQueryList? QueryList { get; set; }
 }
 
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJobLoggingConfig
+public partial class DataprocWorkflowTemplateSpecJobsPysparkJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
     [JsonPropertyName("driverLogLevels")]
@@ -205,7 +211,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJobLoggingCon
 
 /// <summary>Immutable. Optional. Job is a PySpark job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob
+public partial class DataprocWorkflowTemplateSpecJobsPysparkJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
     [JsonPropertyName("archiveUris")]
@@ -225,7 +231,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob
 
     /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPysparkJobLoggingConfig? LoggingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPysparkJobLoggingConfig? LoggingConfig { get; set; }
 
     /// <summary>Immutable. Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file.</summary>
     [JsonPropertyName("mainPythonFileUri")]
@@ -242,7 +248,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob
 
 /// <summary>Immutable. Optional. Job scheduling configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsScheduling
+public partial class DataprocWorkflowTemplateSpecJobsScheduling
 {
     /// <summary>Immutable. Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.</summary>
     [JsonPropertyName("maxFailuresPerHour")]
@@ -255,7 +261,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsScheduling
 
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfig
+public partial class DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
     [JsonPropertyName("driverLogLevels")]
@@ -264,7 +270,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfi
 
 /// <summary>Immutable. Optional. Job is a Spark job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJob
+public partial class DataprocWorkflowTemplateSpecJobsSparkJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
     [JsonPropertyName("archiveUris")]
@@ -284,7 +290,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJob
 
     /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfig? LoggingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecJobsSparkJobLoggingConfig? LoggingConfig { get; set; }
 
     /// <summary>Immutable. The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in `jar_file_uris`.</summary>
     [JsonPropertyName("mainClass")]
@@ -301,7 +307,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkJob
 
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConfig
+public partial class DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
     [JsonPropertyName("driverLogLevels")]
@@ -310,7 +316,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConf
 
 /// <summary>Immutable. Optional. Job is a SparkR job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob
+public partial class DataprocWorkflowTemplateSpecJobsSparkRJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.</summary>
     [JsonPropertyName("archiveUris")]
@@ -326,7 +332,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob
 
     /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConfig? LoggingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecJobsSparkRJobLoggingConfig? LoggingConfig { get; set; }
 
     /// <summary>Immutable. Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.</summary>
     [JsonPropertyName("mainRFileUri")]
@@ -339,7 +345,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob
 
 /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingConfig
+public partial class DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingConfig
 {
     /// <summary>Immutable. The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'</summary>
     [JsonPropertyName("driverLogLevels")]
@@ -348,7 +354,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingCo
 
 /// <summary>Immutable. A list of queries.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList
+public partial class DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList
 {
     /// <summary>Immutable. Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": [ "query1", "query2", "query3;query4", ] } }</summary>
     [JsonPropertyName("queries")]
@@ -357,7 +363,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList
 
 /// <summary>Immutable. Optional. Job is a SparkSql job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
+public partial class DataprocWorkflowTemplateSpecJobsSparkSqlJob
 {
     /// <summary>Immutable. Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.</summary>
     [JsonPropertyName("jarFileUris")]
@@ -365,7 +371,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
 
     /// <summary>Immutable. Optional. The runtime log config for job execution.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingConfig? LoggingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecJobsSparkSqlJobLoggingConfig? LoggingConfig { get; set; }
 
     /// <summary>Immutable. Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.</summary>
     [JsonPropertyName("properties")]
@@ -377,7 +383,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
 
     /// <summary>Immutable. A list of queries.</summary>
     [JsonPropertyName("queryList")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList? QueryList { get; set; }
+    public DataprocWorkflowTemplateSpecJobsSparkSqlJobQueryList? QueryList { get; set; }
 
     /// <summary>Immutable. Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).</summary>
     [JsonPropertyName("scriptVariables")]
@@ -386,15 +392,15 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecJobs
+public partial class DataprocWorkflowTemplateSpecJobs
 {
     /// <summary>Immutable. Optional. Job is a Hadoop job.</summary>
     [JsonPropertyName("hadoopJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsHadoopJob? HadoopJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsHadoopJob? HadoopJob { get; set; }
 
     /// <summary>Immutable. Optional. Job is a Hive job.</summary>
     [JsonPropertyName("hiveJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsHiveJob? HiveJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsHiveJob? HiveJob { get; set; }
 
     /// <summary>Immutable. Optional. The labels to associate with this job. Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: p{Ll}p{Lo}{0,62} Label values must be between 1 and 63 characters long, and must conform to the following regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 32 labels can be associated with a given job.</summary>
     [JsonPropertyName("labels")]
@@ -402,7 +408,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobs
 
     /// <summary>Immutable. Optional. Job is a Pig job.</summary>
     [JsonPropertyName("pigJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPigJob? PigJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPigJob? PigJob { get; set; }
 
     /// <summary>Immutable. Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.</summary>
     [JsonPropertyName("prerequisiteStepIds")]
@@ -410,27 +416,27 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobs
 
     /// <summary>Immutable. Optional. Job is a Presto job.</summary>
     [JsonPropertyName("prestoJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPrestoJob? PrestoJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPrestoJob? PrestoJob { get; set; }
 
     /// <summary>Immutable. Optional. Job is a PySpark job.</summary>
     [JsonPropertyName("pysparkJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsPysparkJob? PysparkJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsPysparkJob? PysparkJob { get; set; }
 
     /// <summary>Immutable. Optional. Job scheduling configuration.</summary>
     [JsonPropertyName("scheduling")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsScheduling? Scheduling { get; set; }
+    public DataprocWorkflowTemplateSpecJobsScheduling? Scheduling { get; set; }
 
     /// <summary>Immutable. Optional. Job is a Spark job.</summary>
     [JsonPropertyName("sparkJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsSparkJob? SparkJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsSparkJob? SparkJob { get; set; }
 
     /// <summary>Immutable. Optional. Job is a SparkR job.</summary>
     [JsonPropertyName("sparkRJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsSparkRJob? SparkRJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsSparkRJob? SparkRJob { get; set; }
 
     /// <summary>Immutable. Optional. Job is a SparkSql job.</summary>
     [JsonPropertyName("sparkSqlJob")]
-    public V1beta1DataprocWorkflowTemplateSpecJobsSparkSqlJob? SparkSqlJob { get; set; }
+    public DataprocWorkflowTemplateSpecJobsSparkSqlJob? SparkSqlJob { get; set; }
 
     /// <summary>Immutable. Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in prerequisiteStepIds field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.</summary>
     [JsonPropertyName("stepId")]
@@ -439,7 +445,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecJobs
 
 /// <summary>Immutable. Validation based on regular expressions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationRegex
+public partial class DataprocWorkflowTemplateSpecParametersValidationRegex
 {
     /// <summary>Immutable. Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).</summary>
     [JsonPropertyName("regexes")]
@@ -448,7 +454,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationRege
 
 /// <summary>Immutable. Validation based on a list of allowed values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationValues
+public partial class DataprocWorkflowTemplateSpecParametersValidationValues
 {
     /// <summary>Immutable. Required. List of allowed values for the parameter.</summary>
     [JsonPropertyName("values")]
@@ -457,20 +463,20 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidationValu
 
 /// <summary>Immutable. Optional. Validation rules to be applied to this parameter's value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecParametersValidation
+public partial class DataprocWorkflowTemplateSpecParametersValidation
 {
     /// <summary>Immutable. Validation based on regular expressions.</summary>
     [JsonPropertyName("regex")]
-    public V1beta1DataprocWorkflowTemplateSpecParametersValidationRegex? Regex { get; set; }
+    public DataprocWorkflowTemplateSpecParametersValidationRegex? Regex { get; set; }
 
     /// <summary>Immutable. Validation based on a list of allowed values.</summary>
     [JsonPropertyName("values")]
-    public V1beta1DataprocWorkflowTemplateSpecParametersValidationValues? Values { get; set; }
+    public DataprocWorkflowTemplateSpecParametersValidationValues? Values { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecParameters
+public partial class DataprocWorkflowTemplateSpecParameters
 {
     /// <summary>Immutable. Optional. Brief description of the parameter. Must not exceed 1024 characters.</summary>
     [JsonPropertyName("description")]
@@ -486,12 +492,12 @@ public partial class V1beta1DataprocWorkflowTemplateSpecParameters
 
     /// <summary>Immutable. Optional. Validation rules to be applied to this parameter's value.</summary>
     [JsonPropertyName("validation")]
-    public V1beta1DataprocWorkflowTemplateSpecParametersValidation? Validation { get; set; }
+    public DataprocWorkflowTemplateSpecParametersValidation? Validation { get; set; }
 }
 
 /// <summary>Immutable. Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementClusterSelector
+public partial class DataprocWorkflowTemplateSpecPlacementClusterSelector
 {
     /// <summary>Immutable. Required. The cluster labels. Cluster must have all labels to match.</summary>
     [JsonPropertyName("clusterLabels")]
@@ -504,7 +510,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementClusterSelector
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef
 {
     /// <summary>Optional. The autoscaling policy used by the cluster. Only resource names including projectid and location (region) are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` * `projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]` Note that the policy must be in the same project and Dataproc region.  Allowed value: The Google Cloud resource name of a `DataprocAutoscalingPolicy` resource (format: `projects/{{project}}/locations/{{location}}/autoscalingPolicies/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -521,16 +527,16 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfig
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("policyRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef? PolicyRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfigPolicyRef? PolicyRef { get; set; }
 }
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef
 {
     /// <summary>Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.  Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -547,16 +553,16 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Encryption settings for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfig
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("gcePdKmsKeyRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef? GcePdKmsKeyRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfigGcePdKmsKeyRef? GcePdKmsKeyRef { get; set; }
 }
 
 /// <summary>Immutable. Optional. Port/endpoint configuration for this cluster</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEndpointConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEndpointConfig
 {
     /// <summary>Immutable. Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.</summary>
     [JsonPropertyName("enableHttpPortAccess")]
@@ -565,7 +571,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNetworkRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNetworkRef
 {
     /// <summary>Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither `network_uri` nor `subnetwork_uri` is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see [Using Subnetworks](https://cloud.google.com/compute/docs/subnetworks) for more information). A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default` * `projects/[project_id]/regions/global/default` * `default`  Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -582,7 +588,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef
 {
     /// <summary>Required. The URI of a sole-tenant [node group resource](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups) that the cluster will be created on. A full URL, partial URI, or node group name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1` * `node-group-1`  Allowed value: The `selfLink` field of a `ComputeNodeGroup` resource.</summary>
     [JsonPropertyName("external")]
@@ -599,16 +605,16 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Node Group Affinity for sole-tenant clusters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("nodeGroupRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef NodeGroupRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityNodeGroupRef NodeGroupRef { get; set; }
 }
 
 /// <summary>Immutable. Optional. Reservation Affinity for consuming Zonal reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigReservationAffinity
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigReservationAffinity
 {
     /// <summary>Immutable. Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION</summary>
     [JsonPropertyName("consumeReservationType")]
@@ -625,7 +631,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigServiceAccountRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigServiceAccountRef
 {
     /// <summary>Optional. The [Dataproc service account](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see [VM Data Plane identity](https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -642,7 +648,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig
 {
     /// <summary>Immutable. Optional. Defines whether instances have integrity monitoring enabled. Integrity monitoring compares the most recent boot measurements to the integrity policy baseline and returns a pair of pass/fail results depending on whether they match or not.</summary>
     [JsonPropertyName("enableIntegrityMonitoring")]
@@ -659,7 +665,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigSubnetworkRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigSubnetworkRef
 {
     /// <summary>Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0` * `projects/[project_id]/regions/us-east1/subnetworks/sub0` * `sub0`  Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -676,7 +682,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. The shared Compute Engine config settings for all instances in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfig
 {
     /// <summary>Immutable. Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.</summary>
     [JsonPropertyName("internalIPOnly")]
@@ -688,11 +694,11 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNetworkRef? NetworkRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. Optional. Node Group Affinity for sole-tenant clusters.</summary>
     [JsonPropertyName("nodeGroupAffinity")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity? NodeGroupAffinity { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity? NodeGroupAffinity { get; set; }
 
     /// <summary>Immutable. Optional. The type of IPv6 access for a cluster. Possible values: PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED, INHERIT_FROM_SUBNETWORK, OUTBOUND, BIDIRECTIONAL</summary>
     [JsonPropertyName("privateIPv6GoogleAccess")]
@@ -700,11 +706,11 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
     /// <summary>Immutable. Optional. Reservation Affinity for consuming Zonal reservation.</summary>
     [JsonPropertyName("reservationAffinity")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigReservationAffinity? ReservationAffinity { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigReservationAffinity? ReservationAffinity { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("serviceAccountRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigServiceAccountRef? ServiceAccountRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigServiceAccountRef? ServiceAccountRef { get; set; }
 
     /// <summary>Immutable. Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: * https://www.googleapis.com/auth/cloud.useraccounts.readonly * https://www.googleapis.com/auth/devstorage.read_write * https://www.googleapis.com/auth/logging.write If no scopes are specified, the following defaults are also provided: * https://www.googleapis.com/auth/bigquery * https://www.googleapis.com/auth/bigtable.admin.table * https://www.googleapis.com/auth/bigtable.data * https://www.googleapis.com/auth/devstorage.full_control</summary>
     [JsonPropertyName("serviceAccountScopes")]
@@ -712,11 +718,11 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
     /// <summary>Immutable. Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs.</summary>
     [JsonPropertyName("shieldedInstanceConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig? ShieldedInstanceConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigShieldedInstanceConfig? ShieldedInstanceConfig { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("subnetworkRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigSubnetworkRef? SubnetworkRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfigSubnetworkRef? SubnetworkRef { get; set; }
 
     /// <summary>Immutable. The Compute Engine tags to add to all instances (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).</summary>
     [JsonPropertyName("tags")]
@@ -729,7 +735,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigInitializationActions
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigInitializationActions
 {
     /// <summary>Immutable. Required. Cloud Storage URI of executable file.</summary>
     [JsonPropertyName("executableFile")]
@@ -742,7 +748,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Lifecycle setting for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigLifecycleConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigLifecycleConfig
 {
     /// <summary>Immutable. Optional. The time when cluster will be auto-deleted (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
     [JsonPropertyName("autoDeleteTime")]
@@ -759,7 +765,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigAccelerators
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
     [JsonPropertyName("acceleratorCount")]
@@ -772,7 +778,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigDiskConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
     [JsonPropertyName("bootDiskSizeGb")]
@@ -789,7 +795,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigImageRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
     [JsonPropertyName("external")]
@@ -806,19 +812,19 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. The Compute Engine config settings for the master instance in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
     [JsonPropertyName("accelerators")]
-    public IList<V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigAccelerators>? Accelerators { get; set; }
+    public IList<DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigAccelerators>? Accelerators { get; set; }
 
     /// <summary>Immutable. Optional. Disk option config settings.</summary>
     [JsonPropertyName("diskConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigDiskConfig? DiskConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigDiskConfig? DiskConfig { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("imageRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigImageRef? ImageRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfigImageRef? ImageRef { get; set; }
 
     /// <summary>Immutable. Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.</summary>
     [JsonPropertyName("machineType")]
@@ -839,7 +845,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
     [JsonPropertyName("acceleratorCount")]
@@ -852,7 +858,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
     [JsonPropertyName("bootDiskSizeGb")]
@@ -869,7 +875,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigImageRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
     [JsonPropertyName("external")]
@@ -886,19 +892,19 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. The Compute Engine config settings for additional worker instances in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
     [JsonPropertyName("accelerators")]
-    public IList<V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators>? Accelerators { get; set; }
+    public IList<DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigAccelerators>? Accelerators { get; set; }
 
     /// <summary>Immutable. Optional. Disk option config settings.</summary>
     [JsonPropertyName("diskConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig? DiskConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig? DiskConfig { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("imageRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigImageRef? ImageRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfigImageRef? ImageRef { get; set; }
 
     /// <summary>Immutable. Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.</summary>
     [JsonPropertyName("machineType")]
@@ -919,7 +925,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfigKmsKeyRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfigKmsKeyRef
 {
     /// <summary>Optional. The uri of the KMS key used to encrypt various sensitive files.  Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -936,7 +942,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Kerberos related configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig
 {
     /// <summary>Immutable. Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.</summary>
     [JsonPropertyName("crossRealmTrustAdminServer")]
@@ -976,7 +982,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfigKmsKeyRef? KmsKeyRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfigKmsKeyRef? KmsKeyRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the on-cluster Kerberos realm. If not specified, the uppercased domain of hostnames will be the realm.</summary>
     [JsonPropertyName("realm")]
@@ -1001,16 +1007,16 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Security settings for the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfig
 {
     /// <summary>Immutable. Optional. Kerberos related configuration.</summary>
     [JsonPropertyName("kerberosConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig? KerberosConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfigKerberosConfig? KerberosConfig { get; set; }
 }
 
 /// <summary>Immutable. Optional. The config settings for software inside the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSoftwareConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSoftwareConfig
 {
     /// <summary>Immutable. Optional. The version of software inside the cluster. It must be one of the supported [Dataproc Versions](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the ["preview" version](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.</summary>
     [JsonPropertyName("imageVersion")]
@@ -1027,7 +1033,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigStagingBucketRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigStagingBucketRef
 {
     /// <summary>Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see [Dataproc staging bucket](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -1044,7 +1050,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigTempBucketRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigTempBucketRef
 {
     /// <summary>Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. **This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.**  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -1061,7 +1067,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigAccelerators
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigAccelerators
 {
     /// <summary>Immutable. The number of the accelerator cards of this type exposed to this instance.</summary>
     [JsonPropertyName("acceleratorCount")]
@@ -1074,7 +1080,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. Disk option config settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigDiskConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigDiskConfig
 {
     /// <summary>Immutable. Optional. Size in GB of the boot disk (default is 500GB).</summary>
     [JsonPropertyName("bootDiskSizeGb")]
@@ -1091,7 +1097,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigImageRef
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigImageRef
 {
     /// <summary>Optional. The Compute Engine image resource used for cluster instances. The URI can represent an image or image family. Image examples: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]` * `projects/[project_id]/global/images/[image-id]` * `image-id` Image family examples. Dataproc will use the most recent image from the family: * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]` * `projects/[project_id]/global/images/family/[custom-image-family-name]` If the URI is unspecified, it will be inferred from `SoftwareConfig.image_version` or the system default.  Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
     [JsonPropertyName("external")]
@@ -1108,19 +1114,19 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Optional. The Compute Engine config settings for worker instances in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig
 {
     /// <summary>Immutable. Optional. The Compute Engine accelerator configuration for these instances.</summary>
     [JsonPropertyName("accelerators")]
-    public IList<V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigAccelerators>? Accelerators { get; set; }
+    public IList<DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigAccelerators>? Accelerators { get; set; }
 
     /// <summary>Immutable. Optional. Disk option config settings.</summary>
     [JsonPropertyName("diskConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigDiskConfig? DiskConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigDiskConfig? DiskConfig { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("imageRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigImageRef? ImageRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfigImageRef? ImageRef { get; set; }
 
     /// <summary>Immutable. Optional. The Compute Engine machine type used for cluster instances. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2` * `n1-standard-2` **Auto Zone Exception**: If you are using the Dataproc [Auto Zone Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, `n1-standard-2`.</summary>
     [JsonPropertyName("machineType")]
@@ -1141,64 +1147,64 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterC
 
 /// <summary>Immutable. Required. The cluster configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfig
+public partial class DataprocWorkflowTemplateSpecPlacementManagedClusterConfig
 {
     /// <summary>Immutable. Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.</summary>
     [JsonPropertyName("autoscalingConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfig? AutoscalingConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigAutoscalingConfig? AutoscalingConfig { get; set; }
 
     /// <summary>Immutable. Optional. Encryption settings for the cluster.</summary>
     [JsonPropertyName("encryptionConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfig? EncryptionConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEncryptionConfig? EncryptionConfig { get; set; }
 
     /// <summary>Immutable. Optional. Port/endpoint configuration for this cluster</summary>
     [JsonPropertyName("endpointConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEndpointConfig? EndpointConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigEndpointConfig? EndpointConfig { get; set; }
 
     /// <summary>Immutable. Optional. The shared Compute Engine config settings for all instances in a cluster.</summary>
     [JsonPropertyName("gceClusterConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfig? GceClusterConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigGceClusterConfig? GceClusterConfig { get; set; }
 
     /// <summary>Immutable. Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi</summary>
     [JsonPropertyName("initializationActions")]
-    public IList<V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigInitializationActions>? InitializationActions { get; set; }
+    public IList<DataprocWorkflowTemplateSpecPlacementManagedClusterConfigInitializationActions>? InitializationActions { get; set; }
 
     /// <summary>Immutable. Optional. Lifecycle setting for the cluster.</summary>
     [JsonPropertyName("lifecycleConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigLifecycleConfig? LifecycleConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigLifecycleConfig? LifecycleConfig { get; set; }
 
     /// <summary>Immutable. Optional. The Compute Engine config settings for the master instance in a cluster.</summary>
     [JsonPropertyName("masterConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfig? MasterConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigMasterConfig? MasterConfig { get; set; }
 
     /// <summary>Immutable. Optional. The Compute Engine config settings for additional worker instances in a cluster.</summary>
     [JsonPropertyName("secondaryWorkerConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfig? SecondaryWorkerConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecondaryWorkerConfig? SecondaryWorkerConfig { get; set; }
 
     /// <summary>Immutable. Optional. Security settings for the cluster.</summary>
     [JsonPropertyName("securityConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfig? SecurityConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSecurityConfig? SecurityConfig { get; set; }
 
     /// <summary>Immutable. Optional. The config settings for software inside the cluster.</summary>
     [JsonPropertyName("softwareConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSoftwareConfig? SoftwareConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigSoftwareConfig? SoftwareConfig { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("stagingBucketRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigStagingBucketRef? StagingBucketRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigStagingBucketRef? StagingBucketRef { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("tempBucketRef")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigTempBucketRef? TempBucketRef { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigTempBucketRef? TempBucketRef { get; set; }
 
     /// <summary>Immutable. Optional. The Compute Engine config settings for worker instances in a cluster.</summary>
     [JsonPropertyName("workerConfig")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
 
 /// <summary>Immutable. A cluster that is managed by the workflow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster
+public partial class DataprocWorkflowTemplateSpecPlacementManagedCluster
 {
     /// <summary>Immutable. Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.</summary>
     [JsonPropertyName("clusterName")]
@@ -1206,7 +1212,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster
 
     /// <summary>Immutable. Required. The cluster configuration.</summary>
     [JsonPropertyName("config")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedClusterConfig Config { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedClusterConfig Config { get; set; }
 
     /// <summary>Immutable. Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: p{Ll}p{Lo}{0,62} Label values must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: [p{Ll}p{Lo}p{N}_-]{0,63} No more than 32 labels can be associated with a given cluster.</summary>
     [JsonPropertyName("labels")]
@@ -1215,20 +1221,20 @@ public partial class V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster
 
 /// <summary>Immutable. Required. WorkflowTemplate scheduling information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecPlacement
+public partial class DataprocWorkflowTemplateSpecPlacement
 {
     /// <summary>Immutable. Optional. A selector that chooses target cluster for jobs based on metadata. The selector is evaluated at the time each job is submitted.</summary>
     [JsonPropertyName("clusterSelector")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementClusterSelector? ClusterSelector { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementClusterSelector? ClusterSelector { get; set; }
 
     /// <summary>Immutable. A cluster that is managed by the workflow.</summary>
     [JsonPropertyName("managedCluster")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacementManagedCluster? ManagedCluster { get; set; }
+    public DataprocWorkflowTemplateSpecPlacementManagedCluster? ManagedCluster { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpecProjectRef
+public partial class DataprocWorkflowTemplateSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -1245,7 +1251,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateSpec
+public partial class DataprocWorkflowTemplateSpec
 {
     /// <summary>Immutable. Optional. Timeout duration for the DAG of jobs, expressed in seconds (see [JSON representation of duration](https://developers.google.com/protocol-buffers/docs/proto3#json)). The timeout duration must be from 10 minutes ("600s") to 24 hours ("86400s"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a [managed cluster](/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.</summary>
     [JsonPropertyName("dagTimeout")]
@@ -1253,7 +1259,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpec
 
     /// <summary>Immutable. Required. The Directed Acyclic Graph of Jobs to submit.</summary>
     [JsonPropertyName("jobs")]
-    public IList<V1beta1DataprocWorkflowTemplateSpecJobs> Jobs { get; set; }
+    public IList<DataprocWorkflowTemplateSpecJobs> Jobs { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -1261,15 +1267,15 @@ public partial class V1beta1DataprocWorkflowTemplateSpec
 
     /// <summary>Immutable. Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.</summary>
     [JsonPropertyName("parameters")]
-    public IList<V1beta1DataprocWorkflowTemplateSpecParameters>? Parameters { get; set; }
+    public IList<DataprocWorkflowTemplateSpecParameters>? Parameters { get; set; }
 
     /// <summary>Immutable. Required. WorkflowTemplate scheduling information.</summary>
     [JsonPropertyName("placement")]
-    public V1beta1DataprocWorkflowTemplateSpecPlacement Placement { get; set; }
+    public DataprocWorkflowTemplateSpecPlacement Placement { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DataprocWorkflowTemplateSpecProjectRef? ProjectRef { get; set; }
+    public DataprocWorkflowTemplateSpecProjectRef? ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -1278,7 +1284,7 @@ public partial class V1beta1DataprocWorkflowTemplateSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusConditions
+public partial class DataprocWorkflowTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -1303,7 +1309,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigEndpointConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigEndpointConfig
 {
     /// <summary>Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.</summary>
     [JsonPropertyName("httpPorts")]
@@ -1312,7 +1318,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigLifecycleConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigLifecycleConfig
 {
     /// <summary>Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).</summary>
     [JsonPropertyName("idleStartTime")]
@@ -1321,7 +1327,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
     [JsonPropertyName("instanceGroupManagerName")]
@@ -1334,7 +1340,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
     [JsonPropertyName("instanceNames")]
@@ -1346,12 +1352,12 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
     /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
     [JsonPropertyName("managedGroupConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
 
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
     [JsonPropertyName("instanceGroupManagerName")]
@@ -1364,7 +1370,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
     [JsonPropertyName("instanceNames")]
@@ -1376,12 +1382,12 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
     /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
     [JsonPropertyName("managedGroupConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
 
 /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig
 {
     /// <summary>Output only. The name of the Instance Group Manager for this group.</summary>
     [JsonPropertyName("instanceGroupManagerName")]
@@ -1394,7 +1400,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig
 {
     /// <summary>Output only. The list of instance names. Dataproc derives the names from `cluster_name`, `num_instances`, and the instance group.</summary>
     [JsonPropertyName("instanceNames")]
@@ -1406,59 +1412,59 @@ public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluste
 
     /// <summary>Output only. The config for Compute Engine Instance Group Manager that manages this group. This is only used for preemptible instance groups.</summary>
     [JsonPropertyName("managedGroupConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfigManagedGroupConfig? ManagedGroupConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfig
+public partial class DataprocWorkflowTemplateStatusPlacementManagedClusterConfig
 {
     /// <summary></summary>
     [JsonPropertyName("endpointConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigEndpointConfig? EndpointConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigEndpointConfig? EndpointConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("lifecycleConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigLifecycleConfig? LifecycleConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigLifecycleConfig? LifecycleConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("masterConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfig? MasterConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigMasterConfig? MasterConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("secondaryWorkerConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfig? SecondaryWorkerConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigSecondaryWorkerConfig? SecondaryWorkerConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("workerConfig")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfigWorkerConfig? WorkerConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluster
+public partial class DataprocWorkflowTemplateStatusPlacementManagedCluster
 {
     /// <summary></summary>
     [JsonPropertyName("config")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedClusterConfig? Config { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedClusterConfig? Config { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatusPlacement
+public partial class DataprocWorkflowTemplateStatusPlacement
 {
     /// <summary></summary>
     [JsonPropertyName("managedCluster")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacementManagedCluster? ManagedCluster { get; set; }
+    public DataprocWorkflowTemplateStatusPlacementManagedCluster? ManagedCluster { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataprocWorkflowTemplateStatus
+public partial class DataprocWorkflowTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DataprocWorkflowTemplateStatusConditions>? Conditions { get; set; }
+    public IList<DataprocWorkflowTemplateStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time template was created.</summary>
     [JsonPropertyName("createTime")]
@@ -1470,7 +1476,7 @@ public partial class V1beta1DataprocWorkflowTemplateStatus
 
     /// <summary></summary>
     [JsonPropertyName("placement")]
-    public V1beta1DataprocWorkflowTemplateStatusPlacement? Placement { get; set; }
+    public DataprocWorkflowTemplateStatusPlacement? Placement { get; set; }
 
     /// <summary>Output only. The time template was last updated.</summary>
     [JsonPropertyName("updateTime")]
@@ -1483,30 +1489,25 @@ public partial class V1beta1DataprocWorkflowTemplateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataprocWorkflowTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataprocWorkflowTemplateSpec>, IStatus<V1beta1DataprocWorkflowTemplateStatus>
+public partial class DataprocWorkflowTemplate
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataprocWorkflowTemplate";
-    public const string KubeGroup = "dataproc.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataprocworkflowtemplates";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DataprocWorkflowTemplateMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1DataprocWorkflowTemplateSpec Spec { get; set; }
+    public DataprocWorkflowTemplateSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1DataprocWorkflowTemplateStatus? Status { get; set; }
+    public DataprocWorkflowTemplateStatus? Status { get; set; }
 }

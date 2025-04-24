@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class BeyondCorpAppConnectionMetadata
+{
+}
+
 /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BeyondCorpAppConnectionSpecApplicationEndpoint
+public partial class BeyondCorpAppConnectionSpecApplicationEndpoint
 {
     /// <summary>Hostname or IP address of the remote application endpoint.</summary>
     [JsonPropertyName("host")]
@@ -23,7 +29,7 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecApplicationEndpoint
 
 /// <summary>Gateway used by the AppConnection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BeyondCorpAppConnectionSpecGateway
+public partial class BeyondCorpAppConnectionSpecGateway
 {
     /// <summary>AppGateway name in following format: projects/{project_id}/locations/{locationId}/appgateways/{gateway_id}.</summary>
     [JsonPropertyName("appGateway")]
@@ -44,7 +50,7 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecGateway
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BeyondCorpAppConnectionSpecProjectRef
+public partial class BeyondCorpAppConnectionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,11 +67,11 @@ public partial class V1alpha1BeyondCorpAppConnectionSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BeyondCorpAppConnectionSpec
+public partial class BeyondCorpAppConnectionSpec
 {
     /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection.</summary>
     [JsonPropertyName("applicationEndpoint")]
-    public V1alpha1BeyondCorpAppConnectionSpecApplicationEndpoint ApplicationEndpoint { get; set; }
+    public BeyondCorpAppConnectionSpecApplicationEndpoint ApplicationEndpoint { get; set; }
 
     /// <summary>List of AppConnectors that are authorised to be associated with this AppConnection.</summary>
     [JsonPropertyName("connectors")]
@@ -77,11 +83,11 @@ public partial class V1alpha1BeyondCorpAppConnectionSpec
 
     /// <summary>Gateway used by the AppConnection.</summary>
     [JsonPropertyName("gateway")]
-    public V1alpha1BeyondCorpAppConnectionSpecGateway? Gateway { get; set; }
+    public BeyondCorpAppConnectionSpecGateway? Gateway { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1BeyondCorpAppConnectionSpecProjectRef ProjectRef { get; set; }
+    public BeyondCorpAppConnectionSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the AppConnection.</summary>
     [JsonPropertyName("region")]
@@ -98,7 +104,7 @@ public partial class V1alpha1BeyondCorpAppConnectionSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BeyondCorpAppConnectionStatusConditions
+public partial class BeyondCorpAppConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -123,11 +129,11 @@ public partial class V1alpha1BeyondCorpAppConnectionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BeyondCorpAppConnectionStatus
+public partial class BeyondCorpAppConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1BeyondCorpAppConnectionStatusConditions>? Conditions { get; set; }
+    public IList<BeyondCorpAppConnectionStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -136,30 +142,25 @@ public partial class V1alpha1BeyondCorpAppConnectionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BeyondCorpAppConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BeyondCorpAppConnectionSpec>, IStatus<V1alpha1BeyondCorpAppConnectionStatus>
+public partial class BeyondCorpAppConnection
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "BeyondCorpAppConnection";
-    public const string KubeGroup = "beyondcorp.cnrm.cloud.google.com";
-    public const string KubePluralName = "beyondcorpappconnections";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public BeyondCorpAppConnectionMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1BeyondCorpAppConnectionSpec Spec { get; set; }
+    public BeyondCorpAppConnectionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1BeyondCorpAppConnectionStatus? Status { get; set; }
+    public BeyondCorpAppConnectionStatus? Status { get; set; }
 }

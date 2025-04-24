@@ -318,3 +318,29 @@ public partial class V1beta1APIRelease : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1APIReleaseStatus? Status { get; set; }
 }
+
+/// <summary>APIRelease is the Schema for the APIReleases API. Manages a API Management API Release.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1APIReleaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1APIRelease>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "APIReleaseList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "apireleases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1APIRelease> Items { get; set; }
+}

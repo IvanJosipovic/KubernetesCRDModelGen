@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configcontroller.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ConfigControllerInstanceMetadata
+{
+}
+
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfigNetworkRef
+public partial class ConfigControllerInstanceSpecManagementConfigFullManagementConfigNetworkRef
 {
     /// <summary>Existing VPC Network to put the GKE cluster and nodes in.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullMana
 
 /// <summary>Immutable. Configuration of the full (Autopilot) cluster management</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfig
+public partial class ConfigControllerInstanceSpecManagementConfigFullManagementConfig
 {
     /// <summary>Immutable. The IP address range for the cluster pod IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.</summary>
     [JsonPropertyName("clusterCidrBlock")]
@@ -47,7 +53,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullMana
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfigNetworkRef? NetworkRef { get; set; }
+    public ConfigControllerInstanceSpecManagementConfigFullManagementConfigNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. The IP address range for the cluster service IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.</summary>
     [JsonPropertyName("servicesCidrBlock")]
@@ -60,7 +66,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigFullMana
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfigNetworkRef
+public partial class ConfigControllerInstanceSpecManagementConfigStandardManagementConfigNetworkRef
 {
     /// <summary>Existing VPC Network to put the GKE cluster and nodes in.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -77,7 +83,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandard
 
 /// <summary>Immutable. Configuration of the standard (GKE) cluster management</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfig
+public partial class ConfigControllerInstanceSpecManagementConfigStandardManagementConfig
 {
     /// <summary>Immutable. The IP address range for the cluster pod IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.</summary>
     [JsonPropertyName("clusterCidrBlock")]
@@ -97,7 +103,7 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandard
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfigNetworkRef? NetworkRef { get; set; }
+    public ConfigControllerInstanceSpecManagementConfigStandardManagementConfigNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. The IP address range for the cluster service IPs. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.</summary>
     [JsonPropertyName("servicesCidrBlock")]
@@ -110,20 +116,20 @@ public partial class V1beta1ConfigControllerInstanceSpecManagementConfigStandard
 
 /// <summary>Immutable. Configuration of the cluster management</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceSpecManagementConfig
+public partial class ConfigControllerInstanceSpecManagementConfig
 {
     /// <summary>Immutable. Configuration of the full (Autopilot) cluster management</summary>
     [JsonPropertyName("fullManagementConfig")]
-    public V1beta1ConfigControllerInstanceSpecManagementConfigFullManagementConfig? FullManagementConfig { get; set; }
+    public ConfigControllerInstanceSpecManagementConfigFullManagementConfig? FullManagementConfig { get; set; }
 
     /// <summary>Immutable. Configuration of the standard (GKE) cluster management</summary>
     [JsonPropertyName("standardManagementConfig")]
-    public V1beta1ConfigControllerInstanceSpecManagementConfigStandardManagementConfig? StandardManagementConfig { get; set; }
+    public ConfigControllerInstanceSpecManagementConfigStandardManagementConfig? StandardManagementConfig { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceSpecProjectRef
+public partial class ConfigControllerInstanceSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -140,7 +146,7 @@ public partial class V1beta1ConfigControllerInstanceSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceSpec
+public partial class ConfigControllerInstanceSpec
 {
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -148,11 +154,11 @@ public partial class V1beta1ConfigControllerInstanceSpec
 
     /// <summary>Immutable. Configuration of the cluster management</summary>
     [JsonPropertyName("managementConfig")]
-    public V1beta1ConfigControllerInstanceSpecManagementConfig ManagementConfig { get; set; }
+    public ConfigControllerInstanceSpecManagementConfig ManagementConfig { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1ConfigControllerInstanceSpecProjectRef ProjectRef { get; set; }
+    public ConfigControllerInstanceSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -165,7 +171,7 @@ public partial class V1beta1ConfigControllerInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceStatusConditions
+public partial class ConfigControllerInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -190,11 +196,11 @@ public partial class V1beta1ConfigControllerInstanceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ConfigControllerInstanceStatus
+public partial class ConfigControllerInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ConfigControllerInstanceStatusConditions>? Conditions { get; set; }
+    public IList<ConfigControllerInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. KrmApiHost GCP self link used for identifying the underlying endpoint (GKE cluster currently).</summary>
     [JsonPropertyName("gkeResourceLink")]
@@ -211,30 +217,25 @@ public partial class V1beta1ConfigControllerInstanceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConfigControllerInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConfigControllerInstanceSpec>, IStatus<V1beta1ConfigControllerInstanceStatus>
+public partial class ConfigControllerInstance
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConfigControllerInstance";
-    public const string KubeGroup = "configcontroller.cnrm.cloud.google.com";
-    public const string KubePluralName = "configcontrollerinstances";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ConfigControllerInstanceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ConfigControllerInstanceSpec Spec { get; set; }
+    public ConfigControllerInstanceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ConfigControllerInstanceStatus? Status { get; set; }
+    public ConfigControllerInstanceStatus? Status { get; set; }
 }

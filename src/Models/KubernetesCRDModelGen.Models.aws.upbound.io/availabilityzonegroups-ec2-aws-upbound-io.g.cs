@@ -250,3 +250,29 @@ public partial class V1beta1AvailabilityZoneGroup : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1AvailabilityZoneGroupStatus? Status { get; set; }
 }
+
+/// <summary>AvailabilityZoneGroup is the Schema for the AvailabilityZoneGroups API. Manages an EC2 Availability Zone Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AvailabilityZoneGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AvailabilityZoneGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AvailabilityZoneGroupList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "availabilityzonegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AvailabilityZoneGroup> Items { get; set; }
+}

@@ -554,3 +554,29 @@ public partial class V1beta1TrafficPolicyInstance : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1TrafficPolicyInstanceStatus? Status { get; set; }
 }
+
+/// <summary>TrafficPolicyInstance is the Schema for the TrafficPolicyInstances API. Provides a Route53 traffic policy instance resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TrafficPolicyInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrafficPolicyInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TrafficPolicyInstanceList";
+    public const string KubeGroup = "route53.aws.upbound.io";
+    public const string KubePluralName = "trafficpolicyinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TrafficPolicyInstance> Items { get; set; }
+}

@@ -470,3 +470,29 @@ public partial class V1beta1PrivateDNSResolverOutboundEndpoint : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1PrivateDNSResolverOutboundEndpointStatus? Status { get; set; }
 }
+
+/// <summary>PrivateDNSResolverOutboundEndpoint is the Schema for the PrivateDNSResolverOutboundEndpoints API. Manages a Private DNS Resolver Outbound Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivateDNSResolverOutboundEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateDNSResolverOutboundEndpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivateDNSResolverOutboundEndpointList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "privatednsresolveroutboundendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrivateDNSResolverOutboundEndpoint> Items { get; set; }
+}

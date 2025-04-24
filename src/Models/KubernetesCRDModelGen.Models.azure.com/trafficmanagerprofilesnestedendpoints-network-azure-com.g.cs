@@ -397,3 +397,29 @@ public partial class V1api20220401storageTrafficManagerProfilesNestedEndpoint : 
     [JsonPropertyName("status")]
     public V1api20220401storageTrafficManagerProfilesNestedEndpointStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220401.TrafficManagerProfilesNestedEndpoint Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/NestedEndpoints/{endpointName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220401storageTrafficManagerProfilesNestedEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1api20220401storageTrafficManagerProfilesNestedEndpoint>
+{
+    public const string KubeApiVersion = "v1api20220401storage";
+    public const string KubeKind = "TrafficManagerProfilesNestedEndpointList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "trafficmanagerprofilesnestedendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220401storageTrafficManagerProfilesNestedEndpoint> Items { get; set; }
+}

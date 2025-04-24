@@ -282,3 +282,29 @@ public partial class V1beta1KeyPair : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1KeyPairStatus? Status { get; set; }
 }
+
+/// <summary>KeyPair is the Schema for the KeyPairs API. Provides a Key Pair resource. Currently this supports importing an existing key pair but not creating a new key pair.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1KeyPairList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KeyPair>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "KeyPairList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "keypairs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1KeyPair> Items { get; set; }
+}

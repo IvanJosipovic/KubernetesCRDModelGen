@@ -753,3 +753,29 @@ public partial class V1beta1Build : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1BuildStatus? Status { get; set; }
 }
+
+/// <summary>Build is the Schema for the Builds API. Provides a GameLift Build resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BuildList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Build>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BuildList";
+    public const string KubeGroup = "gamelift.aws.upbound.io";
+    public const string KubePluralName = "builds";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Build> Items { get; set; }
+}

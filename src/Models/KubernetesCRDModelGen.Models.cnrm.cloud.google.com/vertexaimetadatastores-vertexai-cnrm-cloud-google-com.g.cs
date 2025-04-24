@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class VertexAIMetadataStoreMetadata
+{
+}
+
 /// <summary>Immutable. Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIMetadataStoreSpecEncryptionSpec
+public partial class VertexAIMetadataStoreSpecEncryptionSpec
 {
     /// <summary>Immutable. Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -19,7 +25,7 @@ public partial class V1alpha1VertexAIMetadataStoreSpecEncryptionSpec
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIMetadataStoreSpecProjectRef
+public partial class VertexAIMetadataStoreSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -36,7 +42,7 @@ public partial class V1alpha1VertexAIMetadataStoreSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIMetadataStoreSpec
+public partial class VertexAIMetadataStoreSpec
 {
     /// <summary>Immutable. Description of the MetadataStore.</summary>
     [JsonPropertyName("description")]
@@ -44,11 +50,11 @@ public partial class V1alpha1VertexAIMetadataStoreSpec
 
     /// <summary>Immutable. Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.</summary>
     [JsonPropertyName("encryptionSpec")]
-    public V1alpha1VertexAIMetadataStoreSpecEncryptionSpec? EncryptionSpec { get; set; }
+    public VertexAIMetadataStoreSpecEncryptionSpec? EncryptionSpec { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1VertexAIMetadataStoreSpecProjectRef ProjectRef { get; set; }
+    public VertexAIMetadataStoreSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the Metadata Store. eg us-central1.</summary>
     [JsonPropertyName("region")]
@@ -61,7 +67,7 @@ public partial class V1alpha1VertexAIMetadataStoreSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIMetadataStoreStatusConditions
+public partial class VertexAIMetadataStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -86,7 +92,7 @@ public partial class V1alpha1VertexAIMetadataStoreStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIMetadataStoreStatusState
+public partial class VertexAIMetadataStoreStatusState
 {
     /// <summary>The disk utilization of the MetadataStore in bytes.</summary>
     [JsonPropertyName("diskUtilizationBytes")]
@@ -95,11 +101,11 @@ public partial class V1alpha1VertexAIMetadataStoreStatusState
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAIMetadataStoreStatus
+public partial class VertexAIMetadataStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1VertexAIMetadataStoreStatusConditions>? Conditions { get; set; }
+    public IList<VertexAIMetadataStoreStatusConditions>? Conditions { get; set; }
 
     /// <summary>The timestamp of when the MetadataStore was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -111,7 +117,7 @@ public partial class V1alpha1VertexAIMetadataStoreStatus
 
     /// <summary>State information of the MetadataStore.</summary>
     [JsonPropertyName("state")]
-    public IList<V1alpha1VertexAIMetadataStoreStatusState>? State { get; set; }
+    public IList<VertexAIMetadataStoreStatusState>? State { get; set; }
 
     /// <summary>The timestamp of when the MetadataStore was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("updateTime")]
@@ -120,30 +126,25 @@ public partial class V1alpha1VertexAIMetadataStoreStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1VertexAIMetadataStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIMetadataStoreSpec>, IStatus<V1alpha1VertexAIMetadataStoreStatus>
+public partial class VertexAIMetadataStore
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "VertexAIMetadataStore";
-    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
-    public const string KubePluralName = "vertexaimetadatastores";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public VertexAIMetadataStoreMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1VertexAIMetadataStoreSpec Spec { get; set; }
+    public VertexAIMetadataStoreSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1VertexAIMetadataStoreStatus? Status { get; set; }
+    public VertexAIMetadataStoreStatus? Status { get; set; }
 }

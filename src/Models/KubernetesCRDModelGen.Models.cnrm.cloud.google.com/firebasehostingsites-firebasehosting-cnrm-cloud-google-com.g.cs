@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebasehosting.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class FirebaseHostingSiteMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseHostingSiteSpecProjectRef
+public partial class FirebaseHostingSiteSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1FirebaseHostingSiteSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseHostingSiteSpec
+public partial class FirebaseHostingSiteSpec
 {
     /// <summary>Optional. The [ID of a Web App](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.</summary>
     [JsonPropertyName("appId")]
@@ -35,7 +41,7 @@ public partial class V1alpha1FirebaseHostingSiteSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1FirebaseHostingSiteSpecProjectRef ProjectRef { get; set; }
+    public FirebaseHostingSiteSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The siteId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -44,7 +50,7 @@ public partial class V1alpha1FirebaseHostingSiteSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseHostingSiteStatusConditions
+public partial class FirebaseHostingSiteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -69,11 +75,11 @@ public partial class V1alpha1FirebaseHostingSiteStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseHostingSiteStatus
+public partial class FirebaseHostingSiteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1FirebaseHostingSiteStatusConditions>? Conditions { get; set; }
+    public IList<FirebaseHostingSiteStatusConditions>? Conditions { get; set; }
 
     /// <summary>The default URL for the site in the form of https://{name}.web.app.</summary>
     [JsonPropertyName("defaultUrl")]
@@ -90,30 +96,25 @@ public partial class V1alpha1FirebaseHostingSiteStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1FirebaseHostingSite : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseHostingSiteSpec>, IStatus<V1alpha1FirebaseHostingSiteStatus>
+public partial class FirebaseHostingSite
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "FirebaseHostingSite";
-    public const string KubeGroup = "firebasehosting.cnrm.cloud.google.com";
-    public const string KubePluralName = "firebasehostingsites";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public FirebaseHostingSiteMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1FirebaseHostingSiteSpec Spec { get; set; }
+    public FirebaseHostingSiteSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1FirebaseHostingSiteStatus? Status { get; set; }
+    public FirebaseHostingSiteStatus? Status { get; set; }
 }

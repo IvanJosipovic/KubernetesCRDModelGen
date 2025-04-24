@@ -438,3 +438,29 @@ public partial class V1beta1VoiceConnectorTermination : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorTerminationStatus? Status { get; set; }
 }
+
+/// <summary>VoiceConnectorTermination is the Schema for the VoiceConnectorTerminations API. Enable Termination settings to control outbound calling from your SIP infrastructure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorTerminationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorTermination>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorTerminationList";
+    public const string KubeGroup = "chime.aws.upbound.io";
+    public const string KubePluralName = "voiceconnectorterminations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VoiceConnectorTermination> Items { get; set; }
+}

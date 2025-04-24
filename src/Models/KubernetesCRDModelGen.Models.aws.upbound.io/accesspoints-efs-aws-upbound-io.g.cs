@@ -571,3 +571,29 @@ public partial class V1beta1AccessPoint : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1AccessPointStatus? Status { get; set; }
 }
+
+/// <summary>AccessPoint is the Schema for the AccessPoints API. Provides an Elastic File System (EFS) access point.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccessPointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessPoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccessPointList";
+    public const string KubeGroup = "efs.aws.upbound.io";
+    public const string KubePluralName = "accesspoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccessPoint> Items { get; set; }
+}

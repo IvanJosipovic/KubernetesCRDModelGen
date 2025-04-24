@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationChannelStrategy
+public partial class MonitoringAlertPolicyMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class MonitoringAlertPolicySpecAlertStrategyNotificationChannelStrategy
 {
     /// <summary>The notification channels that these settings apply to. Each of these correspond to the name field in one of the NotificationChannel objects referenced in the notification_channels field of this AlertPolicy. The format is 'projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]'.</summary>
     [JsonPropertyName("notificationChannelNames")]
@@ -23,7 +29,7 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationCh
 
 /// <summary>Required for alert policies with a LogMatch condition. This limit is not implemented for alert policies that are not log-based.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit
+public partial class MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit
 {
     /// <summary>Not more than one notification per period.</summary>
     [JsonPropertyName("period")]
@@ -32,7 +38,7 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRa
 
 /// <summary>Control over how this alert policy's notification channels are notified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecAlertStrategy
+public partial class MonitoringAlertPolicySpecAlertStrategy
 {
     /// <summary>If an alert policy that was active has no data for this long, any open incidents will close.</summary>
     [JsonPropertyName("autoClose")]
@@ -40,16 +46,16 @@ public partial class V1beta1MonitoringAlertPolicySpecAlertStrategy
 
     /// <summary>Control over how the notification channels in 'notification_channels' are notified when this alert fires, on a per-channel basis.</summary>
     [JsonPropertyName("notificationChannelStrategy")]
-    public IList<V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationChannelStrategy>? NotificationChannelStrategy { get; set; }
+    public IList<MonitoringAlertPolicySpecAlertStrategyNotificationChannelStrategy>? NotificationChannelStrategy { get; set; }
 
     /// <summary>Required for alert policies with a LogMatch condition. This limit is not implemented for alert policies that are not log-based.</summary>
     [JsonPropertyName("notificationRateLimit")]
-    public V1beta1MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit? NotificationRateLimit { get; set; }
+    public MonitoringAlertPolicySpecAlertStrategyNotificationRateLimit? NotificationRateLimit { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentAggregations
+public partial class MonitoringAlertPolicySpecConditionsConditionAbsentAggregations
 {
     /// <summary>The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.</summary>
     [JsonPropertyName("alignmentPeriod")]
@@ -70,7 +76,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentAg
 
 /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTrigger
+public partial class MonitoringAlertPolicySpecConditionsConditionAbsentTrigger
 {
     /// <summary>The absolute number of time series that must fail the predicate for the condition to be triggered.</summary>
     [JsonPropertyName("count")]
@@ -83,11 +89,11 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTr
 
 /// <summary>A condition that checks that a time series continues to receive new data points.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsent
+public partial class MonitoringAlertPolicySpecConditionsConditionAbsent
 {
     /// <summary>Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.</summary>
     [JsonPropertyName("aggregations")]
-    public IList<V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentAggregations>? Aggregations { get; set; }
+    public IList<MonitoringAlertPolicySpecConditionsConditionAbsentAggregations>? Aggregations { get; set; }
 
     /// <summary>The amount of time that a time series must fail to report new data to be considered failing. Currently, only values that are a multiple of a minute--e.g. 60s, 120s, or 300s --are supported.</summary>
     [JsonPropertyName("duration")]
@@ -99,12 +105,12 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionAbsent
 
     /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations.</summary>
     [JsonPropertyName("trigger")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionAbsentTrigger? Trigger { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionAbsentTrigger? Trigger { get; set; }
 }
 
 /// <summary>A condition that checks for log messages matching given constraints. If set, no other conditions can be present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMatchedLog
+public partial class MonitoringAlertPolicySpecConditionsConditionMatchedLog
 {
     /// <summary>A logs-based filter.</summary>
     [JsonPropertyName("filter")]
@@ -117,7 +123,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMatchedL
 
 /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger
+public partial class MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger
 {
     /// <summary>The absolute number of time series that must fail the predicate for the condition to be triggered.</summary>
     [JsonPropertyName("count")]
@@ -130,7 +136,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitori
 
 /// <summary>A Monitoring Query Language query that outputs a boolean stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguage
+public partial class MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguage
 {
     /// <summary>The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.</summary>
     [JsonPropertyName("duration")]
@@ -146,12 +152,12 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionMonitori
 
     /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
     [JsonPropertyName("trigger")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger? Trigger { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguageTrigger? Trigger { get; set; }
 }
 
 /// <summary>A Monitoring Query Language query that outputs a boolean stream  A condition type that allows alert policies to be defined using Prometheus Query Language (PromQL).  The PrometheusQueryLanguageCondition message contains information from a Prometheus alerting rule and its associated rule group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionPrometheusQueryLanguage
+public partial class MonitoringAlertPolicySpecConditionsConditionPrometheusQueryLanguage
 {
     /// <summary>The alerting rule name of this alert in the corresponding Prometheus configuration file.  Some external tools may require this field to be populated correctly in order to refer to the original Prometheus configuration file. The rule group name and the alert name are necessary to update the relevant AlertPolicies in case the definition of the rule group changes in the future.  This field is optional. If this field is not empty, then it must be a valid Prometheus label name.</summary>
     [JsonPropertyName("alertRule")]
@@ -180,7 +186,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionPromethe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdAggregations
+public partial class MonitoringAlertPolicySpecConditionsConditionThresholdAggregations
 {
     /// <summary>The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.</summary>
     [JsonPropertyName("alignmentPeriod")]
@@ -201,7 +207,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdDenominatorAggregations
+public partial class MonitoringAlertPolicySpecConditionsConditionThresholdDenominatorAggregations
 {
     /// <summary>The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60 seconds. After per-time series alignment, each time series will contain data points only on the period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.</summary>
     [JsonPropertyName("alignmentPeriod")]
@@ -222,7 +228,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
 
 /// <summary>When this field is present, the 'MetricThreshold' condition forecasts whether the time series is predicted to violate the threshold within the 'forecastHorizon'. When this field is not set, the 'MetricThreshold' tests the current value of the timeseries against the threshold.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdForecastOptions
+public partial class MonitoringAlertPolicySpecConditionsConditionThresholdForecastOptions
 {
     /// <summary>The length of time into the future to forecast whether a timeseries will violate the threshold. If the predicted value is found to violate the threshold, and the violation is observed in all forecasts made for the Configured 'duration', then the timeseries is considered to be failing.</summary>
     [JsonPropertyName("forecastHorizon")]
@@ -231,7 +237,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
 
 /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdTrigger
+public partial class MonitoringAlertPolicySpecConditionsConditionThresholdTrigger
 {
     /// <summary>The absolute number of time series that must fail the predicate for the condition to be triggered.</summary>
     [JsonPropertyName("count")]
@@ -244,11 +250,11 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
 
 /// <summary>A condition that compares a time series against a threshold.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshold
+public partial class MonitoringAlertPolicySpecConditionsConditionThreshold
 {
     /// <summary>Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field.</summary>
     [JsonPropertyName("aggregations")]
-    public IList<V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdAggregations>? Aggregations { get; set; }
+    public IList<MonitoringAlertPolicySpecConditionsConditionThresholdAggregations>? Aggregations { get; set; }
 
     /// <summary>The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side. Only COMPARISON_LT and COMPARISON_GT are supported currently. Possible values: ["COMPARISON_GT", "COMPARISON_GE", "COMPARISON_LT", "COMPARISON_LE", "COMPARISON_EQ", "COMPARISON_NE"].</summary>
     [JsonPropertyName("comparison")]
@@ -256,7 +262,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
 
     /// <summary>Specifies the alignment of data points in individual time series selected by denominatorFilter as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources).When computing ratios, the aggregations and denominator_aggregations fields must use the same alignment period and produce time series that have the same periodicity and labels.This field is similar to the one in the MetricService.ListTimeSeries request. It is advisable to use the ListTimeSeries method when debugging this field.</summary>
     [JsonPropertyName("denominatorAggregations")]
-    public IList<V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdDenominatorAggregations>? DenominatorAggregations { get; set; }
+    public IList<MonitoringAlertPolicySpecConditionsConditionThresholdDenominatorAggregations>? DenominatorAggregations { get; set; }
 
     /// <summary>A filter that identifies a time series that should be used as the denominator of a ratio that will be compared with the threshold. If a denominator_filter is specified, the time series specified by the filter field will be used as the numerator.The filter is similar to the one that is specified in the MetricService.ListTimeSeries request (that call is useful to verify the time series that will be retrieved / processed) and must specify the metric type and optionally may contain restrictions on resource type, resource labels, and metric labels. This field may not exceed 2048 Unicode characters in length.</summary>
     [JsonPropertyName("denominatorFilter")]
@@ -276,7 +282,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
 
     /// <summary>When this field is present, the 'MetricThreshold' condition forecasts whether the time series is predicted to violate the threshold within the 'forecastHorizon'. When this field is not set, the 'MetricThreshold' tests the current value of the timeseries against the threshold.</summary>
     [JsonPropertyName("forecastOptions")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdForecastOptions? ForecastOptions { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionThresholdForecastOptions? ForecastOptions { get; set; }
 
     /// <summary>A value against which to compare the time series.</summary>
     [JsonPropertyName("thresholdValue")]
@@ -284,32 +290,32 @@ public partial class V1beta1MonitoringAlertPolicySpecConditionsConditionThreshol
 
     /// <summary>The number/percent of time series for which the comparison must hold in order for the condition to trigger. If unspecified, then the condition will trigger if the comparison is true for any of the time series that have been identified by filter and aggregations, or by the ratio, if denominator_filter and denominator_aggregations are specified.</summary>
     [JsonPropertyName("trigger")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionThresholdTrigger? Trigger { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionThresholdTrigger? Trigger { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecConditions
+public partial class MonitoringAlertPolicySpecConditions
 {
     /// <summary>A condition that checks that a time series continues to receive new data points.</summary>
     [JsonPropertyName("conditionAbsent")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionAbsent? ConditionAbsent { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionAbsent? ConditionAbsent { get; set; }
 
     /// <summary>A condition that checks for log messages matching given constraints. If set, no other conditions can be present.</summary>
     [JsonPropertyName("conditionMatchedLog")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionMatchedLog? ConditionMatchedLog { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionMatchedLog? ConditionMatchedLog { get; set; }
 
     /// <summary>A Monitoring Query Language query that outputs a boolean stream.</summary>
     [JsonPropertyName("conditionMonitoringQueryLanguage")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguage? ConditionMonitoringQueryLanguage { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionMonitoringQueryLanguage? ConditionMonitoringQueryLanguage { get; set; }
 
     /// <summary>A Monitoring Query Language query that outputs a boolean stream  A condition type that allows alert policies to be defined using Prometheus Query Language (PromQL).  The PrometheusQueryLanguageCondition message contains information from a Prometheus alerting rule and its associated rule group.</summary>
     [JsonPropertyName("conditionPrometheusQueryLanguage")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionPrometheusQueryLanguage? ConditionPrometheusQueryLanguage { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionPrometheusQueryLanguage? ConditionPrometheusQueryLanguage { get; set; }
 
     /// <summary>A condition that compares a time series against a threshold.</summary>
     [JsonPropertyName("conditionThreshold")]
-    public V1beta1MonitoringAlertPolicySpecConditionsConditionThreshold? ConditionThreshold { get; set; }
+    public MonitoringAlertPolicySpecConditionsConditionThreshold? ConditionThreshold { get; set; }
 
     /// <summary>A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple conditions in the same policy.</summary>
     [JsonPropertyName("displayName")]
@@ -322,7 +328,7 @@ public partial class V1beta1MonitoringAlertPolicySpecConditions
 
 /// <summary>Documentation that is included with notifications and incidents related to this policy. Best practice is for the documentation to include information to help responders understand, mitigate, escalate, and correct the underlying problems detected by the alerting policy. Notification channels that have limited capacity might not show this documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecDocumentation
+public partial class MonitoringAlertPolicySpecDocumentation
 {
     /// <summary>The text of the documentation, interpreted according to mimeType. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.</summary>
     [JsonPropertyName("content")]
@@ -335,7 +341,7 @@ public partial class V1beta1MonitoringAlertPolicySpecDocumentation
 
 /// <summary>Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when new violations occur on an already opened incident.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpecNotificationChannels
+public partial class MonitoringAlertPolicySpecNotificationChannels
 {
     /// <summary>Allowed value: The `name` field of a `MonitoringNotificationChannel` resource.</summary>
     [JsonPropertyName("external")]
@@ -352,11 +358,11 @@ public partial class V1beta1MonitoringAlertPolicySpecNotificationChannels
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicySpec
+public partial class MonitoringAlertPolicySpec
 {
     /// <summary>Control over how this alert policy's notification channels are notified.</summary>
     [JsonPropertyName("alertStrategy")]
-    public V1beta1MonitoringAlertPolicySpecAlertStrategy? AlertStrategy { get; set; }
+    public MonitoringAlertPolicySpecAlertStrategy? AlertStrategy { get; set; }
 
     /// <summary>How to combine the results of multiple conditions to determine if an incident should be opened. Possible values: ["AND", "OR", "AND_WITH_MATCHING_RESOURCE"].</summary>
     [JsonPropertyName("combiner")]
@@ -364,7 +370,7 @@ public partial class V1beta1MonitoringAlertPolicySpec
 
     /// <summary>A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1MonitoringAlertPolicySpecConditions> Conditions { get; set; }
+    public IList<MonitoringAlertPolicySpecConditions> Conditions { get; set; }
 
     /// <summary>A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode characters.</summary>
     [JsonPropertyName("displayName")]
@@ -372,7 +378,7 @@ public partial class V1beta1MonitoringAlertPolicySpec
 
     /// <summary>Documentation that is included with notifications and incidents related to this policy. Best practice is for the documentation to include information to help responders understand, mitigate, escalate, and correct the underlying problems detected by the alerting policy. Notification channels that have limited capacity might not show this documentation.</summary>
     [JsonPropertyName("documentation")]
-    public V1beta1MonitoringAlertPolicySpecDocumentation? Documentation { get; set; }
+    public MonitoringAlertPolicySpecDocumentation? Documentation { get; set; }
 
     /// <summary>Whether or not the policy is enabled. The default is true.</summary>
     [JsonPropertyName("enabled")]
@@ -380,7 +386,7 @@ public partial class V1beta1MonitoringAlertPolicySpec
 
     /// <summary></summary>
     [JsonPropertyName("notificationChannels")]
-    public IList<V1beta1MonitoringAlertPolicySpecNotificationChannels>? NotificationChannels { get; set; }
+    public IList<MonitoringAlertPolicySpecNotificationChannels>? NotificationChannels { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -393,7 +399,7 @@ public partial class V1beta1MonitoringAlertPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicyStatusConditions
+public partial class MonitoringAlertPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -418,7 +424,7 @@ public partial class V1beta1MonitoringAlertPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicyStatusCreationRecord
+public partial class MonitoringAlertPolicyStatusCreationRecord
 {
     /// <summary>When the change occurred.</summary>
     [JsonPropertyName("mutateTime")]
@@ -431,15 +437,15 @@ public partial class V1beta1MonitoringAlertPolicyStatusCreationRecord
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringAlertPolicyStatus
+public partial class MonitoringAlertPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1MonitoringAlertPolicyStatusConditions>? Conditions { get; set; }
+    public IList<MonitoringAlertPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be ignored.</summary>
     [JsonPropertyName("creationRecord")]
-    public IList<V1beta1MonitoringAlertPolicyStatusCreationRecord>? CreationRecord { get; set; }
+    public IList<MonitoringAlertPolicyStatusCreationRecord>? CreationRecord { get; set; }
 
     /// <summary>The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID].</summary>
     [JsonPropertyName("name")]
@@ -452,30 +458,25 @@ public partial class V1beta1MonitoringAlertPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MonitoringAlertPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringAlertPolicySpec>, IStatus<V1beta1MonitoringAlertPolicyStatus>
+public partial class MonitoringAlertPolicy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MonitoringAlertPolicy";
-    public const string KubeGroup = "monitoring.cnrm.cloud.google.com";
-    public const string KubePluralName = "monitoringalertpolicies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public MonitoringAlertPolicyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1MonitoringAlertPolicySpec Spec { get; set; }
+    public MonitoringAlertPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1MonitoringAlertPolicyStatus? Status { get; set; }
+    public MonitoringAlertPolicyStatus? Status { get; set; }
 }

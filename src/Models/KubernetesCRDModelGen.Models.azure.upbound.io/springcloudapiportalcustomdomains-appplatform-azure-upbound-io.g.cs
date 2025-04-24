@@ -398,3 +398,29 @@ public partial class V1beta1SpringCloudAPIPortalCustomDomain : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1SpringCloudAPIPortalCustomDomainStatus? Status { get; set; }
 }
+
+/// <summary>SpringCloudAPIPortalCustomDomain is the Schema for the SpringCloudAPIPortalCustomDomains API. Manages a Spring Cloud API Portal Domain.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpringCloudAPIPortalCustomDomainList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudAPIPortalCustomDomain>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpringCloudAPIPortalCustomDomainList";
+    public const string KubeGroup = "appplatform.azure.upbound.io";
+    public const string KubePluralName = "springcloudapiportalcustomdomains";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpringCloudAPIPortalCustomDomain> Items { get; set; }
+}

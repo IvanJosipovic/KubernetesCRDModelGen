@@ -286,3 +286,29 @@ public partial class V1beta1VoiceConnector : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorStatus? Status { get; set; }
 }
+
+/// <summary>VoiceConnector is the Schema for the VoiceConnectors API. Enables you to connect your phone system to the telephone network at a substantial cost savings by using SIP trunking.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnector>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorList";
+    public const string KubeGroup = "chime.aws.upbound.io";
+    public const string KubePluralName = "voiceconnectors";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VoiceConnector> Items { get; set; }
+}

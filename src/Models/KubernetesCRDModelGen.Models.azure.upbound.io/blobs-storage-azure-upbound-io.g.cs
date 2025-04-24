@@ -526,3 +526,29 @@ public partial class V1beta1Blob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1BlobStatus? Status { get; set; }
 }
+
+/// <summary>Blob is the Schema for the Blobs API. Manages a Blob within a Storage Container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BlobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Blob>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BlobList";
+    public const string KubeGroup = "storage.azure.upbound.io";
+    public const string KubePluralName = "blobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Blob> Items { get; set; }
+}

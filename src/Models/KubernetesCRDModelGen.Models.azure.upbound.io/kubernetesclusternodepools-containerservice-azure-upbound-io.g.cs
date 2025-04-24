@@ -1795,3 +1795,29 @@ public partial class V1beta1KubernetesClusterNodePool : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1KubernetesClusterNodePoolStatus? Status { get; set; }
 }
+
+/// <summary>KubernetesClusterNodePool is the Schema for the KubernetesClusterNodePools API. Manages a Node Pool within a Kubernetes Cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1KubernetesClusterNodePoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KubernetesClusterNodePool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "KubernetesClusterNodePoolList";
+    public const string KubeGroup = "containerservice.azure.upbound.io";
+    public const string KubePluralName = "kubernetesclusternodepools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1KubernetesClusterNodePool> Items { get; set; }
+}

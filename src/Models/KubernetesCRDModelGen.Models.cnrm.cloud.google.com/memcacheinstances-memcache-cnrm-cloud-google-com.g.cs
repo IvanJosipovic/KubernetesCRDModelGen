@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.memcache.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class MemcacheInstanceMetadata
+{
+}
+
 /// <summary>Required. Start time of the window in UTC time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
+public partial class MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -31,7 +37,7 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
+public partial class MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur. - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified. - MONDAY: Monday - TUESDAY: Tuesday - WEDNESDAY: Wednesday - THURSDAY: Thursday - FRIDAY: Friday - SATURDAY: Saturday - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
     [JsonPropertyName("day")]
@@ -43,12 +49,12 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenan
 
     /// <summary>Required. Start time of the window in UTC time.</summary>
     [JsonPropertyName("startTime")]
-    public V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
+    public MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
 }
 
 /// <summary>Maintenance policy for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
+public partial class MemcacheInstanceSpecMaintenancePolicy
 {
     /// <summary>Output only. The time when the policy was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -64,12 +70,12 @@ public partial class V1beta1MemcacheInstanceSpecMaintenancePolicy
 
     /// <summary>Required. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_maintenance_windows is expected to be one.</summary>
     [JsonPropertyName("weeklyMaintenanceWindow")]
-    public IList<V1beta1MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow> WeeklyMaintenanceWindow { get; set; }
+    public IList<MemcacheInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow> WeeklyMaintenanceWindow { get; set; }
 }
 
 /// <summary>Immutable. User-specified parameters for this memcache instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
+public partial class MemcacheInstanceSpecMemcacheParameters
 {
     /// <summary>This is a unique ID associated with this set of parameters.</summary>
     [JsonPropertyName("id")]
@@ -82,7 +88,7 @@ public partial class V1beta1MemcacheInstanceSpecMemcacheParameters
 
 /// <summary>The full name of the network to connect the instance to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceSpecNetworkRef
+public partial class MemcacheInstanceSpecNetworkRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/global/networks/{{value}}`, where {{value}} is the `name` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -99,7 +105,7 @@ public partial class V1beta1MemcacheInstanceSpecNetworkRef
 
 /// <summary>Immutable. Configuration for memcache nodes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceSpecNodeConfig
+public partial class MemcacheInstanceSpecNodeConfig
 {
     /// <summary>Number of CPUs per node.</summary>
     [JsonPropertyName("cpuCount")]
@@ -112,7 +118,7 @@ public partial class V1beta1MemcacheInstanceSpecNodeConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceSpec
+public partial class MemcacheInstanceSpec
 {
     /// <summary>A user-visible name for the instance.</summary>
     [JsonPropertyName("displayName")]
@@ -120,11 +126,11 @@ public partial class V1beta1MemcacheInstanceSpec
 
     /// <summary>Maintenance policy for an instance.</summary>
     [JsonPropertyName("maintenancePolicy")]
-    public V1beta1MemcacheInstanceSpecMaintenancePolicy? MaintenancePolicy { get; set; }
+    public MemcacheInstanceSpecMaintenancePolicy? MaintenancePolicy { get; set; }
 
     /// <summary>Immutable. User-specified parameters for this memcache instance.</summary>
     [JsonPropertyName("memcacheParameters")]
-    public V1beta1MemcacheInstanceSpecMemcacheParameters? MemcacheParameters { get; set; }
+    public MemcacheInstanceSpecMemcacheParameters? MemcacheParameters { get; set; }
 
     /// <summary>The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically determined by our system based on the latest supported minor version. Default value: "MEMCACHE_1_5" Possible values: ["MEMCACHE_1_5"].</summary>
     [JsonPropertyName("memcacheVersion")]
@@ -132,11 +138,11 @@ public partial class V1beta1MemcacheInstanceSpec
 
     /// <summary>The full name of the network to connect the instance to.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1MemcacheInstanceSpecNetworkRef? NetworkRef { get; set; }
+    public MemcacheInstanceSpecNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. Configuration for memcache nodes.</summary>
     [JsonPropertyName("nodeConfig")]
-    public V1beta1MemcacheInstanceSpecNodeConfig NodeConfig { get; set; }
+    public MemcacheInstanceSpecNodeConfig NodeConfig { get; set; }
 
     /// <summary>Number of nodes in the memcache instance.</summary>
     [JsonPropertyName("nodeCount")]
@@ -157,7 +163,7 @@ public partial class V1beta1MemcacheInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceStatusConditions
+public partial class MemcacheInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -182,7 +188,7 @@ public partial class V1beta1MemcacheInstanceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
+public partial class MemcacheInstanceStatusMaintenanceSchedule
 {
     /// <summary>Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("endTime")]
@@ -199,7 +205,7 @@ public partial class V1beta1MemcacheInstanceStatusMaintenanceSchedule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
+public partial class MemcacheInstanceStatusMemcacheNodes
 {
     /// <summary>Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.</summary>
     [JsonPropertyName("host")]
@@ -224,11 +230,11 @@ public partial class V1beta1MemcacheInstanceStatusMemcacheNodes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MemcacheInstanceStatus
+public partial class MemcacheInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1MemcacheInstanceStatusConditions>? Conditions { get; set; }
+    public IList<MemcacheInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("createTime")]
@@ -240,7 +246,7 @@ public partial class V1beta1MemcacheInstanceStatus
 
     /// <summary>Output only. Published maintenance schedule.</summary>
     [JsonPropertyName("maintenanceSchedule")]
-    public IList<V1beta1MemcacheInstanceStatusMaintenanceSchedule>? MaintenanceSchedule { get; set; }
+    public IList<MemcacheInstanceStatusMaintenanceSchedule>? MaintenanceSchedule { get; set; }
 
     /// <summary>The full version of memcached server running on this instance.</summary>
     [JsonPropertyName("memcacheFullVersion")]
@@ -248,7 +254,7 @@ public partial class V1beta1MemcacheInstanceStatus
 
     /// <summary>Additional information about the instance state, if available.</summary>
     [JsonPropertyName("memcacheNodes")]
-    public IList<V1beta1MemcacheInstanceStatusMemcacheNodes>? MemcacheNodes { get; set; }
+    public IList<MemcacheInstanceStatusMemcacheNodes>? MemcacheNodes { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -257,30 +263,25 @@ public partial class V1beta1MemcacheInstanceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MemcacheInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MemcacheInstanceSpec>, IStatus<V1beta1MemcacheInstanceStatus>
+public partial class MemcacheInstance
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MemcacheInstance";
-    public const string KubeGroup = "memcache.cnrm.cloud.google.com";
-    public const string KubePluralName = "memcacheinstances";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public MemcacheInstanceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1MemcacheInstanceSpec Spec { get; set; }
+    public MemcacheInstanceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1MemcacheInstanceStatus? Status { get; set; }
+    public MemcacheInstanceStatus? Status { get; set; }
 }

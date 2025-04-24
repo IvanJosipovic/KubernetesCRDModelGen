@@ -241,3 +241,29 @@ public partial class V1api20240801storageFlexibleServersVirtualEndpoint : IKuber
     [JsonPropertyName("status")]
     public V1api20240801storageFlexibleServersVirtualEndpointStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240801.FlexibleServersVirtualEndpoint Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/VirtualEndpoints.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/virtualendpoints/{virtualEndpointName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240801storageFlexibleServersVirtualEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1api20240801storageFlexibleServersVirtualEndpoint>
+{
+    public const string KubeApiVersion = "v1api20240801storage";
+    public const string KubeKind = "FlexibleServersVirtualEndpointList";
+    public const string KubeGroup = "dbforpostgresql.azure.com";
+    public const string KubePluralName = "flexibleserversvirtualendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240801storageFlexibleServersVirtualEndpoint> Items { get; set; }
+}

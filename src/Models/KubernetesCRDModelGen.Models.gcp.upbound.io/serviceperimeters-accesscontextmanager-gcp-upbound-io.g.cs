@@ -1982,3 +1982,29 @@ public partial class V1beta1ServicePerimeter : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ServicePerimeterStatus? Status { get; set; }
 }
+
+/// <summary>ServicePerimeter is the Schema for the ServicePerimeters API. ServicePerimeter describes a set of GCP resources which can freely import and export data amongst themselves, but not export outside of the ServicePerimeter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServicePerimeterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServicePerimeter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServicePerimeterList";
+    public const string KubeGroup = "accesscontextmanager.gcp.upbound.io";
+    public const string KubePluralName = "serviceperimeters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServicePerimeter> Items { get; set; }
+}

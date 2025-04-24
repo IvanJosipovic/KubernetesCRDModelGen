@@ -1124,3 +1124,29 @@ public partial class V1beta1HPCCache : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1HPCCacheStatus? Status { get; set; }
 }
+
+/// <summary>HPCCache is the Schema for the HPCCaches API. Manages a HPC Cache.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HPCCacheList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HPCCache>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HPCCacheList";
+    public const string KubeGroup = "storagecache.azure.upbound.io";
+    public const string KubePluralName = "hpccaches";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HPCCache> Items { get; set; }
+}

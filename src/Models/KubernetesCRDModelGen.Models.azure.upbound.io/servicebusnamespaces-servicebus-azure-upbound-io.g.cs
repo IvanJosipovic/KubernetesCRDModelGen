@@ -794,3 +794,29 @@ public partial class V1beta1ServiceBusNamespace : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ServiceBusNamespaceStatus? Status { get; set; }
 }
+
+/// <summary>ServiceBusNamespace is the Schema for the ServiceBusNamespaces API. Manages a ServiceBus Namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceBusNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceBusNamespace>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceBusNamespaceList";
+    public const string KubeGroup = "servicebus.azure.upbound.io";
+    public const string KubePluralName = "servicebusnamespaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceBusNamespace> Items { get; set; }
+}

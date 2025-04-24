@@ -4489,3 +4489,29 @@ public partial class V1alpha1Experiment : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1alpha1ExperimentStatus? Status { get; set; }
 }
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ExperimentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Experiment>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ExperimentList";
+    public const string KubeGroup = "argoproj.io";
+    public const string KubePluralName = "experiments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1Experiment> Items { get; set; }
+}

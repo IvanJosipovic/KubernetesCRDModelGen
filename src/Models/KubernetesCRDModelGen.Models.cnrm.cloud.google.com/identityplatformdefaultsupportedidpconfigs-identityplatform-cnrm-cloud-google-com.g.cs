@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IdentityPlatformDefaultSupportedIDPConfigMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpecProjectRef
+public partial class IdentityPlatformDefaultSupportedIDPConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpecProjec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec
+public partial class IdentityPlatformDefaultSupportedIDPConfigSpec
 {
     /// <summary>OAuth client ID.</summary>
     [JsonPropertyName("clientId")]
@@ -43,7 +49,7 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpecProjectRef ProjectRef { get; set; }
+    public IdentityPlatformDefaultSupportedIDPConfigSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The idpId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -52,7 +58,7 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatusConditions
+public partial class IdentityPlatformDefaultSupportedIDPConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -77,11 +83,11 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatusCond
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatus
+public partial class IdentityPlatformDefaultSupportedIDPConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatusConditions>? Conditions { get; set; }
+    public IList<IdentityPlatformDefaultSupportedIDPConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>The name of the DefaultSupportedIdpConfig resource.</summary>
     [JsonPropertyName("name")]
@@ -94,30 +100,25 @@ public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1IdentityPlatformDefaultSupportedIDPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec>, IStatus<V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatus>
+public partial class IdentityPlatformDefaultSupportedIDPConfig
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "IdentityPlatformDefaultSupportedIDPConfig";
-    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
-    public const string KubePluralName = "identityplatformdefaultsupportedidpconfigs";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IdentityPlatformDefaultSupportedIDPConfigMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1IdentityPlatformDefaultSupportedIDPConfigSpec Spec { get; set; }
+    public IdentityPlatformDefaultSupportedIDPConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1IdentityPlatformDefaultSupportedIDPConfigStatus? Status { get; set; }
+    public IdentityPlatformDefaultSupportedIDPConfigStatus? Status { get; set; }
 }

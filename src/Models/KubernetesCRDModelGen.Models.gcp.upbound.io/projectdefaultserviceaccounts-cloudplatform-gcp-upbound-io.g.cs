@@ -402,3 +402,29 @@ public partial class V1beta1ProjectDefaultServiceAccounts : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1ProjectDefaultServiceAccountsStatus? Status { get; set; }
 }
+
+/// <summary>ProjectDefaultServiceAccounts is the Schema for the ProjectDefaultServiceAccountss API. Allows management of Google Cloud Platform project default service accounts.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProjectDefaultServiceAccountsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectDefaultServiceAccounts>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProjectDefaultServiceAccountsList";
+    public const string KubeGroup = "cloudplatform.gcp.upbound.io";
+    public const string KubePluralName = "projectdefaultserviceaccounts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProjectDefaultServiceAccounts> Items { get; set; }
+}

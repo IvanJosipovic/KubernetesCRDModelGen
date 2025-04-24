@@ -383,3 +383,29 @@ public partial class V1beta1ApprovalRuleTemplateAssociation : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1ApprovalRuleTemplateAssociationStatus? Status { get; set; }
 }
+
+/// <summary>ApprovalRuleTemplateAssociation is the Schema for the ApprovalRuleTemplateAssociations API. Associates a CodeCommit Approval Rule Template with a Repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApprovalRuleTemplateAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApprovalRuleTemplateAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApprovalRuleTemplateAssociationList";
+    public const string KubeGroup = "codecommit.aws.upbound.io";
+    public const string KubePluralName = "approvalruletemplateassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApprovalRuleTemplateAssociation> Items { get; set; }
+}

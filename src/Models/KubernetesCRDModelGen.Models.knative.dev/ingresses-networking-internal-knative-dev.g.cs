@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.@internal.knative.dev;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IngressMetadata
+{
+}
+
 /// <summary>HeaderMatch represents a matching value of Headers in HTTPIngressPath. Currently, only the exact matching is supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressSpecRulesHttpPathsHeaders
+public partial class IngressSpecRulesHttpPathsHeaders
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -19,7 +25,7 @@ public partial class V1alpha1IngressSpecRulesHttpPathsHeaders
 
 /// <summary>IngressBackendSplit describes all endpoints for a given service and port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressSpecRulesHttpPathsSplits
+public partial class IngressSpecRulesHttpPathsSplits
 {
     /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.  NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
     [JsonPropertyName("appendHeaders")]
@@ -44,7 +50,7 @@ public partial class V1alpha1IngressSpecRulesHttpPathsSplits
 
 /// <summary>HTTPIngressPath associates a path regex with a backend. Incoming URLs matching the path are forwarded to the backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressSpecRulesHttpPaths
+public partial class IngressSpecRulesHttpPaths
 {
     /// <summary>AppendHeaders allow specifying additional HTTP headers to add before forwarding a request to the destination service.  NOTE: This differs from K8s Ingress which doesn't allow header appending.</summary>
     [JsonPropertyName("appendHeaders")]
@@ -52,7 +58,7 @@ public partial class V1alpha1IngressSpecRulesHttpPaths
 
     /// <summary>Headers defines header matching rules which is a map from a header name to HeaderMatch which specify a matching condition. When a request matched with all the header matching rules, the request is routed by the corresponding ingress rule. If it is empty, the headers are not used for matching</summary>
     [JsonPropertyName("headers")]
-    public IDictionary<string, V1alpha1IngressSpecRulesHttpPathsHeaders>? Headers { get; set; }
+    public IDictionary<string, IngressSpecRulesHttpPathsHeaders>? Headers { get; set; }
 
     /// <summary>Path represents a literal prefix to which this rule should apply. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.</summary>
     [JsonPropertyName("path")]
@@ -64,21 +70,21 @@ public partial class V1alpha1IngressSpecRulesHttpPaths
 
     /// <summary>Splits defines the referenced service endpoints to which the traffic will be forwarded to.</summary>
     [JsonPropertyName("splits")]
-    public IList<V1alpha1IngressSpecRulesHttpPathsSplits> Splits { get; set; }
+    public IList<IngressSpecRulesHttpPathsSplits> Splits { get; set; }
 }
 
 /// <summary>HTTP represents a rule to apply against incoming requests. If the rule is satisfied, the request is routed to the specified backend.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressSpecRulesHttp
+public partial class IngressSpecRulesHttp
 {
     /// <summary>A collection of paths that map requests to backends.  If they are multiple matching paths, the first match takes precedence.</summary>
     [JsonPropertyName("paths")]
-    public IList<V1alpha1IngressSpecRulesHttpPaths> Paths { get; set; }
+    public IList<IngressSpecRulesHttpPaths> Paths { get; set; }
 }
 
 /// <summary>IngressRule represents the rules mapping the paths under a specified host to the related backend services. Incoming requests are first evaluated for a host match, then routed to the backend associated with the matching IngressRuleValue.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressSpecRules
+public partial class IngressSpecRules
 {
     /// <summary>Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in the RFC: 1. IPs are not allowed. Currently a rule value can only apply to the 	  IP in the Spec of the parent . 2. The `:` delimiter is not respected because ports are not allowed. 	  Currently the port of an Ingress is implicitly :80 for http and 	  :443 for https. Both these may change in the future. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue. If multiple matching Hosts were provided, the first rule will take precedent.</summary>
     [JsonPropertyName("hosts")]
@@ -86,7 +92,7 @@ public partial class V1alpha1IngressSpecRules
 
     /// <summary>HTTP represents a rule to apply against incoming requests. If the rule is satisfied, the request is routed to the specified backend.</summary>
     [JsonPropertyName("http")]
-    public V1alpha1IngressSpecRulesHttp? Http { get; set; }
+    public IngressSpecRulesHttp? Http { get; set; }
 
     /// <summary>Visibility signifies whether this rule should `ClusterLocal`. If it's not specified then it defaults to `ExternalIP`.</summary>
     [JsonPropertyName("visibility")]
@@ -95,7 +101,7 @@ public partial class V1alpha1IngressSpecRules
 
 /// <summary>IngressTLS describes the transport layer security associated with an Ingress.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressSpecTls
+public partial class IngressSpecTls
 {
     /// <summary>Hosts is a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.</summary>
     [JsonPropertyName("hosts")]
@@ -112,7 +118,7 @@ public partial class V1alpha1IngressSpecTls
 
 /// <summary>Spec is the desired state of the Ingress. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressSpec
+public partial class IngressSpec
 {
     /// <summary>HTTPOption is the option of HTTP. It has the following two values: `HTTPOptionEnabled`, `HTTPOptionRedirected`</summary>
     [JsonPropertyName("httpOption")]
@@ -120,16 +126,16 @@ public partial class V1alpha1IngressSpec
 
     /// <summary>A list of host rules used to configure the Ingress.</summary>
     [JsonPropertyName("rules")]
-    public IList<V1alpha1IngressSpecRules>? Rules { get; set; }
+    public IList<IngressSpecRules>? Rules { get; set; }
 
     /// <summary>TLS configuration. Currently Ingress only supports a single TLS port: 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.</summary>
     [JsonPropertyName("tls")]
-    public IList<V1alpha1IngressSpecTls>? Tls { get; set; }
+    public IList<IngressSpecTls>? Tls { get; set; }
 }
 
 /// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressStatusConditions
+public partial class IngressStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -158,7 +164,7 @@ public partial class V1alpha1IngressStatusConditions
 
 /// <summary>LoadBalancerIngressStatus represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressStatusPrivateLoadBalancerIngress
+public partial class IngressStatusPrivateLoadBalancerIngress
 {
     /// <summary>Domain is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)</summary>
     [JsonPropertyName("domain")]
@@ -179,16 +185,16 @@ public partial class V1alpha1IngressStatusPrivateLoadBalancerIngress
 
 /// <summary>PrivateLoadBalancer contains the current status of the load-balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressStatusPrivateLoadBalancer
+public partial class IngressStatusPrivateLoadBalancer
 {
     /// <summary>Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.</summary>
     [JsonPropertyName("ingress")]
-    public IList<V1alpha1IngressStatusPrivateLoadBalancerIngress>? Ingress { get; set; }
+    public IList<IngressStatusPrivateLoadBalancerIngress>? Ingress { get; set; }
 }
 
 /// <summary>LoadBalancerIngressStatus represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressStatusPublicLoadBalancerIngress
+public partial class IngressStatusPublicLoadBalancerIngress
 {
     /// <summary>Domain is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)</summary>
     [JsonPropertyName("domain")]
@@ -209,16 +215,16 @@ public partial class V1alpha1IngressStatusPublicLoadBalancerIngress
 
 /// <summary>PublicLoadBalancer contains the current status of the load-balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressStatusPublicLoadBalancer
+public partial class IngressStatusPublicLoadBalancer
 {
     /// <summary>Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.</summary>
     [JsonPropertyName("ingress")]
-    public IList<V1alpha1IngressStatusPublicLoadBalancerIngress>? Ingress { get; set; }
+    public IList<IngressStatusPublicLoadBalancerIngress>? Ingress { get; set; }
 }
 
 /// <summary>Status is the current state of the Ingress. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IngressStatus
+public partial class IngressStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -226,7 +232,7 @@ public partial class V1alpha1IngressStatus
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1IngressStatusConditions>? Conditions { get; set; }
+    public IList<IngressStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -234,39 +240,34 @@ public partial class V1alpha1IngressStatus
 
     /// <summary>PrivateLoadBalancer contains the current status of the load-balancer.</summary>
     [JsonPropertyName("privateLoadBalancer")]
-    public V1alpha1IngressStatusPrivateLoadBalancer? PrivateLoadBalancer { get; set; }
+    public IngressStatusPrivateLoadBalancer? PrivateLoadBalancer { get; set; }
 
     /// <summary>PublicLoadBalancer contains the current status of the load-balancer.</summary>
     [JsonPropertyName("publicLoadBalancer")]
-    public V1alpha1IngressStatusPublicLoadBalancer? PublicLoadBalancer { get; set; }
+    public IngressStatusPublicLoadBalancer? PublicLoadBalancer { get; set; }
 }
 
 /// <summary>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable URLs, load balance traffic, offer name based virtual hosting, etc.  This is heavily based on K8s Ingress https://godoc.org/k8s.io/api/networking/v1beta1#Ingress which some highlighted modifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1Ingress : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IngressSpec>, IStatus<V1alpha1IngressStatus>
+public partial class Ingress
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "Ingress";
-    public const string KubeGroup = "networking.internal.knative.dev";
-    public const string KubePluralName = "ingresses";
-    /// <summary></summary>
+    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IngressMetadata? Metadata { get; set; }
 
     /// <summary>Spec is the desired state of the Ingress. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1IngressSpec? Spec { get; set; }
+    public IngressSpec? Spec { get; set; }
 
     /// <summary>Status is the current state of the Ingress. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
     [JsonPropertyName("status")]
-    public V1alpha1IngressStatus? Status { get; set; }
+    public IngressStatus? Status { get; set; }
 }

@@ -402,3 +402,29 @@ public partial class V1beta1DocumentationVersion : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1DocumentationVersionStatus? Status { get; set; }
 }
+
+/// <summary>DocumentationVersion is the Schema for the DocumentationVersions API. Provides a resource to manage an API Gateway Documentation Version.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DocumentationVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DocumentationVersion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DocumentationVersionList";
+    public const string KubeGroup = "apigateway.aws.upbound.io";
+    public const string KubePluralName = "documentationversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DocumentationVersion> Items { get; set; }
+}

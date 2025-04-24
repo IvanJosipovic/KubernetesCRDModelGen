@@ -473,3 +473,29 @@ public partial class V1beta1Site : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1SiteStatus? Status { get; set; }
 }
+
+/// <summary>Site is the Schema for the Sites API. Creates a site in a global network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SiteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Site>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SiteList";
+    public const string KubeGroup = "networkmanager.aws.upbound.io";
+    public const string KubePluralName = "sites";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Site> Items { get; set; }
+}

@@ -329,3 +329,29 @@ public partial class V1beta2ImageUpdateAutomation : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta2ImageUpdateAutomationStatus? Status { get; set; }
 }
+
+/// <summary>ImageUpdateAutomation is the Schema for the imageupdateautomations API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2ImageUpdateAutomationList : IKubernetesObject<V1ListMeta>, IItems<V1beta2ImageUpdateAutomation>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "ImageUpdateAutomationList";
+    public const string KubeGroup = "image.toolkit.fluxcd.io";
+    public const string KubePluralName = "imageupdateautomations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2ImageUpdateAutomation> Items { get; set; }
+}

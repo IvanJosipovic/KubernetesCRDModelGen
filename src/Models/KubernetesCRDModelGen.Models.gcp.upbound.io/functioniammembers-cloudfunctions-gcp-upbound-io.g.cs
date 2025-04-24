@@ -489,3 +489,29 @@ public partial class V1beta1FunctionIAMMember : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1FunctionIAMMemberStatus? Status { get; set; }
 }
+
+/// <summary>FunctionIAMMember is the Schema for the FunctionIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FunctionIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FunctionIAMMemberList";
+    public const string KubeGroup = "cloudfunctions.gcp.upbound.io";
+    public const string KubePluralName = "functioniammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FunctionIAMMember> Items { get; set; }
+}

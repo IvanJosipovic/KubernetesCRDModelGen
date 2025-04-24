@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolSpecBackupTargetPoolRef
+public partial class ComputeTargetPoolMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeTargetPoolSpecBackupTargetPoolRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeTargetPool` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeTargetPoolSpecBackupTargetPoolRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef
+public partial class ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeHTTPHealthCheck` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,16 +50,16 @@ public partial class V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolSpecHealthChecks
+public partial class ComputeTargetPoolSpecHealthChecks
 {
     /// <summary></summary>
     [JsonPropertyName("httpHealthCheckRef")]
-    public V1beta1ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef? HttpHealthCheckRef { get; set; }
+    public ComputeTargetPoolSpecHealthChecksHttpHealthCheckRef? HttpHealthCheckRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolSpecInstances
+public partial class ComputeTargetPoolSpecInstances
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -70,7 +76,7 @@ public partial class V1beta1ComputeTargetPoolSpecInstances
 
 /// <summary>The resource URL for the security policy associated with this target pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolSpecSecurityPolicyRef
+public partial class ComputeTargetPoolSpecSecurityPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSecurityPolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -87,11 +93,11 @@ public partial class V1beta1ComputeTargetPoolSpecSecurityPolicyRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolSpec
+public partial class ComputeTargetPoolSpec
 {
     /// <summary></summary>
     [JsonPropertyName("backupTargetPoolRef")]
-    public V1beta1ComputeTargetPoolSpecBackupTargetPoolRef? BackupTargetPoolRef { get; set; }
+    public ComputeTargetPoolSpecBackupTargetPoolRef? BackupTargetPoolRef { get; set; }
 
     /// <summary>Immutable. Textual description field.</summary>
     [JsonPropertyName("description")]
@@ -103,11 +109,11 @@ public partial class V1beta1ComputeTargetPoolSpec
 
     /// <summary></summary>
     [JsonPropertyName("healthChecks")]
-    public IList<V1beta1ComputeTargetPoolSpecHealthChecks>? HealthChecks { get; set; }
+    public IList<ComputeTargetPoolSpecHealthChecks>? HealthChecks { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("instances")]
-    public IList<V1beta1ComputeTargetPoolSpecInstances>? Instances { get; set; }
+    public IList<ComputeTargetPoolSpecInstances>? Instances { get; set; }
 
     /// <summary>Immutable. Where the target pool resides. Defaults to project region.</summary>
     [JsonPropertyName("region")]
@@ -119,7 +125,7 @@ public partial class V1beta1ComputeTargetPoolSpec
 
     /// <summary>The resource URL for the security policy associated with this target pool.</summary>
     [JsonPropertyName("securityPolicyRef")]
-    public V1beta1ComputeTargetPoolSpecSecurityPolicyRef? SecurityPolicyRef { get; set; }
+    public ComputeTargetPoolSpecSecurityPolicyRef? SecurityPolicyRef { get; set; }
 
     /// <summary>Immutable. How to distribute load. Options are "NONE" (no affinity). "CLIENT_IP" (hash of the source/dest addresses / ports), and "CLIENT_IP_PROTO" also includes the protocol (default "NONE").</summary>
     [JsonPropertyName("sessionAffinity")]
@@ -128,7 +134,7 @@ public partial class V1beta1ComputeTargetPoolSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolStatusConditions
+public partial class ComputeTargetPoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -153,11 +159,11 @@ public partial class V1beta1ComputeTargetPoolStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetPoolStatus
+public partial class ComputeTargetPoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeTargetPoolStatusConditions>? Conditions { get; set; }
+    public IList<ComputeTargetPoolStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -170,30 +176,25 @@ public partial class V1beta1ComputeTargetPoolStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeTargetPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetPoolSpec>, IStatus<V1beta1ComputeTargetPoolStatus>
+public partial class ComputeTargetPool
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeTargetPool";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computetargetpools";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeTargetPoolMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeTargetPoolSpec Spec { get; set; }
+    public ComputeTargetPoolSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeTargetPoolStatus? Status { get; set; }
+    public ComputeTargetPoolStatus? Status { get; set; }
 }

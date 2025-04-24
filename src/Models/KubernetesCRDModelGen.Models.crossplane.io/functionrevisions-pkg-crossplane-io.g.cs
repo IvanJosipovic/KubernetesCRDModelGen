@@ -233,3 +233,29 @@ public partial class V1FunctionRevision : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1FunctionRevisionStatus? Status { get; set; }
 }
+
+/// <summary>A FunctionRevision represents a revision of a Function. Crossplane creates new revisions when there are changes to the Function.  Crossplane creates and manages FunctionRevisions. Don't directly edit FunctionRevisions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1FunctionRevisionList : IKubernetesObject<V1ListMeta>, IItems<V1FunctionRevision>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "FunctionRevisionList";
+    public const string KubeGroup = "pkg.crossplane.io";
+    public const string KubePluralName = "functionrevisions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1FunctionRevision> Items { get; set; }
+}

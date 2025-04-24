@@ -3642,3 +3642,29 @@ public partial class V1api20220701storageApplicationGateway : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1api20220701storageApplicationGatewayStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220701.ApplicationGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2022-07-01/applicationGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/applicationGateways/{applicationGatewayName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220701storageApplicationGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1api20220701storageApplicationGateway>
+{
+    public const string KubeApiVersion = "v1api20220701storage";
+    public const string KubeKind = "ApplicationGatewayList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "applicationgateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220701storageApplicationGateway> Items { get; set; }
+}

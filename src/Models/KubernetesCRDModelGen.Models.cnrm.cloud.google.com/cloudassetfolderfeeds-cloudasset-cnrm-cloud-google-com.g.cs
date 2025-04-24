@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudasset.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class CloudAssetFolderFeedMetadata
+{
+}
+
 /// <summary>A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, expression field must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of condition are optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudAssetFolderFeedSpecCondition
+public partial class CloudAssetFolderFeedSpecCondition
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
     [JsonPropertyName("description")]
@@ -31,7 +37,7 @@ public partial class V1alpha1CloudAssetFolderFeedSpecCondition
 
 /// <summary>Destination on Cloud Pubsub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudAssetFolderFeedSpecFeedOutputConfigPubsubDestination
+public partial class CloudAssetFolderFeedSpecFeedOutputConfigPubsubDestination
 {
     /// <summary>Destination on Cloud Pubsub topic.</summary>
     [JsonPropertyName("topic")]
@@ -40,16 +46,16 @@ public partial class V1alpha1CloudAssetFolderFeedSpecFeedOutputConfigPubsubDesti
 
 /// <summary>Output configuration for asset feed destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudAssetFolderFeedSpecFeedOutputConfig
+public partial class CloudAssetFolderFeedSpecFeedOutputConfig
 {
     /// <summary>Destination on Cloud Pubsub.</summary>
     [JsonPropertyName("pubsubDestination")]
-    public V1alpha1CloudAssetFolderFeedSpecFeedOutputConfigPubsubDestination PubsubDestination { get; set; }
+    public CloudAssetFolderFeedSpecFeedOutputConfigPubsubDestination PubsubDestination { get; set; }
 }
 
 /// <summary>The folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudAssetFolderFeedSpecFolderRef
+public partial class CloudAssetFolderFeedSpecFolderRef
 {
     /// <summary>Allowed value: The `name` field of a `Folder` resource.</summary>
     [JsonPropertyName("external")]
@@ -66,7 +72,7 @@ public partial class V1alpha1CloudAssetFolderFeedSpecFolderRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudAssetFolderFeedSpec
+public partial class CloudAssetFolderFeedSpec
 {
     /// <summary>A list of the full names of the assets to receive updates. You must specify either or both of assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1. See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.</summary>
     [JsonPropertyName("assetNames")]
@@ -82,7 +88,7 @@ public partial class V1alpha1CloudAssetFolderFeedSpec
 
     /// <summary>A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, expression field must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of condition are optional.</summary>
     [JsonPropertyName("condition")]
-    public V1alpha1CloudAssetFolderFeedSpecCondition? Condition { get; set; }
+    public CloudAssetFolderFeedSpecCondition? Condition { get; set; }
 
     /// <summary>Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "OS_INVENTORY", "ACCESS_POLICY"].</summary>
     [JsonPropertyName("contentType")]
@@ -94,7 +100,7 @@ public partial class V1alpha1CloudAssetFolderFeedSpec
 
     /// <summary>Output configuration for asset feed destination.</summary>
     [JsonPropertyName("feedOutputConfig")]
-    public V1alpha1CloudAssetFolderFeedSpecFeedOutputConfig FeedOutputConfig { get; set; }
+    public CloudAssetFolderFeedSpecFeedOutputConfig FeedOutputConfig { get; set; }
 
     /// <summary>Immutable. The folder this feed should be created in.</summary>
     [JsonPropertyName("folder")]
@@ -102,7 +108,7 @@ public partial class V1alpha1CloudAssetFolderFeedSpec
 
     /// <summary>The folder that this resource belongs to.</summary>
     [JsonPropertyName("folderRef")]
-    public V1alpha1CloudAssetFolderFeedSpecFolderRef FolderRef { get; set; }
+    public CloudAssetFolderFeedSpecFolderRef FolderRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -111,7 +117,7 @@ public partial class V1alpha1CloudAssetFolderFeedSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudAssetFolderFeedStatusConditions
+public partial class CloudAssetFolderFeedStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -136,11 +142,11 @@ public partial class V1alpha1CloudAssetFolderFeedStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudAssetFolderFeedStatus
+public partial class CloudAssetFolderFeedStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1CloudAssetFolderFeedStatusConditions>? Conditions { get; set; }
+    public IList<CloudAssetFolderFeedStatusConditions>? Conditions { get; set; }
 
     /// <summary>The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.</summary>
     [JsonPropertyName("folderId")]
@@ -157,30 +163,25 @@ public partial class V1alpha1CloudAssetFolderFeedStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1CloudAssetFolderFeed : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudAssetFolderFeedSpec>, IStatus<V1alpha1CloudAssetFolderFeedStatus>
+public partial class CloudAssetFolderFeed
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "CloudAssetFolderFeed";
-    public const string KubeGroup = "cloudasset.cnrm.cloud.google.com";
-    public const string KubePluralName = "cloudassetfolderfeeds";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public CloudAssetFolderFeedMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1CloudAssetFolderFeedSpec Spec { get; set; }
+    public CloudAssetFolderFeedSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1CloudAssetFolderFeedStatus? Status { get; set; }
+    public CloudAssetFolderFeedStatus? Status { get; set; }
 }

@@ -592,3 +592,29 @@ public partial class V1beta1HostedConfigurationVersion : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1HostedConfigurationVersionStatus? Status { get; set; }
 }
+
+/// <summary>HostedConfigurationVersion is the Schema for the HostedConfigurationVersions API. Provides an AppConfig Hosted Configuration Version resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HostedConfigurationVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HostedConfigurationVersion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HostedConfigurationVersionList";
+    public const string KubeGroup = "appconfig.aws.upbound.io";
+    public const string KubePluralName = "hostedconfigurationversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HostedConfigurationVersion> Items { get; set; }
+}

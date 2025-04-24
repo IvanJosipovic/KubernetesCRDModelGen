@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DataCatalogTaxonomyMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogTaxonomySpecProjectRef
+public partial class DataCatalogTaxonomySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1DataCatalogTaxonomySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogTaxonomySpec
+public partial class DataCatalogTaxonomySpec
 {
     /// <summary>A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list. Possible values: ["POLICY_TYPE_UNSPECIFIED", "FINE_GRAINED_ACCESS_CONTROL"].</summary>
     [JsonPropertyName("activatedPolicyTypes")]
@@ -43,7 +49,7 @@ public partial class V1beta1DataCatalogTaxonomySpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DataCatalogTaxonomySpecProjectRef ProjectRef { get; set; }
+    public DataCatalogTaxonomySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Taxonomy location region.</summary>
     [JsonPropertyName("region")]
@@ -56,7 +62,7 @@ public partial class V1beta1DataCatalogTaxonomySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogTaxonomyStatusConditions
+public partial class DataCatalogTaxonomyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -81,11 +87,11 @@ public partial class V1beta1DataCatalogTaxonomyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogTaxonomyStatus
+public partial class DataCatalogTaxonomyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DataCatalogTaxonomyStatusConditions>? Conditions { get; set; }
+    public IList<DataCatalogTaxonomyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Resource name of this taxonomy, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}".</summary>
     [JsonPropertyName("name")]
@@ -98,30 +104,25 @@ public partial class V1beta1DataCatalogTaxonomyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataCatalogTaxonomy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataCatalogTaxonomySpec>, IStatus<V1beta1DataCatalogTaxonomyStatus>
+public partial class DataCatalogTaxonomy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataCatalogTaxonomy";
-    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
-    public const string KubePluralName = "datacatalogtaxonomies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DataCatalogTaxonomyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1DataCatalogTaxonomySpec Spec { get; set; }
+    public DataCatalogTaxonomySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1DataCatalogTaxonomyStatus? Status { get; set; }
+    public DataCatalogTaxonomyStatus? Status { get; set; }
 }

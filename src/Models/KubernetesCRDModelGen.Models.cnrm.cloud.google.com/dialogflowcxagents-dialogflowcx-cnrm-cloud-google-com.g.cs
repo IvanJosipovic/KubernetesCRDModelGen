@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DialogflowCXAgentMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXAgentSpecProjectRef
+public partial class DialogflowCXAgentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1DialogflowCXAgentSpecProjectRef
 
 /// <summary>Settings related to speech recognition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXAgentSpecSpeechToTextSettings
+public partial class DialogflowCXAgentSpecSpeechToTextSettings
 {
     /// <summary>Whether to use speech adaptation for speech recognition.</summary>
     [JsonPropertyName("enableSpeechAdaptation")]
@@ -36,7 +42,7 @@ public partial class V1alpha1DialogflowCXAgentSpecSpeechToTextSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXAgentSpec
+public partial class DialogflowCXAgentSpec
 {
     /// <summary>The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.</summary>
     [JsonPropertyName("avatarUri")]
@@ -68,7 +74,7 @@ public partial class V1alpha1DialogflowCXAgentSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DialogflowCXAgentSpecProjectRef ProjectRef { get; set; }
+    public DialogflowCXAgentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -80,7 +86,7 @@ public partial class V1alpha1DialogflowCXAgentSpec
 
     /// <summary>Settings related to speech recognition.</summary>
     [JsonPropertyName("speechToTextSettings")]
-    public V1alpha1DialogflowCXAgentSpecSpeechToTextSettings? SpeechToTextSettings { get; set; }
+    public DialogflowCXAgentSpecSpeechToTextSettings? SpeechToTextSettings { get; set; }
 
     /// <summary>The list of all languages supported by this agent (except for the default_language_code).</summary>
     [JsonPropertyName("supportedLanguageCodes")]
@@ -93,7 +99,7 @@ public partial class V1alpha1DialogflowCXAgentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXAgentStatusConditions
+public partial class DialogflowCXAgentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -118,11 +124,11 @@ public partial class V1alpha1DialogflowCXAgentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXAgentStatus
+public partial class DialogflowCXAgentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DialogflowCXAgentStatusConditions>? Conditions { get; set; }
+    public IList<DialogflowCXAgentStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique identifier of the agent.</summary>
     [JsonPropertyName("name")]
@@ -139,30 +145,25 @@ public partial class V1alpha1DialogflowCXAgentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DialogflowCXAgent : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXAgentSpec>, IStatus<V1alpha1DialogflowCXAgentStatus>
+public partial class DialogflowCXAgent
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DialogflowCXAgent";
-    public const string KubeGroup = "dialogflowcx.cnrm.cloud.google.com";
-    public const string KubePluralName = "dialogflowcxagents";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DialogflowCXAgentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DialogflowCXAgentSpec Spec { get; set; }
+    public DialogflowCXAgentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DialogflowCXAgentStatus? Status { get; set; }
+    public DialogflowCXAgentStatus? Status { get; set; }
 }

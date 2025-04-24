@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.filestore.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
+public partial class FilestoreInstanceMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class FilestoreInstanceSpecFileSharesNfsExportOptions
 {
     /// <summary>Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE. Possible values: ACCESS_MODE_UNSPECIFIED, READ_ONLY, READ_WRITE</summary>
     [JsonPropertyName("accessMode")]
@@ -35,7 +41,7 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
+public partial class FilestoreInstanceSpecFileSharesSourceBackupRef
 {
     /// <summary>The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.  Allowed value: The Google Cloud resource name of a `FilestoreBackup` resource (format: `projects/{{project}}/locations/{{location}}/backups/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -52,7 +58,7 @@ public partial class V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceSpecFileShares
+public partial class FilestoreInstanceSpecFileShares
 {
     /// <summary>File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.</summary>
     [JsonPropertyName("capacityGb")]
@@ -64,16 +70,16 @@ public partial class V1beta1FilestoreInstanceSpecFileShares
 
     /// <summary>Nfs Export Options. There is a limit of 10 export options per file share.</summary>
     [JsonPropertyName("nfsExportOptions")]
-    public IList<V1beta1FilestoreInstanceSpecFileSharesNfsExportOptions>? NfsExportOptions { get; set; }
+    public IList<FilestoreInstanceSpecFileSharesNfsExportOptions>? NfsExportOptions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sourceBackupRef")]
-    public V1beta1FilestoreInstanceSpecFileSharesSourceBackupRef? SourceBackupRef { get; set; }
+    public FilestoreInstanceSpecFileSharesSourceBackupRef? SourceBackupRef { get; set; }
 }
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
+public partial class FilestoreInstanceSpecNetworksNetworkRef
 {
     /// <summary>The name of the Google Compute Engine [VPC network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected.  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -90,7 +96,7 @@ public partial class V1beta1FilestoreInstanceSpecNetworksNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceSpecNetworks
+public partial class FilestoreInstanceSpecNetworks
 {
     /// <summary>Immutable. Output only. IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or IPv6 addresses in the format `{block1}:{block2}:{block3}:{block4}:{block5}:{block6}:{block7}:{block8}`.</summary>
     [JsonPropertyName("ipAddresses")]
@@ -102,7 +108,7 @@ public partial class V1beta1FilestoreInstanceSpecNetworks
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1FilestoreInstanceSpecNetworksNetworkRef? NetworkRef { get; set; }
+    public FilestoreInstanceSpecNetworksNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. A /29 CIDR block in one of the [internal IP address ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/29. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.</summary>
     [JsonPropertyName("reservedIPRange")]
@@ -111,7 +117,7 @@ public partial class V1beta1FilestoreInstanceSpecNetworks
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceSpecProjectRef
+public partial class FilestoreInstanceSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -128,7 +134,7 @@ public partial class V1beta1FilestoreInstanceSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceSpec
+public partial class FilestoreInstanceSpec
 {
     /// <summary>The description of the instance (2048 characters or less).</summary>
     [JsonPropertyName("description")]
@@ -136,7 +142,7 @@ public partial class V1beta1FilestoreInstanceSpec
 
     /// <summary>File system shares on the instance. For this version, only a single file share is supported.</summary>
     [JsonPropertyName("fileShares")]
-    public IList<V1beta1FilestoreInstanceSpecFileShares>? FileShares { get; set; }
+    public IList<FilestoreInstanceSpecFileShares>? FileShares { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -144,11 +150,11 @@ public partial class V1beta1FilestoreInstanceSpec
 
     /// <summary>Immutable. VPC networks to which the instance is connected. For this version, only a single network is supported.</summary>
     [JsonPropertyName("networks")]
-    public IList<V1beta1FilestoreInstanceSpecNetworks>? Networks { get; set; }
+    public IList<FilestoreInstanceSpecNetworks>? Networks { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1FilestoreInstanceSpecProjectRef ProjectRef { get; set; }
+    public FilestoreInstanceSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -161,7 +167,7 @@ public partial class V1beta1FilestoreInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceStatusConditions
+public partial class FilestoreInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -186,11 +192,11 @@ public partial class V1beta1FilestoreInstanceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreInstanceStatus
+public partial class FilestoreInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1FilestoreInstanceStatusConditions>? Conditions { get; set; }
+    public IList<FilestoreInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time when the instance was created.</summary>
     [JsonPropertyName("createTime")]
@@ -215,30 +221,25 @@ public partial class V1beta1FilestoreInstanceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FilestoreInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FilestoreInstanceSpec>, IStatus<V1beta1FilestoreInstanceStatus>
+public partial class FilestoreInstance
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FilestoreInstance";
-    public const string KubeGroup = "filestore.cnrm.cloud.google.com";
-    public const string KubePluralName = "filestoreinstances";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public FilestoreInstanceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1FilestoreInstanceSpec Spec { get; set; }
+    public FilestoreInstanceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1FilestoreInstanceStatus? Status { get; set; }
+    public FilestoreInstanceStatus? Status { get; set; }
 }

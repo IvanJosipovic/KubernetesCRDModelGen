@@ -569,3 +569,29 @@ public partial class V1beta1HPCCacheNFSTarget : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1HPCCacheNFSTargetStatus? Status { get; set; }
 }
+
+/// <summary>HPCCacheNFSTarget is the Schema for the HPCCacheNFSTargets API. Manages a NFS Target within a HPC Cache.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HPCCacheNFSTargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HPCCacheNFSTarget>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HPCCacheNFSTargetList";
+    public const string KubeGroup = "storagecache.azure.upbound.io";
+    public const string KubePluralName = "hpccachenfstargets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HPCCacheNFSTarget> Items { get; set; }
+}

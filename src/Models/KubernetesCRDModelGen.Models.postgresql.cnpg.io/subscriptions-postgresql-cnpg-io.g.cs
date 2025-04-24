@@ -100,3 +100,29 @@ public partial class V1Subscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1S
     [JsonPropertyName("status")]
     public V1SubscriptionStatus? Status { get; set; }
 }
+
+/// <summary>Subscription is the Schema for the subscriptions API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1SubscriptionList : IKubernetesObject<V1ListMeta>, IItems<V1Subscription>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "SubscriptionList";
+    public const string KubeGroup = "postgresql.cnpg.io";
+    public const string KubePluralName = "subscriptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Subscription> Items { get; set; }
+}

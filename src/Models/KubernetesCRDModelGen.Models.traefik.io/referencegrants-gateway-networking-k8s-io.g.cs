@@ -80,3 +80,29 @@ public partial class V1beta1ReferenceGrant : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("spec")]
     public V1beta1ReferenceGrantSpec? Spec { get; set; }
 }
+
+/// <summary>ReferenceGrant identifies kinds of resources in other namespaces that are trusted to reference the specified kinds of resources in the same namespace as the policy.  Each ReferenceGrant can be used to represent a unique trust relationship. Additional Reference Grants can be used to add to the set of trusted sources of inbound references for the namespace they are defined within.  All cross-namespace references in Gateway API (with the exception of cross-namespace Gateway-route attachment) require a ReferenceGrant.  ReferenceGrant is a form of runtime verification allowing users to assert which cross-namespace object references are permitted. Implementations that support ReferenceGrant MUST NOT permit cross-namespace references which have no grant, and MUST respond to the removal of a grant by revoking the access that the grant allowed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ReferenceGrantList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReferenceGrant>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ReferenceGrantList";
+    public const string KubeGroup = "gateway.networking.k8s.io";
+    public const string KubePluralName = "referencegrants";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ReferenceGrant> Items { get; set; }
+}

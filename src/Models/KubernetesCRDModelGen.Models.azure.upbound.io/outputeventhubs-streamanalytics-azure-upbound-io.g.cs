@@ -738,3 +738,29 @@ public partial class V1beta1OutputEventHub : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1OutputEventHubStatus? Status { get; set; }
 }
+
+/// <summary>OutputEventHub is the Schema for the OutputEventHubs API. Manages a Stream Analytics Output to an EventHub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OutputEventHubList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputEventHub>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OutputEventHubList";
+    public const string KubeGroup = "streamanalytics.azure.upbound.io";
+    public const string KubePluralName = "outputeventhubs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OutputEventHub> Items { get; set; }
+}

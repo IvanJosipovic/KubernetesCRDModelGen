@@ -703,3 +703,29 @@ public partial class V1api20180501storageDnsZonesPTRRecord : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1api20180501storageDnsZonesPTRRecordStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20180501.DnsZonesPTRRecord Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/PTR/{relativeRecordSetName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20180501storageDnsZonesPTRRecordList : IKubernetesObject<V1ListMeta>, IItems<V1api20180501storageDnsZonesPTRRecord>
+{
+    public const string KubeApiVersion = "v1api20180501storage";
+    public const string KubeKind = "DnsZonesPTRRecordList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "dnszonesptrrecords";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20180501storageDnsZonesPTRRecord> Items { get; set; }
+}

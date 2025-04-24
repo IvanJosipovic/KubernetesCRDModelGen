@@ -622,3 +622,29 @@ public partial class V1beta1CassandraCluster : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1CassandraClusterStatus? Status { get; set; }
 }
+
+/// <summary>CassandraCluster is the Schema for the CassandraClusters API. Manages a Cassandra Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CassandraClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CassandraCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CassandraClusterList";
+    public const string KubeGroup = "cosmosdb.azure.upbound.io";
+    public const string KubePluralName = "cassandraclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CassandraCluster> Items { get; set; }
+}

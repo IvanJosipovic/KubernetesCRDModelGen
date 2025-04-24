@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceDirectoryEndpointSpecAddressRef
+public partial class ServiceDirectoryEndpointMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ServiceDirectoryEndpointSpecAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ServiceDirectoryEndpointSpecAddressRef
 
 /// <summary>Only the `external` field is supported to configure the reference.  Immutable. The Google Compute Engine network (VPC) of the endpoint in the format projects/&lt;project number&gt;/locations/global/networks/*.  The project must be specified by project number (project id is rejected). Incorrectly formatted networks are rejected, but no other validation is performed on this field (ex. network or project existence, reachability, or permissions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceDirectoryEndpointSpecNetworkRef
+public partial class ServiceDirectoryEndpointSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1ServiceDirectoryEndpointSpecNetworkRef
 
 /// <summary>The ServiceDirectoryService that this endpoint belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceDirectoryEndpointSpecServiceRef
+public partial class ServiceDirectoryEndpointSpecServiceRef
 {
     /// <summary>Allowed value: The `name` field of a `ServiceDirectoryService` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,15 +67,15 @@ public partial class V1beta1ServiceDirectoryEndpointSpecServiceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceDirectoryEndpointSpec
+public partial class ServiceDirectoryEndpointSpec
 {
     /// <summary></summary>
     [JsonPropertyName("addressRef")]
-    public V1beta1ServiceDirectoryEndpointSpecAddressRef? AddressRef { get; set; }
+    public ServiceDirectoryEndpointSpecAddressRef? AddressRef { get; set; }
 
     /// <summary>Only the `external` field is supported to configure the reference.  Immutable. The Google Compute Engine network (VPC) of the endpoint in the format projects/&lt;project number&gt;/locations/global/networks/*.  The project must be specified by project number (project id is rejected). Incorrectly formatted networks are rejected, but no other validation is performed on this field (ex. network or project existence, reachability, or permissions).</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ServiceDirectoryEndpointSpecNetworkRef? NetworkRef { get; set; }
+    public ServiceDirectoryEndpointSpecNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Port that the endpoint is running on, must be in the range of [0, 65535]. If unspecified, the default is 0.</summary>
     [JsonPropertyName("port")]
@@ -81,12 +87,12 @@ public partial class V1beta1ServiceDirectoryEndpointSpec
 
     /// <summary>The ServiceDirectoryService that this endpoint belongs to.</summary>
     [JsonPropertyName("serviceRef")]
-    public V1beta1ServiceDirectoryEndpointSpecServiceRef ServiceRef { get; set; }
+    public ServiceDirectoryEndpointSpecServiceRef ServiceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceDirectoryEndpointStatusConditions
+public partial class ServiceDirectoryEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -111,11 +117,11 @@ public partial class V1beta1ServiceDirectoryEndpointStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceDirectoryEndpointStatus
+public partial class ServiceDirectoryEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ServiceDirectoryEndpointStatusConditions>? Conditions { get; set; }
+    public IList<ServiceDirectoryEndpointStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name for the endpoint in the format 'projects/*/locations/*/namespaces/*/services/*/endpoints/*'.</summary>
     [JsonPropertyName("name")]
@@ -128,30 +134,25 @@ public partial class V1beta1ServiceDirectoryEndpointStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceDirectoryEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceDirectoryEndpointSpec>, IStatus<V1beta1ServiceDirectoryEndpointStatus>
+public partial class ServiceDirectoryEndpoint
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServiceDirectoryEndpoint";
-    public const string KubeGroup = "servicedirectory.cnrm.cloud.google.com";
-    public const string KubePluralName = "servicedirectoryendpoints";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ServiceDirectoryEndpointMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ServiceDirectoryEndpointSpec Spec { get; set; }
+    public ServiceDirectoryEndpointSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ServiceDirectoryEndpointStatus? Status { get; set; }
+    public ServiceDirectoryEndpointStatus? Status { get; set; }
 }

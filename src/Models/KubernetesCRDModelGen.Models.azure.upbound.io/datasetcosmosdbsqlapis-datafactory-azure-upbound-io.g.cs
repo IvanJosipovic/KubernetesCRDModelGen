@@ -581,3 +581,29 @@ public partial class V1beta1DataSetCosmosDBSQLAPI : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1DataSetCosmosDBSQLAPIStatus? Status { get; set; }
 }
+
+/// <summary>DataSetCosmosDBSQLAPI is the Schema for the DataSetCosmosDBSQLAPIs API. Manages an Azure Cosmos DB SQL API Dataset inside an Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataSetCosmosDBSQLAPIList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetCosmosDBSQLAPI>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataSetCosmosDBSQLAPIList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "datasetcosmosdbsqlapis";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataSetCosmosDBSQLAPI> Items { get; set; }
+}

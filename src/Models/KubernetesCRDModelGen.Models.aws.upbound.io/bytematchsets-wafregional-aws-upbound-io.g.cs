@@ -364,3 +364,29 @@ public partial class V1beta1ByteMatchSet : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1ByteMatchSetStatus? Status { get; set; }
 }
+
+/// <summary>ByteMatchSet is the Schema for the ByteMatchSets API. Provides a AWS WAF Regional ByteMatchSet resource for use with ALB.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ByteMatchSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ByteMatchSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ByteMatchSetList";
+    public const string KubeGroup = "wafregional.aws.upbound.io";
+    public const string KubePluralName = "bytematchsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ByteMatchSet> Items { get; set; }
+}

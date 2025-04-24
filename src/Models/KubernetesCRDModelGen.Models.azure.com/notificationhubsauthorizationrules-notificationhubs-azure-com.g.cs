@@ -295,3 +295,29 @@ public partial class V1api20230901storageNotificationHubsAuthorizationRule : IKu
     [JsonPropertyName("status")]
     public V1api20230901storageNotificationHubsAuthorizationRuleStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230901.NotificationHubsAuthorizationRule Generator information: - Generated from: /notificationhubs/resource-manager/Microsoft.NotificationHubs/stable/2023-09-01/notificationhubs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/{notificationHubName}/authorizationRules/{authorizationRuleName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230901storageNotificationHubsAuthorizationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1api20230901storageNotificationHubsAuthorizationRule>
+{
+    public const string KubeApiVersion = "v1api20230901storage";
+    public const string KubeKind = "NotificationHubsAuthorizationRuleList";
+    public const string KubeGroup = "notificationhubs.azure.com";
+    public const string KubePluralName = "notificationhubsauthorizationrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230901storageNotificationHubsAuthorizationRule> Items { get; set; }
+}

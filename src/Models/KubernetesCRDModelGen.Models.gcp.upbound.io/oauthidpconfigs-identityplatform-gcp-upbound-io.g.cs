@@ -378,3 +378,29 @@ public partial class V1beta1OAuthIdPConfig : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1OAuthIdPConfigStatus? Status { get; set; }
 }
+
+/// <summary>OAuthIdPConfig is the Schema for the OAuthIdPConfigs API. OIDC IdP configuration for a Identity Toolkit project.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OAuthIdPConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OAuthIdPConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OAuthIdPConfigList";
+    public const string KubeGroup = "identityplatform.gcp.upbound.io";
+    public const string KubePluralName = "oauthidpconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OAuthIdPConfig> Items { get; set; }
+}

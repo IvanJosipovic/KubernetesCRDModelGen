@@ -790,3 +790,29 @@ public partial class V1beta1EventHubNamespace : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1EventHubNamespaceStatus? Status { get; set; }
 }
+
+/// <summary>EventHubNamespace is the Schema for the EventHubNamespaces API. Manages an EventHub Namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EventHubNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventHubNamespace>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EventHubNamespaceList";
+    public const string KubeGroup = "eventhub.azure.upbound.io";
+    public const string KubePluralName = "eventhubnamespaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EventHubNamespace> Items { get; set; }
+}

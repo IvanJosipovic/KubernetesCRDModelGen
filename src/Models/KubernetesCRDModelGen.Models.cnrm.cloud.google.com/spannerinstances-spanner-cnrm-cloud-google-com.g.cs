@@ -180,3 +180,29 @@ public partial class V1beta1SpannerInstance : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1SpannerInstanceStatus? Status { get; set; }
 }
+
+/// <summary>SpannerInstance is the Schema for the SpannerInstance API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpannerInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpannerInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpannerInstanceList";
+    public const string KubeGroup = "spanner.cnrm.cloud.google.com";
+    public const string KubePluralName = "spannerinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpannerInstance> Items { get; set; }
+}

@@ -722,3 +722,29 @@ public partial class V1beta1Factory : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1FactoryStatus? Status { get; set; }
 }
+
+/// <summary>Factory is the Schema for the Factorys API. Manages an Azure Data Factory (Version 2).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FactoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Factory>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FactoryList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "factories";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Factory> Items { get; set; }
+}

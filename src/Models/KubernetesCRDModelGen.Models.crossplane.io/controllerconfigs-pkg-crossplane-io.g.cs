@@ -2537,3 +2537,29 @@ public partial class V1alpha1ControllerConfig : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("spec")]
     public V1alpha1ControllerConfigSpec? Spec { get; set; }
 }
+
+/// <summary>A ControllerConfig applies settings to controllers like Provider pods. Deprecated: Use the [DeploymentRuntimeConfig](https://docs.crossplane.io/latest/concepts/providers#runtime-configuration) instead.  Read the [Package Runtime Configuration](https://github.com/crossplane/crossplane/blob/11bbe13ea3604928cc4e24e8d0d18f3f5f7e847c/design/one-pager-package-runtime-config.md) design document for more details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ControllerConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ControllerConfig>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ControllerConfigList";
+    public const string KubeGroup = "pkg.crossplane.io";
+    public const string KubePluralName = "controllerconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ControllerConfig> Items { get; set; }
+}

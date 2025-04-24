@@ -518,3 +518,29 @@ public partial class V1beta1VPCEndpointSubnetAssociation : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1VPCEndpointSubnetAssociationStatus? Status { get; set; }
 }
+
+/// <summary>VPCEndpointSubnetAssociation is the Schema for the VPCEndpointSubnetAssociations API. Provides a resource to create an association between a VPC endpoint and a subnet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPCEndpointSubnetAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCEndpointSubnetAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPCEndpointSubnetAssociationList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "vpcendpointsubnetassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPCEndpointSubnetAssociation> Items { get; set; }
+}

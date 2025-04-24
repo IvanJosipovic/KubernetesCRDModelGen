@@ -513,3 +513,29 @@ public partial class V1beta1ResourceDataSync : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ResourceDataSyncStatus? Status { get; set; }
 }
+
+/// <summary>ResourceDataSync is the Schema for the ResourceDataSyncs API. Provides a SSM resource data sync.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceDataSyncList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceDataSync>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceDataSyncList";
+    public const string KubeGroup = "ssm.aws.upbound.io";
+    public const string KubePluralName = "resourcedatasyncs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceDataSync> Items { get; set; }
+}

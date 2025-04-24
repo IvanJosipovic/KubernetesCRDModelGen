@@ -5071,3 +5071,29 @@ public partial class V1alpha1AnalysisTemplate : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("spec")]
     public V1alpha1AnalysisTemplateSpec Spec { get; set; }
 }
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AnalysisTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AnalysisTemplate>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AnalysisTemplateList";
+    public const string KubeGroup = "argoproj.io";
+    public const string KubePluralName = "analysistemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AnalysisTemplate> Items { get; set; }
+}

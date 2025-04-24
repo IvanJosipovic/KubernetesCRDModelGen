@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflow.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DialogflowIntentMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowIntentSpecProjectRef
+public partial class DialogflowIntentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1DialogflowIntentSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowIntentSpec
+public partial class DialogflowIntentSpec
 {
     /// <summary>The name of the action associated with the intent. Note: The action name must not contain whitespaces.</summary>
     [JsonPropertyName("action")]
@@ -67,7 +73,7 @@ public partial class V1alpha1DialogflowIntentSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DialogflowIntentSpecProjectRef ProjectRef { get; set; }
+    public DialogflowIntentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Indicates whether to delete all contexts in the current session when this intent is matched.</summary>
     [JsonPropertyName("resetContexts")]
@@ -84,7 +90,7 @@ public partial class V1alpha1DialogflowIntentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowIntentStatusConditions
+public partial class DialogflowIntentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -109,7 +115,7 @@ public partial class V1alpha1DialogflowIntentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowIntentStatusFollowupIntentInfo
+public partial class DialogflowIntentStatusFollowupIntentInfo
 {
     /// <summary>The unique identifier of the followup intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("followupIntentName")]
@@ -122,15 +128,15 @@ public partial class V1alpha1DialogflowIntentStatusFollowupIntentInfo
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowIntentStatus
+public partial class DialogflowIntentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DialogflowIntentStatusConditions>? Conditions { get; set; }
+    public IList<DialogflowIntentStatusConditions>? Conditions { get; set; }
 
     /// <summary>Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.</summary>
     [JsonPropertyName("followupIntentInfo")]
-    public IList<V1alpha1DialogflowIntentStatusFollowupIntentInfo>? FollowupIntentInfo { get; set; }
+    public IList<DialogflowIntentStatusFollowupIntentInfo>? FollowupIntentInfo { get; set; }
 
     /// <summary>The unique identifier of this intent. Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("name")]
@@ -147,30 +153,25 @@ public partial class V1alpha1DialogflowIntentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DialogflowIntent : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowIntentSpec>, IStatus<V1alpha1DialogflowIntentStatus>
+public partial class DialogflowIntent
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DialogflowIntent";
-    public const string KubeGroup = "dialogflow.cnrm.cloud.google.com";
-    public const string KubePluralName = "dialogflowintents";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DialogflowIntentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DialogflowIntentSpec Spec { get; set; }
+    public DialogflowIntentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DialogflowIntentStatus? Status { get; set; }
+    public DialogflowIntentStatus? Status { get; set; }
 }

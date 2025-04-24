@@ -438,3 +438,29 @@ public partial class V1beta1DatabaseMigrationProject : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1DatabaseMigrationProjectStatus? Status { get; set; }
 }
+
+/// <summary>DatabaseMigrationProject is the Schema for the DatabaseMigrationProjects API. Manage Azure Database Migration Project instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatabaseMigrationProjectList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatabaseMigrationProject>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatabaseMigrationProjectList";
+    public const string KubeGroup = "datamigration.azure.upbound.io";
+    public const string KubePluralName = "databasemigrationprojects";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DatabaseMigrationProject> Items { get; set; }
+}

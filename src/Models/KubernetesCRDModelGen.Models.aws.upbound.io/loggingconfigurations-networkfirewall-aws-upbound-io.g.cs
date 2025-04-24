@@ -468,3 +468,29 @@ public partial class V1beta1LoggingConfiguration : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1LoggingConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>LoggingConfiguration is the Schema for the LoggingConfigurations API. Provides an AWS Network Firewall Logging Configuration resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LoggingConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoggingConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LoggingConfigurationList";
+    public const string KubeGroup = "networkfirewall.aws.upbound.io";
+    public const string KubePluralName = "loggingconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LoggingConfiguration> Items { get; set; }
+}

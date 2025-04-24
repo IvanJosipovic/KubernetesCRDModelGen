@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSCryptoKeyVersionSpec
+public partial class KMSCryptoKeyVersionMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class KMSCryptoKeyVersionSpec
 {
     /// <summary>Immutable. The name of the cryptoKey associated with the CryptoKeyVersions. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}''.</summary>
     [JsonPropertyName("cryptoKey")]
@@ -27,7 +33,7 @@ public partial class V1alpha1KMSCryptoKeyVersionSpec
 
 /// <summary>The certificate chains needed to validate the attestation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationCertChains
+public partial class KMSCryptoKeyVersionStatusAttestationCertChains
 {
     /// <summary>Cavium certificate chain corresponding to the attestation.</summary>
     [JsonPropertyName("caviumCerts")]
@@ -44,7 +50,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationCertChains
 
 /// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationExternalProtectionLevelOptions
+public partial class KMSCryptoKeyVersionStatusAttestationExternalProtectionLevelOptions
 {
     /// <summary>The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.</summary>
     [JsonPropertyName("ekmConnectionKeyPath")]
@@ -57,11 +63,11 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestationExternalProtect
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSCryptoKeyVersionStatusAttestation
+public partial class KMSCryptoKeyVersionStatusAttestation
 {
     /// <summary>The certificate chains needed to validate the attestation.</summary>
     [JsonPropertyName("certChains")]
-    public V1alpha1KMSCryptoKeyVersionStatusAttestationCertChains? CertChains { get; set; }
+    public KMSCryptoKeyVersionStatusAttestationCertChains? CertChains { get; set; }
 
     /// <summary>The attestation data provided by the HSM when the key operation was performed.</summary>
     [JsonPropertyName("content")]
@@ -69,7 +75,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestation
 
     /// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.</summary>
     [JsonPropertyName("externalProtectionLevelOptions")]
-    public V1alpha1KMSCryptoKeyVersionStatusAttestationExternalProtectionLevelOptions? ExternalProtectionLevelOptions { get; set; }
+    public KMSCryptoKeyVersionStatusAttestationExternalProtectionLevelOptions? ExternalProtectionLevelOptions { get; set; }
 
     /// <summary>The format of the attestation data.</summary>
     [JsonPropertyName("format")]
@@ -78,7 +84,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusAttestation
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSCryptoKeyVersionStatusConditions
+public partial class KMSCryptoKeyVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -103,7 +109,7 @@ public partial class V1alpha1KMSCryptoKeyVersionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSCryptoKeyVersionStatus
+public partial class KMSCryptoKeyVersionStatus
 {
     /// <summary>The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.</summary>
     [JsonPropertyName("algorithm")]
@@ -111,11 +117,11 @@ public partial class V1alpha1KMSCryptoKeyVersionStatus
 
     /// <summary>Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only provided for key versions with protectionLevel HSM.</summary>
     [JsonPropertyName("attestation")]
-    public IList<V1alpha1KMSCryptoKeyVersionStatusAttestation>? Attestation { get; set; }
+    public IList<KMSCryptoKeyVersionStatusAttestation>? Attestation { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1KMSCryptoKeyVersionStatusConditions>? Conditions { get; set; }
+    public IList<KMSCryptoKeyVersionStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time this CryptoKeyVersion key material was generated.</summary>
     [JsonPropertyName("generateTime")]
@@ -136,30 +142,25 @@ public partial class V1alpha1KMSCryptoKeyVersionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1KMSCryptoKeyVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSCryptoKeyVersionSpec>, IStatus<V1alpha1KMSCryptoKeyVersionStatus>
+public partial class KMSCryptoKeyVersion
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "KMSCryptoKeyVersion";
-    public const string KubeGroup = "kms.cnrm.cloud.google.com";
-    public const string KubePluralName = "kmscryptokeyversions";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public KMSCryptoKeyVersionMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1KMSCryptoKeyVersionSpec Spec { get; set; }
+    public KMSCryptoKeyVersionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1KMSCryptoKeyVersionStatus? Status { get; set; }
+    public KMSCryptoKeyVersionStatus? Status { get; set; }
 }

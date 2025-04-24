@@ -317,3 +317,29 @@ public partial class V1api20230315previewstorageFleet : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230315preview.Fleet Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230315previewstorageFleetList : IKubernetesObject<V1ListMeta>, IItems<V1api20230315previewstorageFleet>
+{
+    public const string KubeApiVersion = "v1api20230315previewstorage";
+    public const string KubeKind = "FleetList";
+    public const string KubeGroup = "containerservice.azure.com";
+    public const string KubePluralName = "fleets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230315previewstorageFleet> Items { get; set; }
+}

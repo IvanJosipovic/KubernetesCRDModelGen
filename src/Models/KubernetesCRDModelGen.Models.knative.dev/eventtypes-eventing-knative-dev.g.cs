@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
 /// <summary>Reference a resource. For example, Broker.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2EventTypeSpecReference
+public partial class EventTypeSpecReference
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -35,7 +35,7 @@ public partial class V1beta2EventTypeSpecReference
 
 /// <summary>Spec defines the desired state of the EventType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2EventTypeSpec
+public partial class EventTypeSpec
 {
     /// <summary></summary>
     [JsonPropertyName("broker")]
@@ -43,7 +43,7 @@ public partial class V1beta2EventTypeSpec
 
     /// <summary>Reference a resource. For example, Broker.</summary>
     [JsonPropertyName("reference")]
-    public V1beta2EventTypeSpecReference? Reference { get; set; }
+    public EventTypeSpecReference? Reference { get; set; }
 
     /// <summary>Description is an optional field used to describe the EventType, in any meaningful way.</summary>
     [JsonPropertyName("description")]
@@ -68,7 +68,7 @@ public partial class V1beta2EventTypeSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2EventTypeStatusConditions
+public partial class EventTypeStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -97,7 +97,7 @@ public partial class V1beta2EventTypeStatusConditions
 
 /// <summary>Status represents the current state of the EventType. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2EventTypeStatus
+public partial class EventTypeStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -105,7 +105,7 @@ public partial class V1beta2EventTypeStatus
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta2EventTypeStatusConditions>? Conditions { get; set; }
+    public IList<EventTypeStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -114,30 +114,13 @@ public partial class V1beta2EventTypeStatus
 
 /// <summary>EventType represents a type of event that can be consumed from a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2EventType : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2EventTypeSpec>, IStatus<V1beta2EventTypeStatus>
+public partial class EventType
 {
-    public const string KubeApiVersion = "v1beta2";
-    public const string KubeKind = "EventType";
-    public const string KubeGroup = "eventing.knative.dev";
-    public const string KubePluralName = "eventtypes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary>Spec defines the desired state of the EventType.</summary>
     [JsonPropertyName("spec")]
-    public V1beta2EventTypeSpec? Spec { get; set; }
+    public EventTypeSpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the EventType. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public V1beta2EventTypeStatus? Status { get; set; }
+    public EventTypeStatus? Status { get; set; }
 }

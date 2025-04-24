@@ -400,3 +400,29 @@ public partial class V1api20230501storageProfile : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1api20230501storageProfileStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230501.Profile Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/cdn.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230501storageProfileList : IKubernetesObject<V1ListMeta>, IItems<V1api20230501storageProfile>
+{
+    public const string KubeApiVersion = "v1api20230501storage";
+    public const string KubeKind = "ProfileList";
+    public const string KubeGroup = "cdn.azure.com";
+    public const string KubePluralName = "profiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230501storageProfile> Items { get; set; }
+}

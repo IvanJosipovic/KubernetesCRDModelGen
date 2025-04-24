@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class KMSCryptoKeyMetadata
+{
+}
+
 /// <summary>The KMSKeyRing that this key belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KMSCryptoKeySpecKeyRingRef
+public partial class KMSCryptoKeySpecKeyRingRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSKeyRing` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1KMSCryptoKeySpecKeyRingRef
 
 /// <summary>A template describing settings for new crypto key versions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KMSCryptoKeySpecVersionTemplate
+public partial class KMSCryptoKeySpecVersionTemplate
 {
     /// <summary>The algorithm to use when creating a version based on this template. See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.</summary>
     [JsonPropertyName("algorithm")]
@@ -40,7 +46,7 @@ public partial class V1beta1KMSCryptoKeySpecVersionTemplate
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KMSCryptoKeySpec
+public partial class KMSCryptoKeySpec
 {
     /// <summary>Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.</summary>
     [JsonPropertyName("destroyScheduledDuration")]
@@ -52,7 +58,7 @@ public partial class V1beta1KMSCryptoKeySpec
 
     /// <summary>The KMSKeyRing that this key belongs to.</summary>
     [JsonPropertyName("keyRingRef")]
-    public V1beta1KMSCryptoKeySpecKeyRingRef KeyRingRef { get; set; }
+    public KMSCryptoKeySpecKeyRingRef KeyRingRef { get; set; }
 
     /// <summary>Immutable. The immutable purpose of this CryptoKey. See the [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose) for possible inputs. Default value is "ENCRYPT_DECRYPT".</summary>
     [JsonPropertyName("purpose")]
@@ -72,12 +78,12 @@ public partial class V1beta1KMSCryptoKeySpec
 
     /// <summary>A template describing settings for new crypto key versions.</summary>
     [JsonPropertyName("versionTemplate")]
-    public V1beta1KMSCryptoKeySpecVersionTemplate? VersionTemplate { get; set; }
+    public KMSCryptoKeySpecVersionTemplate? VersionTemplate { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KMSCryptoKeyStatusConditions
+public partial class KMSCryptoKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -102,11 +108,11 @@ public partial class V1beta1KMSCryptoKeyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KMSCryptoKeyStatus
+public partial class KMSCryptoKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1KMSCryptoKeyStatusConditions>? Conditions { get; set; }
+    public IList<KMSCryptoKeyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -119,30 +125,25 @@ public partial class V1beta1KMSCryptoKeyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1KMSCryptoKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KMSCryptoKeySpec>, IStatus<V1beta1KMSCryptoKeyStatus>
+public partial class KMSCryptoKey
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "KMSCryptoKey";
-    public const string KubeGroup = "kms.cnrm.cloud.google.com";
-    public const string KubePluralName = "kmscryptokeys";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public KMSCryptoKeyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1KMSCryptoKeySpec Spec { get; set; }
+    public KMSCryptoKeySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1KMSCryptoKeyStatus? Status { get; set; }
+    public KMSCryptoKeyStatus? Status { get; set; }
 }

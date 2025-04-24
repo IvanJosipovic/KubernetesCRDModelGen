@@ -167,3 +167,29 @@ public partial class V1beta1BigtableInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1BigtableInstanceStatus? Status { get; set; }
 }
+
+/// <summary>BigtableInstance is the Schema for the BigtableInstance API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigtableInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigtableInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigtableInstanceList";
+    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigtableinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigtableInstance> Items { get; set; }
+}

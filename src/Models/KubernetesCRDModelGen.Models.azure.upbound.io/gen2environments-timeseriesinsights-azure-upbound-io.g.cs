@@ -558,3 +558,29 @@ public partial class V1beta1Gen2Environment : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1Gen2EnvironmentStatus? Status { get; set; }
 }
+
+/// <summary>Gen2Environment is the Schema for the Gen2Environments API. Manages an Azure IoT Time Series Insights Gen2 Environment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1Gen2EnvironmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Gen2Environment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "Gen2EnvironmentList";
+    public const string KubeGroup = "timeseriesinsights.azure.upbound.io";
+    public const string KubePluralName = "gen2environments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Gen2Environment> Items { get; set; }
+}

@@ -534,3 +534,29 @@ public partial class V1beta1CustomerGatewayAssociation : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1CustomerGatewayAssociationStatus? Status { get; set; }
 }
+
+/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Associates a customer gateway with a device and optionally, with a link.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CustomerGatewayAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomerGatewayAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CustomerGatewayAssociationList";
+    public const string KubeGroup = "networkmanager.aws.upbound.io";
+    public const string KubePluralName = "customergatewayassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CustomerGatewayAssociation> Items { get; set; }
+}

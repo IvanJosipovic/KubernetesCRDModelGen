@@ -506,3 +506,29 @@ public partial class V1beta1ReportDefinition : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ReportDefinitionStatus? Status { get; set; }
 }
+
+/// <summary>ReportDefinition is the Schema for the ReportDefinitions API. Provides a Cost and Usage Report Definition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ReportDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReportDefinition>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ReportDefinitionList";
+    public const string KubeGroup = "cur.aws.upbound.io";
+    public const string KubePluralName = "reportdefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ReportDefinition> Items { get; set; }
+}

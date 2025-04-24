@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DatastreamPrivateConnectionMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamPrivateConnectionSpecProjectRef
+public partial class DatastreamPrivateConnectionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpecProjectRef
 
 /// <summary>Immutable. The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig
+public partial class DatastreamPrivateConnectionSpecVpcPeeringConfig
 {
     /// <summary>Immutable. A free subnet for peering. (CIDR of /29).</summary>
     [JsonPropertyName("subnet")]
@@ -40,7 +46,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamPrivateConnectionSpec
+public partial class DatastreamPrivateConnectionSpec
 {
     /// <summary>Immutable. Display name.</summary>
     [JsonPropertyName("displayName")]
@@ -52,7 +58,7 @@ public partial class V1alpha1DatastreamPrivateConnectionSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DatastreamPrivateConnectionSpecProjectRef ProjectRef { get; set; }
+    public DatastreamPrivateConnectionSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The privateConnectionId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -60,12 +66,12 @@ public partial class V1alpha1DatastreamPrivateConnectionSpec
 
     /// <summary>Immutable. The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC.</summary>
     [JsonPropertyName("vpcPeeringConfig")]
-    public V1alpha1DatastreamPrivateConnectionSpecVpcPeeringConfig VpcPeeringConfig { get; set; }
+    public DatastreamPrivateConnectionSpecVpcPeeringConfig VpcPeeringConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamPrivateConnectionStatusConditions
+public partial class DatastreamPrivateConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -90,7 +96,7 @@ public partial class V1alpha1DatastreamPrivateConnectionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamPrivateConnectionStatusError
+public partial class DatastreamPrivateConnectionStatusError
 {
     /// <summary>A list of messages that carry the error details.</summary>
     [JsonPropertyName("details")]
@@ -103,15 +109,15 @@ public partial class V1alpha1DatastreamPrivateConnectionStatusError
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamPrivateConnectionStatus
+public partial class DatastreamPrivateConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DatastreamPrivateConnectionStatusConditions>? Conditions { get; set; }
+    public IList<DatastreamPrivateConnectionStatusConditions>? Conditions { get; set; }
 
     /// <summary>The PrivateConnection error in case of failure.</summary>
     [JsonPropertyName("error")]
-    public IList<V1alpha1DatastreamPrivateConnectionStatusError>? Error { get; set; }
+    public IList<DatastreamPrivateConnectionStatusError>? Error { get; set; }
 
     /// <summary>The resource's name.</summary>
     [JsonPropertyName("name")]
@@ -128,30 +134,25 @@ public partial class V1alpha1DatastreamPrivateConnectionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DatastreamPrivateConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamPrivateConnectionSpec>, IStatus<V1alpha1DatastreamPrivateConnectionStatus>
+public partial class DatastreamPrivateConnection
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DatastreamPrivateConnection";
-    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
-    public const string KubePluralName = "datastreamprivateconnections";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DatastreamPrivateConnectionMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DatastreamPrivateConnectionSpec Spec { get; set; }
+    public DatastreamPrivateConnectionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DatastreamPrivateConnectionStatus? Status { get; set; }
+    public DatastreamPrivateConnectionStatus? Status { get; set; }
 }

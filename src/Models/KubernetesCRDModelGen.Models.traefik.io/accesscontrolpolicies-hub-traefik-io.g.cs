@@ -496,3 +496,29 @@ public partial class V1alpha1AccessControlPolicy : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1alpha1AccessControlPolicyStatus? Status { get; set; }
 }
+
+/// <summary>AccessControlPolicy defines an access control policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AccessControlPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AccessControlPolicy>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AccessControlPolicyList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "accesscontrolpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AccessControlPolicy> Items { get; set; }
+}

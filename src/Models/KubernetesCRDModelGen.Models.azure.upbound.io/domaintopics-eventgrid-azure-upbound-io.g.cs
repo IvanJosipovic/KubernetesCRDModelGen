@@ -379,3 +379,29 @@ public partial class V1beta1DomainTopic : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1DomainTopicStatus? Status { get; set; }
 }
+
+/// <summary>DomainTopic is the Schema for the DomainTopics API. Manages an EventGrid Domain Topic</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainTopic>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainTopicList";
+    public const string KubeGroup = "eventgrid.azure.upbound.io";
+    public const string KubePluralName = "domaintopics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DomainTopic> Items { get; set; }
+}

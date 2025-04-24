@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recaptchaenterprise.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class RecaptchaEnterpriseKeyMetadata
+{
+}
+
 /// <summary>Settings for keys that can be used by Android apps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
+public partial class RecaptchaEnterpriseKeySpecAndroidSettings
 {
     /// <summary>If set to true, it means allowed_package_names will not be enforced.</summary>
     [JsonPropertyName("allowAllPackageNames")]
@@ -23,7 +29,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecAndroidSettings
 
 /// <summary>Settings for keys that can be used by iOS apps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
+public partial class RecaptchaEnterpriseKeySpecIosSettings
 {
     /// <summary>If set to true, it means allowed_bundle_ids will not be enforced.</summary>
     [JsonPropertyName("allowAllBundleIds")]
@@ -36,7 +42,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecIosSettings
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
+public partial class RecaptchaEnterpriseKeySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -53,7 +59,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecProjectRef
 
 /// <summary>Immutable. Options for user acceptance testing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
+public partial class RecaptchaEnterpriseKeySpecTestingOptions
 {
     /// <summary>Immutable. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE</summary>
     [JsonPropertyName("testingChallenge")]
@@ -66,7 +72,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecTestingOptions
 
 /// <summary>Immutable. Settings specific to keys that can be used for WAF (Web Application Firewall).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
+public partial class RecaptchaEnterpriseKeySpecWafSettings
 {
     /// <summary>Immutable. Supported WAF features. For more information, see https://cloud.google.com/recaptcha-enterprise/docs/usecase#comparison_of_features. Possible values: CHALLENGE_PAGE, SESSION_TOKEN, ACTION_TOKEN, EXPRESS</summary>
     [JsonPropertyName("wafFeature")]
@@ -79,7 +85,7 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWafSettings
 
 /// <summary>Settings for keys that can be used by websites.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
+public partial class RecaptchaEnterpriseKeySpecWebSettings
 {
     /// <summary>If set to true, it means allowed_domains will not be enforced.</summary>
     [JsonPropertyName("allowAllDomains")]
@@ -104,11 +110,11 @@ public partial class V1beta1RecaptchaEnterpriseKeySpecWebSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeySpec
+public partial class RecaptchaEnterpriseKeySpec
 {
     /// <summary>Settings for keys that can be used by Android apps.</summary>
     [JsonPropertyName("androidSettings")]
-    public V1beta1RecaptchaEnterpriseKeySpecAndroidSettings? AndroidSettings { get; set; }
+    public RecaptchaEnterpriseKeySpecAndroidSettings? AndroidSettings { get; set; }
 
     /// <summary>Human-readable display name of this key. Modifiable by user.</summary>
     [JsonPropertyName("displayName")]
@@ -116,11 +122,11 @@ public partial class V1beta1RecaptchaEnterpriseKeySpec
 
     /// <summary>Settings for keys that can be used by iOS apps.</summary>
     [JsonPropertyName("iosSettings")]
-    public V1beta1RecaptchaEnterpriseKeySpecIosSettings? IosSettings { get; set; }
+    public RecaptchaEnterpriseKeySpecIosSettings? IosSettings { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1RecaptchaEnterpriseKeySpecProjectRef ProjectRef { get; set; }
+    public RecaptchaEnterpriseKeySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -128,20 +134,20 @@ public partial class V1beta1RecaptchaEnterpriseKeySpec
 
     /// <summary>Immutable. Options for user acceptance testing.</summary>
     [JsonPropertyName("testingOptions")]
-    public V1beta1RecaptchaEnterpriseKeySpecTestingOptions? TestingOptions { get; set; }
+    public RecaptchaEnterpriseKeySpecTestingOptions? TestingOptions { get; set; }
 
     /// <summary>Immutable. Settings specific to keys that can be used for WAF (Web Application Firewall).</summary>
     [JsonPropertyName("wafSettings")]
-    public V1beta1RecaptchaEnterpriseKeySpecWafSettings? WafSettings { get; set; }
+    public RecaptchaEnterpriseKeySpecWafSettings? WafSettings { get; set; }
 
     /// <summary>Settings for keys that can be used by websites.</summary>
     [JsonPropertyName("webSettings")]
-    public V1beta1RecaptchaEnterpriseKeySpecWebSettings? WebSettings { get; set; }
+    public RecaptchaEnterpriseKeySpecWebSettings? WebSettings { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
+public partial class RecaptchaEnterpriseKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -166,11 +172,11 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RecaptchaEnterpriseKeyStatus
+public partial class RecaptchaEnterpriseKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1RecaptchaEnterpriseKeyStatusConditions>? Conditions { get; set; }
+    public IList<RecaptchaEnterpriseKeyStatusConditions>? Conditions { get; set; }
 
     /// <summary>The timestamp corresponding to the creation of this Key.</summary>
     [JsonPropertyName("createTime")]
@@ -183,30 +189,25 @@ public partial class V1beta1RecaptchaEnterpriseKeyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RecaptchaEnterpriseKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RecaptchaEnterpriseKeySpec>, IStatus<V1beta1RecaptchaEnterpriseKeyStatus>
+public partial class RecaptchaEnterpriseKey
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RecaptchaEnterpriseKey";
-    public const string KubeGroup = "recaptchaenterprise.cnrm.cloud.google.com";
-    public const string KubePluralName = "recaptchaenterprisekeys";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public RecaptchaEnterpriseKeyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1RecaptchaEnterpriseKeySpec Spec { get; set; }
+    public RecaptchaEnterpriseKeySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1RecaptchaEnterpriseKeyStatus? Status { get; set; }
+    public RecaptchaEnterpriseKeyStatus? Status { get; set; }
 }

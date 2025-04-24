@@ -438,3 +438,29 @@ public partial class V1beta1APIVersionSet : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1APIVersionSetStatus? Status { get; set; }
 }
+
+/// <summary>APIVersionSet is the Schema for the APIVersionSets API. Manages an API Version Set within an API Management Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1APIVersionSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1APIVersionSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "APIVersionSetList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "apiversionsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1APIVersionSet> Items { get; set; }
+}

@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef
+public partial class DLPJobTriggerMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DLPJobTriggerSpecInspectJobActionsPubSubTopicRef
 {
     /// <summary>Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.  Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,16 +33,16 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef
 
 /// <summary>Publish a notification to a pubsub topic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsPubSub
+public partial class DLPJobTriggerSpecInspectJobActionsPubSub
 {
     /// <summary></summary>
     [JsonPropertyName("topicRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsPubSubTopicRef? TopicRef { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsPubSubTopicRef? TopicRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableDatasetRef
+public partial class DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableDatasetRef
 {
     /// <summary>Dataset ID of the table.  Allowed value: The Google Cloud resource name of a `BigQueryDataset` resource (format: `projects/{{project}}/datasets/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -53,7 +59,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableProjectRef
+public partial class DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableProjectRef
 {
     /// <summary>The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -70,7 +76,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef
+public partial class DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef
 {
     /// <summary>Name of the table.  Allowed value: The Google Cloud resource name of a `BigQueryTable` resource (format: `projects/{{project}}/datasets/{{dataset_id}}/tables/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -87,24 +93,24 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
 
 /// <summary>Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable
+public partial class DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable
 {
     /// <summary></summary>
     [JsonPropertyName("datasetRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableDatasetRef? DatasetRef { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableDatasetRef? DatasetRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableProjectRef? ProjectRef { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableProjectRef? ProjectRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tableRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef? TableRef { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTableTableRef? TableRef { get; set; }
 }
 
 /// <summary>Location to store findings outside of DLP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig
+public partial class DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig
 {
     /// <summary>Store findings directly to DLP. If neither this or bigquery is chosen only summary stats of total infotype count will be stored. Quotes will not be stored to dlp findings. If quotes are needed, store to BigQuery. Currently only for inspect jobs.</summary>
     [JsonPropertyName("dlpStorage")]
@@ -116,21 +122,21 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutput
 
     /// <summary>Store findings in an existing table or a new table in an existing dataset. If table_id is not set a new one will be generated for you with the following format: dlp_googleapis_yyyy_mm_dd_[dlp_job_id]. Pacific timezone will be used for generating the date details. For Inspect, each column in an existing output table must have the same name, type, and mode of a field in the `Finding` object. For Risk, an existing output table should be the output of a previous Risk analysis job run on the same source table, with the same privacy metric and quasi-identifiers. Risk jobs that analyze the same table but compute a different privacy metric, or use different sets of quasi-identifiers, cannot store their results in the same table.</summary>
     [JsonPropertyName("table")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable? Table { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfigTable? Table { get; set; }
 }
 
 /// <summary>Save resulting findings in a provided location.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings
+public partial class DLPJobTriggerSpecInspectJobActionsSaveFindings
 {
     /// <summary>Location to store findings outside of DLP.</summary>
     [JsonPropertyName("outputConfig")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig? OutputConfig { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsSaveFindingsOutputConfig? OutputConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobActions
+public partial class DLPJobTriggerSpecInspectJobActions
 {
     /// <summary>Enable email notification for project owners and editors on job's completion/failure.</summary>
     [JsonPropertyName("jobNotificationEmails")]
@@ -138,7 +144,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActions
 
     /// <summary>Publish a notification to a pubsub topic.</summary>
     [JsonPropertyName("pubSub")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsPubSub? PubSub { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsPubSub? PubSub { get; set; }
 
     /// <summary>Publish findings to Cloud Datahub.</summary>
     [JsonPropertyName("publishFindingsToCloudDataCatalog")]
@@ -154,12 +160,12 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobActions
 
     /// <summary>Save resulting findings in a provided location.</summary>
     [JsonPropertyName("saveFindings")]
-    public V1beta1DLPJobTriggerSpecInspectJobActionsSaveFindings? SaveFindings { get; set; }
+    public DLPJobTriggerSpecInspectJobActionsSaveFindings? SaveFindings { get; set; }
 }
 
 /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleHotwordRegex
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
     [JsonPropertyName("groupIndexes")]
@@ -172,7 +178,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleLikelihoodAdjustment
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Possible values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY</summary>
     [JsonPropertyName("fixedLikelihood")]
@@ -185,7 +191,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider.</summary>
     [JsonPropertyName("windowAfter")]
@@ -198,33 +204,33 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary>Hotword-based detection rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
     [JsonPropertyName("hotwordRegex")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleHotwordRegex? HotwordRegex { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleHotwordRegex? HotwordRegex { get; set; }
 
     /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
     [JsonPropertyName("likelihoodAdjustment")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleLikelihoodAdjustment? LikelihoodAdjustment { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleLikelihoodAdjustment? LikelihoodAdjustment { get; set; }
 
     /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
     [JsonPropertyName("proximity")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity? Proximity { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRuleProximity? Proximity { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRules
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRules
 {
     /// <summary>Hotword-based detection rule.</summary>
     [JsonPropertyName("hotwordRule")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule? HotwordRule { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRulesHotwordRule? HotwordRule { get; set; }
 }
 
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
     [JsonPropertyName("path")]
@@ -233,7 +239,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary>List of words or phrases to search for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]</summary>
     [JsonPropertyName("words")]
@@ -242,20 +248,20 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary>A list of phrases to detect as a CustomInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionary
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
     [JsonPropertyName("cloudStoragePath")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath? CloudStoragePath { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryCloudStoragePath? CloudStoragePath { get; set; }
 
     /// <summary>List of words or phrases to search for.</summary>
     [JsonPropertyName("wordList")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList? WordList { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionaryWordList? WordList { get; set; }
 }
 
 /// <summary>CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesInfoType
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -268,7 +274,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary>Regular expression based CustomInfoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesRegex
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
     [JsonPropertyName("groupIndexes")]
@@ -281,7 +287,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef
 {
     /// <summary>Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.  Allowed value: The Google Cloud resource name of a `DLPStoredInfoType` resource (format: `{{parent}}/storedInfoTypes/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -298,7 +304,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary>Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredType
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredType
 {
     /// <summary>Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.</summary>
     [JsonPropertyName("createTime")]
@@ -306,20 +312,20 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
     /// <summary></summary>
     [JsonPropertyName("nameRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef? NameRef { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredTypeNameRef? NameRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypes
+public partial class DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypes
 {
     /// <summary>Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.</summary>
     [JsonPropertyName("detectionRules")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRules>? DetectionRules { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDetectionRules>? DetectionRules { get; set; }
 
     /// <summary>A list of phrases to detect as a CustomInfoType.</summary>
     [JsonPropertyName("dictionary")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionary? Dictionary { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesDictionary? Dictionary { get; set; }
 
     /// <summary>If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching. Possible values: EXCLUSION_TYPE_UNSPECIFIED, EXCLUSION_TYPE_EXCLUDE</summary>
     [JsonPropertyName("exclusionType")]
@@ -327,7 +333,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
     /// <summary>CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.</summary>
     [JsonPropertyName("infoType")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesInfoType? InfoType { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesInfoType? InfoType { get; set; }
 
     /// <summary>Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified. Possible values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY</summary>
     [JsonPropertyName("likelihood")]
@@ -335,11 +341,11 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
     /// <summary>Regular expression based CustomInfoType.</summary>
     [JsonPropertyName("regex")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesRegex? Regex { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesRegex? Regex { get; set; }
 
     /// <summary>Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.</summary>
     [JsonPropertyName("storedType")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredType? StoredType { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypesStoredType? StoredType { get; set; }
 
     /// <summary>Message for detecting output from deidentification transformations that support reversing.</summary>
     [JsonPropertyName("surrogateType")]
@@ -348,7 +354,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigInfoTypes
+public partial class DLPJobTriggerSpecInspectJobInspectConfigInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -357,7 +363,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigInfoTypes
 
 /// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
+public partial class DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -370,11 +376,11 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFin
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoType
+public partial class DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoType
 {
     /// <summary>Type of information the findings limit applies to. Only one limit per info_type should be provided. If InfoTypeLimit does not have an info_type, the DLP API applies the limit against all info_types that are found but not specified in another InfoTypeLimit.</summary>
     [JsonPropertyName("infoType")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType? InfoType { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoTypeInfoType? InfoType { get; set; }
 
     /// <summary>Max findings limit for the given infoType.</summary>
     [JsonPropertyName("maxFindings")]
@@ -383,11 +389,11 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFin
 
 /// <summary>Configuration to control the number of findings returned. This is not used for data profiling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimits
+public partial class DLPJobTriggerSpecInspectJobInspectConfigLimits
 {
     /// <summary>Configuration of findings limit given for specified infoTypes.</summary>
     [JsonPropertyName("maxFindingsPerInfoType")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoType>? MaxFindingsPerInfoType { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigLimitsMaxFindingsPerInfoType>? MaxFindingsPerInfoType { get; set; }
 
     /// <summary>Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.</summary>
     [JsonPropertyName("maxFindingsPerItem")]
@@ -400,7 +406,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimits
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoTypes
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -413,7 +419,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoT
 
 /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath
 {
     /// <summary>A url representing a file or path (no wildcards) in Cloud Storage. Example: gs://[BUCKET_NAME]/dictionary.txt</summary>
     [JsonPropertyName("path")]
@@ -422,7 +428,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
 /// <summary>List of words or phrases to search for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList
 {
     /// <summary>Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]</summary>
     [JsonPropertyName("words")]
@@ -431,20 +437,20 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
 /// <summary>Dictionary which defines the rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary
 {
     /// <summary>Newline-delimited file of words in Cloud Storage. Only a single file is accepted.</summary>
     [JsonPropertyName("cloudStoragePath")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath? CloudStoragePath { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryCloudStoragePath? CloudStoragePath { get; set; }
 
     /// <summary>List of words or phrases to search for.</summary>
     [JsonPropertyName("wordList")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList? WordList { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionaryWordList? WordList { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -457,16 +463,16 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
 /// <summary>Set of infoTypes for which findings would affect this rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes
 {
     /// <summary>InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"` and `exclusion_rule` containing `exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.</summary>
     [JsonPropertyName("infoTypes")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypesInfoTypes>? InfoTypes { get; set; }
 }
 
 /// <summary>Regular expression which defines the rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
     [JsonPropertyName("groupIndexes")]
@@ -479,15 +485,15 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
 /// <summary>Exclusion rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRule
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRule
 {
     /// <summary>Dictionary which defines the rule.</summary>
     [JsonPropertyName("dictionary")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary? Dictionary { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleDictionary? Dictionary { get; set; }
 
     /// <summary>Set of infoTypes for which findings would affect this rule.</summary>
     [JsonPropertyName("excludeInfoTypes")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes? ExcludeInfoTypes { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleExcludeInfoTypes? ExcludeInfoTypes { get; set; }
 
     /// <summary>How the rule is applied, see MatchingType documentation for details. Possible values: MATCHING_TYPE_UNSPECIFIED, MATCHING_TYPE_FULL_MATCH, MATCHING_TYPE_PARTIAL_MATCH, MATCHING_TYPE_INVERSE_MATCH</summary>
     [JsonPropertyName("matchingType")]
@@ -495,12 +501,12 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
     /// <summary>Regular expression which defines the rule.</summary>
     [JsonPropertyName("regex")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex? Regex { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRuleRegex? Regex { get; set; }
 }
 
 /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex
 {
     /// <summary>The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.</summary>
     [JsonPropertyName("groupIndexes")]
@@ -513,7 +519,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
 /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment
 {
     /// <summary>Set the likelihood of a finding to a fixed value. Possible values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY</summary>
     [JsonPropertyName("fixedLikelihood")]
@@ -526,7 +532,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
 /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity
 {
     /// <summary>Number of characters after the finding to consider.</summary>
     [JsonPropertyName("windowAfter")]
@@ -539,54 +545,54 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule
 {
     /// <summary>Regular expression pattern defining what qualifies as a hotword.</summary>
     [JsonPropertyName("hotwordRegex")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex? HotwordRegex { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleHotwordRegex? HotwordRegex { get; set; }
 
     /// <summary>Likelihood adjustment to apply to all matching findings.</summary>
     [JsonPropertyName("likelihoodAdjustment")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment? LikelihoodAdjustment { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleLikelihoodAdjustment? LikelihoodAdjustment { get; set; }
 
     /// <summary>Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "(d{3}) d{3}-d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "(xxx)", where "xxx" is the area code in question.</summary>
     [JsonPropertyName("proximity")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity? Proximity { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRuleProximity? Proximity { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules
 {
     /// <summary>Exclusion rule.</summary>
     [JsonPropertyName("exclusionRule")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRule? ExclusionRule { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesExclusionRule? ExclusionRule { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("hotwordRule")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule? HotwordRule { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigRuleSetRulesHotwordRule? HotwordRule { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet
+public partial class DLPJobTriggerSpecInspectJobInspectConfigRuleSet
 {
     /// <summary>List of infoTypes this rule set is applied to.</summary>
     [JsonPropertyName("infoTypes")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoTypes>? InfoTypes { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigRuleSetInfoTypes>? InfoTypes { get; set; }
 
     /// <summary>Set of rules to be applied to infoTypes. The rules are applied in order.</summary>
     [JsonPropertyName("rules")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules>? Rules { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigRuleSetRules>? Rules { get; set; }
 }
 
 /// <summary>How and what to scan for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfig
+public partial class DLPJobTriggerSpecInspectJobInspectConfig
 {
     /// <summary>CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.</summary>
     [JsonPropertyName("customInfoTypes")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypes>? CustomInfoTypes { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigCustomInfoTypes>? CustomInfoTypes { get; set; }
 
     /// <summary>When true, excludes type information of the findings. This is not used for data profiling.</summary>
     [JsonPropertyName("excludeInfoTypes")]
@@ -598,11 +604,11 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfig
 
     /// <summary>Restricts what info_types to look for. The values must correspond to InfoType values returned by ListInfoTypes or listed at https://cloud.google.com/dlp/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a request, the system may automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. If you need precise control and predictability as to what detectors are run you should specify specific InfoTypes listed in the reference, otherwise a default list will be used, which may change over time.</summary>
     [JsonPropertyName("infoTypes")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigInfoTypes>? InfoTypes { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigInfoTypes>? InfoTypes { get; set; }
 
     /// <summary>Configuration to control the number of findings returned. This is not used for data profiling.</summary>
     [JsonPropertyName("limits")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfigLimits? Limits { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfigLimits? Limits { get; set; }
 
     /// <summary>Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more. Possible values: LIKELIHOOD_UNSPECIFIED, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY</summary>
     [JsonPropertyName("minLikelihood")]
@@ -610,12 +616,12 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectConfig
 
     /// <summary>Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end, other rules are executed in the order they are specified for each info type.</summary>
     [JsonPropertyName("ruleSet")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobInspectConfigRuleSet>? RuleSet { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobInspectConfigRuleSet>? RuleSet { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobInspectTemplateRef
+public partial class DLPJobTriggerSpecInspectJobInspectTemplateRef
 {
     /// <summary>If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.  Allowed value: The Google Cloud resource name of a `DLPInspectTemplate` resource (format: `{{parent}}/inspectTemplates/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -632,7 +638,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobInspectTemplateRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsExcludedFields
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsExcludedFields
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -641,7 +647,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIdentifyingFields
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIdentifyingFields
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -650,7 +656,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIncludedFields
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIncludedFields
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -659,7 +665,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceDatasetRef
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceDatasetRef
 {
     /// <summary>Dataset ID of the table.  Allowed value: The Google Cloud resource name of a `BigQueryDataset` resource (format: `projects/{{project}}/datasets/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -676,7 +682,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceProjectRef
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceProjectRef
 {
     /// <summary>The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -693,7 +699,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef
 {
     /// <summary>Name of the table.  Allowed value: The Google Cloud resource name of a `BigQueryTable` resource (format: `projects/{{project}}/datasets/{{dataset_id}}/tables/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -710,36 +716,36 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
 
 /// <summary>Complete BigQuery table reference.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference
 {
     /// <summary></summary>
     [JsonPropertyName("datasetRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceDatasetRef? DatasetRef { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceDatasetRef? DatasetRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceProjectRef? ProjectRef { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceProjectRef? ProjectRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("tableRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef? TableRef { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReferenceTableRef? TableRef { get; set; }
 }
 
 /// <summary>BigQuery options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptions
+public partial class DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptions
 {
     /// <summary>References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.</summary>
     [JsonPropertyName("excludedFields")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsExcludedFields>? ExcludedFields { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsExcludedFields>? ExcludedFields { get; set; }
 
     /// <summary>Table fields that may uniquely identify a row within the table. When `actions.saveFindings.outputConfig.table` is specified, the values of columns specified here are available in the output table under `location.content_locations.record_location.record_key.id_values`. Nested fields such as `person.birthdate.year` are allowed.</summary>
     [JsonPropertyName("identifyingFields")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIdentifyingFields>? IdentifyingFields { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIdentifyingFields>? IdentifyingFields { get; set; }
 
     /// <summary>Limit scanning only to these fields.</summary>
     [JsonPropertyName("includedFields")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIncludedFields>? IncludedFields { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsIncludedFields>? IncludedFields { get; set; }
 
     /// <summary>Max number of rows to scan. If the table has more rows than this value, the rest of the rows are omitted. If not set, or if set to 0, all rows will be scanned. Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction with TimespanConfig.</summary>
     [JsonPropertyName("rowsLimit")]
@@ -755,12 +761,12 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOpti
 
     /// <summary>Complete BigQuery table reference.</summary>
     [JsonPropertyName("tableReference")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference TableReference { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptionsTableReference TableReference { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetBucketRef
+public partial class DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetBucketRef
 {
     /// <summary>The name of a Cloud Storage bucket. Required.  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -777,11 +783,11 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
 
 /// <summary>The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet
+public partial class DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet
 {
     /// <summary></summary>
     [JsonPropertyName("bucketRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetBucketRef BucketRef { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetBucketRef BucketRef { get; set; }
 
     /// <summary>A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.</summary>
     [JsonPropertyName("excludeRegex")]
@@ -794,11 +800,11 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
 
 /// <summary>The set of one or more files to scan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSet
+public partial class DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSet
 {
     /// <summary>The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.</summary>
     [JsonPropertyName("regexFileSet")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet? RegexFileSet { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet? RegexFileSet { get; set; }
 
     /// <summary>The Cloud Storage url of the file(s) to scan, in the format `gs:///`. Trailing wildcard in the path is allowed. If the url ends in a trailing slash, the bucket or directory represented by the url will be scanned non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`. Exactly one of `url` or `regex_file_set` must be set.</summary>
     [JsonPropertyName("url")]
@@ -807,7 +813,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
 
 /// <summary>Google Cloud Storage options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptions
+public partial class DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptions
 {
     /// <summary>Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.</summary>
     [JsonPropertyName("bytesLimitPerFile")]
@@ -819,7 +825,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
 
     /// <summary>The set of one or more files to scan.</summary>
     [JsonPropertyName("fileSet")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSet? FileSet { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptionsFileSet? FileSet { get; set; }
 
     /// <summary>List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.</summary>
     [JsonPropertyName("fileTypes")]
@@ -836,7 +842,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorage
 
 /// <summary>The kind to process.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsKind
+public partial class DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsKind
 {
     /// <summary>The name of the kind.</summary>
     [JsonPropertyName("name")]
@@ -845,7 +851,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef
+public partial class DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef
 {
     /// <summary>The ID of the project to which the entities belong.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -862,7 +868,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
 
 /// <summary>A partition ID identifies a grouping of entities. The grouping is always by project namespace ID may be empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId
+public partial class DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId
 {
     /// <summary>If not empty, the ID of the namespace to which the entities belong.</summary>
     [JsonPropertyName("namespaceId")]
@@ -870,25 +876,25 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOpt
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef? ProjectRef { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionIdProjectRef? ProjectRef { get; set; }
 }
 
 /// <summary>Google Cloud Datastore options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptions
+public partial class DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptions
 {
     /// <summary>The kind to process.</summary>
     [JsonPropertyName("kind")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsKind? Kind { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsKind? Kind { get; set; }
 
     /// <summary>A partition ID identifies a grouping of entities. The grouping is always by project namespace ID may be empty.</summary>
     [JsonPropertyName("partitionId")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId? PartitionId { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptionsPartitionId? PartitionId { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields
+public partial class DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -897,16 +903,16 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
 
 /// <summary>If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions
+public partial class DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions
 {
     /// <summary>The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.</summary>
     [JsonPropertyName("identifyingFields")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields>? IdentifyingFields { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields>? IdentifyingFields { get; set; }
 }
 
 /// <summary>Hybrid inspection options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptions
+public partial class DLPJobTriggerSpecInspectJobStorageConfigHybridOptions
 {
     /// <summary>A short description of where the data is coming from. Will be stored once in the job. 256 max length.</summary>
     [JsonPropertyName("description")]
@@ -922,12 +928,12 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOption
 
     /// <summary>If the container is a table, additional information to make findings meaningful such as the columns that are primary keys.</summary>
     [JsonPropertyName("tableOptions")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions? TableOptions { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigHybridOptionsTableOptions? TableOptions { get; set; }
 }
 
 /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField
+public partial class DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -936,7 +942,7 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConf
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig
+public partial class DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig
 {
     /// <summary>When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.</summary>
     [JsonPropertyName("enableAutoPopulationOfTimespanConfig")]
@@ -952,58 +958,58 @@ public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConf
 
     /// <summary>Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.</summary>
     [JsonPropertyName("timestampField")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField? TimestampField { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigTimespanConfigTimestampField? TimestampField { get; set; }
 }
 
 /// <summary>The data to scan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJobStorageConfig
+public partial class DLPJobTriggerSpecInspectJobStorageConfig
 {
     /// <summary>BigQuery options.</summary>
     [JsonPropertyName("bigQueryOptions")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptions? BigQueryOptions { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigBigQueryOptions? BigQueryOptions { get; set; }
 
     /// <summary>Google Cloud Storage options.</summary>
     [JsonPropertyName("cloudStorageOptions")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptions? CloudStorageOptions { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigCloudStorageOptions? CloudStorageOptions { get; set; }
 
     /// <summary>Google Cloud Datastore options.</summary>
     [JsonPropertyName("datastoreOptions")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptions? DatastoreOptions { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigDatastoreOptions? DatastoreOptions { get; set; }
 
     /// <summary>Hybrid inspection options.</summary>
     [JsonPropertyName("hybridOptions")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigHybridOptions? HybridOptions { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigHybridOptions? HybridOptions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("timespanConfig")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig? TimespanConfig { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfigTimespanConfig? TimespanConfig { get; set; }
 }
 
 /// <summary>For inspect jobs, a snapshot of the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecInspectJob
+public partial class DLPJobTriggerSpecInspectJob
 {
     /// <summary>Actions to execute at the completion of the job.</summary>
     [JsonPropertyName("actions")]
-    public IList<V1beta1DLPJobTriggerSpecInspectJobActions>? Actions { get; set; }
+    public IList<DLPJobTriggerSpecInspectJobActions>? Actions { get; set; }
 
     /// <summary>How and what to scan for.</summary>
     [JsonPropertyName("inspectConfig")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectConfig? InspectConfig { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectConfig? InspectConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("inspectTemplateRef")]
-    public V1beta1DLPJobTriggerSpecInspectJobInspectTemplateRef? InspectTemplateRef { get; set; }
+    public DLPJobTriggerSpecInspectJobInspectTemplateRef? InspectTemplateRef { get; set; }
 
     /// <summary>The data to scan.</summary>
     [JsonPropertyName("storageConfig")]
-    public V1beta1DLPJobTriggerSpecInspectJobStorageConfig StorageConfig { get; set; }
+    public DLPJobTriggerSpecInspectJobStorageConfig StorageConfig { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecProjectRef
+public partial class DLPJobTriggerSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -1020,7 +1026,7 @@ public partial class V1beta1DLPJobTriggerSpecProjectRef
 
 /// <summary>Create a job on a repeating basis based on the elapse of time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecTriggersSchedule
+public partial class DLPJobTriggerSpecTriggersSchedule
 {
     /// <summary>With this option a job is started a regular periodic basis. For example: every day (86400 seconds). A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs. This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.</summary>
     [JsonPropertyName("recurrencePeriodDuration")]
@@ -1029,7 +1035,7 @@ public partial class V1beta1DLPJobTriggerSpecTriggersSchedule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpecTriggers
+public partial class DLPJobTriggerSpecTriggers
 {
     /// <summary>For use with hybrid jobs. Jobs must be manually created and finished.</summary>
     [JsonPropertyName("manual")]
@@ -1037,12 +1043,12 @@ public partial class V1beta1DLPJobTriggerSpecTriggers
 
     /// <summary>Create a job on a repeating basis based on the elapse of time.</summary>
     [JsonPropertyName("schedule")]
-    public V1beta1DLPJobTriggerSpecTriggersSchedule? Schedule { get; set; }
+    public DLPJobTriggerSpecTriggersSchedule? Schedule { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerSpec
+public partial class DLPJobTriggerSpec
 {
     /// <summary>User provided description (max 256 chars)</summary>
     [JsonPropertyName("description")]
@@ -1054,7 +1060,7 @@ public partial class V1beta1DLPJobTriggerSpec
 
     /// <summary>For inspect jobs, a snapshot of the configuration.</summary>
     [JsonPropertyName("inspectJob")]
-    public V1beta1DLPJobTriggerSpecInspectJob InspectJob { get; set; }
+    public DLPJobTriggerSpecInspectJob InspectJob { get; set; }
 
     /// <summary>Immutable. The location of the resource</summary>
     [JsonPropertyName("location")]
@@ -1062,7 +1068,7 @@ public partial class V1beta1DLPJobTriggerSpec
 
     /// <summary>Immutable. The Project that this resource belongs to. Only one of [projectRef] may be specified.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DLPJobTriggerSpecProjectRef ProjectRef { get; set; }
+    public DLPJobTriggerSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -1074,12 +1080,12 @@ public partial class V1beta1DLPJobTriggerSpec
 
     /// <summary>A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.</summary>
     [JsonPropertyName("triggers")]
-    public IList<V1beta1DLPJobTriggerSpecTriggers> Triggers { get; set; }
+    public IList<DLPJobTriggerSpecTriggers> Triggers { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerStatusConditions
+public partial class DLPJobTriggerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -1104,7 +1110,7 @@ public partial class V1beta1DLPJobTriggerStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerStatusErrorsDetailsDetails
+public partial class DLPJobTriggerStatusErrorsDetailsDetails
 {
     /// <summary>A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.</summary>
     [JsonPropertyName("typeUrl")]
@@ -1117,7 +1123,7 @@ public partial class V1beta1DLPJobTriggerStatusErrorsDetailsDetails
 
 /// <summary>Detailed error codes and messages.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerStatusErrorsDetails
+public partial class DLPJobTriggerStatusErrorsDetails
 {
     /// <summary>The status code, which should be an enum value of google.rpc.Code.</summary>
     [JsonPropertyName("code")]
@@ -1125,7 +1131,7 @@ public partial class V1beta1DLPJobTriggerStatusErrorsDetails
 
     /// <summary>A list of messages that carry the error details. There is a common set of message types for APIs to use.</summary>
     [JsonPropertyName("details")]
-    public IList<V1beta1DLPJobTriggerStatusErrorsDetailsDetails>? Details { get; set; }
+    public IList<DLPJobTriggerStatusErrorsDetailsDetails>? Details { get; set; }
 
     /// <summary>A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.</summary>
     [JsonPropertyName("message")]
@@ -1134,11 +1140,11 @@ public partial class V1beta1DLPJobTriggerStatusErrorsDetails
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerStatusErrors
+public partial class DLPJobTriggerStatusErrors
 {
     /// <summary>Detailed error codes and messages.</summary>
     [JsonPropertyName("details")]
-    public V1beta1DLPJobTriggerStatusErrorsDetails? Details { get; set; }
+    public DLPJobTriggerStatusErrorsDetails? Details { get; set; }
 
     /// <summary>The times the error occurred.</summary>
     [JsonPropertyName("timestamps")]
@@ -1147,11 +1153,11 @@ public partial class V1beta1DLPJobTriggerStatusErrors
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPJobTriggerStatus
+public partial class DLPJobTriggerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DLPJobTriggerStatusConditions>? Conditions { get; set; }
+    public IList<DLPJobTriggerStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The creation timestamp of a triggeredJob.</summary>
     [JsonPropertyName("createTime")]
@@ -1159,7 +1165,7 @@ public partial class V1beta1DLPJobTriggerStatus
 
     /// <summary>Output only. A stream of errors encountered when the trigger was activated. Repeated errors may result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the JobTrigger is modified this list will be cleared.</summary>
     [JsonPropertyName("errors")]
-    public IList<V1beta1DLPJobTriggerStatusErrors>? Errors { get; set; }
+    public IList<DLPJobTriggerStatusErrors>? Errors { get; set; }
 
     /// <summary>Output only. The timestamp of the last time this trigger executed.</summary>
     [JsonPropertyName("lastRunTime")]
@@ -1180,30 +1186,25 @@ public partial class V1beta1DLPJobTriggerStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DLPJobTrigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DLPJobTriggerSpec>, IStatus<V1beta1DLPJobTriggerStatus>
+public partial class DLPJobTrigger
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DLPJobTrigger";
-    public const string KubeGroup = "dlp.cnrm.cloud.google.com";
-    public const string KubePluralName = "dlpjobtriggers";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DLPJobTriggerMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1DLPJobTriggerSpec Spec { get; set; }
+    public DLPJobTriggerSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1DLPJobTriggerStatus? Status { get; set; }
+    public DLPJobTriggerStatus? Status { get; set; }
 }

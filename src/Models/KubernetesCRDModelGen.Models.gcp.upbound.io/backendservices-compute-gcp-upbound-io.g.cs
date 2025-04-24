@@ -2054,3 +2054,29 @@ public partial class V1beta1BackendService : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1BackendServiceStatus? Status { get; set; }
 }
+
+/// <summary>BackendService is the Schema for the BackendServices API. A Backend Service defines a group of virtual machines that will serve traffic for load balancing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackendServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackendService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackendServiceList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "backendservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackendService> Items { get; set; }
+}

@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef
+public partial class DataCatalogPolicyTagMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DataCatalogPolicyTagSpecParentPolicyTagRef
 {
     /// <summary>Allowed value: The `name` field of a `DataCatalogPolicyTag` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogPolicyTagSpecTaxonomyRef
+public partial class DataCatalogPolicyTagSpecTaxonomyRef
 {
     /// <summary>Allowed value: The `name` field of a `DataCatalogTaxonomy` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1DataCatalogPolicyTagSpecTaxonomyRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogPolicyTagSpec
+public partial class DataCatalogPolicyTagSpec
 {
     /// <summary>Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.</summary>
     [JsonPropertyName("description")]
@@ -56,7 +62,7 @@ public partial class V1beta1DataCatalogPolicyTagSpec
 
     /// <summary></summary>
     [JsonPropertyName("parentPolicyTagRef")]
-    public V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef? ParentPolicyTagRef { get; set; }
+    public DataCatalogPolicyTagSpecParentPolicyTagRef? ParentPolicyTagRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -64,12 +70,12 @@ public partial class V1beta1DataCatalogPolicyTagSpec
 
     /// <summary></summary>
     [JsonPropertyName("taxonomyRef")]
-    public V1beta1DataCatalogPolicyTagSpecTaxonomyRef TaxonomyRef { get; set; }
+    public DataCatalogPolicyTagSpecTaxonomyRef TaxonomyRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogPolicyTagStatusConditions
+public partial class DataCatalogPolicyTagStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -94,7 +100,7 @@ public partial class V1beta1DataCatalogPolicyTagStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataCatalogPolicyTagStatus
+public partial class DataCatalogPolicyTagStatus
 {
     /// <summary>Resource names of child policy tags of this policy tag.</summary>
     [JsonPropertyName("childPolicyTags")]
@@ -102,7 +108,7 @@ public partial class V1beta1DataCatalogPolicyTagStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DataCatalogPolicyTagStatusConditions>? Conditions { get; set; }
+    public IList<DataCatalogPolicyTagStatusConditions>? Conditions { get; set; }
 
     /// <summary>Resource name of this policy tag, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}".</summary>
     [JsonPropertyName("name")]
@@ -115,30 +121,25 @@ public partial class V1beta1DataCatalogPolicyTagStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataCatalogPolicyTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataCatalogPolicyTagSpec>, IStatus<V1beta1DataCatalogPolicyTagStatus>
+public partial class DataCatalogPolicyTag
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataCatalogPolicyTag";
-    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
-    public const string KubePluralName = "datacatalogpolicytags";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DataCatalogPolicyTagMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1DataCatalogPolicyTagSpec Spec { get; set; }
+    public DataCatalogPolicyTagSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1DataCatalogPolicyTagStatus? Status { get; set; }
+    public DataCatalogPolicyTagStatus? Status { get; set; }
 }

@@ -323,3 +323,29 @@ public partial class V1api20220401storageRoleDefinition : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1api20220401storageRoleDefinitionStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220401.RoleDefinition Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleDefinitionsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionId}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220401storageRoleDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1api20220401storageRoleDefinition>
+{
+    public const string KubeApiVersion = "v1api20220401storage";
+    public const string KubeKind = "RoleDefinitionList";
+    public const string KubeGroup = "authorization.azure.com";
+    public const string KubePluralName = "roledefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220401storageRoleDefinition> Items { get; set; }
+}

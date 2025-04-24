@@ -822,3 +822,29 @@ public partial class V1api20240301storageVirtualNetworksSubnet : IKubernetesObje
     [JsonPropertyName("status")]
     public V1api20240301storageVirtualNetworksSubnetStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240301.VirtualNetworksSubnet Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240301storageVirtualNetworksSubnetList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageVirtualNetworksSubnet>
+{
+    public const string KubeApiVersion = "v1api20240301storage";
+    public const string KubeKind = "VirtualNetworksSubnetList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "virtualnetworkssubnets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240301storageVirtualNetworksSubnet> Items { get; set; }
+}

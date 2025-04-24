@@ -721,3 +721,29 @@ public partial class V1beta1TriggerBlobEvent : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1TriggerBlobEventStatus? Status { get; set; }
 }
+
+/// <summary>TriggerBlobEvent is the Schema for the TriggerBlobEvents API. Manages a Blob Event Trigger inside an Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TriggerBlobEventList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TriggerBlobEvent>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TriggerBlobEventList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "triggerblobevents";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TriggerBlobEvent> Items { get; set; }
+}

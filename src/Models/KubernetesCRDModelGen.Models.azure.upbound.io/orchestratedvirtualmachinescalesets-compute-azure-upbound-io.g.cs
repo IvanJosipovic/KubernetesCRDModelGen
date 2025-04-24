@@ -2673,3 +2673,29 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSet : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1OrchestratedVirtualMachineScaleSetStatus? Status { get; set; }
 }
+
+/// <summary>OrchestratedVirtualMachineScaleSet is the Schema for the OrchestratedVirtualMachineScaleSets API. Manages an Virtual Machine Scale Set in Flexible Orchestration Mode.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OrchestratedVirtualMachineScaleSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OrchestratedVirtualMachineScaleSetList";
+    public const string KubeGroup = "compute.azure.upbound.io";
+    public const string KubePluralName = "orchestratedvirtualmachinescalesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OrchestratedVirtualMachineScaleSet> Items { get; set; }
+}

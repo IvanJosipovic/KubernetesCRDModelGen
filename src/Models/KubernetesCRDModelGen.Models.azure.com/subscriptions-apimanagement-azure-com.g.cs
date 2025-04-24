@@ -350,3 +350,29 @@ public partial class V1api20220801storageSubscription : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1api20220801storageSubscriptionStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220801.Subscription Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimsubscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220801storageSubscriptionList : IKubernetesObject<V1ListMeta>, IItems<V1api20220801storageSubscription>
+{
+    public const string KubeApiVersion = "v1api20220801storage";
+    public const string KubeKind = "SubscriptionList";
+    public const string KubeGroup = "apimanagement.azure.com";
+    public const string KubePluralName = "subscriptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220801storageSubscription> Items { get; set; }
+}

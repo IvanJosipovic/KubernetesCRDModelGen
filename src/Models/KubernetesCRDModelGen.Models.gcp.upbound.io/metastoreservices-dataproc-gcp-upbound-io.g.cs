@@ -1221,3 +1221,29 @@ public partial class V1beta1MetastoreService : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1MetastoreServiceStatus? Status { get; set; }
 }
+
+/// <summary>MetastoreService is the Schema for the MetastoreServices API. A managed metastore service that serves metadata queries.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MetastoreServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MetastoreService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MetastoreServiceList";
+    public const string KubeGroup = "dataproc.gcp.upbound.io";
+    public const string KubePluralName = "metastoreservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MetastoreService> Items { get; set; }
+}

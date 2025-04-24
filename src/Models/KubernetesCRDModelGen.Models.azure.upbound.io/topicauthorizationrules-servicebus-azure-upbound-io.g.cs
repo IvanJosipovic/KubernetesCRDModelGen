@@ -342,3 +342,29 @@ public partial class V1beta1TopicAuthorizationRule : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1TopicAuthorizationRuleStatus? Status { get; set; }
 }
+
+/// <summary>TopicAuthorizationRule is the Schema for the TopicAuthorizationRules API. Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TopicAuthorizationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TopicAuthorizationRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TopicAuthorizationRuleList";
+    public const string KubeGroup = "servicebus.azure.upbound.io";
+    public const string KubePluralName = "topicauthorizationrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TopicAuthorizationRule> Items { get; set; }
+}

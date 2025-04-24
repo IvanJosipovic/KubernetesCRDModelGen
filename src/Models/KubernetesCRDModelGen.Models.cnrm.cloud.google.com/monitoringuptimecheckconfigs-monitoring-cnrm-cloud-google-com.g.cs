@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecContentMatchers
+public partial class MonitoringUptimeCheckConfigMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class MonitoringUptimeCheckConfigSpecContentMatchers
 {
     /// <summary></summary>
     [JsonPropertyName("content")]
@@ -23,7 +29,7 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecContentMatchers
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFromSecretKeyRef
+public partial class MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -36,16 +42,16 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPass
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFrom
+public partial class MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPassword
+public partial class MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -53,16 +59,16 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPass
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFrom? ValueFrom { get; set; }
+    public MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPasswordValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>The authentication information. Optional when creating an HTTP check; defaults to empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfo
+public partial class MonitoringUptimeCheckConfigSpecHttpCheckAuthInfo
 {
     /// <summary></summary>
     [JsonPropertyName("password")]
-    public V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPassword Password { get; set; }
+    public MonitoringUptimeCheckConfigSpecHttpCheckAuthInfoPassword Password { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("username")]
@@ -71,11 +77,11 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfo
 
 /// <summary>Contains information needed to make an HTTP or HTTPS check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheck
+public partial class MonitoringUptimeCheckConfigSpecHttpCheck
 {
     /// <summary>The authentication information. Optional when creating an HTTP check; defaults to empty.</summary>
     [JsonPropertyName("authInfo")]
-    public V1beta1MonitoringUptimeCheckConfigSpecHttpCheckAuthInfo? AuthInfo { get; set; }
+    public MonitoringUptimeCheckConfigSpecHttpCheckAuthInfo? AuthInfo { get; set; }
 
     /// <summary>The request body associated with the HTTP POST request. If `content_type` is `URL_ENCODED`, the body passed in must be URL-encoded. Users can provide a `Content-Length` header via the `headers` field or the API will do so. If the `request_method` is `GET` and `body` is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note: As with all `bytes` fields JSON representations are base64 encoded. e.g.: "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".</summary>
     [JsonPropertyName("body")]
@@ -116,7 +122,7 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecHttpCheck
 
 /// <summary>Immutable. The [monitored resource](https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for Uptime checks:   `uptime_url`,   `gce_instance`,   `gae_app`,   `aws_ec2_instance`,   `aws_elb_load_balancer`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecMonitoredResource
+public partial class MonitoringUptimeCheckConfigSpecMonitoredResource
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("filterLabels")]
@@ -129,7 +135,7 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecMonitoredResource
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecProjectRef
+public partial class MonitoringUptimeCheckConfigSpecProjectRef
 {
     /// <summary>The project for this uptime check config.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -146,7 +152,7 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecProjectRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroupGroupRef
+public partial class MonitoringUptimeCheckConfigSpecResourceGroupGroupRef
 {
     /// <summary>The group of resources being monitored. Should be only the `[GROUP_ID]`, and not the full-path `projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]`.  Allowed value: The Google Cloud resource name of a `MonitoringGroup` resource (format: `projects/{{project}}/groups/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -163,11 +169,11 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroupGroupRef
 
 /// <summary>Immutable. The group resource associated with the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroup
+public partial class MonitoringUptimeCheckConfigSpecResourceGroup
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("groupRef")]
-    public V1beta1MonitoringUptimeCheckConfigSpecResourceGroupGroupRef? GroupRef { get; set; }
+    public MonitoringUptimeCheckConfigSpecResourceGroupGroupRef? GroupRef { get; set; }
 
     /// <summary>Immutable. The resource type of the group members. Possible values: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER</summary>
     [JsonPropertyName("resourceType")]
@@ -176,7 +182,7 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecResourceGroup
 
 /// <summary>Contains information needed to make a TCP check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpecTcpCheck
+public partial class MonitoringUptimeCheckConfigSpecTcpCheck
 {
     /// <summary>The TCP port on the server against which to run the check. Will be combined with host (specified within the `monitored_resource`) to construct the full URL. Required.</summary>
     [JsonPropertyName("port")]
@@ -185,11 +191,11 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpecTcpCheck
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigSpec
+public partial class MonitoringUptimeCheckConfigSpec
 {
     /// <summary>The content that is expected to appear in the data returned by the target server against which the check is run.  Currently, only the first entry in the `content_matchers` list is supported, and additional entries will be ignored. This field is optional and should only be specified if a content match is required as part of the/ Uptime check.</summary>
     [JsonPropertyName("contentMatchers")]
-    public IList<V1beta1MonitoringUptimeCheckConfigSpecContentMatchers>? ContentMatchers { get; set; }
+    public IList<MonitoringUptimeCheckConfigSpecContentMatchers>? ContentMatchers { get; set; }
 
     /// <summary>A human-friendly name for the Uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced. Required.</summary>
     [JsonPropertyName("displayName")]
@@ -197,11 +203,11 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpec
 
     /// <summary>Contains information needed to make an HTTP or HTTPS check.</summary>
     [JsonPropertyName("httpCheck")]
-    public V1beta1MonitoringUptimeCheckConfigSpecHttpCheck? HttpCheck { get; set; }
+    public MonitoringUptimeCheckConfigSpecHttpCheck? HttpCheck { get; set; }
 
     /// <summary>Immutable. The [monitored resource](https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for Uptime checks:   `uptime_url`,   `gce_instance`,   `gae_app`,   `aws_ec2_instance`,   `aws_elb_load_balancer`</summary>
     [JsonPropertyName("monitoredResource")]
-    public V1beta1MonitoringUptimeCheckConfigSpecMonitoredResource? MonitoredResource { get; set; }
+    public MonitoringUptimeCheckConfigSpecMonitoredResource? MonitoredResource { get; set; }
 
     /// <summary>How often, in seconds, the Uptime check is performed. Currently, the only supported values are `60s` (1 minute), `300s` (5 minutes), `600s` (10 minutes), and `900s` (15 minutes). Optional, defaults to `60s`.</summary>
     [JsonPropertyName("period")]
@@ -209,11 +215,11 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1MonitoringUptimeCheckConfigSpecProjectRef ProjectRef { get; set; }
+    public MonitoringUptimeCheckConfigSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The group resource associated with the configuration.</summary>
     [JsonPropertyName("resourceGroup")]
-    public V1beta1MonitoringUptimeCheckConfigSpecResourceGroup? ResourceGroup { get; set; }
+    public MonitoringUptimeCheckConfigSpecResourceGroup? ResourceGroup { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -225,7 +231,7 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpec
 
     /// <summary>Contains information needed to make a TCP check.</summary>
     [JsonPropertyName("tcpCheck")]
-    public V1beta1MonitoringUptimeCheckConfigSpecTcpCheck? TcpCheck { get; set; }
+    public MonitoringUptimeCheckConfigSpecTcpCheck? TcpCheck { get; set; }
 
     /// <summary>The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Required.</summary>
     [JsonPropertyName("timeout")]
@@ -234,7 +240,7 @@ public partial class V1beta1MonitoringUptimeCheckConfigSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigStatusConditions
+public partial class MonitoringUptimeCheckConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -259,11 +265,11 @@ public partial class V1beta1MonitoringUptimeCheckConfigStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringUptimeCheckConfigStatus
+public partial class MonitoringUptimeCheckConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1MonitoringUptimeCheckConfigStatusConditions>? Conditions { get; set; }
+    public IList<MonitoringUptimeCheckConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -272,30 +278,25 @@ public partial class V1beta1MonitoringUptimeCheckConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MonitoringUptimeCheckConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringUptimeCheckConfigSpec>, IStatus<V1beta1MonitoringUptimeCheckConfigStatus>
+public partial class MonitoringUptimeCheckConfig
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MonitoringUptimeCheckConfig";
-    public const string KubeGroup = "monitoring.cnrm.cloud.google.com";
-    public const string KubePluralName = "monitoringuptimecheckconfigs";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public MonitoringUptimeCheckConfigMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1MonitoringUptimeCheckConfigSpec Spec { get; set; }
+    public MonitoringUptimeCheckConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1MonitoringUptimeCheckConfigStatus? Status { get; set; }
+    public MonitoringUptimeCheckConfigStatus? Status { get; set; }
 }

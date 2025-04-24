@@ -602,3 +602,29 @@ public partial class V1beta1LogAnalyticsLinkedService : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1LogAnalyticsLinkedServiceStatus? Status { get; set; }
 }
+
+/// <summary>LogAnalyticsLinkedService is the Schema for the LogAnalyticsLinkedServices API. Manages a Log Analytics Linked Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LogAnalyticsLinkedServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LogAnalyticsLinkedService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LogAnalyticsLinkedServiceList";
+    public const string KubeGroup = "operationalinsights.azure.upbound.io";
+    public const string KubePluralName = "loganalyticslinkedservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LogAnalyticsLinkedService> Items { get; set; }
+}

@@ -434,3 +434,29 @@ public partial class V1beta1RegionNetworkEndpoint : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1RegionNetworkEndpointStatus? Status { get; set; }
 }
+
+/// <summary>RegionNetworkEndpoint is the Schema for the RegionNetworkEndpoints API. A Region network endpoint represents a IP address/FQDN and port combination that is part of a specific network endpoint group (NEG).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegionNetworkEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionNetworkEndpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegionNetworkEndpointList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "regionnetworkendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegionNetworkEndpoint> Items { get; set; }
+}

@@ -426,3 +426,29 @@ public partial class V1beta1BotChannelMSTeams : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1BotChannelMSTeamsStatus? Status { get; set; }
 }
+
+/// <summary>BotChannelMSTeams is the Schema for the BotChannelMSTeamss API. Manages an MS Teams integration for a Bot Channel</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BotChannelMSTeamsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotChannelMSTeams>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BotChannelMSTeamsList";
+    public const string KubeGroup = "botservice.azure.upbound.io";
+    public const string KubePluralName = "botchannelmsteams";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BotChannelMSTeams> Items { get; set; }
+}

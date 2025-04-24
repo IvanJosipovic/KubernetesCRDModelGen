@@ -653,3 +653,29 @@ public partial class V1beta1Bot : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     [JsonPropertyName("status")]
     public V1beta1BotStatus? Status { get; set; }
 }
+
+/// <summary>Bot is the Schema for the Bots API. Provides an Amazon Lex bot resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BotList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Bot>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BotList";
+    public const string KubeGroup = "lexmodels.aws.upbound.io";
+    public const string KubePluralName = "bots";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Bot> Items { get; set; }
+}

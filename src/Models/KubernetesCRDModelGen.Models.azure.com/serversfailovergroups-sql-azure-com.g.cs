@@ -372,3 +372,29 @@ public partial class V1api20211101storageServersFailoverGroup : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1api20211101storageServersFailoverGroupStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20211101.ServersFailoverGroup Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/FailoverGroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/failoverGroups/{failoverGroupName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20211101storageServersFailoverGroupList : IKubernetesObject<V1ListMeta>, IItems<V1api20211101storageServersFailoverGroup>
+{
+    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeKind = "ServersFailoverGroupList";
+    public const string KubeGroup = "sql.azure.com";
+    public const string KubePluralName = "serversfailovergroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20211101storageServersFailoverGroup> Items { get; set; }
+}

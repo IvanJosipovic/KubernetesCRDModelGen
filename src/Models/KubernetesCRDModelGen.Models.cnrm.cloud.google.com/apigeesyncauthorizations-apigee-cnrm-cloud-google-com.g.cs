@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeSyncAuthorizationSpec
+public partial class ApigeeSyncAuthorizationMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ApigeeSyncAuthorizationSpec
 {
     /// <summary>Array of service accounts to grant access to control plane resources, each specified using the following format: 'serviceAccount:service-account-name'.  The 'service-account-name' is formatted like an email address. For example: my-synchronizer-manager-serviceAccount@my_project_id.iam.gserviceaccount.com  You might specify multiple service accounts, for example, if you have multiple environments and wish to assign a unique service account to each one.  The service accounts must have **Apigee Synchronizer Manager** role. See also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/v1.8/sa-about#create-the-service-accounts).</summary>
     [JsonPropertyName("identities")]
@@ -23,7 +29,7 @@ public partial class V1alpha1ApigeeSyncAuthorizationSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeSyncAuthorizationStatusConditions
+public partial class ApigeeSyncAuthorizationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -48,11 +54,11 @@ public partial class V1alpha1ApigeeSyncAuthorizationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeSyncAuthorizationStatus
+public partial class ApigeeSyncAuthorizationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ApigeeSyncAuthorizationStatusConditions>? Conditions { get; set; }
+    public IList<ApigeeSyncAuthorizationStatusConditions>? Conditions { get; set; }
 
     /// <summary>Entity tag (ETag) used for optimistic concurrency control as a way to help prevent simultaneous updates from overwriting each other. Used internally during updates.</summary>
     [JsonPropertyName("etag")]
@@ -65,30 +71,25 @@ public partial class V1alpha1ApigeeSyncAuthorizationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ApigeeSyncAuthorization : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeSyncAuthorizationSpec>, IStatus<V1alpha1ApigeeSyncAuthorizationStatus>
+public partial class ApigeeSyncAuthorization
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ApigeeSyncAuthorization";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeesyncauthorizations";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ApigeeSyncAuthorizationMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ApigeeSyncAuthorizationSpec Spec { get; set; }
+    public ApigeeSyncAuthorizationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ApigeeSyncAuthorizationStatus? Status { get; set; }
+    public ApigeeSyncAuthorizationStatus? Status { get; set; }
 }

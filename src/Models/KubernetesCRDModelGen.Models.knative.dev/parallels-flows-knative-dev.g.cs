@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.flows.knative.dev;
 /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelSpecChannelTemplate
+public partial class ParallelSpecChannelTemplate
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
@@ -27,7 +27,7 @@ public partial class V1ParallelSpecChannelTemplate
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelSpecReplyRef
+public partial class ParallelSpecReplyRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -48,11 +48,11 @@ public partial class V1ParallelSpecReplyRef
 
 /// <summary>Reply is a Reference to where the result of a case Subscriber gets sent to when the case does not have a Reply</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelSpecReply
+public partial class ParallelSpecReply
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public V1ParallelSpecReplyRef? Ref { get; set; }
+    public ParallelSpecReplyRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -69,7 +69,7 @@ public partial class V1ParallelSpecReply
 
 /// <summary>Spec defines the desired state of the Parallel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelSpec
+public partial class ParallelSpec
 {
     /// <summary>Branches is the list of Filter/Subscribers pairs.</summary>
     [JsonPropertyName("branches")]
@@ -77,16 +77,16 @@ public partial class V1ParallelSpec
 
     /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
     [JsonPropertyName("channelTemplate")]
-    public V1ParallelSpecChannelTemplate? ChannelTemplate { get; set; }
+    public ParallelSpecChannelTemplate? ChannelTemplate { get; set; }
 
     /// <summary>Reply is a Reference to where the result of a case Subscriber gets sent to when the case does not have a Reply</summary>
     [JsonPropertyName("reply")]
-    public V1ParallelSpecReply? Reply { get; set; }
+    public ParallelSpecReply? Reply { get; set; }
 }
 
 /// <summary>Parallel is Addressable. It exposes the endpoint as an URI to get events delivered into the Parallel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusAddress
+public partial class ParallelStatusAddress
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -107,7 +107,7 @@ public partial class V1ParallelStatusAddress
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusAddresses
+public partial class ParallelStatusAddresses
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -128,7 +128,7 @@ public partial class V1ParallelStatusAddresses
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusAuth
+public partial class ParallelStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -141,7 +141,7 @@ public partial class V1ParallelStatusAuth
 
 /// <summary>Channel is the reference to the underlying channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesFilterChannelStatusChannel
+public partial class ParallelStatusBranchStatusesFilterChannelStatusChannel
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -174,11 +174,11 @@ public partial class V1ParallelStatusBranchStatusesFilterChannelStatusChannel
 
 /// <summary>FilterChannelStatus corresponds to the filter channel status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesFilterChannelStatus
+public partial class ParallelStatusBranchStatusesFilterChannelStatus
 {
     /// <summary>Channel is the reference to the underlying channel.</summary>
     [JsonPropertyName("channel")]
-    public V1ParallelStatusBranchStatusesFilterChannelStatusChannel? Channel { get; set; }
+    public ParallelStatusBranchStatusesFilterChannelStatusChannel? Channel { get; set; }
 
     /// <summary>ReadyCondition indicates whether the Channel is ready or not.</summary>
     [JsonPropertyName("ready")]
@@ -187,7 +187,7 @@ public partial class V1ParallelStatusBranchStatusesFilterChannelStatus
 
 /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusReady
+public partial class ParallelStatusBranchStatusesFilterSubscriptionStatusReady
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
     [JsonPropertyName("message")]
@@ -212,7 +212,7 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusReady
 
 /// <summary>Subscription is the reference to the underlying Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription
+public partial class ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -245,20 +245,20 @@ public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubsc
 
 /// <summary>FilterSubscriptionStatus corresponds to the filter subscription status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesFilterSubscriptionStatus
+public partial class ParallelStatusBranchStatusesFilterSubscriptionStatus
 {
     /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
     [JsonPropertyName("ready")]
-    public V1ParallelStatusBranchStatusesFilterSubscriptionStatusReady? Ready { get; set; }
+    public ParallelStatusBranchStatusesFilterSubscriptionStatusReady? Ready { get; set; }
 
     /// <summary>Subscription is the reference to the underlying Subscription.</summary>
     [JsonPropertyName("subscription")]
-    public V1ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription? Subscription { get; set; }
+    public ParallelStatusBranchStatusesFilterSubscriptionStatusSubscription? Subscription { get; set; }
 }
 
 /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusReady
+public partial class ParallelStatusBranchStatusesSubscriberSubscriptionStatusReady
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
     [JsonPropertyName("message")]
@@ -283,7 +283,7 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusR
 
 /// <summary>Subscription is the reference to the underlying Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription
+public partial class ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -316,37 +316,37 @@ public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusS
 
 /// <summary>SubscriptionStatus corresponds to the subscriber subscription status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus
+public partial class ParallelStatusBranchStatusesSubscriberSubscriptionStatus
 {
     /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
     [JsonPropertyName("ready")]
-    public V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusReady? Ready { get; set; }
+    public ParallelStatusBranchStatusesSubscriberSubscriptionStatusReady? Ready { get; set; }
 
     /// <summary>Subscription is the reference to the underlying Subscription.</summary>
     [JsonPropertyName("subscription")]
-    public V1ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription? Subscription { get; set; }
+    public ParallelStatusBranchStatusesSubscriberSubscriptionStatusSubscription? Subscription { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusBranchStatuses
+public partial class ParallelStatusBranchStatuses
 {
     /// <summary>FilterChannelStatus corresponds to the filter channel status.</summary>
     [JsonPropertyName("filterChannelStatus")]
-    public V1ParallelStatusBranchStatusesFilterChannelStatus? FilterChannelStatus { get; set; }
+    public ParallelStatusBranchStatusesFilterChannelStatus? FilterChannelStatus { get; set; }
 
     /// <summary>FilterSubscriptionStatus corresponds to the filter subscription status.</summary>
     [JsonPropertyName("filterSubscriptionStatus")]
-    public V1ParallelStatusBranchStatusesFilterSubscriptionStatus? FilterSubscriptionStatus { get; set; }
+    public ParallelStatusBranchStatusesFilterSubscriptionStatus? FilterSubscriptionStatus { get; set; }
 
     /// <summary>SubscriptionStatus corresponds to the subscriber subscription status.</summary>
     [JsonPropertyName("subscriberSubscriptionStatus")]
-    public V1ParallelStatusBranchStatusesSubscriberSubscriptionStatus? SubscriberSubscriptionStatus { get; set; }
+    public ParallelStatusBranchStatusesSubscriberSubscriptionStatus? SubscriberSubscriptionStatus { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusPolicies
+public partial class ParallelStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
     [JsonPropertyName("apiVersion")]
@@ -359,7 +359,7 @@ public partial class V1ParallelStatusPolicies
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusConditions
+public partial class ParallelStatusConditions
 {
     /// <summary>A human readable message indicating details about the transition.</summary>
     [JsonPropertyName("message")]
@@ -384,7 +384,7 @@ public partial class V1ParallelStatusConditions
 
 /// <summary>Channel is the reference to the underlying channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusIngressChannelStatusChannel
+public partial class ParallelStatusIngressChannelStatusChannel
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -417,11 +417,11 @@ public partial class V1ParallelStatusIngressChannelStatusChannel
 
 /// <summary>IngressChannelStatus corresponds to the ingress channel status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatusIngressChannelStatus
+public partial class ParallelStatusIngressChannelStatus
 {
     /// <summary>Channel is the reference to the underlying channel.</summary>
     [JsonPropertyName("channel")]
-    public V1ParallelStatusIngressChannelStatusChannel? Channel { get; set; }
+    public ParallelStatusIngressChannelStatusChannel? Channel { get; set; }
 
     /// <summary>ReadyCondition indicates whether the Channel is ready or not.</summary>
     [JsonPropertyName("ready")]
@@ -430,15 +430,15 @@ public partial class V1ParallelStatusIngressChannelStatus
 
 /// <summary>Status represents the current state of the Parallel. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ParallelStatus
+public partial class ParallelStatus
 {
     /// <summary>Parallel is Addressable. It exposes the endpoint as an URI to get events delivered into the Parallel.</summary>
     [JsonPropertyName("address")]
-    public V1ParallelStatusAddress? Address { get; set; }
+    public ParallelStatusAddress? Address { get; set; }
 
     /// <summary>Parallel is Addressable. It exposes the endpoints as URIs to get events delivered into the Parallel.</summary>
     [JsonPropertyName("addresses")]
-    public IList<V1ParallelStatusAddresses>? Addresses { get; set; }
+    public IList<ParallelStatusAddresses>? Addresses { get; set; }
 
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -446,23 +446,23 @@ public partial class V1ParallelStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1ParallelStatusAuth? Auth { get; set; }
+    public ParallelStatusAuth? Auth { get; set; }
 
     /// <summary>BranchStatuses is an array of corresponding to branch statuses. Matches the Spec.Branches array in the order.</summary>
     [JsonPropertyName("branchStatuses")]
-    public IList<V1ParallelStatusBranchStatuses>? BranchStatuses { get; set; }
+    public IList<ParallelStatusBranchStatuses>? BranchStatuses { get; set; }
 
     /// <summary>List of applied EventPolicies</summary>
     [JsonPropertyName("policies")]
-    public IList<V1ParallelStatusPolicies>? Policies { get; set; }
+    public IList<ParallelStatusPolicies>? Policies { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1ParallelStatusConditions>? Conditions { get; set; }
+    public IList<ParallelStatusConditions>? Conditions { get; set; }
 
     /// <summary>IngressChannelStatus corresponds to the ingress channel status.</summary>
     [JsonPropertyName("ingressChannelStatus")]
-    public V1ParallelStatusIngressChannelStatus? IngressChannelStatus { get; set; }
+    public ParallelStatusIngressChannelStatus? IngressChannelStatus { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -471,30 +471,13 @@ public partial class V1ParallelStatus
 
 /// <summary>Parallel defines conditional branches that will be wired in series through Channels and Subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1Parallel : IKubernetesObject<V1ObjectMeta>, ISpec<V1ParallelSpec>, IStatus<V1ParallelStatus>
+public partial class Parallel
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "Parallel";
-    public const string KubeGroup = "flows.knative.dev";
-    public const string KubePluralName = "parallels";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary>Spec defines the desired state of the Parallel.</summary>
     [JsonPropertyName("spec")]
-    public V1ParallelSpec? Spec { get; set; }
+    public ParallelSpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the Parallel. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public V1ParallelStatus? Status { get; set; }
+    public ParallelStatus? Status { get; set; }
 }

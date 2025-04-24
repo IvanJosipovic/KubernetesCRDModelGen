@@ -422,3 +422,29 @@ public partial class V1beta1FirewallRule : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1FirewallRuleStatus? Status { get; set; }
 }
+
+/// <summary>FirewallRule is the Schema for the FirewallRules API. A single firewall rule that is evaluated against incoming traffic and provides an action to take on matched requests.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FirewallRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FirewallRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FirewallRuleList";
+    public const string KubeGroup = "appengine.gcp.upbound.io";
+    public const string KubePluralName = "firewallrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FirewallRule> Items { get; set; }
+}

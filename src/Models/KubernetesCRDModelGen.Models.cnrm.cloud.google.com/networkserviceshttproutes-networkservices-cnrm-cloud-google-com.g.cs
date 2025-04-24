@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecGateways
+public partial class NetworkServicesHTTPRouteMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class NetworkServicesHTTPRouteSpecGateways
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesGateway` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecGateways
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecMeshes
+public partial class NetworkServicesHTTPRouteSpecMeshes
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesMesh` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecMeshes
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecProjectRef
+public partial class NetworkServicesHTTPRouteSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecProjectRef
 
 /// <summary>The specification for allowing client side cross-origin requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionCorsPolicy
+public partial class NetworkServicesHTTPRouteSpecRulesActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access-Control-Allow-Credentials header. Default value is false.</summary>
     [JsonPropertyName("allowCredentials")]
@@ -98,7 +104,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionCorsPolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinationsServiceRef
+public partial class NetworkServicesHTTPRouteSpecRulesActionDestinationsServiceRef
 {
     /// <summary>The URL of a BackendService to route traffic to.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -115,11 +121,11 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinationsS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinations
+public partial class NetworkServicesHTTPRouteSpecRulesActionDestinations
 {
     /// <summary></summary>
     [JsonPropertyName("serviceRef")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinationsServiceRef? ServiceRef { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionDestinationsServiceRef? ServiceRef { get; set; }
 
     /// <summary>Specifies the proportion of requests forwarded to the backend referenced by the serviceName field. This is computed as: weight/Sum(weights in this destination list). For non-zero values, there may be some epsilon from the exact proportion defined here depending on the precision an implementation supports. If only one serviceName is specified and it has a weight greater than 0, 100% of the traffic is forwarded to that backend. If weights are specified for any one service name, they need to be specified for all of them. If weights are unspecified for all services, then, traffic is distributed in equal proportions to all of them.</summary>
     [JsonPropertyName("weight")]
@@ -128,7 +134,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinations
 
 /// <summary>The specification for aborting to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyAbort
+public partial class NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
     [JsonPropertyName("httpStatus")]
@@ -141,7 +147,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
 
 /// <summary>The specification for injecting delay to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay
+public partial class NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay
 {
     /// <summary>Specify a fixed delay before forwarding the request.</summary>
     [JsonPropertyName("fixedDelay")]
@@ -154,20 +160,20 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectio
 
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicy
+public partial class NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicy
 {
     /// <summary>The specification for aborting to client requests.</summary>
     [JsonPropertyName("abort")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyAbort? Abort { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyAbort? Abort { get; set; }
 
     /// <summary>The specification for injecting delay to client requests.</summary>
     [JsonPropertyName("delay")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
 /// <summary>If set, the request is directed as configured by this field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect
+public partial class NetworkServicesHTTPRouteSpecRulesActionRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request.</summary>
     [JsonPropertyName("hostRedirect")]
@@ -200,7 +206,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect
 
 /// <summary>The specification for modifying the headers of a matching request prior to delivery of the request to the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestHeaderModifier
+public partial class NetworkServicesHTTPRouteSpecRulesActionRequestHeaderModifier
 {
     /// <summary>Add the headers with given map where key is the name of the header, value is the value of the header.</summary>
     [JsonPropertyName("add")]
@@ -217,7 +223,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestHeader
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestinationServiceRef
+public partial class NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestinationServiceRef
 {
     /// <summary>The URL of a BackendService to route traffic to.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -234,11 +240,11 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
 
 /// <summary>The destination the requests will be mirrored to. The weight of the destination will be ignored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination
+public partial class NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination
 {
     /// <summary></summary>
     [JsonPropertyName("serviceRef")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestinationServiceRef? ServiceRef { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestinationServiceRef? ServiceRef { get; set; }
 
     /// <summary>Specifies the proportion of requests forwarded to the backend referenced by the serviceName field. This is computed as: weight/Sum(weights in this destination list). For non-zero values, there may be some epsilon from the exact proportion defined here depending on the precision an implementation supports. If only one serviceName is specified and it has a weight greater than 0, 100% of the traffic is forwarded to that backend. If weights are specified for any one service name, they need to be specified for all of them. If weights are unspecified for all services, then, traffic is distributed in equal proportions to all of them.</summary>
     [JsonPropertyName("weight")]
@@ -247,16 +253,16 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirror
 
 /// <summary>Specifies the policy on how requests intended for the routes destination are shadowed to a separate mirrored destination. Proxy will not wait for the shadow destination to respond before returning the response. Prior to sending traffic to the shadow service, the host/authority header is suffixed with -shadow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicy
+public partial class NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicy
 {
     /// <summary>The destination the requests will be mirrored to. The weight of the destination will be ignored.</summary>
     [JsonPropertyName("destination")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination? Destination { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicyDestination? Destination { get; set; }
 }
 
 /// <summary>The specification for modifying the headers of a response prior to sending the response back to the client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeaderModifier
+public partial class NetworkServicesHTTPRouteSpecRulesActionResponseHeaderModifier
 {
     /// <summary>Add the headers with given map where key is the name of the header, value is the value of the header.</summary>
     [JsonPropertyName("add")]
@@ -273,7 +279,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeade
 
 /// <summary>Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
+public partial class NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
 {
     /// <summary>Specifies the allowed number of retries. This number must be &gt; 0. If not specified, default to 1.</summary>
     [JsonPropertyName("numRetries")]
@@ -290,7 +296,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy
 
 /// <summary>The specification for rewrite URL before forwarding requests to the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite
+public partial class NetworkServicesHTTPRouteSpecRulesActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected destination, the requests host header is replaced by this value.</summary>
     [JsonPropertyName("hostRewrite")]
@@ -303,39 +309,39 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite
 
 /// <summary>The detailed rule defining how to route matched traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesAction
+public partial class NetworkServicesHTTPRouteSpecRulesAction
 {
     /// <summary>The specification for allowing client side cross-origin requests.</summary>
     [JsonPropertyName("corsPolicy")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionCorsPolicy? CorsPolicy { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionCorsPolicy? CorsPolicy { get; set; }
 
     /// <summary>The destination to which traffic should be forwarded.</summary>
     [JsonPropertyName("destinations")]
-    public IList<V1beta1NetworkServicesHTTPRouteSpecRulesActionDestinations>? Destinations { get; set; }
+    public IList<NetworkServicesHTTPRouteSpecRulesActionDestinations>? Destinations { get; set; }
 
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
     [JsonPropertyName("faultInjectionPolicy")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
 
     /// <summary>If set, the request is directed as configured by this field.</summary>
     [JsonPropertyName("redirect")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionRedirect? Redirect { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionRedirect? Redirect { get; set; }
 
     /// <summary>The specification for modifying the headers of a matching request prior to delivery of the request to the destination.</summary>
     [JsonPropertyName("requestHeaderModifier")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestHeaderModifier? RequestHeaderModifier { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionRequestHeaderModifier? RequestHeaderModifier { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the routes destination are shadowed to a separate mirrored destination. Proxy will not wait for the shadow destination to respond before returning the response. Prior to sending traffic to the shadow service, the host/authority header is suffixed with -shadow.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
 
     /// <summary>The specification for modifying the headers of a response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeaderModifier")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionResponseHeaderModifier? ResponseHeaderModifier { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionResponseHeaderModifier? ResponseHeaderModifier { get; set; }
 
     /// <summary>Specifies the retry policy associated with this route.</summary>
     [JsonPropertyName("retryPolicy")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionRetryPolicy? RetryPolicy { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionRetryPolicy? RetryPolicy { get; set; }
 
     /// <summary>Specifies the timeout for selected route. Timeout is computed from the time the request has been fully processed (i.e. end of stream) up until the response has been completely processed. Timeout includes all retries.</summary>
     [JsonPropertyName("timeout")]
@@ -343,12 +349,12 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesAction
 
     /// <summary>The specification for rewrite URL before forwarding requests to the destination.</summary>
     [JsonPropertyName("urlRewrite")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesActionUrlRewrite? UrlRewrite { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesActionUrlRewrite? UrlRewrite { get; set; }
 }
 
 /// <summary>If specified, the rule will match if the request header value is within the range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeadersRangeMatch
+public partial class NetworkServicesHTTPRouteSpecRulesMatchesHeadersRangeMatch
 {
     /// <summary>End of the range (exclusive)</summary>
     [JsonPropertyName("end")]
@@ -361,7 +367,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeadersRange
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders
+public partial class NetworkServicesHTTPRouteSpecRulesMatchesHeaders
 {
     /// <summary>The value of the header should match exactly the content of exact_match.</summary>
     [JsonPropertyName("exactMatch")]
@@ -385,7 +391,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders
 
     /// <summary>If specified, the rule will match if the request header value is within the range.</summary>
     [JsonPropertyName("rangeMatch")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeadersRangeMatch? RangeMatch { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesMatchesHeadersRangeMatch? RangeMatch { get; set; }
 
     /// <summary>The value of the header must match the regular expression specified in regex_match. For regular expression grammar, please see: https://github.com/google/re2/wiki/Syntax</summary>
     [JsonPropertyName("regexMatch")]
@@ -398,7 +404,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesQueryParameters
+public partial class NetworkServicesHTTPRouteSpecRulesMatchesQueryParameters
 {
     /// <summary>The value of the query parameter must exactly match the contents of exact_match. Only one of exact_match, regex_match, or present_match must be set.</summary>
     [JsonPropertyName("exactMatch")]
@@ -419,7 +425,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatchesQueryParamet
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
+public partial class NetworkServicesHTTPRouteSpecRulesMatches
 {
     /// <summary>The HTTP request path value should exactly match this value. Only one of full_path_match, prefix_match, or regex_match should be used.</summary>
     [JsonPropertyName("fullPathMatch")]
@@ -427,7 +433,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
 
     /// <summary>Specifies a list of HTTP request headers to match against. ALL of the supplied headers must be matched.</summary>
     [JsonPropertyName("headers")]
-    public IList<V1beta1NetworkServicesHTTPRouteSpecRulesMatchesHeaders>? Headers { get; set; }
+    public IList<NetworkServicesHTTPRouteSpecRulesMatchesHeaders>? Headers { get; set; }
 
     /// <summary>Specifies if prefix_match and full_path_match matches are case sensitive. The default value is false.</summary>
     [JsonPropertyName("ignoreCase")]
@@ -439,7 +445,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
 
     /// <summary>Specifies a list of query parameters to match against. ALL of the query parameters must be matched.</summary>
     [JsonPropertyName("queryParameters")]
-    public IList<V1beta1NetworkServicesHTTPRouteSpecRulesMatchesQueryParameters>? QueryParameters { get; set; }
+    public IList<NetworkServicesHTTPRouteSpecRulesMatchesQueryParameters>? QueryParameters { get; set; }
 
     /// <summary>The HTTP request path value must satisfy the regular expression specified by regex_match after removing any query parameters and anchor supplied with the original URL. For regular expression grammar, please see https://github.com/google/re2/wiki/Syntax Only one of full_path_match, prefix_match, or regex_match should be used.</summary>
     [JsonPropertyName("regexMatch")]
@@ -448,20 +454,20 @@ public partial class V1beta1NetworkServicesHTTPRouteSpecRulesMatches
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpecRules
+public partial class NetworkServicesHTTPRouteSpecRules
 {
     /// <summary>The detailed rule defining how to route matched traffic.</summary>
     [JsonPropertyName("action")]
-    public V1beta1NetworkServicesHTTPRouteSpecRulesAction? Action { get; set; }
+    public NetworkServicesHTTPRouteSpecRulesAction? Action { get; set; }
 
     /// <summary>A list of matches define conditions used for matching the rule against incoming HTTP requests. Each match is independent, i.e. this rule will be matched if ANY one of the matches is satisfied.</summary>
     [JsonPropertyName("matches")]
-    public IList<V1beta1NetworkServicesHTTPRouteSpecRulesMatches>? Matches { get; set; }
+    public IList<NetworkServicesHTTPRouteSpecRulesMatches>? Matches { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteSpec
+public partial class NetworkServicesHTTPRouteSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
     [JsonPropertyName("description")]
@@ -469,7 +475,7 @@ public partial class V1beta1NetworkServicesHTTPRouteSpec
 
     /// <summary></summary>
     [JsonPropertyName("gateways")]
-    public IList<V1beta1NetworkServicesHTTPRouteSpecGateways>? Gateways { get; set; }
+    public IList<NetworkServicesHTTPRouteSpecGateways>? Gateways { get; set; }
 
     /// <summary>Required. Hostnames define a set of hosts that should match against the HTTP host header to select a HttpRoute to process the request. Hostname is the fully qualified domain name of a network host, as defined by RFC 1123 with the exception that ip addresses are not allowed. Wildcard hosts are supported as "*" (no prefix or suffix allowed).</summary>
     [JsonPropertyName("hostnames")]
@@ -481,11 +487,11 @@ public partial class V1beta1NetworkServicesHTTPRouteSpec
 
     /// <summary></summary>
     [JsonPropertyName("meshes")]
-    public IList<V1beta1NetworkServicesHTTPRouteSpecMeshes>? Meshes { get; set; }
+    public IList<NetworkServicesHTTPRouteSpecMeshes>? Meshes { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1NetworkServicesHTTPRouteSpecProjectRef ProjectRef { get; set; }
+    public NetworkServicesHTTPRouteSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -493,12 +499,12 @@ public partial class V1beta1NetworkServicesHTTPRouteSpec
 
     /// <summary>Required. Rules that define how traffic is routed and handled.</summary>
     [JsonPropertyName("rules")]
-    public IList<V1beta1NetworkServicesHTTPRouteSpecRules> Rules { get; set; }
+    public IList<NetworkServicesHTTPRouteSpecRules> Rules { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteStatusConditions
+public partial class NetworkServicesHTTPRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -523,11 +529,11 @@ public partial class V1beta1NetworkServicesHTTPRouteStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesHTTPRouteStatus
+public partial class NetworkServicesHTTPRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1NetworkServicesHTTPRouteStatusConditions>? Conditions { get; set; }
+    public IList<NetworkServicesHTTPRouteStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The timestamp when the resource was created.</summary>
     [JsonPropertyName("createTime")]
@@ -548,30 +554,25 @@ public partial class V1beta1NetworkServicesHTTPRouteStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkServicesHTTPRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesHTTPRouteSpec>, IStatus<V1beta1NetworkServicesHTTPRouteStatus>
+public partial class NetworkServicesHTTPRoute
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkServicesHTTPRoute";
-    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkserviceshttproutes";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public NetworkServicesHTTPRouteMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1NetworkServicesHTTPRouteSpec Spec { get; set; }
+    public NetworkServicesHTTPRouteSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1NetworkServicesHTTPRouteStatus? Status { get; set; }
+    public NetworkServicesHTTPRouteStatus? Status { get; set; }
 }

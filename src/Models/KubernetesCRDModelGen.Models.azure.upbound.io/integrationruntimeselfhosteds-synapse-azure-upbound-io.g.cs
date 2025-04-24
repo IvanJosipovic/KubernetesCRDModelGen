@@ -326,3 +326,29 @@ public partial class V1beta1IntegrationRuntimeSelfHosted : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1IntegrationRuntimeSelfHostedStatus? Status { get; set; }
 }
+
+/// <summary>IntegrationRuntimeSelfHosted is the Schema for the IntegrationRuntimeSelfHosteds API. Manages a Synapse Self-hosted Integration Runtime.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IntegrationRuntimeSelfHostedList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IntegrationRuntimeSelfHosted>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IntegrationRuntimeSelfHostedList";
+    public const string KubeGroup = "synapse.azure.upbound.io";
+    public const string KubePluralName = "integrationruntimeselfhosteds";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IntegrationRuntimeSelfHosted> Items { get; set; }
+}

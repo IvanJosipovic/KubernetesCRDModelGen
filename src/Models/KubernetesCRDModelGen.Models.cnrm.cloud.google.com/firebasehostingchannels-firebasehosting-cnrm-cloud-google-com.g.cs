@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.firebasehosting.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseHostingChannelSpec
+public partial class FirebaseHostingChannelMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class FirebaseHostingChannelSpec
 {
     /// <summary>The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the 'ttl' field.</summary>
     [JsonPropertyName("expireTime")]
@@ -35,7 +41,7 @@ public partial class V1alpha1FirebaseHostingChannelSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseHostingChannelStatusConditions
+public partial class FirebaseHostingChannelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -60,11 +66,11 @@ public partial class V1alpha1FirebaseHostingChannelStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseHostingChannelStatus
+public partial class FirebaseHostingChannelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1FirebaseHostingChannelStatusConditions>? Conditions { get; set; }
+    public IList<FirebaseHostingChannelStatusConditions>? Conditions { get; set; }
 
     /// <summary>The fully-qualified resource name for the channel, in the format: sites/SITE_ID/channels/CHANNEL_ID.</summary>
     [JsonPropertyName("name")]
@@ -77,30 +83,25 @@ public partial class V1alpha1FirebaseHostingChannelStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1FirebaseHostingChannel : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseHostingChannelSpec>, IStatus<V1alpha1FirebaseHostingChannelStatus>
+public partial class FirebaseHostingChannel
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "FirebaseHostingChannel";
-    public const string KubeGroup = "firebasehosting.cnrm.cloud.google.com";
-    public const string KubePluralName = "firebasehostingchannels";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public FirebaseHostingChannelMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1FirebaseHostingChannelSpec Spec { get; set; }
+    public FirebaseHostingChannelSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1FirebaseHostingChannelStatus? Status { get; set; }
+    public FirebaseHostingChannelStatus? Status { get; set; }
 }

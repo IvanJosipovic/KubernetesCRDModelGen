@@ -644,3 +644,29 @@ public partial class V1beta1CustomPlugin : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1CustomPluginStatus? Status { get; set; }
 }
+
+/// <summary>CustomPlugin is the Schema for the CustomPlugins API. Provides an Amazon MSK Connect custom plugin resource. This resource can be Created, Observed and Deleted, but not Updated. AWS does not currently provide update APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CustomPluginList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomPlugin>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CustomPluginList";
+    public const string KubeGroup = "kafkaconnect.aws.upbound.io";
+    public const string KubePluralName = "customplugins";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CustomPlugin> Items { get; set; }
+}

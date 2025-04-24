@@ -526,3 +526,29 @@ public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociation : IKub
     [JsonPropertyName("status")]
     public V1beta1NetworkInterfaceBackendAddressPoolAssociationStatus? Status { get; set; }
 }
+
+/// <summary>NetworkInterfaceBackendAddressPoolAssociation is the Schema for the NetworkInterfaceBackendAddressPoolAssociations API. Manages the association between a Network Interface and a Load Balancer's Backend Address Pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkInterfaceBackendAddressPoolAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkInterfaceBackendAddressPoolAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkInterfaceBackendAddressPoolAssociationList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "networkinterfacebackendaddresspoolassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkInterfaceBackendAddressPoolAssociation> Items { get; set; }
+}

@@ -592,3 +592,29 @@ public partial class V1beta1ResponsePolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1ResponsePolicyStatus? Status { get; set; }
 }
+
+/// <summary>ResponsePolicy is the Schema for the ResponsePolicys API. A Response Policy is a collection of selectors that apply to queries made against one or more Virtual Private Cloud networks.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResponsePolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResponsePolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResponsePolicyList";
+    public const string KubeGroup = "dns.gcp.upbound.io";
+    public const string KubePluralName = "responsepolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResponsePolicy> Items { get; set; }
+}

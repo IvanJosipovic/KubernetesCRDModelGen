@@ -444,3 +444,29 @@ public partial class V1beta1PolicyVirtualMachineConfigurationAssignment : IKuber
     [JsonPropertyName("status")]
     public V1beta1PolicyVirtualMachineConfigurationAssignmentStatus? Status { get; set; }
 }
+
+/// <summary>PolicyVirtualMachineConfigurationAssignment is the Schema for the PolicyVirtualMachineConfigurationAssignments API. Applies a Guest Configuration Policy to a Virtual Machine.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PolicyVirtualMachineConfigurationAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicyVirtualMachineConfigurationAssignment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PolicyVirtualMachineConfigurationAssignmentList";
+    public const string KubeGroup = "guestconfiguration.azure.upbound.io";
+    public const string KubePluralName = "policyvirtualmachineconfigurationassignments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PolicyVirtualMachineConfigurationAssignment> Items { get; set; }
+}

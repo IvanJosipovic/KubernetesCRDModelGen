@@ -350,3 +350,29 @@ public partial class V1beta1IPGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1IPGroupStatus? Status { get; set; }
 }
+
+/// <summary>IPGroup is the Schema for the IPGroups API. Manages an IP group which contains a list of CIDRs and/or IP addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IPGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IPGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IPGroupList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "ipgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IPGroup> Items { get; set; }
+}

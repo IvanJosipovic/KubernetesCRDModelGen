@@ -2621,3 +2621,29 @@ public partial class V1beta1OsPolicyAssignment : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1OsPolicyAssignmentStatus? Status { get; set; }
 }
+
+/// <summary>OsPolicyAssignment is the Schema for the OsPolicyAssignments API. OS policy assignment is an API resource that is used to apply a set of OS policies to a dynamically targeted group of Compute Engine VM instances.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OsPolicyAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OsPolicyAssignment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OsPolicyAssignmentList";
+    public const string KubeGroup = "osconfig.gcp.upbound.io";
+    public const string KubePluralName = "ospolicyassignments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OsPolicyAssignment> Items { get; set; }
+}

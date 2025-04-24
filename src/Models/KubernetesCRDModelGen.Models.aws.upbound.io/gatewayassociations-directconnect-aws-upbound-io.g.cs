@@ -578,3 +578,29 @@ public partial class V1beta1GatewayAssociation : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1GatewayAssociationStatus? Status { get; set; }
 }
+
+/// <summary>GatewayAssociation is the Schema for the GatewayAssociations API. Associates a Direct Connect Gateway with a VGW or transit gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GatewayAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GatewayAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GatewayAssociationList";
+    public const string KubeGroup = "directconnect.aws.upbound.io";
+    public const string KubePluralName = "gatewayassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GatewayAssociation> Items { get; set; }
+}

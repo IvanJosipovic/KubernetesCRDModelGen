@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudidentity.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class CloudIdentityGroupMetadata
+{
+}
+
 /// <summary>Immutable. EntityKey of the Group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CloudIdentityGroupSpecGroupKey
+public partial class CloudIdentityGroupSpecGroupKey
 {
     /// <summary>Immutable. The ID of the entity.  For Google-managed entities, the id must be the email address of an existing group or user.  For external-identity-mapped entities, the id must be a string conforming to the Identity Source's requirements.  Must be unique within a namespace.</summary>
     [JsonPropertyName("id")]
@@ -23,7 +29,7 @@ public partial class V1beta1CloudIdentityGroupSpecGroupKey
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CloudIdentityGroupSpec
+public partial class CloudIdentityGroupSpec
 {
     /// <summary>An extended description to help users determine the purpose of a Group. Must not be longer than 4,096 characters.</summary>
     [JsonPropertyName("description")]
@@ -35,7 +41,7 @@ public partial class V1beta1CloudIdentityGroupSpec
 
     /// <summary>Immutable. EntityKey of the Group.</summary>
     [JsonPropertyName("groupKey")]
-    public V1beta1CloudIdentityGroupSpecGroupKey GroupKey { get; set; }
+    public CloudIdentityGroupSpecGroupKey GroupKey { get; set; }
 
     /// <summary>Immutable. The initial configuration options for creating a Group.  See the [API reference](https://cloud.google.com/identity/docs/reference/rest/v1beta1/groups/create#initialgroupconfig) for possible values. Default value: "EMPTY" Possible values: ["INITIAL_GROUP_CONFIG_UNSPECIFIED", "WITH_INITIAL_OWNER", "EMPTY"].</summary>
     [JsonPropertyName("initialGroupConfig")]
@@ -56,7 +62,7 @@ public partial class V1beta1CloudIdentityGroupSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CloudIdentityGroupStatusConditions
+public partial class CloudIdentityGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -81,11 +87,11 @@ public partial class V1beta1CloudIdentityGroupStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CloudIdentityGroupStatus
+public partial class CloudIdentityGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1CloudIdentityGroupStatusConditions>? Conditions { get; set; }
+    public IList<CloudIdentityGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when the Group was created.</summary>
     [JsonPropertyName("createTime")]
@@ -106,30 +112,25 @@ public partial class V1beta1CloudIdentityGroupStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CloudIdentityGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudIdentityGroupSpec>, IStatus<V1beta1CloudIdentityGroupStatus>
+public partial class CloudIdentityGroup
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CloudIdentityGroup";
-    public const string KubeGroup = "cloudidentity.cnrm.cloud.google.com";
-    public const string KubePluralName = "cloudidentitygroups";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public CloudIdentityGroupMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1CloudIdentityGroupSpec Spec { get; set; }
+    public CloudIdentityGroupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1CloudIdentityGroupStatus? Status { get; set; }
+    public CloudIdentityGroupStatus? Status { get; set; }
 }

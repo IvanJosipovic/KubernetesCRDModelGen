@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebasedatabase.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class FirebaseDatabaseInstanceMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseDatabaseInstanceSpecProjectRef
+public partial class FirebaseDatabaseInstanceSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1FirebaseDatabaseInstanceSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseDatabaseInstanceSpec
+public partial class FirebaseDatabaseInstanceSpec
 {
     /// <summary>The intended database state.</summary>
     [JsonPropertyName("desiredState")]
@@ -35,7 +41,7 @@ public partial class V1alpha1FirebaseDatabaseInstanceSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1FirebaseDatabaseInstanceSpecProjectRef ProjectRef { get; set; }
+    public FirebaseDatabaseInstanceSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. A reference to the region where the Firebase Realtime database resides. Check all [available regions](https://firebase.google.com/docs/projects/locations#rtdb-locations).</summary>
     [JsonPropertyName("region")]
@@ -52,7 +58,7 @@ public partial class V1alpha1FirebaseDatabaseInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseDatabaseInstanceStatusConditions
+public partial class FirebaseDatabaseInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -77,11 +83,11 @@ public partial class V1alpha1FirebaseDatabaseInstanceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1FirebaseDatabaseInstanceStatus
+public partial class FirebaseDatabaseInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1FirebaseDatabaseInstanceStatusConditions>? Conditions { get; set; }
+    public IList<FirebaseDatabaseInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The database URL in the form of https://{instance-id}.firebaseio.com for us-central1 instances or https://{instance-id}.{region}.firebasedatabase.app in other regions.</summary>
     [JsonPropertyName("databaseUrl")]
@@ -102,30 +108,25 @@ public partial class V1alpha1FirebaseDatabaseInstanceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1FirebaseDatabaseInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseDatabaseInstanceSpec>, IStatus<V1alpha1FirebaseDatabaseInstanceStatus>
+public partial class FirebaseDatabaseInstance
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "FirebaseDatabaseInstance";
-    public const string KubeGroup = "firebasedatabase.cnrm.cloud.google.com";
-    public const string KubePluralName = "firebasedatabaseinstances";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public FirebaseDatabaseInstanceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1FirebaseDatabaseInstanceSpec Spec { get; set; }
+    public FirebaseDatabaseInstanceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1FirebaseDatabaseInstanceStatus? Status { get; set; }
+    public FirebaseDatabaseInstanceStatus? Status { get; set; }
 }

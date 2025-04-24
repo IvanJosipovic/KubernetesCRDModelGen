@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dialogflow.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowFulfillmentSpecFeatures
+public partial class DialogflowFulfillmentMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DialogflowFulfillmentSpecFeatures
 {
     /// <summary>The type of the feature that enabled for fulfillment. * SMALLTALK: Fulfillment is enabled for SmallTalk. Possible values: ["SMALLTALK"].</summary>
     [JsonPropertyName("type")]
@@ -19,7 +25,7 @@ public partial class V1alpha1DialogflowFulfillmentSpecFeatures
 
 /// <summary>Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowFulfillmentSpecGenericWebService
+public partial class DialogflowFulfillmentSpecGenericWebService
 {
     /// <summary>The password for HTTP Basic authentication.</summary>
     [JsonPropertyName("password")]
@@ -40,7 +46,7 @@ public partial class V1alpha1DialogflowFulfillmentSpecGenericWebService
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowFulfillmentSpecProjectRef
+public partial class DialogflowFulfillmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -57,7 +63,7 @@ public partial class V1alpha1DialogflowFulfillmentSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowFulfillmentSpec
+public partial class DialogflowFulfillmentSpec
 {
     /// <summary>The human-readable name of the fulfillment, unique within the agent.</summary>
     [JsonPropertyName("displayName")]
@@ -69,15 +75,15 @@ public partial class V1alpha1DialogflowFulfillmentSpec
 
     /// <summary>The field defines whether the fulfillment is enabled for certain features.</summary>
     [JsonPropertyName("features")]
-    public IList<V1alpha1DialogflowFulfillmentSpecFeatures>? Features { get; set; }
+    public IList<DialogflowFulfillmentSpecFeatures>? Features { get; set; }
 
     /// <summary>Represents configuration for a generic web service. Dialogflow supports two mechanisms for authentications: - Basic authentication with username and password. - Authentication with additional authentication headers.</summary>
     [JsonPropertyName("genericWebService")]
-    public V1alpha1DialogflowFulfillmentSpecGenericWebService? GenericWebService { get; set; }
+    public DialogflowFulfillmentSpecGenericWebService? GenericWebService { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DialogflowFulfillmentSpecProjectRef ProjectRef { get; set; }
+    public DialogflowFulfillmentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -86,7 +92,7 @@ public partial class V1alpha1DialogflowFulfillmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowFulfillmentStatusConditions
+public partial class DialogflowFulfillmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -111,11 +117,11 @@ public partial class V1alpha1DialogflowFulfillmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowFulfillmentStatus
+public partial class DialogflowFulfillmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DialogflowFulfillmentStatusConditions>? Conditions { get; set; }
+    public IList<DialogflowFulfillmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique identifier of the fulfillment. Format: projects/&lt;Project ID&gt;/agent/fulfillment - projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/fulfillment.</summary>
     [JsonPropertyName("name")]
@@ -128,30 +134,25 @@ public partial class V1alpha1DialogflowFulfillmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DialogflowFulfillment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowFulfillmentSpec>, IStatus<V1alpha1DialogflowFulfillmentStatus>
+public partial class DialogflowFulfillment
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DialogflowFulfillment";
-    public const string KubeGroup = "dialogflow.cnrm.cloud.google.com";
-    public const string KubePluralName = "dialogflowfulfillments";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DialogflowFulfillmentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DialogflowFulfillmentSpec Spec { get; set; }
+    public DialogflowFulfillmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DialogflowFulfillmentStatus? Status { get; set; }
+    public DialogflowFulfillmentStatus? Status { get; set; }
 }

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsublite.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class PubSubLiteTopicMetadata
+{
+}
+
 /// <summary>The capacity configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity
+public partial class PubSubLiteTopicSpecPartitionConfigCapacity
 {
     /// <summary>Subscribe throughput capacity per partition in MiB/s. Must be &gt;= 4 and &lt;= 16.</summary>
     [JsonPropertyName("publishMibPerSec")]
@@ -23,11 +29,11 @@ public partial class V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity
 
 /// <summary>The settings for this topic's partitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicSpecPartitionConfig
+public partial class PubSubLiteTopicSpecPartitionConfig
 {
     /// <summary>The capacity configuration.</summary>
     [JsonPropertyName("capacity")]
-    public V1alpha1PubSubLiteTopicSpecPartitionConfigCapacity? Capacity { get; set; }
+    public PubSubLiteTopicSpecPartitionConfigCapacity? Capacity { get; set; }
 
     /// <summary>The number of partitions in the topic. Must be at least 1.</summary>
     [JsonPropertyName("count")]
@@ -36,7 +42,7 @@ public partial class V1alpha1PubSubLiteTopicSpecPartitionConfig
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicSpecProjectRef
+public partial class PubSubLiteTopicSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -53,7 +59,7 @@ public partial class V1alpha1PubSubLiteTopicSpecProjectRef
 
 /// <summary>The settings for this topic's Reservation usage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicSpecReservationConfig
+public partial class PubSubLiteTopicSpecReservationConfig
 {
     /// <summary>The Reservation to use for this topic's throughput capacity.</summary>
     [JsonPropertyName("throughputReservation")]
@@ -62,7 +68,7 @@ public partial class V1alpha1PubSubLiteTopicSpecReservationConfig
 
 /// <summary>The settings for a topic's message retention.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicSpecRetentionConfig
+public partial class PubSubLiteTopicSpecRetentionConfig
 {
     /// <summary>The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of period.</summary>
     [JsonPropertyName("perPartitionBytes")]
@@ -75,15 +81,15 @@ public partial class V1alpha1PubSubLiteTopicSpecRetentionConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicSpec
+public partial class PubSubLiteTopicSpec
 {
     /// <summary>The settings for this topic's partitions.</summary>
     [JsonPropertyName("partitionConfig")]
-    public V1alpha1PubSubLiteTopicSpecPartitionConfig? PartitionConfig { get; set; }
+    public PubSubLiteTopicSpecPartitionConfig? PartitionConfig { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1PubSubLiteTopicSpecProjectRef ProjectRef { get; set; }
+    public PubSubLiteTopicSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>The region of the pubsub lite topic.</summary>
     [JsonPropertyName("region")]
@@ -91,7 +97,7 @@ public partial class V1alpha1PubSubLiteTopicSpec
 
     /// <summary>The settings for this topic's Reservation usage.</summary>
     [JsonPropertyName("reservationConfig")]
-    public V1alpha1PubSubLiteTopicSpecReservationConfig? ReservationConfig { get; set; }
+    public PubSubLiteTopicSpecReservationConfig? ReservationConfig { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -99,7 +105,7 @@ public partial class V1alpha1PubSubLiteTopicSpec
 
     /// <summary>The settings for a topic's message retention.</summary>
     [JsonPropertyName("retentionConfig")]
-    public V1alpha1PubSubLiteTopicSpecRetentionConfig? RetentionConfig { get; set; }
+    public PubSubLiteTopicSpecRetentionConfig? RetentionConfig { get; set; }
 
     /// <summary>The zone of the pubsub lite topic.</summary>
     [JsonPropertyName("zone")]
@@ -108,7 +114,7 @@ public partial class V1alpha1PubSubLiteTopicSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicStatusConditions
+public partial class PubSubLiteTopicStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -133,11 +139,11 @@ public partial class V1alpha1PubSubLiteTopicStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1PubSubLiteTopicStatus
+public partial class PubSubLiteTopicStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1PubSubLiteTopicStatusConditions>? Conditions { get; set; }
+    public IList<PubSubLiteTopicStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -146,30 +152,25 @@ public partial class V1alpha1PubSubLiteTopicStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1PubSubLiteTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1PubSubLiteTopicSpec>, IStatus<V1alpha1PubSubLiteTopicStatus>
+public partial class PubSubLiteTopic
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "PubSubLiteTopic";
-    public const string KubeGroup = "pubsublite.cnrm.cloud.google.com";
-    public const string KubePluralName = "pubsublitetopics";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public PubSubLiteTopicMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1PubSubLiteTopicSpec Spec { get; set; }
+    public PubSubLiteTopicSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1PubSubLiteTopicStatus? Status { get; set; }
+    public PubSubLiteTopicStatus? Status { get; set; }
 }

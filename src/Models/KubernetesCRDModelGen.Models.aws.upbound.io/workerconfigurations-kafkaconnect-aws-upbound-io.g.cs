@@ -294,3 +294,29 @@ public partial class V1beta1WorkerConfiguration : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1WorkerConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>WorkerConfiguration is the Schema for the WorkerConfigurations API. Provides an Amazon MSK Connect worker configuration resource. This resource is create-only, and requires a unique "name" parameter. AWS does not currently provide update or delete APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkerConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkerConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkerConfigurationList";
+    public const string KubeGroup = "kafkaconnect.aws.upbound.io";
+    public const string KubePluralName = "workerconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WorkerConfiguration> Items { get; set; }
+}

@@ -293,3 +293,29 @@ public partial class V1api20230101storageStorageAccountsTableServicesTable : IKu
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsTableServicesTableStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230101.StorageAccountsTableServicesTable Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/table.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/tableServices/default/tables/{tableName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230101storageStorageAccountsTableServicesTableList : IKubernetesObject<V1ListMeta>, IItems<V1api20230101storageStorageAccountsTableServicesTable>
+{
+    public const string KubeApiVersion = "v1api20230101storage";
+    public const string KubeKind = "StorageAccountsTableServicesTableList";
+    public const string KubeGroup = "storage.azure.com";
+    public const string KubePluralName = "storageaccountstableservicestables";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230101storageStorageAccountsTableServicesTable> Items { get; set; }
+}

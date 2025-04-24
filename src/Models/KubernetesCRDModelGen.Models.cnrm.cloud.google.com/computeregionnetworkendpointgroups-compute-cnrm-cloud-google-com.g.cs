@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeRegionNetworkEndpointGroupMetadata
+{
+}
+
 /// <summary>Immutable. A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunctionFunctionRef
+public partial class ComputeRegionNetworkEndpointGroupSpecCloudFunctionFunctionRef
 {
     /// <summary>Allowed value: The `name` field of a `CloudFunctionsFunction` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,11 +33,11 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunctionFu
 
 /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunction
+public partial class ComputeRegionNetworkEndpointGroupSpecCloudFunction
 {
     /// <summary>Immutable. A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".</summary>
     [JsonPropertyName("functionRef")]
-    public V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunctionFunctionRef? FunctionRef { get; set; }
+    public ComputeRegionNetworkEndpointGroupSpecCloudFunctionFunctionRef? FunctionRef { get; set; }
 
     /// <summary>Immutable. A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services.  For example, request URLs "mydomain.com/function1" and "mydomain.com/function2" can be backed by the same Serverless NEG with URL mask "/". The URL mask will parse them to { function = "function1" } and { function = "function2" } respectively.</summary>
     [JsonPropertyName("urlMask")]
@@ -40,7 +46,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunction
 
 /// <summary>Immutable. Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRunServiceRef
+public partial class ComputeRegionNetworkEndpointGroupSpecCloudRunServiceRef
 {
     /// <summary>Allowed value: The `name` field of a `RunService` resource.</summary>
     [JsonPropertyName("external")]
@@ -57,11 +63,11 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRunService
 
 /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRun
+public partial class ComputeRegionNetworkEndpointGroupSpecCloudRun
 {
     /// <summary>Immutable. Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".</summary>
     [JsonPropertyName("serviceRef")]
-    public V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRunServiceRef? ServiceRef { get; set; }
+    public ComputeRegionNetworkEndpointGroupSpecCloudRunServiceRef? ServiceRef { get; set; }
 
     /// <summary>Immutable. Cloud Run tag represents the "named-revision" to provide additional fine-grained traffic routing information. The tag must be 1-63 characters long, and comply with RFC1035. Example value: "revision-0010".</summary>
     [JsonPropertyName("tag")]
@@ -74,7 +80,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRun
 
 /// <summary>Immutable. This field is only used for PSC. The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecNetworkRef
+public partial class ComputeRegionNetworkEndpointGroupSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -91,7 +97,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecNetworkRef
 
 /// <summary>Immutable. This field is only used for PSC. Optional URL of the subnetwork to which all network endpoints in the NEG belong.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef
+public partial class ComputeRegionNetworkEndpointGroupSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -108,15 +114,15 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupSpec
+public partial class ComputeRegionNetworkEndpointGroupSpec
 {
     /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
     [JsonPropertyName("cloudFunction")]
-    public V1beta1ComputeRegionNetworkEndpointGroupSpecCloudFunction? CloudFunction { get; set; }
+    public ComputeRegionNetworkEndpointGroupSpecCloudFunction? CloudFunction { get; set; }
 
     /// <summary>Immutable. Only valid when networkEndpointType is "SERVERLESS". Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.</summary>
     [JsonPropertyName("cloudRun")]
-    public V1beta1ComputeRegionNetworkEndpointGroupSpecCloudRun? CloudRun { get; set; }
+    public ComputeRegionNetworkEndpointGroupSpecCloudRun? CloudRun { get; set; }
 
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -128,7 +134,7 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpec
 
     /// <summary>Immutable. This field is only used for PSC. The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ComputeRegionNetworkEndpointGroupSpecNetworkRef? NetworkRef { get; set; }
+    public ComputeRegionNetworkEndpointGroupSpecNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. The target service url used to set up private service connection to a Google API or a PSC Producer Service Attachment.</summary>
     [JsonPropertyName("pscTargetService")]
@@ -144,12 +150,12 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupSpec
 
     /// <summary>Immutable. This field is only used for PSC. Optional URL of the subnetwork to which all network endpoints in the NEG belong.</summary>
     [JsonPropertyName("subnetworkRef")]
-    public V1beta1ComputeRegionNetworkEndpointGroupSpecSubnetworkRef? SubnetworkRef { get; set; }
+    public ComputeRegionNetworkEndpointGroupSpecSubnetworkRef? SubnetworkRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupStatusConditions
+public partial class ComputeRegionNetworkEndpointGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -174,11 +180,11 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRegionNetworkEndpointGroupStatus
+public partial class ComputeRegionNetworkEndpointGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeRegionNetworkEndpointGroupStatusConditions>? Conditions { get; set; }
+    public IList<ComputeRegionNetworkEndpointGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -191,30 +197,25 @@ public partial class V1beta1ComputeRegionNetworkEndpointGroupStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeRegionNetworkEndpointGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRegionNetworkEndpointGroupSpec>, IStatus<V1beta1ComputeRegionNetworkEndpointGroupStatus>
+public partial class ComputeRegionNetworkEndpointGroup
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeRegionNetworkEndpointGroup";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeregionnetworkendpointgroups";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeRegionNetworkEndpointGroupMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeRegionNetworkEndpointGroupSpec Spec { get; set; }
+    public ComputeRegionNetworkEndpointGroupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeRegionNetworkEndpointGroupStatus? Status { get; set; }
+    public ComputeRegionNetworkEndpointGroupStatus? Status { get; set; }
 }

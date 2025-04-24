@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.messaging.knative.dev;
 /// <summary>ChannelTemplate specifies which Channel CRD to use to create the CRD Channel backing this Channel. This is immutable after creation. Normally this is set by the Channel defaulter, not directly by the user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelSpecChannelTemplate
+public partial class ChannelSpecChannelTemplate
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
@@ -27,7 +27,7 @@ public partial class V1ChannelSpecChannelTemplate
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelSpecSubscribersAuth
+public partial class ChannelSpecSubscribersAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -40,7 +40,7 @@ public partial class V1ChannelSpecSubscribersAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelSpecSubscribers
+public partial class ChannelSpecSubscribers
 {
     /// <summary>DeliverySpec contains options controlling the event delivery</summary>
     [JsonPropertyName("delivery")]
@@ -84,16 +84,16 @@ public partial class V1ChannelSpecSubscribers
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1ChannelSpecSubscribersAuth? Auth { get; set; }
+    public ChannelSpecSubscribersAuth? Auth { get; set; }
 }
 
 /// <summary>Spec defines the desired state of the Channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelSpec
+public partial class ChannelSpec
 {
     /// <summary>ChannelTemplate specifies which Channel CRD to use to create the CRD Channel backing this Channel. This is immutable after creation. Normally this is set by the Channel defaulter, not directly by the user.</summary>
     [JsonPropertyName("channelTemplate")]
-    public V1ChannelSpecChannelTemplate? ChannelTemplate { get; set; }
+    public ChannelSpecChannelTemplate? ChannelTemplate { get; set; }
 
     /// <summary>DeliverySpec contains the default delivery spec for each subscription to this Channelable. Each subscription delivery spec, if any, overrides this global delivery spec.</summary>
     [JsonPropertyName("delivery")]
@@ -101,12 +101,12 @@ public partial class V1ChannelSpec
 
     /// <summary>This is the list of subscriptions for this subscribable.</summary>
     [JsonPropertyName("subscribers")]
-    public IList<V1ChannelSpecSubscribers>? Subscribers { get; set; }
+    public IList<ChannelSpecSubscribers>? Subscribers { get; set; }
 }
 
 /// <summary>Channel is Addressable. It exposes the endpoint as an URI to get events delivered into the Channel mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusAddress
+public partial class ChannelStatusAddress
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -127,7 +127,7 @@ public partial class V1ChannelStatusAddress
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusAddresses
+public partial class ChannelStatusAddresses
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -148,7 +148,7 @@ public partial class V1ChannelStatusAddresses
 
 /// <summary>Channel is an KReference to the Channel CRD backing this Channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusChannel
+public partial class ChannelStatusChannel
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -169,7 +169,7 @@ public partial class V1ChannelStatusChannel
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusPolicies
+public partial class ChannelStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
     [JsonPropertyName("apiVersion")]
@@ -182,7 +182,7 @@ public partial class V1ChannelStatusPolicies
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusConditions
+public partial class ChannelStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -211,7 +211,7 @@ public partial class V1ChannelStatusConditions
 
 /// <summary>DeadLetterChannel is a KReference and is set by the channel when it supports native error handling via a channel Failed messages are delivered here.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusDeadLetterChannel
+public partial class ChannelStatusDeadLetterChannel
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -232,7 +232,7 @@ public partial class V1ChannelStatusDeadLetterChannel
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusSubscribersAuth
+public partial class ChannelStatusSubscribersAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -245,7 +245,7 @@ public partial class V1ChannelStatusSubscribersAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatusSubscribers
+public partial class ChannelStatusSubscribers
 {
     /// <summary>A human readable message indicating details of Ready status.</summary>
     [JsonPropertyName("message")]
@@ -265,20 +265,20 @@ public partial class V1ChannelStatusSubscribers
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1ChannelStatusSubscribersAuth? Auth { get; set; }
+    public ChannelStatusSubscribersAuth? Auth { get; set; }
 }
 
 /// <summary>Status represents the current state of the Channel. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ChannelStatus
+public partial class ChannelStatus
 {
     /// <summary>Channel is Addressable. It exposes the endpoint as an URI to get events delivered into the Channel mesh.</summary>
     [JsonPropertyName("address")]
-    public V1ChannelStatusAddress? Address { get; set; }
+    public ChannelStatusAddress? Address { get; set; }
 
     /// <summary>Channel is Addressable. It exposes the endpoints as URIs to get events delivered into the Channel mesh.</summary>
     [JsonPropertyName("addresses")]
-    public IList<V1ChannelStatusAddresses>? Addresses { get; set; }
+    public IList<ChannelStatusAddresses>? Addresses { get; set; }
 
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -286,19 +286,19 @@ public partial class V1ChannelStatus
 
     /// <summary>Channel is an KReference to the Channel CRD backing this Channel.</summary>
     [JsonPropertyName("channel")]
-    public V1ChannelStatusChannel? Channel { get; set; }
+    public ChannelStatusChannel? Channel { get; set; }
 
     /// <summary>List of applied EventPolicies</summary>
     [JsonPropertyName("policies")]
-    public IList<V1ChannelStatusPolicies>? Policies { get; set; }
+    public IList<ChannelStatusPolicies>? Policies { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1ChannelStatusConditions>? Conditions { get; set; }
+    public IList<ChannelStatusConditions>? Conditions { get; set; }
 
     /// <summary>DeadLetterChannel is a KReference and is set by the channel when it supports native error handling via a channel Failed messages are delivered here.</summary>
     [JsonPropertyName("deadLetterChannel")]
-    public V1ChannelStatusDeadLetterChannel? DeadLetterChannel { get; set; }
+    public ChannelStatusDeadLetterChannel? DeadLetterChannel { get; set; }
 
     /// <summary>DeadLetterSinkURI is the resolved URI of the dead letter sink that will be used as a fallback when not specified by Triggers.</summary>
     [JsonPropertyName("deadLetterSinkUri")]
@@ -318,35 +318,18 @@ public partial class V1ChannelStatus
 
     /// <summary>This is the list of subscription's statuses for this channel.</summary>
     [JsonPropertyName("subscribers")]
-    public IList<V1ChannelStatusSubscribers>? Subscribers { get; set; }
+    public IList<ChannelStatusSubscribers>? Subscribers { get; set; }
 }
 
 /// <summary>Channel represents a generic Channel. It is normally used when we want a Channel, but do not need a specific Channel implementation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1Channel : IKubernetesObject<V1ObjectMeta>, ISpec<V1ChannelSpec>, IStatus<V1ChannelStatus>
+public partial class Channel
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "Channel";
-    public const string KubeGroup = "messaging.knative.dev";
-    public const string KubePluralName = "channels";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary>Spec defines the desired state of the Channel.</summary>
     [JsonPropertyName("spec")]
-    public V1ChannelSpec? Spec { get; set; }
+    public ChannelSpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the Channel. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public V1ChannelStatus? Status { get; set; }
+    public ChannelStatus? Status { get; set; }
 }

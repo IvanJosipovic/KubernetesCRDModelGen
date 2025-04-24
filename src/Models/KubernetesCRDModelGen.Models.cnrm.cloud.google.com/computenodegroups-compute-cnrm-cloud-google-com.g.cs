@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeNodeGroupMetadata
+{
+}
+
 /// <summary>Immutable. If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpecAutoscalingPolicy
+public partial class ComputeNodeGroupSpecAutoscalingPolicy
 {
     /// <summary>Immutable. Maximum size of the node group. Set to a value less than or equal to 100 and greater than or equal to min-nodes.</summary>
     [JsonPropertyName("maxNodes")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeNodeGroupSpecAutoscalingPolicy
 
 /// <summary>Immutable. contains properties for the timeframe of maintenance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpecMaintenanceWindow
+public partial class ComputeNodeGroupSpecMaintenanceWindow
 {
     /// <summary>Immutable. instances.start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.</summary>
     [JsonPropertyName("startTime")]
@@ -36,7 +42,7 @@ public partial class V1beta1ComputeNodeGroupSpecMaintenanceWindow
 
 /// <summary>The node template to which this node group belongs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpecNodeTemplateRef
+public partial class ComputeNodeGroupSpecNodeTemplateRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNodeTemplate` resource.</summary>
     [JsonPropertyName("external")]
@@ -53,7 +59,7 @@ public partial class V1beta1ComputeNodeGroupSpecNodeTemplateRef
 
 /// <summary>The key of this project config in the parent map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapIdRef
+public partial class ComputeNodeGroupSpecShareSettingsProjectMapIdRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -70,7 +76,7 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapIdRef
 
 /// <summary>The project id/number should be the same as the key of this project config in the project map.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef
+public partial class ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -87,24 +93,24 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectId
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpecShareSettingsProjectMap
+public partial class ComputeNodeGroupSpecShareSettingsProjectMap
 {
     /// <summary>The key of this project config in the parent map.</summary>
     [JsonPropertyName("idRef")]
-    public V1beta1ComputeNodeGroupSpecShareSettingsProjectMapIdRef IdRef { get; set; }
+    public ComputeNodeGroupSpecShareSettingsProjectMapIdRef IdRef { get; set; }
 
     /// <summary>The project id/number should be the same as the key of this project config in the project map.</summary>
     [JsonPropertyName("projectIdRef")]
-    public V1beta1ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef ProjectIdRef { get; set; }
+    public ComputeNodeGroupSpecShareSettingsProjectMapProjectIdRef ProjectIdRef { get; set; }
 }
 
 /// <summary>Immutable. Share settings for the node group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpecShareSettings
+public partial class ComputeNodeGroupSpecShareSettings
 {
     /// <summary>Immutable. A map of project id and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.</summary>
     [JsonPropertyName("projectMap")]
-    public IList<V1beta1ComputeNodeGroupSpecShareSettingsProjectMap>? ProjectMap { get; set; }
+    public IList<ComputeNodeGroupSpecShareSettingsProjectMap>? ProjectMap { get; set; }
 
     /// <summary>Immutable. Node group sharing type. Possible values: ["ORGANIZATION", "SPECIFIC_PROJECTS", "LOCAL"].</summary>
     [JsonPropertyName("shareType")]
@@ -113,11 +119,11 @@ public partial class V1beta1ComputeNodeGroupSpecShareSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupSpec
+public partial class ComputeNodeGroupSpec
 {
     /// <summary>Immutable. If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups.</summary>
     [JsonPropertyName("autoscalingPolicy")]
-    public V1beta1ComputeNodeGroupSpecAutoscalingPolicy? AutoscalingPolicy { get; set; }
+    public ComputeNodeGroupSpecAutoscalingPolicy? AutoscalingPolicy { get; set; }
 
     /// <summary>Immutable. An optional textual description of the resource.</summary>
     [JsonPropertyName("description")]
@@ -133,11 +139,11 @@ public partial class V1beta1ComputeNodeGroupSpec
 
     /// <summary>Immutable. contains properties for the timeframe of maintenance.</summary>
     [JsonPropertyName("maintenanceWindow")]
-    public V1beta1ComputeNodeGroupSpecMaintenanceWindow? MaintenanceWindow { get; set; }
+    public ComputeNodeGroupSpecMaintenanceWindow? MaintenanceWindow { get; set; }
 
     /// <summary>The node template to which this node group belongs.</summary>
     [JsonPropertyName("nodeTemplateRef")]
-    public V1beta1ComputeNodeGroupSpecNodeTemplateRef NodeTemplateRef { get; set; }
+    public ComputeNodeGroupSpecNodeTemplateRef NodeTemplateRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -145,7 +151,7 @@ public partial class V1beta1ComputeNodeGroupSpec
 
     /// <summary>Immutable. Share settings for the node group.</summary>
     [JsonPropertyName("shareSettings")]
-    public V1beta1ComputeNodeGroupSpecShareSettings? ShareSettings { get; set; }
+    public ComputeNodeGroupSpecShareSettings? ShareSettings { get; set; }
 
     /// <summary>Immutable. The total number of nodes in the node group. One of 'initial_size' or 'size' must be specified.</summary>
     [JsonPropertyName("size")]
@@ -158,7 +164,7 @@ public partial class V1beta1ComputeNodeGroupSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupStatusConditions
+public partial class ComputeNodeGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -183,11 +189,11 @@ public partial class V1beta1ComputeNodeGroupStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeNodeGroupStatus
+public partial class ComputeNodeGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeNodeGroupStatusConditions>? Conditions { get; set; }
+    public IList<ComputeNodeGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -204,30 +210,25 @@ public partial class V1beta1ComputeNodeGroupStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeNodeGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNodeGroupSpec>, IStatus<V1beta1ComputeNodeGroupStatus>
+public partial class ComputeNodeGroup
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeNodeGroup";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computenodegroups";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeNodeGroupMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeNodeGroupSpec Spec { get; set; }
+    public ComputeNodeGroupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeNodeGroupStatus? Status { get; set; }
+    public ComputeNodeGroupStatus? Status { get; set; }
 }

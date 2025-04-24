@@ -434,3 +434,29 @@ public partial class V1beta1TargetHTTPProxy : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1TargetHTTPProxyStatus? Status { get; set; }
 }
+
+/// <summary>TargetHTTPProxy is the Schema for the TargetHTTPProxys API. Represents a TargetHttpProxy resource, which is used by one or more global forwarding rule to route incoming HTTP requests to a URL map.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TargetHTTPProxyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TargetHTTPProxy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TargetHTTPProxyList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "targethttpproxies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TargetHTTPProxy> Items { get; set; }
+}

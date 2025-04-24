@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.servicenetworking.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceNetworkingConnectionSpecNetworkRef
+public partial class ServiceNetworkingConnectionMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ServiceNetworkingConnectionSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ServiceNetworkingConnectionSpecNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceNetworkingConnectionSpecReservedPeeringRanges
+public partial class ServiceNetworkingConnectionSpecReservedPeeringRanges
 {
     /// <summary>Allowed value: The `name` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,15 +50,15 @@ public partial class V1beta1ServiceNetworkingConnectionSpecReservedPeeringRanges
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceNetworkingConnectionSpec
+public partial class ServiceNetworkingConnectionSpec
 {
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ServiceNetworkingConnectionSpecNetworkRef NetworkRef { get; set; }
+    public ServiceNetworkingConnectionSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("reservedPeeringRanges")]
-    public IList<V1beta1ServiceNetworkingConnectionSpecReservedPeeringRanges> ReservedPeeringRanges { get; set; }
+    public IList<ServiceNetworkingConnectionSpecReservedPeeringRanges> ReservedPeeringRanges { get; set; }
 
     /// <summary>Immutable. Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.</summary>
     [JsonPropertyName("service")]
@@ -61,7 +67,7 @@ public partial class V1beta1ServiceNetworkingConnectionSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceNetworkingConnectionStatusConditions
+public partial class ServiceNetworkingConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -86,11 +92,11 @@ public partial class V1beta1ServiceNetworkingConnectionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceNetworkingConnectionStatus
+public partial class ServiceNetworkingConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ServiceNetworkingConnectionStatusConditions>? Conditions { get; set; }
+    public IList<ServiceNetworkingConnectionStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -103,30 +109,25 @@ public partial class V1beta1ServiceNetworkingConnectionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceNetworkingConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceNetworkingConnectionSpec>, IStatus<V1beta1ServiceNetworkingConnectionStatus>
+public partial class ServiceNetworkingConnection
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServiceNetworkingConnection";
-    public const string KubeGroup = "servicenetworking.cnrm.cloud.google.com";
-    public const string KubePluralName = "servicenetworkingconnections";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ServiceNetworkingConnectionMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ServiceNetworkingConnectionSpec Spec { get; set; }
+    public ServiceNetworkingConnectionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ServiceNetworkingConnectionStatus? Status { get; set; }
+    public ServiceNetworkingConnectionStatus? Status { get; set; }
 }

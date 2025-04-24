@@ -489,3 +489,29 @@ public partial class V1beta1DiskIAMMember : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1DiskIAMMemberStatus? Status { get; set; }
 }
+
+/// <summary>DiskIAMMember is the Schema for the DiskIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DiskIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DiskIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DiskIAMMemberList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "diskiammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DiskIAMMember> Items { get; set; }
+}

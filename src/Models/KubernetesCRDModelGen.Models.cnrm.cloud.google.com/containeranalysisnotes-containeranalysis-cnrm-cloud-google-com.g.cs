@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containeranalysis.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ContainerAnalysisNoteMetadata
+{
+}
+
 /// <summary>Hint hints at the purpose of the attestation authority.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecAttestationHint
+public partial class ContainerAnalysisNoteSpecAttestationHint
 {
     /// <summary>Required. The human readable name of this attestation authority, for example "qa".</summary>
     [JsonPropertyName("humanReadableName")]
@@ -19,16 +25,16 @@ public partial class V1beta1ContainerAnalysisNoteSpecAttestationHint
 
 /// <summary>A note describing an attestation role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecAttestation
+public partial class ContainerAnalysisNoteSpecAttestation
 {
     /// <summary>Hint hints at the purpose of the attestation authority.</summary>
     [JsonPropertyName("hint")]
-    public V1beta1ContainerAnalysisNoteSpecAttestationHint? Hint { get; set; }
+    public ContainerAnalysisNoteSpecAttestationHint? Hint { get; set; }
 }
 
 /// <summary>A note describing build provenance for a verifiable build.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecBuild
+public partial class ContainerAnalysisNoteSpecBuild
 {
     /// <summary>Required. Immutable. Version of the builder which produced this build.</summary>
     [JsonPropertyName("builderVersion")]
@@ -37,7 +43,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecBuild
 
 /// <summary>A note describing something that can be deployed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecDeployment
+public partial class ContainerAnalysisNoteSpecDeployment
 {
     /// <summary>Required. Resource URI for the artifact being deployed.</summary>
     [JsonPropertyName("resourceUri")]
@@ -46,7 +52,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecDeployment
 
 /// <summary>A note describing the initial analysis of a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecDiscovery
+public partial class ContainerAnalysisNoteSpecDiscovery
 {
     /// <summary>The kind of analysis that is handled by this discovery. Possible values: NOTE_KIND_UNSPECIFIED, VULNERABILITY, BUILD, IMAGE, PACKAGE, DEPLOYMENT, DISCOVERY, ATTESTATION, UPGRADE</summary>
     [JsonPropertyName("analysisKind")]
@@ -55,7 +61,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecDiscovery
 
 /// <summary>Required. Immutable. The fingerprint of the base image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecImageFingerprint
+public partial class ContainerAnalysisNoteSpecImageFingerprint
 {
     /// <summary>Required. The layer ID of the final layer in the Docker image's v1 representation.</summary>
     [JsonPropertyName("v1Name")]
@@ -68,11 +74,11 @@ public partial class V1beta1ContainerAnalysisNoteSpecImageFingerprint
 
 /// <summary>A note describing a base image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecImage
+public partial class ContainerAnalysisNoteSpecImage
 {
     /// <summary>Required. Immutable. The fingerprint of the base image.</summary>
     [JsonPropertyName("fingerprint")]
-    public V1beta1ContainerAnalysisNoteSpecImageFingerprint Fingerprint { get; set; }
+    public ContainerAnalysisNoteSpecImageFingerprint Fingerprint { get; set; }
 
     /// <summary>Required. Immutable. The resource_url for the resource representing the basis of associated occurrence images.</summary>
     [JsonPropertyName("resourceUrl")]
@@ -81,7 +87,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecImage
 
 /// <summary>The latest available version of this package in this distribution channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecPackageDistributionLatestVersion
+public partial class ContainerAnalysisNoteSpecPackageDistributionLatestVersion
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
     [JsonPropertyName("epoch")]
@@ -106,7 +112,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecPackageDistributionLatestVe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecPackageDistribution
+public partial class ContainerAnalysisNoteSpecPackageDistribution
 {
     /// <summary>The CPU architecture for which packages in this distribution channel were built Possible values: ARCHITECTURE_UNSPECIFIED, X86, X64</summary>
     [JsonPropertyName("architecture")]
@@ -122,7 +128,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecPackageDistribution
 
     /// <summary>The latest available version of this package in this distribution channel.</summary>
     [JsonPropertyName("latestVersion")]
-    public V1beta1ContainerAnalysisNoteSpecPackageDistributionLatestVersion? LatestVersion { get; set; }
+    public ContainerAnalysisNoteSpecPackageDistributionLatestVersion? LatestVersion { get; set; }
 
     /// <summary>A freeform string denoting the maintainer of this package.</summary>
     [JsonPropertyName("maintainer")]
@@ -135,11 +141,11 @@ public partial class V1beta1ContainerAnalysisNoteSpecPackageDistribution
 
 /// <summary>Required for non-Windows OS. The package this Upgrade is for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecPackage
+public partial class ContainerAnalysisNoteSpecPackage
 {
     /// <summary>The various channels by which a package is distributed.</summary>
     [JsonPropertyName("distribution")]
-    public IList<V1beta1ContainerAnalysisNoteSpecPackageDistribution>? Distribution { get; set; }
+    public IList<ContainerAnalysisNoteSpecPackageDistribution>? Distribution { get; set; }
 
     /// <summary>The name of the package.</summary>
     [JsonPropertyName("name")]
@@ -148,7 +154,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecPackage
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecRelatedNoteNames
+public partial class ContainerAnalysisNoteSpecRelatedNoteNames
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `ContainerAnalysisNote` resource (format: `projects/{{project}}/notes/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -165,7 +171,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecRelatedNoteNames
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecRelatedUrl
+public partial class ContainerAnalysisNoteSpecRelatedUrl
 {
     /// <summary>Label to describe usage of the URL</summary>
     [JsonPropertyName("label")]
@@ -178,7 +184,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecRelatedUrl
 
 /// <summary>The full description of the CVSSv3 for this vulnerability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityCvssV3
+public partial class ContainerAnalysisNoteSpecVulnerabilityCvssV3
 {
     /// <summary> Possible values: ATTACK_COMPLEXITY_UNSPECIFIED, ATTACK_COMPLEXITY_LOW, ATTACK_COMPLEXITY_HIGH</summary>
     [JsonPropertyName("attackComplexity")]
@@ -227,7 +233,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityCvssV3
 
 /// <summary>The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: ) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionEnd
+public partial class ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionEnd
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
     [JsonPropertyName("epoch")]
@@ -252,7 +258,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffecte
 
 /// <summary>The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: ) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionStart
+public partial class ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionStart
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
     [JsonPropertyName("epoch")]
@@ -277,7 +283,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffecte
 
 /// <summary>The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsFixedVersion
+public partial class ContainerAnalysisNoteSpecVulnerabilityDetailsFixedVersion
 {
     /// <summary>Used to correct mistakes in the version numbering scheme.</summary>
     [JsonPropertyName("epoch")]
@@ -302,7 +308,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsFixedVe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetails
+public partial class ContainerAnalysisNoteSpecVulnerabilityDetails
 {
     /// <summary>Required. The (https://cpe.mitre.org/specification/) this vulnerability affects.</summary>
     [JsonPropertyName("affectedCpeUri")]
@@ -314,11 +320,11 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetails
 
     /// <summary>The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: ) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.</summary>
     [JsonPropertyName("affectedVersionEnd")]
-    public V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionEnd? AffectedVersionEnd { get; set; }
+    public ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionEnd? AffectedVersionEnd { get; set; }
 
     /// <summary>The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: ) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.</summary>
     [JsonPropertyName("affectedVersionStart")]
-    public V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionStart? AffectedVersionStart { get; set; }
+    public ContainerAnalysisNoteSpecVulnerabilityDetailsAffectedVersionStart? AffectedVersionStart { get; set; }
 
     /// <summary>A vendor-specific description of this vulnerability.</summary>
     [JsonPropertyName("description")]
@@ -334,7 +340,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetails
 
     /// <summary>The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.</summary>
     [JsonPropertyName("fixedVersion")]
-    public V1beta1ContainerAnalysisNoteSpecVulnerabilityDetailsFixedVersion? FixedVersion { get; set; }
+    public ContainerAnalysisNoteSpecVulnerabilityDetailsFixedVersion? FixedVersion { get; set; }
 
     /// <summary>Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.</summary>
     [JsonPropertyName("isObsolete")]
@@ -355,7 +361,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityDetails
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetailsFixingKbs
+public partial class ContainerAnalysisNoteSpecVulnerabilityWindowsDetailsFixingKbs
 {
     /// <summary>The KB name (generally of the form KB+ (e.g., KB123456)).</summary>
     [JsonPropertyName("name")]
@@ -368,7 +374,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
+public partial class ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
 {
     /// <summary>Required. The (https://cpe.mitre.org/specification/) this vulnerability affects.</summary>
     [JsonPropertyName("cpeUri")]
@@ -380,7 +386,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
 
     /// <summary>Required. The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.</summary>
     [JsonPropertyName("fixingKbs")]
-    public IList<V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetailsFixingKbs> FixingKbs { get; set; }
+    public IList<ContainerAnalysisNoteSpecVulnerabilityWindowsDetailsFixingKbs> FixingKbs { get; set; }
 
     /// <summary>Required. The name of this vulnerability.</summary>
     [JsonPropertyName("name")]
@@ -389,7 +395,7 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails
 
 /// <summary>A note describing a package vulnerability.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpecVulnerability
+public partial class ContainerAnalysisNoteSpecVulnerability
 {
     /// <summary>The CVSS score of this vulnerability. CVSS score is on a scale of 0 - 10 where 0 indicates low severity and 10 indicates high severity.</summary>
     [JsonPropertyName("cvssScore")]
@@ -397,11 +403,11 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerability
 
     /// <summary>The full description of the CVSSv3 for this vulnerability.</summary>
     [JsonPropertyName("cvssV3")]
-    public V1beta1ContainerAnalysisNoteSpecVulnerabilityCvssV3? CvssV3 { get; set; }
+    public ContainerAnalysisNoteSpecVulnerabilityCvssV3? CvssV3 { get; set; }
 
     /// <summary>Details of all known distros and packages affected by this vulnerability.</summary>
     [JsonPropertyName("details")]
-    public IList<V1beta1ContainerAnalysisNoteSpecVulnerabilityDetails>? Details { get; set; }
+    public IList<ContainerAnalysisNoteSpecVulnerabilityDetails>? Details { get; set; }
 
     /// <summary>The note provider assigned severity of this vulnerability. Possible values: SEVERITY_UNSPECIFIED, MINIMAL, LOW, MEDIUM, HIGH, CRITICAL</summary>
     [JsonPropertyName("severity")]
@@ -413,28 +419,28 @@ public partial class V1beta1ContainerAnalysisNoteSpecVulnerability
 
     /// <summary>Windows details get their own format because the information format and model don't match a normal detail. Specifically Windows updates are done as patches, thus Windows vulnerabilities really are a missing package, rather than a package being at an incorrect version.</summary>
     [JsonPropertyName("windowsDetails")]
-    public IList<V1beta1ContainerAnalysisNoteSpecVulnerabilityWindowsDetails>? WindowsDetails { get; set; }
+    public IList<ContainerAnalysisNoteSpecVulnerabilityWindowsDetails>? WindowsDetails { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteSpec
+public partial class ContainerAnalysisNoteSpec
 {
     /// <summary>A note describing an attestation role.</summary>
     [JsonPropertyName("attestation")]
-    public V1beta1ContainerAnalysisNoteSpecAttestation? Attestation { get; set; }
+    public ContainerAnalysisNoteSpecAttestation? Attestation { get; set; }
 
     /// <summary>A note describing build provenance for a verifiable build.</summary>
     [JsonPropertyName("build")]
-    public V1beta1ContainerAnalysisNoteSpecBuild? Build { get; set; }
+    public ContainerAnalysisNoteSpecBuild? Build { get; set; }
 
     /// <summary>A note describing something that can be deployed.</summary>
     [JsonPropertyName("deployment")]
-    public V1beta1ContainerAnalysisNoteSpecDeployment? Deployment { get; set; }
+    public ContainerAnalysisNoteSpecDeployment? Deployment { get; set; }
 
     /// <summary>A note describing the initial analysis of a resource.</summary>
     [JsonPropertyName("discovery")]
-    public V1beta1ContainerAnalysisNoteSpecDiscovery? Discovery { get; set; }
+    public ContainerAnalysisNoteSpecDiscovery? Discovery { get; set; }
 
     /// <summary>Time of expiration for this note. Empty if note does not expire.</summary>
     [JsonPropertyName("expirationTime")]
@@ -442,7 +448,7 @@ public partial class V1beta1ContainerAnalysisNoteSpec
 
     /// <summary>A note describing a base image.</summary>
     [JsonPropertyName("image")]
-    public V1beta1ContainerAnalysisNoteSpecImage? Image { get; set; }
+    public ContainerAnalysisNoteSpecImage? Image { get; set; }
 
     /// <summary>A detailed description of this note.</summary>
     [JsonPropertyName("longDescription")]
@@ -450,15 +456,15 @@ public partial class V1beta1ContainerAnalysisNoteSpec
 
     /// <summary>Required for non-Windows OS. The package this Upgrade is for.</summary>
     [JsonPropertyName("package")]
-    public V1beta1ContainerAnalysisNoteSpecPackage? Package { get; set; }
+    public ContainerAnalysisNoteSpecPackage? Package { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("relatedNoteNames")]
-    public IList<V1beta1ContainerAnalysisNoteSpecRelatedNoteNames>? RelatedNoteNames { get; set; }
+    public IList<ContainerAnalysisNoteSpecRelatedNoteNames>? RelatedNoteNames { get; set; }
 
     /// <summary>URLs associated with this note.</summary>
     [JsonPropertyName("relatedUrl")]
-    public IList<V1beta1ContainerAnalysisNoteSpecRelatedUrl>? RelatedUrl { get; set; }
+    public IList<ContainerAnalysisNoteSpecRelatedUrl>? RelatedUrl { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -470,12 +476,12 @@ public partial class V1beta1ContainerAnalysisNoteSpec
 
     /// <summary>A note describing a package vulnerability.</summary>
     [JsonPropertyName("vulnerability")]
-    public V1beta1ContainerAnalysisNoteSpecVulnerability? Vulnerability { get; set; }
+    public ContainerAnalysisNoteSpecVulnerability? Vulnerability { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteStatusConditions
+public partial class ContainerAnalysisNoteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -500,7 +506,7 @@ public partial class V1beta1ContainerAnalysisNoteStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteStatusImageFingerprint
+public partial class ContainerAnalysisNoteStatusImageFingerprint
 {
     /// <summary>Output only. The name of the image's v2 blobs computed via: ) Only the name of the final blob is kept.</summary>
     [JsonPropertyName("v2Name")]
@@ -509,20 +515,20 @@ public partial class V1beta1ContainerAnalysisNoteStatusImageFingerprint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteStatusImage
+public partial class ContainerAnalysisNoteStatusImage
 {
     /// <summary></summary>
     [JsonPropertyName("fingerprint")]
-    public V1beta1ContainerAnalysisNoteStatusImageFingerprint? Fingerprint { get; set; }
+    public ContainerAnalysisNoteStatusImageFingerprint? Fingerprint { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAnalysisNoteStatus
+public partial class ContainerAnalysisNoteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ContainerAnalysisNoteStatusConditions>? Conditions { get; set; }
+    public IList<ContainerAnalysisNoteStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time this note was created. This field can be used as a filter in list requests.</summary>
     [JsonPropertyName("createTime")]
@@ -530,7 +536,7 @@ public partial class V1beta1ContainerAnalysisNoteStatus
 
     /// <summary></summary>
     [JsonPropertyName("image")]
-    public V1beta1ContainerAnalysisNoteStatusImage? Image { get; set; }
+    public ContainerAnalysisNoteStatusImage? Image { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -543,30 +549,25 @@ public partial class V1beta1ContainerAnalysisNoteStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContainerAnalysisNote : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerAnalysisNoteSpec>, IStatus<V1beta1ContainerAnalysisNoteStatus>
+public partial class ContainerAnalysisNote
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContainerAnalysisNote";
-    public const string KubeGroup = "containeranalysis.cnrm.cloud.google.com";
-    public const string KubePluralName = "containeranalysisnotes";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ContainerAnalysisNoteMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ContainerAnalysisNoteSpec? Spec { get; set; }
+    public ContainerAnalysisNoteSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ContainerAnalysisNoteStatus? Status { get; set; }
+    public ContainerAnalysisNoteStatus? Status { get; set; }
 }

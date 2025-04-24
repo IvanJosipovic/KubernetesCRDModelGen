@@ -450,3 +450,29 @@ public partial class V1beta1ServiceAccountKey : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1ServiceAccountKeyStatus? Status { get; set; }
 }
+
+/// <summary>ServiceAccountKey is the Schema for the ServiceAccountKeys API. Allows management of a Google Cloud Platform service account Key</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceAccountKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceAccountKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceAccountKeyList";
+    public const string KubeGroup = "cloudplatform.gcp.upbound.io";
+    public const string KubePluralName = "serviceaccountkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceAccountKey> Items { get; set; }
+}

@@ -456,3 +456,29 @@ public partial class V1beta1FolderBucketConfig : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1FolderBucketConfigStatus? Status { get; set; }
 }
+
+/// <summary>FolderBucketConfig is the Schema for the FolderBucketConfigs API. Manages a folder-level logging bucket config.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FolderBucketConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FolderBucketConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FolderBucketConfigList";
+    public const string KubeGroup = "logging.gcp.upbound.io";
+    public const string KubePluralName = "folderbucketconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FolderBucketConfig> Items { get; set; }
+}

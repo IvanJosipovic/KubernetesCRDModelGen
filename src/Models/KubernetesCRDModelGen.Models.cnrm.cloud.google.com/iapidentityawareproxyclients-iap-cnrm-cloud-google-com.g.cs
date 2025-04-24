@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IAPIdentityAwareProxyClientMetadata
+{
+}
+
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAPIdentityAwareProxyClientSpecBrandRef
+public partial class IAPIdentityAwareProxyClientSpecBrandRef
 {
     /// <summary>The brand for the resource  Allowed value: The Google Cloud resource name of an `IAPBrand` resource (format: `projects/{{project}}/brands/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,11 +33,11 @@ public partial class V1beta1IAPIdentityAwareProxyClientSpecBrandRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAPIdentityAwareProxyClientSpec
+public partial class IAPIdentityAwareProxyClientSpec
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("brandRef")]
-    public V1beta1IAPIdentityAwareProxyClientSpecBrandRef BrandRef { get; set; }
+    public IAPIdentityAwareProxyClientSpecBrandRef BrandRef { get; set; }
 
     /// <summary>Immutable. Human-friendly name given to the OAuth client.</summary>
     [JsonPropertyName("displayName")]
@@ -44,7 +50,7 @@ public partial class V1beta1IAPIdentityAwareProxyClientSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAPIdentityAwareProxyClientStatusConditions
+public partial class IAPIdentityAwareProxyClientStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -69,11 +75,11 @@ public partial class V1beta1IAPIdentityAwareProxyClientStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAPIdentityAwareProxyClientStatus
+public partial class IAPIdentityAwareProxyClientStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1IAPIdentityAwareProxyClientStatusConditions>? Conditions { get; set; }
+    public IList<IAPIdentityAwareProxyClientStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -86,30 +92,25 @@ public partial class V1beta1IAPIdentityAwareProxyClientStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IAPIdentityAwareProxyClient : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAPIdentityAwareProxyClientSpec>, IStatus<V1beta1IAPIdentityAwareProxyClientStatus>
+public partial class IAPIdentityAwareProxyClient
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IAPIdentityAwareProxyClient";
-    public const string KubeGroup = "iap.cnrm.cloud.google.com";
-    public const string KubePluralName = "iapidentityawareproxyclients";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IAPIdentityAwareProxyClientMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1IAPIdentityAwareProxyClientSpec Spec { get; set; }
+    public IAPIdentityAwareProxyClientSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1IAPIdentityAwareProxyClientStatus? Status { get; set; }
+    public IAPIdentityAwareProxyClientStatus? Status { get; set; }
 }

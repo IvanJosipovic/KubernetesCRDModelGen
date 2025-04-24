@@ -1079,3 +1079,29 @@ public partial class V1beta1LustreFileSystem : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1LustreFileSystemStatus? Status { get; set; }
 }
+
+/// <summary>LustreFileSystem is the Schema for the LustreFileSystems API. Manages a FSx Lustre File System.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LustreFileSystemList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LustreFileSystem>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LustreFileSystemList";
+    public const string KubeGroup = "fsx.aws.upbound.io";
+    public const string KubePluralName = "lustrefilesystems";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LustreFileSystem> Items { get; set; }
+}

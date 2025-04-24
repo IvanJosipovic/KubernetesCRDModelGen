@@ -452,3 +452,29 @@ public partial class V1beta1TokenPassword : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1TokenPasswordStatus? Status { get; set; }
 }
+
+/// <summary>TokenPassword is the Schema for the TokenPasswords API. Manages a Container Registry Token Password.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TokenPasswordList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TokenPassword>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TokenPasswordList";
+    public const string KubeGroup = "containerregistry.azure.upbound.io";
+    public const string KubePluralName = "tokenpasswords";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TokenPassword> Items { get; set; }
+}

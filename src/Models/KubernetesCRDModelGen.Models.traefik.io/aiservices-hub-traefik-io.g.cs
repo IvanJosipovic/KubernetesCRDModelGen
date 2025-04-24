@@ -594,3 +594,29 @@ public partial class V1alpha1AIService : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("spec")]
     public V1alpha1AIServiceSpec? Spec { get; set; }
 }
+
+/// <summary>AIService is a Kubernetes-like Service to interact with a text-based LLM provider. It defines the parameters and credentials required to interact with various LLM providers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AIServiceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AIService>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AIServiceList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "aiservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AIService> Items { get; set; }
+}

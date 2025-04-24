@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallSpecAllow
+public partial class ComputeFirewallMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeFirewallSpecAllow
 {
     /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.  Example inputs include: ["22"], ["80","443"], and ["12345-12349"].</summary>
     [JsonPropertyName("ports")]
@@ -23,7 +29,7 @@ public partial class V1beta1ComputeFirewallSpecAllow
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallSpecDeny
+public partial class ComputeFirewallSpecDeny
 {
     /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port.  Example inputs include: ["22"], ["80","443"], and ["12345-12349"].</summary>
     [JsonPropertyName("ports")]
@@ -36,7 +42,7 @@ public partial class V1beta1ComputeFirewallSpecDeny
 
 /// <summary>This field denotes the logging options for a particular firewall rule. If defined, logging is enabled, and logs will be exported to Cloud Logging.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallSpecLogConfig
+public partial class ComputeFirewallSpecLogConfig
 {
     /// <summary>This field denotes whether to include or exclude metadata for firewall logs. Possible values: ["EXCLUDE_ALL_METADATA", "INCLUDE_ALL_METADATA"].</summary>
     [JsonPropertyName("metadata")]
@@ -45,7 +51,7 @@ public partial class V1beta1ComputeFirewallSpecLogConfig
 
 /// <summary>The network to attach this firewall to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallSpecNetworkRef
+public partial class ComputeFirewallSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -62,7 +68,7 @@ public partial class V1beta1ComputeFirewallSpecNetworkRef
 
 /// <summary>If source service accounts are specified, the firewall will apply only to traffic originating from an instance with a service account in this list. Source service accounts cannot be used to control traffic to an instance's external IP address because service accounts are associated with an instance, not an IP address. sourceRanges can be set at the same time as sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP belongs to an instance with service account listed in sourceServiceAccount. The connection does not need to match both properties for the firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallSpecSourceServiceAccounts
+public partial class ComputeFirewallSpecSourceServiceAccounts
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -79,7 +85,7 @@ public partial class V1beta1ComputeFirewallSpecSourceServiceAccounts
 
 /// <summary>A list of service accounts indicating sets of instances located in the network that may make network connections as specified in allowed[]. targetServiceAccounts cannot be used at the same time as targetTags or sourceTags. If neither targetServiceAccounts nor targetTags are specified, the firewall rule applies to all instances on the specified network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallSpecTargetServiceAccounts
+public partial class ComputeFirewallSpecTargetServiceAccounts
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -96,15 +102,15 @@ public partial class V1beta1ComputeFirewallSpecTargetServiceAccounts
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallSpec
+public partial class ComputeFirewallSpec
 {
     /// <summary>The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection.</summary>
     [JsonPropertyName("allow")]
-    public IList<V1beta1ComputeFirewallSpecAllow>? Allow { get; set; }
+    public IList<ComputeFirewallSpecAllow>? Allow { get; set; }
 
     /// <summary>The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a denied connection.</summary>
     [JsonPropertyName("deny")]
-    public IList<V1beta1ComputeFirewallSpecDeny>? Deny { get; set; }
+    public IList<ComputeFirewallSpecDeny>? Deny { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -128,11 +134,11 @@ public partial class V1beta1ComputeFirewallSpec
 
     /// <summary>This field denotes the logging options for a particular firewall rule. If defined, logging is enabled, and logs will be exported to Cloud Logging.</summary>
     [JsonPropertyName("logConfig")]
-    public V1beta1ComputeFirewallSpecLogConfig? LogConfig { get; set; }
+    public ComputeFirewallSpecLogConfig? LogConfig { get; set; }
 
     /// <summary>The network to attach this firewall to.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1ComputeFirewallSpecNetworkRef NetworkRef { get; set; }
+    public ComputeFirewallSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not specified, the value assumed is 1000. Relative priorities determine precedence of conflicting rules. Lower value of priority implies higher precedence (eg, a rule with priority 0 has higher precedence than a rule with priority 1). DENY rules take precedence over ALLOW rules having equal priority.</summary>
     [JsonPropertyName("priority")]
@@ -148,7 +154,7 @@ public partial class V1beta1ComputeFirewallSpec
 
     /// <summary></summary>
     [JsonPropertyName("sourceServiceAccounts")]
-    public IList<V1beta1ComputeFirewallSpecSourceServiceAccounts>? SourceServiceAccounts { get; set; }
+    public IList<ComputeFirewallSpecSourceServiceAccounts>? SourceServiceAccounts { get; set; }
 
     /// <summary>If source tags are specified, the firewall will apply only to traffic with source IP that belongs to a tag listed in source tags. Source tags cannot be used to control traffic to an instance's external IP address. Because tags are associated with an instance, not an IP address. One or both of sourceRanges and sourceTags may be set. If both properties are set, the firewall will apply to traffic that has source IP address within sourceRanges OR the source IP that belongs to a tag listed in the sourceTags property. The connection does not need to match both properties for the firewall to apply. For INGRESS traffic, one of 'source_ranges', 'source_tags' or 'source_service_accounts' is required.</summary>
     [JsonPropertyName("sourceTags")]
@@ -156,7 +162,7 @@ public partial class V1beta1ComputeFirewallSpec
 
     /// <summary></summary>
     [JsonPropertyName("targetServiceAccounts")]
-    public IList<V1beta1ComputeFirewallSpecTargetServiceAccounts>? TargetServiceAccounts { get; set; }
+    public IList<ComputeFirewallSpecTargetServiceAccounts>? TargetServiceAccounts { get; set; }
 
     /// <summary>A list of instance tags indicating sets of instances located in the network that may make network connections as specified in allowed[]. If no targetTags are specified, the firewall rule applies to all instances on the specified network.</summary>
     [JsonPropertyName("targetTags")]
@@ -165,7 +171,7 @@ public partial class V1beta1ComputeFirewallSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallStatusConditions
+public partial class ComputeFirewallStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -190,11 +196,11 @@ public partial class V1beta1ComputeFirewallStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeFirewallStatus
+public partial class ComputeFirewallStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeFirewallStatusConditions>? Conditions { get; set; }
+    public IList<ComputeFirewallStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -211,30 +217,25 @@ public partial class V1beta1ComputeFirewallStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeFirewall : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeFirewallSpec>, IStatus<V1beta1ComputeFirewallStatus>
+public partial class ComputeFirewall
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeFirewall";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computefirewalls";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeFirewallMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeFirewallSpec Spec { get; set; }
+    public ComputeFirewallSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeFirewallStatus? Status { get; set; }
+    public ComputeFirewallStatus? Status { get; set; }
 }

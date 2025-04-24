@@ -2644,3 +2644,29 @@ public partial class V1beta1ContainerApp : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1ContainerAppStatus? Status { get; set; }
 }
+
+/// <summary>ContainerApp is the Schema for the ContainerApps API. Manages a Container App.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContainerAppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerApp>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContainerAppList";
+    public const string KubeGroup = "containerapp.azure.upbound.io";
+    public const string KubePluralName = "containerapps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContainerApp> Items { get; set; }
+}

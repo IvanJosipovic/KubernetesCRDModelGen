@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceSpecInterconnectAttachmentRef
+public partial class ComputeRouterInterfaceMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeRouterInterfaceSpecInterconnectAttachmentRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInterconnectAttachment` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecInterconnectAttachmentRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceSpecPrivateIpAddressRef
+public partial class ComputeRouterInterfaceSpecPrivateIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecPrivateIpAddressRef
 
 /// <summary>The interface the BGP peer is associated with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceSpecRedundantInterfaceRef
+public partial class ComputeRouterInterfaceSpecRedundantInterfaceRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRouterInterface` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecRedundantInterfaceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceSpecRouterRef
+public partial class ComputeRouterInterfaceSpecRouterRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeRouter` resource.</summary>
     [JsonPropertyName("external")]
@@ -78,7 +84,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecRouterRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceSpecSubnetworkRef
+public partial class ComputeRouterInterfaceSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -95,7 +101,7 @@ public partial class V1beta1ComputeRouterInterfaceSpecSubnetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceSpecVpnTunnelRef
+public partial class ComputeRouterInterfaceSpecVpnTunnelRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.</summary>
     [JsonPropertyName("external")]
@@ -112,11 +118,11 @@ public partial class V1beta1ComputeRouterInterfaceSpecVpnTunnelRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceSpec
+public partial class ComputeRouterInterfaceSpec
 {
     /// <summary></summary>
     [JsonPropertyName("interconnectAttachmentRef")]
-    public V1beta1ComputeRouterInterfaceSpecInterconnectAttachmentRef? InterconnectAttachmentRef { get; set; }
+    public ComputeRouterInterfaceSpecInterconnectAttachmentRef? InterconnectAttachmentRef { get; set; }
 
     /// <summary>Immutable. The IP address and range of the interface. The IP range must be in the RFC3927 link-local IP space. Changing this forces a new interface to be created.</summary>
     [JsonPropertyName("ipRange")]
@@ -124,11 +130,11 @@ public partial class V1beta1ComputeRouterInterfaceSpec
 
     /// <summary></summary>
     [JsonPropertyName("privateIpAddressRef")]
-    public V1beta1ComputeRouterInterfaceSpecPrivateIpAddressRef? PrivateIpAddressRef { get; set; }
+    public ComputeRouterInterfaceSpecPrivateIpAddressRef? PrivateIpAddressRef { get; set; }
 
     /// <summary>The interface the BGP peer is associated with.</summary>
     [JsonPropertyName("redundantInterfaceRef")]
-    public V1beta1ComputeRouterInterfaceSpecRedundantInterfaceRef? RedundantInterfaceRef { get; set; }
+    public ComputeRouterInterfaceSpecRedundantInterfaceRef? RedundantInterfaceRef { get; set; }
 
     /// <summary>Immutable. The region this interface's router sits in. If not specified, the project region will be used. Changing this forces a new interface to be created.</summary>
     [JsonPropertyName("region")]
@@ -140,20 +146,20 @@ public partial class V1beta1ComputeRouterInterfaceSpec
 
     /// <summary></summary>
     [JsonPropertyName("routerRef")]
-    public V1beta1ComputeRouterInterfaceSpecRouterRef RouterRef { get; set; }
+    public ComputeRouterInterfaceSpecRouterRef RouterRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("subnetworkRef")]
-    public V1beta1ComputeRouterInterfaceSpecSubnetworkRef? SubnetworkRef { get; set; }
+    public ComputeRouterInterfaceSpecSubnetworkRef? SubnetworkRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("vpnTunnelRef")]
-    public V1beta1ComputeRouterInterfaceSpecVpnTunnelRef? VpnTunnelRef { get; set; }
+    public ComputeRouterInterfaceSpecVpnTunnelRef? VpnTunnelRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceStatusConditions
+public partial class ComputeRouterInterfaceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -178,11 +184,11 @@ public partial class V1beta1ComputeRouterInterfaceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeRouterInterfaceStatus
+public partial class ComputeRouterInterfaceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeRouterInterfaceStatusConditions>? Conditions { get; set; }
+    public IList<ComputeRouterInterfaceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -191,30 +197,25 @@ public partial class V1beta1ComputeRouterInterfaceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeRouterInterface : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouterInterfaceSpec>, IStatus<V1beta1ComputeRouterInterfaceStatus>
+public partial class ComputeRouterInterface
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeRouterInterface";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computerouterinterfaces";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeRouterInterfaceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeRouterInterfaceSpec Spec { get; set; }
+    public ComputeRouterInterfaceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeRouterInterfaceStatus? Status { get; set; }
+    public ComputeRouterInterfaceStatus? Status { get; set; }
 }

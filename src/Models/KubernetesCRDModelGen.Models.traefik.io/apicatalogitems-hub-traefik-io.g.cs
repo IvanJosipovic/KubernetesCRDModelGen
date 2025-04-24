@@ -153,3 +153,29 @@ public partial class V1alpha1APICatalogItem : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1alpha1APICatalogItemStatus? Status { get; set; }
 }
+
+/// <summary>APICatalogItem defines APIs that will be part of the API catalog on the portal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APICatalogItemList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APICatalogItem>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APICatalogItemList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apicatalogitems";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APICatalogItem> Items { get; set; }
+}

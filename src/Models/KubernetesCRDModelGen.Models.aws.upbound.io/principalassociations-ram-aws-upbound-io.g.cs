@@ -518,3 +518,29 @@ public partial class V1beta1PrincipalAssociation : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1PrincipalAssociationStatus? Status { get; set; }
 }
+
+/// <summary>PrincipalAssociation is the Schema for the PrincipalAssociations API. Provides a Resource Access Manager (RAM) principal association.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrincipalAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrincipalAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrincipalAssociationList";
+    public const string KubeGroup = "ram.aws.upbound.io";
+    public const string KubePluralName = "principalassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrincipalAssociation> Items { get; set; }
+}

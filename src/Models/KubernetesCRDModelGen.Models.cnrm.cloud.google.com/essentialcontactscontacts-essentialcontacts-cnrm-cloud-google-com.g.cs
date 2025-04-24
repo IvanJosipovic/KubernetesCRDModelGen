@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.essentialcontacts.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1EssentialContactsContactSpec
+public partial class EssentialContactsContactMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class EssentialContactsContactSpec
 {
     /// <summary>Immutable. The email address to send notifications to. This does not need to be a Google account.</summary>
     [JsonPropertyName("email")]
@@ -35,7 +41,7 @@ public partial class V1alpha1EssentialContactsContactSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1EssentialContactsContactStatusConditions
+public partial class EssentialContactsContactStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -60,11 +66,11 @@ public partial class V1alpha1EssentialContactsContactStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1EssentialContactsContactStatus
+public partial class EssentialContactsContactStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1EssentialContactsContactStatusConditions>? Conditions { get; set; }
+    public IList<EssentialContactsContactStatusConditions>? Conditions { get; set; }
 
     /// <summary>The identifier for the contact. Format: {resourceType}/{resource_id}/contacts/{contact_id}.</summary>
     [JsonPropertyName("name")]
@@ -77,30 +83,25 @@ public partial class V1alpha1EssentialContactsContactStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1EssentialContactsContact : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1EssentialContactsContactSpec>, IStatus<V1alpha1EssentialContactsContactStatus>
+public partial class EssentialContactsContact
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "EssentialContactsContact";
-    public const string KubeGroup = "essentialcontacts.cnrm.cloud.google.com";
-    public const string KubePluralName = "essentialcontactscontacts";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public EssentialContactsContactMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1EssentialContactsContactSpec Spec { get; set; }
+    public EssentialContactsContactSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1EssentialContactsContactStatus? Status { get; set; }
+    public EssentialContactsContactStatus? Status { get; set; }
 }

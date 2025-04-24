@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.orgpolicy.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OrgPolicyCustomConstraintSpec
+public partial class OrgPolicyCustomConstraintMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class OrgPolicyCustomConstraintSpec
 {
     /// <summary>The action to take if the condition is met. Possible values: ["ALLOW", "DENY"].</summary>
     [JsonPropertyName("actionType")]
@@ -47,7 +53,7 @@ public partial class V1alpha1OrgPolicyCustomConstraintSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
+public partial class OrgPolicyCustomConstraintStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -72,11 +78,11 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OrgPolicyCustomConstraintStatus
+public partial class OrgPolicyCustomConstraintStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1OrgPolicyCustomConstraintStatusConditions>? Conditions { get; set; }
+    public IList<OrgPolicyCustomConstraintStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -89,30 +95,25 @@ public partial class V1alpha1OrgPolicyCustomConstraintStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1OrgPolicyCustomConstraint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1OrgPolicyCustomConstraintSpec>, IStatus<V1alpha1OrgPolicyCustomConstraintStatus>
+public partial class OrgPolicyCustomConstraint
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "OrgPolicyCustomConstraint";
-    public const string KubeGroup = "orgpolicy.cnrm.cloud.google.com";
-    public const string KubePluralName = "orgpolicycustomconstraints";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public OrgPolicyCustomConstraintMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1OrgPolicyCustomConstraintSpec Spec { get; set; }
+    public OrgPolicyCustomConstraintSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1OrgPolicyCustomConstraintStatus? Status { get; set; }
+    public OrgPolicyCustomConstraintStatus? Status { get; set; }
 }

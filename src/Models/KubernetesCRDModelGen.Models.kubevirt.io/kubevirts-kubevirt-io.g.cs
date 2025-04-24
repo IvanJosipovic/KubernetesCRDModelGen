@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kubevirt.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class KubeVirtMetadata
+{
+}
+
 /// <summary>CA configuration CA certs are kept in the CA bundle as long as they are valid</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedCa
+public partial class KubeVirtSpecCertificateRotateStrategySelfSignedCa
 {
     /// <summary>The requested 'duration' (i.e. lifetime) of the Certificate.</summary>
     [JsonPropertyName("duration")]
@@ -23,7 +29,7 @@ public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedCa
 
 /// <summary>Server configuration Certs are rotated and discarded</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedServer
+public partial class KubeVirtSpecCertificateRotateStrategySelfSignedServer
 {
     /// <summary>The requested 'duration' (i.e. lifetime) of the Certificate.</summary>
     [JsonPropertyName("duration")]
@@ -36,11 +42,11 @@ public partial class V1KubeVirtSpecCertificateRotateStrategySelfSignedServer
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecCertificateRotateStrategySelfSigned
+public partial class KubeVirtSpecCertificateRotateStrategySelfSigned
 {
     /// <summary>CA configuration CA certs are kept in the CA bundle as long as they are valid</summary>
     [JsonPropertyName("ca")]
-    public V1KubeVirtSpecCertificateRotateStrategySelfSignedCa? Ca { get; set; }
+    public KubeVirtSpecCertificateRotateStrategySelfSignedCa? Ca { get; set; }
 
     /// <summary>Deprecated. Use CA.Duration and CA.RenewBefore instead</summary>
     [JsonPropertyName("caOverlapInterval")]
@@ -56,21 +62,21 @@ public partial class V1KubeVirtSpecCertificateRotateStrategySelfSigned
 
     /// <summary>Server configuration Certs are rotated and discarded</summary>
     [JsonPropertyName("server")]
-    public V1KubeVirtSpecCertificateRotateStrategySelfSignedServer? Server { get; set; }
+    public KubeVirtSpecCertificateRotateStrategySelfSignedServer? Server { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecCertificateRotateStrategy
+public partial class KubeVirtSpecCertificateRotateStrategy
 {
     /// <summary></summary>
     [JsonPropertyName("selfSigned")]
-    public V1KubeVirtSpecCertificateRotateStrategySelfSigned? SelfSigned { get; set; }
+    public KubeVirtSpecCertificateRotateStrategySelfSigned? SelfSigned { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiterTokenBucketRateLimiter
+public partial class KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
     [JsonPropertyName("burst")]
@@ -83,34 +89,34 @@ public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLi
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiter
+public partial class KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
     [JsonPropertyName("tokenBucketRateLimiter")]
-    public V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
+    public KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationApiConfigurationRestClient
+public partial class KubeVirtSpecConfigurationApiConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
     [JsonPropertyName("rateLimiter")]
-    public V1KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiter? RateLimiter { get; set; }
+    public KubeVirtSpecConfigurationApiConfigurationRestClientRateLimiter? RateLimiter { get; set; }
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationApiConfiguration
+public partial class KubeVirtSpecConfigurationApiConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
     [JsonPropertyName("restClient")]
-    public V1KubeVirtSpecConfigurationApiConfigurationRestClient? RestClient { get; set; }
+    public KubeVirtSpecConfigurationApiConfigurationRestClient? RestClient { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationAmd64
+public partial class KubeVirtSpecConfigurationArchitectureConfigurationAmd64
 {
     /// <summary></summary>
     [JsonPropertyName("emulatedMachines")]
@@ -127,7 +133,7 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationAmd64
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationArm64
+public partial class KubeVirtSpecConfigurationArchitectureConfigurationArm64
 {
     /// <summary></summary>
     [JsonPropertyName("emulatedMachines")]
@@ -144,7 +150,7 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationArm64
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationPpc64le
+public partial class KubeVirtSpecConfigurationArchitectureConfigurationPpc64le
 {
     /// <summary></summary>
     [JsonPropertyName("emulatedMachines")]
@@ -161,15 +167,15 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfigurationPpc64le
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationArchitectureConfiguration
+public partial class KubeVirtSpecConfigurationArchitectureConfiguration
 {
     /// <summary></summary>
     [JsonPropertyName("amd64")]
-    public V1KubeVirtSpecConfigurationArchitectureConfigurationAmd64? Amd64 { get; set; }
+    public KubeVirtSpecConfigurationArchitectureConfigurationAmd64? Amd64 { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("arm64")]
-    public V1KubeVirtSpecConfigurationArchitectureConfigurationArm64? Arm64 { get; set; }
+    public KubeVirtSpecConfigurationArchitectureConfigurationArm64? Arm64 { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("defaultArchitecture")]
@@ -177,12 +183,12 @@ public partial class V1KubeVirtSpecConfigurationArchitectureConfiguration
 
     /// <summary></summary>
     [JsonPropertyName("ppc64le")]
-    public V1KubeVirtSpecConfigurationArchitectureConfigurationPpc64le? Ppc64le { get; set; }
+    public KubeVirtSpecConfigurationArchitectureConfigurationPpc64le? Ppc64le { get; set; }
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelectorMatchExpressions
+public partial class KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -199,11 +205,11 @@ public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelect
 
 /// <summary>When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelector
+public partial class KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -212,7 +218,7 @@ public partial class V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelect
 
 /// <summary>CommonInstancetypesDeployment controls the deployment of common-instancetypes resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationCommonInstancetypesDeployment
+public partial class KubeVirtSpecConfigurationCommonInstancetypesDeployment
 {
     /// <summary>Enabled controls the deployment of common-instancetypes resources, defaults to True.</summary>
     [JsonPropertyName("enabled")]
@@ -221,7 +227,7 @@ public partial class V1KubeVirtSpecConfigurationCommonInstancetypesDeployment
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiterTokenBucketRateLimiter
+public partial class KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
     [JsonPropertyName("burst")]
@@ -234,34 +240,34 @@ public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClien
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiter
+public partial class KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
     [JsonPropertyName("tokenBucketRateLimiter")]
-    public V1KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
+    public KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationControllerConfigurationRestClient
+public partial class KubeVirtSpecConfigurationControllerConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
     [JsonPropertyName("rateLimiter")]
-    public V1KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiter? RateLimiter { get; set; }
+    public KubeVirtSpecConfigurationControllerConfigurationRestClientRateLimiter? RateLimiter { get; set; }
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationControllerConfiguration
+public partial class KubeVirtSpecConfigurationControllerConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
     [JsonPropertyName("restClient")]
-    public V1KubeVirtSpecConfigurationControllerConfigurationRestClient? RestClient { get; set; }
+    public KubeVirtSpecConfigurationControllerConfigurationRestClient? RestClient { get; set; }
 }
 
 /// <summary>DiskVerification holds container disks verification limits</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationDiskVerification
+public partial class KubeVirtSpecConfigurationDeveloperConfigurationDiskVerification
 {
     /// <summary></summary>
     [JsonPropertyName("memoryLimit")]
@@ -270,7 +276,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationDiskVerifi
 
 /// <summary>LogVerbosity sets log verbosity level of  various components</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosity
+public partial class KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosity
 {
     /// <summary>NodeVerbosity represents a map of nodes with a specific verbosity level</summary>
     [JsonPropertyName("nodeVerbosity")]
@@ -299,7 +305,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosi
 
 /// <summary>DeveloperConfiguration holds developer options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationDeveloperConfiguration
+public partial class KubeVirtSpecConfigurationDeveloperConfiguration
 {
     /// <summary>For each requested virtual CPU, CPUAllocationRatio defines how much physical CPU to request per VMI from the hosting node. The value is in fraction of a CPU thread (or core on non-hyperthreaded nodes). For example, a value of 1 means 1 physical CPU thread per VMI CPU thread. A value of 100 would be 1% of a physical thread allocated for each requested VMI thread. This option has no effect on VMIs that request dedicated CPUs. More information at: https://kubevirt.io/user-guide/operations/node_overcommit/#node-cpu-allocation-ratio Defaults to 10</summary>
     [JsonPropertyName("cpuAllocationRatio")]
@@ -307,7 +313,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfiguration
 
     /// <summary>DiskVerification holds container disks verification limits</summary>
     [JsonPropertyName("diskVerification")]
-    public V1KubeVirtSpecConfigurationDeveloperConfigurationDiskVerification? DiskVerification { get; set; }
+    public KubeVirtSpecConfigurationDeveloperConfigurationDiskVerification? DiskVerification { get; set; }
 
     /// <summary>FeatureGates is the list of experimental features to enable. Defaults to none</summary>
     [JsonPropertyName("featureGates")]
@@ -315,7 +321,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfiguration
 
     /// <summary>LogVerbosity sets log verbosity level of  various components</summary>
     [JsonPropertyName("logVerbosity")]
-    public V1KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosity? LogVerbosity { get; set; }
+    public KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosity? LogVerbosity { get; set; }
 
     /// <summary>MemoryOvercommit is the percentage of memory we want to give VMIs compared to the amount given to its parent pod (virt-launcher). For example, a value of 102 means the VMI will "see" 2% more memory than its parent pod. Values under 100 are effectively "undercommits". Overcommits can lead to memory exhaustion, which in turn can lead to crashes. Use carefully. Defaults to 100</summary>
     [JsonPropertyName("memoryOvercommit")]
@@ -344,7 +350,7 @@ public partial class V1KubeVirtSpecConfigurationDeveloperConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiterTokenBucketRateLimiter
+public partial class KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
     [JsonPropertyName("burst")]
@@ -357,34 +363,34 @@ public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRa
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiter
+public partial class KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
     [JsonPropertyName("tokenBucketRateLimiter")]
-    public V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
+    public KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationHandlerConfigurationRestClient
+public partial class KubeVirtSpecConfigurationHandlerConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
     [JsonPropertyName("rateLimiter")]
-    public V1KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiter? RateLimiter { get; set; }
+    public KubeVirtSpecConfigurationHandlerConfigurationRestClientRateLimiter? RateLimiter { get; set; }
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationHandlerConfiguration
+public partial class KubeVirtSpecConfigurationHandlerConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
     [JsonPropertyName("restClient")]
-    public V1KubeVirtSpecConfigurationHandlerConfigurationRestClient? RestClient { get; set; }
+    public KubeVirtSpecConfigurationHandlerConfigurationRestClient? RestClient { get; set; }
 }
 
 /// <summary>Instancetype configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationInstancetype
+public partial class KubeVirtSpecConfigurationInstancetype
 {
     /// <summary>ReferencePolicy defines how an instance type or preference should be referenced by the VM after submission, supported values are: reference (default) - Where a copy of the original object is stashed in a ControllerRevision and referenced by the VM. expand - Where the instance type or preference are expanded into the VM if no revisionNames have been populated. expandAll - Where the instance type or preference are expanded into the VM regardless of revisionNames previously being populated.</summary>
     [JsonPropertyName("referencePolicy")]
@@ -393,7 +399,7 @@ public partial class V1KubeVirtSpecConfigurationInstancetype
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelectorMatchExpressions
+public partial class KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -410,11 +416,11 @@ public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelecto
 
 /// <summary>NodeLabelSelector is a selector that filters in which nodes the KSM will be enabled. Empty NodeLabelSelector will enable ksm for every node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelector
+public partial class KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -423,16 +429,16 @@ public partial class V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelecto
 
 /// <summary>KSMConfiguration holds the information regarding the enabling the KSM in the nodes (if available).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationKsmConfiguration
+public partial class KubeVirtSpecConfigurationKsmConfiguration
 {
     /// <summary>NodeLabelSelector is a selector that filters in which nodes the KSM will be enabled. Empty NodeLabelSelector will enable ksm for every node.</summary>
     [JsonPropertyName("nodeLabelSelector")]
-    public V1KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelector? NodeLabelSelector { get; set; }
+    public KubeVirtSpecConfigurationKsmConfigurationNodeLabelSelector? NodeLabelSelector { get; set; }
 }
 
 /// <summary>LiveUpdateConfiguration holds defaults for live update features</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationLiveUpdateConfiguration
+public partial class KubeVirtSpecConfigurationLiveUpdateConfiguration
 {
     /// <summary>MaxCpuSockets provides a MaxSockets value for VMs that do not provide their own. For VMs with more sockets than maximum the MaxSockets will be set to equal number of sockets.</summary>
     [JsonPropertyName("maxCpuSockets")]
@@ -449,7 +455,7 @@ public partial class V1KubeVirtSpecConfigurationLiveUpdateConfiguration
 
 /// <summary>NodeMediatedDeviceTypesConfig holds information about MDEV types to be defined in a specific node that matches the NodeSelector field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfigurationNodeMediatedDeviceTypes
+public partial class KubeVirtSpecConfigurationMediatedDevicesConfigurationNodeMediatedDeviceTypes
 {
     /// <summary></summary>
     [JsonPropertyName("mediatedDeviceTypes")]
@@ -466,7 +472,7 @@ public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfigurationNode
 
 /// <summary>MediatedDevicesConfiguration holds information about MDEV types to be defined, if available</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfiguration
+public partial class KubeVirtSpecConfigurationMediatedDevicesConfiguration
 {
     /// <summary></summary>
     [JsonPropertyName("mediatedDeviceTypes")]
@@ -478,12 +484,12 @@ public partial class V1KubeVirtSpecConfigurationMediatedDevicesConfiguration
 
     /// <summary></summary>
     [JsonPropertyName("nodeMediatedDeviceTypes")]
-    public IList<V1KubeVirtSpecConfigurationMediatedDevicesConfigurationNodeMediatedDeviceTypes>? NodeMediatedDeviceTypes { get; set; }
+    public IList<KubeVirtSpecConfigurationMediatedDevicesConfigurationNodeMediatedDeviceTypes>? NodeMediatedDeviceTypes { get; set; }
 }
 
 /// <summary>MigrationConfiguration holds migration options. Can be overridden for specific groups of VMs though migration policies. Visit https://kubevirt.io/user-guide/operations/migration_policies/ for more information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationMigrations
+public partial class KubeVirtSpecConfigurationMigrations
 {
     /// <summary>AllowAutoConverge allows the platform to compromise performance/availability of VMIs to guarantee successful VMI live migrations. Defaults to false</summary>
     [JsonPropertyName("allowAutoConverge")]
@@ -540,7 +546,7 @@ public partial class V1KubeVirtSpecConfigurationMigrations
 
 /// <summary>ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverhead
+public partial class KubeVirtSpecConfigurationNetworkBindingComputeResourceOverhead
 {
     /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
     [JsonPropertyName("limits")]
@@ -553,7 +559,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOve
 
 /// <summary>Migration means the VM using the plugin can be safely migrated version: 1alphav1</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationNetworkBindingMigration
+public partial class KubeVirtSpecConfigurationNetworkBindingMigration
 {
     /// <summary>Method defines a pre-defined migration methodology version: 1alphav1</summary>
     [JsonPropertyName("method")]
@@ -562,11 +568,11 @@ public partial class V1KubeVirtSpecConfigurationNetworkBindingMigration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationNetworkBinding
+public partial class KubeVirtSpecConfigurationNetworkBinding
 {
     /// <summary>ComputeResourceOverhead specifies the resource overhead that should be added to the compute container when using the binding. version: v1alphav1</summary>
     [JsonPropertyName("computeResourceOverhead")]
-    public V1KubeVirtSpecConfigurationNetworkBindingComputeResourceOverhead? ComputeResourceOverhead { get; set; }
+    public KubeVirtSpecConfigurationNetworkBindingComputeResourceOverhead? ComputeResourceOverhead { get; set; }
 
     /// <summary>DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: "tap", "managedTap" (since v1.4). The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1</summary>
     [JsonPropertyName("domainAttachmentType")]
@@ -578,7 +584,7 @@ public partial class V1KubeVirtSpecConfigurationNetworkBinding
 
     /// <summary>Migration means the VM using the plugin can be safely migrated version: 1alphav1</summary>
     [JsonPropertyName("migration")]
-    public V1KubeVirtSpecConfigurationNetworkBindingMigration? Migration { get; set; }
+    public KubeVirtSpecConfigurationNetworkBindingMigration? Migration { get; set; }
 
     /// <summary>NetworkAttachmentDefinition references to a NetworkAttachmentDefinition CR object. Format: &lt;name&gt;, &lt;namespace&gt;/&lt;name&gt;. If namespace is not specified, VMI namespace is assumed. version: 1alphav1</summary>
     [JsonPropertyName("networkAttachmentDefinition")]
@@ -591,11 +597,11 @@ public partial class V1KubeVirtSpecConfigurationNetworkBinding
 
 /// <summary>NetworkConfiguration holds network options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationNetwork
+public partial class KubeVirtSpecConfigurationNetwork
 {
     /// <summary></summary>
     [JsonPropertyName("binding")]
-    public IDictionary<string, V1KubeVirtSpecConfigurationNetworkBinding>? Binding { get; set; }
+    public IDictionary<string, KubeVirtSpecConfigurationNetworkBinding>? Binding { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("defaultNetworkInterface")]
@@ -612,7 +618,7 @@ public partial class V1KubeVirtSpecConfigurationNetwork
 
 /// <summary>MediatedHostDevice represents a host mediated device allowed for passthrough</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesMediatedDevices
+public partial class KubeVirtSpecConfigurationPermittedHostDevicesMediatedDevices
 {
     /// <summary></summary>
     [JsonPropertyName("externalResourceProvider")]
@@ -629,7 +635,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesMediatedDevi
 
 /// <summary>PciHostDevice represents a host PCI device allowed for passthrough</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesPciHostDevices
+public partial class KubeVirtSpecConfigurationPermittedHostDevicesPciHostDevices
 {
     /// <summary>If true, KubeVirt will leave the allocation and monitoring to an external device plugin</summary>
     [JsonPropertyName("externalResourceProvider")]
@@ -646,7 +652,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesPciHostDevic
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsbSelectors
+public partial class KubeVirtSpecConfigurationPermittedHostDevicesUsbSelectors
 {
     /// <summary></summary>
     [JsonPropertyName("product")]
@@ -659,7 +665,7 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsbSelectors
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsb
+public partial class KubeVirtSpecConfigurationPermittedHostDevicesUsb
 {
     /// <summary>If true, KubeVirt will leave the allocation and monitoring to an external device plugin</summary>
     [JsonPropertyName("externalResourceProvider")]
@@ -671,29 +677,29 @@ public partial class V1KubeVirtSpecConfigurationPermittedHostDevicesUsb
 
     /// <summary></summary>
     [JsonPropertyName("selectors")]
-    public IList<V1KubeVirtSpecConfigurationPermittedHostDevicesUsbSelectors>? Selectors { get; set; }
+    public IList<KubeVirtSpecConfigurationPermittedHostDevicesUsbSelectors>? Selectors { get; set; }
 }
 
 /// <summary>PermittedHostDevices holds information about devices allowed for passthrough</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationPermittedHostDevices
+public partial class KubeVirtSpecConfigurationPermittedHostDevices
 {
     /// <summary></summary>
     [JsonPropertyName("mediatedDevices")]
-    public IList<V1KubeVirtSpecConfigurationPermittedHostDevicesMediatedDevices>? MediatedDevices { get; set; }
+    public IList<KubeVirtSpecConfigurationPermittedHostDevicesMediatedDevices>? MediatedDevices { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("pciHostDevices")]
-    public IList<V1KubeVirtSpecConfigurationPermittedHostDevicesPciHostDevices>? PciHostDevices { get; set; }
+    public IList<KubeVirtSpecConfigurationPermittedHostDevicesPciHostDevices>? PciHostDevices { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("usb")]
-    public IList<V1KubeVirtSpecConfigurationPermittedHostDevicesUsb>? Usb { get; set; }
+    public IList<KubeVirtSpecConfigurationPermittedHostDevicesUsb>? Usb { get; set; }
 }
 
 /// <summary>CustomProfile allows to request arbitrary profile for virt-launcher</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfileCustomProfile
+public partial class KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfileCustomProfile
 {
     /// <summary></summary>
     [JsonPropertyName("localhostProfile")]
@@ -706,25 +712,25 @@ public partial class V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachi
 
 /// <summary>VirtualMachineInstanceProfile defines what profile should be used with virt-launcher. Defaults to none</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfile
+public partial class KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfile
 {
     /// <summary>CustomProfile allows to request arbitrary profile for virt-launcher</summary>
     [JsonPropertyName("customProfile")]
-    public V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfileCustomProfile? CustomProfile { get; set; }
+    public KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfileCustomProfile? CustomProfile { get; set; }
 }
 
 /// <summary>SeccompConfiguration holds Seccomp configuration for Kubevirt components</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationSeccompConfiguration
+public partial class KubeVirtSpecConfigurationSeccompConfiguration
 {
     /// <summary>VirtualMachineInstanceProfile defines what profile should be used with virt-launcher. Defaults to none</summary>
     [JsonPropertyName("virtualMachineInstanceProfile")]
-    public V1KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfile? VirtualMachineInstanceProfile { get; set; }
+    public KubeVirtSpecConfigurationSeccompConfigurationVirtualMachineInstanceProfile? VirtualMachineInstanceProfile { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationSmbios
+public partial class KubeVirtSpecConfigurationSmbios
 {
     /// <summary></summary>
     [JsonPropertyName("family")]
@@ -749,7 +755,7 @@ public partial class V1KubeVirtSpecConfigurationSmbios
 
 /// <summary>ResourceRequirementsWithoutClaims describes the compute resource requirements. This struct was taken from the k8s.ResourceRequirements and cleaned up the 'Claims' field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResources
+public partial class KubeVirtSpecConfigurationSupportContainerResourcesResources
 {
     /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
     [JsonPropertyName("limits")]
@@ -762,11 +768,11 @@ public partial class V1KubeVirtSpecConfigurationSupportContainerResourcesResourc
 
 /// <summary>SupportContainerResources are used to specify the cpu/memory request and limits for the containers that support various features of Virtual Machines. These containers are usually idle and don't require a lot of memory or cpu.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationSupportContainerResources
+public partial class KubeVirtSpecConfigurationSupportContainerResources
 {
     /// <summary>ResourceRequirementsWithoutClaims describes the compute resource requirements. This struct was taken from the k8s.ResourceRequirements and cleaned up the 'Claims' field.</summary>
     [JsonPropertyName("resources")]
-    public V1KubeVirtSpecConfigurationSupportContainerResourcesResources Resources { get; set; }
+    public KubeVirtSpecConfigurationSupportContainerResourcesResources Resources { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("type")]
@@ -775,7 +781,7 @@ public partial class V1KubeVirtSpecConfigurationSupportContainerResources
 
 /// <summary>TLSConfiguration holds TLS options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationTlsConfiguration
+public partial class KubeVirtSpecConfigurationTlsConfiguration
 {
     /// <summary></summary>
     [JsonPropertyName("ciphers")]
@@ -788,32 +794,32 @@ public partial class V1KubeVirtSpecConfigurationTlsConfiguration
 
 /// <summary>DisableFreePageReporting disable the free page reporting of memory balloon device https://libvirt.org/formatdomain.html#memory-balloon-device. This will have effect only if AutoattachMemBalloon is not false and the vmi is not requesting any high performance feature (dedicatedCPU/realtime/hugePages), in which free page reporting is always disabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableFreePageReporting
+public partial class KubeVirtSpecConfigurationVirtualMachineOptionsDisableFreePageReporting
 {
 }
 
 /// <summary>DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named 'guest-console-log'. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableSerialConsoleLog
+public partial class KubeVirtSpecConfigurationVirtualMachineOptionsDisableSerialConsoleLog
 {
 }
 
 /// <summary>VirtualMachineOptions holds the cluster level information regarding the virtual machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationVirtualMachineOptions
+public partial class KubeVirtSpecConfigurationVirtualMachineOptions
 {
     /// <summary>DisableFreePageReporting disable the free page reporting of memory balloon device https://libvirt.org/formatdomain.html#memory-balloon-device. This will have effect only if AutoattachMemBalloon is not false and the vmi is not requesting any high performance feature (dedicatedCPU/realtime/hugePages), in which free page reporting is always disabled.</summary>
     [JsonPropertyName("disableFreePageReporting")]
-    public V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableFreePageReporting? DisableFreePageReporting { get; set; }
+    public KubeVirtSpecConfigurationVirtualMachineOptionsDisableFreePageReporting? DisableFreePageReporting { get; set; }
 
     /// <summary>DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named 'guest-console-log'. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.</summary>
     [JsonPropertyName("disableSerialConsoleLog")]
-    public V1KubeVirtSpecConfigurationVirtualMachineOptionsDisableSerialConsoleLog? DisableSerialConsoleLog { get; set; }
+    public KubeVirtSpecConfigurationVirtualMachineOptionsDisableSerialConsoleLog? DisableSerialConsoleLog { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiterTokenBucketRateLimiter
+public partial class KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiterTokenBucketRateLimiter
 {
     /// <summary>Maximum burst for throttle. If it's zero, the component default will be used</summary>
     [JsonPropertyName("burst")]
@@ -826,34 +832,34 @@ public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRa
 
 /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiter
+public partial class KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiter
 {
     /// <summary></summary>
     [JsonPropertyName("tokenBucketRateLimiter")]
-    public V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
+    public KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiterTokenBucketRateLimiter? TokenBucketRateLimiter { get; set; }
 }
 
 /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationWebhookConfigurationRestClient
+public partial class KubeVirtSpecConfigurationWebhookConfigurationRestClient
 {
     /// <summary>RateLimiter allows selecting and configuring different rate limiters for the k8s client.</summary>
     [JsonPropertyName("rateLimiter")]
-    public V1KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiter? RateLimiter { get; set; }
+    public KubeVirtSpecConfigurationWebhookConfigurationRestClientRateLimiter? RateLimiter { get; set; }
 }
 
 /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfigurationWebhookConfiguration
+public partial class KubeVirtSpecConfigurationWebhookConfiguration
 {
     /// <summary>RestClient can be used to tune certain aspects of the k8s client in use.</summary>
     [JsonPropertyName("restClient")]
-    public V1KubeVirtSpecConfigurationWebhookConfigurationRestClient? RestClient { get; set; }
+    public KubeVirtSpecConfigurationWebhookConfigurationRestClient? RestClient { get; set; }
 }
 
 /// <summary>holds kubevirt configurations. same as the virt-configMap</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecConfiguration
+public partial class KubeVirtSpecConfiguration
 {
     /// <summary>AdditionalGuestMemoryOverheadRatio can be used to increase the virtualization infrastructure overhead. This is useful, since the calculation of this overhead is not accurate and cannot be entirely known in advance. The ratio that is being set determines by which factor to increase the overhead calculated by Kubevirt. A higher ratio means that the VMs would be less compromised by node pressures, but would mean that fewer VMs could be scheduled to a node. If not set, the default is 1.</summary>
     [JsonPropertyName("additionalGuestMemoryOverheadRatio")]
@@ -861,23 +867,23 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
     [JsonPropertyName("apiConfiguration")]
-    public V1KubeVirtSpecConfigurationApiConfiguration? ApiConfiguration { get; set; }
+    public KubeVirtSpecConfigurationApiConfiguration? ApiConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("architectureConfiguration")]
-    public V1KubeVirtSpecConfigurationArchitectureConfiguration? ArchitectureConfiguration { get; set; }
+    public KubeVirtSpecConfigurationArchitectureConfiguration? ArchitectureConfiguration { get; set; }
 
     /// <summary>When set, AutoCPULimitNamespaceLabelSelector will set a CPU limit on virt-launcher for VMIs running inside namespaces that match the label selector. The CPU limit will equal the number of requested vCPUs. This setting does not apply to VMIs with dedicated CPUs.</summary>
     [JsonPropertyName("autoCPULimitNamespaceLabelSelector")]
-    public V1KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelector? AutoCPULimitNamespaceLabelSelector { get; set; }
+    public KubeVirtSpecConfigurationAutoCPULimitNamespaceLabelSelector? AutoCPULimitNamespaceLabelSelector { get; set; }
 
     /// <summary>CommonInstancetypesDeployment controls the deployment of common-instancetypes resources</summary>
     [JsonPropertyName("commonInstancetypesDeployment")]
-    public V1KubeVirtSpecConfigurationCommonInstancetypesDeployment? CommonInstancetypesDeployment { get; set; }
+    public KubeVirtSpecConfigurationCommonInstancetypesDeployment? CommonInstancetypesDeployment { get; set; }
 
     /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
     [JsonPropertyName("controllerConfiguration")]
-    public V1KubeVirtSpecConfigurationControllerConfiguration? ControllerConfiguration { get; set; }
+    public KubeVirtSpecConfigurationControllerConfiguration? ControllerConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("cpuModel")]
@@ -893,7 +899,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>DeveloperConfiguration holds developer options</summary>
     [JsonPropertyName("developerConfiguration")]
-    public V1KubeVirtSpecConfigurationDeveloperConfiguration? DeveloperConfiguration { get; set; }
+    public KubeVirtSpecConfigurationDeveloperConfiguration? DeveloperConfiguration { get; set; }
 
     /// <summary>Deprecated. Use architectureConfiguration instead.</summary>
     [JsonPropertyName("emulatedMachines")]
@@ -905,7 +911,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
     [JsonPropertyName("handlerConfiguration")]
-    public V1KubeVirtSpecConfigurationHandlerConfiguration? HandlerConfiguration { get; set; }
+    public KubeVirtSpecConfigurationHandlerConfiguration? HandlerConfiguration { get; set; }
 
     /// <summary>PullPolicy describes a policy for if/when to pull a container image</summary>
     [JsonPropertyName("imagePullPolicy")]
@@ -913,15 +919,15 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>Instancetype configuration</summary>
     [JsonPropertyName("instancetype")]
-    public V1KubeVirtSpecConfigurationInstancetype? Instancetype { get; set; }
+    public KubeVirtSpecConfigurationInstancetype? Instancetype { get; set; }
 
     /// <summary>KSMConfiguration holds the information regarding the enabling the KSM in the nodes (if available).</summary>
     [JsonPropertyName("ksmConfiguration")]
-    public V1KubeVirtSpecConfigurationKsmConfiguration? KsmConfiguration { get; set; }
+    public KubeVirtSpecConfigurationKsmConfiguration? KsmConfiguration { get; set; }
 
     /// <summary>LiveUpdateConfiguration holds defaults for live update features</summary>
     [JsonPropertyName("liveUpdateConfiguration")]
-    public V1KubeVirtSpecConfigurationLiveUpdateConfiguration? LiveUpdateConfiguration { get; set; }
+    public KubeVirtSpecConfigurationLiveUpdateConfiguration? LiveUpdateConfiguration { get; set; }
 
     /// <summary>Deprecated. Use architectureConfiguration instead.</summary>
     [JsonPropertyName("machineType")]
@@ -929,7 +935,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>MediatedDevicesConfiguration holds information about MDEV types to be defined, if available</summary>
     [JsonPropertyName("mediatedDevicesConfiguration")]
-    public V1KubeVirtSpecConfigurationMediatedDevicesConfiguration? MediatedDevicesConfiguration { get; set; }
+    public KubeVirtSpecConfigurationMediatedDevicesConfiguration? MediatedDevicesConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("memBalloonStatsPeriod")]
@@ -937,7 +943,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>MigrationConfiguration holds migration options. Can be overridden for specific groups of VMs though migration policies. Visit https://kubevirt.io/user-guide/operations/migration_policies/ for more information.</summary>
     [JsonPropertyName("migrations")]
-    public V1KubeVirtSpecConfigurationMigrations? Migrations { get; set; }
+    public KubeVirtSpecConfigurationMigrations? Migrations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("minCPUModel")]
@@ -945,7 +951,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>NetworkConfiguration holds network options</summary>
     [JsonPropertyName("network")]
-    public V1KubeVirtSpecConfigurationNetwork? Network { get; set; }
+    public KubeVirtSpecConfigurationNetwork? Network { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("obsoleteCPUModels")]
@@ -957,11 +963,11 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>PermittedHostDevices holds information about devices allowed for passthrough</summary>
     [JsonPropertyName("permittedHostDevices")]
-    public V1KubeVirtSpecConfigurationPermittedHostDevices? PermittedHostDevices { get; set; }
+    public KubeVirtSpecConfigurationPermittedHostDevices? PermittedHostDevices { get; set; }
 
     /// <summary>SeccompConfiguration holds Seccomp configuration for Kubevirt components</summary>
     [JsonPropertyName("seccompConfiguration")]
-    public V1KubeVirtSpecConfigurationSeccompConfiguration? SeccompConfiguration { get; set; }
+    public KubeVirtSpecConfigurationSeccompConfiguration? SeccompConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("selinuxLauncherType")]
@@ -969,11 +975,11 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary></summary>
     [JsonPropertyName("smbios")]
-    public V1KubeVirtSpecConfigurationSmbios? Smbios { get; set; }
+    public KubeVirtSpecConfigurationSmbios? Smbios { get; set; }
 
     /// <summary>SupportContainerResources specifies the resource requirements for various types of supporting containers such as container disks/virtiofs/sidecars and hotplug attachment pods. If omitted a sensible default will be supplied.</summary>
     [JsonPropertyName("supportContainerResources")]
-    public IList<V1KubeVirtSpecConfigurationSupportContainerResources>? SupportContainerResources { get; set; }
+    public IList<KubeVirtSpecConfigurationSupportContainerResources>? SupportContainerResources { get; set; }
 
     /// <summary>deprecated</summary>
     [JsonPropertyName("supportedGuestAgentVersions")]
@@ -981,7 +987,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>TLSConfiguration holds TLS options</summary>
     [JsonPropertyName("tlsConfiguration")]
-    public V1KubeVirtSpecConfigurationTlsConfiguration? TlsConfiguration { get; set; }
+    public KubeVirtSpecConfigurationTlsConfiguration? TlsConfiguration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("virtualMachineInstancesPerNode")]
@@ -989,7 +995,7 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>VirtualMachineOptions holds the cluster level information regarding the virtual machine.</summary>
     [JsonPropertyName("virtualMachineOptions")]
-    public V1KubeVirtSpecConfigurationVirtualMachineOptions? VirtualMachineOptions { get; set; }
+    public KubeVirtSpecConfigurationVirtualMachineOptions? VirtualMachineOptions { get; set; }
 
     /// <summary>VMRolloutStrategy defines how live-updatable fields, like CPU sockets, memory, tolerations, and affinity, are propagated from a VM to its VMI.</summary>
     [JsonPropertyName("vmRolloutStrategy")]
@@ -1001,12 +1007,12 @@ public partial class V1KubeVirtSpecConfiguration
 
     /// <summary>ReloadableComponentConfiguration holds all generic k8s configuration options which can be reloaded by components without requiring a restart.</summary>
     [JsonPropertyName("webhookConfiguration")]
-    public V1KubeVirtSpecConfigurationWebhookConfiguration? WebhookConfiguration { get; set; }
+    public KubeVirtSpecConfigurationWebhookConfiguration? WebhookConfiguration { get; set; }
 }
 
 /// <summary>Configure the value used for deployment and daemonset resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecCustomizeComponentsFlags
+public partial class KubeVirtSpecCustomizeComponentsFlags
 {
     /// <summary></summary>
     [JsonPropertyName("api")]
@@ -1023,7 +1029,7 @@ public partial class V1KubeVirtSpecCustomizeComponentsFlags
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecCustomizeComponentsPatches
+public partial class KubeVirtSpecCustomizeComponentsPatches
 {
     /// <summary></summary>
     [JsonPropertyName("patch")]
@@ -1044,20 +1050,20 @@ public partial class V1KubeVirtSpecCustomizeComponentsPatches
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecCustomizeComponents
+public partial class KubeVirtSpecCustomizeComponents
 {
     /// <summary>Configure the value used for deployment and daemonset resources</summary>
     [JsonPropertyName("flags")]
-    public V1KubeVirtSpecCustomizeComponentsFlags? Flags { get; set; }
+    public KubeVirtSpecCustomizeComponentsFlags? Flags { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("patches")]
-    public IList<V1KubeVirtSpecCustomizeComponentsPatches>? Patches { get; set; }
+    public IList<KubeVirtSpecCustomizeComponentsPatches>? Patches { get; set; }
 }
 
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecImagePullSecrets
+public partial class KubeVirtSpecImagePullSecrets
 {
     /// <summary>Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
@@ -1066,7 +1072,7 @@ public partial class V1KubeVirtSpecImagePullSecrets
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1083,7 +1089,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferr
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1100,24 +1106,24 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferr
 
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>A list of node selector requirements by node's fields.</summary>
     [JsonPropertyName("matchFields")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
 
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A node selector term, associated with the corresponding weight.</summary>
     [JsonPropertyName("preference")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference Preference { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference Preference { get; set; }
 
     /// <summary>Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.</summary>
     [JsonPropertyName("weight")]
@@ -1126,7 +1132,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferr
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1143,7 +1149,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequire
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1160,42 +1166,42 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequire
 
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>A list of node selector requirements by node's fields.</summary>
     [JsonPropertyName("matchFields")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
 
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A list of node selector terms. The terms are ORed.</summary>
     [JsonPropertyName("nodeSelectorTerms")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
 
 /// <summary>Describes node affinity scheduling rules for the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinity
+public partial class KubeVirtSpecInfraNodePlacementAffinityNodeAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.</summary>
     [JsonPropertyName("preferredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
 
     /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1212,11 +1218,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1225,7 +1231,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1242,11 +1248,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1255,11 +1261,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -1271,7 +1277,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -1284,11 +1290,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
     [JsonPropertyName("podAffinityTerm")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
 
     /// <summary>weight associated with matching the corresponding podAffinityTerm, in the range 1-100.</summary>
     [JsonPropertyName("weight")]
@@ -1297,7 +1303,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferre
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1314,11 +1320,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1327,7 +1333,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1344,11 +1350,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1357,11 +1363,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -1373,7 +1379,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -1386,20 +1392,20 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequired
 
 /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAffinity
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
     [JsonPropertyName("preferredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
 
     /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.</summary>
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1416,11 +1422,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1429,7 +1435,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1446,11 +1452,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1459,11 +1465,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -1475,7 +1481,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -1488,11 +1494,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
     [JsonPropertyName("podAffinityTerm")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
 
     /// <summary>weight associated with matching the corresponding podAffinityTerm, in the range 1-100.</summary>
     [JsonPropertyName("weight")]
@@ -1501,7 +1507,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPref
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1518,11 +1524,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1531,7 +1537,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1548,11 +1554,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1561,11 +1567,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -1577,7 +1583,7 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -1590,37 +1596,37 @@ public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequ
 
 /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinity
+public partial class KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
     [JsonPropertyName("preferredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
 
     /// <summary>If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.</summary>
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
 /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementAffinity
+public partial class KubeVirtSpecInfraNodePlacementAffinity
 {
     /// <summary>Describes node affinity scheduling rules for the pod.</summary>
     [JsonPropertyName("nodeAffinity")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityNodeAffinity? NodeAffinity { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityNodeAffinity? NodeAffinity { get; set; }
 
     /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
     [JsonPropertyName("podAffinity")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAffinity? PodAffinity { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAffinity? PodAffinity { get; set; }
 
     /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
     [JsonPropertyName("podAntiAffinity")]
-    public V1KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
 
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacementTolerations
+public partial class KubeVirtSpecInfraNodePlacementTolerations
 {
     /// <summary>Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.</summary>
     [JsonPropertyName("effect")]
@@ -1645,11 +1651,11 @@ public partial class V1KubeVirtSpecInfraNodePlacementTolerations
 
 /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfraNodePlacement
+public partial class KubeVirtSpecInfraNodePlacement
 {
     /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
     [JsonPropertyName("affinity")]
-    public V1KubeVirtSpecInfraNodePlacementAffinity? Affinity { get; set; }
+    public KubeVirtSpecInfraNodePlacementAffinity? Affinity { get; set; }
 
     /// <summary>nodeSelector is the node selector applied to the relevant kind of pods It specifies a map of key-value pairs: for the pod to be eligible to run on a node, the node must have each of the indicated key-value pairs as labels (it can have additional labels as well). See https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector</summary>
     [JsonPropertyName("nodeSelector")]
@@ -1657,16 +1663,16 @@ public partial class V1KubeVirtSpecInfraNodePlacement
 
     /// <summary>tolerations is a list of tolerations applied to the relevant kind of pods See https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/ for more info. These are additional tolerations other than default ones.</summary>
     [JsonPropertyName("tolerations")]
-    public IList<V1KubeVirtSpecInfraNodePlacementTolerations>? Tolerations { get; set; }
+    public IList<KubeVirtSpecInfraNodePlacementTolerations>? Tolerations { get; set; }
 }
 
 /// <summary>selectors and tolerations that should apply to KubeVirt infrastructure components</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecInfra
+public partial class KubeVirtSpecInfra
 {
     /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
     [JsonPropertyName("nodePlacement")]
-    public V1KubeVirtSpecInfraNodePlacement? NodePlacement { get; set; }
+    public KubeVirtSpecInfraNodePlacement? NodePlacement { get; set; }
 
     /// <summary>replicas indicates how many replicas should be created for each KubeVirt infrastructure component (like virt-api or virt-controller). Defaults to 2. WARNING: this is an advanced feature that prevents auto-scaling for core kubevirt components. Please use with caution!</summary>
     [JsonPropertyName("replicas")]
@@ -1675,7 +1681,7 @@ public partial class V1KubeVirtSpecInfra
 
 /// <summary>WorkloadUpdateStrategy defines at the cluster level how to handle automated workload updates</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadUpdateStrategy
+public partial class KubeVirtSpecWorkloadUpdateStrategy
 {
     /// <summary>BatchEvictionInterval Represents the interval to wait before issuing the next batch of shutdowns  Defaults to 1 minute</summary>
     [JsonPropertyName("batchEvictionInterval")]
@@ -1692,7 +1698,7 @@ public partial class V1KubeVirtSpecWorkloadUpdateStrategy
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1709,7 +1715,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPre
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1726,24 +1732,24 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPre
 
 /// <summary>A node selector term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>A list of node selector requirements by node's fields.</summary>
     [JsonPropertyName("matchFields")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchFields>? MatchFields { get; set; }
 }
 
 /// <summary>An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A node selector term, associated with the corresponding weight.</summary>
     [JsonPropertyName("preference")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference Preference { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference Preference { get; set; }
 
     /// <summary>Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.</summary>
     [JsonPropertyName("weight")]
@@ -1752,7 +1758,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPre
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1769,7 +1775,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityReq
 
 /// <summary>A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields
 {
     /// <summary>The label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1786,42 +1792,42 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityReq
 
 /// <summary>A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms
 {
     /// <summary>A list of node selector requirements by node's labels.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>A list of node selector requirements by node's fields.</summary>
     [JsonPropertyName("matchFields")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTermsMatchFields>? MatchFields { get; set; }
 }
 
 /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A list of node selector terms. The terms are ORed.</summary>
     [JsonPropertyName("nodeSelectorTerms")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecutionNodeSelectorTerms> NodeSelectorTerms { get; set; }
 }
 
 /// <summary>Describes node affinity scheduling rules for the pod.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinity
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.</summary>
     [JsonPropertyName("preferredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
 
     /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.</summary>
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1838,11 +1844,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1851,7 +1857,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1868,11 +1874,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1881,11 +1887,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -1897,7 +1903,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -1910,11 +1916,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
     [JsonPropertyName("podAffinityTerm")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
 
     /// <summary>weight associated with matching the corresponding podAffinityTerm, in the range 1-100.</summary>
     [JsonPropertyName("weight")]
@@ -1923,7 +1929,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPref
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1940,11 +1946,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1953,7 +1959,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -1970,11 +1976,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1983,11 +1989,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -1999,7 +2005,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -2012,20 +2018,20 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequ
 
 /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinity
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
     [JsonPropertyName("preferredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
 
     /// <summary>If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.</summary>
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -2042,11 +2048,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -2055,7 +2061,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -2072,11 +2078,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -2085,11 +2091,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -2101,7 +2107,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -2114,11 +2120,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>Required. A pod affinity term, associated with the corresponding weight.</summary>
     [JsonPropertyName("podAffinityTerm")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTerm PodAffinityTerm { get; set; }
 
     /// <summary>weight associated with matching the corresponding podAffinityTerm, in the range 1-100.</summary>
     [JsonPropertyName("weight")]
@@ -2127,7 +2133,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -2144,11 +2150,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -2157,7 +2163,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -2174,11 +2180,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -2187,11 +2193,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key &lt;topologyKey&gt; matches that of any node on which a pod of the set of pods is running</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution
 {
     /// <summary>A label query over a set of resources, in this case pods. If it's null, this PodAffinityTerm matches with no Pods.</summary>
     [JsonPropertyName("labelSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
     /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with 'labelSelector' as 'key in (value)' to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
     [JsonPropertyName("matchLabelKeys")]
@@ -2203,7 +2209,7 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
     /// <summary>A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces.</summary>
     [JsonPropertyName("namespaceSelector")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionNamespaceSelector? NamespaceSelector { get; set; }
 
     /// <summary>namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means "this pod's namespace".</summary>
     [JsonPropertyName("namespaces")]
@@ -2216,37 +2222,37 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 
 /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity
 {
     /// <summary>The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred.</summary>
     [JsonPropertyName("preferredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecution>? PreferredDuringSchedulingIgnoredDuringExecution { get; set; }
 
     /// <summary>If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.</summary>
     [JsonPropertyName("requiredDuringSchedulingIgnoredDuringExecution")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecution>? RequiredDuringSchedulingIgnoredDuringExecution { get; set; }
 }
 
 /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementAffinity
+public partial class KubeVirtSpecWorkloadsNodePlacementAffinity
 {
     /// <summary>Describes node affinity scheduling rules for the pod.</summary>
     [JsonPropertyName("nodeAffinity")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinity? NodeAffinity { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityNodeAffinity? NodeAffinity { get; set; }
 
     /// <summary>Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).</summary>
     [JsonPropertyName("podAffinity")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinity? PodAffinity { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAffinity? PodAffinity { get; set; }
 
     /// <summary>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).</summary>
     [JsonPropertyName("podAntiAffinity")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinityPodAntiAffinity? PodAntiAffinity { get; set; }
 }
 
 /// <summary>The pod this Toleration is attached to tolerates any taint that matches the triple &lt;key,value,effect&gt; using the matching operator &lt;operator&gt;.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacementTolerations
+public partial class KubeVirtSpecWorkloadsNodePlacementTolerations
 {
     /// <summary>Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.</summary>
     [JsonPropertyName("effect")]
@@ -2271,11 +2277,11 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacementTolerations
 
 /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloadsNodePlacement
+public partial class KubeVirtSpecWorkloadsNodePlacement
 {
     /// <summary>affinity enables pod affinity/anti-affinity placement expanding the types of constraints that can be expressed with nodeSelector. affinity is going to be applied to the relevant kind of pods in parallel with nodeSelector See https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</summary>
     [JsonPropertyName("affinity")]
-    public V1KubeVirtSpecWorkloadsNodePlacementAffinity? Affinity { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacementAffinity? Affinity { get; set; }
 
     /// <summary>nodeSelector is the node selector applied to the relevant kind of pods It specifies a map of key-value pairs: for the pod to be eligible to run on a node, the node must have each of the indicated key-value pairs as labels (it can have additional labels as well). See https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector</summary>
     [JsonPropertyName("nodeSelector")]
@@ -2283,16 +2289,16 @@ public partial class V1KubeVirtSpecWorkloadsNodePlacement
 
     /// <summary>tolerations is a list of tolerations applied to the relevant kind of pods See https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/ for more info. These are additional tolerations other than default ones.</summary>
     [JsonPropertyName("tolerations")]
-    public IList<V1KubeVirtSpecWorkloadsNodePlacementTolerations>? Tolerations { get; set; }
+    public IList<KubeVirtSpecWorkloadsNodePlacementTolerations>? Tolerations { get; set; }
 }
 
 /// <summary>selectors and tolerations that should apply to KubeVirt workloads</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpecWorkloads
+public partial class KubeVirtSpecWorkloads
 {
     /// <summary>nodePlacement describes scheduling configuration for specific KubeVirt components</summary>
     [JsonPropertyName("nodePlacement")]
-    public V1KubeVirtSpecWorkloadsNodePlacement? NodePlacement { get; set; }
+    public KubeVirtSpecWorkloadsNodePlacement? NodePlacement { get; set; }
 
     /// <summary>replicas indicates how many replicas should be created for each KubeVirt infrastructure component (like virt-api or virt-controller). Defaults to 2. WARNING: this is an advanced feature that prevents auto-scaling for core kubevirt components. Please use with caution!</summary>
     [JsonPropertyName("replicas")]
@@ -2301,19 +2307,19 @@ public partial class V1KubeVirtSpecWorkloads
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtSpec
+public partial class KubeVirtSpec
 {
     /// <summary></summary>
     [JsonPropertyName("certificateRotateStrategy")]
-    public V1KubeVirtSpecCertificateRotateStrategy? CertificateRotateStrategy { get; set; }
+    public KubeVirtSpecCertificateRotateStrategy? CertificateRotateStrategy { get; set; }
 
     /// <summary>holds kubevirt configurations. same as the virt-configMap</summary>
     [JsonPropertyName("configuration")]
-    public V1KubeVirtSpecConfiguration? Configuration { get; set; }
+    public KubeVirtSpecConfiguration? Configuration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("customizeComponents")]
-    public V1KubeVirtSpecCustomizeComponents? CustomizeComponents { get; set; }
+    public KubeVirtSpecCustomizeComponents? CustomizeComponents { get; set; }
 
     /// <summary>The ImagePullPolicy to use.</summary>
     [JsonPropertyName("imagePullPolicy")]
@@ -2321,7 +2327,7 @@ public partial class V1KubeVirtSpec
 
     /// <summary>The imagePullSecrets to pull the container images from Defaults to none</summary>
     [JsonPropertyName("imagePullSecrets")]
-    public IList<V1KubeVirtSpecImagePullSecrets>? ImagePullSecrets { get; set; }
+    public IList<KubeVirtSpecImagePullSecrets>? ImagePullSecrets { get; set; }
 
     /// <summary>The image registry to pull the container images from Defaults to the same registry the operator's container image is pulled from.</summary>
     [JsonPropertyName("imageRegistry")]
@@ -2333,7 +2339,7 @@ public partial class V1KubeVirtSpec
 
     /// <summary>selectors and tolerations that should apply to KubeVirt infrastructure components</summary>
     [JsonPropertyName("infra")]
-    public V1KubeVirtSpecInfra? Infra { get; set; }
+    public KubeVirtSpecInfra? Infra { get; set; }
 
     /// <summary>The name of the Prometheus service account that needs read-access to KubeVirt endpoints Defaults to prometheus-k8s</summary>
     [JsonPropertyName("monitorAccount")]
@@ -2365,16 +2371,16 @@ public partial class V1KubeVirtSpec
 
     /// <summary>WorkloadUpdateStrategy defines at the cluster level how to handle automated workload updates</summary>
     [JsonPropertyName("workloadUpdateStrategy")]
-    public V1KubeVirtSpecWorkloadUpdateStrategy? WorkloadUpdateStrategy { get; set; }
+    public KubeVirtSpecWorkloadUpdateStrategy? WorkloadUpdateStrategy { get; set; }
 
     /// <summary>selectors and tolerations that should apply to KubeVirt workloads</summary>
     [JsonPropertyName("workloads")]
-    public V1KubeVirtSpecWorkloads? Workloads { get; set; }
+    public KubeVirtSpecWorkloads? Workloads { get; set; }
 }
 
 /// <summary>KubeVirtCondition represents a condition of a KubeVirt deployment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtStatusConditions
+public partial class KubeVirtStatusConditions
 {
     /// <summary></summary>
     [JsonPropertyName("lastProbeTime")]
@@ -2403,7 +2409,7 @@ public partial class V1KubeVirtStatusConditions
 
 /// <summary>GenerationStatus keeps track of the generation for a given resource so that decisions about forced updates can be made.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtStatusGenerations
+public partial class KubeVirtStatusGenerations
 {
     /// <summary>group is the group of the thing you're tracking</summary>
     [JsonPropertyName("group")]
@@ -2432,11 +2438,11 @@ public partial class V1KubeVirtStatusGenerations
 
 /// <summary>KubeVirtStatus represents information pertaining to a KubeVirt deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1KubeVirtStatus
+public partial class KubeVirtStatus
 {
     /// <summary></summary>
     [JsonPropertyName("conditions")]
-    public IList<V1KubeVirtStatusConditions>? Conditions { get; set; }
+    public IList<KubeVirtStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("defaultArchitecture")]
@@ -2444,7 +2450,7 @@ public partial class V1KubeVirtStatus
 
     /// <summary></summary>
     [JsonPropertyName("generations")]
-    public IList<V1KubeVirtStatusGenerations>? Generations { get; set; }
+    public IList<KubeVirtStatusGenerations>? Generations { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("observedDeploymentConfig")]
@@ -2497,30 +2503,25 @@ public partial class V1KubeVirtStatus
 
 /// <summary>KubeVirt represents the object deploying all KubeVirt resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1KubeVirt : IKubernetesObject<V1ObjectMeta>, ISpec<V1KubeVirtSpec>, IStatus<V1KubeVirtStatus>
+public partial class KubeVirt
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "KubeVirt";
-    public const string KubeGroup = "kubevirt.io";
-    public const string KubePluralName = "kubevirts";
-    /// <summary></summary>
+    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public KubeVirtMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1KubeVirtSpec Spec { get; set; }
+    public KubeVirtSpec Spec { get; set; }
 
     /// <summary>KubeVirtStatus represents information pertaining to a KubeVirt deployment.</summary>
     [JsonPropertyName("status")]
-    public V1KubeVirtStatus? Status { get; set; }
+    public KubeVirtStatus? Status { get; set; }
 }

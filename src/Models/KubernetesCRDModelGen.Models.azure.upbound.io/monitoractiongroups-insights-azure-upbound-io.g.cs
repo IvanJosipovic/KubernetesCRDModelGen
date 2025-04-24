@@ -1254,3 +1254,29 @@ public partial class V1beta1MonitorActionGroup : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1MonitorActionGroupStatus? Status { get; set; }
 }
+
+/// <summary>MonitorActionGroup is the Schema for the MonitorActionGroups API. Manages an Action Group within Azure Monitor</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MonitorActionGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MonitorActionGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MonitorActionGroupList";
+    public const string KubeGroup = "insights.azure.upbound.io";
+    public const string KubePluralName = "monitoractiongroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MonitorActionGroup> Items { get; set; }
+}

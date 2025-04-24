@@ -430,3 +430,29 @@ public partial class V1beta1APIDestination : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1APIDestinationStatus? Status { get; set; }
 }
+
+/// <summary>APIDestination is the Schema for the APIDestinations API. Provides an EventBridge event API Destination resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1APIDestinationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1APIDestination>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "APIDestinationList";
+    public const string KubeGroup = "cloudwatchevents.aws.upbound.io";
+    public const string KubePluralName = "apidestinations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1APIDestination> Items { get; set; }
+}

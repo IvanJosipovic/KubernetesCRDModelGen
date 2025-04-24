@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSPolicySpecAlternativeNameServerConfigTargetNameServers
+public partial class DNSPolicyMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DNSPolicySpecAlternativeNameServerConfigTargetNameServers
 {
     /// <summary>Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"].</summary>
     [JsonPropertyName("forwardingPath")]
@@ -23,16 +29,16 @@ public partial class V1beta1DNSPolicySpecAlternativeNameServerConfigTargetNameSe
 
 /// <summary>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSPolicySpecAlternativeNameServerConfig
+public partial class DNSPolicySpecAlternativeNameServerConfig
 {
     /// <summary>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.</summary>
     [JsonPropertyName("targetNameServers")]
-    public IList<V1beta1DNSPolicySpecAlternativeNameServerConfigTargetNameServers> TargetNameServers { get; set; }
+    public IList<DNSPolicySpecAlternativeNameServerConfigTargetNameServers> TargetNameServers { get; set; }
 }
 
 /// <summary>VPC network to bind to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSPolicySpecNetworksNetworkRef
+public partial class DNSPolicySpecNetworksNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -49,20 +55,20 @@ public partial class V1beta1DNSPolicySpecNetworksNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSPolicySpecNetworks
+public partial class DNSPolicySpecNetworks
 {
     /// <summary>VPC network to bind to.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1DNSPolicySpecNetworksNetworkRef NetworkRef { get; set; }
+    public DNSPolicySpecNetworksNetworkRef NetworkRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSPolicySpec
+public partial class DNSPolicySpec
 {
     /// <summary>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.</summary>
     [JsonPropertyName("alternativeNameServerConfig")]
-    public V1beta1DNSPolicySpecAlternativeNameServerConfig? AlternativeNameServerConfig { get; set; }
+    public DNSPolicySpecAlternativeNameServerConfig? AlternativeNameServerConfig { get; set; }
 
     /// <summary>A textual description field. Defaults to 'Managed by Config Connector'.</summary>
     [JsonPropertyName("description")]
@@ -78,7 +84,7 @@ public partial class V1beta1DNSPolicySpec
 
     /// <summary>List of network names specifying networks to which this policy is applied.</summary>
     [JsonPropertyName("networks")]
-    public IList<V1beta1DNSPolicySpecNetworks>? Networks { get; set; }
+    public IList<DNSPolicySpecNetworks>? Networks { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -87,7 +93,7 @@ public partial class V1beta1DNSPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSPolicyStatusConditions
+public partial class DNSPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -112,11 +118,11 @@ public partial class V1beta1DNSPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSPolicyStatus
+public partial class DNSPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DNSPolicyStatusConditions>? Conditions { get; set; }
+    public IList<DNSPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -125,30 +131,25 @@ public partial class V1beta1DNSPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DNSPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSPolicySpec>, IStatus<V1beta1DNSPolicyStatus>
+public partial class DNSPolicy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DNSPolicy";
-    public const string KubeGroup = "dns.cnrm.cloud.google.com";
-    public const string KubePluralName = "dnspolicies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DNSPolicyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1DNSPolicySpec? Spec { get; set; }
+    public DNSPolicySpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1DNSPolicyStatus? Status { get; set; }
+    public DNSPolicyStatus? Status { get; set; }
 }

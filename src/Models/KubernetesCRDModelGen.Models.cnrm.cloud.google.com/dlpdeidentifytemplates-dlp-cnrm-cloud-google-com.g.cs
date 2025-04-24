@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dlp.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes
+public partial class DLPDeidentifyTemplateMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -19,7 +25,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -36,7 +42,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -57,7 +63,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -65,7 +71,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -85,7 +91,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -94,7 +100,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -111,7 +117,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -132,7 +138,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -140,7 +146,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -160,7 +166,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -169,7 +175,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -186,7 +192,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -207,7 +213,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Required. Replacement value for this bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -215,7 +221,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -235,7 +241,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -244,33 +250,33 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
 {
     /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
     [JsonPropertyName("max")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax? Max { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax? Max { get; set; }
 
     /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
     [JsonPropertyName("min")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin? Min { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin? Min { get; set; }
 
     /// <summary>Required. Replacement value for this bucket.</summary>
     [JsonPropertyName("replacementValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
 }
 
 /// <summary>Bucketing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
 {
     /// <summary>Set of buckets. Ranges must be non-overlapping.</summary>
     [JsonPropertyName("buckets")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
 {
     /// <summary>Characters to not transform when masking.</summary>
     [JsonPropertyName("charactersToSkip")]
@@ -283,11 +289,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Mask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
 {
     /// <summary>When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.</summary>
     [JsonPropertyName("charactersToIgnore")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore>? CharactersToIgnore { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore>? CharactersToIgnore { get; set; }
 
     /// <summary>Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as a name, or `0` for a numeric string such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for digits.</summary>
     [JsonPropertyName("maskingCharacter")]
@@ -304,7 +310,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -313,7 +319,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -330,11 +336,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -343,7 +349,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -352,7 +358,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -361,24 +367,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -387,24 +393,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Deterministic Crypto</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
 {
     /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext? Context { get; set; }
 
     /// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey? CryptoKey { get; set; }
 
     /// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
     [JsonPropertyName("surrogateInfoType")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -421,11 +427,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -434,7 +440,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -443,7 +449,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -452,33 +458,33 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>The key used by the hash function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>Crypto</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
 {
     /// <summary>The key used by the hash function.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
 
 /// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -487,7 +493,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -504,11 +510,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -517,7 +523,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -526,7 +532,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -535,24 +541,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Required. The key used by the encryption algorithm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -561,7 +567,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Ffx-Fpe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
 {
     /// <summary>Common alphabets. Possible values: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED, NUMERIC, HEXADECIMAL, UPPER_CASE_ALPHA_NUMERIC, ALPHA_NUMERIC</summary>
     [JsonPropertyName("commonAlphabet")]
@@ -569,11 +575,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext? Context { get; set; }
 
     /// <summary>Required. The key used by the encryption algorithm.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey CryptoKey { get; set; }
 
     /// <summary>This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range [2, 95]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is: ``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&amp;*()_-+={[}]|:;"'&lt;,&gt;.?/``</summary>
     [JsonPropertyName("customAlphabet")]
@@ -585,12 +591,12 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
     [JsonPropertyName("surrogateInfoType")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -599,7 +605,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -616,11 +622,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -629,7 +635,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -638,7 +644,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -647,32 +653,32 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>Date Shift</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
 {
     /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext? Context { get; set; }
 
     /// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey? CryptoKey { get; set; }
 
     /// <summary>Required. For example, -5 means shift date to at most 5 days back in the past.</summary>
     [JsonPropertyName("lowerBoundDays")]
@@ -685,7 +691,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -702,7 +708,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -723,7 +729,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -731,7 +737,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -751,7 +757,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -760,7 +766,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -777,7 +783,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -798,7 +804,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -806,7 +812,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -826,7 +832,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -835,7 +841,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Fixed size bucketing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
 {
     /// <summary>Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.</summary>
     [JsonPropertyName("bucketSize")]
@@ -843,16 +849,16 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
     [JsonPropertyName("lowerBound")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound LowerBound { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound LowerBound { get; set; }
 
     /// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
     [JsonPropertyName("upperBound")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
 }
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -869,7 +875,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -890,7 +896,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Value to replace it with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -898,7 +904,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -918,7 +924,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -927,16 +933,16 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Replace with a specified value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
 {
     /// <summary>Value to replace it with.</summary>
     [JsonPropertyName("newValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
 
 /// <summary>Time extraction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
 {
     /// <summary>The part of the time to keep. Possible values: TIME_PART_UNSPECIFIED, YEAR, MONTH, DAY_OF_MONTH, DAY_OF_WEEK, WEEK_OF_YEAR, HOUR_OF_DAY</summary>
     [JsonPropertyName("partToExtract")]
@@ -945,35 +951,35 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
 /// <summary>Required. Primitive transformation to apply to the infoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation
 {
     /// <summary>Bucketing</summary>
     [JsonPropertyName("bucketingConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig? BucketingConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig? BucketingConfig { get; set; }
 
     /// <summary>Mask</summary>
     [JsonPropertyName("characterMaskConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig? CharacterMaskConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig? CharacterMaskConfig { get; set; }
 
     /// <summary>Deterministic Crypto</summary>
     [JsonPropertyName("cryptoDeterministicConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig? CryptoDeterministicConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig? CryptoDeterministicConfig { get; set; }
 
     /// <summary>Crypto</summary>
     [JsonPropertyName("cryptoHashConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig? CryptoHashConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig? CryptoHashConfig { get; set; }
 
     /// <summary>Ffx-Fpe</summary>
     [JsonPropertyName("cryptoReplaceFfxFpeConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig? CryptoReplaceFfxFpeConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig? CryptoReplaceFfxFpeConfig { get; set; }
 
     /// <summary>Date Shift</summary>
     [JsonPropertyName("dateShiftConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig? DateShiftConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig? DateShiftConfig { get; set; }
 
     /// <summary>Fixed size bucketing</summary>
     [JsonPropertyName("fixedSizeBucketingConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig? FixedSizeBucketingConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig? FixedSizeBucketingConfig { get; set; }
 
     /// <summary>Redact</summary>
     [JsonPropertyName("redactConfig")]
@@ -981,7 +987,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>Replace with a specified value.</summary>
     [JsonPropertyName("replaceConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig? ReplaceConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig? ReplaceConfig { get; set; }
 
     /// <summary>Replace with infotype</summary>
     [JsonPropertyName("replaceWithInfoTypeConfig")]
@@ -989,34 +995,34 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTra
 
     /// <summary>Time extraction</summary>
     [JsonPropertyName("timePartConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformations
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformations
 {
     /// <summary>InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.</summary>
     [JsonPropertyName("infoTypes")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes>? InfoTypes { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsInfoTypes>? InfoTypes { get; set; }
 
     /// <summary>Required. Primitive transformation to apply to the infoType.</summary>
     [JsonPropertyName("primitiveTransformation")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation PrimitiveTransformation { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformationsPrimitiveTransformation PrimitiveTransformation { get; set; }
 }
 
 /// <summary>Treat the dataset as free-form text and apply the same free text transformation everywhere.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformations
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformations
 {
     /// <summary>Required. Transformation for each infoType. Cannot specify more than one for a given infoType.</summary>
     [JsonPropertyName("transformations")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformations> Transformations { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformationsTransformations> Transformations { get; set; }
 }
 
 /// <summary>Required. Field within the record this condition is evaluated against.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -1025,7 +1031,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -1042,7 +1048,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -1063,7 +1069,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Value to compare against. [Mandatory, except for `EXISTS` tests.]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -1071,7 +1077,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -1091,7 +1097,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -1100,11 +1106,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions
 {
     /// <summary>Required. Field within the record this condition is evaluated against.</summary>
     [JsonPropertyName("field")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField Field { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsField Field { get; set; }
 
     /// <summary>Required. Operator used to compare the field or infoType to the value. Possible values: LOGICAL_OPERATOR_UNSPECIFIED, AND</summary>
     [JsonPropertyName("operator")]
@@ -1112,25 +1118,25 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Value to compare against. [Mandatory, except for `EXISTS` tests.]</summary>
     [JsonPropertyName("value")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue? Value { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
 
 /// <summary>Conditions to apply to the expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions
 {
     /// <summary>A collection of conditions.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions>? Conditions { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
 
 /// <summary>An expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions
 {
     /// <summary>Conditions to apply to the expression.</summary>
     [JsonPropertyName("conditions")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions? Conditions { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressionsConditions? Conditions { get; set; }
 
     /// <summary>The operator to apply to the result of conditions. Default and currently only supported value is `AND`. Possible values: LOGICAL_OPERATOR_UNSPECIFIED, AND</summary>
     [JsonPropertyName("logicalOperator")]
@@ -1139,16 +1145,16 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsCondition
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsCondition
 {
     /// <summary>An expression.</summary>
     [JsonPropertyName("expressions")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions? Expressions { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsConditionExpressions? Expressions { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsFields
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsFields
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -1157,7 +1163,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -1166,7 +1172,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -1183,7 +1189,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -1204,7 +1210,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -1212,7 +1218,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -1232,7 +1238,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -1241,7 +1247,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -1258,7 +1264,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -1279,7 +1285,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -1287,7 +1293,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -1307,7 +1313,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -1316,7 +1322,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -1333,7 +1339,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -1354,7 +1360,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. Replacement value for this bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -1362,7 +1368,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -1382,7 +1388,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -1391,33 +1397,33 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets
 {
     /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
     [JsonPropertyName("max")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax? Max { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMax? Max { get; set; }
 
     /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
     [JsonPropertyName("min")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin? Min { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsMin? Min { get; set; }
 
     /// <summary>Required. Replacement value for this bucket.</summary>
     [JsonPropertyName("replacementValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
 }
 
 /// <summary>Bucketing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig
 {
     /// <summary>Set of buckets. Ranges must be non-overlapping.</summary>
     [JsonPropertyName("buckets")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
 {
     /// <summary>Characters to not transform when masking.</summary>
     [JsonPropertyName("charactersToSkip")]
@@ -1430,11 +1436,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Mask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig
 {
     /// <summary>When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.</summary>
     [JsonPropertyName("charactersToIgnore")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore>? CharactersToIgnore { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore>? CharactersToIgnore { get; set; }
 
     /// <summary>Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as a name, or `0` for a numeric string such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for digits.</summary>
     [JsonPropertyName("maskingCharacter")]
@@ -1451,7 +1457,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -1460,7 +1466,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -1477,11 +1483,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -1490,7 +1496,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -1499,7 +1505,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -1508,24 +1514,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -1534,24 +1540,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Deterministic Crypto</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig
 {
     /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigContext? Context { get; set; }
 
     /// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey? CryptoKey { get; set; }
 
     /// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
     [JsonPropertyName("surrogateInfoType")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -1568,11 +1574,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -1581,7 +1587,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -1590,7 +1596,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -1599,33 +1605,33 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>The key used by the hash function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>Crypto</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig
 {
     /// <summary>The key used by the hash function.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
 
 /// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -1634,7 +1640,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -1651,11 +1657,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -1664,7 +1670,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -1673,7 +1679,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -1682,24 +1688,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. The key used by the encryption algorithm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -1708,7 +1714,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Ffx-Fpe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
 {
     /// <summary>Common alphabets. Possible values: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED, NUMERIC, HEXADECIMAL, UPPER_CASE_ALPHA_NUMERIC, ALPHA_NUMERIC</summary>
     [JsonPropertyName("commonAlphabet")]
@@ -1716,11 +1722,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext? Context { get; set; }
 
     /// <summary>Required. The key used by the encryption algorithm.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey CryptoKey { get; set; }
 
     /// <summary>This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range [2, 95]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is: ``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&amp;*()_-+={[}]|:;"'&lt;,&gt;.?/``</summary>
     [JsonPropertyName("customAlphabet")]
@@ -1732,12 +1738,12 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
     [JsonPropertyName("surrogateInfoType")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -1746,7 +1752,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -1763,11 +1769,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -1776,7 +1782,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -1785,7 +1791,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -1794,32 +1800,32 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>Date Shift</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig
 {
     /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigContext? Context { get; set; }
 
     /// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfigCryptoKey? CryptoKey { get; set; }
 
     /// <summary>Required. For example, -5 means shift date to at most 5 days back in the past.</summary>
     [JsonPropertyName("lowerBoundDays")]
@@ -1832,7 +1838,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -1849,7 +1855,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -1870,7 +1876,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -1878,7 +1884,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -1898,7 +1904,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -1907,7 +1913,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -1924,7 +1930,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -1945,7 +1951,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -1953,7 +1959,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -1973,7 +1979,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -1982,7 +1988,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Fixed size bucketing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig
 {
     /// <summary>Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.</summary>
     [JsonPropertyName("bucketSize")]
@@ -1990,16 +1996,16 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
     [JsonPropertyName("lowerBound")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound LowerBound { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound LowerBound { get; set; }
 
     /// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
     [JsonPropertyName("upperBound")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
 }
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -2016,7 +2022,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -2037,7 +2043,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Value to replace it with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -2045,7 +2051,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -2065,7 +2071,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -2074,16 +2080,16 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Replace with a specified value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig
 {
     /// <summary>Value to replace it with.</summary>
     [JsonPropertyName("newValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
 
 /// <summary>Time extraction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig
 {
     /// <summary>The part of the time to keep. Possible values: TIME_PART_UNSPECIFIED, YEAR, MONTH, DAY_OF_MONTH, DAY_OF_WEEK, WEEK_OF_YEAR, HOUR_OF_DAY</summary>
     [JsonPropertyName("partToExtract")]
@@ -2092,35 +2098,35 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. Primitive transformation to apply to the infoType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation
 {
     /// <summary>Bucketing</summary>
     [JsonPropertyName("bucketingConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig? BucketingConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationBucketingConfig? BucketingConfig { get; set; }
 
     /// <summary>Mask</summary>
     [JsonPropertyName("characterMaskConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig? CharacterMaskConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCharacterMaskConfig? CharacterMaskConfig { get; set; }
 
     /// <summary>Deterministic Crypto</summary>
     [JsonPropertyName("cryptoDeterministicConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig? CryptoDeterministicConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoDeterministicConfig? CryptoDeterministicConfig { get; set; }
 
     /// <summary>Crypto</summary>
     [JsonPropertyName("cryptoHashConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig? CryptoHashConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoHashConfig? CryptoHashConfig { get; set; }
 
     /// <summary>Ffx-Fpe</summary>
     [JsonPropertyName("cryptoReplaceFfxFpeConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig? CryptoReplaceFfxFpeConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig? CryptoReplaceFfxFpeConfig { get; set; }
 
     /// <summary>Date Shift</summary>
     [JsonPropertyName("dateShiftConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig? DateShiftConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationDateShiftConfig? DateShiftConfig { get; set; }
 
     /// <summary>Fixed size bucketing</summary>
     [JsonPropertyName("fixedSizeBucketingConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig? FixedSizeBucketingConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationFixedSizeBucketingConfig? FixedSizeBucketingConfig { get; set; }
 
     /// <summary>Redact</summary>
     [JsonPropertyName("redactConfig")]
@@ -2128,7 +2134,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Replace with a specified value.</summary>
     [JsonPropertyName("replaceConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig? ReplaceConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationReplaceConfig? ReplaceConfig { get; set; }
 
     /// <summary>Replace with infotype</summary>
     [JsonPropertyName("replaceWithInfoTypeConfig")]
@@ -2136,34 +2142,34 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Time extraction</summary>
     [JsonPropertyName("timePartConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations
 {
     /// <summary>InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.</summary>
     [JsonPropertyName("infoTypes")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes>? InfoTypes { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsInfoTypes>? InfoTypes { get; set; }
 
     /// <summary>Required. Primitive transformation to apply to the infoType.</summary>
     [JsonPropertyName("primitiveTransformation")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation PrimitiveTransformation { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformationsPrimitiveTransformation PrimitiveTransformation { get; set; }
 }
 
 /// <summary>Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations
 {
     /// <summary>Required. Transformation for each infoType. Cannot specify more than one for a given infoType.</summary>
     [JsonPropertyName("transformations")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations> Transformations { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformationsTransformations> Transformations { get; set; }
 }
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -2180,7 +2186,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -2201,7 +2207,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -2209,7 +2215,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -2229,7 +2235,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMaxTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -2238,7 +2244,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -2255,7 +2261,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -2276,7 +2282,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -2284,7 +2290,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -2304,7 +2310,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMinTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -2313,7 +2319,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -2330,7 +2336,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -2351,7 +2357,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. Replacement value for this bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -2359,7 +2365,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -2379,7 +2385,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -2388,33 +2394,33 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets
 {
     /// <summary>Upper bound of the range, exclusive; type must match min.</summary>
     [JsonPropertyName("max")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax? Max { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMax? Max { get; set; }
 
     /// <summary>Lower bound of the range, inclusive. Type should be the same as max if used.</summary>
     [JsonPropertyName("min")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin? Min { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsMin? Min { get; set; }
 
     /// <summary>Required. Replacement value for this bucket.</summary>
     [JsonPropertyName("replacementValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBucketsReplacementValue ReplacementValue { get; set; }
 }
 
 /// <summary>Bucketing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig
 {
     /// <summary>Set of buckets. Ranges must be non-overlapping.</summary>
     [JsonPropertyName("buckets")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfigBuckets>? Buckets { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore
 {
     /// <summary>Characters to not transform when masking.</summary>
     [JsonPropertyName("charactersToSkip")]
@@ -2427,11 +2433,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Mask</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig
 {
     /// <summary>When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.</summary>
     [JsonPropertyName("charactersToIgnore")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore>? CharactersToIgnore { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfigCharactersToIgnore>? CharactersToIgnore { get; set; }
 
     /// <summary>Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as a name, or `0` for a numeric string such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for digits.</summary>
     [JsonPropertyName("maskingCharacter")]
@@ -2448,7 +2454,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -2457,7 +2463,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -2474,11 +2480,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -2487,7 +2493,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -2496,7 +2502,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -2505,24 +2511,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -2531,24 +2537,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Deterministic Crypto</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig
 {
     /// <summary>A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigContext? Context { get; set; }
 
     /// <summary>The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigCryptoKey? CryptoKey { get; set; }
 
     /// <summary>The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate} For example, if the name of custom info type is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom info type 'Surrogate'. This facilitates reversal of the surrogate when it occurs in free text. Note: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text. In order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either - reverse a surrogate that does not correspond to an actual identifier - be unable to parse the surrogate and result in an error Therefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE.</summary>
     [JsonPropertyName("surrogateInfoType")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -2565,11 +2571,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -2578,7 +2584,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -2587,7 +2593,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -2596,33 +2602,33 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>The key used by the hash function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>Crypto</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig
 {
     /// <summary>The key used by the hash function.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfigCryptoKey? CryptoKey { get; set; }
 }
 
 /// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -2631,7 +2637,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -2648,11 +2654,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -2661,7 +2667,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -2670,7 +2676,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -2679,24 +2685,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. The key used by the encryption algorithm.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType
 {
     /// <summary>Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.</summary>
     [JsonPropertyName("name")]
@@ -2705,7 +2711,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Ffx-Fpe</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig
 {
     /// <summary>Common alphabets. Possible values: FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED, NUMERIC, HEXADECIMAL, UPPER_CASE_ALPHA_NUMERIC, ALPHA_NUMERIC</summary>
     [JsonPropertyName("commonAlphabet")]
@@ -2713,11 +2719,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used. If the context is set but: 1. there is no record present when transforming a given value or 1. the field is not present when transforming a given value, a default tweak will be used. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string. The tweak is constructed as a sequence of bytes in big endian byte order such that: - a 64 bit integer is encoded followed by a single byte of value 1 - a string is encoded in UTF-8 format followed by a single byte of value 2</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigContext? Context { get; set; }
 
     /// <summary>Required. The key used by the encryption algorithm.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey CryptoKey { get; set; }
 
     /// <summary>This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range [2, 95]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is: ``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&amp;*()_-+={[}]|:;"'&lt;,&gt;.?/``</summary>
     [JsonPropertyName("customAlphabet")]
@@ -2729,12 +2735,12 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text. In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE</summary>
     [JsonPropertyName("surrogateInfoType")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType? SurrogateInfoType { get; set; }
 }
 
 /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -2743,7 +2749,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef
 {
     /// <summary>Required. The resource name of the KMS CryptoKey to use for unwrapping.  Allowed value: The Google Cloud resource name of a `KMSCryptoKey` resource (format: `{{selfLink}}`).</summary>
     [JsonPropertyName("external")]
@@ -2760,11 +2766,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Key wrapped using Cloud KMS</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped
 {
     /// <summary></summary>
     [JsonPropertyName("cryptoKeyRef")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrappedCryptoKeyRef CryptoKeyRef { get; set; }
 
     /// <summary>Required. The wrapped data crypto key.</summary>
     [JsonPropertyName("wrappedKey")]
@@ -2773,7 +2779,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Transient crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient
 {
     /// <summary>Required. Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate `TransientCryptoKey` protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).</summary>
     [JsonPropertyName("name")]
@@ -2782,7 +2788,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Unwrapped crypto key</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped
 {
     /// <summary>Required. A 128/192/256 bit key.</summary>
     [JsonPropertyName("key")]
@@ -2791,32 +2797,32 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey
 {
     /// <summary>Key wrapped using Cloud KMS</summary>
     [JsonPropertyName("kmsWrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyKmsWrapped? KmsWrapped { get; set; }
 
     /// <summary>Transient crypto key</summary>
     [JsonPropertyName("transient")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient? Transient { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyTransient? Transient { get; set; }
 
     /// <summary>Unwrapped crypto key</summary>
     [JsonPropertyName("unwrapped")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKeyUnwrapped? Unwrapped { get; set; }
 }
 
 /// <summary>Date Shift</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig
 {
     /// <summary>Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.</summary>
     [JsonPropertyName("context")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext? Context { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigContext? Context { get; set; }
 
     /// <summary>Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and crypto_key. If set, must also set context. Can only be applied to table items.</summary>
     [JsonPropertyName("cryptoKey")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey? CryptoKey { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfigCryptoKey? CryptoKey { get; set; }
 
     /// <summary>Required. For example, -5 means shift date to at most 5 days back in the past.</summary>
     [JsonPropertyName("lowerBoundDays")]
@@ -2829,7 +2835,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -2846,7 +2852,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -2867,7 +2873,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -2875,7 +2881,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -2895,7 +2901,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBoundTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -2904,7 +2910,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -2921,7 +2927,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -2942,7 +2948,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -2950,7 +2956,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -2970,7 +2976,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBoundTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -2979,7 +2985,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Fixed size bucketing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig
 {
     /// <summary>Required. Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.</summary>
     [JsonPropertyName("bucketSize")]
@@ -2987,16 +2993,16 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Required. Lower bound value of buckets. All values less than `lower_bound` are grouped together into a single bucket; for example if `lower_bound` = 10, then all values less than 10 are replaced with the value "-10".</summary>
     [JsonPropertyName("lowerBound")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound LowerBound { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigLowerBound LowerBound { get; set; }
 
     /// <summary>Required. Upper bound value of buckets. All values greater than upper_bound are grouped together into a single bucket; for example if `upper_bound` = 89, then all values greater than 89 are replaced with the value "89+".</summary>
     [JsonPropertyName("upperBound")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfigUpperBound UpperBound { get; set; }
 }
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -3013,7 +3019,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -3034,7 +3040,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Value to replace it with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -3042,7 +3048,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -3062,7 +3068,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -3071,16 +3077,16 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Replace with a specified value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig
 {
     /// <summary>Value to replace it with.</summary>
     [JsonPropertyName("newValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfigNewValue? NewValue { get; set; }
 }
 
 /// <summary>Time extraction</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig
 {
     /// <summary>The part of the time to keep. Possible values: TIME_PART_UNSPECIFIED, YEAR, MONTH, DAY_OF_MONTH, DAY_OF_WEEK, WEEK_OF_YEAR, HOUR_OF_DAY</summary>
     [JsonPropertyName("partToExtract")]
@@ -3089,35 +3095,35 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Apply the transformation to the entire field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation
 {
     /// <summary>Bucketing</summary>
     [JsonPropertyName("bucketingConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig? BucketingConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationBucketingConfig? BucketingConfig { get; set; }
 
     /// <summary>Mask</summary>
     [JsonPropertyName("characterMaskConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig? CharacterMaskConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCharacterMaskConfig? CharacterMaskConfig { get; set; }
 
     /// <summary>Deterministic Crypto</summary>
     [JsonPropertyName("cryptoDeterministicConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig? CryptoDeterministicConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoDeterministicConfig? CryptoDeterministicConfig { get; set; }
 
     /// <summary>Crypto</summary>
     [JsonPropertyName("cryptoHashConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig? CryptoHashConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoHashConfig? CryptoHashConfig { get; set; }
 
     /// <summary>Ffx-Fpe</summary>
     [JsonPropertyName("cryptoReplaceFfxFpeConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig? CryptoReplaceFfxFpeConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationCryptoReplaceFfxFpeConfig? CryptoReplaceFfxFpeConfig { get; set; }
 
     /// <summary>Date Shift</summary>
     [JsonPropertyName("dateShiftConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig? DateShiftConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationDateShiftConfig? DateShiftConfig { get; set; }
 
     /// <summary>Fixed size bucketing</summary>
     [JsonPropertyName("fixedSizeBucketingConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig? FixedSizeBucketingConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationFixedSizeBucketingConfig? FixedSizeBucketingConfig { get; set; }
 
     /// <summary>Redact</summary>
     [JsonPropertyName("redactConfig")]
@@ -3125,7 +3131,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Replace with a specified value.</summary>
     [JsonPropertyName("replaceConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig? ReplaceConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationReplaceConfig? ReplaceConfig { get; set; }
 
     /// <summary>Replace with infotype</summary>
     [JsonPropertyName("replaceWithInfoTypeConfig")]
@@ -3133,33 +3139,33 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Time extraction</summary>
     [JsonPropertyName("timePartConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformationTimePartConfig? TimePartConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformations
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformations
 {
     /// <summary>Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.</summary>
     [JsonPropertyName("condition")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsCondition? Condition { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsCondition? Condition { get; set; }
 
     /// <summary>Required. Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".</summary>
     [JsonPropertyName("fields")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsFields> Fields { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsFields> Fields { get; set; }
 
     /// <summary>Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.</summary>
     [JsonPropertyName("infoTypeTransformations")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations? InfoTypeTransformations { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsInfoTypeTransformations? InfoTypeTransformations { get; set; }
 
     /// <summary>Apply the transformation to the entire field.</summary>
     [JsonPropertyName("primitiveTransformation")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformationsPrimitiveTransformation? PrimitiveTransformation { get; set; }
 }
 
 /// <summary>Required. Field within the record this condition is evaluated against.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField
 {
     /// <summary>Name describing the field.</summary>
     [JsonPropertyName("name")]
@@ -3168,7 +3174,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>date</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue
 {
     /// <summary>Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -3185,7 +3191,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>time of day</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -3206,7 +3212,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>Value to compare against. [Mandatory, except for `EXISTS` tests.]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue
 {
     /// <summary>boolean</summary>
     [JsonPropertyName("booleanValue")]
@@ -3214,7 +3220,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>date</summary>
     [JsonPropertyName("dateValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue? DateValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueDateValue? DateValue { get; set; }
 
     /// <summary>day of week Possible values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY</summary>
     [JsonPropertyName("dayOfWeekValue")]
@@ -3234,7 +3240,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>time of day</summary>
     [JsonPropertyName("timeValue")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue? TimeValue { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValueTimeValue? TimeValue { get; set; }
 
     /// <summary>timestamp</summary>
     [JsonPropertyName("timestampValue")]
@@ -3243,11 +3249,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions
 {
     /// <summary>Required. Field within the record this condition is evaluated against.</summary>
     [JsonPropertyName("field")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField Field { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsField Field { get; set; }
 
     /// <summary>Required. Operator used to compare the field or infoType to the value. Possible values: LOGICAL_OPERATOR_UNSPECIFIED, AND</summary>
     [JsonPropertyName("operator")]
@@ -3255,25 +3261,25 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
     /// <summary>Value to compare against. [Mandatory, except for `EXISTS` tests.]</summary>
     [JsonPropertyName("value")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue? Value { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditionsValue? Value { get; set; }
 }
 
 /// <summary>Conditions to apply to the expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions
 {
     /// <summary>A collection of conditions.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions>? Conditions { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditionsConditions>? Conditions { get; set; }
 }
 
 /// <summary>An expression.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions
 {
     /// <summary>Conditions to apply to the expression.</summary>
     [JsonPropertyName("conditions")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions? Conditions { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressionsConditions? Conditions { get; set; }
 
     /// <summary>The operator to apply to the result of conditions. Default and currently only supported value is `AND`. Possible values: LOGICAL_OPERATOR_UNSPECIFIED, AND</summary>
     [JsonPropertyName("logicalOperator")]
@@ -3282,38 +3288,38 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTrans
 
 /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsCondition
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsCondition
 {
     /// <summary>An expression.</summary>
     [JsonPropertyName("expressions")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions? Expressions { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsConditionExpressions? Expressions { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressions
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressions
 {
     /// <summary>A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.</summary>
     [JsonPropertyName("condition")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsCondition? Condition { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressionsCondition? Condition { get; set; }
 }
 
 /// <summary>Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformations
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformations
 {
     /// <summary>Transform the record by applying various field transformations.</summary>
     [JsonPropertyName("fieldTransformations")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformations>? FieldTransformations { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsFieldTransformations>? FieldTransformations { get; set; }
 
     /// <summary>Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.</summary>
     [JsonPropertyName("recordSuppressions")]
-    public IList<V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressions>? RecordSuppressions { get; set; }
+    public IList<DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformationsRecordSuppressions>? RecordSuppressions { get; set; }
 }
 
 /// <summary>Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigTransformationErrorHandling
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfigTransformationErrorHandling
 {
     /// <summary>Ignore errors</summary>
     [JsonPropertyName("leaveUntransformed")]
@@ -3326,24 +3332,24 @@ public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigTransformat
 
 /// <summary>The core content of the template.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecDeidentifyConfig
+public partial class DLPDeidentifyTemplateSpecDeidentifyConfig
 {
     /// <summary>Treat the dataset as free-form text and apply the same free text transformation everywhere.</summary>
     [JsonPropertyName("infoTypeTransformations")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformations? InfoTypeTransformations { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigInfoTypeTransformations? InfoTypeTransformations { get; set; }
 
     /// <summary>Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.</summary>
     [JsonPropertyName("recordTransformations")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformations? RecordTransformations { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigRecordTransformations? RecordTransformations { get; set; }
 
     /// <summary>Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.</summary>
     [JsonPropertyName("transformationErrorHandling")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfigTransformationErrorHandling? TransformationErrorHandling { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfigTransformationErrorHandling? TransformationErrorHandling { get; set; }
 }
 
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecOrganizationRef
+public partial class DLPDeidentifyTemplateSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -3360,7 +3366,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpecOrganizationRef
 
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpecProjectRef
+public partial class DLPDeidentifyTemplateSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -3377,11 +3383,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateSpec
+public partial class DLPDeidentifyTemplateSpec
 {
     /// <summary>The core content of the template.</summary>
     [JsonPropertyName("deidentifyConfig")]
-    public V1beta1DLPDeidentifyTemplateSpecDeidentifyConfig? DeidentifyConfig { get; set; }
+    public DLPDeidentifyTemplateSpecDeidentifyConfig? DeidentifyConfig { get; set; }
 
     /// <summary>Short description (max 256 chars).</summary>
     [JsonPropertyName("description")]
@@ -3397,11 +3403,11 @@ public partial class V1beta1DLPDeidentifyTemplateSpec
 
     /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
     [JsonPropertyName("organizationRef")]
-    public V1beta1DLPDeidentifyTemplateSpecOrganizationRef? OrganizationRef { get; set; }
+    public DLPDeidentifyTemplateSpecOrganizationRef? OrganizationRef { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to. Only one of [organizationRef, projectRef] may be specified.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DLPDeidentifyTemplateSpecProjectRef? ProjectRef { get; set; }
+    public DLPDeidentifyTemplateSpecProjectRef? ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -3410,7 +3416,7 @@ public partial class V1beta1DLPDeidentifyTemplateSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateStatusConditions
+public partial class DLPDeidentifyTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -3435,11 +3441,11 @@ public partial class V1beta1DLPDeidentifyTemplateStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DLPDeidentifyTemplateStatus
+public partial class DLPDeidentifyTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DLPDeidentifyTemplateStatusConditions>? Conditions { get; set; }
+    public IList<DLPDeidentifyTemplateStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The creation timestamp of an inspectTemplate.</summary>
     [JsonPropertyName("createTime")]
@@ -3460,30 +3466,25 @@ public partial class V1beta1DLPDeidentifyTemplateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DLPDeidentifyTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DLPDeidentifyTemplateSpec>, IStatus<V1beta1DLPDeidentifyTemplateStatus>
+public partial class DLPDeidentifyTemplate
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DLPDeidentifyTemplate";
-    public const string KubeGroup = "dlp.cnrm.cloud.google.com";
-    public const string KubePluralName = "dlpdeidentifytemplates";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DLPDeidentifyTemplateMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1DLPDeidentifyTemplateSpec? Spec { get; set; }
+    public DLPDeidentifyTemplateSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1DLPDeidentifyTemplateStatus? Status { get; set; }
+    public DLPDeidentifyTemplateStatus? Status { get; set; }
 }

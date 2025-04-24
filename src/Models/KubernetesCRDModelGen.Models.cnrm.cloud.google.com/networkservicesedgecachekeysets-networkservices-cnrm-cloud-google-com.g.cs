@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class NetworkServicesEdgeCacheKeysetMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecProjectRef
+public partial class NetworkServicesEdgeCacheKeysetSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecProjectRef
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFromSecretKeyRef
+public partial class NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -40,16 +46,16 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueVal
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFrom
+public partial class NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes). Representations or encodings of the public key other than this will be rejected with an error.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValue
+public partial class NetworkServicesEdgeCacheKeysetSpecPublicKeyValue
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -57,12 +63,12 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValue
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFrom? ValueFrom { get; set; }
+    public NetworkServicesEdgeCacheKeysetSpecPublicKeyValueValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKey
+public partial class NetworkServicesEdgeCacheKeysetSpecPublicKey
 {
     /// <summary>The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035. The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.</summary>
     [JsonPropertyName("id")]
@@ -74,12 +80,12 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKey
 
     /// <summary>The base64-encoded value of the Ed25519 public key. The base64 encoding can be padded (44 bytes) or unpadded (43 bytes). Representations or encodings of the public key other than this will be rejected with an error.</summary>
     [JsonPropertyName("value")]
-    public V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKeyValue? Value { get; set; }
+    public NetworkServicesEdgeCacheKeysetSpecPublicKeyValue? Value { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecValidationSharedKeys
+public partial class NetworkServicesEdgeCacheKeysetSpecValidationSharedKeys
 {
     /// <summary>The name of the secret version in Secret Manager.  The resource name of the secret version must be in the format 'projects/*/secrets/*/versions/*' where the '*' values are replaced by the secrets themselves. The secrets must be at least 16 bytes large.  The recommended secret size depends on the signature algorithm you are using. * If you are using HMAC-SHA1, we suggest 20-byte secrets. * If you are using HMAC-SHA256, we suggest 32-byte secrets. See RFC 2104, Section 3 for more details on these recommendations.</summary>
     [JsonPropertyName("secretVersion")]
@@ -88,7 +94,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpecValidationSharedK
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpec
+public partial class NetworkServicesEdgeCacheKeysetSpec
 {
     /// <summary>A human-readable description of the resource.</summary>
     [JsonPropertyName("description")]
@@ -96,11 +102,11 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1NetworkServicesEdgeCacheKeysetSpecProjectRef ProjectRef { get; set; }
+    public NetworkServicesEdgeCacheKeysetSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>An ordered list of Ed25519 public keys to use for validating signed requests. You must specify 'public_keys' or 'validation_shared_keys' (or both). The keys in 'public_keys' are checked first. You may specify no more than one Google-managed public key. If you specify 'public_keys', you must specify at least one (1) key and may specify up to three (3) keys.  Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key. Ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset.</summary>
     [JsonPropertyName("publicKey")]
-    public IList<V1alpha1NetworkServicesEdgeCacheKeysetSpecPublicKey>? PublicKey { get; set; }
+    public IList<NetworkServicesEdgeCacheKeysetSpecPublicKey>? PublicKey { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -108,12 +114,12 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetSpec
 
     /// <summary>An ordered list of shared keys to use for validating signed requests. Shared keys are secret.  Ensure that only authorized users can add 'validation_shared_keys' to a keyset. You can rotate keys by appending (pushing) a new key to the list of 'validation_shared_keys' and removing any superseded keys. You must specify 'public_keys' or 'validation_shared_keys' (or both). The keys in 'public_keys' are checked first.</summary>
     [JsonPropertyName("validationSharedKeys")]
-    public IList<V1alpha1NetworkServicesEdgeCacheKeysetSpecValidationSharedKeys>? ValidationSharedKeys { get; set; }
+    public IList<NetworkServicesEdgeCacheKeysetSpecValidationSharedKeys>? ValidationSharedKeys { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatusConditions
+public partial class NetworkServicesEdgeCacheKeysetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -138,11 +144,11 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatus
+public partial class NetworkServicesEdgeCacheKeysetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1NetworkServicesEdgeCacheKeysetStatusConditions>? Conditions { get; set; }
+    public IList<NetworkServicesEdgeCacheKeysetStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -151,30 +157,25 @@ public partial class V1alpha1NetworkServicesEdgeCacheKeysetStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1NetworkServicesEdgeCacheKeyset : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NetworkServicesEdgeCacheKeysetSpec>, IStatus<V1alpha1NetworkServicesEdgeCacheKeysetStatus>
+public partial class NetworkServicesEdgeCacheKeyset
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "NetworkServicesEdgeCacheKeyset";
-    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkservicesedgecachekeysets";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public NetworkServicesEdgeCacheKeysetMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1NetworkServicesEdgeCacheKeysetSpec Spec { get; set; }
+    public NetworkServicesEdgeCacheKeysetSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1NetworkServicesEdgeCacheKeysetStatus? Status { get; set; }
+    public NetworkServicesEdgeCacheKeysetStatus? Status { get; set; }
 }

@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpecs
+public partial class DataCatalogEntryMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpecs
 {
     /// <summary>The full file path.</summary>
     [JsonPropertyName("filePath")]
@@ -23,7 +29,7 @@ public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpec
 
 /// <summary>Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
+public partial class DataCatalogEntrySpecGcsFilesetSpec
 {
     /// <summary>Patterns to identify a set of files in Google Cloud Storage. See [Cloud Storage documentation](https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames) for more information. Note that bucket wildcards are currently not supported. Examples of valid filePatterns:  * gs://bucket_name/dir/*: matches all files within bucket_name/dir directory. * gs://bucket_name/dir/**: matches all files in bucket_name/dir spanning all subdirectories. * gs://bucket_name/file*: matches files prefixed by file in bucket_name * gs://bucket_name/??.txt: matches files with two characters followed by .txt in bucket_name * gs://bucket_name/[aeiou].txt: matches files that contain a single vowel character followed by .txt in bucket_name * gs://bucket_name/[a-m].txt: matches files that contain a, b, ... or m followed by .txt in bucket_name * gs://bucket_name/a/*/b: matches all files in bucket_name that match a/*/b pattern, such as a/c/b, a/d/b * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt.</summary>
     [JsonPropertyName("filePatterns")]
@@ -31,12 +37,12 @@ public partial class V1alpha1DataCatalogEntrySpecGcsFilesetSpec
 
     /// <summary>Sample files contained in this fileset, not all files contained in this fileset are represented here.</summary>
     [JsonPropertyName("sampleGcsFileSpecs")]
-    public IList<V1alpha1DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpecs>? SampleGcsFileSpecs { get; set; }
+    public IList<DataCatalogEntrySpecGcsFilesetSpecSampleGcsFileSpecs>? SampleGcsFileSpecs { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntrySpec
+public partial class DataCatalogEntrySpec
 {
     /// <summary>Entry description, which can consist of several sentences or paragraphs that describe entry contents.</summary>
     [JsonPropertyName("description")]
@@ -56,7 +62,7 @@ public partial class V1alpha1DataCatalogEntrySpec
 
     /// <summary>Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.</summary>
     [JsonPropertyName("gcsFilesetSpec")]
-    public V1alpha1DataCatalogEntrySpecGcsFilesetSpec? GcsFilesetSpec { get; set; }
+    public DataCatalogEntrySpecGcsFilesetSpec? GcsFilesetSpec { get; set; }
 
     /// <summary>The resource this metadata entry refers to. For Google Cloud Platform resources, linkedResource is the full name of the resource. For example, the linkedResource for a table resource from BigQuery is: //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with userSpecifiedType, this field is optional and defaults to an empty string.</summary>
     [JsonPropertyName("linkedResource")]
@@ -85,7 +91,7 @@ public partial class V1alpha1DataCatalogEntrySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntryStatusBigqueryDateShardedSpec
+public partial class DataCatalogEntryStatusBigqueryDateShardedSpec
 {
     /// <summary>The Data Catalog resource name of the dataset entry the current table belongs to, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}.</summary>
     [JsonPropertyName("dataset")]
@@ -102,7 +108,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryDateShardedSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecTableSpec
+public partial class DataCatalogEntryStatusBigqueryTableSpecTableSpec
 {
     /// <summary>If the table is a dated shard, i.e., with name pattern [prefix]YYYYMMDD, groupedEntry is the Data Catalog resource name of the date sharded grouped entry, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}. Otherwise, groupedEntry is empty.</summary>
     [JsonPropertyName("groupedEntry")]
@@ -111,7 +117,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecTableSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec
+public partial class DataCatalogEntryStatusBigqueryTableSpecViewSpec
 {
     /// <summary>The query that defines the table view.</summary>
     [JsonPropertyName("viewQuery")]
@@ -120,7 +126,7 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpec
+public partial class DataCatalogEntryStatusBigqueryTableSpec
 {
     /// <summary>The table source type.</summary>
     [JsonPropertyName("tableSourceType")]
@@ -128,16 +134,16 @@ public partial class V1alpha1DataCatalogEntryStatusBigqueryTableSpec
 
     /// <summary>Spec of a BigQuery table. This field should only be populated if tableSourceType is BIGQUERY_TABLE.</summary>
     [JsonPropertyName("tableSpec")]
-    public IList<V1alpha1DataCatalogEntryStatusBigqueryTableSpecTableSpec>? TableSpec { get; set; }
+    public IList<DataCatalogEntryStatusBigqueryTableSpecTableSpec>? TableSpec { get; set; }
 
     /// <summary>Table view specification. This field should only be populated if tableSourceType is BIGQUERY_VIEW.</summary>
     [JsonPropertyName("viewSpec")]
-    public IList<V1alpha1DataCatalogEntryStatusBigqueryTableSpecViewSpec>? ViewSpec { get; set; }
+    public IList<DataCatalogEntryStatusBigqueryTableSpecViewSpec>? ViewSpec { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntryStatusConditions
+public partial class DataCatalogEntryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -162,19 +168,19 @@ public partial class V1alpha1DataCatalogEntryStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogEntryStatus
+public partial class DataCatalogEntryStatus
 {
     /// <summary>Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.</summary>
     [JsonPropertyName("bigqueryDateShardedSpec")]
-    public IList<V1alpha1DataCatalogEntryStatusBigqueryDateShardedSpec>? BigqueryDateShardedSpec { get; set; }
+    public IList<DataCatalogEntryStatusBigqueryDateShardedSpec>? BigqueryDateShardedSpec { get; set; }
 
     /// <summary>Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.</summary>
     [JsonPropertyName("bigqueryTableSpec")]
-    public IList<V1alpha1DataCatalogEntryStatusBigqueryTableSpec>? BigqueryTableSpec { get; set; }
+    public IList<DataCatalogEntryStatusBigqueryTableSpec>? BigqueryTableSpec { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DataCatalogEntryStatusConditions>? Conditions { get; set; }
+    public IList<DataCatalogEntryStatusConditions>? Conditions { get; set; }
 
     /// <summary>This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.</summary>
     [JsonPropertyName("integratedSystem")]
@@ -191,30 +197,25 @@ public partial class V1alpha1DataCatalogEntryStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataCatalogEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogEntrySpec>, IStatus<V1alpha1DataCatalogEntryStatus>
+public partial class DataCatalogEntry
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataCatalogEntry";
-    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
-    public const string KubePluralName = "datacatalogentries";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DataCatalogEntryMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DataCatalogEntrySpec Spec { get; set; }
+    public DataCatalogEntrySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DataCatalogEntryStatus? Status { get; set; }
+    public DataCatalogEntryStatus? Status { get; set; }
 }

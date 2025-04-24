@@ -678,3 +678,29 @@ public partial class V1beta1SnapshotPolicy : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1SnapshotPolicyStatus? Status { get; set; }
 }
+
+/// <summary>SnapshotPolicy is the Schema for the SnapshotPolicys API. Manages a NetApp Snapshot Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SnapshotPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SnapshotPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SnapshotPolicyList";
+    public const string KubeGroup = "netapp.azure.upbound.io";
+    public const string KubePluralName = "snapshotpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SnapshotPolicy> Items { get; set; }
+}

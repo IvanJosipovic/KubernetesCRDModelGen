@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sourcerepo.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class SourceRepoRepositoryMetadata
+{
+}
+
 /// <summary>Service account used for publishing Cloud Pub/Sub messages. This service account needs to be in the same project as the pubsubConfig. When added, the caller needs to have iam.serviceAccounts.actAs permission on this service account. If unspecified, it defaults to the compute engine default service account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsServiceAccountRef
+public partial class SourceRepoRepositorySpecPubsubConfigsServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsServiceAccountR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef
+public partial class SourceRepoRepositorySpecPubsubConfigsTopicRef
 {
     /// <summary>Allowed value: The `name` field of a `PubSubTopic` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SourceRepoRepositorySpecPubsubConfigs
+public partial class SourceRepoRepositorySpecPubsubConfigs
 {
     /// <summary>The format of the Cloud Pub/Sub messages. - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent. - JSON: The message payload is a JSON string of SourceRepoEvent. Possible values: ["PROTOBUF", "JSON"].</summary>
     [JsonPropertyName("messageFormat")]
@@ -52,20 +58,20 @@ public partial class V1beta1SourceRepoRepositorySpecPubsubConfigs
 
     /// <summary>Service account used for publishing Cloud Pub/Sub messages. This service account needs to be in the same project as the pubsubConfig. When added, the caller needs to have iam.serviceAccounts.actAs permission on this service account. If unspecified, it defaults to the compute engine default service account.</summary>
     [JsonPropertyName("serviceAccountRef")]
-    public V1beta1SourceRepoRepositorySpecPubsubConfigsServiceAccountRef? ServiceAccountRef { get; set; }
+    public SourceRepoRepositorySpecPubsubConfigsServiceAccountRef? ServiceAccountRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("topicRef")]
-    public V1beta1SourceRepoRepositorySpecPubsubConfigsTopicRef TopicRef { get; set; }
+    public SourceRepoRepositorySpecPubsubConfigsTopicRef TopicRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SourceRepoRepositorySpec
+public partial class SourceRepoRepositorySpec
 {
     /// <summary>How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.</summary>
     [JsonPropertyName("pubsubConfigs")]
-    public IList<V1beta1SourceRepoRepositorySpecPubsubConfigs>? PubsubConfigs { get; set; }
+    public IList<SourceRepoRepositorySpecPubsubConfigs>? PubsubConfigs { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -74,7 +80,7 @@ public partial class V1beta1SourceRepoRepositorySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SourceRepoRepositoryStatusConditions
+public partial class SourceRepoRepositoryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -99,11 +105,11 @@ public partial class V1beta1SourceRepoRepositoryStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SourceRepoRepositoryStatus
+public partial class SourceRepoRepositoryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1SourceRepoRepositoryStatusConditions>? Conditions { get; set; }
+    public IList<SourceRepoRepositoryStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -120,30 +126,25 @@ public partial class V1beta1SourceRepoRepositoryStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SourceRepoRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SourceRepoRepositorySpec>, IStatus<V1beta1SourceRepoRepositoryStatus>
+public partial class SourceRepoRepository
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SourceRepoRepository";
-    public const string KubeGroup = "sourcerepo.cnrm.cloud.google.com";
-    public const string KubePluralName = "sourcereporepositories";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public SourceRepoRepositoryMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1SourceRepoRepositorySpec? Spec { get; set; }
+    public SourceRepoRepositorySpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1SourceRepoRepositoryStatus? Status { get; set; }
+    public SourceRepoRepositoryStatus? Status { get; set; }
 }

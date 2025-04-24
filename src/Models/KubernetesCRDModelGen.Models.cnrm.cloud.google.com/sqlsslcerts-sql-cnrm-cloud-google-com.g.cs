@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class SQLSSLCertMetadata
+{
+}
+
 /// <summary>The Cloud SQL instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SQLSSLCertSpecInstanceRef
+public partial class SQLSSLCertSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `SQLInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1SQLSSLCertSpecInstanceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SQLSSLCertSpec
+public partial class SQLSSLCertSpec
 {
     /// <summary>Immutable. The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("commonName")]
@@ -35,7 +41,7 @@ public partial class V1beta1SQLSSLCertSpec
 
     /// <summary>The Cloud SQL instance.</summary>
     [JsonPropertyName("instanceRef")]
-    public V1beta1SQLSSLCertSpecInstanceRef InstanceRef { get; set; }
+    public SQLSSLCertSpecInstanceRef InstanceRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated sha1Fingerprint of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -44,7 +50,7 @@ public partial class V1beta1SQLSSLCertSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SQLSSLCertStatusConditions
+public partial class SQLSSLCertStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -69,7 +75,7 @@ public partial class V1beta1SQLSSLCertStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SQLSSLCertStatus
+public partial class SQLSSLCertStatus
 {
     /// <summary>The actual certificate data for this client certificate.</summary>
     [JsonPropertyName("cert")]
@@ -81,7 +87,7 @@ public partial class V1beta1SQLSSLCertStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1SQLSSLCertStatusConditions>? Conditions { get; set; }
+    public IList<SQLSSLCertStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when the certificate was created in RFC 3339 format, for example 2012-11-15T16:19:00.094Z.</summary>
     [JsonPropertyName("createTime")]
@@ -110,30 +116,25 @@ public partial class V1beta1SQLSSLCertStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SQLSSLCert : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLSSLCertSpec>, IStatus<V1beta1SQLSSLCertStatus>
+public partial class SQLSSLCert
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SQLSSLCert";
-    public const string KubeGroup = "sql.cnrm.cloud.google.com";
-    public const string KubePluralName = "sqlsslcerts";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public SQLSSLCertMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1SQLSSLCertSpec Spec { get; set; }
+    public SQLSSLCertSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1SQLSSLCertStatus? Status { get; set; }
+    public SQLSSLCertStatus? Status { get; set; }
 }
